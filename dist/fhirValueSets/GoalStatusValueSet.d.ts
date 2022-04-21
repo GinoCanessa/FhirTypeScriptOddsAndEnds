@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes that reflect the current state of a goal and whether the goal is still being targeted.
  */
 export declare const GoalStatusValueSet: {
     /**
-     * A proposed goal was accepted or acknowledged.
+     * accepted: A proposed goal was accepted or acknowledged.
      */
-    goal_status_Accepted: Coding;
+    readonly Accepted: Coding;
     /**
-     * The goal is being sought actively.
+     * active: The goal is being sought actively.
      */
-    goal_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The goal has been abandoned.
+     * cancelled: The goal has been abandoned.
      */
-    goal_status_Cancelled: Coding;
+    readonly Cancelled: Coding;
     /**
-     * The goal is no longer being sought.
+     * completed: The goal is no longer being sought.
      */
-    goal_status_Completed: Coding;
+    readonly Completed: Coding;
     /**
-     * The goal was entered in error and voided.
+     * entered-in-error: The goal was entered in error and voided.
      */
-    goal_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The goal remains a long term objective but is no longer being actively pursued for a temporary period of time.
+     * on-hold: The goal remains a long term objective but is no longer being actively pursued for a temporary period of time.
      */
-    goal_status_OnHold: Coding;
+    readonly OnHold: Coding;
     /**
-     * A goal is planned for this patient.
+     * planned: A goal is planned for this patient.
      */
-    goal_status_Planned: Coding;
+    readonly Planned: Coding;
     /**
-     * A goal is proposed for this patient.
+     * proposed: A goal is proposed for this patient.
      */
-    goal_status_Proposed: Coding;
+    readonly Proposed: Coding;
     /**
-     * A proposed goal was rejected.
+     * rejected: A proposed goal was rejected.
      */
-    goal_status_Rejected: Coding;
+    readonly Rejected: Coding;
 };
+/**
+ * Codes that reflect the current state of a goal and whether the goal is still being targeted.
+ */
+export declare type GoalStatusValueSetType = typeof GoalStatusValueSet;
+/**
+ * Codes that reflect the current state of a goal and whether the goal is still being targeted.
+ */
+export declare enum GoalStatusValueSetEnum {
+    /**
+     * accepted: A proposed goal was accepted or acknowledged.
+     */
+    Accepted = "accepted",
+    /**
+     * active: The goal is being sought actively.
+     */
+    Active = "active",
+    /**
+     * cancelled: The goal has been abandoned.
+     */
+    Cancelled = "cancelled",
+    /**
+     * completed: The goal is no longer being sought.
+     */
+    Completed = "completed",
+    /**
+     * entered-in-error: The goal was entered in error and voided.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * on-hold: The goal remains a long term objective but is no longer being actively pursued for a temporary period of time.
+     */
+    OnHold = "on-hold",
+    /**
+     * planned: A goal is planned for this patient.
+     */
+    Planned = "planned",
+    /**
+     * proposed: A goal is proposed for this patient.
+     */
+    Proposed = "proposed",
+    /**
+     * rejected: A proposed goal was rejected.
+     */
+    Rejected = "rejected"
+}
 //# sourceMappingURL=GoalStatusValueSet.d.ts.map

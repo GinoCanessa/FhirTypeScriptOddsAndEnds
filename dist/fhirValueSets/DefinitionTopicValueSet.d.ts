@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * High-level categorization of the definition, used for searching, sorting, and filtering.
  */
 export declare const DefinitionTopicValueSet: {
     /**
-     * The definition is related to assessment of the patient.
+     * assessment: The definition is related to assessment of the patient.
      */
-    definition_topic_Assessment: Coding;
+    readonly Assessment: Coding;
     /**
-     * The definition is related to education of the patient.
+     * education: The definition is related to education of the patient.
      */
-    definition_topic_Education: Coding;
+    readonly Education: Coding;
     /**
-     * The definition is related to treatment of the patient.
+     * treatment: The definition is related to treatment of the patient.
      */
-    definition_topic_Treatment: Coding;
+    readonly Treatment: Coding;
 };
+/**
+ * High-level categorization of the definition, used for searching, sorting, and filtering.
+ */
+export declare type DefinitionTopicValueSetType = typeof DefinitionTopicValueSet;
+/**
+ * High-level categorization of the definition, used for searching, sorting, and filtering.
+ */
+export declare enum DefinitionTopicValueSetEnum {
+    /**
+     * assessment: The definition is related to assessment of the patient.
+     */
+    Assessment = "assessment",
+    /**
+     * education: The definition is related to education of the patient.
+     */
+    Education = "education",
+    /**
+     * treatment: The definition is related to treatment of the patient.
+     */
+    Treatment = "treatment"
+}
 //# sourceMappingURL=DefinitionTopicValueSet.d.ts.map

@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes for the main intent of the study.
  */
 export declare const ResearchStudyPrimPurpTypeValueSet: {
     /**
-     * One or more interventions for examining the basic mechanism of action (for example, physiology or biomechanics of an intervention).
+     * basic-science: One or more interventions for examining the basic mechanism of action (for example, physiology or biomechanics of an intervention).
      */
-    research_study_prim_purp_type_BasicScience: Coding;
+    readonly BasicScience: Coding;
     /**
-     * An intervention of a device product is being evaluated to determine the feasibility of the product or to test a prototype device and not health outcomes. Such studies are conducted to confirm the design and operating specifications of a device before beginning a full clinical trial.
+     * device-feasibility: An intervention of a device product is being evaluated to determine the feasibility of the product or to test a prototype device and not health outcomes. Such studies are conducted to confirm the design and operating specifications of a device before beginning a full clinical trial.
      */
-    research_study_prim_purp_type_DeviceFeasibility: Coding;
+    readonly DeviceFeasibility: Coding;
     /**
-     * One or more interventions are being evaluated for identifying a disease or health condition.
+     * diagnostic: One or more interventions are being evaluated for identifying a disease or health condition.
      */
-    research_study_prim_purp_type_Diagnostic: Coding;
+    readonly Diagnostic: Coding;
     /**
-     * One or more interventions for evaluating the delivery, processes, management, organization, or financing of healthcare.
+     * health-services-research: One or more interventions for evaluating the delivery, processes, management, organization, or financing of healthcare.
      */
-    research_study_prim_purp_type_HealthServicesResearch: Coding;
+    readonly HealthServicesResearch: Coding;
     /**
-     * One or more interventions are being assessed for preventing the development of a specific disease or health condition.
+     * prevention: One or more interventions are being assessed for preventing the development of a specific disease or health condition.
      */
-    research_study_prim_purp_type_Prevention: Coding;
+    readonly Prevention: Coding;
     /**
-     * One or more interventions are assessed or examined for identifying a condition, or risk factors for a condition, in people who are not yet known to have the condition or risk factor.
+     * screening: One or more interventions are assessed or examined for identifying a condition, or risk factors for a condition, in people who are not yet known to have the condition or risk factor.
      */
-    research_study_prim_purp_type_Screening: Coding;
+    readonly Screening: Coding;
     /**
-     * One or more interventions are evaluated for maximizing comfort, minimizing side effects, or mitigating against a decline in the participant's health or function.
+     * supportive-care: One or more interventions are evaluated for maximizing comfort, minimizing side effects, or mitigating against a decline in the participant's health or function.
      */
-    research_study_prim_purp_type_SupportiveCare: Coding;
+    readonly SupportiveCare: Coding;
     /**
-     * One or more interventions are being evaluated for treating a disease, syndrome, or condition.
+     * treatment: One or more interventions are being evaluated for treating a disease, syndrome, or condition.
      */
-    research_study_prim_purp_type_Treatment: Coding;
+    readonly Treatment: Coding;
 };
+/**
+ * Codes for the main intent of the study.
+ */
+export declare type ResearchStudyPrimPurpTypeValueSetType = typeof ResearchStudyPrimPurpTypeValueSet;
+/**
+ * Codes for the main intent of the study.
+ */
+export declare enum ResearchStudyPrimPurpTypeValueSetEnum {
+    /**
+     * basic-science: One or more interventions for examining the basic mechanism of action (for example, physiology or biomechanics of an intervention).
+     */
+    BasicScience = "basic-science",
+    /**
+     * device-feasibility: An intervention of a device product is being evaluated to determine the feasibility of the product or to test a prototype device and not health outcomes. Such studies are conducted to confirm the design and operating specifications of a device before beginning a full clinical trial.
+     */
+    DeviceFeasibility = "device-feasibility",
+    /**
+     * diagnostic: One or more interventions are being evaluated for identifying a disease or health condition.
+     */
+    Diagnostic = "diagnostic",
+    /**
+     * health-services-research: One or more interventions for evaluating the delivery, processes, management, organization, or financing of healthcare.
+     */
+    HealthServicesResearch = "health-services-research",
+    /**
+     * prevention: One or more interventions are being assessed for preventing the development of a specific disease or health condition.
+     */
+    Prevention = "prevention",
+    /**
+     * screening: One or more interventions are assessed or examined for identifying a condition, or risk factors for a condition, in people who are not yet known to have the condition or risk factor.
+     */
+    Screening = "screening",
+    /**
+     * supportive-care: One or more interventions are evaluated for maximizing comfort, minimizing side effects, or mitigating against a decline in the participant's health or function.
+     */
+    SupportiveCare = "supportive-care",
+    /**
+     * treatment: One or more interventions are being evaluated for treating a disease, syndrome, or condition.
+     */
+    Treatment = "treatment"
+}
 //# sourceMappingURL=ResearchStudyPrimPurpTypeValueSet.d.ts.map

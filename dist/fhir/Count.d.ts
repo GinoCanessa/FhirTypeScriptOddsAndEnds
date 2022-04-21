@@ -1,4 +1,4 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  */
@@ -6,18 +6,14 @@ export declare type ICount = fhir.IQuantity & {};
 /**
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  */
-export declare class Count extends fhir.Quantity implements fhir.ICount {
+export declare class Count extends fhir.Quantity implements ICount {
     /**
      * Default constructor for Count - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ICount>);
+    constructor(source?: Partial<ICount>);
     /**
-     * Check if the current Count contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a Count from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ICount): Count;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Count.d.ts.map

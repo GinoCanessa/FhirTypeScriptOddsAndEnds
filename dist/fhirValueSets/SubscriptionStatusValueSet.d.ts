@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The status of a subscription.
  */
 export declare const SubscriptionStatusValueSet: {
     /**
-     * The subscription is active.
+     * active: The subscription is active.
      */
-    subscription_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The server has an error executing the notification.
+     * error: The server has an error executing the notification.
      */
-    subscription_status_Error: Coding;
+    readonly Error: Coding;
     /**
-     * Too many errors have occurred or the subscription has expired.
+     * off: Too many errors have occurred or the subscription has expired.
      */
-    subscription_status_Off: Coding;
+    readonly Off: Coding;
     /**
-     * The client has requested the subscription, and the server has not yet set it up.
+     * requested: The client has requested the subscription, and the server has not yet set it up.
      */
-    subscription_status_Requested: Coding;
+    readonly Requested: Coding;
 };
+/**
+ * The status of a subscription.
+ */
+export declare type SubscriptionStatusValueSetType = typeof SubscriptionStatusValueSet;
+/**
+ * The status of a subscription.
+ */
+export declare enum SubscriptionStatusValueSetEnum {
+    /**
+     * active: The subscription is active.
+     */
+    Active = "active",
+    /**
+     * error: The server has an error executing the notification.
+     */
+    Error = "error",
+    /**
+     * off: Too many errors have occurred or the subscription has expired.
+     */
+    Off = "off",
+    /**
+     * requested: The client has requested the subscription, and the server has not yet set it up.
+     */
+    Requested = "requested"
+}
 //# sourceMappingURL=SubscriptionStatusValueSet.d.ts.map

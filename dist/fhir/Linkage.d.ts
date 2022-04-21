@@ -1,17 +1,21 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { LinkageTypeValueSetType, LinkageTypeValueSetEnum } from '../fhirValueSets/LinkageTypeValueSet.js';
 /**
  * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
  */
 export declare type ILinkageItem = fhir.IBackboneElement & {
     /**
+     * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
+     */
+    type: LinkageTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Linkage.item.type
+     */
+    _type?: fhir.IFhirElement | undefined;
+    /**
      * The resource instance being linked as part of the group.
      */
     resource: fhir.IReference | null;
-    /**
-     * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
-     */
-    type: LinkageItemTypeEnum | null;
-    _type?: fhir.IFhirElement | undefined;
 };
 /**
  * Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
@@ -25,6 +29,9 @@ export declare type ILinkage = fhir.IDomainResource & {
      * If false, any asserted linkages should not be considered current/relevant/applicable.
      */
     active?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Linkage.active
+     */
     _active?: fhir.IFhirElement | undefined;
     /**
      * Identifies the user or organization responsible for asserting the linkages as well as the user or organization who establishes the context in which the nature of each linkage is evaluated.
@@ -38,33 +45,36 @@ export declare type ILinkage = fhir.IDomainResource & {
 /**
  * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
  */
-export declare class LinkageItem extends fhir.BackboneElement implements fhir.ILinkageItem {
+export declare class LinkageItem extends fhir.BackboneElement implements ILinkageItem {
+    /**
+     * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
+     */
+    type: LinkageTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Linkage.item.type
+     */
+    _type?: fhir.FhirElement | undefined;
     /**
      * The resource instance being linked as part of the group.
      */
     resource: fhir.Reference | null;
     /**
-     * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
-     */
-    type: LinkageItemTypeEnum | null;
-    _type?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for LinkageItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ILinkageItem>);
+    constructor(source?: Partial<ILinkageItem>);
     /**
-     * Check if the current LinkageItem contains all required elements.
+     * Required-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeRequiredValueSet(): LinkageTypeValueSetType;
     /**
-     * Factory function to create a LinkageItem from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.ILinkageItem): LinkageItem;
+    doModelValidation(): [string, string][];
 }
 /**
  * Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
  */
-export declare class Linkage extends fhir.DomainResource implements fhir.ILinkage {
+export declare class Linkage extends fhir.DomainResource implements ILinkage {
     /**
      * Resource Type Name
      */
@@ -73,6 +83,9 @@ export declare class Linkage extends fhir.DomainResource implements fhir.ILinkag
      * If false, any asserted linkages should not be considered current/relevant/applicable.
      */
     active?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Linkage.active
+     */
     _active?: fhir.FhirElement | undefined;
     /**
      * Identifies the user or organization responsible for asserting the linkages as well as the user or organization who establishes the context in which the nature of each linkage is evaluated.
@@ -85,22 +98,10 @@ export declare class Linkage extends fhir.DomainResource implements fhir.ILinkag
     /**
      * Default constructor for Linkage - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ILinkage>);
+    constructor(source?: Partial<ILinkage>);
     /**
-     * Check if the current Linkage contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a Linkage from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ILinkage): Linkage;
-}
-/**
- * Code Values for the Linkage.item.type field
- */
-export declare enum LinkageItemTypeEnum {
-    SOURCE = "source",
-    ALTERNATE = "alternate",
-    HISTORICAL = "historical"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Linkage.d.ts.map

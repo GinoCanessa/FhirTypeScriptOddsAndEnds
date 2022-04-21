@@ -1,47 +1,96 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This examples value set defines the set of codes that can be used to represent the type of an account.
  */
 export declare const AccountTypeValueSet: {
     /**
-     * An account represents a grouping of financial transactions that are tracked and reported together with a single balance. 	 	Examples of account codes (types) are Patient billing accounts (collection of charges), Cost centers; Cash.
+     * _ActAccountCode: An account represents a grouping of financial transactions that are tracked and reported together with a single balance. 	 	Examples of account codes (types) are Patient billing accounts (collection of charges), Cost centers; Cash.
      */
-    v3_ActCode_ActAccountCode: Coding;
+    readonly ActAccountCode: Coding;
     /**
-     * An account for collecting charges, reversals, adjustments and payments, including deductibles, copayments, coinsurance (financial transactions) credited or debited to the account receivable account for a patient's encounter.
+     * ACCTRECEIVABLE: An account for collecting charges, reversals, adjustments and payments, including deductibles, copayments, coinsurance (financial transactions) credited or debited to the account receivable account for a patient's encounter.
      */
-    v3_ActCode_AccountReceivable: Coding;
+    readonly AccountReceivable: Coding;
     /**
-     * American Express
+     * AE: American Express
      */
-    v3_ActCode_AmericanExpress: Coding;
+    readonly AmericanExpress: Coding;
     /**
-     * Cash
+     * CASH: Cash
      */
-    v3_ActCode_Cash: Coding;
+    readonly Cash: Coding;
     /**
-     * Description: Types of advance payment to be made on a plastic card usually issued by a financial institution used of purchasing services and/or products.
+     * CC: Description: Types of advance payment to be made on a plastic card usually issued by a financial institution used of purchasing services and/or products.
      */
-    v3_ActCode_CreditCard: Coding;
+    readonly CreditCard: Coding;
     /**
-     * Diner's Club
+     * DN: Diner's Club
      */
-    v3_ActCode_DinerQuoteSClub: Coding;
+    readonly DinerQuoteSClub: Coding;
     /**
-     * Discover Card
+     * DV: Discover Card
      */
-    v3_ActCode_DiscoverCard: Coding;
+    readonly DiscoverCard: Coding;
     /**
-     * Master Card
+     * MC: Master Card
      */
-    v3_ActCode_MasterCard: Coding;
+    readonly MasterCard: Coding;
     /**
-     * An account representing charges and credits (financial transactions) for a patient's encounter.
+     * PBILLACCT: An account representing charges and credits (financial transactions) for a patient's encounter.
      */
-    v3_ActCode_PatientBillingAccount: Coding;
+    readonly PatientBillingAccount: Coding;
     /**
-     * Visa
+     * V: Visa
      */
-    v3_ActCode_Visa: Coding;
+    readonly Visa: Coding;
 };
+/**
+ * This examples value set defines the set of codes that can be used to represent the type of an account.
+ */
+export declare type AccountTypeValueSetType = typeof AccountTypeValueSet;
+/**
+ * This examples value set defines the set of codes that can be used to represent the type of an account.
+ */
+export declare enum AccountTypeValueSetEnum {
+    /**
+     * _ActAccountCode: An account represents a grouping of financial transactions that are tracked and reported together with a single balance. 	 	Examples of account codes (types) are Patient billing accounts (collection of charges), Cost centers; Cash.
+     */
+    ActAccountCode = "_ActAccountCode",
+    /**
+     * ACCTRECEIVABLE: An account for collecting charges, reversals, adjustments and payments, including deductibles, copayments, coinsurance (financial transactions) credited or debited to the account receivable account for a patient's encounter.
+     */
+    AccountReceivable = "ACCTRECEIVABLE",
+    /**
+     * AE: American Express
+     */
+    AmericanExpress = "AE",
+    /**
+     * CASH: Cash
+     */
+    Cash = "CASH",
+    /**
+     * CC: Description: Types of advance payment to be made on a plastic card usually issued by a financial institution used of purchasing services and/or products.
+     */
+    CreditCard = "CC",
+    /**
+     * DN: Diner's Club
+     */
+    DinerQuoteSClub = "DN",
+    /**
+     * DV: Discover Card
+     */
+    DiscoverCard = "DV",
+    /**
+     * MC: Master Card
+     */
+    MasterCard = "MC",
+    /**
+     * PBILLACCT: An account representing charges and credits (financial transactions) for a patient's encounter.
+     */
+    PatientBillingAccount = "PBILLACCT",
+    /**
+     * V: Visa
+     */
+    Visa = "V"
+}
 //# sourceMappingURL=AccountTypeValueSet.d.ts.map

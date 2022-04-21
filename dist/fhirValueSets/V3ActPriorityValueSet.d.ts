@@ -1,67 +1,136 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  *  A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.
  */
 export declare const V3ActPriorityValueSet: {
     /**
-     * As soon as possible, next highest priority after stat.
+     * A: As soon as possible, next highest priority after stat.
      */
-    v3_ActPriority_ASAP: Coding;
+    readonly ASAP: Coding;
     /**
-     * Filler should contact the placer as soon as results are available, even for preliminary results.  (Was "C" in HL7 version 2.3's reporting priority.)
+     * CR: Filler should contact the placer as soon as results are available, even for preliminary results.  (Was "C" in HL7 version 2.3's reporting priority.)
      */
-    v3_ActPriority_CallbackResults: Coding;
+    readonly CallbackResults: Coding;
     /**
-     * Filler should contact the placer (or target) to schedule the service.  (Was "C" in HL7 version 2.3's TQ-priority component.)
+     * CS: Filler should contact the placer (or target) to schedule the service.  (Was "C" in HL7 version 2.3's TQ-priority component.)
      */
-    v3_ActPriority_CallbackForScheduling: Coding;
+    readonly CallbackForScheduling: Coding;
     /**
-     * Filler should contact the placer to schedule the service.  (Was "C" in HL7 version 2.3's TQ-priority component.)
+     * CSP: Filler should contact the placer to schedule the service.  (Was "C" in HL7 version 2.3's TQ-priority component.)
      */
-    v3_ActPriority_CallbackPlacerForScheduling: Coding;
+    readonly CallbackPlacerForScheduling: Coding;
     /**
-     * Filler should contact the service recipient (target) to schedule the service.  (Was "C" in HL7 version 2.3's TQ-priority component.)
+     * CSR: Filler should contact the service recipient (target) to schedule the service.  (Was "C" in HL7 version 2.3's TQ-priority component.)
      */
-    v3_ActPriority_ContactRecipientForScheduling: Coding;
+    readonly ContactRecipientForScheduling: Coding;
     /**
-     * Beneficial to the patient but not essential for survival.
+     * EL: Beneficial to the patient but not essential for survival.
      */
-    v3_ActPriority_Elective: Coding;
+    readonly Elective: Coding;
     /**
-     * An unforeseen combination of circumstances or the resulting state that calls for immediate action.
+     * EM: An unforeseen combination of circumstances or the resulting state that calls for immediate action.
      */
-    v3_ActPriority_Emergency: Coding;
+    readonly Emergency: Coding;
     /**
-     * Used to indicate that a service is to be performed prior to a scheduled surgery.  When ordering a service and using the pre-op priority, a check is done to see the amount of time that must be allowed for performance of the service.  When the order is placed, a message can be generated indicating the time needed for the service so that it is not ordered in conflict with a scheduled operation.
+     * P: Used to indicate that a service is to be performed prior to a scheduled surgery.  When ordering a service and using the pre-op priority, a check is done to see the amount of time that must be allowed for performance of the service.  When the order is placed, a message can be generated indicating the time needed for the service so that it is not ordered in conflict with a scheduled operation.
      */
-    v3_ActPriority_Preop: Coding;
+    readonly Preop: Coding;
     /**
-     * An "as needed" order should be accompanied by a description of what constitutes a need. This description is represented by an observation service predicate as a precondition.
+     * PRN: An "as needed" order should be accompanied by a description of what constitutes a need. This description is represented by an observation service predicate as a precondition.
      */
-    v3_ActPriority_AsNeeded: Coding;
+    readonly AsNeeded: Coding;
     /**
-     * Routine service, do at usual work hours.
+     * R: Routine service, do at usual work hours.
      */
-    v3_ActPriority_Routine: Coding;
+    readonly Routine: Coding;
     /**
-     * A report should be prepared and sent as quickly as possible.
+     * RR: A report should be prepared and sent as quickly as possible.
      */
-    v3_ActPriority_RushReporting: Coding;
+    readonly RushReporting: Coding;
     /**
-     * With highest priority (e.g., emergency).
+     * S: With highest priority (e.g., emergency).
      */
-    v3_ActPriority_Stat: Coding;
+    readonly Stat: Coding;
     /**
-     * It is critical to come as close as possible to the requested time (e.g., for a through antimicrobial level).
+     * T: It is critical to come as close as possible to the requested time (e.g., for a through antimicrobial level).
      */
-    v3_ActPriority_TimingCritical: Coding;
+    readonly TimingCritical: Coding;
     /**
-     * Drug is to be used as directed by the prescriber.
+     * UD: Drug is to be used as directed by the prescriber.
      */
-    v3_ActPriority_UseAsDirected: Coding;
+    readonly UseAsDirected: Coding;
     /**
-     * Calls for prompt action.
+     * UR: Calls for prompt action.
      */
-    v3_ActPriority_Urgent: Coding;
+    readonly Urgent: Coding;
 };
+/**
+ *  A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.
+ */
+export declare type V3ActPriorityValueSetType = typeof V3ActPriorityValueSet;
+/**
+ *  A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.
+ */
+export declare enum V3ActPriorityValueSetEnum {
+    /**
+     * A: As soon as possible, next highest priority after stat.
+     */
+    ASAP = "A",
+    /**
+     * CR: Filler should contact the placer as soon as results are available, even for preliminary results.  (Was "C" in HL7 version 2.3's reporting priority.)
+     */
+    CallbackResults = "CR",
+    /**
+     * CS: Filler should contact the placer (or target) to schedule the service.  (Was "C" in HL7 version 2.3's TQ-priority component.)
+     */
+    CallbackForScheduling = "CS",
+    /**
+     * CSP: Filler should contact the placer to schedule the service.  (Was "C" in HL7 version 2.3's TQ-priority component.)
+     */
+    CallbackPlacerForScheduling = "CSP",
+    /**
+     * CSR: Filler should contact the service recipient (target) to schedule the service.  (Was "C" in HL7 version 2.3's TQ-priority component.)
+     */
+    ContactRecipientForScheduling = "CSR",
+    /**
+     * EL: Beneficial to the patient but not essential for survival.
+     */
+    Elective = "EL",
+    /**
+     * EM: An unforeseen combination of circumstances or the resulting state that calls for immediate action.
+     */
+    Emergency = "EM",
+    /**
+     * P: Used to indicate that a service is to be performed prior to a scheduled surgery.  When ordering a service and using the pre-op priority, a check is done to see the amount of time that must be allowed for performance of the service.  When the order is placed, a message can be generated indicating the time needed for the service so that it is not ordered in conflict with a scheduled operation.
+     */
+    Preop = "P",
+    /**
+     * PRN: An "as needed" order should be accompanied by a description of what constitutes a need. This description is represented by an observation service predicate as a precondition.
+     */
+    AsNeeded = "PRN",
+    /**
+     * R: Routine service, do at usual work hours.
+     */
+    Routine = "R",
+    /**
+     * RR: A report should be prepared and sent as quickly as possible.
+     */
+    RushReporting = "RR",
+    /**
+     * S: With highest priority (e.g., emergency).
+     */
+    Stat = "S",
+    /**
+     * T: It is critical to come as close as possible to the requested time (e.g., for a through antimicrobial level).
+     */
+    TimingCritical = "T",
+    /**
+     * UD: Drug is to be used as directed by the prescriber.
+     */
+    UseAsDirected = "UD",
+    /**
+     * UR: Calls for prompt action.
+     */
+    Urgent = "UR"
+}
 //# sourceMappingURL=V3ActPriorityValueSet.d.ts.map

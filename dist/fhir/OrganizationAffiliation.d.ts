@@ -1,4 +1,6 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { OrganizationRoleValueSetType } from '../fhirValueSets/OrganizationRoleValueSet.js';
+import { C80PracticeCodesValueSetType } from '../fhirValueSets/C80PracticeCodesValueSet.js';
 /**
  * Defines an affiliation/assotiation/relationship between 2 distinct oganizations, that is not a part-of relationship/sub-division relationship.
  */
@@ -8,34 +10,21 @@ export declare type IOrganizationAffiliation = fhir.IDomainResource & {
      */
     resourceType: "OrganizationAffiliation";
     /**
-     * If this value is false, you may refer to the period to see when the role was in active use. If there is no period specified, no inference can be made about when it was active.
-     */
-    active?: boolean | undefined;
-    _active?: fhir.IFhirElement | undefined;
-    /**
-     * Definition of the role the participatingOrganization plays in the association.
-     */
-    code?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Technical endpoints providing access to services operated for this role.
-     */
-    endpoint?: fhir.IReference[] | undefined;
-    /**
-     * Healthcare services provided through the role.
-     */
-    healthcareService?: fhir.IReference[] | undefined;
-    /**
      * Business identifiers that are specific to this role.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * The location(s) at which the role occurs.
+     * If this value is false, you may refer to the period to see when the role was in active use. If there is no period specified, no inference can be made about when it was active.
      */
-    location?: fhir.IReference[] | undefined;
+    active?: boolean | undefined;
     /**
-     * Health insurance provider network in which the participatingOrganization provides the role's services (if defined) at the indicated locations (if defined).
+     * Extended properties for primitive element: OrganizationAffiliation.active
      */
-    network?: fhir.IReference[] | undefined;
+    _active?: fhir.IFhirElement | undefined;
+    /**
+     * The period during which the participatingOrganization is affiliated with the primary organization.
+     */
+    period?: fhir.IPeriod | undefined;
     /**
      * Organization where the role is available (primary organization/has members).
      */
@@ -45,55 +34,58 @@ export declare type IOrganizationAffiliation = fhir.IDomainResource & {
      */
     participatingOrganization?: fhir.IReference | undefined;
     /**
-     * The period during which the participatingOrganization is affiliated with the primary organization.
+     * Health insurance provider network in which the participatingOrganization provides the role's services (if defined) at the indicated locations (if defined).
      */
-    period?: fhir.IPeriod | undefined;
+    network?: fhir.IReference[] | undefined;
+    /**
+     * Definition of the role the participatingOrganization plays in the association.
+     */
+    code?: fhir.ICodeableConcept[] | undefined;
     /**
      * Specific specialty of the participatingOrganization in the context of the role.
      */
     specialty?: fhir.ICodeableConcept[] | undefined;
     /**
+     * The location(s) at which the role occurs.
+     */
+    location?: fhir.IReference[] | undefined;
+    /**
+     * Healthcare services provided through the role.
+     */
+    healthcareService?: fhir.IReference[] | undefined;
+    /**
      * Contact details at the participatingOrganization relevant to this Affiliation.
      */
     telecom?: fhir.IContactPoint[] | undefined;
+    /**
+     * Technical endpoints providing access to services operated for this role.
+     */
+    endpoint?: fhir.IReference[] | undefined;
 };
 /**
  * Defines an affiliation/assotiation/relationship between 2 distinct oganizations, that is not a part-of relationship/sub-division relationship.
  */
-export declare class OrganizationAffiliation extends fhir.DomainResource implements fhir.IOrganizationAffiliation {
+export declare class OrganizationAffiliation extends fhir.DomainResource implements IOrganizationAffiliation {
     /**
      * Resource Type Name
      */
     resourceType: "OrganizationAffiliation";
     /**
-     * If this value is false, you may refer to the period to see when the role was in active use. If there is no period specified, no inference can be made about when it was active.
-     */
-    active?: boolean | undefined;
-    _active?: fhir.FhirElement | undefined;
-    /**
-     * Definition of the role the participatingOrganization plays in the association.
-     */
-    code?: fhir.CodeableConcept[] | undefined;
-    /**
-     * Technical endpoints providing access to services operated for this role.
-     */
-    endpoint?: fhir.Reference[] | undefined;
-    /**
-     * Healthcare services provided through the role.
-     */
-    healthcareService?: fhir.Reference[] | undefined;
-    /**
      * Business identifiers that are specific to this role.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * The location(s) at which the role occurs.
+     * If this value is false, you may refer to the period to see when the role was in active use. If there is no period specified, no inference can be made about when it was active.
      */
-    location?: fhir.Reference[] | undefined;
+    active?: boolean | undefined;
     /**
-     * Health insurance provider network in which the participatingOrganization provides the role's services (if defined) at the indicated locations (if defined).
+     * Extended properties for primitive element: OrganizationAffiliation.active
      */
-    network?: fhir.Reference[] | undefined;
+    _active?: fhir.FhirElement | undefined;
+    /**
+     * The period during which the participatingOrganization is affiliated with the primary organization.
+     */
+    period?: fhir.Period | undefined;
     /**
      * Organization where the role is available (primary organization/has members).
      */
@@ -103,28 +95,48 @@ export declare class OrganizationAffiliation extends fhir.DomainResource impleme
      */
     participatingOrganization?: fhir.Reference | undefined;
     /**
-     * The period during which the participatingOrganization is affiliated with the primary organization.
+     * Health insurance provider network in which the participatingOrganization provides the role's services (if defined) at the indicated locations (if defined).
      */
-    period?: fhir.Period | undefined;
+    network?: fhir.Reference[] | undefined;
+    /**
+     * Definition of the role the participatingOrganization plays in the association.
+     */
+    code?: fhir.CodeableConcept[] | undefined;
     /**
      * Specific specialty of the participatingOrganization in the context of the role.
      */
     specialty?: fhir.CodeableConcept[] | undefined;
     /**
+     * The location(s) at which the role occurs.
+     */
+    location?: fhir.Reference[] | undefined;
+    /**
+     * Healthcare services provided through the role.
+     */
+    healthcareService?: fhir.Reference[] | undefined;
+    /**
      * Contact details at the participatingOrganization relevant to this Affiliation.
      */
     telecom?: fhir.ContactPoint[] | undefined;
     /**
+     * Technical endpoints providing access to services operated for this role.
+     */
+    endpoint?: fhir.Reference[] | undefined;
+    /**
      * Default constructor for OrganizationAffiliation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IOrganizationAffiliation>);
+    constructor(source?: Partial<IOrganizationAffiliation>);
     /**
-     * Check if the current OrganizationAffiliation contains all required elements.
+     * Example-bound Value Set for code
      */
-    checkRequiredElements(): string[];
+    codeExampleValueSet(): OrganizationRoleValueSetType;
     /**
-     * Factory function to create a OrganizationAffiliation from an object that MUST contain all required elements.
+     * Preferred-bound Value Set for specialty
      */
-    static fromStrict(source: fhir.IOrganizationAffiliation): OrganizationAffiliation;
+    specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=OrganizationAffiliation.d.ts.map

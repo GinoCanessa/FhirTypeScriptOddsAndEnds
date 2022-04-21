@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Status of the supply delivery.
  */
 export declare const SupplydeliveryStatusValueSet: {
     /**
-     * Delivery was not completed.
+     * abandoned: Delivery was not completed.
      */
-    supplydelivery_status_Abandoned: Coding;
+    readonly Abandoned: Coding;
     /**
-     * Supply has been delivered ("completed").
+     * completed: Supply has been delivered ("completed").
      */
-    supplydelivery_status_Delivered: Coding;
+    readonly Delivered: Coding;
     /**
-     * This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "abandoned" rather than "entered-in-error".).
+     * entered-in-error: This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "abandoned" rather than "entered-in-error".).
      */
-    supplydelivery_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * Supply has been requested, but not delivered.
+     * in-progress: Supply has been requested, but not delivered.
      */
-    supplydelivery_status_InProgress: Coding;
+    readonly InProgress: Coding;
 };
+/**
+ * Status of the supply delivery.
+ */
+export declare type SupplydeliveryStatusValueSetType = typeof SupplydeliveryStatusValueSet;
+/**
+ * Status of the supply delivery.
+ */
+export declare enum SupplydeliveryStatusValueSetEnum {
+    /**
+     * abandoned: Delivery was not completed.
+     */
+    Abandoned = "abandoned",
+    /**
+     * completed: Supply has been delivered ("completed").
+     */
+    Delivered = "completed",
+    /**
+     * entered-in-error: This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "abandoned" rather than "entered-in-error".).
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * in-progress: Supply has been requested, but not delivered.
+     */
+    InProgress = "in-progress"
+}
 //# sourceMappingURL=SupplydeliveryStatusValueSet.d.ts.map

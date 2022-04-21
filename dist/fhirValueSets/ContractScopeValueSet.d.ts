@@ -1,11 +1,24 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set contract specific codes for scope.
  */
 export declare const ContractScopeValueSet: {
     /**
-     * To be completed
+     * policy: To be completed
      */
-    contract_scope_Policy: Coding;
+    readonly Policy: Coding;
 };
+/**
+ * This value set contract specific codes for scope.
+ */
+export declare type ContractScopeValueSetType = typeof ContractScopeValueSet;
+/**
+ * This value set contract specific codes for scope.
+ */
+export declare enum ContractScopeValueSetEnum {
+    /**
+     * policy: To be completed
+     */
+    Policy = "policy"
+}
 //# sourceMappingURL=ContractScopeValueSet.d.ts.map

@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes smattering of Adjudication Reason codes.
  */
 export declare const AdjudicationReasonValueSet: {
     /**
-     * Not covered
+     * ar001: Not covered
      */
-    adjudication_reason_NotCovered: Coding;
+    readonly NotCovered: Coding;
     /**
-     * Plan Limit Reached
+     * ar002: Plan Limit Reached
      */
-    adjudication_reason_PlanLimitReached: Coding;
+    readonly PlanLimitReached: Coding;
 };
+/**
+ * This value set includes smattering of Adjudication Reason codes.
+ */
+export declare type AdjudicationReasonValueSetType = typeof AdjudicationReasonValueSet;
+/**
+ * This value set includes smattering of Adjudication Reason codes.
+ */
+export declare enum AdjudicationReasonValueSetEnum {
+    /**
+     * ar001: Not covered
+     */
+    NotCovered = "ar001",
+    /**
+     * ar002: Plan Limit Reached
+     */
+    PlanLimitReached = "ar002"
+}
 //# sourceMappingURL=AdjudicationReasonValueSet.d.ts.map

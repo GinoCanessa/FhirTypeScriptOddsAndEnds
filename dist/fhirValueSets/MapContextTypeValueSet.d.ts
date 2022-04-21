@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How to interpret the context.
  */
 export declare const MapContextTypeValueSet: {
     /**
-     * The context specifies a type.
+     * type: The context specifies a type.
      */
-    map_context_type_Type: Coding;
+    readonly Type: Coding;
     /**
-     * The context specifies a variable.
+     * variable: The context specifies a variable.
      */
-    map_context_type_Variable: Coding;
+    readonly Variable: Coding;
 };
+/**
+ * How to interpret the context.
+ */
+export declare type MapContextTypeValueSetType = typeof MapContextTypeValueSet;
+/**
+ * How to interpret the context.
+ */
+export declare enum MapContextTypeValueSetEnum {
+    /**
+     * type: The context specifies a type.
+     */
+    Type = "type",
+    /**
+     * variable: The context specifies a variable.
+     */
+    Variable = "variable"
+}
 //# sourceMappingURL=MapContextTypeValueSet.d.ts.map

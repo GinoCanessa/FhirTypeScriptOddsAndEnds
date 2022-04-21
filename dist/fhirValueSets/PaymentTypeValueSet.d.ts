@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Payment Type codes.
  */
 export declare const PaymentTypeValueSet: {
     /**
-     * The amount is an adjustment regarding claims already paid.
+     * adjustment: The amount is an adjustment regarding claims already paid.
      */
-    payment_type_Adjustment: Coding;
+    readonly Adjustment: Coding;
     /**
-     * The amount is an advance against future claims.
+     * advance: The amount is an advance against future claims.
      */
-    payment_type_Advance: Coding;
+    readonly Advance: Coding;
     /**
-     * The amount is partial or complete settlement of the amounts due.
+     * payment: The amount is partial or complete settlement of the amounts due.
      */
-    payment_type_Payment: Coding;
+    readonly Payment: Coding;
 };
+/**
+ * This value set includes sample Payment Type codes.
+ */
+export declare type PaymentTypeValueSetType = typeof PaymentTypeValueSet;
+/**
+ * This value set includes sample Payment Type codes.
+ */
+export declare enum PaymentTypeValueSetEnum {
+    /**
+     * adjustment: The amount is an adjustment regarding claims already paid.
+     */
+    Adjustment = "adjustment",
+    /**
+     * advance: The amount is an advance against future claims.
+     */
+    Advance = "advance",
+    /**
+     * payment: The amount is partial or complete settlement of the amounts due.
+     */
+    Payment = "payment"
+}
 //# sourceMappingURL=PaymentTypeValueSet.d.ts.map

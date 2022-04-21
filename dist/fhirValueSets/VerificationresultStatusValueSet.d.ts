@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The validation status of the target
  */
 export declare const VerificationresultStatusValueSet: {
     /**
-     * ***TODO***
+     * attested: ***TODO***
      */
-    verificationresult_status_Attested: Coding;
+    readonly Attested: Coding;
     /**
-     * ***TODO***
+     * in-process: ***TODO***
      */
-    verificationresult_status_InProcess: Coding;
+    readonly InProcess: Coding;
     /**
-     * ***TODO***
+     * req-revalid: ***TODO***
      */
-    verificationresult_status_RequiresRevalidation: Coding;
+    readonly RequiresRevalidation: Coding;
     /**
-     * ***TODO***
+     * reval-fail: ***TODO***
      */
-    verificationresult_status_ReValidationFailed: Coding;
+    readonly ReValidationFailed: Coding;
     /**
-     * ***TODO***
+     * val-fail: ***TODO***
      */
-    verificationresult_status_ValidationFailed: Coding;
+    readonly ValidationFailed: Coding;
     /**
-     * ***TODO***
+     * validated: ***TODO***
      */
-    verificationresult_status_Validated: Coding;
+    readonly Validated: Coding;
 };
+/**
+ * The validation status of the target
+ */
+export declare type VerificationresultStatusValueSetType = typeof VerificationresultStatusValueSet;
+/**
+ * The validation status of the target
+ */
+export declare enum VerificationresultStatusValueSetEnum {
+    /**
+     * attested: ***TODO***
+     */
+    Attested = "attested",
+    /**
+     * in-process: ***TODO***
+     */
+    InProcess = "in-process",
+    /**
+     * req-revalid: ***TODO***
+     */
+    RequiresRevalidation = "req-revalid",
+    /**
+     * reval-fail: ***TODO***
+     */
+    ReValidationFailed = "reval-fail",
+    /**
+     * val-fail: ***TODO***
+     */
+    ValidationFailed = "val-fail",
+    /**
+     * validated: ***TODO***
+     */
+    Validated = "validated"
+}
 //# sourceMappingURL=VerificationresultStatusValueSet.d.ts.map

@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The kind of operation to perform as a part of a property based filter.
  */
 export declare const FilterOperatorValueSet: {
     /**
-     * The specified property of the code equals the provided value.
+     * =: The specified property of the code equals the provided value.
      */
-    filter_operator_Equals: Coding;
+    readonly Equals: Coding;
     /**
-     * Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, excluding the provided concept itself i.e. include descendant codes only).
+     * descendent-of: Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, excluding the provided concept itself i.e. include descendant codes only).
      */
-    filter_operator_DescendentOfBySubsumption: Coding;
+    readonly DescendentOfBySubsumption: Coding;
     /**
-     * The specified property of the code has at least one value (if the specified value is true; if the specified value is false, then matches when the specified property of the code has no values).
+     * exists: The specified property of the code has at least one value (if the specified value is true; if the specified value is false, then matches when the specified property of the code has no values).
      */
-    filter_operator_Exists: Coding;
+    readonly Exists: Coding;
     /**
-     * Includes all concept ids that have a transitive is-a relationship from the concept Id provided as the value, including the provided concept itself (i.e. include ancestor codes and self).
+     * generalizes: Includes all concept ids that have a transitive is-a relationship from the concept Id provided as the value, including the provided concept itself (i.e. include ancestor codes and self).
      */
-    filter_operator_GeneralizesBySubsumption: Coding;
+    readonly GeneralizesBySubsumption: Coding;
     /**
-     * The specified property of the code is in the set of codes or concepts specified in the provided value (comma separated list).
+     * in: The specified property of the code is in the set of codes or concepts specified in the provided value (comma separated list).
      */
-    filter_operator_InSet: Coding;
+    readonly InSet: Coding;
     /**
-     * Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, including the provided concept itself (include descendant codes and self).
+     * is-a: Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, including the provided concept itself (include descendant codes and self).
      */
-    filter_operator_IsABySubsumption: Coding;
+    readonly IsABySubsumption: Coding;
     /**
-     * The specified property of the code does not have an is-a relationship with the provided value.
+     * is-not-a: The specified property of the code does not have an is-a relationship with the provided value.
      */
-    filter_operator_NotIsABySubsumption: Coding;
+    readonly NotIsABySubsumption: Coding;
     /**
-     * The specified property of the code is not in the set of codes or concepts specified in the provided value (comma separated list).
+     * not-in: The specified property of the code is not in the set of codes or concepts specified in the provided value (comma separated list).
      */
-    filter_operator_NotInSet: Coding;
+    readonly NotInSet: Coding;
     /**
-     * The specified property of the code  matches the regex specified in the provided value.
+     * regex: The specified property of the code  matches the regex specified in the provided value.
      */
-    filter_operator_RegularExpression: Coding;
+    readonly RegularExpression: Coding;
 };
+/**
+ * The kind of operation to perform as a part of a property based filter.
+ */
+export declare type FilterOperatorValueSetType = typeof FilterOperatorValueSet;
+/**
+ * The kind of operation to perform as a part of a property based filter.
+ */
+export declare enum FilterOperatorValueSetEnum {
+    /**
+     * =: The specified property of the code equals the provided value.
+     */
+    Equals = "=",
+    /**
+     * descendent-of: Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, excluding the provided concept itself i.e. include descendant codes only).
+     */
+    DescendentOfBySubsumption = "descendent-of",
+    /**
+     * exists: The specified property of the code has at least one value (if the specified value is true; if the specified value is false, then matches when the specified property of the code has no values).
+     */
+    Exists = "exists",
+    /**
+     * generalizes: Includes all concept ids that have a transitive is-a relationship from the concept Id provided as the value, including the provided concept itself (i.e. include ancestor codes and self).
+     */
+    GeneralizesBySubsumption = "generalizes",
+    /**
+     * in: The specified property of the code is in the set of codes or concepts specified in the provided value (comma separated list).
+     */
+    InSet = "in",
+    /**
+     * is-a: Includes all concept ids that have a transitive is-a relationship with the concept Id provided as the value, including the provided concept itself (include descendant codes and self).
+     */
+    IsABySubsumption = "is-a",
+    /**
+     * is-not-a: The specified property of the code does not have an is-a relationship with the provided value.
+     */
+    NotIsABySubsumption = "is-not-a",
+    /**
+     * not-in: The specified property of the code is not in the set of codes or concepts specified in the provided value (comma separated list).
+     */
+    NotInSet = "not-in",
+    /**
+     * regex: The specified property of the code  matches the regex specified in the provided value.
+     */
+    RegularExpression = "regex"
+}
 //# sourceMappingURL=FilterOperatorValueSet.d.ts.map

@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Structure Definition Use Codes / Keywords
  */
 export declare const DefinitionUseValueSet: {
     /**
-     * This structure captures an analysis of a domain
+     * archetype: This structure captures an analysis of a domain
      */
-    definition_use_DomainAnalysisModel: Coding;
+    readonly DomainAnalysisModel: Coding;
     /**
-     * This structure is intended to be treated like a FHIR resource (e.g. on the FHIR API)
+     * custom-resource: This structure is intended to be treated like a FHIR resource (e.g. on the FHIR API)
      */
-    definition_use_CustomResource: Coding;
+    readonly CustomResource: Coding;
     /**
-     * This structure captures an analysis of a domain
+     * dam: This structure captures an analysis of a domain
      */
-    definition_use_DomainAnalysisModel_2: Coding;
+    readonly DomainAnalysisModelDam: Coding;
     /**
-     * This structure is defined as part of the base FHIR Specification
+     * fhir-structure: This structure is defined as part of the base FHIR Specification
      */
-    definition_use_FHIRStructure: Coding;
+    readonly FHIRStructure: Coding;
     /**
-     * This structure is a template (n.b: 'template' has many meanings)
+     * template: This structure is a template (n.b: 'template' has many meanings)
      */
-    definition_use_Template: Coding;
+    readonly Template: Coding;
     /**
-     * This structure represents and existing structure (e.g. CDA, HL7 v2)
+     * wire-format: This structure represents and existing structure (e.g. CDA, HL7 v2)
      */
-    definition_use_WireFormat: Coding;
+    readonly WireFormat: Coding;
 };
+/**
+ * Structure Definition Use Codes / Keywords
+ */
+export declare type DefinitionUseValueSetType = typeof DefinitionUseValueSet;
+/**
+ * Structure Definition Use Codes / Keywords
+ */
+export declare enum DefinitionUseValueSetEnum {
+    /**
+     * archetype: This structure captures an analysis of a domain
+     */
+    DomainAnalysisModel = "archetype",
+    /**
+     * custom-resource: This structure is intended to be treated like a FHIR resource (e.g. on the FHIR API)
+     */
+    CustomResource = "custom-resource",
+    /**
+     * dam: This structure captures an analysis of a domain
+     */
+    DomainAnalysisModelDam = "dam",
+    /**
+     * fhir-structure: This structure is defined as part of the base FHIR Specification
+     */
+    FHIRStructure = "fhir-structure",
+    /**
+     * template: This structure is a template (n.b: 'template' has many meanings)
+     */
+    Template = "template",
+    /**
+     * wire-format: This structure represents and existing structure (e.g. CDA, HL7 v2)
+     */
+    WireFormat = "wire-format"
+}
 //# sourceMappingURL=DefinitionUseValueSet.d.ts.map

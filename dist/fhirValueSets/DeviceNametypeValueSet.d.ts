@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of name the device is referred by.
  */
 export declare const DeviceNametypeValueSet: {
     /**
-     * Manufacturer name.
+     * manufacturer-name: Manufacturer name.
      */
-    device_nametype_ManufacturerName: Coding;
+    readonly ManufacturerName: Coding;
     /**
-     * Model name.
+     * model-name: Model name.
      */
-    device_nametype_ModelName: Coding;
+    readonly ModelName: Coding;
     /**
-     * other.
+     * other: other.
      */
-    device_nametype_Other: Coding;
+    readonly Other: Coding;
     /**
-     * Patient Reported name.
+     * patient-reported-name: Patient Reported name.
      */
-    device_nametype_PatientReportedName: Coding;
+    readonly PatientReportedName: Coding;
     /**
-     * UDI Label name.
+     * udi-label-name: UDI Label name.
      */
-    device_nametype_UDILabelName: Coding;
+    readonly UDILabelName: Coding;
     /**
-     * User Friendly name.
+     * user-friendly-name: User Friendly name.
      */
-    device_nametype_UserFriendlyName: Coding;
+    readonly UserFriendlyName: Coding;
 };
+/**
+ * The type of name the device is referred by.
+ */
+export declare type DeviceNametypeValueSetType = typeof DeviceNametypeValueSet;
+/**
+ * The type of name the device is referred by.
+ */
+export declare enum DeviceNametypeValueSetEnum {
+    /**
+     * manufacturer-name: Manufacturer name.
+     */
+    ManufacturerName = "manufacturer-name",
+    /**
+     * model-name: Model name.
+     */
+    ModelName = "model-name",
+    /**
+     * other: other.
+     */
+    Other = "other",
+    /**
+     * patient-reported-name: Patient Reported name.
+     */
+    PatientReportedName = "patient-reported-name",
+    /**
+     * udi-label-name: UDI Label name.
+     */
+    UDILabelName = "udi-label-name",
+    /**
+     * user-friendly-name: User Friendly name.
+     */
+    UserFriendlyName = "user-friendly-name"
+}
 //# sourceMappingURL=DeviceNametypeValueSet.d.ts.map

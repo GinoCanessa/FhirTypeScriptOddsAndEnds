@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value sets refers to a specific supply item.
  */
 export declare const SupplydeliveryTypeValueSet: {
     /**
-     * What is supplied (or requested) is a device.
+     * device: What is supplied (or requested) is a device.
      */
-    supplydelivery_type_Device: Coding;
+    readonly Device: Coding;
     /**
-     * Supply is a kind of medication.
+     * medication: Supply is a kind of medication.
      */
-    supplydelivery_type_Medication: Coding;
+    readonly Medication: Coding;
 };
+/**
+ * This value sets refers to a specific supply item.
+ */
+export declare type SupplydeliveryTypeValueSetType = typeof SupplydeliveryTypeValueSet;
+/**
+ * This value sets refers to a specific supply item.
+ */
+export declare enum SupplydeliveryTypeValueSetEnum {
+    /**
+     * device: What is supplied (or requested) is a device.
+     */
+    Device = "device",
+    /**
+     * medication: Supply is a kind of medication.
+     */
+    Medication = "medication"
+}
 //# sourceMappingURL=SupplydeliveryTypeValueSet.d.ts.map

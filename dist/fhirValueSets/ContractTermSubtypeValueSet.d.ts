@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Contract Term SubType codes.
  */
 export declare const ContractTermSubtypeValueSet: {
     /**
-     * Terms that go to the very root of a contract.
+     * condition: Terms that go to the very root of a contract.
      */
-    contract_term_subtype_Condition: Coding;
+    readonly Condition: Coding;
     /**
-     * Breach of which might or might not go to the root of the contract depending upon the nature of the breach
+     * innominate: Breach of which might or might not go to the root of the contract depending upon the nature of the breach
      */
-    contract_term_subtype_Innominate: Coding;
+    readonly Innominate: Coding;
     /**
-     * Less imperative than a condition, so the contract will survive a breach
+     * warranty: Less imperative than a condition, so the contract will survive a breach
      */
-    contract_term_subtype_Warranty: Coding;
+    readonly Warranty: Coding;
 };
+/**
+ * This value set includes sample Contract Term SubType codes.
+ */
+export declare type ContractTermSubtypeValueSetType = typeof ContractTermSubtypeValueSet;
+/**
+ * This value set includes sample Contract Term SubType codes.
+ */
+export declare enum ContractTermSubtypeValueSetEnum {
+    /**
+     * condition: Terms that go to the very root of a contract.
+     */
+    Condition = "condition",
+    /**
+     * innominate: Breach of which might or might not go to the root of the contract depending upon the nature of the breach
+     */
+    Innominate = "innominate",
+    /**
+     * warranty: Less imperative than a condition, so the contract will survive a breach
+     */
+    Warranty = "warranty"
+}
 //# sourceMappingURL=ContractTermSubtypeValueSet.d.ts.map

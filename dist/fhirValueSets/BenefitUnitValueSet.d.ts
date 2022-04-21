@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of Unit type codes.
  */
 export declare const BenefitUnitValueSet: {
     /**
-     * A family, typically includes self, spouse(s) and children to a defined age
+     * family: A family, typically includes self, spouse(s) and children to a defined age
      */
-    benefit_unit_Family: Coding;
+    readonly Family: Coding;
     /**
-     * A single individual
+     * individual: A single individual
      */
-    benefit_unit_Individual: Coding;
+    readonly Individual: Coding;
 };
+/**
+ * This value set includes a smattering of Unit type codes.
+ */
+export declare type BenefitUnitValueSetType = typeof BenefitUnitValueSet;
+/**
+ * This value set includes a smattering of Unit type codes.
+ */
+export declare enum BenefitUnitValueSetEnum {
+    /**
+     * family: A family, typically includes self, spouse(s) and children to a defined age
+     */
+    Family = "family",
+    /**
+     * individual: A single individual
+     */
+    Individual = "individual"
+}
 //# sourceMappingURL=BenefitUnitValueSet.d.ts.map

@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Example codes for grouping goals to use for filtering or presentation.
  */
 export declare const GoalCategoryValueSet: {
     /**
-     * Goals related to the manner in which the subject acts.
+     * behavioral: Goals related to the manner in which the subject acts.
      */
-    goal_category_Behavioral: Coding;
+    readonly Behavioral: Coding;
     /**
-     * Goals related to the consumption of food and/or beverages.
+     * dietary: Goals related to the consumption of food and/or beverages.
      */
-    goal_category_Dietary: Coding;
+    readonly Dietary: Coding;
     /**
-     * Goals related to the practice of nursing or established by nurses.
+     * nursing: Goals related to the practice of nursing or established by nurses.
      */
-    goal_category_Nursing: Coding;
+    readonly Nursing: Coding;
     /**
-     * Goals related to the mobility and/or motor capability of the subject.
+     * physiotherapy: Goals related to the mobility and/or motor capability of the subject.
      */
-    goal_category_Physiotherapy: Coding;
+    readonly Physiotherapy: Coding;
     /**
-     * Goals related to the personal protection of the subject.
+     * safety: Goals related to the personal protection of the subject.
      */
-    goal_category_Safety: Coding;
+    readonly Safety: Coding;
 };
+/**
+ * Example codes for grouping goals to use for filtering or presentation.
+ */
+export declare type GoalCategoryValueSetType = typeof GoalCategoryValueSet;
+/**
+ * Example codes for grouping goals to use for filtering or presentation.
+ */
+export declare enum GoalCategoryValueSetEnum {
+    /**
+     * behavioral: Goals related to the manner in which the subject acts.
+     */
+    Behavioral = "behavioral",
+    /**
+     * dietary: Goals related to the consumption of food and/or beverages.
+     */
+    Dietary = "dietary",
+    /**
+     * nursing: Goals related to the practice of nursing or established by nurses.
+     */
+    Nursing = "nursing",
+    /**
+     * physiotherapy: Goals related to the mobility and/or motor capability of the subject.
+     */
+    Physiotherapy = "physiotherapy",
+    /**
+     * safety: Goals related to the personal protection of the subject.
+     */
+    Safety = "safety"
+}
 //# sourceMappingURL=GoalCategoryValueSet.d.ts.map

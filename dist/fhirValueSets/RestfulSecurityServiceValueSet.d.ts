@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Types of security services used with FHIR.
  */
 export declare const RestfulSecurityServiceValueSet: {
     /**
-     * Basic authentication defined in HTTP specification.
+     * Basic: Basic authentication defined in HTTP specification.
      */
-    restful_security_service_Basic: Coding;
+    readonly Basic: Coding;
     /**
-     * SSL where client must have a certificate registered with the server.
+     * Certificates: SSL where client must have a certificate registered with the server.
      */
-    restful_security_service_Certificates: Coding;
+    readonly Certificates: Coding;
     /**
-     * see http://www.ietf.org/rfc/rfc4120.txt.
+     * Kerberos: see http://www.ietf.org/rfc/rfc4120.txt.
      */
-    restful_security_service_Kerberos: Coding;
+    readonly Kerberos: Coding;
     /**
-     * Microsoft NTLM Authentication.
+     * NTLM: Microsoft NTLM Authentication.
      */
-    restful_security_service_NTLM: Coding;
+    readonly NTLM: Coding;
     /**
-     * OAuth (unspecified version see oauth.net).
+     * OAuth: OAuth (unspecified version see oauth.net).
      */
-    restful_security_service_OAuth: Coding;
+    readonly OAuth: Coding;
     /**
-     * OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org/).
+     * SMART-on-FHIR: OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org/).
      */
-    restful_security_service_SMARTOnFHIR: Coding;
+    readonly SMARTOnFHIR: Coding;
 };
+/**
+ * Types of security services used with FHIR.
+ */
+export declare type RestfulSecurityServiceValueSetType = typeof RestfulSecurityServiceValueSet;
+/**
+ * Types of security services used with FHIR.
+ */
+export declare enum RestfulSecurityServiceValueSetEnum {
+    /**
+     * Basic: Basic authentication defined in HTTP specification.
+     */
+    Basic = "Basic",
+    /**
+     * Certificates: SSL where client must have a certificate registered with the server.
+     */
+    Certificates = "Certificates",
+    /**
+     * Kerberos: see http://www.ietf.org/rfc/rfc4120.txt.
+     */
+    Kerberos = "Kerberos",
+    /**
+     * NTLM: Microsoft NTLM Authentication.
+     */
+    NTLM = "NTLM",
+    /**
+     * OAuth: OAuth (unspecified version see oauth.net).
+     */
+    OAuth = "OAuth",
+    /**
+     * SMART-on-FHIR: OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org/).
+     */
+    SMARTOnFHIR = "SMART-on-FHIR"
+}
 //# sourceMappingURL=RestfulSecurityServiceValueSet.d.ts.map

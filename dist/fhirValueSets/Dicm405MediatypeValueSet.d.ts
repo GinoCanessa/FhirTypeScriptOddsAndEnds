@@ -1,47 +1,96 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Media Type Code
  */
 export declare const Dicm405MediatypeValueSet: {
     /**
-     * Film type of output
+     * 110010: Film type of output
      */
-    dicom_dcim_Film: Coding;
+    readonly Film: Coding;
     /**
-     * A device that connects using the USB hard drive interface. These may be USB-Sticks, portable hard drives, and other technologies
+     * 110030: A device that connects using the USB hard drive interface. These may be USB-Sticks, portable hard drives, and other technologies
      */
-    dicom_dcim_USBDiskEmulation: Coding;
+    readonly USBDiskEmulation: Coding;
     /**
-     * Email and email attachments used as a media for data transport
+     * 110031: Email and email attachments used as a media for data transport
      */
-    dicom_dcim_Email: Coding;
+    readonly Email: Coding;
     /**
-     * CD-R, CD-ROM, and CD-RW media used for data transport
+     * 110032: CD-R, CD-ROM, and CD-RW media used for data transport
      */
-    dicom_dcim_CD: Coding;
+    readonly CD: Coding;
     /**
-     * DVD, DVD-RAM, and other DVD formatted media used for data transport
+     * 110033: DVD, DVD-RAM, and other DVD formatted media used for data transport
      */
-    dicom_dcim_DVD: Coding;
+    readonly DVD: Coding;
     /**
-     * Media that comply with the Compact Flash standard
+     * 110034: Media that comply with the Compact Flash standard
      */
-    dicom_dcim_CompactFlash: Coding;
+    readonly CompactFlash: Coding;
     /**
-     * Media that comply with the Multi-media Card standard
+     * 110035: Media that comply with the Multi-media Card standard
      */
-    dicom_dcim_MultiMediaCard: Coding;
+    readonly MultiMediaCard: Coding;
     /**
-     * Media that comply with the Secure Digital Card standard
+     * 110036: Media that comply with the Secure Digital Card standard
      */
-    dicom_dcim_SecureDigitalCard: Coding;
+    readonly SecureDigitalCard: Coding;
     /**
-     * URI Identifier for network or other resource, see RFC 3968
+     * 110037: URI Identifier for network or other resource, see RFC 3968
      */
-    dicom_dcim_URI: Coding;
+    readonly URI: Coding;
     /**
-     * Any paper or similar document
+     * 110038: Any paper or similar document
      */
-    dicom_dcim_PaperDocument: Coding;
+    readonly PaperDocument: Coding;
 };
+/**
+ * Media Type Code
+ */
+export declare type Dicm405MediatypeValueSetType = typeof Dicm405MediatypeValueSet;
+/**
+ * Media Type Code
+ */
+export declare enum Dicm405MediatypeValueSetEnum {
+    /**
+     * 110010: Film type of output
+     */
+    Film = "110010",
+    /**
+     * 110030: A device that connects using the USB hard drive interface. These may be USB-Sticks, portable hard drives, and other technologies
+     */
+    USBDiskEmulation = "110030",
+    /**
+     * 110031: Email and email attachments used as a media for data transport
+     */
+    Email = "110031",
+    /**
+     * 110032: CD-R, CD-ROM, and CD-RW media used for data transport
+     */
+    CD = "110032",
+    /**
+     * 110033: DVD, DVD-RAM, and other DVD formatted media used for data transport
+     */
+    DVD = "110033",
+    /**
+     * 110034: Media that comply with the Compact Flash standard
+     */
+    CompactFlash = "110034",
+    /**
+     * 110035: Media that comply with the Multi-media Card standard
+     */
+    MultiMediaCard = "110035",
+    /**
+     * 110036: Media that comply with the Secure Digital Card standard
+     */
+    SecureDigitalCard = "110036",
+    /**
+     * 110037: URI Identifier for network or other resource, see RFC 3968
+     */
+    URI = "110037",
+    /**
+     * 110038: Any paper or similar document
+     */
+    PaperDocument = "110038"
+}
 //# sourceMappingURL=Dicm405MediatypeValueSet.d.ts.map

@@ -1,189 +1,1472 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Currency codes from ISO 4217 (see https://www.iso.org/iso-4217-currency-codes.html)
  */
 export declare const CurrenciesValueSet: {
-    CurrenciesValueSet_UnitedArabEmiratesDirham: Coding;
-    CurrenciesValueSet_AfghanAfghani: Coding;
-    CurrenciesValueSet_AlbanianLek: Coding;
-    CurrenciesValueSet_ArmenianDram: Coding;
-    CurrenciesValueSet_NetherlandsAntilleanGuilder: Coding;
-    CurrenciesValueSet_AngolanKwanza: Coding;
-    CurrenciesValueSet_ArgentinePeso: Coding;
-    CurrenciesValueSet_AustralianDollar: Coding;
-    CurrenciesValueSet_ArubanFlorin: Coding;
-    CurrenciesValueSet_AzerbaijaniManat: Coding;
-    CurrenciesValueSet_BosniaAndHerzegovinaConvertibleMark: Coding;
-    CurrenciesValueSet_BarbadosDollar: Coding;
-    CurrenciesValueSet_BangladeshiTaka: Coding;
-    CurrenciesValueSet_BulgarianLev: Coding;
-    CurrenciesValueSet_BahrainiDinar: Coding;
-    CurrenciesValueSet_BurundianFranc: Coding;
-    CurrenciesValueSet_BermudianDollar: Coding;
-    CurrenciesValueSet_BruneiDollar: Coding;
-    CurrenciesValueSet_Boliviano: Coding;
-    CurrenciesValueSet_BolivianMvdolFundsCode: Coding;
-    CurrenciesValueSet_BrazilianReal: Coding;
-    CurrenciesValueSet_BahamianDollar: Coding;
-    CurrenciesValueSet_BhutaneseNgultrum: Coding;
-    CurrenciesValueSet_BotswanaPula: Coding;
-    CurrenciesValueSet_BelarusianRuble: Coding;
-    CurrenciesValueSet_BelizeDollar: Coding;
-    CurrenciesValueSet_CanadianDollar: Coding;
-    CurrenciesValueSet_CongoleseFranc: Coding;
-    CurrenciesValueSet_WIREuroComplementaryCurrency: Coding;
-    CurrenciesValueSet_SwissFranc: Coding;
-    CurrenciesValueSet_WIRFrancComplementaryCurrency: Coding;
-    CurrenciesValueSet_UnidadDeFomentoFundsCode: Coding;
-    CurrenciesValueSet_ChileanPeso: Coding;
-    CurrenciesValueSet_RenminbiChineseYuan8: Coding;
-    CurrenciesValueSet_ColombianPeso: Coding;
-    CurrenciesValueSet_UnidadDeValorRealUVRFundsCode9: Coding;
-    CurrenciesValueSet_CostaRicanColon: Coding;
-    CurrenciesValueSet_CubanConvertiblePeso: Coding;
-    CurrenciesValueSet_CubanPeso: Coding;
-    CurrenciesValueSet_CapeVerdeEscudo: Coding;
-    CurrenciesValueSet_CzechKoruna: Coding;
-    CurrenciesValueSet_DjiboutianFranc: Coding;
-    CurrenciesValueSet_DanishKrone: Coding;
-    CurrenciesValueSet_DominicanPeso: Coding;
-    CurrenciesValueSet_AlgerianDinar: Coding;
-    CurrenciesValueSet_EgyptianPound: Coding;
-    CurrenciesValueSet_EritreanNakfa: Coding;
-    CurrenciesValueSet_EthiopianBirr: Coding;
-    CurrenciesValueSet_Euro: Coding;
-    CurrenciesValueSet_FijiDollar: Coding;
-    CurrenciesValueSet_FalklandIslandsPound: Coding;
-    CurrenciesValueSet_PoundSterling: Coding;
-    CurrenciesValueSet_GeorgianLari: Coding;
-    CurrenciesValueSet_GuernseyPound: Coding;
-    CurrenciesValueSet_GhanaianCedi: Coding;
-    CurrenciesValueSet_GibraltarPound: Coding;
-    CurrenciesValueSet_GambianDalasi: Coding;
-    CurrenciesValueSet_GuineanFranc: Coding;
-    CurrenciesValueSet_GuatemalanQuetzal: Coding;
-    CurrenciesValueSet_GuyaneseDollar: Coding;
-    CurrenciesValueSet_HongKongDollar: Coding;
-    CurrenciesValueSet_HonduranLempira: Coding;
-    CurrenciesValueSet_CroatianKuna: Coding;
-    CurrenciesValueSet_HaitianGourde: Coding;
-    CurrenciesValueSet_HungarianForint: Coding;
-    CurrenciesValueSet_IndonesianRupiah: Coding;
-    CurrenciesValueSet_IsraeliNewShekel: Coding;
-    CurrenciesValueSet_IsleOfManPound: Coding;
-    CurrenciesValueSet_IndianRupee: Coding;
-    CurrenciesValueSet_IraqiDinar: Coding;
-    CurrenciesValueSet_IranianRial: Coding;
-    CurrenciesValueSet_IcelandicKrona: Coding;
-    CurrenciesValueSet_JerseyPound: Coding;
-    CurrenciesValueSet_JamaicanDollar: Coding;
-    CurrenciesValueSet_JordanianDinar: Coding;
-    CurrenciesValueSet_JapaneseYen: Coding;
-    CurrenciesValueSet_KenyanShilling: Coding;
-    CurrenciesValueSet_KyrgyzstaniSom: Coding;
-    CurrenciesValueSet_CambodianRiel: Coding;
-    CurrenciesValueSet_ComoroFranc: Coding;
-    CurrenciesValueSet_NorthKoreanWon: Coding;
-    CurrenciesValueSet_SouthKoreanWon: Coding;
-    CurrenciesValueSet_KuwaitiDinar: Coding;
-    CurrenciesValueSet_CaymanIslandsDollar: Coding;
-    CurrenciesValueSet_KazakhstaniTenge: Coding;
-    CurrenciesValueSet_LaoKip: Coding;
-    CurrenciesValueSet_LebanesePound: Coding;
-    CurrenciesValueSet_SriLankanRupee: Coding;
-    CurrenciesValueSet_LiberianDollar: Coding;
-    CurrenciesValueSet_LesothoLoti: Coding;
-    CurrenciesValueSet_LibyanDinar: Coding;
-    CurrenciesValueSet_MoroccanDirham: Coding;
-    CurrenciesValueSet_MoldovanLeu: Coding;
-    CurrenciesValueSet_MalagasyAriary: Coding;
-    CurrenciesValueSet_MacedonianDenar: Coding;
-    CurrenciesValueSet_MyanmarKyat: Coding;
-    CurrenciesValueSet_MongolianTogrog: Coding;
-    CurrenciesValueSet_MacanesePataca: Coding;
-    CurrenciesValueSet_MauritanianOuguiya: Coding;
-    CurrenciesValueSet_MauritianRupee: Coding;
-    CurrenciesValueSet_MaldivianRufiyaa: Coding;
-    CurrenciesValueSet_MalawianKwacha: Coding;
-    CurrenciesValueSet_MexicanPeso: Coding;
-    CurrenciesValueSet_MexicanUnidadDeInversionUDIFundsCode: Coding;
-    CurrenciesValueSet_MalaysianRinggit: Coding;
-    CurrenciesValueSet_MozambicanMetical: Coding;
-    CurrenciesValueSet_NamibianDollar: Coding;
-    CurrenciesValueSet_NigerianNaira: Coding;
-    CurrenciesValueSet_NicaraguanCordoba: Coding;
-    CurrenciesValueSet_NorwegianKrone: Coding;
-    CurrenciesValueSet_NepaleseRupee: Coding;
-    CurrenciesValueSet_NewZealandDollar: Coding;
-    CurrenciesValueSet_OmaniRial: Coding;
-    CurrenciesValueSet_PanamanianBalboa: Coding;
-    CurrenciesValueSet_PeruvianSol: Coding;
-    CurrenciesValueSet_PapuaNewGuineanKina: Coding;
-    CurrenciesValueSet_PhilippinePiso13: Coding;
-    CurrenciesValueSet_PakistaniRupee: Coding;
-    CurrenciesValueSet_PolishZłoty: Coding;
-    CurrenciesValueSet_ParaguayanGuarani: Coding;
-    CurrenciesValueSet_QatariRiyal: Coding;
-    CurrenciesValueSet_RomanianLeu: Coding;
-    CurrenciesValueSet_SerbianDinar: Coding;
-    CurrenciesValueSet_RussianRuble: Coding;
-    CurrenciesValueSet_RwandanFranc: Coding;
-    CurrenciesValueSet_SaudiRiyal: Coding;
-    CurrenciesValueSet_SolomonIslandsDollar: Coding;
-    CurrenciesValueSet_SeychellesRupee: Coding;
-    CurrenciesValueSet_SudanesePound: Coding;
-    CurrenciesValueSet_SwedishKronaKronor: Coding;
-    CurrenciesValueSet_SingaporeDollar: Coding;
-    CurrenciesValueSet_SaintHelenaPound: Coding;
-    CurrenciesValueSet_SierraLeoneanLeone: Coding;
-    CurrenciesValueSet_SomaliShilling: Coding;
-    CurrenciesValueSet_SurinameseDollar: Coding;
-    CurrenciesValueSet_SouthSudanesePound: Coding;
-    CurrenciesValueSet_SaoTomeAndPrincipeDobra: Coding;
-    CurrenciesValueSet_SalvadoranColon: Coding;
-    CurrenciesValueSet_SyrianPound: Coding;
-    CurrenciesValueSet_SwaziLilangeni: Coding;
-    CurrenciesValueSet_ThaiBaht: Coding;
-    CurrenciesValueSet_TajikistaniSomoni: Coding;
-    CurrenciesValueSet_TurkmenistanManat: Coding;
-    CurrenciesValueSet_TunisianDinar: Coding;
-    CurrenciesValueSet_TonganPaanga: Coding;
-    CurrenciesValueSet_TurkishLira: Coding;
-    CurrenciesValueSet_TrinidadAndTobagoDollar: Coding;
-    CurrenciesValueSet_TuvaluDollar: Coding;
-    CurrenciesValueSet_NewTaiwanDollar: Coding;
-    CurrenciesValueSet_TanzanianShilling: Coding;
-    CurrenciesValueSet_UkrainianHryvnia: Coding;
-    CurrenciesValueSet_UgandanShilling: Coding;
-    CurrenciesValueSet_UnitedStatesDollar: Coding;
-    CurrenciesValueSet_UnitedStatesDollarNextDayFundsCode: Coding;
-    CurrenciesValueSet_UruguayPesoEnUnidadesIndexadasURUIURUIFundsCode: Coding;
-    CurrenciesValueSet_UruguayanPeso: Coding;
-    CurrenciesValueSet_UzbekistanSom: Coding;
-    CurrenciesValueSet_VenezuelanBolivar: Coding;
-    CurrenciesValueSet_VietnameseĐong: Coding;
-    CurrenciesValueSet_VanuatuVatu: Coding;
-    CurrenciesValueSet_SamoanTala: Coding;
-    CurrenciesValueSet_CFAFrancBEAC: Coding;
-    CurrenciesValueSet_SilverOneTroyOunce: Coding;
-    CurrenciesValueSet_GoldOneTroyOunce: Coding;
-    CurrenciesValueSet_EuropeanCompositeUnitEURCOBondMarketUnit: Coding;
-    CurrenciesValueSet_EuropeanMonetaryUnitEMU6BondMarketUnit: Coding;
-    CurrenciesValueSet_EuropeanUnitOfAccount9EUA9BondMarketUnit: Coding;
-    CurrenciesValueSet_EuropeanUnitOfAccount17EUA17BondMarketUnit: Coding;
-    CurrenciesValueSet_EastCaribbeanDollar: Coding;
-    CurrenciesValueSet_SpecialDrawingRights: Coding;
-    CurrenciesValueSet_CFAFrancBCEAO: Coding;
-    CurrenciesValueSet_PalladiumOneTroyOunce: Coding;
-    CurrenciesValueSet_CFPFrancFrancPacifique: Coding;
-    CurrenciesValueSet_PlatinumOneTroyOunce: Coding;
-    CurrenciesValueSet_SUCRE: Coding;
-    CurrenciesValueSet_CodeReservedForTestingPurposes: Coding;
-    CurrenciesValueSet_ADBUnitOfAccount: Coding;
-    CurrenciesValueSet_NoCurrency: Coding;
-    CurrenciesValueSet_YemeniRial: Coding;
-    CurrenciesValueSet_SouthAfricanRand: Coding;
-    CurrenciesValueSet_ZambianKwacha: Coding;
-    CurrenciesValueSet_ZimbabweanDollarA10: Coding;
+    /**
+     * Code: AED
+     */
+    readonly UnitedArabEmiratesDirham: Coding;
+    /**
+     * Code: AFN
+     */
+    readonly AfghanAfghani: Coding;
+    /**
+     * Code: ALL
+     */
+    readonly AlbanianLek: Coding;
+    /**
+     * Code: AMD
+     */
+    readonly ArmenianDram: Coding;
+    /**
+     * Code: ANG
+     */
+    readonly NetherlandsAntilleanGuilder: Coding;
+    /**
+     * Code: AOA
+     */
+    readonly AngolanKwanza: Coding;
+    /**
+     * Code: ARS
+     */
+    readonly ArgentinePeso: Coding;
+    /**
+     * Code: AUD
+     */
+    readonly AustralianDollar: Coding;
+    /**
+     * Code: AWG
+     */
+    readonly ArubanFlorin: Coding;
+    /**
+     * Code: AZN
+     */
+    readonly AzerbaijaniManat: Coding;
+    /**
+     * Code: BAM
+     */
+    readonly BosniaAndHerzegovinaConvertibleMark: Coding;
+    /**
+     * Code: BBD
+     */
+    readonly BarbadosDollar: Coding;
+    /**
+     * Code: BDT
+     */
+    readonly BangladeshiTaka: Coding;
+    /**
+     * Code: BGN
+     */
+    readonly BulgarianLev: Coding;
+    /**
+     * Code: BHD
+     */
+    readonly BahrainiDinar: Coding;
+    /**
+     * Code: BIF
+     */
+    readonly BurundianFranc: Coding;
+    /**
+     * Code: BMD
+     */
+    readonly BermudianDollar: Coding;
+    /**
+     * Code: BND
+     */
+    readonly BruneiDollar: Coding;
+    /**
+     * Code: BOB
+     */
+    readonly Boliviano: Coding;
+    /**
+     * Code: BOV
+     */
+    readonly BolivianMvdolFundsCode: Coding;
+    /**
+     * Code: BRL
+     */
+    readonly BrazilianReal: Coding;
+    /**
+     * Code: BSD
+     */
+    readonly BahamianDollar: Coding;
+    /**
+     * Code: BTN
+     */
+    readonly BhutaneseNgultrum: Coding;
+    /**
+     * Code: BWP
+     */
+    readonly BotswanaPula: Coding;
+    /**
+     * Code: BYN
+     */
+    readonly BelarusianRuble: Coding;
+    /**
+     * Code: BZD
+     */
+    readonly BelizeDollar: Coding;
+    /**
+     * Code: CAD
+     */
+    readonly CanadianDollar: Coding;
+    /**
+     * Code: CDF
+     */
+    readonly CongoleseFranc: Coding;
+    /**
+     * Code: CHE
+     */
+    readonly WIREuroComplementaryCurrency: Coding;
+    /**
+     * Code: CHF
+     */
+    readonly SwissFranc: Coding;
+    /**
+     * Code: CHW
+     */
+    readonly WIRFrancComplementaryCurrency: Coding;
+    /**
+     * Code: CLF
+     */
+    readonly UnidadDeFomentoFundsCode: Coding;
+    /**
+     * Code: CLP
+     */
+    readonly ChileanPeso: Coding;
+    /**
+     * Code: CNY
+     */
+    readonly RenminbiChineseYuan8: Coding;
+    /**
+     * Code: COP
+     */
+    readonly ColombianPeso: Coding;
+    /**
+     * Code: COU
+     */
+    readonly UnidadDeValorRealUVRFundsCode9: Coding;
+    /**
+     * Code: CRC
+     */
+    readonly CostaRicanColon: Coding;
+    /**
+     * Code: CUC
+     */
+    readonly CubanConvertiblePeso: Coding;
+    /**
+     * Code: CUP
+     */
+    readonly CubanPeso: Coding;
+    /**
+     * Code: CVE
+     */
+    readonly CapeVerdeEscudo: Coding;
+    /**
+     * Code: CZK
+     */
+    readonly CzechKoruna: Coding;
+    /**
+     * Code: DJF
+     */
+    readonly DjiboutianFranc: Coding;
+    /**
+     * Code: DKK
+     */
+    readonly DanishKrone: Coding;
+    /**
+     * Code: DOP
+     */
+    readonly DominicanPeso: Coding;
+    /**
+     * Code: DZD
+     */
+    readonly AlgerianDinar: Coding;
+    /**
+     * Code: EGP
+     */
+    readonly EgyptianPound: Coding;
+    /**
+     * Code: ERN
+     */
+    readonly EritreanNakfa: Coding;
+    /**
+     * Code: ETB
+     */
+    readonly EthiopianBirr: Coding;
+    /**
+     * Code: EUR
+     */
+    readonly Euro: Coding;
+    /**
+     * Code: FJD
+     */
+    readonly FijiDollar: Coding;
+    /**
+     * Code: FKP
+     */
+    readonly FalklandIslandsPound: Coding;
+    /**
+     * Code: GBP
+     */
+    readonly PoundSterling: Coding;
+    /**
+     * Code: GEL
+     */
+    readonly GeorgianLari: Coding;
+    /**
+     * Code: GGP
+     */
+    readonly GuernseyPound: Coding;
+    /**
+     * Code: GHS
+     */
+    readonly GhanaianCedi: Coding;
+    /**
+     * Code: GIP
+     */
+    readonly GibraltarPound: Coding;
+    /**
+     * Code: GMD
+     */
+    readonly GambianDalasi: Coding;
+    /**
+     * Code: GNF
+     */
+    readonly GuineanFranc: Coding;
+    /**
+     * Code: GTQ
+     */
+    readonly GuatemalanQuetzal: Coding;
+    /**
+     * Code: GYD
+     */
+    readonly GuyaneseDollar: Coding;
+    /**
+     * Code: HKD
+     */
+    readonly HongKongDollar: Coding;
+    /**
+     * Code: HNL
+     */
+    readonly HonduranLempira: Coding;
+    /**
+     * Code: HRK
+     */
+    readonly CroatianKuna: Coding;
+    /**
+     * Code: HTG
+     */
+    readonly HaitianGourde: Coding;
+    /**
+     * Code: HUF
+     */
+    readonly HungarianForint: Coding;
+    /**
+     * Code: IDR
+     */
+    readonly IndonesianRupiah: Coding;
+    /**
+     * Code: ILS
+     */
+    readonly IsraeliNewShekel: Coding;
+    /**
+     * Code: IMP
+     */
+    readonly IsleOfManPound: Coding;
+    /**
+     * Code: INR
+     */
+    readonly IndianRupee: Coding;
+    /**
+     * Code: IQD
+     */
+    readonly IraqiDinar: Coding;
+    /**
+     * Code: IRR
+     */
+    readonly IranianRial: Coding;
+    /**
+     * Code: ISK
+     */
+    readonly IcelandicKrona: Coding;
+    /**
+     * Code: JEP
+     */
+    readonly JerseyPound: Coding;
+    /**
+     * Code: JMD
+     */
+    readonly JamaicanDollar: Coding;
+    /**
+     * Code: JOD
+     */
+    readonly JordanianDinar: Coding;
+    /**
+     * Code: JPY
+     */
+    readonly JapaneseYen: Coding;
+    /**
+     * Code: KES
+     */
+    readonly KenyanShilling: Coding;
+    /**
+     * Code: KGS
+     */
+    readonly KyrgyzstaniSom: Coding;
+    /**
+     * Code: KHR
+     */
+    readonly CambodianRiel: Coding;
+    /**
+     * Code: KMF
+     */
+    readonly ComoroFranc: Coding;
+    /**
+     * Code: KPW
+     */
+    readonly NorthKoreanWon: Coding;
+    /**
+     * Code: KRW
+     */
+    readonly SouthKoreanWon: Coding;
+    /**
+     * Code: KWD
+     */
+    readonly KuwaitiDinar: Coding;
+    /**
+     * Code: KYD
+     */
+    readonly CaymanIslandsDollar: Coding;
+    /**
+     * Code: KZT
+     */
+    readonly KazakhstaniTenge: Coding;
+    /**
+     * Code: LAK
+     */
+    readonly LaoKip: Coding;
+    /**
+     * Code: LBP
+     */
+    readonly LebanesePound: Coding;
+    /**
+     * Code: LKR
+     */
+    readonly SriLankanRupee: Coding;
+    /**
+     * Code: LRD
+     */
+    readonly LiberianDollar: Coding;
+    /**
+     * Code: LSL
+     */
+    readonly LesothoLoti: Coding;
+    /**
+     * Code: LYD
+     */
+    readonly LibyanDinar: Coding;
+    /**
+     * Code: MAD
+     */
+    readonly MoroccanDirham: Coding;
+    /**
+     * Code: MDL
+     */
+    readonly MoldovanLeu: Coding;
+    /**
+     * Code: MGA
+     */
+    readonly MalagasyAriary: Coding;
+    /**
+     * Code: MKD
+     */
+    readonly MacedonianDenar: Coding;
+    /**
+     * Code: MMK
+     */
+    readonly MyanmarKyat: Coding;
+    /**
+     * Code: MNT
+     */
+    readonly MongolianTogrog: Coding;
+    /**
+     * Code: MOP
+     */
+    readonly MacanesePataca: Coding;
+    /**
+     * Code: MRU
+     */
+    readonly MauritanianOuguiya: Coding;
+    /**
+     * Code: MUR
+     */
+    readonly MauritianRupee: Coding;
+    /**
+     * Code: MVR
+     */
+    readonly MaldivianRufiyaa: Coding;
+    /**
+     * Code: MWK
+     */
+    readonly MalawianKwacha: Coding;
+    /**
+     * Code: MXN
+     */
+    readonly MexicanPeso: Coding;
+    /**
+     * Code: MXV
+     */
+    readonly MexicanUnidadDeInversionUDIFundsCode: Coding;
+    /**
+     * Code: MYR
+     */
+    readonly MalaysianRinggit: Coding;
+    /**
+     * Code: MZN
+     */
+    readonly MozambicanMetical: Coding;
+    /**
+     * Code: NAD
+     */
+    readonly NamibianDollar: Coding;
+    /**
+     * Code: NGN
+     */
+    readonly NigerianNaira: Coding;
+    /**
+     * Code: NIO
+     */
+    readonly NicaraguanCordoba: Coding;
+    /**
+     * Code: NOK
+     */
+    readonly NorwegianKrone: Coding;
+    /**
+     * Code: NPR
+     */
+    readonly NepaleseRupee: Coding;
+    /**
+     * Code: NZD
+     */
+    readonly NewZealandDollar: Coding;
+    /**
+     * Code: OMR
+     */
+    readonly OmaniRial: Coding;
+    /**
+     * Code: PAB
+     */
+    readonly PanamanianBalboa: Coding;
+    /**
+     * Code: PEN
+     */
+    readonly PeruvianSol: Coding;
+    /**
+     * Code: PGK
+     */
+    readonly PapuaNewGuineanKina: Coding;
+    /**
+     * Code: PHP
+     */
+    readonly PhilippinePiso13: Coding;
+    /**
+     * Code: PKR
+     */
+    readonly PakistaniRupee: Coding;
+    /**
+     * Code: PLN
+     */
+    readonly PolishZłoty: Coding;
+    /**
+     * Code: PYG
+     */
+    readonly ParaguayanGuarani: Coding;
+    /**
+     * Code: QAR
+     */
+    readonly QatariRiyal: Coding;
+    /**
+     * Code: RON
+     */
+    readonly RomanianLeu: Coding;
+    /**
+     * Code: RSD
+     */
+    readonly SerbianDinar: Coding;
+    /**
+     * Code: RUB
+     */
+    readonly RussianRuble: Coding;
+    /**
+     * Code: RWF
+     */
+    readonly RwandanFranc: Coding;
+    /**
+     * Code: SAR
+     */
+    readonly SaudiRiyal: Coding;
+    /**
+     * Code: SBD
+     */
+    readonly SolomonIslandsDollar: Coding;
+    /**
+     * Code: SCR
+     */
+    readonly SeychellesRupee: Coding;
+    /**
+     * Code: SDG
+     */
+    readonly SudanesePound: Coding;
+    /**
+     * Code: SEK
+     */
+    readonly SwedishKronaKronor: Coding;
+    /**
+     * Code: SGD
+     */
+    readonly SingaporeDollar: Coding;
+    /**
+     * Code: SHP
+     */
+    readonly SaintHelenaPound: Coding;
+    /**
+     * Code: SLL
+     */
+    readonly SierraLeoneanLeone: Coding;
+    /**
+     * Code: SOS
+     */
+    readonly SomaliShilling: Coding;
+    /**
+     * Code: SRD
+     */
+    readonly SurinameseDollar: Coding;
+    /**
+     * Code: SSP
+     */
+    readonly SouthSudanesePound: Coding;
+    /**
+     * Code: STN
+     */
+    readonly SaoTomeAndPrincipeDobra: Coding;
+    /**
+     * Code: SVC
+     */
+    readonly SalvadoranColon: Coding;
+    /**
+     * Code: SYP
+     */
+    readonly SyrianPound: Coding;
+    /**
+     * Code: SZL
+     */
+    readonly SwaziLilangeni: Coding;
+    /**
+     * Code: THB
+     */
+    readonly ThaiBaht: Coding;
+    /**
+     * Code: TJS
+     */
+    readonly TajikistaniSomoni: Coding;
+    /**
+     * Code: TMT
+     */
+    readonly TurkmenistanManat: Coding;
+    /**
+     * Code: TND
+     */
+    readonly TunisianDinar: Coding;
+    /**
+     * Code: TOP
+     */
+    readonly TonganPaanga: Coding;
+    /**
+     * Code: TRY
+     */
+    readonly TurkishLira: Coding;
+    /**
+     * Code: TTD
+     */
+    readonly TrinidadAndTobagoDollar: Coding;
+    /**
+     * Code: TVD
+     */
+    readonly TuvaluDollar: Coding;
+    /**
+     * Code: TWD
+     */
+    readonly NewTaiwanDollar: Coding;
+    /**
+     * Code: TZS
+     */
+    readonly TanzanianShilling: Coding;
+    /**
+     * Code: UAH
+     */
+    readonly UkrainianHryvnia: Coding;
+    /**
+     * Code: UGX
+     */
+    readonly UgandanShilling: Coding;
+    /**
+     * Code: USD
+     */
+    readonly UnitedStatesDollar: Coding;
+    /**
+     * Code: USN
+     */
+    readonly UnitedStatesDollarNextDayFundsCode: Coding;
+    /**
+     * Code: UYI
+     */
+    readonly UruguayPesoEnUnidadesIndexadasURUIURUIFundsCode: Coding;
+    /**
+     * Code: UYU
+     */
+    readonly UruguayanPeso: Coding;
+    /**
+     * Code: UZS
+     */
+    readonly UzbekistanSom: Coding;
+    /**
+     * Code: VEF
+     */
+    readonly VenezuelanBolivar: Coding;
+    /**
+     * Code: VND
+     */
+    readonly VietnameseĐong: Coding;
+    /**
+     * Code: VUV
+     */
+    readonly VanuatuVatu: Coding;
+    /**
+     * Code: WST
+     */
+    readonly SamoanTala: Coding;
+    /**
+     * Code: XAF
+     */
+    readonly CFAFrancBEAC: Coding;
+    /**
+     * Code: XAG
+     */
+    readonly SilverOneTroyOunce: Coding;
+    /**
+     * Code: XAU
+     */
+    readonly GoldOneTroyOunce: Coding;
+    /**
+     * Code: XBA
+     */
+    readonly EuropeanCompositeUnitEURCOBondMarketUnit: Coding;
+    /**
+     * Code: XBB
+     */
+    readonly EuropeanMonetaryUnitEMU6BondMarketUnit: Coding;
+    /**
+     * Code: XBC
+     */
+    readonly EuropeanUnitOfAccount9EUA9BondMarketUnit: Coding;
+    /**
+     * Code: XBD
+     */
+    readonly EuropeanUnitOfAccount17EUA17BondMarketUnit: Coding;
+    /**
+     * Code: XCD
+     */
+    readonly EastCaribbeanDollar: Coding;
+    /**
+     * Code: XDR
+     */
+    readonly SpecialDrawingRights: Coding;
+    /**
+     * Code: XOF
+     */
+    readonly CFAFrancBCEAO: Coding;
+    /**
+     * Code: XPD
+     */
+    readonly PalladiumOneTroyOunce: Coding;
+    /**
+     * Code: XPF
+     */
+    readonly CFPFrancFrancPacifique: Coding;
+    /**
+     * Code: XPT
+     */
+    readonly PlatinumOneTroyOunce: Coding;
+    /**
+     * Code: XSU
+     */
+    readonly SUCRE: Coding;
+    /**
+     * Code: XTS
+     */
+    readonly CodeReservedForTestingPurposes: Coding;
+    /**
+     * Code: XUA
+     */
+    readonly ADBUnitOfAccount: Coding;
+    /**
+     * Code: XXX
+     */
+    readonly NoCurrency: Coding;
+    /**
+     * Code: YER
+     */
+    readonly YemeniRial: Coding;
+    /**
+     * Code: ZAR
+     */
+    readonly SouthAfricanRand: Coding;
+    /**
+     * Code: ZMW
+     */
+    readonly ZambianKwacha: Coding;
+    /**
+     * Code: ZWL
+     */
+    readonly ZimbabweanDollarA10: Coding;
 };
+/**
+ * Currency codes from ISO 4217 (see https://www.iso.org/iso-4217-currency-codes.html)
+ */
+export declare type CurrenciesValueSetType = typeof CurrenciesValueSet;
+/**
+ * Currency codes from ISO 4217 (see https://www.iso.org/iso-4217-currency-codes.html)
+ */
+export declare enum CurrenciesValueSetEnum {
+    /**
+     * Code: AED
+     */
+    UnitedArabEmiratesDirham = "AED",
+    /**
+     * Code: AFN
+     */
+    AfghanAfghani = "AFN",
+    /**
+     * Code: ALL
+     */
+    AlbanianLek = "ALL",
+    /**
+     * Code: AMD
+     */
+    ArmenianDram = "AMD",
+    /**
+     * Code: ANG
+     */
+    NetherlandsAntilleanGuilder = "ANG",
+    /**
+     * Code: AOA
+     */
+    AngolanKwanza = "AOA",
+    /**
+     * Code: ARS
+     */
+    ArgentinePeso = "ARS",
+    /**
+     * Code: AUD
+     */
+    AustralianDollar = "AUD",
+    /**
+     * Code: AWG
+     */
+    ArubanFlorin = "AWG",
+    /**
+     * Code: AZN
+     */
+    AzerbaijaniManat = "AZN",
+    /**
+     * Code: BAM
+     */
+    BosniaAndHerzegovinaConvertibleMark = "BAM",
+    /**
+     * Code: BBD
+     */
+    BarbadosDollar = "BBD",
+    /**
+     * Code: BDT
+     */
+    BangladeshiTaka = "BDT",
+    /**
+     * Code: BGN
+     */
+    BulgarianLev = "BGN",
+    /**
+     * Code: BHD
+     */
+    BahrainiDinar = "BHD",
+    /**
+     * Code: BIF
+     */
+    BurundianFranc = "BIF",
+    /**
+     * Code: BMD
+     */
+    BermudianDollar = "BMD",
+    /**
+     * Code: BND
+     */
+    BruneiDollar = "BND",
+    /**
+     * Code: BOB
+     */
+    Boliviano = "BOB",
+    /**
+     * Code: BOV
+     */
+    BolivianMvdolFundsCode = "BOV",
+    /**
+     * Code: BRL
+     */
+    BrazilianReal = "BRL",
+    /**
+     * Code: BSD
+     */
+    BahamianDollar = "BSD",
+    /**
+     * Code: BTN
+     */
+    BhutaneseNgultrum = "BTN",
+    /**
+     * Code: BWP
+     */
+    BotswanaPula = "BWP",
+    /**
+     * Code: BYN
+     */
+    BelarusianRuble = "BYN",
+    /**
+     * Code: BZD
+     */
+    BelizeDollar = "BZD",
+    /**
+     * Code: CAD
+     */
+    CanadianDollar = "CAD",
+    /**
+     * Code: CDF
+     */
+    CongoleseFranc = "CDF",
+    /**
+     * Code: CHE
+     */
+    WIREuroComplementaryCurrency = "CHE",
+    /**
+     * Code: CHF
+     */
+    SwissFranc = "CHF",
+    /**
+     * Code: CHW
+     */
+    WIRFrancComplementaryCurrency = "CHW",
+    /**
+     * Code: CLF
+     */
+    UnidadDeFomentoFundsCode = "CLF",
+    /**
+     * Code: CLP
+     */
+    ChileanPeso = "CLP",
+    /**
+     * Code: CNY
+     */
+    RenminbiChineseYuan8 = "CNY",
+    /**
+     * Code: COP
+     */
+    ColombianPeso = "COP",
+    /**
+     * Code: COU
+     */
+    UnidadDeValorRealUVRFundsCode9 = "COU",
+    /**
+     * Code: CRC
+     */
+    CostaRicanColon = "CRC",
+    /**
+     * Code: CUC
+     */
+    CubanConvertiblePeso = "CUC",
+    /**
+     * Code: CUP
+     */
+    CubanPeso = "CUP",
+    /**
+     * Code: CVE
+     */
+    CapeVerdeEscudo = "CVE",
+    /**
+     * Code: CZK
+     */
+    CzechKoruna = "CZK",
+    /**
+     * Code: DJF
+     */
+    DjiboutianFranc = "DJF",
+    /**
+     * Code: DKK
+     */
+    DanishKrone = "DKK",
+    /**
+     * Code: DOP
+     */
+    DominicanPeso = "DOP",
+    /**
+     * Code: DZD
+     */
+    AlgerianDinar = "DZD",
+    /**
+     * Code: EGP
+     */
+    EgyptianPound = "EGP",
+    /**
+     * Code: ERN
+     */
+    EritreanNakfa = "ERN",
+    /**
+     * Code: ETB
+     */
+    EthiopianBirr = "ETB",
+    /**
+     * Code: EUR
+     */
+    Euro = "EUR",
+    /**
+     * Code: FJD
+     */
+    FijiDollar = "FJD",
+    /**
+     * Code: FKP
+     */
+    FalklandIslandsPound = "FKP",
+    /**
+     * Code: GBP
+     */
+    PoundSterling = "GBP",
+    /**
+     * Code: GEL
+     */
+    GeorgianLari = "GEL",
+    /**
+     * Code: GGP
+     */
+    GuernseyPound = "GGP",
+    /**
+     * Code: GHS
+     */
+    GhanaianCedi = "GHS",
+    /**
+     * Code: GIP
+     */
+    GibraltarPound = "GIP",
+    /**
+     * Code: GMD
+     */
+    GambianDalasi = "GMD",
+    /**
+     * Code: GNF
+     */
+    GuineanFranc = "GNF",
+    /**
+     * Code: GTQ
+     */
+    GuatemalanQuetzal = "GTQ",
+    /**
+     * Code: GYD
+     */
+    GuyaneseDollar = "GYD",
+    /**
+     * Code: HKD
+     */
+    HongKongDollar = "HKD",
+    /**
+     * Code: HNL
+     */
+    HonduranLempira = "HNL",
+    /**
+     * Code: HRK
+     */
+    CroatianKuna = "HRK",
+    /**
+     * Code: HTG
+     */
+    HaitianGourde = "HTG",
+    /**
+     * Code: HUF
+     */
+    HungarianForint = "HUF",
+    /**
+     * Code: IDR
+     */
+    IndonesianRupiah = "IDR",
+    /**
+     * Code: ILS
+     */
+    IsraeliNewShekel = "ILS",
+    /**
+     * Code: IMP
+     */
+    IsleOfManPound = "IMP",
+    /**
+     * Code: INR
+     */
+    IndianRupee = "INR",
+    /**
+     * Code: IQD
+     */
+    IraqiDinar = "IQD",
+    /**
+     * Code: IRR
+     */
+    IranianRial = "IRR",
+    /**
+     * Code: ISK
+     */
+    IcelandicKrona = "ISK",
+    /**
+     * Code: JEP
+     */
+    JerseyPound = "JEP",
+    /**
+     * Code: JMD
+     */
+    JamaicanDollar = "JMD",
+    /**
+     * Code: JOD
+     */
+    JordanianDinar = "JOD",
+    /**
+     * Code: JPY
+     */
+    JapaneseYen = "JPY",
+    /**
+     * Code: KES
+     */
+    KenyanShilling = "KES",
+    /**
+     * Code: KGS
+     */
+    KyrgyzstaniSom = "KGS",
+    /**
+     * Code: KHR
+     */
+    CambodianRiel = "KHR",
+    /**
+     * Code: KMF
+     */
+    ComoroFranc = "KMF",
+    /**
+     * Code: KPW
+     */
+    NorthKoreanWon = "KPW",
+    /**
+     * Code: KRW
+     */
+    SouthKoreanWon = "KRW",
+    /**
+     * Code: KWD
+     */
+    KuwaitiDinar = "KWD",
+    /**
+     * Code: KYD
+     */
+    CaymanIslandsDollar = "KYD",
+    /**
+     * Code: KZT
+     */
+    KazakhstaniTenge = "KZT",
+    /**
+     * Code: LAK
+     */
+    LaoKip = "LAK",
+    /**
+     * Code: LBP
+     */
+    LebanesePound = "LBP",
+    /**
+     * Code: LKR
+     */
+    SriLankanRupee = "LKR",
+    /**
+     * Code: LRD
+     */
+    LiberianDollar = "LRD",
+    /**
+     * Code: LSL
+     */
+    LesothoLoti = "LSL",
+    /**
+     * Code: LYD
+     */
+    LibyanDinar = "LYD",
+    /**
+     * Code: MAD
+     */
+    MoroccanDirham = "MAD",
+    /**
+     * Code: MDL
+     */
+    MoldovanLeu = "MDL",
+    /**
+     * Code: MGA
+     */
+    MalagasyAriary = "MGA",
+    /**
+     * Code: MKD
+     */
+    MacedonianDenar = "MKD",
+    /**
+     * Code: MMK
+     */
+    MyanmarKyat = "MMK",
+    /**
+     * Code: MNT
+     */
+    MongolianTogrog = "MNT",
+    /**
+     * Code: MOP
+     */
+    MacanesePataca = "MOP",
+    /**
+     * Code: MRU
+     */
+    MauritanianOuguiya = "MRU",
+    /**
+     * Code: MUR
+     */
+    MauritianRupee = "MUR",
+    /**
+     * Code: MVR
+     */
+    MaldivianRufiyaa = "MVR",
+    /**
+     * Code: MWK
+     */
+    MalawianKwacha = "MWK",
+    /**
+     * Code: MXN
+     */
+    MexicanPeso = "MXN",
+    /**
+     * Code: MXV
+     */
+    MexicanUnidadDeInversionUDIFundsCode = "MXV",
+    /**
+     * Code: MYR
+     */
+    MalaysianRinggit = "MYR",
+    /**
+     * Code: MZN
+     */
+    MozambicanMetical = "MZN",
+    /**
+     * Code: NAD
+     */
+    NamibianDollar = "NAD",
+    /**
+     * Code: NGN
+     */
+    NigerianNaira = "NGN",
+    /**
+     * Code: NIO
+     */
+    NicaraguanCordoba = "NIO",
+    /**
+     * Code: NOK
+     */
+    NorwegianKrone = "NOK",
+    /**
+     * Code: NPR
+     */
+    NepaleseRupee = "NPR",
+    /**
+     * Code: NZD
+     */
+    NewZealandDollar = "NZD",
+    /**
+     * Code: OMR
+     */
+    OmaniRial = "OMR",
+    /**
+     * Code: PAB
+     */
+    PanamanianBalboa = "PAB",
+    /**
+     * Code: PEN
+     */
+    PeruvianSol = "PEN",
+    /**
+     * Code: PGK
+     */
+    PapuaNewGuineanKina = "PGK",
+    /**
+     * Code: PHP
+     */
+    PhilippinePiso13 = "PHP",
+    /**
+     * Code: PKR
+     */
+    PakistaniRupee = "PKR",
+    /**
+     * Code: PLN
+     */
+    PolishZłoty = "PLN",
+    /**
+     * Code: PYG
+     */
+    ParaguayanGuarani = "PYG",
+    /**
+     * Code: QAR
+     */
+    QatariRiyal = "QAR",
+    /**
+     * Code: RON
+     */
+    RomanianLeu = "RON",
+    /**
+     * Code: RSD
+     */
+    SerbianDinar = "RSD",
+    /**
+     * Code: RUB
+     */
+    RussianRuble = "RUB",
+    /**
+     * Code: RWF
+     */
+    RwandanFranc = "RWF",
+    /**
+     * Code: SAR
+     */
+    SaudiRiyal = "SAR",
+    /**
+     * Code: SBD
+     */
+    SolomonIslandsDollar = "SBD",
+    /**
+     * Code: SCR
+     */
+    SeychellesRupee = "SCR",
+    /**
+     * Code: SDG
+     */
+    SudanesePound = "SDG",
+    /**
+     * Code: SEK
+     */
+    SwedishKronaKronor = "SEK",
+    /**
+     * Code: SGD
+     */
+    SingaporeDollar = "SGD",
+    /**
+     * Code: SHP
+     */
+    SaintHelenaPound = "SHP",
+    /**
+     * Code: SLL
+     */
+    SierraLeoneanLeone = "SLL",
+    /**
+     * Code: SOS
+     */
+    SomaliShilling = "SOS",
+    /**
+     * Code: SRD
+     */
+    SurinameseDollar = "SRD",
+    /**
+     * Code: SSP
+     */
+    SouthSudanesePound = "SSP",
+    /**
+     * Code: STN
+     */
+    SaoTomeAndPrincipeDobra = "STN",
+    /**
+     * Code: SVC
+     */
+    SalvadoranColon = "SVC",
+    /**
+     * Code: SYP
+     */
+    SyrianPound = "SYP",
+    /**
+     * Code: SZL
+     */
+    SwaziLilangeni = "SZL",
+    /**
+     * Code: THB
+     */
+    ThaiBaht = "THB",
+    /**
+     * Code: TJS
+     */
+    TajikistaniSomoni = "TJS",
+    /**
+     * Code: TMT
+     */
+    TurkmenistanManat = "TMT",
+    /**
+     * Code: TND
+     */
+    TunisianDinar = "TND",
+    /**
+     * Code: TOP
+     */
+    TonganPaanga = "TOP",
+    /**
+     * Code: TRY
+     */
+    TurkishLira = "TRY",
+    /**
+     * Code: TTD
+     */
+    TrinidadAndTobagoDollar = "TTD",
+    /**
+     * Code: TVD
+     */
+    TuvaluDollar = "TVD",
+    /**
+     * Code: TWD
+     */
+    NewTaiwanDollar = "TWD",
+    /**
+     * Code: TZS
+     */
+    TanzanianShilling = "TZS",
+    /**
+     * Code: UAH
+     */
+    UkrainianHryvnia = "UAH",
+    /**
+     * Code: UGX
+     */
+    UgandanShilling = "UGX",
+    /**
+     * Code: USD
+     */
+    UnitedStatesDollar = "USD",
+    /**
+     * Code: USN
+     */
+    UnitedStatesDollarNextDayFundsCode = "USN",
+    /**
+     * Code: UYI
+     */
+    UruguayPesoEnUnidadesIndexadasURUIURUIFundsCode = "UYI",
+    /**
+     * Code: UYU
+     */
+    UruguayanPeso = "UYU",
+    /**
+     * Code: UZS
+     */
+    UzbekistanSom = "UZS",
+    /**
+     * Code: VEF
+     */
+    VenezuelanBolivar = "VEF",
+    /**
+     * Code: VND
+     */
+    VietnameseĐong = "VND",
+    /**
+     * Code: VUV
+     */
+    VanuatuVatu = "VUV",
+    /**
+     * Code: WST
+     */
+    SamoanTala = "WST",
+    /**
+     * Code: XAF
+     */
+    CFAFrancBEAC = "XAF",
+    /**
+     * Code: XAG
+     */
+    SilverOneTroyOunce = "XAG",
+    /**
+     * Code: XAU
+     */
+    GoldOneTroyOunce = "XAU",
+    /**
+     * Code: XBA
+     */
+    EuropeanCompositeUnitEURCOBondMarketUnit = "XBA",
+    /**
+     * Code: XBB
+     */
+    EuropeanMonetaryUnitEMU6BondMarketUnit = "XBB",
+    /**
+     * Code: XBC
+     */
+    EuropeanUnitOfAccount9EUA9BondMarketUnit = "XBC",
+    /**
+     * Code: XBD
+     */
+    EuropeanUnitOfAccount17EUA17BondMarketUnit = "XBD",
+    /**
+     * Code: XCD
+     */
+    EastCaribbeanDollar = "XCD",
+    /**
+     * Code: XDR
+     */
+    SpecialDrawingRights = "XDR",
+    /**
+     * Code: XOF
+     */
+    CFAFrancBCEAO = "XOF",
+    /**
+     * Code: XPD
+     */
+    PalladiumOneTroyOunce = "XPD",
+    /**
+     * Code: XPF
+     */
+    CFPFrancFrancPacifique = "XPF",
+    /**
+     * Code: XPT
+     */
+    PlatinumOneTroyOunce = "XPT",
+    /**
+     * Code: XSU
+     */
+    SUCRE = "XSU",
+    /**
+     * Code: XTS
+     */
+    CodeReservedForTestingPurposes = "XTS",
+    /**
+     * Code: XUA
+     */
+    ADBUnitOfAccount = "XUA",
+    /**
+     * Code: XXX
+     */
+    NoCurrency = "XXX",
+    /**
+     * Code: YER
+     */
+    YemeniRial = "YER",
+    /**
+     * Code: ZAR
+     */
+    SouthAfricanRand = "ZAR",
+    /**
+     * Code: ZMW
+     */
+    ZambianKwacha = "ZMW",
+    /**
+     * Code: ZWL
+     */
+    ZimbabweanDollarA10 = "ZWL"
+}
 //# sourceMappingURL=CurrenciesValueSet.d.ts.map

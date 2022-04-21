@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * MedicationRequest Category Codes
  */
 export declare const MedicationrequestCategoryValueSet: {
     /**
-     * Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
+     * community: Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
      */
-    medicationrequest_category_Community: Coding;
+    readonly Community: Coding;
     /**
-     * Includes requests for medications created when the patient is being released from a facility
+     * discharge: Includes requests for medications created when the patient is being released from a facility
      */
-    medicationrequest_category_Discharge: Coding;
+    readonly Discharge: Coding;
     /**
-     * Includes requests for medications to be administered or consumed in an inpatient or acute care setting
+     * inpatient: Includes requests for medications to be administered or consumed in an inpatient or acute care setting
      */
-    medicationrequest_category_Inpatient: Coding;
+    readonly Inpatient: Coding;
     /**
-     * Includes requests for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+     * outpatient: Includes requests for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
      */
-    medicationrequest_category_Outpatient: Coding;
+    readonly Outpatient: Coding;
 };
+/**
+ * MedicationRequest Category Codes
+ */
+export declare type MedicationrequestCategoryValueSetType = typeof MedicationrequestCategoryValueSet;
+/**
+ * MedicationRequest Category Codes
+ */
+export declare enum MedicationrequestCategoryValueSetEnum {
+    /**
+     * community: Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
+     */
+    Community = "community",
+    /**
+     * discharge: Includes requests for medications created when the patient is being released from a facility
+     */
+    Discharge = "discharge",
+    /**
+     * inpatient: Includes requests for medications to be administered or consumed in an inpatient or acute care setting
+     */
+    Inpatient = "inpatient",
+    /**
+     * outpatient: Includes requests for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+     */
+    Outpatient = "outpatient"
+}
 //# sourceMappingURL=MedicationrequestCategoryValueSet.d.ts.map

@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Biologically Derived Product Category.
  */
 export declare const ProductCategoryValueSet: {
     /**
-     * Biological agent of unspecified type.
+     * biologicalAgent: Biological agent of unspecified type.
      */
-    product_category_BiologicalAgent: Coding;
+    readonly BiologicalAgent: Coding;
     /**
-     * Collection of cells.
+     * cells: Collection of cells.
      */
-    product_category_Cells: Coding;
+    readonly Cells: Coding;
     /**
-     * Body fluid.
+     * fluid: Body fluid.
      */
-    product_category_Fluid: Coding;
+    readonly Fluid: Coding;
     /**
-     * A collection of tissues joined in a structural unit to serve a common function.
+     * organ: A collection of tissues joined in a structural unit to serve a common function.
      */
-    product_category_Organ: Coding;
+    readonly Organ: Coding;
     /**
-     * An ensemble of similar cells and their extracellular matrix from the same origin that together carry out a specific function.
+     * tissue: An ensemble of similar cells and their extracellular matrix from the same origin that together carry out a specific function.
      */
-    product_category_Tissue: Coding;
+    readonly Tissue: Coding;
 };
+/**
+ * Biologically Derived Product Category.
+ */
+export declare type ProductCategoryValueSetType = typeof ProductCategoryValueSet;
+/**
+ * Biologically Derived Product Category.
+ */
+export declare enum ProductCategoryValueSetEnum {
+    /**
+     * biologicalAgent: Biological agent of unspecified type.
+     */
+    BiologicalAgent = "biologicalAgent",
+    /**
+     * cells: Collection of cells.
+     */
+    Cells = "cells",
+    /**
+     * fluid: Body fluid.
+     */
+    Fluid = "fluid",
+    /**
+     * organ: A collection of tissues joined in a structural unit to serve a common function.
+     */
+    Organ = "organ",
+    /**
+     * tissue: An ensemble of similar cells and their extracellular matrix from the same origin that together carry out a specific function.
+     */
+    Tissue = "tissue"
+}
 //# sourceMappingURL=ProductCategoryValueSet.d.ts.map

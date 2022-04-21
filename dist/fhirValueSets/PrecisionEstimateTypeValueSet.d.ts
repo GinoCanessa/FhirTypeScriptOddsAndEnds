@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Method of reporting variability of estimates, such as confidence intervals, interquartile range or standard deviation.
  */
 export declare const PrecisionEstimateTypeValueSet: {
     /**
-     * confidence interval.
+     * CI: confidence interval.
      */
-    precision_estimate_type_ConfidenceInterval: Coding;
+    readonly ConfidenceInterval: Coding;
     /**
-     * interquartile range.
+     * IQR: interquartile range.
      */
-    precision_estimate_type_InterquartileRange: Coding;
+    readonly InterquartileRange: Coding;
     /**
-     * standard deviation.
+     * SD: standard deviation.
      */
-    precision_estimate_type_StandardDeviation: Coding;
+    readonly StandardDeviation: Coding;
     /**
-     * standard error.
+     * SE: standard error.
      */
-    precision_estimate_type_StandardError: Coding;
+    readonly StandardError: Coding;
 };
+/**
+ * Method of reporting variability of estimates, such as confidence intervals, interquartile range or standard deviation.
+ */
+export declare type PrecisionEstimateTypeValueSetType = typeof PrecisionEstimateTypeValueSet;
+/**
+ * Method of reporting variability of estimates, such as confidence intervals, interquartile range or standard deviation.
+ */
+export declare enum PrecisionEstimateTypeValueSetEnum {
+    /**
+     * CI: confidence interval.
+     */
+    ConfidenceInterval = "CI",
+    /**
+     * IQR: interquartile range.
+     */
+    InterquartileRange = "IQR",
+    /**
+     * SD: standard deviation.
+     */
+    StandardDeviation = "SD",
+    /**
+     * SE: standard error.
+     */
+    StandardError = "SE"
+}
 //# sourceMappingURL=PrecisionEstimateTypeValueSet.d.ts.map

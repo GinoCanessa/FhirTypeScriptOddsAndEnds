@@ -1,4 +1,4 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * A length of time.
  */
@@ -6,18 +6,14 @@ export declare type IDuration = fhir.IQuantity & {};
 /**
  * A length of time.
  */
-export declare class Duration extends fhir.Quantity implements fhir.IDuration {
+export declare class Duration extends fhir.Quantity implements IDuration {
     /**
      * Default constructor for Duration - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IDuration>);
+    constructor(source?: Partial<IDuration>);
     /**
-     * Check if the current Duration contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a Duration from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IDuration): Duration;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Duration.d.ts.map

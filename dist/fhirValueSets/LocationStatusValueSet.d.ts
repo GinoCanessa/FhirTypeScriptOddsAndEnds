@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Indicates whether the location is still in use.
  */
 export declare const LocationStatusValueSet: {
     /**
-     * The location is operational.
+     * active: The location is operational.
      */
-    location_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The location is no longer used.
+     * inactive: The location is no longer used.
      */
-    location_status_Inactive: Coding;
+    readonly Inactive: Coding;
     /**
-     * The location is temporarily closed.
+     * suspended: The location is temporarily closed.
      */
-    location_status_Suspended: Coding;
+    readonly Suspended: Coding;
 };
+/**
+ * Indicates whether the location is still in use.
+ */
+export declare type LocationStatusValueSetType = typeof LocationStatusValueSet;
+/**
+ * Indicates whether the location is still in use.
+ */
+export declare enum LocationStatusValueSetEnum {
+    /**
+     * active: The location is operational.
+     */
+    Active = "active",
+    /**
+     * inactive: The location is no longer used.
+     */
+    Inactive = "inactive",
+    /**
+     * suspended: The location is temporarily closed.
+     */
+    Suspended = "suspended"
+}
 //# sourceMappingURL=LocationStatusValueSet.d.ts.map

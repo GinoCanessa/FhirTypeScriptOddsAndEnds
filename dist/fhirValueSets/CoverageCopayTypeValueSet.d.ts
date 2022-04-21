@@ -1,47 +1,96 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Coverage Copayment Type codes.
  */
 export declare const CoverageCopayTypeValueSet: {
     /**
-     * A standard fixed currency amount applied to all classes or service or product not otherwise specified.
+     * copay: A standard fixed currency amount applied to all classes or service or product not otherwise specified.
      */
-    coverage_copay_type_CopayAmount: Coding;
+    readonly CopayAmount: Coding;
     /**
-     * A standard percentage applied to all classes or service or product not otherwise specified.
+     * copaypct: A standard percentage applied to all classes or service or product not otherwise specified.
      */
-    coverage_copay_type_CopayPercentage: Coding;
+    readonly CopayPercentage: Coding;
     /**
-     * The accumulated amount of patient payment before the coverage begins to pay for services.
+     * deductible: The accumulated amount of patient payment before the coverage begins to pay for services.
      */
-    coverage_copay_type_Deductible: Coding;
+    readonly Deductible: Coding;
     /**
-     * An episode in an emergency department.
+     * emergency: An episode in an emergency department.
      */
-    coverage_copay_type_Emergency: Coding;
+    readonly Emergency: Coding;
     /**
-     * An office visit for a general practitioner of a discipline.
+     * gpvisit: An office visit for a general practitioner of a discipline.
      */
-    coverage_copay_type_GPOfficeVisit: Coding;
+    readonly GPOfficeVisit: Coding;
     /**
-     * An episode of an Inpatient hospital stay.
+     * inpthosp: An episode of an Inpatient hospital stay.
      */
-    coverage_copay_type_InpatientHospital: Coding;
+    readonly InpatientHospital: Coding;
     /**
-     * The maximum amout of payment for services which a patient, or family, is expected to incur - typically annually.
+     * maxoutofpocket: The maximum amout of payment for services which a patient, or family, is expected to incur - typically annually.
      */
-    coverage_copay_type_MaximumOutOfPocket: Coding;
+    readonly MaximumOutOfPocket: Coding;
     /**
-     * An office visit for a specialist practitioner of a discipline
+     * spvisit: An office visit for a specialist practitioner of a discipline
      */
-    coverage_copay_type_SpecialistOfficeVisit: Coding;
+    readonly SpecialistOfficeVisit: Coding;
     /**
-     * A visit held where the patient is remote relative to the practitioner, e.g. by phone, computer or video conference.
+     * televisit: A visit held where the patient is remote relative to the practitioner, e.g. by phone, computer or video conference.
      */
-    coverage_copay_type_TeleVisit: Coding;
+    readonly TeleVisit: Coding;
     /**
-     * A visit to an urgent care facility - typically a community care clinic.
+     * urgentcare: A visit to an urgent care facility - typically a community care clinic.
      */
-    coverage_copay_type_UrgentCare: Coding;
+    readonly UrgentCare: Coding;
 };
+/**
+ * This value set includes sample Coverage Copayment Type codes.
+ */
+export declare type CoverageCopayTypeValueSetType = typeof CoverageCopayTypeValueSet;
+/**
+ * This value set includes sample Coverage Copayment Type codes.
+ */
+export declare enum CoverageCopayTypeValueSetEnum {
+    /**
+     * copay: A standard fixed currency amount applied to all classes or service or product not otherwise specified.
+     */
+    CopayAmount = "copay",
+    /**
+     * copaypct: A standard percentage applied to all classes or service or product not otherwise specified.
+     */
+    CopayPercentage = "copaypct",
+    /**
+     * deductible: The accumulated amount of patient payment before the coverage begins to pay for services.
+     */
+    Deductible = "deductible",
+    /**
+     * emergency: An episode in an emergency department.
+     */
+    Emergency = "emergency",
+    /**
+     * gpvisit: An office visit for a general practitioner of a discipline.
+     */
+    GPOfficeVisit = "gpvisit",
+    /**
+     * inpthosp: An episode of an Inpatient hospital stay.
+     */
+    InpatientHospital = "inpthosp",
+    /**
+     * maxoutofpocket: The maximum amout of payment for services which a patient, or family, is expected to incur - typically annually.
+     */
+    MaximumOutOfPocket = "maxoutofpocket",
+    /**
+     * spvisit: An office visit for a specialist practitioner of a discipline
+     */
+    SpecialistOfficeVisit = "spvisit",
+    /**
+     * televisit: A visit held where the patient is remote relative to the practitioner, e.g. by phone, computer or video conference.
+     */
+    TeleVisit = "televisit",
+    /**
+     * urgentcare: A visit to an urgent care facility - typically a community care clinic.
+     */
+    UrgentCare = "urgentcare"
+}
 //# sourceMappingURL=CoverageCopayTypeValueSet.d.ts.map

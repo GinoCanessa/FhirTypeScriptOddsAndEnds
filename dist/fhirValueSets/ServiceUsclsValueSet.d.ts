@@ -1,87 +1,176 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of USCLS codes.
  */
 export declare const ServiceUsclsValueSet: {
     /**
-     * Exam, comp, primary
+     * 1101: Exam, comp, primary
      */
-    service_uscls_ExamCompPrimary: Coding;
+    readonly ExamCompPrimary: Coding;
     /**
-     * Exam, comp, mixed
+     * 1102: Exam, comp, mixed
      */
-    service_uscls_ExamCompMixed: Coding;
+    readonly ExamCompMixed: Coding;
     /**
-     * Exam, comp, permanent
+     * 1103: Exam, comp, permanent
      */
-    service_uscls_ExamCompPermanent: Coding;
+    readonly ExamCompPermanent: Coding;
     /**
-     * Polishing, 1 unit
+     * 11101: Polishing, 1 unit
      */
-    service_uscls_Polishing1Unit: Coding;
+    readonly Polishing1Unit: Coding;
     /**
-     * Polishing, 2 unit
+     * 11102: Polishing, 2 unit
      */
-    service_uscls_Polishing2Unit: Coding;
+    readonly Polishing2Unit: Coding;
     /**
-     * Polishing, 3 unit
+     * 11103: Polishing, 3 unit
      */
-    service_uscls_Polishing3Unit: Coding;
+    readonly Polishing3Unit: Coding;
     /**
-     * Polishing, 4 unit
+     * 11104: Polishing, 4 unit
      */
-    service_uscls_Polishing4Unit: Coding;
+    readonly Polishing4Unit: Coding;
     /**
-     * Exam, recall
+     * 1201: Exam, recall
      */
-    service_uscls_ExamRecall: Coding;
+    readonly ExamRecall: Coding;
     /**
-     * Exam, emergency
+     * 1205: Exam, emergency
      */
-    service_uscls_ExamEmergency: Coding;
+    readonly ExamEmergency: Coding;
     /**
-     * Radiograph, series (12)
+     * 2101: Radiograph, series (12)
      */
-    service_uscls_RadiographSeries12: Coding;
+    readonly RadiographSeries12: Coding;
     /**
-     * Radiograph, series (16)
+     * 2102: Radiograph, series (16)
      */
-    service_uscls_RadiographSeries16: Coding;
+    readonly RadiographSeries16: Coding;
     /**
-     * Amalgam, 1 surface
+     * 21211: Amalgam, 1 surface
      */
-    service_uscls_Amalgam1Surface: Coding;
+    readonly Amalgam1Surface: Coding;
     /**
-     * Amalgam, 2 surface
+     * 21212: Amalgam, 2 surface
      */
-    service_uscls_Amalgam2Surface: Coding;
+    readonly Amalgam2Surface: Coding;
     /**
-     * Radiograph, bitewing
+     * 2141: Radiograph, bitewing
      */
-    service_uscls_RadiographBitewing: Coding;
+    readonly RadiographBitewing: Coding;
     /**
-     * Radiograph, panoramic
+     * 2601: Radiograph, panoramic
      */
-    service_uscls_RadiographPanoramic: Coding;
+    readonly RadiographPanoramic: Coding;
     /**
-     * Crown, PFM
+     * 27211: Crown, PFM
      */
-    service_uscls_CrownPFM: Coding;
+    readonly CrownPFM: Coding;
     /**
-     * Maryland Bridge
+     * 67211: Maryland Bridge
      */
-    service_uscls_MarylandBridge: Coding;
+    readonly MarylandBridge: Coding;
     /**
-     * Lab, commercial
+     * 99111: Lab, commercial
      */
-    service_uscls_LabCommercial: Coding;
+    readonly LabCommercial: Coding;
     /**
-     * Lab, in office
+     * 99333: Lab, in office
      */
-    service_uscls_LabInOffice: Coding;
+    readonly LabInOffice: Coding;
     /**
-     * Expense
+     * 99555: Expense
      */
-    service_uscls_Expense: Coding;
+    readonly Expense: Coding;
 };
+/**
+ * This value set includes a smattering of USCLS codes.
+ */
+export declare type ServiceUsclsValueSetType = typeof ServiceUsclsValueSet;
+/**
+ * This value set includes a smattering of USCLS codes.
+ */
+export declare enum ServiceUsclsValueSetEnum {
+    /**
+     * 1101: Exam, comp, primary
+     */
+    ExamCompPrimary = "1101",
+    /**
+     * 1102: Exam, comp, mixed
+     */
+    ExamCompMixed = "1102",
+    /**
+     * 1103: Exam, comp, permanent
+     */
+    ExamCompPermanent = "1103",
+    /**
+     * 11101: Polishing, 1 unit
+     */
+    Polishing1Unit = "11101",
+    /**
+     * 11102: Polishing, 2 unit
+     */
+    Polishing2Unit = "11102",
+    /**
+     * 11103: Polishing, 3 unit
+     */
+    Polishing3Unit = "11103",
+    /**
+     * 11104: Polishing, 4 unit
+     */
+    Polishing4Unit = "11104",
+    /**
+     * 1201: Exam, recall
+     */
+    ExamRecall = "1201",
+    /**
+     * 1205: Exam, emergency
+     */
+    ExamEmergency = "1205",
+    /**
+     * 2101: Radiograph, series (12)
+     */
+    RadiographSeries12 = "2101",
+    /**
+     * 2102: Radiograph, series (16)
+     */
+    RadiographSeries16 = "2102",
+    /**
+     * 21211: Amalgam, 1 surface
+     */
+    Amalgam1Surface = "21211",
+    /**
+     * 21212: Amalgam, 2 surface
+     */
+    Amalgam2Surface = "21212",
+    /**
+     * 2141: Radiograph, bitewing
+     */
+    RadiographBitewing = "2141",
+    /**
+     * 2601: Radiograph, panoramic
+     */
+    RadiographPanoramic = "2601",
+    /**
+     * 27211: Crown, PFM
+     */
+    CrownPFM = "27211",
+    /**
+     * 67211: Maryland Bridge
+     */
+    MarylandBridge = "67211",
+    /**
+     * 99111: Lab, commercial
+     */
+    LabCommercial = "99111",
+    /**
+     * 99333: Lab, in office
+     */
+    LabInOffice = "99333",
+    /**
+     * 99555: Expense
+     */
+    Expense = "99555"
+}
 //# sourceMappingURL=ServiceUsclsValueSet.d.ts.map

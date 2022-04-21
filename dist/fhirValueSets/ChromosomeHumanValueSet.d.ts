@@ -1,103 +1,208 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Chromosome number for human.
  */
 export declare const ChromosomeHumanValueSet: {
     /**
-     * chromosome 1.
+     * 1: chromosome 1.
      */
-    chromosome_human_Chromosome1: Coding;
+    readonly Chromosome1: Coding;
     /**
-     * chromosome 10.
+     * 10: chromosome 10.
      */
-    chromosome_human_Chromosome10: Coding;
+    readonly Chromosome10: Coding;
     /**
-     * chromosome 11.
+     * 11: chromosome 11.
      */
-    chromosome_human_Chromosome11: Coding;
+    readonly Chromosome11: Coding;
     /**
-     * chromosome 12.
+     * 12: chromosome 12.
      */
-    chromosome_human_Chromosome12: Coding;
+    readonly Chromosome12: Coding;
     /**
-     * chromosome 13.
+     * 13: chromosome 13.
      */
-    chromosome_human_Chromosome13: Coding;
+    readonly Chromosome13: Coding;
     /**
-     * chromosome 14.
+     * 14: chromosome 14.
      */
-    chromosome_human_Chromosome14: Coding;
+    readonly Chromosome14: Coding;
     /**
-     * chromosome 15.
+     * 15: chromosome 15.
      */
-    chromosome_human_Chromosome15: Coding;
+    readonly Chromosome15: Coding;
     /**
-     * chromosome 16.
+     * 16: chromosome 16.
      */
-    chromosome_human_Chromosome16: Coding;
+    readonly Chromosome16: Coding;
     /**
-     * chromosome 17.
+     * 17: chromosome 17.
      */
-    chromosome_human_Chromosome17: Coding;
+    readonly Chromosome17: Coding;
     /**
-     * chromosome 18.
+     * 18: chromosome 18.
      */
-    chromosome_human_Chromosome18: Coding;
+    readonly Chromosome18: Coding;
     /**
-     * chromosome 19.
+     * 19: chromosome 19.
      */
-    chromosome_human_Chromosome19: Coding;
+    readonly Chromosome19: Coding;
     /**
-     * chromosome 2.
+     * 2: chromosome 2.
      */
-    chromosome_human_Chromosome2: Coding;
+    readonly Chromosome2: Coding;
     /**
-     * chromosome 20.
+     * 20: chromosome 20.
      */
-    chromosome_human_Chromosome20: Coding;
+    readonly Chromosome20: Coding;
     /**
-     * chromosome 21.
+     * 21: chromosome 21.
      */
-    chromosome_human_Chromosome21: Coding;
+    readonly Chromosome21: Coding;
     /**
-     * chromosome 22.
+     * 22: chromosome 22.
      */
-    chromosome_human_Chromosome22: Coding;
+    readonly Chromosome22: Coding;
     /**
-     * chromosome 3.
+     * 3: chromosome 3.
      */
-    chromosome_human_Chromosome3: Coding;
+    readonly Chromosome3: Coding;
     /**
-     * chromosome 4.
+     * 4: chromosome 4.
      */
-    chromosome_human_Chromosome4: Coding;
+    readonly Chromosome4: Coding;
     /**
-     * chromosome 5.
+     * 5: chromosome 5.
      */
-    chromosome_human_Chromosome5: Coding;
+    readonly Chromosome5: Coding;
     /**
-     * chromosome 6.
+     * 6: chromosome 6.
      */
-    chromosome_human_Chromosome6: Coding;
+    readonly Chromosome6: Coding;
     /**
-     * chromosome 7.
+     * 7: chromosome 7.
      */
-    chromosome_human_Chromosome7: Coding;
+    readonly Chromosome7: Coding;
     /**
-     * chromosome 8.
+     * 8: chromosome 8.
      */
-    chromosome_human_Chromosome8: Coding;
+    readonly Chromosome8: Coding;
     /**
-     * chromosome 9.
+     * 9: chromosome 9.
      */
-    chromosome_human_Chromosome9: Coding;
+    readonly Chromosome9: Coding;
     /**
-     * chromosome X.
+     * X: chromosome X.
      */
-    chromosome_human_ChromosomeX: Coding;
+    readonly ChromosomeX: Coding;
     /**
-     * chromosome Y.
+     * Y: chromosome Y.
      */
-    chromosome_human_ChromosomeY: Coding;
+    readonly ChromosomeY: Coding;
 };
+/**
+ * Chromosome number for human.
+ */
+export declare type ChromosomeHumanValueSetType = typeof ChromosomeHumanValueSet;
+/**
+ * Chromosome number for human.
+ */
+export declare enum ChromosomeHumanValueSetEnum {
+    /**
+     * 1: chromosome 1.
+     */
+    Chromosome1 = "1",
+    /**
+     * 10: chromosome 10.
+     */
+    Chromosome10 = "10",
+    /**
+     * 11: chromosome 11.
+     */
+    Chromosome11 = "11",
+    /**
+     * 12: chromosome 12.
+     */
+    Chromosome12 = "12",
+    /**
+     * 13: chromosome 13.
+     */
+    Chromosome13 = "13",
+    /**
+     * 14: chromosome 14.
+     */
+    Chromosome14 = "14",
+    /**
+     * 15: chromosome 15.
+     */
+    Chromosome15 = "15",
+    /**
+     * 16: chromosome 16.
+     */
+    Chromosome16 = "16",
+    /**
+     * 17: chromosome 17.
+     */
+    Chromosome17 = "17",
+    /**
+     * 18: chromosome 18.
+     */
+    Chromosome18 = "18",
+    /**
+     * 19: chromosome 19.
+     */
+    Chromosome19 = "19",
+    /**
+     * 2: chromosome 2.
+     */
+    Chromosome2 = "2",
+    /**
+     * 20: chromosome 20.
+     */
+    Chromosome20 = "20",
+    /**
+     * 21: chromosome 21.
+     */
+    Chromosome21 = "21",
+    /**
+     * 22: chromosome 22.
+     */
+    Chromosome22 = "22",
+    /**
+     * 3: chromosome 3.
+     */
+    Chromosome3 = "3",
+    /**
+     * 4: chromosome 4.
+     */
+    Chromosome4 = "4",
+    /**
+     * 5: chromosome 5.
+     */
+    Chromosome5 = "5",
+    /**
+     * 6: chromosome 6.
+     */
+    Chromosome6 = "6",
+    /**
+     * 7: chromosome 7.
+     */
+    Chromosome7 = "7",
+    /**
+     * 8: chromosome 8.
+     */
+    Chromosome8 = "8",
+    /**
+     * 9: chromosome 9.
+     */
+    Chromosome9 = "9",
+    /**
+     * X: chromosome X.
+     */
+    ChromosomeX = "X",
+    /**
+     * Y: chromosome Y.
+     */
+    ChromosomeY = "Y"
+}
 //# sourceMappingURL=ChromosomeHumanValueSet.d.ts.map

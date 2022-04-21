@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states.
  */
 export declare const EvidenceVariantStateValueSet: {
     /**
-     * high risk estimate.
+     * high-risk: high risk estimate.
      */
-    evidence_variant_state_HighRisk: Coding;
+    readonly HighRisk: Coding;
     /**
-     * low risk estimate.
+     * low-risk: low risk estimate.
      */
-    evidence_variant_state_LowRisk: Coding;
+    readonly LowRisk: Coding;
     /**
-     * medium risk estimate.
+     * medium-risk: medium risk estimate.
      */
-    evidence_variant_state_MediumRisk: Coding;
+    readonly MediumRisk: Coding;
 };
+/**
+ * Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states.
+ */
+export declare type EvidenceVariantStateValueSetType = typeof EvidenceVariantStateValueSet;
+/**
+ * Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states.
+ */
+export declare enum EvidenceVariantStateValueSetEnum {
+    /**
+     * high-risk: high risk estimate.
+     */
+    HighRisk = "high-risk",
+    /**
+     * low-risk: low risk estimate.
+     */
+    LowRisk = "low-risk",
+    /**
+     * medium-risk: medium risk estimate.
+     */
+    MediumRisk = "medium-risk"
+}
 //# sourceMappingURL=EvidenceVariantStateValueSet.d.ts.map

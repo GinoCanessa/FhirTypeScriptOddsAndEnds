@@ -1,59 +1,120 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.
  */
 export declare const ReferencerangeMeaningValueSet: {
     /**
-     * Endocrine related states that change the expected value.
+     * endocrine: Endocrine related states that change the expected value.
      */
-    referencerange_meaning_Endocrine: Coding;
+    readonly Endocrine: Coding;
     /**
-     * An expected range in an individual during the follicular stage of the cycle.
+     * follicular: An expected range in an individual during the follicular stage of the cycle.
      */
-    referencerange_meaning_FollicularStage: Coding;
+    readonly FollicularStage: Coding;
     /**
-     * An expected range in an individual during the luteal stage of the cycle.
+     * luteal: An expected range in an individual during the luteal stage of the cycle.
      */
-    referencerange_meaning_Luteal: Coding;
+    readonly Luteal: Coding;
     /**
-     * An expected range in an individual during the midcycle stage of the cycle.
+     * midcycle: An expected range in an individual during the midcycle stage of the cycle.
      */
-    referencerange_meaning_MidCycle: Coding;
+    readonly MidCycle: Coding;
     /**
-     * Values expected for a normal member of the relevant control population being measured. Typically each results producer such as a laboratory has specific normal ranges and they are usually defined as within two standard deviations from the mean and account for 95.45% of this population.
+     * normal: Values expected for a normal member of the relevant control population being measured. Typically each results producer such as a laboratory has specific normal ranges and they are usually defined as within two standard deviations from the mean and account for 95.45% of this population.
      */
-    referencerange_meaning_NormalRange: Coding;
+    readonly NormalRange: Coding;
     /**
-     * The optimal range for best therapeutic outcomes for a specimen taken immediately after administration.
+     * post: The optimal range for best therapeutic outcomes for a specimen taken immediately after administration.
      */
-    referencerange_meaning_PostTherapeuticDesiredLevel: Coding;
+    readonly PostTherapeuticDesiredLevel: Coding;
     /**
-     * An expected range in an individual post-menopause.
+     * postmenopausal: An expected range in an individual post-menopause.
      */
-    referencerange_meaning_PostMenopause: Coding;
+    readonly PostMenopause: Coding;
     /**
-     * The optimal range for best therapeutic outcomes for a specimen taken immediately before administration.
+     * pre: The optimal range for best therapeutic outcomes for a specimen taken immediately before administration.
      */
-    referencerange_meaning_PreTherapeuticDesiredLevel: Coding;
+    readonly PreTherapeuticDesiredLevel: Coding;
     /**
-     * An expected range in an individual prior to puberty.
+     * pre-puberty: An expected range in an individual prior to puberty.
      */
-    referencerange_meaning_PrePuberty: Coding;
+    readonly PrePuberty: Coding;
     /**
-     * The range that is recommended by a relevant professional body.
+     * recommended: The range that is recommended by a relevant professional body.
      */
-    referencerange_meaning_RecommendedRange: Coding;
+    readonly RecommendedRange: Coding;
     /**
-     * The optimal range for best therapeutic outcomes.
+     * therapeutic: The optimal range for best therapeutic outcomes.
      */
-    referencerange_meaning_TherapeuticDesiredLevel: Coding;
+    readonly TherapeuticDesiredLevel: Coding;
     /**
-     * The range at which treatment would/should be considered.
+     * treatment: The range at which treatment would/should be considered.
      */
-    referencerange_meaning_TreatmentRange: Coding;
+    readonly TreatmentRange: Coding;
     /**
-     * General types of reference range.
+     * type: General types of reference range.
      */
-    referencerange_meaning_Type: Coding;
+    readonly Type: Coding;
 };
+/**
+ * This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.
+ */
+export declare type ReferencerangeMeaningValueSetType = typeof ReferencerangeMeaningValueSet;
+/**
+ * This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.
+ */
+export declare enum ReferencerangeMeaningValueSetEnum {
+    /**
+     * endocrine: Endocrine related states that change the expected value.
+     */
+    Endocrine = "endocrine",
+    /**
+     * follicular: An expected range in an individual during the follicular stage of the cycle.
+     */
+    FollicularStage = "follicular",
+    /**
+     * luteal: An expected range in an individual during the luteal stage of the cycle.
+     */
+    Luteal = "luteal",
+    /**
+     * midcycle: An expected range in an individual during the midcycle stage of the cycle.
+     */
+    MidCycle = "midcycle",
+    /**
+     * normal: Values expected for a normal member of the relevant control population being measured. Typically each results producer such as a laboratory has specific normal ranges and they are usually defined as within two standard deviations from the mean and account for 95.45% of this population.
+     */
+    NormalRange = "normal",
+    /**
+     * post: The optimal range for best therapeutic outcomes for a specimen taken immediately after administration.
+     */
+    PostTherapeuticDesiredLevel = "post",
+    /**
+     * postmenopausal: An expected range in an individual post-menopause.
+     */
+    PostMenopause = "postmenopausal",
+    /**
+     * pre: The optimal range for best therapeutic outcomes for a specimen taken immediately before administration.
+     */
+    PreTherapeuticDesiredLevel = "pre",
+    /**
+     * pre-puberty: An expected range in an individual prior to puberty.
+     */
+    PrePuberty = "pre-puberty",
+    /**
+     * recommended: The range that is recommended by a relevant professional body.
+     */
+    RecommendedRange = "recommended",
+    /**
+     * therapeutic: The optimal range for best therapeutic outcomes.
+     */
+    TherapeuticDesiredLevel = "therapeutic",
+    /**
+     * treatment: The range at which treatment would/should be considered.
+     */
+    TreatmentRange = "treatment",
+    /**
+     * type: General types of reference range.
+     */
+    Type = "type"
+}
 //# sourceMappingURL=ReferencerangeMeaningValueSet.d.ts.map

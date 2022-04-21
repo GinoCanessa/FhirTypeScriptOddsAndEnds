@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The methods of referral can be used when referring to a specific HealthCareService resource.
  */
 export declare const ServiceReferralMethodValueSet: {
     /**
-     * Referrals may be accepted via a secure messaging system. To determine the types of secure messaging systems supported, refer to the identifiers collection. Callers will need to understand the specific identifier system used to know that they are able to transmit messages.
+     * elec: Referrals may be accepted via a secure messaging system. To determine the types of secure messaging systems supported, refer to the identifiers collection. Callers will need to understand the specific identifier system used to know that they are able to transmit messages.
      */
-    service_referral_method_SecureMessaging: Coding;
+    readonly SecureMessaging: Coding;
     /**
-     * Referrals may be accepted by fax.
+     * fax: Referrals may be accepted by fax.
      */
-    service_referral_method_Fax: Coding;
+    readonly Fax: Coding;
     /**
-     * Referrals may be accepted via regular postage (or hand delivered).
+     * mail: Referrals may be accepted via regular postage (or hand delivered).
      */
-    service_referral_method_Mail: Coding;
+    readonly Mail: Coding;
     /**
-     * Referrals may be accepted over the phone from a practitioner.
+     * phone: Referrals may be accepted over the phone from a practitioner.
      */
-    service_referral_method_Phone: Coding;
+    readonly Phone: Coding;
     /**
-     * Referrals may be accepted via a secure email. To send please encrypt with the services public key.
+     * semail: Referrals may be accepted via a secure email. To send please encrypt with the services public key.
      */
-    service_referral_method_SecureEmail: Coding;
+    readonly SecureEmail: Coding;
 };
+/**
+ * The methods of referral can be used when referring to a specific HealthCareService resource.
+ */
+export declare type ServiceReferralMethodValueSetType = typeof ServiceReferralMethodValueSet;
+/**
+ * The methods of referral can be used when referring to a specific HealthCareService resource.
+ */
+export declare enum ServiceReferralMethodValueSetEnum {
+    /**
+     * elec: Referrals may be accepted via a secure messaging system. To determine the types of secure messaging systems supported, refer to the identifiers collection. Callers will need to understand the specific identifier system used to know that they are able to transmit messages.
+     */
+    SecureMessaging = "elec",
+    /**
+     * fax: Referrals may be accepted by fax.
+     */
+    Fax = "fax",
+    /**
+     * mail: Referrals may be accepted via regular postage (or hand delivered).
+     */
+    Mail = "mail",
+    /**
+     * phone: Referrals may be accepted over the phone from a practitioner.
+     */
+    Phone = "phone",
+    /**
+     * semail: Referrals may be accepted via a secure email. To send please encrypt with the services public key.
+     */
+    SecureEmail = "semail"
+}
 //# sourceMappingURL=ServiceReferralMethodValueSet.d.ts.map

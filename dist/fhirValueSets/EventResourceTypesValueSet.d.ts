@@ -1,143 +1,288 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A list of all the event resource types defined in this version of the FHIR specification.
  */
 export declare const EventResourceTypesValueSet: {
     /**
-     * Item containing charge code(s) associated with the provision of healthcare provider products.
+     * ChargeItem: Item containing charge code(s) associated with the provision of healthcare provider products.
      */
-    event_resource_types_ChargeItem: Coding;
+    readonly ChargeItem: Coding;
     /**
-     * Remittance resource.
+     * ClaimResponse: Remittance resource.
      */
-    event_resource_types_ClaimResponse: Coding;
+    readonly ClaimResponse: Coding;
     /**
-     * A clinical assessment performed when planning treatments and management strategies for a patient.
+     * ClinicalImpression: A clinical assessment performed when planning treatments and management strategies for a patient.
      */
-    event_resource_types_ClinicalImpression: Coding;
+    readonly ClinicalImpression: Coding;
     /**
-     * A record of information transmitted from a sender to a receiver.
+     * Communication: A record of information transmitted from a sender to a receiver.
      */
-    event_resource_types_Communication: Coding;
+    readonly Communication: Coding;
     /**
-     * A set of resources composed into a single coherent clinical statement with clinical attestation.
+     * Composition: A set of resources composed into a single coherent clinical statement with clinical attestation.
      */
-    event_resource_types_Composition: Coding;
+    readonly Composition: Coding;
     /**
-     * Detailed information about conditions, problems or diagnoses.
+     * Condition: Detailed information about conditions, problems or diagnoses.
      */
-    event_resource_types_Condition: Coding;
+    readonly Condition: Coding;
     /**
-     * A healthcare consumer's policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time.
+     * Consent: A healthcare consumer's policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time.
      */
-    event_resource_types_Consent: Coding;
+    readonly Consent: Coding;
     /**
-     * Insurance or medical plan or a payment agreement.
+     * Coverage: Insurance or medical plan or a payment agreement.
      */
-    event_resource_types_Coverage: Coding;
+    readonly Coverage: Coding;
     /**
-     * Record of use of a device.
+     * DeviceUseStatement: Record of use of a device.
      */
-    event_resource_types_DeviceUseStatement: Coding;
+    readonly DeviceUseStatement: Coding;
     /**
-     * A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports.
+     * DiagnosticReport: A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports.
      */
-    event_resource_types_DiagnosticReport: Coding;
+    readonly DiagnosticReport: Coding;
     /**
-     * A list that defines a set of documents.
+     * DocumentManifest: A list that defines a set of documents.
      */
-    event_resource_types_DocumentManifest: Coding;
+    readonly DocumentManifest: Coding;
     /**
-     * A reference to a document.
+     * DocumentReference: A reference to a document.
      */
-    event_resource_types_DocumentReference: Coding;
+    readonly DocumentReference: Coding;
     /**
-     * An interaction during which services are provided to the patient.
+     * Encounter: An interaction during which services are provided to the patient.
      */
-    event_resource_types_Encounter: Coding;
+    readonly Encounter: Coding;
     /**
-     * EnrollmentResponse resource.
+     * EnrollmentResponse: EnrollmentResponse resource.
      */
-    event_resource_types_EnrollmentResponse: Coding;
+    readonly EnrollmentResponse: Coding;
     /**
-     * An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility.
+     * EpisodeOfCare: An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility.
      */
-    event_resource_types_EpisodeOfCare: Coding;
+    readonly EpisodeOfCare: Coding;
     /**
-     * Explanation of Benefit resource.
+     * ExplanationOfBenefit: Explanation of Benefit resource.
      */
-    event_resource_types_ExplanationOfBenefit: Coding;
+    readonly ExplanationOfBenefit: Coding;
     /**
-     * Information about patient's relatives, relevant for patient.
+     * FamilyMemberHistory: Information about patient's relatives, relevant for patient.
      */
-    event_resource_types_FamilyMemberHistory: Coding;
+    readonly FamilyMemberHistory: Coding;
     /**
-     * The formal response to a guidance request.
+     * GuidanceResponse: The formal response to a guidance request.
      */
-    event_resource_types_GuidanceResponse: Coding;
+    readonly GuidanceResponse: Coding;
     /**
-     * A set of images produced in single study (one or more series of references images).
+     * ImagingStudy: A set of images produced in single study (one or more series of references images).
      */
-    event_resource_types_ImagingStudy: Coding;
+    readonly ImagingStudy: Coding;
     /**
-     * Immunization event information.
+     * Immunization: Immunization event information.
      */
-    event_resource_types_Immunization: Coding;
+    readonly Immunization: Coding;
     /**
-     * Results of a measure evaluation.
+     * MeasureReport: Results of a measure evaluation.
      */
-    event_resource_types_MeasureReport: Coding;
+    readonly MeasureReport: Coding;
     /**
-     * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
+     * Media: A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
      */
-    event_resource_types_Media: Coding;
+    readonly Media: Coding;
     /**
-     * Administration of medication to a patient.
+     * MedicationAdministration: Administration of medication to a patient.
      */
-    event_resource_types_MedicationAdministration: Coding;
+    readonly MedicationAdministration: Coding;
     /**
-     * Dispensing a medication to a named patient.
+     * MedicationDispense: Dispensing a medication to a named patient.
      */
-    event_resource_types_MedicationDispense: Coding;
+    readonly MedicationDispense: Coding;
     /**
-     * Record of medication being taken by a patient.
+     * MedicationStatement: Record of medication being taken by a patient.
      */
-    event_resource_types_MedicationStatement: Coding;
+    readonly MedicationStatement: Coding;
     /**
-     * Measurements and simple assertions.
+     * Observation: Measurements and simple assertions.
      */
-    event_resource_types_Observation: Coding;
+    readonly Observation: Coding;
     /**
-     * PaymentNotice request.
+     * PaymentNotice: PaymentNotice request.
      */
-    event_resource_types_PaymentNotice: Coding;
+    readonly PaymentNotice: Coding;
     /**
-     * PaymentReconciliation resource.
+     * PaymentReconciliation: PaymentReconciliation resource.
      */
-    event_resource_types_PaymentReconciliation: Coding;
+    readonly PaymentReconciliation: Coding;
     /**
-     * An action that is being or was performed on a patient.
+     * Procedure: An action that is being or was performed on a patient.
      */
-    event_resource_types_Procedure: Coding;
+    readonly Procedure: Coding;
     /**
-     * ProcessResponse resource.
+     * ProcessResponse: ProcessResponse resource.
      */
-    event_resource_types_ProcessResponse: Coding;
+    readonly ProcessResponse: Coding;
     /**
-     * A structured set of questions and their answers.
+     * QuestionnaireResponse: A structured set of questions and their answers.
      */
-    event_resource_types_QuestionnaireResponse: Coding;
+    readonly QuestionnaireResponse: Coding;
     /**
-     * Potential outcomes for a subject with likelihood.
+     * RiskAssessment: Potential outcomes for a subject with likelihood.
      */
-    event_resource_types_RiskAssessment: Coding;
+    readonly RiskAssessment: Coding;
     /**
-     * Delivery of bulk Supplies.
+     * SupplyDelivery: Delivery of bulk Supplies.
      */
-    event_resource_types_SupplyDelivery: Coding;
+    readonly SupplyDelivery: Coding;
     /**
-     * A task to be performed.
+     * Task: A task to be performed.
      */
-    event_resource_types_Task: Coding;
+    readonly Task: Coding;
 };
+/**
+ * A list of all the event resource types defined in this version of the FHIR specification.
+ */
+export declare type EventResourceTypesValueSetType = typeof EventResourceTypesValueSet;
+/**
+ * A list of all the event resource types defined in this version of the FHIR specification.
+ */
+export declare enum EventResourceTypesValueSetEnum {
+    /**
+     * ChargeItem: Item containing charge code(s) associated with the provision of healthcare provider products.
+     */
+    ChargeItem = "ChargeItem",
+    /**
+     * ClaimResponse: Remittance resource.
+     */
+    ClaimResponse = "ClaimResponse",
+    /**
+     * ClinicalImpression: A clinical assessment performed when planning treatments and management strategies for a patient.
+     */
+    ClinicalImpression = "ClinicalImpression",
+    /**
+     * Communication: A record of information transmitted from a sender to a receiver.
+     */
+    Communication = "Communication",
+    /**
+     * Composition: A set of resources composed into a single coherent clinical statement with clinical attestation.
+     */
+    Composition = "Composition",
+    /**
+     * Condition: Detailed information about conditions, problems or diagnoses.
+     */
+    Condition = "Condition",
+    /**
+     * Consent: A healthcare consumer's policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time.
+     */
+    Consent = "Consent",
+    /**
+     * Coverage: Insurance or medical plan or a payment agreement.
+     */
+    Coverage = "Coverage",
+    /**
+     * DeviceUseStatement: Record of use of a device.
+     */
+    DeviceUseStatement = "DeviceUseStatement",
+    /**
+     * DiagnosticReport: A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports.
+     */
+    DiagnosticReport = "DiagnosticReport",
+    /**
+     * DocumentManifest: A list that defines a set of documents.
+     */
+    DocumentManifest = "DocumentManifest",
+    /**
+     * DocumentReference: A reference to a document.
+     */
+    DocumentReference = "DocumentReference",
+    /**
+     * Encounter: An interaction during which services are provided to the patient.
+     */
+    Encounter = "Encounter",
+    /**
+     * EnrollmentResponse: EnrollmentResponse resource.
+     */
+    EnrollmentResponse = "EnrollmentResponse",
+    /**
+     * EpisodeOfCare: An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility.
+     */
+    EpisodeOfCare = "EpisodeOfCare",
+    /**
+     * ExplanationOfBenefit: Explanation of Benefit resource.
+     */
+    ExplanationOfBenefit = "ExplanationOfBenefit",
+    /**
+     * FamilyMemberHistory: Information about patient's relatives, relevant for patient.
+     */
+    FamilyMemberHistory = "FamilyMemberHistory",
+    /**
+     * GuidanceResponse: The formal response to a guidance request.
+     */
+    GuidanceResponse = "GuidanceResponse",
+    /**
+     * ImagingStudy: A set of images produced in single study (one or more series of references images).
+     */
+    ImagingStudy = "ImagingStudy",
+    /**
+     * Immunization: Immunization event information.
+     */
+    Immunization = "Immunization",
+    /**
+     * MeasureReport: Results of a measure evaluation.
+     */
+    MeasureReport = "MeasureReport",
+    /**
+     * Media: A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
+     */
+    Media = "Media",
+    /**
+     * MedicationAdministration: Administration of medication to a patient.
+     */
+    MedicationAdministration = "MedicationAdministration",
+    /**
+     * MedicationDispense: Dispensing a medication to a named patient.
+     */
+    MedicationDispense = "MedicationDispense",
+    /**
+     * MedicationStatement: Record of medication being taken by a patient.
+     */
+    MedicationStatement = "MedicationStatement",
+    /**
+     * Observation: Measurements and simple assertions.
+     */
+    Observation = "Observation",
+    /**
+     * PaymentNotice: PaymentNotice request.
+     */
+    PaymentNotice = "PaymentNotice",
+    /**
+     * PaymentReconciliation: PaymentReconciliation resource.
+     */
+    PaymentReconciliation = "PaymentReconciliation",
+    /**
+     * Procedure: An action that is being or was performed on a patient.
+     */
+    Procedure = "Procedure",
+    /**
+     * ProcessResponse: ProcessResponse resource.
+     */
+    ProcessResponse = "ProcessResponse",
+    /**
+     * QuestionnaireResponse: A structured set of questions and their answers.
+     */
+    QuestionnaireResponse = "QuestionnaireResponse",
+    /**
+     * RiskAssessment: Potential outcomes for a subject with likelihood.
+     */
+    RiskAssessment = "RiskAssessment",
+    /**
+     * SupplyDelivery: Delivery of bulk Supplies.
+     */
+    SupplyDelivery = "SupplyDelivery",
+    /**
+     * Task: A task to be performed.
+     */
+    Task = "Task"
+}
 //# sourceMappingURL=EventResourceTypesValueSet.d.ts.map

@@ -1,4 +1,6 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { DeviceNametypeValueSetType, DeviceNametypeValueSetEnum } from '../fhirValueSets/DeviceNametypeValueSet.js';
+import { DeviceKindValueSetType } from '../fhirValueSets/DeviceKindValueSet.js';
 /**
  * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
  */
@@ -7,16 +9,25 @@ export declare type IDeviceDefinitionUdiDeviceIdentifier = fhir.IBackboneElement
      * The identifier that is to be associated with every Device that references this DeviceDefintiion for the issuer and jurisdication porvided in the DeviceDefinition.udiDeviceIdentifier.
      */
     deviceIdentifier: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.deviceIdentifier
+     */
     _deviceIdentifier?: fhir.IFhirElement | undefined;
     /**
      * The organization that assigns the identifier algorithm.
      */
     issuer: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.issuer
+     */
     _issuer?: fhir.IFhirElement | undefined;
     /**
      * The jurisdiction to which the deviceIdentifier applies.
      */
     jurisdiction: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.jurisdiction
+     */
     _jurisdiction?: fhir.IFhirElement | undefined;
 };
 /**
@@ -27,12 +38,18 @@ export declare type IDeviceDefinitionDeviceName = fhir.IBackboneElement & {
      * The name of the device.
      */
     name: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.deviceName.name
+     */
     _name?: fhir.IFhirElement | undefined;
     /**
      * The type of deviceName.
      * UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.
      */
-    type: DeviceDefinitionDeviceNameTypeEnum | null;
+    type: DeviceNametypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.deviceName.type
+     */
     _type?: fhir.IFhirElement | undefined;
 };
 /**
@@ -43,11 +60,17 @@ export declare type IDeviceDefinitionSpecialization = fhir.IBackboneElement & {
      * The standard that is used to operate and communicate.
      */
     systemType: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.specialization.systemType
+     */
     _systemType?: fhir.IFhirElement | undefined;
     /**
      * The version of the standard that is used to operate and communicate.
      */
     version?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.specialization.version
+     */
     _version?: fhir.IFhirElement | undefined;
 };
 /**
@@ -55,13 +78,13 @@ export declare type IDeviceDefinitionSpecialization = fhir.IBackboneElement & {
  */
 export declare type IDeviceDefinitionCapability = fhir.IBackboneElement & {
     /**
-     * Description of capability.
-     */
-    description?: fhir.ICodeableConcept[] | undefined;
-    /**
      * Type of capability.
      */
     type: fhir.ICodeableConcept | null;
+    /**
+     * Description of capability.
+     */
+    description?: fhir.ICodeableConcept[] | undefined;
 };
 /**
  * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
@@ -72,32 +95,38 @@ export declare type IDeviceDefinitionProperty = fhir.IBackboneElement & {
      */
     type: fhir.ICodeableConcept | null;
     /**
-     * Property value as a code, e.g., NTP4 (synced to NTP).
-     */
-    valueCode?: fhir.ICodeableConcept[] | undefined;
-    /**
      * Property value as a quantity.
      */
     valueQuantity?: fhir.IQuantity[] | undefined;
+    /**
+     * Property value as a code, e.g., NTP4 (synced to NTP).
+     */
+    valueCode?: fhir.ICodeableConcept[] | undefined;
 };
 /**
  * A substance used to create the material(s) of which the device is made.
  */
 export declare type IDeviceDefinitionMaterial = fhir.IBackboneElement & {
     /**
-     * Whether the substance is a known or suspected allergen.
+     * The substance.
      */
-    allergenicIndicator?: boolean | undefined;
-    _allergenicIndicator?: fhir.IFhirElement | undefined;
+    substance: fhir.ICodeableConcept | null;
     /**
      * Indicates an alternative material of the device.
      */
     alternate?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.material.alternate
+     */
     _alternate?: fhir.IFhirElement | undefined;
     /**
-     * The substance.
+     * Whether the substance is a known or suspected allergen.
      */
-    substance: fhir.ICodeableConcept | null;
+    allergenicIndicator?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.material.allergenicIndicator
+     */
+    _allergenicIndicator?: fhir.IFhirElement | undefined;
 };
 /**
  * The characteristics, operational status and capabilities of a medical-related component of a medical device.
@@ -108,72 +137,53 @@ export declare type IDeviceDefinition = fhir.IDomainResource & {
      */
     resourceType: "DeviceDefinition";
     /**
-     * Device capabilities.
-     */
-    capability?: fhir.IDeviceDefinitionCapability[] | undefined;
-    /**
-     * used for troubleshooting etc.
-     */
-    contact?: fhir.IContactPoint[] | undefined;
-    /**
-     * A name given to the device to identify it.
-     */
-    deviceName?: fhir.IDeviceDefinitionDeviceName[] | undefined;
-    /**
      * Unique instance identifiers assigned to a device by the software, manufacturers, other organizations or owners. For example: handle ID.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * Language code for the human-readable text strings produced by the device (all supported).
+     * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
      */
-    languageCode?: fhir.ICodeableConcept[] | undefined;
+    udiDeviceIdentifier?: fhir.IDeviceDefinitionUdiDeviceIdentifier[] | undefined;
     /**
      * A name of the manufacturer.
      */
     manufacturerString?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.manufacturer[x]
+     */
     _manufacturerString?: fhir.IFhirElement | undefined;
     /**
      * A name of the manufacturer.
      */
     manufacturerReference?: fhir.IReference | undefined;
     /**
-     * A substance used to create the material(s) of which the device is made.
+     * A name given to the device to identify it.
      */
-    material?: fhir.IDeviceDefinitionMaterial[] | undefined;
+    deviceName?: fhir.IDeviceDefinitionDeviceName[] | undefined;
     /**
      * The model number for the device.
      */
     modelNumber?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.modelNumber
+     */
     _modelNumber?: fhir.IFhirElement | undefined;
     /**
-     * Descriptive information, usage information or implantation information that is not captured in an existing element.
+     * What kind of device or device system this is.
      */
-    note?: fhir.IAnnotation[] | undefined;
+    type?: fhir.ICodeableConcept | undefined;
     /**
-     * Access to on-line information about the device.
+     * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
      */
-    onlineInformation?: string | undefined;
-    _onlineInformation?: fhir.IFhirElement | undefined;
+    specialization?: fhir.IDeviceDefinitionSpecialization[] | undefined;
     /**
-     * An organization that is responsible for the provision and ongoing maintenance of the device.
+     * The available versions of the device, e.g., software versions.
      */
-    owner?: fhir.IReference | undefined;
+    version?: string[] | undefined;
     /**
-     * The parent device it can be part of.
+     * Extended properties for primitive element: DeviceDefinition.version
      */
-    parentDevice?: fhir.IReference | undefined;
-    /**
-     * Dimensions, color etc.
-     */
-    physicalCharacteristics?: fhir.IProdCharacteristic | undefined;
-    /**
-     * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
-     */
-    property?: fhir.IDeviceDefinitionProperty[] | undefined;
-    /**
-     * The quantity of the device present in the packaging (e.g. the number of devices present in a pack, or the number of devices in the same package of the medicinal product).
-     */
-    quantity?: fhir.IQuantity | undefined;
+    _version?: fhir.IFhirElement[] | undefined;
     /**
      * Safety characteristics of the device.
      */
@@ -183,275 +193,297 @@ export declare type IDeviceDefinition = fhir.IDomainResource & {
      */
     shelfLifeStorage?: fhir.IProductShelfLife[] | undefined;
     /**
-     * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
+     * Dimensions, color etc.
      */
-    specialization?: fhir.IDeviceDefinitionSpecialization[] | undefined;
+    physicalCharacteristics?: fhir.IProdCharacteristic | undefined;
     /**
-     * What kind of device or device system this is.
+     * Language code for the human-readable text strings produced by the device (all supported).
      */
-    type?: fhir.ICodeableConcept | undefined;
+    languageCode?: fhir.ICodeableConcept[] | undefined;
     /**
-     * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
+     * Device capabilities.
      */
-    udiDeviceIdentifier?: fhir.IDeviceDefinitionUdiDeviceIdentifier[] | undefined;
+    capability?: fhir.IDeviceDefinitionCapability[] | undefined;
+    /**
+     * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
+     */
+    property?: fhir.IDeviceDefinitionProperty[] | undefined;
+    /**
+     * An organization that is responsible for the provision and ongoing maintenance of the device.
+     */
+    owner?: fhir.IReference | undefined;
+    /**
+     * used for troubleshooting etc.
+     */
+    contact?: fhir.IContactPoint[] | undefined;
     /**
      * If the device is running a FHIR server, the network address should  be the Base URL from which a conformance statement may be retrieved.
      */
     url?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.url
+     */
     _url?: fhir.IFhirElement | undefined;
     /**
-     * The available versions of the device, e.g., software versions.
+     * Access to on-line information about the device.
      */
-    version?: string[] | undefined;
-    _version?: fhir.IFhirElement[] | undefined;
+    onlineInformation?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.onlineInformation
+     */
+    _onlineInformation?: fhir.IFhirElement | undefined;
+    /**
+     * Descriptive information, usage information or implantation information that is not captured in an existing element.
+     */
+    note?: fhir.IAnnotation[] | undefined;
+    /**
+     * The quantity of the device present in the packaging (e.g. the number of devices present in a pack, or the number of devices in the same package of the medicinal product).
+     */
+    quantity?: fhir.IQuantity | undefined;
+    /**
+     * The parent device it can be part of.
+     */
+    parentDevice?: fhir.IReference | undefined;
+    /**
+     * A substance used to create the material(s) of which the device is made.
+     */
+    material?: fhir.IDeviceDefinitionMaterial[] | undefined;
 };
 /**
  * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
  */
-export declare class DeviceDefinitionUdiDeviceIdentifier extends fhir.BackboneElement implements fhir.IDeviceDefinitionUdiDeviceIdentifier {
+export declare class DeviceDefinitionUdiDeviceIdentifier extends fhir.BackboneElement implements IDeviceDefinitionUdiDeviceIdentifier {
     /**
      * The identifier that is to be associated with every Device that references this DeviceDefintiion for the issuer and jurisdication porvided in the DeviceDefinition.udiDeviceIdentifier.
      */
     deviceIdentifier: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.deviceIdentifier
+     */
     _deviceIdentifier?: fhir.FhirElement | undefined;
     /**
      * The organization that assigns the identifier algorithm.
      */
     issuer: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.issuer
+     */
     _issuer?: fhir.FhirElement | undefined;
     /**
      * The jurisdiction to which the deviceIdentifier applies.
      */
     jurisdiction: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.udiDeviceIdentifier.jurisdiction
+     */
     _jurisdiction?: fhir.FhirElement | undefined;
     /**
      * Default constructor for DeviceDefinitionUdiDeviceIdentifier - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IDeviceDefinitionUdiDeviceIdentifier>);
+    constructor(source?: Partial<IDeviceDefinitionUdiDeviceIdentifier>);
     /**
-     * Check if the current DeviceDefinitionUdiDeviceIdentifier contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a DeviceDefinitionUdiDeviceIdentifier from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IDeviceDefinitionUdiDeviceIdentifier): DeviceDefinitionUdiDeviceIdentifier;
+    doModelValidation(): [string, string][];
 }
 /**
  * A name given to the device to identify it.
  */
-export declare class DeviceDefinitionDeviceName extends fhir.BackboneElement implements fhir.IDeviceDefinitionDeviceName {
+export declare class DeviceDefinitionDeviceName extends fhir.BackboneElement implements IDeviceDefinitionDeviceName {
     /**
      * The name of the device.
      */
     name: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.deviceName.name
+     */
     _name?: fhir.FhirElement | undefined;
     /**
      * The type of deviceName.
      * UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.
      */
-    type: DeviceDefinitionDeviceNameTypeEnum | null;
+    type: DeviceNametypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.deviceName.type
+     */
     _type?: fhir.FhirElement | undefined;
     /**
      * Default constructor for DeviceDefinitionDeviceName - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IDeviceDefinitionDeviceName>);
+    constructor(source?: Partial<IDeviceDefinitionDeviceName>);
     /**
-     * Check if the current DeviceDefinitionDeviceName contains all required elements.
+     * Required-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeRequiredValueSet(): DeviceNametypeValueSetType;
     /**
-     * Factory function to create a DeviceDefinitionDeviceName from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IDeviceDefinitionDeviceName): DeviceDefinitionDeviceName;
+    doModelValidation(): [string, string][];
 }
 /**
  * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
  */
-export declare class DeviceDefinitionSpecialization extends fhir.BackboneElement implements fhir.IDeviceDefinitionSpecialization {
+export declare class DeviceDefinitionSpecialization extends fhir.BackboneElement implements IDeviceDefinitionSpecialization {
     /**
      * The standard that is used to operate and communicate.
      */
     systemType: string | null;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.specialization.systemType
+     */
     _systemType?: fhir.FhirElement | undefined;
     /**
      * The version of the standard that is used to operate and communicate.
      */
     version?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.specialization.version
+     */
     _version?: fhir.FhirElement | undefined;
     /**
      * Default constructor for DeviceDefinitionSpecialization - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IDeviceDefinitionSpecialization>);
+    constructor(source?: Partial<IDeviceDefinitionSpecialization>);
     /**
-     * Check if the current DeviceDefinitionSpecialization contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a DeviceDefinitionSpecialization from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IDeviceDefinitionSpecialization): DeviceDefinitionSpecialization;
+    doModelValidation(): [string, string][];
 }
 /**
  * Device capabilities.
  */
-export declare class DeviceDefinitionCapability extends fhir.BackboneElement implements fhir.IDeviceDefinitionCapability {
-    /**
-     * Description of capability.
-     */
-    description?: fhir.CodeableConcept[] | undefined;
+export declare class DeviceDefinitionCapability extends fhir.BackboneElement implements IDeviceDefinitionCapability {
     /**
      * Type of capability.
      */
     type: fhir.CodeableConcept | null;
     /**
+     * Description of capability.
+     */
+    description?: fhir.CodeableConcept[] | undefined;
+    /**
      * Default constructor for DeviceDefinitionCapability - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IDeviceDefinitionCapability>);
+    constructor(source?: Partial<IDeviceDefinitionCapability>);
     /**
-     * Check if the current DeviceDefinitionCapability contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a DeviceDefinitionCapability from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IDeviceDefinitionCapability): DeviceDefinitionCapability;
+    doModelValidation(): [string, string][];
 }
 /**
  * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
  */
-export declare class DeviceDefinitionProperty extends fhir.BackboneElement implements fhir.IDeviceDefinitionProperty {
+export declare class DeviceDefinitionProperty extends fhir.BackboneElement implements IDeviceDefinitionProperty {
     /**
      * Code that specifies the property DeviceDefinitionPropetyCode (Extensible).
      */
     type: fhir.CodeableConcept | null;
     /**
-     * Property value as a code, e.g., NTP4 (synced to NTP).
-     */
-    valueCode?: fhir.CodeableConcept[] | undefined;
-    /**
      * Property value as a quantity.
      */
     valueQuantity?: fhir.Quantity[] | undefined;
     /**
+     * Property value as a code, e.g., NTP4 (synced to NTP).
+     */
+    valueCode?: fhir.CodeableConcept[] | undefined;
+    /**
      * Default constructor for DeviceDefinitionProperty - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IDeviceDefinitionProperty>);
+    constructor(source?: Partial<IDeviceDefinitionProperty>);
     /**
-     * Check if the current DeviceDefinitionProperty contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a DeviceDefinitionProperty from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IDeviceDefinitionProperty): DeviceDefinitionProperty;
+    doModelValidation(): [string, string][];
 }
 /**
  * A substance used to create the material(s) of which the device is made.
  */
-export declare class DeviceDefinitionMaterial extends fhir.BackboneElement implements fhir.IDeviceDefinitionMaterial {
-    /**
-     * Whether the substance is a known or suspected allergen.
-     */
-    allergenicIndicator?: boolean | undefined;
-    _allergenicIndicator?: fhir.FhirElement | undefined;
-    /**
-     * Indicates an alternative material of the device.
-     */
-    alternate?: boolean | undefined;
-    _alternate?: fhir.FhirElement | undefined;
+export declare class DeviceDefinitionMaterial extends fhir.BackboneElement implements IDeviceDefinitionMaterial {
     /**
      * The substance.
      */
     substance: fhir.CodeableConcept | null;
     /**
+     * Indicates an alternative material of the device.
+     */
+    alternate?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.material.alternate
+     */
+    _alternate?: fhir.FhirElement | undefined;
+    /**
+     * Whether the substance is a known or suspected allergen.
+     */
+    allergenicIndicator?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.material.allergenicIndicator
+     */
+    _allergenicIndicator?: fhir.FhirElement | undefined;
+    /**
      * Default constructor for DeviceDefinitionMaterial - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IDeviceDefinitionMaterial>);
+    constructor(source?: Partial<IDeviceDefinitionMaterial>);
     /**
-     * Check if the current DeviceDefinitionMaterial contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a DeviceDefinitionMaterial from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IDeviceDefinitionMaterial): DeviceDefinitionMaterial;
+    doModelValidation(): [string, string][];
 }
 /**
  * The characteristics, operational status and capabilities of a medical-related component of a medical device.
  */
-export declare class DeviceDefinition extends fhir.DomainResource implements fhir.IDeviceDefinition {
+export declare class DeviceDefinition extends fhir.DomainResource implements IDeviceDefinition {
     /**
      * Resource Type Name
      */
     resourceType: "DeviceDefinition";
     /**
-     * Device capabilities.
-     */
-    capability?: fhir.DeviceDefinitionCapability[] | undefined;
-    /**
-     * used for troubleshooting etc.
-     */
-    contact?: fhir.ContactPoint[] | undefined;
-    /**
-     * A name given to the device to identify it.
-     */
-    deviceName?: fhir.DeviceDefinitionDeviceName[] | undefined;
-    /**
      * Unique instance identifiers assigned to a device by the software, manufacturers, other organizations or owners. For example: handle ID.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * Language code for the human-readable text strings produced by the device (all supported).
+     * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
      */
-    languageCode?: fhir.CodeableConcept[] | undefined;
+    udiDeviceIdentifier?: fhir.DeviceDefinitionUdiDeviceIdentifier[] | undefined;
     /**
      * A name of the manufacturer.
      */
     manufacturerString?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.manufacturer[x]
+     */
     _manufacturerString?: fhir.FhirElement | undefined;
     /**
      * A name of the manufacturer.
      */
     manufacturerReference?: fhir.Reference | undefined;
     /**
-     * A substance used to create the material(s) of which the device is made.
+     * A name given to the device to identify it.
      */
-    material?: fhir.DeviceDefinitionMaterial[] | undefined;
+    deviceName?: fhir.DeviceDefinitionDeviceName[] | undefined;
     /**
      * The model number for the device.
      */
     modelNumber?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.modelNumber
+     */
     _modelNumber?: fhir.FhirElement | undefined;
     /**
-     * Descriptive information, usage information or implantation information that is not captured in an existing element.
+     * What kind of device or device system this is.
      */
-    note?: fhir.Annotation[] | undefined;
+    type?: fhir.CodeableConcept | undefined;
     /**
-     * Access to on-line information about the device.
+     * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
      */
-    onlineInformation?: string | undefined;
-    _onlineInformation?: fhir.FhirElement | undefined;
+    specialization?: fhir.DeviceDefinitionSpecialization[] | undefined;
     /**
-     * An organization that is responsible for the provision and ongoing maintenance of the device.
+     * The available versions of the device, e.g., software versions.
      */
-    owner?: fhir.Reference | undefined;
+    version?: string[] | undefined;
     /**
-     * The parent device it can be part of.
+     * Extended properties for primitive element: DeviceDefinition.version
      */
-    parentDevice?: fhir.Reference | undefined;
-    /**
-     * Dimensions, color etc.
-     */
-    physicalCharacteristics?: fhir.ProdCharacteristic | undefined;
-    /**
-     * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
-     */
-    property?: fhir.DeviceDefinitionProperty[] | undefined;
-    /**
-     * The quantity of the device present in the packaging (e.g. the number of devices present in a pack, or the number of devices in the same package of the medicinal product).
-     */
-    quantity?: fhir.Quantity | undefined;
+    _version?: fhir.FhirElement[] | undefined;
     /**
      * Safety characteristics of the device.
      */
@@ -461,49 +493,72 @@ export declare class DeviceDefinition extends fhir.DomainResource implements fhi
      */
     shelfLifeStorage?: fhir.ProductShelfLife[] | undefined;
     /**
-     * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
+     * Dimensions, color etc.
      */
-    specialization?: fhir.DeviceDefinitionSpecialization[] | undefined;
+    physicalCharacteristics?: fhir.ProdCharacteristic | undefined;
     /**
-     * What kind of device or device system this is.
+     * Language code for the human-readable text strings produced by the device (all supported).
      */
-    type?: fhir.CodeableConcept | undefined;
+    languageCode?: fhir.CodeableConcept[] | undefined;
     /**
-     * Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.
+     * Device capabilities.
      */
-    udiDeviceIdentifier?: fhir.DeviceDefinitionUdiDeviceIdentifier[] | undefined;
+    capability?: fhir.DeviceDefinitionCapability[] | undefined;
+    /**
+     * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
+     */
+    property?: fhir.DeviceDefinitionProperty[] | undefined;
+    /**
+     * An organization that is responsible for the provision and ongoing maintenance of the device.
+     */
+    owner?: fhir.Reference | undefined;
+    /**
+     * used for troubleshooting etc.
+     */
+    contact?: fhir.ContactPoint[] | undefined;
     /**
      * If the device is running a FHIR server, the network address should  be the Base URL from which a conformance statement may be retrieved.
      */
     url?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.url
+     */
     _url?: fhir.FhirElement | undefined;
     /**
-     * The available versions of the device, e.g., software versions.
+     * Access to on-line information about the device.
      */
-    version?: string[] | undefined;
-    _version?: fhir.FhirElement[] | undefined;
+    onlineInformation?: string | undefined;
+    /**
+     * Extended properties for primitive element: DeviceDefinition.onlineInformation
+     */
+    _onlineInformation?: fhir.FhirElement | undefined;
+    /**
+     * Descriptive information, usage information or implantation information that is not captured in an existing element.
+     */
+    note?: fhir.Annotation[] | undefined;
+    /**
+     * The quantity of the device present in the packaging (e.g. the number of devices present in a pack, or the number of devices in the same package of the medicinal product).
+     */
+    quantity?: fhir.Quantity | undefined;
+    /**
+     * The parent device it can be part of.
+     */
+    parentDevice?: fhir.Reference | undefined;
+    /**
+     * A substance used to create the material(s) of which the device is made.
+     */
+    material?: fhir.DeviceDefinitionMaterial[] | undefined;
     /**
      * Default constructor for DeviceDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IDeviceDefinition>);
+    constructor(source?: Partial<IDeviceDefinition>);
     /**
-     * Check if the current DeviceDefinition contains all required elements.
+     * Example-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeExampleValueSet(): DeviceKindValueSetType;
     /**
-     * Factory function to create a DeviceDefinition from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IDeviceDefinition): DeviceDefinition;
-}
-/**
- * Code Values for the DeviceDefinition.deviceName.type field
- */
-export declare enum DeviceDefinitionDeviceNameTypeEnum {
-    UDI_LABEL_NAME = "udi-label-name",
-    USER_FRIENDLY_NAME = "user-friendly-name",
-    PATIENT_REPORTED_NAME = "patient-reported-name",
-    MANUFACTURER_NAME = "manufacturer-name",
-    MODEL_NAME = "model-name",
-    OTHER = "other"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=DeviceDefinition.d.ts.map

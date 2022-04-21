@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes that reflect the current state of a care plan activity within its overall life cycle.
  */
 export declare const CarePlanActivityStatusValueSet: {
     /**
-     * The planned care plan activity has been withdrawn.
+     * cancelled: The planned care plan activity has been withdrawn.
      */
-    care_plan_activity_status_Cancelled: Coding;
+    readonly Cancelled: Coding;
     /**
-     * Care plan activity has been completed (more or less) as planned.
+     * completed: Care plan activity has been completed (more or less) as planned.
      */
-    care_plan_activity_status_Completed: Coding;
+    readonly Completed: Coding;
     /**
-     * Care plan activity was entered in error and voided.
+     * entered-in-error: Care plan activity was entered in error and voided.
      */
-    care_plan_activity_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * Care plan activity has been started but is not yet complete.
+     * in-progress: Care plan activity has been started but is not yet complete.
      */
-    care_plan_activity_status_InProgress: Coding;
+    readonly InProgress: Coding;
     /**
-     * Care plan activity is planned but no action has yet been taken.
+     * not-started: Care plan activity is planned but no action has yet been taken.
      */
-    care_plan_activity_status_NotStarted: Coding;
+    readonly NotStarted: Coding;
     /**
-     * Care plan activity was started but has temporarily ceased with an expectation of resumption at a future time.
+     * on-hold: Care plan activity was started but has temporarily ceased with an expectation of resumption at a future time.
      */
-    care_plan_activity_status_OnHold: Coding;
+    readonly OnHold: Coding;
     /**
-     * Appointment or other booking has occurred but activity has not yet begun.
+     * scheduled: Appointment or other booking has occurred but activity has not yet begun.
      */
-    care_plan_activity_status_Scheduled: Coding;
+    readonly Scheduled: Coding;
     /**
-     * The planned care plan activity has been ended prior to completion after the activity was started.
+     * stopped: The planned care plan activity has been ended prior to completion after the activity was started.
      */
-    care_plan_activity_status_Stopped: Coding;
+    readonly Stopped: Coding;
     /**
-     * The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
+     * unknown: The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
      */
-    care_plan_activity_status_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * Codes that reflect the current state of a care plan activity within its overall life cycle.
+ */
+export declare type CarePlanActivityStatusValueSetType = typeof CarePlanActivityStatusValueSet;
+/**
+ * Codes that reflect the current state of a care plan activity within its overall life cycle.
+ */
+export declare enum CarePlanActivityStatusValueSetEnum {
+    /**
+     * cancelled: The planned care plan activity has been withdrawn.
+     */
+    Cancelled = "cancelled",
+    /**
+     * completed: Care plan activity has been completed (more or less) as planned.
+     */
+    Completed = "completed",
+    /**
+     * entered-in-error: Care plan activity was entered in error and voided.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * in-progress: Care plan activity has been started but is not yet complete.
+     */
+    InProgress = "in-progress",
+    /**
+     * not-started: Care plan activity is planned but no action has yet been taken.
+     */
+    NotStarted = "not-started",
+    /**
+     * on-hold: Care plan activity was started but has temporarily ceased with an expectation of resumption at a future time.
+     */
+    OnHold = "on-hold",
+    /**
+     * scheduled: Appointment or other booking has occurred but activity has not yet begun.
+     */
+    Scheduled = "scheduled",
+    /**
+     * stopped: The planned care plan activity has been ended prior to completion after the activity was started.
+     */
+    Stopped = "stopped",
+    /**
+     * unknown: The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=CarePlanActivityStatusValueSet.d.ts.map

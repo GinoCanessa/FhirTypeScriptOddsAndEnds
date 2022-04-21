@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Contract Type codes.
  */
 export declare const ContractTypeValueSet: {
     /**
-     * Consent Directive.
+     * consent: Consent Directive.
      */
-    contract_type_Consent: Coding;
+    readonly Consent: Coding;
     /**
-     * Information disclosure policy.
+     * disclosure: Information disclosure policy.
      */
-    contract_type_Disclosure: Coding;
+    readonly Disclosure: Coding;
     /**
-     * Health Insurance policy.
+     * healthinsurance: Health Insurance policy.
      */
-    contract_type_HealthInsurance: Coding;
+    readonly HealthInsurance: Coding;
     /**
-     * Privacy policy.
+     * privacy: Privacy policy.
      */
-    contract_type_Privacy: Coding;
+    readonly Privacy: Coding;
     /**
-     * Contract to supply goods or services.
+     * supply: Contract to supply goods or services.
      */
-    contract_type_SupplyContract: Coding;
+    readonly SupplyContract: Coding;
 };
+/**
+ * This value set includes sample Contract Type codes.
+ */
+export declare type ContractTypeValueSetType = typeof ContractTypeValueSet;
+/**
+ * This value set includes sample Contract Type codes.
+ */
+export declare enum ContractTypeValueSetEnum {
+    /**
+     * consent: Consent Directive.
+     */
+    Consent = "consent",
+    /**
+     * disclosure: Information disclosure policy.
+     */
+    Disclosure = "disclosure",
+    /**
+     * healthinsurance: Health Insurance policy.
+     */
+    HealthInsurance = "healthinsurance",
+    /**
+     * privacy: Privacy policy.
+     */
+    Privacy = "privacy",
+    /**
+     * supply: Contract to supply goods or services.
+     */
+    SupplyContract = "supply"
+}
 //# sourceMappingURL=ContractTypeValueSet.d.ts.map

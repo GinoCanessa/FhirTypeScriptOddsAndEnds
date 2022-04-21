@@ -1,4 +1,8 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { MeasurePopulationValueSetType } from '../fhirValueSets/MeasurePopulationValueSet.js';
+import { MeasureReportStatusValueSetType, MeasureReportStatusValueSetEnum } from '../fhirValueSets/MeasureReportStatusValueSet.js';
+import { MeasureReportTypeValueSetType, MeasureReportTypeValueSetEnum } from '../fhirValueSets/MeasureReportTypeValueSet.js';
+import { MeasureImprovementNotationValueSetType } from '../fhirValueSets/MeasureImprovementNotationValueSet.js';
 /**
  * The populations that make up the population group, one for each type of population appropriate for the measure.
  */
@@ -11,6 +15,9 @@ export declare type IMeasureReportGroupPopulation = fhir.IBackboneElement & {
      * The number of members of the population.
      */
     count?: number | undefined;
+    /**
+     * Extended properties for primitive element: MeasureReport.group.population.count
+     */
     _count?: fhir.IFhirElement | undefined;
     /**
      * This element refers to a List of subject level MeasureReport resources, one for each subject in this population.
@@ -42,6 +49,9 @@ export declare type IMeasureReportGroupStratifierStratumPopulation = fhir.IBackb
      * The number of members of the population in this stratum.
      */
     count?: number | undefined;
+    /**
+     * Extended properties for primitive element: MeasureReport.group.stratifier.stratum.population.count
+     */
     _count?: fhir.IFhirElement | undefined;
     /**
      * This element refers to a List of subject level MeasureReport resources, one for each subject in this population in this stratum.
@@ -53,21 +63,21 @@ export declare type IMeasureReportGroupStratifierStratumPopulation = fhir.IBackb
  */
 export declare type IMeasureReportGroupStratifierStratum = fhir.IBackboneElement & {
     /**
+     * The value for this stratum, expressed as a CodeableConcept. When defining stratifiers on complex values, the value must be rendered such that the value for each stratum within the stratifier is unique.
+     */
+    value?: fhir.ICodeableConcept | undefined;
+    /**
      * A stratifier component value.
      */
     component?: fhir.IMeasureReportGroupStratifierStratumComponent[] | undefined;
-    /**
-     * The measure score for this stratum, calculated as appropriate for the measure type and scoring method, and based on only the members of this stratum.
-     */
-    measureScore?: fhir.IQuantity | undefined;
     /**
      * The populations that make up the stratum, one for each type of population appropriate to the measure.
      */
     population?: fhir.IMeasureReportGroupStratifierStratumPopulation[] | undefined;
     /**
-     * The value for this stratum, expressed as a CodeableConcept. When defining stratifiers on complex values, the value must be rendered such that the value for each stratum within the stratifier is unique.
+     * The measure score for this stratum, calculated as appropriate for the measure type and scoring method, and based on only the members of this stratum.
      */
-    value?: fhir.ICodeableConcept | undefined;
+    measureScore?: fhir.IQuantity | undefined;
 };
 /**
  * When a measure includes multiple stratifiers, there will be a stratifier group for each stratifier defined by the measure.
@@ -91,13 +101,13 @@ export declare type IMeasureReportGroup = fhir.IBackboneElement & {
      */
     code?: fhir.ICodeableConcept | undefined;
     /**
-     * The measure score for this population group, calculated as appropriate for the measure type and scoring method, and based on the contents of the populations defined in the group.
-     */
-    measureScore?: fhir.IQuantity | undefined;
-    /**
      * The populations that make up the population group, one for each type of population appropriate for the measure.
      */
     population?: fhir.IMeasureReportGroupPopulation[] | undefined;
+    /**
+     * The measure score for this population group, calculated as appropriate for the measure type and scoring method, and based on the contents of the populations defined in the group.
+     */
+    measureScore?: fhir.IQuantity | undefined;
     /**
      * When a measure includes multiple stratifiers, there will be a stratifier group for each stratifier defined by the measure.
      */
@@ -112,58 +122,70 @@ export declare type IMeasureReport = fhir.IDomainResource & {
      */
     resourceType: "MeasureReport";
     /**
-     * The date this measure report was generated.
-     */
-    date?: string | undefined;
-    _date?: fhir.IFhirElement | undefined;
-    /**
-     * A reference to a Bundle containing the Resources that were used in the calculation of this measure.
-     */
-    evaluatedResource?: fhir.IReference[] | undefined;
-    /**
-     * The results of the calculation, one for each population group in the measure.
-     */
-    group?: fhir.IMeasureReportGroup[] | undefined;
-    /**
      * Typically, this is used for identifiers that can go in an HL7 V3 II data type - e.g. to identify this {{title}} outside of FHIR, where the logical URL is not possible to use.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * This element is typically defined by the measure, but reproduced here to ensure the measure score can be interpreted. The element is labeled as a modifier because it changes the interpretation of the reported measure score.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    improvementNotation?: fhir.ICodeableConcept | undefined;
+    status: MeasureReportStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: MeasureReport.status
+     */
+    _status?: fhir.IFhirElement | undefined;
+    /**
+     * Data-collection reports are used only to communicate data-of-interest for a measure. They do not necessarily include all the data for a particular subject or population, but they may.
+     */
+    type: MeasureReportTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: MeasureReport.type
+     */
+    _type?: fhir.IFhirElement | undefined;
     /**
      * A reference to the Measure that was calculated to produce this report.
      */
     measure: string | null;
+    /**
+     * Extended properties for primitive element: MeasureReport.measure
+     */
     _measure?: fhir.IFhirElement | undefined;
-    /**
-     * The reporting period for which the report was calculated.
-     */
-    period: fhir.IPeriod | null;
-    /**
-     * The individual, location, or organization that is reporting the data.
-     */
-    reporter?: fhir.IReference | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-     */
-    status: MeasureReportStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
     /**
      * Optional subject identifying the individual or individuals the report is for.
      */
     subject?: fhir.IReference | undefined;
     /**
-     * Data-collection reports are used only to communicate data-of-interest for a measure. They do not necessarily include all the data for a particular subject or population, but they may.
+     * The date this measure report was generated.
      */
-    type: MeasureReportTypeEnum | null;
-    _type?: fhir.IFhirElement | undefined;
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: MeasureReport.date
+     */
+    _date?: fhir.IFhirElement | undefined;
+    /**
+     * The individual, location, or organization that is reporting the data.
+     */
+    reporter?: fhir.IReference | undefined;
+    /**
+     * The reporting period for which the report was calculated.
+     */
+    period: fhir.IPeriod | null;
+    /**
+     * This element is typically defined by the measure, but reproduced here to ensure the measure score can be interpreted. The element is labeled as a modifier because it changes the interpretation of the reported measure score.
+     */
+    improvementNotation?: fhir.ICodeableConcept | undefined;
+    /**
+     * The results of the calculation, one for each population group in the measure.
+     */
+    group?: fhir.IMeasureReportGroup[] | undefined;
+    /**
+     * A reference to a Bundle containing the Resources that were used in the calculation of this measure.
+     */
+    evaluatedResource?: fhir.IReference[] | undefined;
 };
 /**
  * The populations that make up the population group, one for each type of population appropriate for the measure.
  */
-export declare class MeasureReportGroupPopulation extends fhir.BackboneElement implements fhir.IMeasureReportGroupPopulation {
+export declare class MeasureReportGroupPopulation extends fhir.BackboneElement implements IMeasureReportGroupPopulation {
     /**
      * The type of the population.
      */
@@ -172,6 +194,9 @@ export declare class MeasureReportGroupPopulation extends fhir.BackboneElement i
      * The number of members of the population.
      */
     count?: number | undefined;
+    /**
+     * Extended properties for primitive element: MeasureReport.group.population.count
+     */
     _count?: fhir.FhirElement | undefined;
     /**
      * This element refers to a List of subject level MeasureReport resources, one for each subject in this population.
@@ -180,20 +205,20 @@ export declare class MeasureReportGroupPopulation extends fhir.BackboneElement i
     /**
      * Default constructor for MeasureReportGroupPopulation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMeasureReportGroupPopulation>);
+    constructor(source?: Partial<IMeasureReportGroupPopulation>);
     /**
-     * Check if the current MeasureReportGroupPopulation contains all required elements.
+     * Extensible-bound Value Set for code
      */
-    checkRequiredElements(): string[];
+    codeExtensibleValueSet(): MeasurePopulationValueSetType;
     /**
-     * Factory function to create a MeasureReportGroupPopulation from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IMeasureReportGroupPopulation): MeasureReportGroupPopulation;
+    doModelValidation(): [string, string][];
 }
 /**
  * A stratifier component value.
  */
-export declare class MeasureReportGroupStratifierStratumComponent extends fhir.BackboneElement implements fhir.IMeasureReportGroupStratifierStratumComponent {
+export declare class MeasureReportGroupStratifierStratumComponent extends fhir.BackboneElement implements IMeasureReportGroupStratifierStratumComponent {
     /**
      * The code for the stratum component value.
      */
@@ -205,20 +230,16 @@ export declare class MeasureReportGroupStratifierStratumComponent extends fhir.B
     /**
      * Default constructor for MeasureReportGroupStratifierStratumComponent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMeasureReportGroupStratifierStratumComponent>);
+    constructor(source?: Partial<IMeasureReportGroupStratifierStratumComponent>);
     /**
-     * Check if the current MeasureReportGroupStratifierStratumComponent contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MeasureReportGroupStratifierStratumComponent from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMeasureReportGroupStratifierStratumComponent): MeasureReportGroupStratifierStratumComponent;
+    doModelValidation(): [string, string][];
 }
 /**
  * The populations that make up the stratum, one for each type of population appropriate to the measure.
  */
-export declare class MeasureReportGroupStratifierStratumPopulation extends fhir.BackboneElement implements fhir.IMeasureReportGroupStratifierStratumPopulation {
+export declare class MeasureReportGroupStratifierStratumPopulation extends fhir.BackboneElement implements IMeasureReportGroupStratifierStratumPopulation {
     /**
      * The type of the population.
      */
@@ -227,6 +248,9 @@ export declare class MeasureReportGroupStratifierStratumPopulation extends fhir.
      * The number of members of the population in this stratum.
      */
     count?: number | undefined;
+    /**
+     * Extended properties for primitive element: MeasureReport.group.stratifier.stratum.population.count
+     */
     _count?: fhir.FhirElement | undefined;
     /**
      * This element refers to a List of subject level MeasureReport resources, one for each subject in this population in this stratum.
@@ -235,53 +259,49 @@ export declare class MeasureReportGroupStratifierStratumPopulation extends fhir.
     /**
      * Default constructor for MeasureReportGroupStratifierStratumPopulation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMeasureReportGroupStratifierStratumPopulation>);
+    constructor(source?: Partial<IMeasureReportGroupStratifierStratumPopulation>);
     /**
-     * Check if the current MeasureReportGroupStratifierStratumPopulation contains all required elements.
+     * Extensible-bound Value Set for code
      */
-    checkRequiredElements(): string[];
+    codeExtensibleValueSet(): MeasurePopulationValueSetType;
     /**
-     * Factory function to create a MeasureReportGroupStratifierStratumPopulation from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IMeasureReportGroupStratifierStratumPopulation): MeasureReportGroupStratifierStratumPopulation;
+    doModelValidation(): [string, string][];
 }
 /**
  * This element contains the results for a single stratum within the stratifier. For example, when stratifying on administrative gender, there will be four strata, one for each possible gender value.
  */
-export declare class MeasureReportGroupStratifierStratum extends fhir.BackboneElement implements fhir.IMeasureReportGroupStratifierStratum {
-    /**
-     * A stratifier component value.
-     */
-    component?: fhir.MeasureReportGroupStratifierStratumComponent[] | undefined;
-    /**
-     * The measure score for this stratum, calculated as appropriate for the measure type and scoring method, and based on only the members of this stratum.
-     */
-    measureScore?: fhir.Quantity | undefined;
-    /**
-     * The populations that make up the stratum, one for each type of population appropriate to the measure.
-     */
-    population?: fhir.MeasureReportGroupStratifierStratumPopulation[] | undefined;
+export declare class MeasureReportGroupStratifierStratum extends fhir.BackboneElement implements IMeasureReportGroupStratifierStratum {
     /**
      * The value for this stratum, expressed as a CodeableConcept. When defining stratifiers on complex values, the value must be rendered such that the value for each stratum within the stratifier is unique.
      */
     value?: fhir.CodeableConcept | undefined;
     /**
+     * A stratifier component value.
+     */
+    component?: fhir.MeasureReportGroupStratifierStratumComponent[] | undefined;
+    /**
+     * The populations that make up the stratum, one for each type of population appropriate to the measure.
+     */
+    population?: fhir.MeasureReportGroupStratifierStratumPopulation[] | undefined;
+    /**
+     * The measure score for this stratum, calculated as appropriate for the measure type and scoring method, and based on only the members of this stratum.
+     */
+    measureScore?: fhir.Quantity | undefined;
+    /**
      * Default constructor for MeasureReportGroupStratifierStratum - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMeasureReportGroupStratifierStratum>);
+    constructor(source?: Partial<IMeasureReportGroupStratifierStratum>);
     /**
-     * Check if the current MeasureReportGroupStratifierStratum contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MeasureReportGroupStratifierStratum from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMeasureReportGroupStratifierStratum): MeasureReportGroupStratifierStratum;
+    doModelValidation(): [string, string][];
 }
 /**
  * When a measure includes multiple stratifiers, there will be a stratifier group for each stratifier defined by the measure.
  */
-export declare class MeasureReportGroupStratifier extends fhir.BackboneElement implements fhir.IMeasureReportGroupStratifier {
+export declare class MeasureReportGroupStratifier extends fhir.BackboneElement implements IMeasureReportGroupStratifier {
     /**
      * The meaning of this stratifier, as defined in the measure definition.
      */
@@ -293,32 +313,28 @@ export declare class MeasureReportGroupStratifier extends fhir.BackboneElement i
     /**
      * Default constructor for MeasureReportGroupStratifier - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMeasureReportGroupStratifier>);
+    constructor(source?: Partial<IMeasureReportGroupStratifier>);
     /**
-     * Check if the current MeasureReportGroupStratifier contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MeasureReportGroupStratifier from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMeasureReportGroupStratifier): MeasureReportGroupStratifier;
+    doModelValidation(): [string, string][];
 }
 /**
  * The results of the calculation, one for each population group in the measure.
  */
-export declare class MeasureReportGroup extends fhir.BackboneElement implements fhir.IMeasureReportGroup {
+export declare class MeasureReportGroup extends fhir.BackboneElement implements IMeasureReportGroup {
     /**
      * The meaning of the population group as defined in the measure definition.
      */
     code?: fhir.CodeableConcept | undefined;
     /**
-     * The measure score for this population group, calculated as appropriate for the measure type and scoring method, and based on the contents of the populations defined in the group.
-     */
-    measureScore?: fhir.Quantity | undefined;
-    /**
      * The populations that make up the population group, one for each type of population appropriate for the measure.
      */
     population?: fhir.MeasureReportGroupPopulation[] | undefined;
+    /**
+     * The measure score for this population group, calculated as appropriate for the measure type and scoring method, and based on the contents of the populations defined in the group.
+     */
+    measureScore?: fhir.Quantity | undefined;
     /**
      * When a measure includes multiple stratifiers, there will be a stratifier group for each stratifier defined by the measure.
      */
@@ -326,100 +342,99 @@ export declare class MeasureReportGroup extends fhir.BackboneElement implements 
     /**
      * Default constructor for MeasureReportGroup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMeasureReportGroup>);
+    constructor(source?: Partial<IMeasureReportGroup>);
     /**
-     * Check if the current MeasureReportGroup contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MeasureReportGroup from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMeasureReportGroup): MeasureReportGroup;
+    doModelValidation(): [string, string][];
 }
 /**
  * The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
  */
-export declare class MeasureReport extends fhir.DomainResource implements fhir.IMeasureReport {
+export declare class MeasureReport extends fhir.DomainResource implements IMeasureReport {
     /**
      * Resource Type Name
      */
     resourceType: "MeasureReport";
     /**
-     * The date this measure report was generated.
-     */
-    date?: string | undefined;
-    _date?: fhir.FhirElement | undefined;
-    /**
-     * A reference to a Bundle containing the Resources that were used in the calculation of this measure.
-     */
-    evaluatedResource?: fhir.Reference[] | undefined;
-    /**
-     * The results of the calculation, one for each population group in the measure.
-     */
-    group?: fhir.MeasureReportGroup[] | undefined;
-    /**
      * Typically, this is used for identifiers that can go in an HL7 V3 II data type - e.g. to identify this {{title}} outside of FHIR, where the logical URL is not possible to use.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * This element is typically defined by the measure, but reproduced here to ensure the measure score can be interpreted. The element is labeled as a modifier because it changes the interpretation of the reported measure score.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    improvementNotation?: fhir.CodeableConcept | undefined;
+    status: MeasureReportStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: MeasureReport.status
+     */
+    _status?: fhir.FhirElement | undefined;
+    /**
+     * Data-collection reports are used only to communicate data-of-interest for a measure. They do not necessarily include all the data for a particular subject or population, but they may.
+     */
+    type: MeasureReportTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: MeasureReport.type
+     */
+    _type?: fhir.FhirElement | undefined;
     /**
      * A reference to the Measure that was calculated to produce this report.
      */
     measure: string | null;
+    /**
+     * Extended properties for primitive element: MeasureReport.measure
+     */
     _measure?: fhir.FhirElement | undefined;
-    /**
-     * The reporting period for which the report was calculated.
-     */
-    period: fhir.Period | null;
-    /**
-     * The individual, location, or organization that is reporting the data.
-     */
-    reporter?: fhir.Reference | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-     */
-    status: MeasureReportStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
     /**
      * Optional subject identifying the individual or individuals the report is for.
      */
     subject?: fhir.Reference | undefined;
     /**
-     * Data-collection reports are used only to communicate data-of-interest for a measure. They do not necessarily include all the data for a particular subject or population, but they may.
+     * The date this measure report was generated.
      */
-    type: MeasureReportTypeEnum | null;
-    _type?: fhir.FhirElement | undefined;
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: MeasureReport.date
+     */
+    _date?: fhir.FhirElement | undefined;
+    /**
+     * The individual, location, or organization that is reporting the data.
+     */
+    reporter?: fhir.Reference | undefined;
+    /**
+     * The reporting period for which the report was calculated.
+     */
+    period: fhir.Period | null;
+    /**
+     * This element is typically defined by the measure, but reproduced here to ensure the measure score can be interpreted. The element is labeled as a modifier because it changes the interpretation of the reported measure score.
+     */
+    improvementNotation?: fhir.CodeableConcept | undefined;
+    /**
+     * The results of the calculation, one for each population group in the measure.
+     */
+    group?: fhir.MeasureReportGroup[] | undefined;
+    /**
+     * A reference to a Bundle containing the Resources that were used in the calculation of this measure.
+     */
+    evaluatedResource?: fhir.Reference[] | undefined;
     /**
      * Default constructor for MeasureReport - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMeasureReport>);
+    constructor(source?: Partial<IMeasureReport>);
     /**
-     * Check if the current MeasureReport contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): MeasureReportStatusValueSetType;
     /**
-     * Factory function to create a MeasureReport from an object that MUST contain all required elements.
+     * Required-bound Value Set for type
      */
-    static fromStrict(source: fhir.IMeasureReport): MeasureReport;
-}
-/**
- * Code Values for the MeasureReport.status field
- */
-export declare enum MeasureReportStatusEnum {
-    COMPLETE = "complete",
-    PENDING = "pending",
-    ERROR = "error"
-}
-/**
- * Code Values for the MeasureReport.type field
- */
-export declare enum MeasureReportTypeEnum {
-    INDIVIDUAL = "individual",
-    SUBJECT_LIST = "subject-list",
-    SUMMARY = "summary",
-    DATA_COLLECTION = "data-collection"
+    typeRequiredValueSet(): MeasureReportTypeValueSetType;
+    /**
+     * Required-bound Value Set for improvementNotation
+     */
+    improvementNotationRequiredValueSet(): MeasureImprovementNotationValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=MeasureReport.d.ts.map

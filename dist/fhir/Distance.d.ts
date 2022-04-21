@@ -1,4 +1,4 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * A length - a value with a unit that is a physical distance.
  */
@@ -6,18 +6,14 @@ export declare type IDistance = fhir.IQuantity & {};
 /**
  * A length - a value with a unit that is a physical distance.
  */
-export declare class Distance extends fhir.Quantity implements fhir.IDistance {
+export declare class Distance extends fhir.Quantity implements IDistance {
     /**
      * Default constructor for Distance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IDistance>);
+    constructor(source?: Partial<IDistance>);
     /**
-     * Check if the current Distance contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a Distance from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IDistance): Distance;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Distance.d.ts.map

@@ -1,4 +1,8 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { VisionBaseCodesValueSetType, VisionBaseCodesValueSetEnum } from '../fhirValueSets/VisionBaseCodesValueSet.js';
+import { VisionProductValueSetType } from '../fhirValueSets/VisionProductValueSet.js';
+import { VisionEyeCodesValueSetType, VisionEyeCodesValueSetEnum } from '../fhirValueSets/VisionEyeCodesValueSet.js';
+import { FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js';
 /**
  * Allows for adjustment on two axis.
  */
@@ -7,11 +11,17 @@ export declare type IVisionPrescriptionLensSpecificationPrism = fhir.IBackboneEl
      * Amount of prism to compensate for eye alignment in fractional units.
      */
     amount: number | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.prism.amount
+     */
     _amount?: fhir.IFhirElement | undefined;
     /**
      * The relative base, or reference lens edge, for the prism.
      */
-    base: VisionPrescriptionLensSpecificationPrismBaseEnum | null;
+    base: VisionBaseCodesValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.prism.base
+     */
     _base?: fhir.IFhirElement | undefined;
 };
 /**
@@ -19,72 +29,102 @@ export declare type IVisionPrescriptionLensSpecificationPrism = fhir.IBackboneEl
  */
 export declare type IVisionPrescriptionLensSpecification = fhir.IBackboneElement & {
     /**
-     * Power adjustment for multifocal lenses measured in dioptres (0.25 units).
+     * Identifies the type of vision correction product which is required for the patient.
      */
-    add?: number | undefined;
-    _add?: fhir.IFhirElement | undefined;
+    product: fhir.ICodeableConcept | null;
     /**
-     * The limits are +180 and -180 degrees.
+     * May also appear as OD (oculus dexter) for the right eye and OS (oculus siniter) for the left eye.
      */
-    axis?: number | undefined;
-    _axis?: fhir.IFhirElement | undefined;
+    eye: VisionEyeCodesValueSetEnum | null;
     /**
-     * Back curvature measured in millimetres.
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.eye
      */
-    backCurve?: number | undefined;
-    _backCurve?: fhir.IFhirElement | undefined;
+    _eye?: fhir.IFhirElement | undefined;
     /**
-     * Brand recommendations or restrictions.
+     * The value is negative for near-sighted and positive for far sighted.
+     * Often insurance will not cover a lens with power between +75 and -75.
      */
-    brand?: string | undefined;
-    _brand?: fhir.IFhirElement | undefined;
+    sphere?: number | undefined;
     /**
-     * Special color or pattern.
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.sphere
      */
-    color?: string | undefined;
-    _color?: fhir.IFhirElement | undefined;
+    _sphere?: fhir.IFhirElement | undefined;
     /**
      * Power adjustment for astigmatism measured in dioptres (0.25 units).
      */
     cylinder?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.cylinder
+     */
     _cylinder?: fhir.IFhirElement | undefined;
+    /**
+     * The limits are +180 and -180 degrees.
+     */
+    axis?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.axis
+     */
+    _axis?: fhir.IFhirElement | undefined;
+    /**
+     * Allows for adjustment on two axis.
+     */
+    prism?: fhir.IVisionPrescriptionLensSpecificationPrism[] | undefined;
+    /**
+     * Power adjustment for multifocal lenses measured in dioptres (0.25 units).
+     */
+    add?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.add
+     */
+    _add?: fhir.IFhirElement | undefined;
+    /**
+     * Contact lens power measured in dioptres (0.25 units).
+     */
+    power?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.power
+     */
+    _power?: fhir.IFhirElement | undefined;
+    /**
+     * Back curvature measured in millimetres.
+     */
+    backCurve?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.backCurve
+     */
+    _backCurve?: fhir.IFhirElement | undefined;
     /**
      * Contact lens diameter measured in millimetres.
      */
     diameter?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.diameter
+     */
     _diameter?: fhir.IFhirElement | undefined;
     /**
      * The recommended maximum wear period for the lens.
      */
     duration?: fhir.IQuantity | undefined;
     /**
-     * May also appear as OD (oculus dexter) for the right eye and OS (oculus siniter) for the left eye.
+     * Special color or pattern.
      */
-    eye: VisionPrescriptionLensSpecificationEyeEnum | null;
-    _eye?: fhir.IFhirElement | undefined;
+    color?: string | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.color
+     */
+    _color?: fhir.IFhirElement | undefined;
+    /**
+     * Brand recommendations or restrictions.
+     */
+    brand?: string | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.brand
+     */
+    _brand?: fhir.IFhirElement | undefined;
     /**
      * Notes for special requirements such as coatings and lens materials.
      */
     note?: fhir.IAnnotation[] | undefined;
-    /**
-     * Contact lens power measured in dioptres (0.25 units).
-     */
-    power?: number | undefined;
-    _power?: fhir.IFhirElement | undefined;
-    /**
-     * Allows for adjustment on two axis.
-     */
-    prism?: fhir.IVisionPrescriptionLensSpecificationPrism[] | undefined;
-    /**
-     * Identifies the type of vision correction product which is required for the patient.
-     */
-    product: fhir.ICodeableConcept | null;
-    /**
-     * The value is negative for near-sighted and positive for far sighted.
-     * Often insurance will not cover a lens with power between +75 and -75.
-     */
-    sphere?: number | undefined;
-    _sphere?: fhir.IFhirElement | undefined;
 };
 /**
  * An authorization for the provision of glasses and/or contact lenses to a patient.
@@ -95,231 +135,264 @@ export declare type IVisionPrescription = fhir.IDomainResource & {
      */
     resourceType: "VisionPrescription";
     /**
-     * The date this resource was created.
-     */
-    created: string | null;
-    _created?: fhir.IFhirElement | undefined;
-    /**
-     * Jurisdictions determine the valid lifetime of a prescription. Typically vision prescriptions are valid for two years from the date written.
-     */
-    dateWritten: string | null;
-    _dateWritten?: fhir.IFhirElement | undefined;
-    /**
-     * A reference to a resource that identifies the particular occurrence of contact between patient and health care provider during which the prescription was issued.
-     */
-    encounter?: fhir.IReference | undefined;
-    /**
      * A unique identifier assigned to this vision prescription.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    lensSpecification: fhir.IVisionPrescriptionLensSpecification[] | null;
+    status: FmStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.status
+     */
+    _status?: fhir.IFhirElement | undefined;
+    /**
+     * The date this resource was created.
+     */
+    created: string | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.created
+     */
+    _created?: fhir.IFhirElement | undefined;
     /**
      * A resource reference to the person to whom the vision prescription applies.
      */
     patient: fhir.IReference | null;
     /**
+     * A reference to a resource that identifies the particular occurrence of contact between patient and health care provider during which the prescription was issued.
+     */
+    encounter?: fhir.IReference | undefined;
+    /**
+     * Jurisdictions determine the valid lifetime of a prescription. Typically vision prescriptions are valid for two years from the date written.
+     */
+    dateWritten: string | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.dateWritten
+     */
+    _dateWritten?: fhir.IFhirElement | undefined;
+    /**
      * The healthcare professional responsible for authorizing the prescription.
      */
     prescriber: fhir.IReference | null;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
      */
-    status: VisionPrescriptionStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
+    lensSpecification: fhir.IVisionPrescriptionLensSpecification[] | null;
 };
 /**
  * Allows for adjustment on two axis.
  */
-export declare class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneElement implements fhir.IVisionPrescriptionLensSpecificationPrism {
+export declare class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneElement implements IVisionPrescriptionLensSpecificationPrism {
     /**
      * Amount of prism to compensate for eye alignment in fractional units.
      */
     amount: number | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.prism.amount
+     */
     _amount?: fhir.FhirElement | undefined;
     /**
      * The relative base, or reference lens edge, for the prism.
      */
-    base: VisionPrescriptionLensSpecificationPrismBaseEnum | null;
+    base: VisionBaseCodesValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.prism.base
+     */
     _base?: fhir.FhirElement | undefined;
     /**
      * Default constructor for VisionPrescriptionLensSpecificationPrism - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IVisionPrescriptionLensSpecificationPrism>);
+    constructor(source?: Partial<IVisionPrescriptionLensSpecificationPrism>);
     /**
-     * Check if the current VisionPrescriptionLensSpecificationPrism contains all required elements.
+     * Required-bound Value Set for base
      */
-    checkRequiredElements(): string[];
+    baseRequiredValueSet(): VisionBaseCodesValueSetType;
     /**
-     * Factory function to create a VisionPrescriptionLensSpecificationPrism from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IVisionPrescriptionLensSpecificationPrism): VisionPrescriptionLensSpecificationPrism;
+    doModelValidation(): [string, string][];
 }
 /**
  * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
  */
-export declare class VisionPrescriptionLensSpecification extends fhir.BackboneElement implements fhir.IVisionPrescriptionLensSpecification {
+export declare class VisionPrescriptionLensSpecification extends fhir.BackboneElement implements IVisionPrescriptionLensSpecification {
     /**
-     * Power adjustment for multifocal lenses measured in dioptres (0.25 units).
+     * Identifies the type of vision correction product which is required for the patient.
      */
-    add?: number | undefined;
-    _add?: fhir.FhirElement | undefined;
+    product: fhir.CodeableConcept | null;
     /**
-     * The limits are +180 and -180 degrees.
+     * May also appear as OD (oculus dexter) for the right eye and OS (oculus siniter) for the left eye.
      */
-    axis?: number | undefined;
-    _axis?: fhir.FhirElement | undefined;
+    eye: VisionEyeCodesValueSetEnum | null;
     /**
-     * Back curvature measured in millimetres.
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.eye
      */
-    backCurve?: number | undefined;
-    _backCurve?: fhir.FhirElement | undefined;
+    _eye?: fhir.FhirElement | undefined;
     /**
-     * Brand recommendations or restrictions.
+     * The value is negative for near-sighted and positive for far sighted.
+     * Often insurance will not cover a lens with power between +75 and -75.
      */
-    brand?: string | undefined;
-    _brand?: fhir.FhirElement | undefined;
+    sphere?: number | undefined;
     /**
-     * Special color or pattern.
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.sphere
      */
-    color?: string | undefined;
-    _color?: fhir.FhirElement | undefined;
+    _sphere?: fhir.FhirElement | undefined;
     /**
      * Power adjustment for astigmatism measured in dioptres (0.25 units).
      */
     cylinder?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.cylinder
+     */
     _cylinder?: fhir.FhirElement | undefined;
+    /**
+     * The limits are +180 and -180 degrees.
+     */
+    axis?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.axis
+     */
+    _axis?: fhir.FhirElement | undefined;
+    /**
+     * Allows for adjustment on two axis.
+     */
+    prism?: fhir.VisionPrescriptionLensSpecificationPrism[] | undefined;
+    /**
+     * Power adjustment for multifocal lenses measured in dioptres (0.25 units).
+     */
+    add?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.add
+     */
+    _add?: fhir.FhirElement | undefined;
+    /**
+     * Contact lens power measured in dioptres (0.25 units).
+     */
+    power?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.power
+     */
+    _power?: fhir.FhirElement | undefined;
+    /**
+     * Back curvature measured in millimetres.
+     */
+    backCurve?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.backCurve
+     */
+    _backCurve?: fhir.FhirElement | undefined;
     /**
      * Contact lens diameter measured in millimetres.
      */
     diameter?: number | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.diameter
+     */
     _diameter?: fhir.FhirElement | undefined;
     /**
      * The recommended maximum wear period for the lens.
      */
     duration?: fhir.Quantity | undefined;
     /**
-     * May also appear as OD (oculus dexter) for the right eye and OS (oculus siniter) for the left eye.
+     * Special color or pattern.
      */
-    eye: VisionPrescriptionLensSpecificationEyeEnum | null;
-    _eye?: fhir.FhirElement | undefined;
+    color?: string | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.color
+     */
+    _color?: fhir.FhirElement | undefined;
+    /**
+     * Brand recommendations or restrictions.
+     */
+    brand?: string | undefined;
+    /**
+     * Extended properties for primitive element: VisionPrescription.lensSpecification.brand
+     */
+    _brand?: fhir.FhirElement | undefined;
     /**
      * Notes for special requirements such as coatings and lens materials.
      */
     note?: fhir.Annotation[] | undefined;
     /**
-     * Contact lens power measured in dioptres (0.25 units).
-     */
-    power?: number | undefined;
-    _power?: fhir.FhirElement | undefined;
-    /**
-     * Allows for adjustment on two axis.
-     */
-    prism?: fhir.VisionPrescriptionLensSpecificationPrism[] | undefined;
-    /**
-     * Identifies the type of vision correction product which is required for the patient.
-     */
-    product: fhir.CodeableConcept | null;
-    /**
-     * The value is negative for near-sighted and positive for far sighted.
-     * Often insurance will not cover a lens with power between +75 and -75.
-     */
-    sphere?: number | undefined;
-    _sphere?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for VisionPrescriptionLensSpecification - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IVisionPrescriptionLensSpecification>);
+    constructor(source?: Partial<IVisionPrescriptionLensSpecification>);
     /**
-     * Check if the current VisionPrescriptionLensSpecification contains all required elements.
+     * Example-bound Value Set for product
      */
-    checkRequiredElements(): string[];
+    productExampleValueSet(): VisionProductValueSetType;
     /**
-     * Factory function to create a VisionPrescriptionLensSpecification from an object that MUST contain all required elements.
+     * Required-bound Value Set for eye
      */
-    static fromStrict(source: fhir.IVisionPrescriptionLensSpecification): VisionPrescriptionLensSpecification;
+    eyeRequiredValueSet(): VisionEyeCodesValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * An authorization for the provision of glasses and/or contact lenses to a patient.
  */
-export declare class VisionPrescription extends fhir.DomainResource implements fhir.IVisionPrescription {
+export declare class VisionPrescription extends fhir.DomainResource implements IVisionPrescription {
     /**
      * Resource Type Name
      */
     resourceType: "VisionPrescription";
     /**
-     * The date this resource was created.
-     */
-    created: string | null;
-    _created?: fhir.FhirElement | undefined;
-    /**
-     * Jurisdictions determine the valid lifetime of a prescription. Typically vision prescriptions are valid for two years from the date written.
-     */
-    dateWritten: string | null;
-    _dateWritten?: fhir.FhirElement | undefined;
-    /**
-     * A reference to a resource that identifies the particular occurrence of contact between patient and health care provider during which the prescription was issued.
-     */
-    encounter?: fhir.Reference | undefined;
-    /**
      * A unique identifier assigned to this vision prescription.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    lensSpecification: fhir.VisionPrescriptionLensSpecification[] | null;
+    status: FmStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.status
+     */
+    _status?: fhir.FhirElement | undefined;
+    /**
+     * The date this resource was created.
+     */
+    created: string | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.created
+     */
+    _created?: fhir.FhirElement | undefined;
     /**
      * A resource reference to the person to whom the vision prescription applies.
      */
     patient: fhir.Reference | null;
     /**
+     * A reference to a resource that identifies the particular occurrence of contact between patient and health care provider during which the prescription was issued.
+     */
+    encounter?: fhir.Reference | undefined;
+    /**
+     * Jurisdictions determine the valid lifetime of a prescription. Typically vision prescriptions are valid for two years from the date written.
+     */
+    dateWritten: string | null;
+    /**
+     * Extended properties for primitive element: VisionPrescription.dateWritten
+     */
+    _dateWritten?: fhir.FhirElement | undefined;
+    /**
      * The healthcare professional responsible for authorizing the prescription.
      */
     prescriber: fhir.Reference | null;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
      */
-    status: VisionPrescriptionStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
+    lensSpecification: fhir.VisionPrescriptionLensSpecification[] | null;
     /**
      * Default constructor for VisionPrescription - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IVisionPrescription>);
+    constructor(source?: Partial<IVisionPrescription>);
     /**
-     * Check if the current VisionPrescription contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): FmStatusValueSetType;
     /**
-     * Factory function to create a VisionPrescription from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IVisionPrescription): VisionPrescription;
-}
-/**
- * Code Values for the VisionPrescription.lensSpecification.prism.base field
- */
-export declare enum VisionPrescriptionLensSpecificationPrismBaseEnum {
-    UP = "up",
-    DOWN = "down",
-    IN = "in",
-    OUT = "out"
-}
-/**
- * Code Values for the VisionPrescription.lensSpecification.eye field
- */
-export declare enum VisionPrescriptionLensSpecificationEyeEnum {
-    RIGHT = "right",
-    LEFT = "left"
-}
-/**
- * Code Values for the VisionPrescription.status field
- */
-export declare enum VisionPrescriptionStatusEnum {
-    ACTIVE = "active",
-    CANCELLED = "cancelled",
-    DRAFT = "draft",
-    ENTERED_IN_ERROR = "entered-in-error"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=VisionPrescription.d.ts.map

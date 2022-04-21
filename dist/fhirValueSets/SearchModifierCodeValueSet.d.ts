@@ -1,55 +1,112 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A supported modifier for a search parameter.
  */
 export declare const SearchModifierCodeValueSet: {
     /**
-     * The search parameter tests whether the value in a resource subsumes the specified value (is-a, or hierarchical relationships).
+     * above: The search parameter tests whether the value in a resource subsumes the specified value (is-a, or hierarchical relationships).
      */
-    search_modifier_code_Above: Coding;
+    readonly Above: Coding;
     /**
-     * The search parameter tests whether the value in a resource is subsumed by the specified value (is-a, or hierarchical relationships).
+     * below: The search parameter tests whether the value in a resource is subsumed by the specified value (is-a, or hierarchical relationships).
      */
-    search_modifier_code_Below: Coding;
+    readonly Below: Coding;
     /**
-     * The search parameter returns resources that include the supplied parameter value anywhere within the field being searched.
+     * contains: The search parameter returns resources that include the supplied parameter value anywhere within the field being searched.
      */
-    search_modifier_code_Contains: Coding;
+    readonly Contains: Coding;
     /**
-     * The search parameter returns resources that have a value that exactly matches the supplied parameter (the whole string, including casing and accents).
+     * exact: The search parameter returns resources that have a value that exactly matches the supplied parameter (the whole string, including casing and accents).
      */
-    search_modifier_code_Exact: Coding;
+    readonly Exact: Coding;
     /**
-     * The search parameter applies to the identifier on the resource, not the reference.
+     * identifier: The search parameter applies to the identifier on the resource, not the reference.
      */
-    search_modifier_code_Identifier: Coding;
+    readonly Identifier: Coding;
     /**
-     * The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is in the specified value set.
+     * in: The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is in the specified value set.
      */
-    search_modifier_code_In: Coding;
+    readonly In: Coding;
     /**
-     * The search parameter returns resources that have a value or not.
+     * missing: The search parameter returns resources that have a value or not.
      */
-    search_modifier_code_Missing: Coding;
+    readonly Missing: Coding;
     /**
-     * The search parameter returns resources that do not contain a match.
+     * not: The search parameter returns resources that do not contain a match.
      */
-    search_modifier_code_Not: Coding;
+    readonly Not: Coding;
     /**
-     * The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is not in the specified value set.
+     * not-in: The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is not in the specified value set.
      */
-    search_modifier_code_NotIn: Coding;
+    readonly NotIn: Coding;
     /**
-     * The search parameter has the format system|code|value, where the system and code refer to an Identifier.type.coding.system and .code, and match if any of the type codes match. All 3 parts must be present.
+     * ofType: The search parameter has the format system|code|value, where the system and code refer to an Identifier.type.coding.system and .code, and match if any of the type codes match. All 3 parts must be present.
      */
-    search_modifier_code_OfType: Coding;
+    readonly OfType: Coding;
     /**
-     * The search parameter is processed as a string that searches text associated with the code/value - either CodeableConcept.text, Coding.display, or Identifier.type.text.
+     * text: The search parameter is processed as a string that searches text associated with the code/value - either CodeableConcept.text, Coding.display, or Identifier.type.text.
      */
-    search_modifier_code_Text: Coding;
+    readonly Text: Coding;
     /**
-     * The search parameter only applies to the Resource Type specified as a modifier (e.g. the modifier is not actually :type, but :Patient etc.).
+     * type: The search parameter only applies to the Resource Type specified as a modifier (e.g. the modifier is not actually :type, but :Patient etc.).
      */
-    search_modifier_code_Type: Coding;
+    readonly Type: Coding;
 };
+/**
+ * A supported modifier for a search parameter.
+ */
+export declare type SearchModifierCodeValueSetType = typeof SearchModifierCodeValueSet;
+/**
+ * A supported modifier for a search parameter.
+ */
+export declare enum SearchModifierCodeValueSetEnum {
+    /**
+     * above: The search parameter tests whether the value in a resource subsumes the specified value (is-a, or hierarchical relationships).
+     */
+    Above = "above",
+    /**
+     * below: The search parameter tests whether the value in a resource is subsumed by the specified value (is-a, or hierarchical relationships).
+     */
+    Below = "below",
+    /**
+     * contains: The search parameter returns resources that include the supplied parameter value anywhere within the field being searched.
+     */
+    Contains = "contains",
+    /**
+     * exact: The search parameter returns resources that have a value that exactly matches the supplied parameter (the whole string, including casing and accents).
+     */
+    Exact = "exact",
+    /**
+     * identifier: The search parameter applies to the identifier on the resource, not the reference.
+     */
+    Identifier = "identifier",
+    /**
+     * in: The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is in the specified value set.
+     */
+    In = "in",
+    /**
+     * missing: The search parameter returns resources that have a value or not.
+     */
+    Missing = "missing",
+    /**
+     * not: The search parameter returns resources that do not contain a match.
+     */
+    Not = "not",
+    /**
+     * not-in: The search parameter is a URI (relative or absolute) that identifies a value set, and the search parameter tests whether the coding is not in the specified value set.
+     */
+    NotIn = "not-in",
+    /**
+     * ofType: The search parameter has the format system|code|value, where the system and code refer to an Identifier.type.coding.system and .code, and match if any of the type codes match. All 3 parts must be present.
+     */
+    OfType = "ofType",
+    /**
+     * text: The search parameter is processed as a string that searches text associated with the code/value - either CodeableConcept.text, Coding.display, or Identifier.type.text.
+     */
+    Text = "text",
+    /**
+     * type: The search parameter only applies to the Resource Type specified as a modifier (e.g. the modifier is not actually :type, but :Patient etc.).
+     */
+    Type = "type"
+}
 //# sourceMappingURL=SearchModifierCodeValueSet.d.ts.map

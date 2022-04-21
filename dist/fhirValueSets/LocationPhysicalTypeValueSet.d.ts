@@ -1,63 +1,128 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This example value set defines a set of codes that can be used to indicate the physical form of the Location.
  */
 export declare const LocationPhysicalTypeValueSet: {
     /**
-     * A defined physical boundary of something, such as a flood risk zone, region, postcode
+     * area: A defined physical boundary of something, such as a flood risk zone, region, postcode
      */
-    location_physical_type_Area: Coding;
+    readonly Area: Coding;
     /**
-     * A space that is allocated for sleeping/laying on. This is not the physical bed/trolley that may be moved about, but the space it may occupy.
+     * bd: A space that is allocated for sleeping/laying on. This is not the physical bed/trolley that may be moved about, but the space it may occupy.
      */
-    location_physical_type_Bed: Coding;
+    readonly Bed: Coding;
     /**
-     * Any Building or structure. This may contain rooms, corridors, wings, etc. It might not have walls, or a roof, but is considered a defined/allocated space.
+     * bu: Any Building or structure. This may contain rooms, corridors, wings, etc. It might not have walls, or a roof, but is considered a defined/allocated space.
      */
-    location_physical_type_Building: Coding;
+    readonly Building: Coding;
     /**
-     * A container that can store goods, equipment, medications or other items.
+     * ca: A container that can store goods, equipment, medications or other items.
      */
-    location_physical_type_Cabinet: Coding;
+    readonly Cabinet: Coding;
     /**
-     * Any corridor within a Building, that may connect rooms.
+     * co: Any corridor within a Building, that may connect rooms.
      */
-    location_physical_type_Corridor: Coding;
+    readonly Corridor: Coding;
     /**
-     * A residential dwelling. Usually used to reference a location that a person/patient may reside.
+     * ho: A residential dwelling. Usually used to reference a location that a person/patient may reside.
      */
-    location_physical_type_House: Coding;
+    readonly House: Coding;
     /**
-     * A wide scope that covers a conceptual domain, such as a Nation (Country wide community or Federal Government - e.g. Ministry of Health),  Province or State (community or Government), Business (throughout the enterprise), Nation with a business scope of an agency (e.g. CDC, FDA etc.) or a Business segment (UK Pharmacy), not just an physical boundary
+     * jdn: A wide scope that covers a conceptual domain, such as a Nation (Country wide community or Federal Government - e.g. Ministry of Health),  Province or State (community or Government), Business (throughout the enterprise), Nation with a business scope of an agency (e.g. CDC, FDA etc.) or a Business segment (UK Pharmacy), not just an physical boundary
      */
-    location_physical_type_Jurisdiction: Coding;
+    readonly Jurisdiction: Coding;
     /**
-     * A Level in a multi-level Building/Structure.
+     * lvl: A Level in a multi-level Building/Structure.
      */
-    location_physical_type_Level: Coding;
+    readonly Level: Coding;
     /**
-     * A defined path to travel between 2 points that has a known name.
+     * rd: A defined path to travel between 2 points that has a known name.
      */
-    location_physical_type_Road: Coding;
+    readonly Road: Coding;
     /**
-     * A space that is allocated as a room, it may have walls/roof etc., but does not require these.
+     * ro: A space that is allocated as a room, it may have walls/roof etc., but does not require these.
      */
-    location_physical_type_Room: Coding;
+    readonly Room: Coding;
     /**
-     * A collection of buildings or other locations such as a site or a campus.
+     * si: A collection of buildings or other locations such as a site or a campus.
      */
-    location_physical_type_Site: Coding;
+    readonly Site: Coding;
     /**
-     * A means of transportation.
+     * ve: A means of transportation.
      */
-    location_physical_type_Vehicle: Coding;
+    readonly Vehicle: Coding;
     /**
-     * A Ward is a section of a medical facility that may contain rooms and other types of location.
+     * wa: A Ward is a section of a medical facility that may contain rooms and other types of location.
      */
-    location_physical_type_Ward: Coding;
+    readonly Ward: Coding;
     /**
-     * A Wing within a Building, this often contains levels, rooms and corridors.
+     * wi: A Wing within a Building, this often contains levels, rooms and corridors.
      */
-    location_physical_type_Wing: Coding;
+    readonly Wing: Coding;
 };
+/**
+ * This example value set defines a set of codes that can be used to indicate the physical form of the Location.
+ */
+export declare type LocationPhysicalTypeValueSetType = typeof LocationPhysicalTypeValueSet;
+/**
+ * This example value set defines a set of codes that can be used to indicate the physical form of the Location.
+ */
+export declare enum LocationPhysicalTypeValueSetEnum {
+    /**
+     * area: A defined physical boundary of something, such as a flood risk zone, region, postcode
+     */
+    Area = "area",
+    /**
+     * bd: A space that is allocated for sleeping/laying on. This is not the physical bed/trolley that may be moved about, but the space it may occupy.
+     */
+    Bed = "bd",
+    /**
+     * bu: Any Building or structure. This may contain rooms, corridors, wings, etc. It might not have walls, or a roof, but is considered a defined/allocated space.
+     */
+    Building = "bu",
+    /**
+     * ca: A container that can store goods, equipment, medications or other items.
+     */
+    Cabinet = "ca",
+    /**
+     * co: Any corridor within a Building, that may connect rooms.
+     */
+    Corridor = "co",
+    /**
+     * ho: A residential dwelling. Usually used to reference a location that a person/patient may reside.
+     */
+    House = "ho",
+    /**
+     * jdn: A wide scope that covers a conceptual domain, such as a Nation (Country wide community or Federal Government - e.g. Ministry of Health),  Province or State (community or Government), Business (throughout the enterprise), Nation with a business scope of an agency (e.g. CDC, FDA etc.) or a Business segment (UK Pharmacy), not just an physical boundary
+     */
+    Jurisdiction = "jdn",
+    /**
+     * lvl: A Level in a multi-level Building/Structure.
+     */
+    Level = "lvl",
+    /**
+     * rd: A defined path to travel between 2 points that has a known name.
+     */
+    Road = "rd",
+    /**
+     * ro: A space that is allocated as a room, it may have walls/roof etc., but does not require these.
+     */
+    Room = "ro",
+    /**
+     * si: A collection of buildings or other locations such as a site or a campus.
+     */
+    Site = "si",
+    /**
+     * ve: A means of transportation.
+     */
+    Vehicle = "ve",
+    /**
+     * wa: A Ward is a section of a medical facility that may contain rooms and other types of location.
+     */
+    Ward = "wa",
+    /**
+     * wi: A Wing within a Building, this often contains levels, rooms and corridors.
+     */
+    Wing = "wi"
+}
 //# sourceMappingURL=LocationPhysicalTypeValueSet.d.ts.map

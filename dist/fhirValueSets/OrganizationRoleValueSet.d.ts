@@ -1,36 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This example value set defines a set of codes that can be used to indicate the role of one Organization in relation to another.
  */
 export declare const OrganizationRoleValueSet: {
     /**
-     * An organization such as a public health agency, community/social services provider, etc.
+     * agency: An organization such as a public health agency, community/social services provider, etc.
      */
-    organization_role_Agency: Coding;
+    readonly Agency: Coding;
     /**
-     * An organization providing diagnostic testing/laboratory services
+     * diagnostics: An organization providing diagnostic testing/laboratory services
      */
-    organization_role_Diagnostics: Coding;
+    readonly Diagnostics: Coding;
     /**
-     * An organization that facilitates electronic clinical data exchange between entities
+     * HIE/HIO: An organization that facilitates electronic clinical data exchange between entities
      */
-    organization_role_HIEHIO: Coding;
+    readonly HIEHIO: Coding;
     /**
-     * A type of non-ownership relationship between entities (encompasses partnerships, collaboration, joint ventures, etc.)
+     * member: A type of non-ownership relationship between entities (encompasses partnerships, collaboration, joint ventures, etc.)
      */
-    organization_role_Member: Coding;
+    readonly Member: Coding;
     /**
-     * An organization providing reimbursement, payment, or related services
+     * payer: An organization providing reimbursement, payment, or related services
      */
-    organization_role_Payer: Coding;
-    organization_role_Provider: Coding;
+    readonly Payer: Coding;
     /**
-     * An organization providing research-related services such as conducting research, recruiting research participants, analyzing data, etc.
+     * Code: provider
      */
-    organization_role_Research: Coding;
+    readonly Provider: Coding;
     /**
-     * An organization that provides medical supplies (e.g. medical devices, equipment, pharmaceutical products, etc.)
+     * research: An organization providing research-related services such as conducting research, recruiting research participants, analyzing data, etc.
      */
-    organization_role_Supplier: Coding;
+    readonly Research: Coding;
+    /**
+     * supplier: An organization that provides medical supplies (e.g. medical devices, equipment, pharmaceutical products, etc.)
+     */
+    readonly Supplier: Coding;
 };
+/**
+ * This example value set defines a set of codes that can be used to indicate the role of one Organization in relation to another.
+ */
+export declare type OrganizationRoleValueSetType = typeof OrganizationRoleValueSet;
+/**
+ * This example value set defines a set of codes that can be used to indicate the role of one Organization in relation to another.
+ */
+export declare enum OrganizationRoleValueSetEnum {
+    /**
+     * agency: An organization such as a public health agency, community/social services provider, etc.
+     */
+    Agency = "agency",
+    /**
+     * diagnostics: An organization providing diagnostic testing/laboratory services
+     */
+    Diagnostics = "diagnostics",
+    /**
+     * HIE/HIO: An organization that facilitates electronic clinical data exchange between entities
+     */
+    HIEHIO = "HIE/HIO",
+    /**
+     * member: A type of non-ownership relationship between entities (encompasses partnerships, collaboration, joint ventures, etc.)
+     */
+    Member = "member",
+    /**
+     * payer: An organization providing reimbursement, payment, or related services
+     */
+    Payer = "payer",
+    /**
+     * Code: provider
+     */
+    Provider = "provider",
+    /**
+     * research: An organization providing research-related services such as conducting research, recruiting research participants, analyzing data, etc.
+     */
+    Research = "research",
+    /**
+     * supplier: An organization that provides medical supplies (e.g. medical devices, equipment, pharmaceutical products, etc.)
+     */
+    Supplier = "supplier"
+}
 //# sourceMappingURL=OrganizationRoleValueSet.d.ts.map

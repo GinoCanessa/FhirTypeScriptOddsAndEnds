@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes for the reason why a communication did not happen.
  */
 export declare const CommunicationNotDoneReasonValueSet: {
     /**
-     * The communication was not done due to a family objection.
+     * family-objection: The communication was not done due to a family objection.
      */
-    communication_not_done_reason_FamilyObjection: Coding;
+    readonly FamilyObjection: Coding;
     /**
-     * The communication was not done due to an invalid phone number.
+     * invalid-phone-number: The communication was not done due to an invalid phone number.
      */
-    communication_not_done_reason_InvalidPhoneNumber: Coding;
+    readonly InvalidPhoneNumber: Coding;
     /**
-     * The communication was not done due to a patient objection.
+     * patient-objection: The communication was not done due to a patient objection.
      */
-    communication_not_done_reason_PatientObjection: Coding;
+    readonly PatientObjection: Coding;
     /**
-     * The communication was not done due to the recipient being unavailable.
+     * recipient-unavailable: The communication was not done due to the recipient being unavailable.
      */
-    communication_not_done_reason_RecipientUnavailable: Coding;
+    readonly RecipientUnavailable: Coding;
     /**
-     * The communication was not done due to a system error.
+     * system-error: The communication was not done due to a system error.
      */
-    communication_not_done_reason_SystemError: Coding;
+    readonly SystemError: Coding;
     /**
-     * The communication was not done due to an unknown reason.
+     * unknown: The communication was not done due to an unknown reason.
      */
-    communication_not_done_reason_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * Codes for the reason why a communication did not happen.
+ */
+export declare type CommunicationNotDoneReasonValueSetType = typeof CommunicationNotDoneReasonValueSet;
+/**
+ * Codes for the reason why a communication did not happen.
+ */
+export declare enum CommunicationNotDoneReasonValueSetEnum {
+    /**
+     * family-objection: The communication was not done due to a family objection.
+     */
+    FamilyObjection = "family-objection",
+    /**
+     * invalid-phone-number: The communication was not done due to an invalid phone number.
+     */
+    InvalidPhoneNumber = "invalid-phone-number",
+    /**
+     * patient-objection: The communication was not done due to a patient objection.
+     */
+    PatientObjection = "patient-objection",
+    /**
+     * recipient-unavailable: The communication was not done due to the recipient being unavailable.
+     */
+    RecipientUnavailable = "recipient-unavailable",
+    /**
+     * system-error: The communication was not done due to a system error.
+     */
+    SystemError = "system-error",
+    /**
+     * unknown: The communication was not done due to an unknown reason.
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=CommunicationNotDoneReasonValueSet.d.ts.map

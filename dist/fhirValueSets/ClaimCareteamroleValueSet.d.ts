@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Claim Care Team Role codes.
  */
 export declare const ClaimCareteamroleValueSet: {
     /**
-     * Assisting care provider.
+     * assist: Assisting care provider.
      */
-    claim_careteamrole_AssistingProvider: Coding;
+    readonly AssistingProvider: Coding;
     /**
-     * Other role on the care team.
+     * other: Other role on the care team.
      */
-    claim_careteamrole_Other: Coding;
+    readonly Other: Coding;
     /**
-     * The primary care provider.
+     * primary: The primary care provider.
      */
-    claim_careteamrole_PrimaryProvider: Coding;
+    readonly PrimaryProvider: Coding;
     /**
-     * Supervising care provider.
+     * supervisor: Supervising care provider.
      */
-    claim_careteamrole_SupervisingProvider: Coding;
+    readonly SupervisingProvider: Coding;
 };
+/**
+ * This value set includes sample Claim Care Team Role codes.
+ */
+export declare type ClaimCareteamroleValueSetType = typeof ClaimCareteamroleValueSet;
+/**
+ * This value set includes sample Claim Care Team Role codes.
+ */
+export declare enum ClaimCareteamroleValueSetEnum {
+    /**
+     * assist: Assisting care provider.
+     */
+    AssistingProvider = "assist",
+    /**
+     * other: Other role on the care team.
+     */
+    Other = "other",
+    /**
+     * primary: The primary care provider.
+     */
+    PrimaryProvider = "primary",
+    /**
+     * supervisor: Supervising care provider.
+     */
+    SupervisingProvider = "supervisor"
+}
 //# sourceMappingURL=ClaimCareteamroleValueSet.d.ts.map

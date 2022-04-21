@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems.
  */
 export declare const EvidenceQualityValueSet: {
     /**
-     * High quality evidence.
+     * high: High quality evidence.
      */
-    evidence_quality_HighQuality: Coding;
+    readonly HighQuality: Coding;
     /**
-     * Low quality evidence.
+     * low: Low quality evidence.
      */
-    evidence_quality_LowQuality: Coding;
+    readonly LowQuality: Coding;
     /**
-     * Moderate quality evidence.
+     * moderate: Moderate quality evidence.
      */
-    evidence_quality_ModerateQuality: Coding;
+    readonly ModerateQuality: Coding;
     /**
-     * Very low quality evidence.
+     * very-low: Very low quality evidence.
      */
-    evidence_quality_VeryLowQuality: Coding;
+    readonly VeryLowQuality: Coding;
 };
+/**
+ * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems.
+ */
+export declare type EvidenceQualityValueSetType = typeof EvidenceQualityValueSet;
+/**
+ * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems.
+ */
+export declare enum EvidenceQualityValueSetEnum {
+    /**
+     * high: High quality evidence.
+     */
+    HighQuality = "high",
+    /**
+     * low: Low quality evidence.
+     */
+    LowQuality = "low",
+    /**
+     * moderate: Moderate quality evidence.
+     */
+    ModerateQuality = "moderate",
+    /**
+     * very-low: Very low quality evidence.
+     */
+    VeryLowQuality = "very-low"
+}
 //# sourceMappingURL=EvidenceQualityValueSet.d.ts.map

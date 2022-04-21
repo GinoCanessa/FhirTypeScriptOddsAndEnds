@@ -1,4 +1,9 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { ImmunizationRecommendationDateCriterionValueSetType } from '../fhirValueSets/ImmunizationRecommendationDateCriterionValueSet.js';
+import { VaccineCodeValueSetType } from '../fhirValueSets/VaccineCodeValueSet.js';
+import { ImmunizationRecommendationTargetDiseaseValueSetType } from '../fhirValueSets/ImmunizationRecommendationTargetDiseaseValueSet.js';
+import { ImmunizationRecommendationStatusValueSetType } from '../fhirValueSets/ImmunizationRecommendationStatusValueSet.js';
+import { ImmunizationRecommendationReasonValueSetType } from '../fhirValueSets/ImmunizationRecommendationReasonValueSet.js';
 /**
  * Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
  */
@@ -11,6 +16,9 @@ export declare type IImmunizationRecommendationRecommendationDateCriterion = fhi
      * The date whose meaning is specified by dateCriterion.code.
      */
     value: string | null;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.dateCriterion.value
+     */
     _value?: fhir.IFhirElement | undefined;
 };
 /**
@@ -18,9 +26,25 @@ export declare type IImmunizationRecommendationRecommendationDateCriterion = fhi
  */
 export declare type IImmunizationRecommendationRecommendation = fhir.IBackboneElement & {
     /**
+     * Vaccine(s) or vaccine group that pertain to the recommendation.
+     */
+    vaccineCode?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * The targeted disease for the recommendation.
+     */
+    targetDisease?: fhir.ICodeableConcept | undefined;
+    /**
      * Vaccine(s) which should not be used to fulfill the recommendation.
      */
     contraindicatedVaccineCode?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * Indicates the patient status with respect to the path to immunity for the target disease.
+     */
+    forecastStatus: fhir.ICodeableConcept | null;
+    /**
+     * The reason for the assigned forecast status.
+     */
+    forecastReason?: fhir.ICodeableConcept[] | undefined;
     /**
      * Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
      */
@@ -29,39 +53,49 @@ export declare type IImmunizationRecommendationRecommendation = fhir.IBackboneEl
      * Contains the description about the protocol under which the vaccine was administered.
      */
     description?: string | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.description
+     */
     _description?: fhir.IFhirElement | undefined;
+    /**
+     * One possible path to achieve presumed immunity against a disease - within the context of an authority.
+     */
+    series?: string | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.series
+     */
+    _series?: fhir.IFhirElement | undefined;
     /**
      * The use of an integer is prefered if known. A string should only be used in cases where an interger is not available (such as when documenting a recurring booster dose).
      */
     doseNumberPositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.doseNumber[x]
+     */
     _doseNumberPositiveInt?: fhir.IFhirElement | undefined;
     /**
      * The use of an integer is prefered if known. A string should only be used in cases where an interger is not available (such as when documenting a recurring booster dose).
      */
     doseNumberString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.doseNumber[x]
+     */
     _doseNumberString?: fhir.IFhirElement | undefined;
-    /**
-     * The reason for the assigned forecast status.
-     */
-    forecastReason?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Indicates the patient status with respect to the path to immunity for the target disease.
-     */
-    forecastStatus: fhir.ICodeableConcept | null;
-    /**
-     * One possible path to achieve presumed immunity against a disease - within the context of an authority.
-     */
-    series?: string | undefined;
-    _series?: fhir.IFhirElement | undefined;
     /**
      * The use of an integer is prefered if known. A string should only be used in cases where an interger is not available (such as when documenting a recurring booster dose).
      */
     seriesDosesPositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.seriesDoses[x]
+     */
     _seriesDosesPositiveInt?: fhir.IFhirElement | undefined;
     /**
      * The use of an integer is prefered if known. A string should only be used in cases where an interger is not available (such as when documenting a recurring booster dose).
      */
     seriesDosesString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.seriesDoses[x]
+     */
     _seriesDosesString?: fhir.IFhirElement | undefined;
     /**
      * Immunization event history and/or evaluation that supports the status and recommendation.
@@ -71,14 +105,6 @@ export declare type IImmunizationRecommendationRecommendation = fhir.IBackboneEl
      * Patient Information that supports the status and recommendation.  This includes patient observations, adverse reactions and allergy/intolerance information.
      */
     supportingPatientInformation?: fhir.IReference[] | undefined;
-    /**
-     * The targeted disease for the recommendation.
-     */
-    targetDisease?: fhir.ICodeableConcept | undefined;
-    /**
-     * Vaccine(s) or vaccine group that pertain to the recommendation.
-     */
-    vaccineCode?: fhir.ICodeableConcept[] | undefined;
 };
 /**
  * A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.
@@ -89,15 +115,6 @@ export declare type IImmunizationRecommendation = fhir.IDomainResource & {
      */
     resourceType: "ImmunizationRecommendation";
     /**
-     * Indicates the authority who published the protocol (e.g. ACIP).
-     */
-    authority?: fhir.IReference | undefined;
-    /**
-     * The date the immunization recommendation(s) were created.
-     */
-    date: string | null;
-    _date?: fhir.IFhirElement | undefined;
-    /**
      * A unique identifier assigned to this particular recommendation record.
      */
     identifier?: fhir.IIdentifier[] | undefined;
@@ -106,6 +123,18 @@ export declare type IImmunizationRecommendation = fhir.IDomainResource & {
      */
     patient: fhir.IReference | null;
     /**
+     * The date the immunization recommendation(s) were created.
+     */
+    date: string | null;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.date
+     */
+    _date?: fhir.IFhirElement | undefined;
+    /**
+     * Indicates the authority who published the protocol (e.g. ACIP).
+     */
+    authority?: fhir.IReference | undefined;
+    /**
      * Vaccine administration recommendations.
      */
     recommendation: fhir.IImmunizationRecommendationRecommendation[] | null;
@@ -113,7 +142,7 @@ export declare type IImmunizationRecommendation = fhir.IDomainResource & {
 /**
  * Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
  */
-export declare class ImmunizationRecommendationRecommendationDateCriterion extends fhir.BackboneElement implements fhir.IImmunizationRecommendationRecommendationDateCriterion {
+export declare class ImmunizationRecommendationRecommendationDateCriterion extends fhir.BackboneElement implements IImmunizationRecommendationRecommendationDateCriterion {
     /**
      * Date classification of recommendation.  For example, earliest date to give, latest date to give, etc.
      */
@@ -122,28 +151,47 @@ export declare class ImmunizationRecommendationRecommendationDateCriterion exten
      * The date whose meaning is specified by dateCriterion.code.
      */
     value: string | null;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.dateCriterion.value
+     */
     _value?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ImmunizationRecommendationRecommendationDateCriterion - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IImmunizationRecommendationRecommendationDateCriterion>);
+    constructor(source?: Partial<IImmunizationRecommendationRecommendationDateCriterion>);
     /**
-     * Check if the current ImmunizationRecommendationRecommendationDateCriterion contains all required elements.
+     * Example-bound Value Set for code
      */
-    checkRequiredElements(): string[];
+    codeExampleValueSet(): ImmunizationRecommendationDateCriterionValueSetType;
     /**
-     * Factory function to create a ImmunizationRecommendationRecommendationDateCriterion from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IImmunizationRecommendationRecommendationDateCriterion): ImmunizationRecommendationRecommendationDateCriterion;
+    doModelValidation(): [string, string][];
 }
 /**
  * Vaccine administration recommendations.
  */
-export declare class ImmunizationRecommendationRecommendation extends fhir.BackboneElement implements fhir.IImmunizationRecommendationRecommendation {
+export declare class ImmunizationRecommendationRecommendation extends fhir.BackboneElement implements IImmunizationRecommendationRecommendation {
+    /**
+     * Vaccine(s) or vaccine group that pertain to the recommendation.
+     */
+    vaccineCode?: fhir.CodeableConcept[] | undefined;
+    /**
+     * The targeted disease for the recommendation.
+     */
+    targetDisease?: fhir.CodeableConcept | undefined;
     /**
      * Vaccine(s) which should not be used to fulfill the recommendation.
      */
     contraindicatedVaccineCode?: fhir.CodeableConcept[] | undefined;
+    /**
+     * Indicates the patient status with respect to the path to immunity for the target disease.
+     */
+    forecastStatus: fhir.CodeableConcept | null;
+    /**
+     * The reason for the assigned forecast status.
+     */
+    forecastReason?: fhir.CodeableConcept[] | undefined;
     /**
      * Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.
      */
@@ -152,39 +200,49 @@ export declare class ImmunizationRecommendationRecommendation extends fhir.Backb
      * Contains the description about the protocol under which the vaccine was administered.
      */
     description?: string | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.description
+     */
     _description?: fhir.FhirElement | undefined;
+    /**
+     * One possible path to achieve presumed immunity against a disease - within the context of an authority.
+     */
+    series?: string | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.series
+     */
+    _series?: fhir.FhirElement | undefined;
     /**
      * The use of an integer is prefered if known. A string should only be used in cases where an interger is not available (such as when documenting a recurring booster dose).
      */
     doseNumberPositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.doseNumber[x]
+     */
     _doseNumberPositiveInt?: fhir.FhirElement | undefined;
     /**
      * The use of an integer is prefered if known. A string should only be used in cases where an interger is not available (such as when documenting a recurring booster dose).
      */
     doseNumberString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.doseNumber[x]
+     */
     _doseNumberString?: fhir.FhirElement | undefined;
-    /**
-     * The reason for the assigned forecast status.
-     */
-    forecastReason?: fhir.CodeableConcept[] | undefined;
-    /**
-     * Indicates the patient status with respect to the path to immunity for the target disease.
-     */
-    forecastStatus: fhir.CodeableConcept | null;
-    /**
-     * One possible path to achieve presumed immunity against a disease - within the context of an authority.
-     */
-    series?: string | undefined;
-    _series?: fhir.FhirElement | undefined;
     /**
      * The use of an integer is prefered if known. A string should only be used in cases where an interger is not available (such as when documenting a recurring booster dose).
      */
     seriesDosesPositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.seriesDoses[x]
+     */
     _seriesDosesPositiveInt?: fhir.FhirElement | undefined;
     /**
      * The use of an integer is prefered if known. A string should only be used in cases where an interger is not available (such as when documenting a recurring booster dose).
      */
     seriesDosesString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.recommendation.seriesDoses[x]
+     */
     _seriesDosesString?: fhir.FhirElement | undefined;
     /**
      * Immunization event history and/or evaluation that supports the status and recommendation.
@@ -195,43 +253,42 @@ export declare class ImmunizationRecommendationRecommendation extends fhir.Backb
      */
     supportingPatientInformation?: fhir.Reference[] | undefined;
     /**
-     * The targeted disease for the recommendation.
-     */
-    targetDisease?: fhir.CodeableConcept | undefined;
-    /**
-     * Vaccine(s) or vaccine group that pertain to the recommendation.
-     */
-    vaccineCode?: fhir.CodeableConcept[] | undefined;
-    /**
      * Default constructor for ImmunizationRecommendationRecommendation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IImmunizationRecommendationRecommendation>);
+    constructor(source?: Partial<IImmunizationRecommendationRecommendation>);
     /**
-     * Check if the current ImmunizationRecommendationRecommendation contains all required elements.
+     * Example-bound Value Set for vaccineCode
      */
-    checkRequiredElements(): string[];
+    vaccineCodeExampleValueSet(): VaccineCodeValueSetType;
     /**
-     * Factory function to create a ImmunizationRecommendationRecommendation from an object that MUST contain all required elements.
+     * Example-bound Value Set for targetDisease
      */
-    static fromStrict(source: fhir.IImmunizationRecommendationRecommendation): ImmunizationRecommendationRecommendation;
+    targetDiseaseExampleValueSet(): ImmunizationRecommendationTargetDiseaseValueSetType;
+    /**
+     * Example-bound Value Set for contraindicatedVaccineCode
+     */
+    contraindicatedVaccineCodeExampleValueSet(): VaccineCodeValueSetType;
+    /**
+     * Example-bound Value Set for forecastStatus
+     */
+    forecastStatusExampleValueSet(): ImmunizationRecommendationStatusValueSetType;
+    /**
+     * Example-bound Value Set for forecastReason
+     */
+    forecastReasonExampleValueSet(): ImmunizationRecommendationReasonValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.
  */
-export declare class ImmunizationRecommendation extends fhir.DomainResource implements fhir.IImmunizationRecommendation {
+export declare class ImmunizationRecommendation extends fhir.DomainResource implements IImmunizationRecommendation {
     /**
      * Resource Type Name
      */
     resourceType: "ImmunizationRecommendation";
-    /**
-     * Indicates the authority who published the protocol (e.g. ACIP).
-     */
-    authority?: fhir.Reference | undefined;
-    /**
-     * The date the immunization recommendation(s) were created.
-     */
-    date: string | null;
-    _date?: fhir.FhirElement | undefined;
     /**
      * A unique identifier assigned to this particular recommendation record.
      */
@@ -241,20 +298,28 @@ export declare class ImmunizationRecommendation extends fhir.DomainResource impl
      */
     patient: fhir.Reference | null;
     /**
+     * The date the immunization recommendation(s) were created.
+     */
+    date: string | null;
+    /**
+     * Extended properties for primitive element: ImmunizationRecommendation.date
+     */
+    _date?: fhir.FhirElement | undefined;
+    /**
+     * Indicates the authority who published the protocol (e.g. ACIP).
+     */
+    authority?: fhir.Reference | undefined;
+    /**
      * Vaccine administration recommendations.
      */
     recommendation: fhir.ImmunizationRecommendationRecommendation[] | null;
     /**
      * Default constructor for ImmunizationRecommendation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IImmunizationRecommendation>);
+    constructor(source?: Partial<IImmunizationRecommendation>);
     /**
-     * Check if the current ImmunizationRecommendation contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ImmunizationRecommendation from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IImmunizationRecommendation): ImmunizationRecommendation;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=ImmunizationRecommendation.d.ts.map

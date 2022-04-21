@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Types of resources that are part of group.
  */
 export declare const GroupTypeValueSet: {
     /**
-     * Group contains "animal" Patient resources.
+     * animal: Group contains "animal" Patient resources.
      */
-    group_type_Animal: Coding;
+    readonly Animal: Coding;
     /**
-     * Group contains Device resources.
+     * device: Group contains Device resources.
      */
-    group_type_Device: Coding;
+    readonly Device: Coding;
     /**
-     * Group contains Medication resources.
+     * medication: Group contains Medication resources.
      */
-    group_type_Medication: Coding;
+    readonly Medication: Coding;
     /**
-     * Group contains "person" Patient resources.
+     * person: Group contains "person" Patient resources.
      */
-    group_type_Person: Coding;
+    readonly Person: Coding;
     /**
-     * Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
+     * practitioner: Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
      */
-    group_type_Practitioner: Coding;
+    readonly Practitioner: Coding;
     /**
-     * Group contains Substance resources.
+     * substance: Group contains Substance resources.
      */
-    group_type_Substance: Coding;
+    readonly Substance: Coding;
 };
+/**
+ * Types of resources that are part of group.
+ */
+export declare type GroupTypeValueSetType = typeof GroupTypeValueSet;
+/**
+ * Types of resources that are part of group.
+ */
+export declare enum GroupTypeValueSetEnum {
+    /**
+     * animal: Group contains "animal" Patient resources.
+     */
+    Animal = "animal",
+    /**
+     * device: Group contains Device resources.
+     */
+    Device = "device",
+    /**
+     * medication: Group contains Medication resources.
+     */
+    Medication = "medication",
+    /**
+     * person: Group contains "person" Patient resources.
+     */
+    Person = "person",
+    /**
+     * practitioner: Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
+     */
+    Practitioner = "practitioner",
+    /**
+     * substance: Group contains Substance resources.
+     */
+    Substance = "substance"
+}
 //# sourceMappingURL=GroupTypeValueSet.d.ts.map

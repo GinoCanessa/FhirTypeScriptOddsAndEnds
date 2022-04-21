@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.
  */
 export declare const AdjudicationValueSet: {
     /**
-     * Amount payable under the coverage
+     * benefit: Amount payable under the coverage
      */
-    adjudication_BenefitAmount: Coding;
+    readonly BenefitAmount: Coding;
     /**
-     * Patient Co-Payment
+     * copay: Patient Co-Payment
      */
-    adjudication_CoPay: Coding;
+    readonly CoPay: Coding;
     /**
-     * Amount deducted from the eligible amount prior to adjudication.
+     * deductible: Amount deducted from the eligible amount prior to adjudication.
      */
-    adjudication_Deductible: Coding;
+    readonly Deductible: Coding;
     /**
-     * Amount of the change which is considered for adjudication.
+     * eligible: Amount of the change which is considered for adjudication.
      */
-    adjudication_EligibleAmount: Coding;
+    readonly EligibleAmount: Coding;
     /**
-     * Eligible Percentage.
+     * eligpercent: Eligible Percentage.
      */
-    adjudication_EligiblePercent: Coding;
+    readonly EligiblePercent: Coding;
     /**
-     * The total submitted amount for the claim or group or line item.
+     * submitted: The total submitted amount for the claim or group or line item.
      */
-    adjudication_SubmittedAmount: Coding;
+    readonly SubmittedAmount: Coding;
     /**
-     * The amount of tax.
+     * tax: The amount of tax.
      */
-    adjudication_Tax: Coding;
+    readonly Tax: Coding;
     /**
-     * The amount of deductible which could not allocated to other line items.
+     * unallocdeduct: The amount of deductible which could not allocated to other line items.
      */
-    adjudication_UnallocatedDeductible: Coding;
+    readonly UnallocatedDeductible: Coding;
 };
+/**
+ * This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.
+ */
+export declare type AdjudicationValueSetType = typeof AdjudicationValueSet;
+/**
+ * This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.
+ */
+export declare enum AdjudicationValueSetEnum {
+    /**
+     * benefit: Amount payable under the coverage
+     */
+    BenefitAmount = "benefit",
+    /**
+     * copay: Patient Co-Payment
+     */
+    CoPay = "copay",
+    /**
+     * deductible: Amount deducted from the eligible amount prior to adjudication.
+     */
+    Deductible = "deductible",
+    /**
+     * eligible: Amount of the change which is considered for adjudication.
+     */
+    EligibleAmount = "eligible",
+    /**
+     * eligpercent: Eligible Percentage.
+     */
+    EligiblePercent = "eligpercent",
+    /**
+     * submitted: The total submitted amount for the claim or group or line item.
+     */
+    SubmittedAmount = "submitted",
+    /**
+     * tax: The amount of tax.
+     */
+    Tax = "tax",
+    /**
+     * unallocdeduct: The amount of deductible which could not allocated to other line items.
+     */
+    UnallocatedDeductible = "unallocdeduct"
+}
 //# sourceMappingURL=AdjudicationValueSet.d.ts.map

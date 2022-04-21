@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How a search parameter relates to the set of elements returned by evaluating its xpath query.
  */
 export declare const SearchXpathUsageValueSet: {
     /**
-     * The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
+     * distance: The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
      */
-    search_xpath_usage_Distance: Coding;
+    readonly Distance: Coding;
     /**
-     * The search parameter is based on a spatial transform of the selected nodes.
+     * nearby: The search parameter is based on a spatial transform of the selected nodes.
      */
-    search_xpath_usage_Nearby: Coding;
+    readonly Nearby: Coding;
     /**
-     * The search parameter is derived directly from the selected nodes based on the type definitions.
+     * normal: The search parameter is derived directly from the selected nodes based on the type definitions.
      */
-    search_xpath_usage_Normal: Coding;
+    readonly Normal: Coding;
     /**
-     * The interpretation of the xpath statement is unknown (and can't be automated).
+     * other: The interpretation of the xpath statement is unknown (and can't be automated).
      */
-    search_xpath_usage_Other: Coding;
+    readonly Other: Coding;
     /**
-     * The search parameter is derived by a phonetic transform from the selected nodes.
+     * phonetic: The search parameter is derived by a phonetic transform from the selected nodes.
      */
-    search_xpath_usage_Phonetic: Coding;
+    readonly Phonetic: Coding;
 };
+/**
+ * How a search parameter relates to the set of elements returned by evaluating its xpath query.
+ */
+export declare type SearchXpathUsageValueSetType = typeof SearchXpathUsageValueSet;
+/**
+ * How a search parameter relates to the set of elements returned by evaluating its xpath query.
+ */
+export declare enum SearchXpathUsageValueSetEnum {
+    /**
+     * distance: The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
+     */
+    Distance = "distance",
+    /**
+     * nearby: The search parameter is based on a spatial transform of the selected nodes.
+     */
+    Nearby = "nearby",
+    /**
+     * normal: The search parameter is derived directly from the selected nodes based on the type definitions.
+     */
+    Normal = "normal",
+    /**
+     * other: The interpretation of the xpath statement is unknown (and can't be automated).
+     */
+    Other = "other",
+    /**
+     * phonetic: The search parameter is derived by a phonetic transform from the selected nodes.
+     */
+    Phonetic = "phonetic"
+}
 //# sourceMappingURL=SearchXpathUsageValueSet.d.ts.map

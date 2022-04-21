@@ -1,119 +1,240 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes examples of Benefit Category codes.
  */
 export declare const ExBenefitcategoryValueSet: {
     /**
-     * Medical Care.
+     * 1: Medical Care.
      */
-    ex_benefitcategory_MedicalCare: Coding;
+    readonly MedicalCare: Coding;
     /**
-     * Renal Supplies excluding Dialysis.
+     * 14: Renal Supplies excluding Dialysis.
      */
-    ex_benefitcategory_RenalSupplies: Coding;
+    readonly RenalSupplies: Coding;
     /**
-     * Surgical.
+     * 2: Surgical.
      */
-    ex_benefitcategory_Surgical: Coding;
+    readonly Surgical: Coding;
     /**
-     * Diagnostic Dental.
+     * 23: Diagnostic Dental.
      */
-    ex_benefitcategory_DiagnosticDental: Coding;
+    readonly DiagnosticDental: Coding;
     /**
-     * Periodontics.
+     * 24: Periodontics.
      */
-    ex_benefitcategory_Periodontics: Coding;
+    readonly Periodontics: Coding;
     /**
-     * Restorative.
+     * 25: Restorative.
      */
-    ex_benefitcategory_Restorative: Coding;
+    readonly Restorative: Coding;
     /**
-     * Endodontics.
+     * 26: Endodontics.
      */
-    ex_benefitcategory_Endodontics: Coding;
+    readonly Endodontics: Coding;
     /**
-     * Maxillofacial Prosthetics.
+     * 27: Maxillofacial Prosthetics.
      */
-    ex_benefitcategory_MaxillofacialProsthetics: Coding;
+    readonly MaxillofacialProsthetics: Coding;
     /**
-     * Adjunctive Dental Services.
+     * 28: Adjunctive Dental Services.
      */
-    ex_benefitcategory_AdjunctiveDentalServices: Coding;
+    readonly AdjunctiveDentalServices: Coding;
     /**
-     * Consultation.
+     * 3: Consultation.
      */
-    ex_benefitcategory_Consultation: Coding;
+    readonly Consultation: Coding;
     /**
-     * Health Benefit Plan Coverage.
+     * 30: Health Benefit Plan Coverage.
      */
-    ex_benefitcategory_HealthBenefitPlanCoverage: Coding;
+    readonly HealthBenefitPlanCoverage: Coding;
     /**
-     * Dental Care.
+     * 35: Dental Care.
      */
-    ex_benefitcategory_DentalCare: Coding;
+    readonly DentalCare: Coding;
     /**
-     * Dental Crowns.
+     * 36: Dental Crowns.
      */
-    ex_benefitcategory_DentalCrowns: Coding;
+    readonly DentalCrowns: Coding;
     /**
-     * Dental Accident.
+     * 37: Dental Accident.
      */
-    ex_benefitcategory_DentalAccident: Coding;
+    readonly DentalAccident: Coding;
     /**
-     * Diagnostic XRay.
+     * 4: Diagnostic XRay.
      */
-    ex_benefitcategory_DiagnosticXRay: Coding;
+    readonly DiagnosticXRay: Coding;
     /**
-     * Hospital Room and Board.
+     * 49: Hospital Room and Board.
      */
-    ex_benefitcategory_HospitalRoomAndBoard: Coding;
+    readonly HospitalRoomAndBoard: Coding;
     /**
-     * Diagnostic Lab.
+     * 5: Diagnostic Lab.
      */
-    ex_benefitcategory_DiagnosticLab: Coding;
+    readonly DiagnosticLab: Coding;
     /**
-     * Major Medical.
+     * 55: Major Medical.
      */
-    ex_benefitcategory_MajorMedical: Coding;
+    readonly MajorMedical: Coding;
     /**
-     * Medically Related Transportation.
+     * 56: Medically Related Transportation.
      */
-    ex_benefitcategory_MedicallyRelatedTransportation: Coding;
+    readonly MedicallyRelatedTransportation: Coding;
     /**
-     * In-vitro Fertilization.
+     * 61: In-vitro Fertilization.
      */
-    ex_benefitcategory_InVitroFertilization: Coding;
+    readonly InVitroFertilization: Coding;
     /**
-     * MRI Scan.
+     * 62: MRI Scan.
      */
-    ex_benefitcategory_MRIScan: Coding;
+    readonly MRIScan: Coding;
     /**
-     * Donor Procedures such as organ harvest.
+     * 63: Donor Procedures such as organ harvest.
      */
-    ex_benefitcategory_DonorProcedures: Coding;
+    readonly DonorProcedures: Coding;
     /**
-     * Maternity.
+     * 69: Maternity.
      */
-    ex_benefitcategory_Maternity: Coding;
+    readonly Maternity: Coding;
     /**
-     * Renal dialysis.
+     * 76: Renal dialysis.
      */
-    ex_benefitcategory_RenalDialysis: Coding;
+    readonly RenalDialysis: Coding;
     /**
-     * Medical Coverage.
+     * F1: Medical Coverage.
      */
-    ex_benefitcategory_MedicalCoverage: Coding;
+    readonly MedicalCoverage: Coding;
     /**
-     * Dental Coverage.
+     * F3: Dental Coverage.
      */
-    ex_benefitcategory_DentalCoverage: Coding;
+    readonly DentalCoverage: Coding;
     /**
-     * Hearing Coverage.
+     * F4: Hearing Coverage.
      */
-    ex_benefitcategory_HearingCoverage: Coding;
+    readonly HearingCoverage: Coding;
     /**
-     * Vision Coverage.
+     * F6: Vision Coverage.
      */
-    ex_benefitcategory_VisionCoverage: Coding;
+    readonly VisionCoverage: Coding;
 };
+/**
+ * This value set includes examples of Benefit Category codes.
+ */
+export declare type ExBenefitcategoryValueSetType = typeof ExBenefitcategoryValueSet;
+/**
+ * This value set includes examples of Benefit Category codes.
+ */
+export declare enum ExBenefitcategoryValueSetEnum {
+    /**
+     * 1: Medical Care.
+     */
+    MedicalCare = "1",
+    /**
+     * 14: Renal Supplies excluding Dialysis.
+     */
+    RenalSupplies = "14",
+    /**
+     * 2: Surgical.
+     */
+    Surgical = "2",
+    /**
+     * 23: Diagnostic Dental.
+     */
+    DiagnosticDental = "23",
+    /**
+     * 24: Periodontics.
+     */
+    Periodontics = "24",
+    /**
+     * 25: Restorative.
+     */
+    Restorative = "25",
+    /**
+     * 26: Endodontics.
+     */
+    Endodontics = "26",
+    /**
+     * 27: Maxillofacial Prosthetics.
+     */
+    MaxillofacialProsthetics = "27",
+    /**
+     * 28: Adjunctive Dental Services.
+     */
+    AdjunctiveDentalServices = "28",
+    /**
+     * 3: Consultation.
+     */
+    Consultation = "3",
+    /**
+     * 30: Health Benefit Plan Coverage.
+     */
+    HealthBenefitPlanCoverage = "30",
+    /**
+     * 35: Dental Care.
+     */
+    DentalCare = "35",
+    /**
+     * 36: Dental Crowns.
+     */
+    DentalCrowns = "36",
+    /**
+     * 37: Dental Accident.
+     */
+    DentalAccident = "37",
+    /**
+     * 4: Diagnostic XRay.
+     */
+    DiagnosticXRay = "4",
+    /**
+     * 49: Hospital Room and Board.
+     */
+    HospitalRoomAndBoard = "49",
+    /**
+     * 5: Diagnostic Lab.
+     */
+    DiagnosticLab = "5",
+    /**
+     * 55: Major Medical.
+     */
+    MajorMedical = "55",
+    /**
+     * 56: Medically Related Transportation.
+     */
+    MedicallyRelatedTransportation = "56",
+    /**
+     * 61: In-vitro Fertilization.
+     */
+    InVitroFertilization = "61",
+    /**
+     * 62: MRI Scan.
+     */
+    MRIScan = "62",
+    /**
+     * 63: Donor Procedures such as organ harvest.
+     */
+    DonorProcedures = "63",
+    /**
+     * 69: Maternity.
+     */
+    Maternity = "69",
+    /**
+     * 76: Renal dialysis.
+     */
+    RenalDialysis = "76",
+    /**
+     * F1: Medical Coverage.
+     */
+    MedicalCoverage = "F1",
+    /**
+     * F3: Dental Coverage.
+     */
+    DentalCoverage = "F3",
+    /**
+     * F4: Hearing Coverage.
+     */
+    HearingCoverage = "F4",
+    /**
+     * F6: Vision Coverage.
+     */
+    VisionCoverage = "F6"
+}
 //# sourceMappingURL=ExBenefitcategoryValueSet.d.ts.map

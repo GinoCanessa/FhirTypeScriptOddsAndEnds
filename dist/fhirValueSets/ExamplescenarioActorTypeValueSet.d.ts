@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of actor - system or human.
  */
 export declare const ExamplescenarioActorTypeValueSet: {
     /**
-     * A system.
+     * entity: A system.
      */
-    examplescenario_actor_type_System: Coding;
+    readonly System: Coding;
     /**
-     * A person.
+     * person: A person.
      */
-    examplescenario_actor_type_Person: Coding;
+    readonly Person: Coding;
 };
+/**
+ * The type of actor - system or human.
+ */
+export declare type ExamplescenarioActorTypeValueSetType = typeof ExamplescenarioActorTypeValueSet;
+/**
+ * The type of actor - system or human.
+ */
+export declare enum ExamplescenarioActorTypeValueSetEnum {
+    /**
+     * entity: A system.
+     */
+    System = "entity",
+    /**
+     * person: A person.
+     */
+    Person = "person"
+}
 //# sourceMappingURL=ExamplescenarioActorTypeValueSet.d.ts.map

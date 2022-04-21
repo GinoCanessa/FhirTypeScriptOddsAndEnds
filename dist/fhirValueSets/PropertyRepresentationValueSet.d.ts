@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How a property is represented when serialized.
  */
 export declare const PropertyRepresentationValueSet: {
     /**
-     * Use CDA narrative instead of XHTML.
+     * cdaText: Use CDA narrative instead of XHTML.
      */
-    property_representation_CDATextFormat: Coding;
+    readonly CDATextFormat: Coding;
     /**
-     * The type of this element is indicated using xsi:type.
+     * typeAttr: The type of this element is indicated using xsi:type.
      */
-    property_representation_TypeAttribute: Coding;
+    readonly TypeAttribute: Coding;
     /**
-     * The property is represented using XHTML.
+     * xhtml: The property is represented using XHTML.
      */
-    property_representation_XHTML: Coding;
+    readonly XHTML: Coding;
     /**
-     * In XML, this property is represented as an attribute not an element.
+     * xmlAttr: In XML, this property is represented as an attribute not an element.
      */
-    property_representation_XMLAttribute: Coding;
+    readonly XMLAttribute: Coding;
     /**
-     * This element is represented using the XML text attribute (primitives only).
+     * xmlText: This element is represented using the XML text attribute (primitives only).
      */
-    property_representation_XMLText: Coding;
+    readonly XMLText: Coding;
 };
+/**
+ * How a property is represented when serialized.
+ */
+export declare type PropertyRepresentationValueSetType = typeof PropertyRepresentationValueSet;
+/**
+ * How a property is represented when serialized.
+ */
+export declare enum PropertyRepresentationValueSetEnum {
+    /**
+     * cdaText: Use CDA narrative instead of XHTML.
+     */
+    CDATextFormat = "cdaText",
+    /**
+     * typeAttr: The type of this element is indicated using xsi:type.
+     */
+    TypeAttribute = "typeAttr",
+    /**
+     * xhtml: The property is represented using XHTML.
+     */
+    XHTML = "xhtml",
+    /**
+     * xmlAttr: In XML, this property is represented as an attribute not an element.
+     */
+    XMLAttribute = "xmlAttr",
+    /**
+     * xmlText: This element is represented using the XML text attribute (primitives only).
+     */
+    XMLText = "xmlText"
+}
 //# sourceMappingURL=PropertyRepresentationValueSet.d.ts.map

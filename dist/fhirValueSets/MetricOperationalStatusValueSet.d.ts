@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Describes the operational status of the DeviceMetric.
  */
 export declare const MetricOperationalStatusValueSet: {
     /**
-     * The DeviceMetric was entered in error.
+     * entered-in-error: The DeviceMetric was entered in error.
      */
-    metric_operational_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The DeviceMetric is not operating.
+     * off: The DeviceMetric is not operating.
      */
-    metric_operational_status_Off: Coding;
+    readonly Off: Coding;
     /**
-     * The DeviceMetric is operating and will generate DeviceObservations.
+     * on: The DeviceMetric is operating and will generate DeviceObservations.
      */
-    metric_operational_status_On: Coding;
+    readonly On: Coding;
     /**
-     * The DeviceMetric is operating, but will not generate any DeviceObservations.
+     * standby: The DeviceMetric is operating, but will not generate any DeviceObservations.
      */
-    metric_operational_status_Standby: Coding;
+    readonly Standby: Coding;
 };
+/**
+ * Describes the operational status of the DeviceMetric.
+ */
+export declare type MetricOperationalStatusValueSetType = typeof MetricOperationalStatusValueSet;
+/**
+ * Describes the operational status of the DeviceMetric.
+ */
+export declare enum MetricOperationalStatusValueSetEnum {
+    /**
+     * entered-in-error: The DeviceMetric was entered in error.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * off: The DeviceMetric is not operating.
+     */
+    Off = "off",
+    /**
+     * on: The DeviceMetric is operating and will generate DeviceObservations.
+     */
+    On = "on",
+    /**
+     * standby: The DeviceMetric is operating, but will not generate any DeviceObservations.
+     */
+    Standby = "standby"
+}
 //# sourceMappingURL=MetricOperationalStatusValueSet.d.ts.map

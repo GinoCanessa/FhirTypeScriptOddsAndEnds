@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The results of executing an action.
  */
 export declare const ReportActionResultCodesValueSet: {
     /**
-     * The action encountered a fatal error and the engine was unable to process.
+     * error: The action encountered a fatal error and the engine was unable to process.
      */
-    report_action_result_codes_Error: Coding;
+    readonly Error: Coding;
     /**
-     * The action failed.
+     * fail: The action failed.
      */
-    report_action_result_codes_Fail: Coding;
+    readonly Fail: Coding;
     /**
-     * The action was successful.
+     * pass: The action was successful.
      */
-    report_action_result_codes_Pass: Coding;
+    readonly Pass: Coding;
     /**
-     * The action was skipped.
+     * skip: The action was skipped.
      */
-    report_action_result_codes_Skip: Coding;
+    readonly Skip: Coding;
     /**
-     * The action passed but with warnings.
+     * warning: The action passed but with warnings.
      */
-    report_action_result_codes_Warning: Coding;
+    readonly Warning: Coding;
 };
+/**
+ * The results of executing an action.
+ */
+export declare type ReportActionResultCodesValueSetType = typeof ReportActionResultCodesValueSet;
+/**
+ * The results of executing an action.
+ */
+export declare enum ReportActionResultCodesValueSetEnum {
+    /**
+     * error: The action encountered a fatal error and the engine was unable to process.
+     */
+    Error = "error",
+    /**
+     * fail: The action failed.
+     */
+    Fail = "fail",
+    /**
+     * pass: The action was successful.
+     */
+    Pass = "pass",
+    /**
+     * skip: The action was skipped.
+     */
+    Skip = "skip",
+    /**
+     * warning: The action passed but with warnings.
+     */
+    Warning = "warning"
+}
 //# sourceMappingURL=ReportActionResultCodesValueSet.d.ts.map

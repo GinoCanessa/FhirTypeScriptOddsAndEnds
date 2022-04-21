@@ -1,167 +1,273 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { MapModelModeValueSetType, MapModelModeValueSetEnum } from '../fhirValueSets/MapModelModeValueSet.js';
+import { MapInputModeValueSetType, MapInputModeValueSetEnum } from '../fhirValueSets/MapInputModeValueSet.js';
+import { MapSourceListModeValueSetType, MapSourceListModeValueSetEnum } from '../fhirValueSets/MapSourceListModeValueSet.js';
+import { MapContextTypeValueSetType, MapContextTypeValueSetEnum } from '../fhirValueSets/MapContextTypeValueSet.js';
+import { MapTargetListModeValueSetType, MapTargetListModeValueSetEnum } from '../fhirValueSets/MapTargetListModeValueSet.js';
+import { MapTransformValueSetType, MapTransformValueSetEnum } from '../fhirValueSets/MapTransformValueSet.js';
+import { MapGroupTypeModeValueSetType, MapGroupTypeModeValueSetEnum } from '../fhirValueSets/MapGroupTypeModeValueSet.js';
+import { PublicationStatusValueSetType, PublicationStatusValueSetEnum } from '../fhirValueSets/PublicationStatusValueSet.js';
 /**
  * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
  */
 export declare type IStructureMapStructure = fhir.IBackboneElement & {
     /**
+     * The canonical reference to the structure.
+     */
+    url: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.structure.url
+     */
+    _url?: fhir.IFhirElement | undefined;
+    /**
+     * How the referenced structure is used in this mapping.
+     */
+    mode: MapModelModeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: StructureMap.structure.mode
+     */
+    _mode?: fhir.IFhirElement | undefined;
+    /**
      * This is needed if both types have the same name (e.g. version conversion).
      */
     alias?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.structure.alias
+     */
     _alias?: fhir.IFhirElement | undefined;
     /**
      * Documentation that describes how the structure is used in the mapping.
      */
     documentation?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.structure.documentation
+     */
     _documentation?: fhir.IFhirElement | undefined;
-    /**
-     * How the referenced structure is used in this mapping.
-     */
-    mode: StructureMapStructureModeEnum | null;
-    _mode?: fhir.IFhirElement | undefined;
-    /**
-     * The canonical reference to the structure.
-     */
-    url: string | null;
-    _url?: fhir.IFhirElement | undefined;
 };
 /**
  * If no inputs are named, then the entry mappings are type based.
  */
 export declare type IStructureMapGroupInput = fhir.IBackboneElement & {
     /**
-     * Documentation for this instance of data.
-     */
-    documentation?: string | undefined;
-    _documentation?: fhir.IFhirElement | undefined;
-    /**
-     * Mode for this instance of data.
-     */
-    mode: StructureMapGroupInputModeEnum | null;
-    _mode?: fhir.IFhirElement | undefined;
-    /**
      * Name for this instance of data.
      */
     name: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.input.name
+     */
     _name?: fhir.IFhirElement | undefined;
     /**
      * Type for this instance of data.
      */
     type?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.input.type
+     */
     _type?: fhir.IFhirElement | undefined;
+    /**
+     * Mode for this instance of data.
+     */
+    mode: MapInputModeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.input.mode
+     */
+    _mode?: fhir.IFhirElement | undefined;
+    /**
+     * Documentation for this instance of data.
+     */
+    documentation?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.input.documentation
+     */
+    _documentation?: fhir.IFhirElement | undefined;
 };
 /**
  * Source inputs to the mapping.
  */
 export declare type IStructureMapGroupRuleSource = fhir.IBackboneElement & {
     /**
-     * FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.
-     */
-    check?: string | undefined;
-    _check?: fhir.IFhirElement | undefined;
-    /**
-     * FHIRPath expression  - must be true or the rule does not apply.
-     */
-    condition?: string | undefined;
-    _condition?: fhir.IFhirElement | undefined;
-    /**
      * Type or variable this rule applies to.
      */
     context: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.context
+     */
     _context?: fhir.IFhirElement | undefined;
+    /**
+     * Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.
+     */
+    min?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.min
+     */
+    _min?: fhir.IFhirElement | undefined;
+    /**
+     * Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).
+     */
+    max?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.max
+     */
+    _max?: fhir.IFhirElement | undefined;
+    /**
+     * Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.
+     */
+    type?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.type
+     */
+    _type?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueBase64Binary?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueBoolean?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueCanonical?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueCode?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueDate?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueDateTime?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueDecimal?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueId?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueInstant?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueInteger?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueMarkdown?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueOid?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValuePositiveInt?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueString?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueTime?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueUri?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueUrl?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueUuid?: fhir.IFhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
@@ -291,37 +397,50 @@ export declare type IStructureMapGroupRuleSource = fhir.IBackboneElement & {
      * Optional field for this source.
      */
     element?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.element
+     */
     _element?: fhir.IFhirElement | undefined;
     /**
      * How to handle the list mode for this element.
      */
-    listMode?: StructureMapGroupRuleSourceListModeEnum | undefined;
+    listMode?: MapSourceListModeValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.listMode
+     */
     _listMode?: fhir.IFhirElement | undefined;
-    /**
-     * This is typically used for recording that something Is not transformed to the target for some reason.
-     */
-    logMessage?: string | undefined;
-    _logMessage?: fhir.IFhirElement | undefined;
-    /**
-     * Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).
-     */
-    max?: string | undefined;
-    _max?: fhir.IFhirElement | undefined;
-    /**
-     * Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.
-     */
-    min?: number | undefined;
-    _min?: fhir.IFhirElement | undefined;
-    /**
-     * Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.
-     */
-    type?: string | undefined;
-    _type?: fhir.IFhirElement | undefined;
     /**
      * Named context for field, if a field is specified.
      */
     variable?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.variable
+     */
     _variable?: fhir.IFhirElement | undefined;
+    /**
+     * FHIRPath expression  - must be true or the rule does not apply.
+     */
+    condition?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.condition
+     */
+    _condition?: fhir.IFhirElement | undefined;
+    /**
+     * FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.
+     */
+    check?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.check
+     */
+    _check?: fhir.IFhirElement | undefined;
+    /**
+     * This is typically used for recording that something Is not transformed to the target for some reason.
+     */
+    logMessage?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.logMessage
+     */
+    _logMessage?: fhir.IFhirElement | undefined;
 };
 /**
  * Parameters to the transform.
@@ -331,26 +450,41 @@ export declare type IStructureMapGroupRuleTargetParameter = fhir.IBackboneElemen
      * Parameter value - variable or literal.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueId?: fhir.IFhirElement | undefined;
     /**
      * Parameter value - variable or literal.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueString?: fhir.IFhirElement | undefined;
     /**
      * Parameter value - variable or literal.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueBoolean?: fhir.IFhirElement | undefined;
     /**
      * Parameter value - variable or literal.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueInteger?: fhir.IFhirElement | undefined;
     /**
      * Parameter value - variable or literal.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueDecimal?: fhir.IFhirElement | undefined;
 };
 /**
@@ -361,41 +495,62 @@ export declare type IStructureMapGroupRuleTarget = fhir.IBackboneElement & {
      * Type or variable this rule applies to.
      */
     context?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.context
+     */
     _context?: fhir.IFhirElement | undefined;
     /**
      * How to interpret the context.
      */
-    contextType?: StructureMapGroupRuleTargetContextTypeEnum | undefined;
+    contextType?: MapContextTypeValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.contextType
+     */
     _contextType?: fhir.IFhirElement | undefined;
     /**
      * Field to create in the context.
      */
     element?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.element
+     */
     _element?: fhir.IFhirElement | undefined;
+    /**
+     * Named context for field, if desired, and a field is specified.
+     */
+    variable?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.variable
+     */
+    _variable?: fhir.IFhirElement | undefined;
     /**
      * If field is a list, how to manage the list.
      */
-    listMode?: StructureMapGroupRuleTargetListModeEnum[] | undefined;
+    listMode?: MapTargetListModeValueSetEnum[] | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.listMode
+     */
     _listMode?: fhir.IFhirElement[] | undefined;
     /**
      * Internal rule reference for shared list items.
      */
     listRuleId?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.listRuleId
+     */
     _listRuleId?: fhir.IFhirElement | undefined;
+    /**
+     * How the data is copied / created.
+     */
+    transform?: MapTransformValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.transform
+     */
+    _transform?: fhir.IFhirElement | undefined;
     /**
      * Parameters to the transform.
      */
     parameter?: fhir.IStructureMapGroupRuleTargetParameter[] | undefined;
-    /**
-     * How the data is copied / created.
-     */
-    transform?: StructureMapGroupRuleTargetTransformEnum | undefined;
-    _transform?: fhir.IFhirElement | undefined;
-    /**
-     * Named context for field, if desired, and a field is specified.
-     */
-    variable?: string | undefined;
-    _variable?: fhir.IFhirElement | undefined;
 };
 /**
  * Which other rules to apply in the context of this rule.
@@ -405,11 +560,17 @@ export declare type IStructureMapGroupRuleDependent = fhir.IBackboneElement & {
      * Name of a rule or group to apply.
      */
     name: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.dependent.name
+     */
     _name?: fhir.IFhirElement | undefined;
     /**
      * Variable to pass to the rule or group.
      */
     variable: string[] | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.dependent.variable
+     */
     _variable?: fhir.IFhirElement[] | undefined;
 };
 /**
@@ -417,23 +578,13 @@ export declare type IStructureMapGroupRuleDependent = fhir.IBackboneElement & {
  */
 export declare type IStructureMapGroupRule = fhir.IBackboneElement & {
     /**
-     * Which other rules to apply in the context of this rule.
-     */
-    dependent?: fhir.IStructureMapGroupRuleDependent[] | undefined;
-    /**
-     * Documentation for this instance of data.
-     */
-    documentation?: string | undefined;
-    _documentation?: fhir.IFhirElement | undefined;
-    /**
      * Name of the rule for internal references.
      */
     name: string | null;
-    _name?: fhir.IFhirElement | undefined;
     /**
-     * Rules contained in this rule.
+     * Extended properties for primitive element: StructureMap.group.rule.name
      */
-    rule?: fhir.IStructureMapGroupRule[] | undefined;
+    _name?: fhir.IFhirElement | undefined;
     /**
      * Source inputs to the mapping.
      */
@@ -442,39 +593,67 @@ export declare type IStructureMapGroupRule = fhir.IBackboneElement & {
      * Content to create because of this mapping rule.
      */
     target?: fhir.IStructureMapGroupRuleTarget[] | undefined;
+    /**
+     * Rules contained in this rule.
+     */
+    rule?: fhir.IStructureMapGroupRule[] | undefined;
+    /**
+     * Which other rules to apply in the context of this rule.
+     */
+    dependent?: fhir.IStructureMapGroupRuleDependent[] | undefined;
+    /**
+     * Documentation for this instance of data.
+     */
+    documentation?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.documentation
+     */
+    _documentation?: fhir.IFhirElement | undefined;
 };
 /**
  * Organizes the mapping into manageable chunks for human review/ease of maintenance.
  */
 export declare type IStructureMapGroup = fhir.IBackboneElement & {
     /**
-     * Additional supporting documentation that explains the purpose of the group and the types of mappings within it.
+     * A unique name for the group for the convenience of human readers.
      */
-    documentation?: string | undefined;
-    _documentation?: fhir.IFhirElement | undefined;
+    name: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.name
+     */
+    _name?: fhir.IFhirElement | undefined;
     /**
      * Another group that this group adds rules to.
      */
     extends?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.extends
+     */
     _extends?: fhir.IFhirElement | undefined;
+    /**
+     * Not applicable if the underlying model is untyped. There can only be one default mapping for any particular type combination.
+     */
+    typeMode: MapGroupTypeModeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.typeMode
+     */
+    _typeMode?: fhir.IFhirElement | undefined;
+    /**
+     * Additional supporting documentation that explains the purpose of the group and the types of mappings within it.
+     */
+    documentation?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.documentation
+     */
+    _documentation?: fhir.IFhirElement | undefined;
     /**
      * If no inputs are named, then the entry mappings are type based.
      */
     input: fhir.IStructureMapGroupInput[] | null;
     /**
-     * A unique name for the group for the convenience of human readers.
-     */
-    name: string | null;
-    _name?: fhir.IFhirElement | undefined;
-    /**
      * Transform Rule from source to target.
      */
     rule: fhir.IStructureMapGroupRule[] | null;
-    /**
-     * Not applicable if the underlying model is untyped. There can only be one default mapping for any particular type combination.
-     */
-    typeMode: StructureMapGroupTypeModeEnum | null;
-    _typeMode?: fhir.IFhirElement | undefined;
 };
 /**
  * A Map of relationships between 2 structures that can be used to transform data.
@@ -485,279 +664,413 @@ export declare type IStructureMap = fhir.IDomainResource & {
      */
     resourceType: "StructureMap";
     /**
-     * May be a web site, an email address, a telephone number, etc.
-     */
-    contact?: fhir.IContactDetail[] | undefined;
-    /**
-     * A copyright statement relating to the structure map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure map.
-     */
-    copyright?: string | undefined;
-    _copyright?: fhir.IFhirElement | undefined;
-    /**
-     * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the structure map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-     */
-    date?: string | undefined;
-    _date?: fhir.IFhirElement | undefined;
-    /**
-     * This description can be used to capture details such as why the structure map was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the structure map as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the structure map is presumed to be the predominant language in the place the structure map was created).
-     */
-    description?: string | undefined;
-    _description?: fhir.IFhirElement | undefined;
-    /**
-     * Allows filtering of structure maps that are appropriate for use versus not.
-     */
-    experimental?: boolean | undefined;
-    _experimental?: fhir.IFhirElement | undefined;
-    /**
-     * Organizes the mapping into manageable chunks for human review/ease of maintenance.
-     */
-    group: fhir.IStructureMapGroup[] | null;
-    /**
-     * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this structure map outside of FHIR, where it is not possible to use the logical URI.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * Other maps used by this map (canonical URLs).
-     */
-    import?: string[] | undefined;
-    _import?: fhir.IFhirElement[] | undefined;
-    /**
-     * It may be possible for the structure map to be used in jurisdictions other than those for which it was originally designed or intended.
-     */
-    jurisdiction?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-     */
-    name: string | null;
-    _name?: fhir.IFhirElement | undefined;
-    /**
-     * Usually an organization but may be an individual. The publisher (or steward) of the structure map is the organization or individual primarily responsible for the maintenance and upkeep of the structure map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the structure map. This item SHOULD be populated unless the information is available from context.
-     */
-    publisher?: string | undefined;
-    _publisher?: fhir.IFhirElement | undefined;
-    /**
-     * This element does not describe the usage of the structure map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this structure map.
-     */
-    purpose?: string | undefined;
-    _purpose?: fhir.IFhirElement | undefined;
-    /**
-     * Allows filtering of structure maps that are appropriate for use versus not.
-     */
-    status: StructureMapStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
-     */
-    structure?: fhir.IStructureMapStructure[] | undefined;
-    /**
-     * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-     */
-    title?: string | undefined;
-    _title?: fhir.IFhirElement | undefined;
-    /**
      * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
      * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions).
      * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
      */
     url: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.url
+     */
     _url?: fhir.IFhirElement | undefined;
+    /**
+     * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this structure map outside of FHIR, where it is not possible to use the logical URI.
+     */
+    identifier?: fhir.IIdentifier[] | undefined;
+    /**
+     * There may be different structure map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the structure map with the format [url]|[version].
+     */
+    version?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.version
+     */
+    _version?: fhir.IFhirElement | undefined;
+    /**
+     * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+     */
+    name: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.name
+     */
+    _name?: fhir.IFhirElement | undefined;
+    /**
+     * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+     */
+    title?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.title
+     */
+    _title?: fhir.IFhirElement | undefined;
+    /**
+     * Allows filtering of structure maps that are appropriate for use versus not.
+     */
+    status: PublicationStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: StructureMap.status
+     */
+    _status?: fhir.IFhirElement | undefined;
+    /**
+     * Allows filtering of structure maps that are appropriate for use versus not.
+     */
+    experimental?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.experimental
+     */
+    _experimental?: fhir.IFhirElement | undefined;
+    /**
+     * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the structure map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+     */
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.date
+     */
+    _date?: fhir.IFhirElement | undefined;
+    /**
+     * Usually an organization but may be an individual. The publisher (or steward) of the structure map is the organization or individual primarily responsible for the maintenance and upkeep of the structure map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the structure map. This item SHOULD be populated unless the information is available from context.
+     */
+    publisher?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.publisher
+     */
+    _publisher?: fhir.IFhirElement | undefined;
+    /**
+     * May be a web site, an email address, a telephone number, etc.
+     */
+    contact?: fhir.IContactDetail[] | undefined;
+    /**
+     * This description can be used to capture details such as why the structure map was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the structure map as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the structure map is presumed to be the predominant language in the place the structure map was created).
+     */
+    description?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.description
+     */
+    _description?: fhir.IFhirElement | undefined;
     /**
      * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
      */
     useContext?: fhir.IUsageContext[] | undefined;
     /**
-     * There may be different structure map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the structure map with the format [url]|[version].
+     * It may be possible for the structure map to be used in jurisdictions other than those for which it was originally designed or intended.
      */
-    version?: string | undefined;
-    _version?: fhir.IFhirElement | undefined;
+    jurisdiction?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * This element does not describe the usage of the structure map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this structure map.
+     */
+    purpose?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.purpose
+     */
+    _purpose?: fhir.IFhirElement | undefined;
+    /**
+     * A copyright statement relating to the structure map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure map.
+     */
+    copyright?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.copyright
+     */
+    _copyright?: fhir.IFhirElement | undefined;
+    /**
+     * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
+     */
+    structure?: fhir.IStructureMapStructure[] | undefined;
+    /**
+     * Other maps used by this map (canonical URLs).
+     */
+    import?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.import
+     */
+    _import?: fhir.IFhirElement[] | undefined;
+    /**
+     * Organizes the mapping into manageable chunks for human review/ease of maintenance.
+     */
+    group: fhir.IStructureMapGroup[] | null;
 };
 /**
  * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
  */
-export declare class StructureMapStructure extends fhir.BackboneElement implements fhir.IStructureMapStructure {
+export declare class StructureMapStructure extends fhir.BackboneElement implements IStructureMapStructure {
+    /**
+     * The canonical reference to the structure.
+     */
+    url: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.structure.url
+     */
+    _url?: fhir.FhirElement | undefined;
+    /**
+     * How the referenced structure is used in this mapping.
+     */
+    mode: MapModelModeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: StructureMap.structure.mode
+     */
+    _mode?: fhir.FhirElement | undefined;
     /**
      * This is needed if both types have the same name (e.g. version conversion).
      */
     alias?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.structure.alias
+     */
     _alias?: fhir.FhirElement | undefined;
     /**
      * Documentation that describes how the structure is used in the mapping.
      */
     documentation?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.structure.documentation
+     */
     _documentation?: fhir.FhirElement | undefined;
-    /**
-     * How the referenced structure is used in this mapping.
-     */
-    mode: StructureMapStructureModeEnum | null;
-    _mode?: fhir.FhirElement | undefined;
-    /**
-     * The canonical reference to the structure.
-     */
-    url: string | null;
-    _url?: fhir.FhirElement | undefined;
     /**
      * Default constructor for StructureMapStructure - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IStructureMapStructure>);
+    constructor(source?: Partial<IStructureMapStructure>);
     /**
-     * Check if the current StructureMapStructure contains all required elements.
+     * Required-bound Value Set for mode
      */
-    checkRequiredElements(): string[];
+    modeRequiredValueSet(): MapModelModeValueSetType;
     /**
-     * Factory function to create a StructureMapStructure from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IStructureMapStructure): StructureMapStructure;
+    doModelValidation(): [string, string][];
 }
 /**
  * If no inputs are named, then the entry mappings are type based.
  */
-export declare class StructureMapGroupInput extends fhir.BackboneElement implements fhir.IStructureMapGroupInput {
-    /**
-     * Documentation for this instance of data.
-     */
-    documentation?: string | undefined;
-    _documentation?: fhir.FhirElement | undefined;
-    /**
-     * Mode for this instance of data.
-     */
-    mode: StructureMapGroupInputModeEnum | null;
-    _mode?: fhir.FhirElement | undefined;
+export declare class StructureMapGroupInput extends fhir.BackboneElement implements IStructureMapGroupInput {
     /**
      * Name for this instance of data.
      */
     name: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.input.name
+     */
     _name?: fhir.FhirElement | undefined;
     /**
      * Type for this instance of data.
      */
     type?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.input.type
+     */
     _type?: fhir.FhirElement | undefined;
+    /**
+     * Mode for this instance of data.
+     */
+    mode: MapInputModeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.input.mode
+     */
+    _mode?: fhir.FhirElement | undefined;
+    /**
+     * Documentation for this instance of data.
+     */
+    documentation?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.input.documentation
+     */
+    _documentation?: fhir.FhirElement | undefined;
     /**
      * Default constructor for StructureMapGroupInput - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IStructureMapGroupInput>);
+    constructor(source?: Partial<IStructureMapGroupInput>);
     /**
-     * Check if the current StructureMapGroupInput contains all required elements.
+     * Required-bound Value Set for mode
      */
-    checkRequiredElements(): string[];
+    modeRequiredValueSet(): MapInputModeValueSetType;
     /**
-     * Factory function to create a StructureMapGroupInput from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IStructureMapGroupInput): StructureMapGroupInput;
+    doModelValidation(): [string, string][];
 }
 /**
  * Source inputs to the mapping.
  */
-export declare class StructureMapGroupRuleSource extends fhir.BackboneElement implements fhir.IStructureMapGroupRuleSource {
-    /**
-     * FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.
-     */
-    check?: string | undefined;
-    _check?: fhir.FhirElement | undefined;
-    /**
-     * FHIRPath expression  - must be true or the rule does not apply.
-     */
-    condition?: string | undefined;
-    _condition?: fhir.FhirElement | undefined;
+export declare class StructureMapGroupRuleSource extends fhir.BackboneElement implements IStructureMapGroupRuleSource {
     /**
      * Type or variable this rule applies to.
      */
     context: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.context
+     */
     _context?: fhir.FhirElement | undefined;
+    /**
+     * Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.
+     */
+    min?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.min
+     */
+    _min?: fhir.FhirElement | undefined;
+    /**
+     * Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).
+     */
+    max?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.max
+     */
+    _max?: fhir.FhirElement | undefined;
+    /**
+     * Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.
+     */
+    type?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.type
+     */
+    _type?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueBase64Binary?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueBoolean?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueCanonical?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueCode?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueDate?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueDateTime?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueDecimal?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueId?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueInstant?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueInteger?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueMarkdown?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueOid?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValuePositiveInt?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueString?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueTime?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueUri?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueUrl?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
      */
     defaultValueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.defaultValue[x]
+     */
     _defaultValueUuid?: fhir.FhirElement | undefined;
     /**
      * If there's a default value on an item that can repeat, it will only be used once.
@@ -887,197 +1200,242 @@ export declare class StructureMapGroupRuleSource extends fhir.BackboneElement im
      * Optional field for this source.
      */
     element?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.element
+     */
     _element?: fhir.FhirElement | undefined;
     /**
      * How to handle the list mode for this element.
      */
-    listMode?: StructureMapGroupRuleSourceListModeEnum | undefined;
+    listMode?: MapSourceListModeValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.listMode
+     */
     _listMode?: fhir.FhirElement | undefined;
-    /**
-     * This is typically used for recording that something Is not transformed to the target for some reason.
-     */
-    logMessage?: string | undefined;
-    _logMessage?: fhir.FhirElement | undefined;
-    /**
-     * Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).
-     */
-    max?: string | undefined;
-    _max?: fhir.FhirElement | undefined;
-    /**
-     * Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.
-     */
-    min?: number | undefined;
-    _min?: fhir.FhirElement | undefined;
-    /**
-     * Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.
-     */
-    type?: string | undefined;
-    _type?: fhir.FhirElement | undefined;
     /**
      * Named context for field, if a field is specified.
      */
     variable?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.variable
+     */
     _variable?: fhir.FhirElement | undefined;
+    /**
+     * FHIRPath expression  - must be true or the rule does not apply.
+     */
+    condition?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.condition
+     */
+    _condition?: fhir.FhirElement | undefined;
+    /**
+     * FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.
+     */
+    check?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.check
+     */
+    _check?: fhir.FhirElement | undefined;
+    /**
+     * This is typically used for recording that something Is not transformed to the target for some reason.
+     */
+    logMessage?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.source.logMessage
+     */
+    _logMessage?: fhir.FhirElement | undefined;
     /**
      * Default constructor for StructureMapGroupRuleSource - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IStructureMapGroupRuleSource>);
+    constructor(source?: Partial<IStructureMapGroupRuleSource>);
     /**
-     * Check if the current StructureMapGroupRuleSource contains all required elements.
+     * Required-bound Value Set for listMode
      */
-    checkRequiredElements(): string[];
+    listModeRequiredValueSet(): MapSourceListModeValueSetType;
     /**
-     * Factory function to create a StructureMapGroupRuleSource from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IStructureMapGroupRuleSource): StructureMapGroupRuleSource;
+    doModelValidation(): [string, string][];
 }
 /**
  * Parameters to the transform.
  */
-export declare class StructureMapGroupRuleTargetParameter extends fhir.BackboneElement implements fhir.IStructureMapGroupRuleTargetParameter {
+export declare class StructureMapGroupRuleTargetParameter extends fhir.BackboneElement implements IStructureMapGroupRuleTargetParameter {
     /**
      * Parameter value - variable or literal.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueId?: fhir.FhirElement | undefined;
     /**
      * Parameter value - variable or literal.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueString?: fhir.FhirElement | undefined;
     /**
      * Parameter value - variable or literal.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueBoolean?: fhir.FhirElement | undefined;
     /**
      * Parameter value - variable or literal.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueInteger?: fhir.FhirElement | undefined;
     /**
      * Parameter value - variable or literal.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.parameter.value[x]
+     */
     _valueDecimal?: fhir.FhirElement | undefined;
     /**
      * Default constructor for StructureMapGroupRuleTargetParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IStructureMapGroupRuleTargetParameter>);
+    constructor(source?: Partial<IStructureMapGroupRuleTargetParameter>);
     /**
-     * Check if the current StructureMapGroupRuleTargetParameter contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a StructureMapGroupRuleTargetParameter from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IStructureMapGroupRuleTargetParameter): StructureMapGroupRuleTargetParameter;
+    doModelValidation(): [string, string][];
 }
 /**
  * Content to create because of this mapping rule.
  */
-export declare class StructureMapGroupRuleTarget extends fhir.BackboneElement implements fhir.IStructureMapGroupRuleTarget {
+export declare class StructureMapGroupRuleTarget extends fhir.BackboneElement implements IStructureMapGroupRuleTarget {
     /**
      * Type or variable this rule applies to.
      */
     context?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.context
+     */
     _context?: fhir.FhirElement | undefined;
     /**
      * How to interpret the context.
      */
-    contextType?: StructureMapGroupRuleTargetContextTypeEnum | undefined;
+    contextType?: MapContextTypeValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.contextType
+     */
     _contextType?: fhir.FhirElement | undefined;
     /**
      * Field to create in the context.
      */
     element?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.element
+     */
     _element?: fhir.FhirElement | undefined;
+    /**
+     * Named context for field, if desired, and a field is specified.
+     */
+    variable?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.variable
+     */
+    _variable?: fhir.FhirElement | undefined;
     /**
      * If field is a list, how to manage the list.
      */
-    listMode?: StructureMapGroupRuleTargetListModeEnum[] | undefined;
+    listMode?: MapTargetListModeValueSetEnum[] | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.listMode
+     */
     _listMode?: fhir.FhirElement[] | undefined;
     /**
      * Internal rule reference for shared list items.
      */
     listRuleId?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.listRuleId
+     */
     _listRuleId?: fhir.FhirElement | undefined;
+    /**
+     * How the data is copied / created.
+     */
+    transform?: MapTransformValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.target.transform
+     */
+    _transform?: fhir.FhirElement | undefined;
     /**
      * Parameters to the transform.
      */
     parameter?: fhir.StructureMapGroupRuleTargetParameter[] | undefined;
     /**
-     * How the data is copied / created.
-     */
-    transform?: StructureMapGroupRuleTargetTransformEnum | undefined;
-    _transform?: fhir.FhirElement | undefined;
-    /**
-     * Named context for field, if desired, and a field is specified.
-     */
-    variable?: string | undefined;
-    _variable?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for StructureMapGroupRuleTarget - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IStructureMapGroupRuleTarget>);
+    constructor(source?: Partial<IStructureMapGroupRuleTarget>);
     /**
-     * Check if the current StructureMapGroupRuleTarget contains all required elements.
+     * Required-bound Value Set for contextType
      */
-    checkRequiredElements(): string[];
+    contextTypeRequiredValueSet(): MapContextTypeValueSetType;
     /**
-     * Factory function to create a StructureMapGroupRuleTarget from an object that MUST contain all required elements.
+     * Required-bound Value Set for listMode
      */
-    static fromStrict(source: fhir.IStructureMapGroupRuleTarget): StructureMapGroupRuleTarget;
+    listModeRequiredValueSet(): MapTargetListModeValueSetType;
+    /**
+     * Required-bound Value Set for transform
+     */
+    transformRequiredValueSet(): MapTransformValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * Which other rules to apply in the context of this rule.
  */
-export declare class StructureMapGroupRuleDependent extends fhir.BackboneElement implements fhir.IStructureMapGroupRuleDependent {
+export declare class StructureMapGroupRuleDependent extends fhir.BackboneElement implements IStructureMapGroupRuleDependent {
     /**
      * Name of a rule or group to apply.
      */
     name: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.dependent.name
+     */
     _name?: fhir.FhirElement | undefined;
     /**
      * Variable to pass to the rule or group.
      */
     variable: string[] | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.dependent.variable
+     */
     _variable?: fhir.FhirElement[] | undefined;
     /**
      * Default constructor for StructureMapGroupRuleDependent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IStructureMapGroupRuleDependent>);
+    constructor(source?: Partial<IStructureMapGroupRuleDependent>);
     /**
-     * Check if the current StructureMapGroupRuleDependent contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a StructureMapGroupRuleDependent from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IStructureMapGroupRuleDependent): StructureMapGroupRuleDependent;
+    doModelValidation(): [string, string][];
 }
 /**
  * Transform Rule from source to target.
  */
-export declare class StructureMapGroupRule extends fhir.BackboneElement implements fhir.IStructureMapGroupRule {
-    /**
-     * Which other rules to apply in the context of this rule.
-     */
-    dependent?: fhir.StructureMapGroupRuleDependent[] | undefined;
-    /**
-     * Documentation for this instance of data.
-     */
-    documentation?: string | undefined;
-    _documentation?: fhir.FhirElement | undefined;
+export declare class StructureMapGroupRule extends fhir.BackboneElement implements IStructureMapGroupRule {
     /**
      * Name of the rule for internal references.
      */
     name: string | null;
-    _name?: fhir.FhirElement | undefined;
     /**
-     * Rules contained in this rule.
+     * Extended properties for primitive element: StructureMap.group.rule.name
      */
-    rule?: fhir.StructureMapGroupRule[] | undefined;
+    _name?: fhir.FhirElement | undefined;
     /**
      * Source inputs to the mapping.
      */
@@ -1087,249 +1445,228 @@ export declare class StructureMapGroupRule extends fhir.BackboneElement implemen
      */
     target?: fhir.StructureMapGroupRuleTarget[] | undefined;
     /**
+     * Rules contained in this rule.
+     */
+    rule?: fhir.StructureMapGroupRule[] | undefined;
+    /**
+     * Which other rules to apply in the context of this rule.
+     */
+    dependent?: fhir.StructureMapGroupRuleDependent[] | undefined;
+    /**
+     * Documentation for this instance of data.
+     */
+    documentation?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.rule.documentation
+     */
+    _documentation?: fhir.FhirElement | undefined;
+    /**
      * Default constructor for StructureMapGroupRule - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IStructureMapGroupRule>);
+    constructor(source?: Partial<IStructureMapGroupRule>);
     /**
-     * Check if the current StructureMapGroupRule contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a StructureMapGroupRule from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IStructureMapGroupRule): StructureMapGroupRule;
+    doModelValidation(): [string, string][];
 }
 /**
  * Organizes the mapping into manageable chunks for human review/ease of maintenance.
  */
-export declare class StructureMapGroup extends fhir.BackboneElement implements fhir.IStructureMapGroup {
+export declare class StructureMapGroup extends fhir.BackboneElement implements IStructureMapGroup {
     /**
-     * Additional supporting documentation that explains the purpose of the group and the types of mappings within it.
+     * A unique name for the group for the convenience of human readers.
      */
-    documentation?: string | undefined;
-    _documentation?: fhir.FhirElement | undefined;
+    name: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.name
+     */
+    _name?: fhir.FhirElement | undefined;
     /**
      * Another group that this group adds rules to.
      */
     extends?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.extends
+     */
     _extends?: fhir.FhirElement | undefined;
+    /**
+     * Not applicable if the underlying model is untyped. There can only be one default mapping for any particular type combination.
+     */
+    typeMode: MapGroupTypeModeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: StructureMap.group.typeMode
+     */
+    _typeMode?: fhir.FhirElement | undefined;
+    /**
+     * Additional supporting documentation that explains the purpose of the group and the types of mappings within it.
+     */
+    documentation?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.group.documentation
+     */
+    _documentation?: fhir.FhirElement | undefined;
     /**
      * If no inputs are named, then the entry mappings are type based.
      */
     input: fhir.StructureMapGroupInput[] | null;
     /**
-     * A unique name for the group for the convenience of human readers.
-     */
-    name: string | null;
-    _name?: fhir.FhirElement | undefined;
-    /**
      * Transform Rule from source to target.
      */
     rule: fhir.StructureMapGroupRule[] | null;
     /**
-     * Not applicable if the underlying model is untyped. There can only be one default mapping for any particular type combination.
-     */
-    typeMode: StructureMapGroupTypeModeEnum | null;
-    _typeMode?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for StructureMapGroup - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IStructureMapGroup>);
+    constructor(source?: Partial<IStructureMapGroup>);
     /**
-     * Check if the current StructureMapGroup contains all required elements.
+     * Required-bound Value Set for typeMode
      */
-    checkRequiredElements(): string[];
+    typeModeRequiredValueSet(): MapGroupTypeModeValueSetType;
     /**
-     * Factory function to create a StructureMapGroup from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IStructureMapGroup): StructureMapGroup;
+    doModelValidation(): [string, string][];
 }
 /**
  * A Map of relationships between 2 structures that can be used to transform data.
  */
-export declare class StructureMap extends fhir.DomainResource implements fhir.IStructureMap {
+export declare class StructureMap extends fhir.DomainResource implements IStructureMap {
     /**
      * Resource Type Name
      */
     resourceType: "StructureMap";
-    /**
-     * May be a web site, an email address, a telephone number, etc.
-     */
-    contact?: fhir.ContactDetail[] | undefined;
-    /**
-     * A copyright statement relating to the structure map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure map.
-     */
-    copyright?: string | undefined;
-    _copyright?: fhir.FhirElement | undefined;
-    /**
-     * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the structure map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
-     */
-    date?: string | undefined;
-    _date?: fhir.FhirElement | undefined;
-    /**
-     * This description can be used to capture details such as why the structure map was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the structure map as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the structure map is presumed to be the predominant language in the place the structure map was created).
-     */
-    description?: string | undefined;
-    _description?: fhir.FhirElement | undefined;
-    /**
-     * Allows filtering of structure maps that are appropriate for use versus not.
-     */
-    experimental?: boolean | undefined;
-    _experimental?: fhir.FhirElement | undefined;
-    /**
-     * Organizes the mapping into manageable chunks for human review/ease of maintenance.
-     */
-    group: fhir.StructureMapGroup[] | null;
-    /**
-     * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this structure map outside of FHIR, where it is not possible to use the logical URI.
-     */
-    identifier?: fhir.Identifier[] | undefined;
-    /**
-     * Other maps used by this map (canonical URLs).
-     */
-    import?: string[] | undefined;
-    _import?: fhir.FhirElement[] | undefined;
-    /**
-     * It may be possible for the structure map to be used in jurisdictions other than those for which it was originally designed or intended.
-     */
-    jurisdiction?: fhir.CodeableConcept[] | undefined;
-    /**
-     * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
-     */
-    name: string | null;
-    _name?: fhir.FhirElement | undefined;
-    /**
-     * Usually an organization but may be an individual. The publisher (or steward) of the structure map is the organization or individual primarily responsible for the maintenance and upkeep of the structure map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the structure map. This item SHOULD be populated unless the information is available from context.
-     */
-    publisher?: string | undefined;
-    _publisher?: fhir.FhirElement | undefined;
-    /**
-     * This element does not describe the usage of the structure map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this structure map.
-     */
-    purpose?: string | undefined;
-    _purpose?: fhir.FhirElement | undefined;
-    /**
-     * Allows filtering of structure maps that are appropriate for use versus not.
-     */
-    status: StructureMapStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
-    /**
-     * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
-     */
-    structure?: fhir.StructureMapStructure[] | undefined;
-    /**
-     * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
-     */
-    title?: string | undefined;
-    _title?: fhir.FhirElement | undefined;
     /**
      * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
      * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions).
      * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
      */
     url: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.url
+     */
     _url?: fhir.FhirElement | undefined;
+    /**
+     * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this structure map outside of FHIR, where it is not possible to use the logical URI.
+     */
+    identifier?: fhir.Identifier[] | undefined;
+    /**
+     * There may be different structure map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the structure map with the format [url]|[version].
+     */
+    version?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.version
+     */
+    _version?: fhir.FhirElement | undefined;
+    /**
+     * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
+     */
+    name: string | null;
+    /**
+     * Extended properties for primitive element: StructureMap.name
+     */
+    _name?: fhir.FhirElement | undefined;
+    /**
+     * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
+     */
+    title?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.title
+     */
+    _title?: fhir.FhirElement | undefined;
+    /**
+     * Allows filtering of structure maps that are appropriate for use versus not.
+     */
+    status: PublicationStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: StructureMap.status
+     */
+    _status?: fhir.FhirElement | undefined;
+    /**
+     * Allows filtering of structure maps that are appropriate for use versus not.
+     */
+    experimental?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.experimental
+     */
+    _experimental?: fhir.FhirElement | undefined;
+    /**
+     * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the structure map. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
+     */
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.date
+     */
+    _date?: fhir.FhirElement | undefined;
+    /**
+     * Usually an organization but may be an individual. The publisher (or steward) of the structure map is the organization or individual primarily responsible for the maintenance and upkeep of the structure map. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the structure map. This item SHOULD be populated unless the information is available from context.
+     */
+    publisher?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.publisher
+     */
+    _publisher?: fhir.FhirElement | undefined;
+    /**
+     * May be a web site, an email address, a telephone number, etc.
+     */
+    contact?: fhir.ContactDetail[] | undefined;
+    /**
+     * This description can be used to capture details such as why the structure map was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the structure map as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the structure map is presumed to be the predominant language in the place the structure map was created).
+     */
+    description?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.description
+     */
+    _description?: fhir.FhirElement | undefined;
     /**
      * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
      */
     useContext?: fhir.UsageContext[] | undefined;
     /**
-     * There may be different structure map instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the structure map with the format [url]|[version].
+     * It may be possible for the structure map to be used in jurisdictions other than those for which it was originally designed or intended.
      */
-    version?: string | undefined;
-    _version?: fhir.FhirElement | undefined;
+    jurisdiction?: fhir.CodeableConcept[] | undefined;
+    /**
+     * This element does not describe the usage of the structure map. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this structure map.
+     */
+    purpose?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.purpose
+     */
+    _purpose?: fhir.FhirElement | undefined;
+    /**
+     * A copyright statement relating to the structure map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure map.
+     */
+    copyright?: string | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.copyright
+     */
+    _copyright?: fhir.FhirElement | undefined;
+    /**
+     * It is not necessary for a structure map to identify any dependent structures, though not listing them may restrict its usefulness.
+     */
+    structure?: fhir.StructureMapStructure[] | undefined;
+    /**
+     * Other maps used by this map (canonical URLs).
+     */
+    import?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: StructureMap.import
+     */
+    _import?: fhir.FhirElement[] | undefined;
+    /**
+     * Organizes the mapping into manageable chunks for human review/ease of maintenance.
+     */
+    group: fhir.StructureMapGroup[] | null;
     /**
      * Default constructor for StructureMap - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IStructureMap>);
+    constructor(source?: Partial<IStructureMap>);
     /**
-     * Check if the current StructureMap contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
-     * Factory function to create a StructureMap from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IStructureMap): StructureMap;
-}
-/**
- * Code Values for the StructureMap.structure.mode field
- */
-export declare enum StructureMapStructureModeEnum {
-    SOURCE = "source",
-    QUERIED = "queried",
-    TARGET = "target",
-    PRODUCED = "produced"
-}
-/**
- * Code Values for the StructureMap.group.input.mode field
- */
-export declare enum StructureMapGroupInputModeEnum {
-    SOURCE = "source",
-    TARGET = "target"
-}
-/**
- * Code Values for the StructureMap.group.rule.source.listMode field
- */
-export declare enum StructureMapGroupRuleSourceListModeEnum {
-    FIRST = "first",
-    NOT_FIRST = "not_first",
-    LAST = "last",
-    NOT_LAST = "not_last",
-    ONLY_ONE = "only_one"
-}
-/**
- * Code Values for the StructureMap.group.rule.target.contextType field
- */
-export declare enum StructureMapGroupRuleTargetContextTypeEnum {
-    TYPE = "type",
-    VARIABLE = "variable"
-}
-/**
- * Code Values for the StructureMap.group.rule.target.listMode field
- */
-export declare enum StructureMapGroupRuleTargetListModeEnum {
-    FIRST = "first",
-    SHARE = "share",
-    LAST = "last",
-    COLLATE = "collate"
-}
-/**
- * Code Values for the StructureMap.group.rule.target.transform field
- */
-export declare enum StructureMapGroupRuleTargetTransformEnum {
-    CREATE = "create",
-    COPY = "copy",
-    TRUNCATE = "truncate",
-    ESCAPE = "escape",
-    CAST = "cast",
-    APPEND = "append",
-    TRANSLATE = "translate",
-    REFERENCE = "reference",
-    DATEOP = "dateOp",
-    UUID = "uuid",
-    POINTER = "pointer",
-    EVALUATE = "evaluate",
-    CC = "cc",
-    C = "c",
-    QTY = "qty",
-    ID = "id",
-    CP = "cp"
-}
-/**
- * Code Values for the StructureMap.group.typeMode field
- */
-export declare enum StructureMapGroupTypeModeEnum {
-    NONE = "none",
-    TYPES = "types",
-    TYPE_AND_TYPES = "type-and-types"
-}
-/**
- * Code Values for the StructureMap.status field
- */
-export declare enum StructureMapStatusEnum {
-    DRAFT = "draft",
-    ACTIVE = "active",
-    RETIRED = "retired",
-    UNKNOWN = "unknown"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=StructureMap.d.ts.map

@@ -1,51 +1,104 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The quality rating of the subcomponent of a quality of evidence rating.
  */
 export declare const CertaintySubcomponentRatingValueSet: {
     /**
-     * possible reason for increasing quality rating was checked and found to be absent.
+     * absent: possible reason for increasing quality rating was checked and found to be absent.
      */
-    certainty_subcomponent_rating_Absent: Coding;
+    readonly Absent: Coding;
     /**
-     * critical concern.
+     * critical-concern: critical concern.
      */
-    certainty_subcomponent_rating_CriticalConcern: Coding;
+    readonly CriticalConcern: Coding;
     /**
-     * reduce quality rating by 1.
+     * downcode1: reduce quality rating by 1.
      */
-    certainty_subcomponent_rating_ReduceRating1: Coding;
+    readonly ReduceRating1: Coding;
     /**
-     * reduce quality rating by 2.
+     * downcode2: reduce quality rating by 2.
      */
-    certainty_subcomponent_rating_ReduceRating2: Coding;
+    readonly ReduceRating2: Coding;
     /**
-     * reduce quality rating by 3.
+     * downcode3: reduce quality rating by 3.
      */
-    certainty_subcomponent_rating_ReduceRating3: Coding;
+    readonly ReduceRating3: Coding;
     /**
-     * no change to quality rating.
+     * no-change: no change to quality rating.
      */
-    certainty_subcomponent_rating_NoChangeToRating: Coding;
+    readonly NoChangeToRating: Coding;
     /**
-     * no serious concern.
+     * no-concern: no serious concern.
      */
-    certainty_subcomponent_rating_NoSeriousConcern: Coding;
+    readonly NoSeriousConcern: Coding;
     /**
-     * possible reason for increasing quality rating was checked and found to bepresent.
+     * present: possible reason for increasing quality rating was checked and found to bepresent.
      */
-    certainty_subcomponent_rating_Present: Coding;
+    readonly Present: Coding;
     /**
-     * serious concern.
+     * serious-concern: serious concern.
      */
-    certainty_subcomponent_rating_SeriousConcern: Coding;
+    readonly SeriousConcern: Coding;
     /**
-     * increase quality rating by 1.
+     * upcode1: increase quality rating by 1.
      */
-    certainty_subcomponent_rating_IncreaseRatingPlus1: Coding;
+    readonly IncreaseRatingPlus1: Coding;
     /**
-     * increase quality rating by 2.
+     * upcode2: increase quality rating by 2.
      */
-    certainty_subcomponent_rating_IncreaseRatingPlus2: Coding;
+    readonly IncreaseRatingPlus2: Coding;
 };
+/**
+ * The quality rating of the subcomponent of a quality of evidence rating.
+ */
+export declare type CertaintySubcomponentRatingValueSetType = typeof CertaintySubcomponentRatingValueSet;
+/**
+ * The quality rating of the subcomponent of a quality of evidence rating.
+ */
+export declare enum CertaintySubcomponentRatingValueSetEnum {
+    /**
+     * absent: possible reason for increasing quality rating was checked and found to be absent.
+     */
+    Absent = "absent",
+    /**
+     * critical-concern: critical concern.
+     */
+    CriticalConcern = "critical-concern",
+    /**
+     * downcode1: reduce quality rating by 1.
+     */
+    ReduceRating1 = "downcode1",
+    /**
+     * downcode2: reduce quality rating by 2.
+     */
+    ReduceRating2 = "downcode2",
+    /**
+     * downcode3: reduce quality rating by 3.
+     */
+    ReduceRating3 = "downcode3",
+    /**
+     * no-change: no change to quality rating.
+     */
+    NoChangeToRating = "no-change",
+    /**
+     * no-concern: no serious concern.
+     */
+    NoSeriousConcern = "no-concern",
+    /**
+     * present: possible reason for increasing quality rating was checked and found to bepresent.
+     */
+    Present = "present",
+    /**
+     * serious-concern: serious concern.
+     */
+    SeriousConcern = "serious-concern",
+    /**
+     * upcode1: increase quality rating by 1.
+     */
+    IncreaseRatingPlus1 = "upcode1",
+    /**
+     * upcode2: increase quality rating by 2.
+     */
+    IncreaseRatingPlus2 = "upcode2"
+}
 //# sourceMappingURL=CertaintySubcomponentRatingValueSet.d.ts.map

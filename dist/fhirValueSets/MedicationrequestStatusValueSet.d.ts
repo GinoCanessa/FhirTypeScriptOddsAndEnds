@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * MedicationRequest Status Codes
  */
 export declare const MedicationrequestStatusValueSet: {
     /**
-     * The prescription is 'actionable', but not all actions that are implied by it have occurred yet.
+     * active: The prescription is 'actionable', but not all actions that are implied by it have occurred yet.
      */
-    medicationrequest_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The prescription has been withdrawn before any administrations have occurred
+     * cancelled: The prescription has been withdrawn before any administrations have occurred
      */
-    medicationrequest_status_Cancelled: Coding;
+    readonly Cancelled: Coding;
     /**
-     * All actions that are implied by the prescription have occurred.
+     * completed: All actions that are implied by the prescription have occurred.
      */
-    medicationrequest_status_Completed: Coding;
+    readonly Completed: Coding;
     /**
-     * The prescription is not yet 'actionable', e.g. it is a work in progress, requires sign-off, verification or needs to be run through decision support process.
+     * draft: The prescription is not yet 'actionable', e.g. it is a work in progress, requires sign-off, verification or needs to be run through decision support process.
      */
-    medicationrequest_status_Draft: Coding;
+    readonly Draft: Coding;
     /**
-     * Some of the actions that are implied by the medication request may have occurred.  For example, the medication may have been dispensed and the patient may have taken some of the medication.  Clinical decision support systems should take this status into account
+     * entered-in-error: Some of the actions that are implied by the medication request may have occurred.  For example, the medication may have been dispensed and the patient may have taken some of the medication.  Clinical decision support systems should take this status into account
      */
-    medicationrequest_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * Actions implied by the prescription are to be temporarily halted, but are expected to continue later.  May also be called 'suspended'.
+     * on-hold: Actions implied by the prescription are to be temporarily halted, but are expected to continue later.  May also be called 'suspended'.
      */
-    medicationrequest_status_OnHold: Coding;
+    readonly OnHold: Coding;
     /**
-     * Actions implied by the prescription are to be permanently halted, before all of the administrations occurred. This should not be used if the original order was entered in error
+     * stopped: Actions implied by the prescription are to be permanently halted, before all of the administrations occurred. This should not be used if the original order was entered in error
      */
-    medicationrequest_status_Stopped: Coding;
+    readonly Stopped: Coding;
     /**
-     * The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for 'other' - one of the listed statuses is presumed to apply, but the authoring/source system does not know which.
+     * unknown: The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for 'other' - one of the listed statuses is presumed to apply, but the authoring/source system does not know which.
      */
-    medicationrequest_status_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * MedicationRequest Status Codes
+ */
+export declare type MedicationrequestStatusValueSetType = typeof MedicationrequestStatusValueSet;
+/**
+ * MedicationRequest Status Codes
+ */
+export declare enum MedicationrequestStatusValueSetEnum {
+    /**
+     * active: The prescription is 'actionable', but not all actions that are implied by it have occurred yet.
+     */
+    Active = "active",
+    /**
+     * cancelled: The prescription has been withdrawn before any administrations have occurred
+     */
+    Cancelled = "cancelled",
+    /**
+     * completed: All actions that are implied by the prescription have occurred.
+     */
+    Completed = "completed",
+    /**
+     * draft: The prescription is not yet 'actionable', e.g. it is a work in progress, requires sign-off, verification or needs to be run through decision support process.
+     */
+    Draft = "draft",
+    /**
+     * entered-in-error: Some of the actions that are implied by the medication request may have occurred.  For example, the medication may have been dispensed and the patient may have taken some of the medication.  Clinical decision support systems should take this status into account
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * on-hold: Actions implied by the prescription are to be temporarily halted, but are expected to continue later.  May also be called 'suspended'.
+     */
+    OnHold = "on-hold",
+    /**
+     * stopped: Actions implied by the prescription are to be permanently halted, before all of the administrations occurred. This should not be used if the original order was entered in error
+     */
+    Stopped = "stopped",
+    /**
+     * unknown: The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for 'other' - one of the listed statuses is presumed to apply, but the authoring/source system does not know which.
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=MedicationrequestStatusValueSet.d.ts.map

@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Indicates the status of the care team.
  */
 export declare const CareTeamStatusValueSet: {
     /**
-     * The care team is currently participating in the coordination and delivery of care.
+     * active: The care team is currently participating in the coordination and delivery of care.
      */
-    care_team_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The care team should have never existed.
+     * entered-in-error: The care team should have never existed.
      */
-    care_team_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The care team was, but is no longer, participating in the coordination and delivery of care.
+     * inactive: The care team was, but is no longer, participating in the coordination and delivery of care.
      */
-    care_team_status_Inactive: Coding;
+    readonly Inactive: Coding;
     /**
-     * The care team has been drafted and proposed, but not yet participating in the coordination and delivery of patient care.
+     * proposed: The care team has been drafted and proposed, but not yet participating in the coordination and delivery of patient care.
      */
-    care_team_status_Proposed: Coding;
+    readonly Proposed: Coding;
     /**
-     * The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
+     * suspended: The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
      */
-    care_team_status_Suspended: Coding;
+    readonly Suspended: Coding;
 };
+/**
+ * Indicates the status of the care team.
+ */
+export declare type CareTeamStatusValueSetType = typeof CareTeamStatusValueSet;
+/**
+ * Indicates the status of the care team.
+ */
+export declare enum CareTeamStatusValueSetEnum {
+    /**
+     * active: The care team is currently participating in the coordination and delivery of care.
+     */
+    Active = "active",
+    /**
+     * entered-in-error: The care team should have never existed.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * inactive: The care team was, but is no longer, participating in the coordination and delivery of care.
+     */
+    Inactive = "inactive",
+    /**
+     * proposed: The care team has been drafted and proposed, but not yet participating in the coordination and delivery of patient care.
+     */
+    Proposed = "proposed",
+    /**
+     * suspended: The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
+     */
+    Suspended = "suspended"
+}
 //# sourceMappingURL=CareTeamStatusValueSet.d.ts.map

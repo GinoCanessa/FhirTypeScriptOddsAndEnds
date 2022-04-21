@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Data types allowed to be used for search parameters.
  */
 export declare const SearchParamTypeValueSet: {
     /**
-     * A composite search parameter that combines a search on two values together.
+     * composite: A composite search parameter that combines a search on two values together.
      */
-    search_param_type_Composite: Coding;
+    readonly Composite: Coding;
     /**
-     * Search parameter is on a date/time. The date format is the standard XML format, though other formats may be supported.
+     * date: Search parameter is on a date/time. The date format is the standard XML format, though other formats may be supported.
      */
-    search_param_type_DateDateTime: Coding;
+    readonly DateDateTime: Coding;
     /**
-     * Search parameter SHALL be a number (a whole number, or a decimal).
+     * number: Search parameter SHALL be a number (a whole number, or a decimal).
      */
-    search_param_type_Number: Coding;
+    readonly Number: Coding;
     /**
-     * A search parameter that searches on a quantity.
+     * quantity: A search parameter that searches on a quantity.
      */
-    search_param_type_Quantity: Coding;
+    readonly Quantity: Coding;
     /**
-     * A reference to another resource (Reference or canonical).
+     * reference: A reference to another resource (Reference or canonical).
      */
-    search_param_type_Reference: Coding;
+    readonly Reference: Coding;
     /**
-     * Special logic applies to this parameter per the description of the search parameter.
+     * special: Special logic applies to this parameter per the description of the search parameter.
      */
-    search_param_type_Special: Coding;
+    readonly Special: Coding;
     /**
-     * Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May match just the start of a string. String parameters may contain spaces.
+     * string: Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May match just the start of a string. String parameters may contain spaces.
      */
-    search_param_type_String: Coding;
+    readonly String: Coding;
     /**
-     * Search parameter on a coded element or identifier. May be used to search through the text, display, code and code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of namespace and value, separated by a "|", depending on the modifier used.
+     * token: Search parameter on a coded element or identifier. May be used to search through the text, display, code and code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of namespace and value, separated by a "|", depending on the modifier used.
      */
-    search_param_type_Token: Coding;
+    readonly Token: Coding;
     /**
-     * A search parameter that searches on a URI (RFC 3986).
+     * uri: A search parameter that searches on a URI (RFC 3986).
      */
-    search_param_type_URI: Coding;
+    readonly URI: Coding;
 };
+/**
+ * Data types allowed to be used for search parameters.
+ */
+export declare type SearchParamTypeValueSetType = typeof SearchParamTypeValueSet;
+/**
+ * Data types allowed to be used for search parameters.
+ */
+export declare enum SearchParamTypeValueSetEnum {
+    /**
+     * composite: A composite search parameter that combines a search on two values together.
+     */
+    Composite = "composite",
+    /**
+     * date: Search parameter is on a date/time. The date format is the standard XML format, though other formats may be supported.
+     */
+    DateDateTime = "date",
+    /**
+     * number: Search parameter SHALL be a number (a whole number, or a decimal).
+     */
+    Number = "number",
+    /**
+     * quantity: A search parameter that searches on a quantity.
+     */
+    Quantity = "quantity",
+    /**
+     * reference: A reference to another resource (Reference or canonical).
+     */
+    Reference = "reference",
+    /**
+     * special: Special logic applies to this parameter per the description of the search parameter.
+     */
+    Special = "special",
+    /**
+     * string: Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May match just the start of a string. String parameters may contain spaces.
+     */
+    String = "string",
+    /**
+     * token: Search parameter on a coded element or identifier. May be used to search through the text, display, code and code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of namespace and value, separated by a "|", depending on the modifier used.
+     */
+    Token = "token",
+    /**
+     * uri: A search parameter that searches on a URI (RFC 3986).
+     */
+    URI = "uri"
+}
 //# sourceMappingURL=SearchParamTypeValueSet.d.ts.map

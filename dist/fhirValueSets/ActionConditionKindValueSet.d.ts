@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Defines the kinds of conditions that can appear on actions.
  */
 export declare const ActionConditionKindValueSet: {
     /**
-     * The condition describes whether or not a given action is applicable.
+     * applicability: The condition describes whether or not a given action is applicable.
      */
-    action_condition_kind_Applicability: Coding;
+    readonly Applicability: Coding;
     /**
-     * The condition is a starting condition for the action.
+     * start: The condition is a starting condition for the action.
      */
-    action_condition_kind_Start: Coding;
+    readonly Start: Coding;
     /**
-     * The condition is a stop, or exit condition for the action.
+     * stop: The condition is a stop, or exit condition for the action.
      */
-    action_condition_kind_Stop: Coding;
+    readonly Stop: Coding;
 };
+/**
+ * Defines the kinds of conditions that can appear on actions.
+ */
+export declare type ActionConditionKindValueSetType = typeof ActionConditionKindValueSet;
+/**
+ * Defines the kinds of conditions that can appear on actions.
+ */
+export declare enum ActionConditionKindValueSetEnum {
+    /**
+     * applicability: The condition describes whether or not a given action is applicable.
+     */
+    Applicability = "applicability",
+    /**
+     * start: The condition is a starting condition for the action.
+     */
+    Start = "start",
+    /**
+     * stop: The condition is a stop, or exit condition for the action.
+     */
+    Stop = "stop"
+}
 //# sourceMappingURL=ActionConditionKindValueSet.d.ts.map

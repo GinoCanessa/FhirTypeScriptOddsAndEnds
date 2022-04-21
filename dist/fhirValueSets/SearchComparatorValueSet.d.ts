@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * What Search Comparator Codes are supported in search.
  */
 export declare const SearchComparatorValueSet: {
     /**
-     * the value for the parameter in the resource is approximately the same to the provided value.
+     * ap: the value for the parameter in the resource is approximately the same to the provided value.
      */
-    search_comparator_Approximately: Coding;
+    readonly Approximately: Coding;
     /**
-     * the value for the parameter in the resource ends before the provided value.
+     * eb: the value for the parameter in the resource ends before the provided value.
      */
-    search_comparator_EndsBefore: Coding;
+    readonly EndsBefore: Coding;
     /**
-     * the value for the parameter in the resource is equal to the provided value.
+     * eq: the value for the parameter in the resource is equal to the provided value.
      */
-    search_comparator_Equals: Coding;
+    readonly Equals: Coding;
     /**
-     * the value for the parameter in the resource is greater or equal to the provided value.
+     * ge: the value for the parameter in the resource is greater or equal to the provided value.
      */
-    search_comparator_GreaterOrEquals: Coding;
+    readonly GreaterOrEquals: Coding;
     /**
-     * the value for the parameter in the resource is greater than the provided value.
+     * gt: the value for the parameter in the resource is greater than the provided value.
      */
-    search_comparator_GreaterThan: Coding;
+    readonly GreaterThan: Coding;
     /**
-     * the value for the parameter in the resource is less or equal to the provided value.
+     * le: the value for the parameter in the resource is less or equal to the provided value.
      */
-    search_comparator_LessOfEqual: Coding;
+    readonly LessOfEqual: Coding;
     /**
-     * the value for the parameter in the resource is less than the provided value.
+     * lt: the value for the parameter in the resource is less than the provided value.
      */
-    search_comparator_LessThan: Coding;
+    readonly LessThan: Coding;
     /**
-     * the value for the parameter in the resource is not equal to the provided value.
+     * ne: the value for the parameter in the resource is not equal to the provided value.
      */
-    search_comparator_NotEquals: Coding;
+    readonly NotEquals: Coding;
     /**
-     * the value for the parameter in the resource starts after the provided value.
+     * sa: the value for the parameter in the resource starts after the provided value.
      */
-    search_comparator_StartsAfter: Coding;
+    readonly StartsAfter: Coding;
 };
+/**
+ * What Search Comparator Codes are supported in search.
+ */
+export declare type SearchComparatorValueSetType = typeof SearchComparatorValueSet;
+/**
+ * What Search Comparator Codes are supported in search.
+ */
+export declare enum SearchComparatorValueSetEnum {
+    /**
+     * ap: the value for the parameter in the resource is approximately the same to the provided value.
+     */
+    Approximately = "ap",
+    /**
+     * eb: the value for the parameter in the resource ends before the provided value.
+     */
+    EndsBefore = "eb",
+    /**
+     * eq: the value for the parameter in the resource is equal to the provided value.
+     */
+    Equals = "eq",
+    /**
+     * ge: the value for the parameter in the resource is greater or equal to the provided value.
+     */
+    GreaterOrEquals = "ge",
+    /**
+     * gt: the value for the parameter in the resource is greater than the provided value.
+     */
+    GreaterThan = "gt",
+    /**
+     * le: the value for the parameter in the resource is less or equal to the provided value.
+     */
+    LessOfEqual = "le",
+    /**
+     * lt: the value for the parameter in the resource is less than the provided value.
+     */
+    LessThan = "lt",
+    /**
+     * ne: the value for the parameter in the resource is not equal to the provided value.
+     */
+    NotEquals = "ne",
+    /**
+     * sa: the value for the parameter in the resource starts after the provided value.
+     */
+    StartsAfter = "sa"
+}
 //# sourceMappingURL=SearchComparatorValueSet.d.ts.map

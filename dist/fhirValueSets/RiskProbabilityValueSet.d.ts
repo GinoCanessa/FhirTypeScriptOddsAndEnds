@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes representing the likelihood of a particular outcome in a risk assessment.
  */
 export declare const RiskProbabilityValueSet: {
     /**
-     * The specified outcome is effectively guaranteed.
+     * certain: The specified outcome is effectively guaranteed.
      */
-    risk_probability_Certain: Coding;
+    readonly Certain: Coding;
     /**
-     * The specified outcome is more likely to occur than not.
+     * high: The specified outcome is more likely to occur than not.
      */
-    risk_probability_HighLikelihood: Coding;
+    readonly HighLikelihood: Coding;
     /**
-     * The specified outcome is possible but unlikely.
+     * low: The specified outcome is possible but unlikely.
      */
-    risk_probability_LowLikelihood: Coding;
+    readonly LowLikelihood: Coding;
     /**
-     * The specified outcome has a reasonable likelihood of occurrence.
+     * moderate: The specified outcome has a reasonable likelihood of occurrence.
      */
-    risk_probability_ModerateLikelihood: Coding;
+    readonly ModerateLikelihood: Coding;
     /**
-     * The specified outcome is exceptionally unlikely.
+     * negligible: The specified outcome is exceptionally unlikely.
      */
-    risk_probability_NegligibleLikelihood: Coding;
+    readonly NegligibleLikelihood: Coding;
 };
+/**
+ * Codes representing the likelihood of a particular outcome in a risk assessment.
+ */
+export declare type RiskProbabilityValueSetType = typeof RiskProbabilityValueSet;
+/**
+ * Codes representing the likelihood of a particular outcome in a risk assessment.
+ */
+export declare enum RiskProbabilityValueSetEnum {
+    /**
+     * certain: The specified outcome is effectively guaranteed.
+     */
+    Certain = "certain",
+    /**
+     * high: The specified outcome is more likely to occur than not.
+     */
+    HighLikelihood = "high",
+    /**
+     * low: The specified outcome is possible but unlikely.
+     */
+    LowLikelihood = "low",
+    /**
+     * moderate: The specified outcome has a reasonable likelihood of occurrence.
+     */
+    ModerateLikelihood = "moderate",
+    /**
+     * negligible: The specified outcome is exceptionally unlikely.
+     */
+    NegligibleLikelihood = "negligible"
+}
 //# sourceMappingURL=RiskProbabilityValueSet.d.ts.map

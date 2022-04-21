@@ -1,35 +1,72 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes identifying the lifecycle stage of a ChargeItem.
  */
 export declare const ChargeitemStatusValueSet: {
     /**
-     * The processing of the charge was aborted.
+     * aborted: The processing of the charge was aborted.
      */
-    chargeitem_status_Aborted: Coding;
+    readonly Aborted: Coding;
     /**
-     * The charge item is ready for billing.
+     * billable: The charge item is ready for billing.
      */
-    chargeitem_status_Billable: Coding;
+    readonly Billable: Coding;
     /**
-     * The charge item has been billed (e.g. a billing engine has generated financial transactions by applying the associated ruled for the charge item to the context of the Encounter, and placed them into Claims/Invoices.
+     * billed: The charge item has been billed (e.g. a billing engine has generated financial transactions by applying the associated ruled for the charge item to the context of the Encounter, and placed them into Claims/Invoices.
      */
-    chargeitem_status_Billed: Coding;
+    readonly Billed: Coding;
     /**
-     * The charge item has been entered in error and should not be processed for billing.
+     * entered-in-error: The charge item has been entered in error and should not be processed for billing.
      */
-    chargeitem_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The charge item has been determined to be not billable (e.g. due to rules associated with the billing code).
+     * not-billable: The charge item has been determined to be not billable (e.g. due to rules associated with the billing code).
      */
-    chargeitem_status_NotBillable: Coding;
+    readonly NotBillable: Coding;
     /**
-     * The charge item has been entered, but the charged service is not  yet complete, so it shall not be billed yet but might be used in the context of pre-authorization.
+     * planned: The charge item has been entered, but the charged service is not  yet complete, so it shall not be billed yet but might be used in the context of pre-authorization.
      */
-    chargeitem_status_Planned: Coding;
+    readonly Planned: Coding;
     /**
-     * The authoring system does not know which of the status values currently applies for this charge item  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+     * unknown: The authoring system does not know which of the status values currently applies for this charge item  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
      */
-    chargeitem_status_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * Codes identifying the lifecycle stage of a ChargeItem.
+ */
+export declare type ChargeitemStatusValueSetType = typeof ChargeitemStatusValueSet;
+/**
+ * Codes identifying the lifecycle stage of a ChargeItem.
+ */
+export declare enum ChargeitemStatusValueSetEnum {
+    /**
+     * aborted: The processing of the charge was aborted.
+     */
+    Aborted = "aborted",
+    /**
+     * billable: The charge item is ready for billing.
+     */
+    Billable = "billable",
+    /**
+     * billed: The charge item has been billed (e.g. a billing engine has generated financial transactions by applying the associated ruled for the charge item to the context of the Encounter, and placed them into Claims/Invoices.
+     */
+    Billed = "billed",
+    /**
+     * entered-in-error: The charge item has been entered in error and should not be processed for billing.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * not-billable: The charge item has been determined to be not billable (e.g. due to rules associated with the billing code).
+     */
+    NotBillable = "not-billable",
+    /**
+     * planned: The charge item has been entered, but the charged service is not  yet complete, so it shall not be billed yet but might be used in the context of pre-authorization.
+     */
+    Planned = "planned",
+    /**
+     * unknown: The authoring system does not know which of the status values currently applies for this charge item  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=ChargeitemStatusValueSet.d.ts.map

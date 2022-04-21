@@ -1,11 +1,24 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set contract specific codes for status.
  */
 export declare const ContractDefinitionSubtypeValueSet: {
     /**
-     * To be completed
+     * temp: To be completed
      */
-    contract_definition_subtype_TemporaryValue: Coding;
+    readonly TemporaryValue: Coding;
 };
+/**
+ * This value set contract specific codes for status.
+ */
+export declare type ContractDefinitionSubtypeValueSetType = typeof ContractDefinitionSubtypeValueSet;
+/**
+ * This value set contract specific codes for status.
+ */
+export declare enum ContractDefinitionSubtypeValueSetEnum {
+    /**
+     * temp: To be completed
+     */
+    TemporaryValue = "temp"
+}
 //# sourceMappingURL=ContractDefinitionSubtypeValueSet.d.ts.map

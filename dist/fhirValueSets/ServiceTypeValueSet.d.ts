@@ -1,2391 +1,4784 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set defines an example set of codes of service-types.
  */
 export declare const ServiceTypeValueSet: {
     /**
-     * Adoption &amp; permanent care information/support
+     * 1: Adoption &amp; permanent care information/support
      */
-    service_type_AdoptionPermanentCareInfoSupport: Coding;
+    readonly AdoptionPermanentCareInfoSupport: Coding;
     /**
-     * Personal alarms/alerts
+     * 10: Personal alarms/alerts
      */
-    service_type_PersonalAlarmsAlerts: Coding;
+    readonly PersonalAlarmsAlerts: Coding;
     /**
-     * Disability information/referral
+     * 100: Disability information/referral
      */
-    service_type_DisabilityInformationReferral: Coding;
+    readonly DisabilityInformationReferral: Coding;
     /**
-     * Disability support packages
+     * 101: Disability support packages
      */
-    service_type_DisabilitySupportPackages: Coding;
+    readonly DisabilitySupportPackages: Coding;
     /**
-     * Disability supported accommodation
+     * 102: Disability supported accommodation
      */
-    service_type_DisabilitySupportedAccommodation: Coding;
+    readonly DisabilitySupportedAccommodation: Coding;
     /**
-     * Early childhood intervention
+     * 103: Early childhood intervention
      */
-    service_type_EarlyChildhoodIntervention: Coding;
+    readonly EarlyChildhoodIntervention: Coding;
     /**
-     * Hearing aids &amp; equipment
+     * 104: Hearing aids &amp; equipment
      */
-    service_type_HearingAidsAndEquipment: Coding;
+    readonly HearingAidsAndEquipment: Coding;
     /**
-     * Drug and/or alcohol counselling
+     * 105: Drug and/or alcohol counselling
      */
-    service_type_DrugAndOrAlcoholCounselling: Coding;
+    readonly DrugAndOrAlcoholCounselling: Coding;
     /**
-     * Drug and/or alcohol information/referral
+     * 106: Drug and/or alcohol information/referral
      */
-    service_type_DrugAlcoholInformationReferral: Coding;
+    readonly DrugAlcoholInformationReferral: Coding;
     /**
-     * Needle &amp; Syringe exchange
+     * 107: Needle &amp; Syringe exchange
      */
-    service_type_NeedleAndSyringeExchange: Coding;
+    readonly NeedleAndSyringeExchange: Coding;
     /**
-     * Non-residential alcohol and/or drug dependence treatment
+     * 108: Non-residential alcohol and/or drug dependence treatment
      */
-    service_type_NonResidAlcoholDrugTreatment: Coding;
+    readonly NonResidAlcoholDrugTreatment: Coding;
     /**
-     * Pharmacotherapy (eg. methadone) program
+     * 109: Pharmacotherapy (eg. methadone) program
      */
-    service_type_Pharmacotherapy: Coding;
+    readonly Pharmacotherapy: Coding;
     /**
-     * Personal care for older persons
+     * 11: Personal care for older persons
      */
-    service_type_PersonalCareForOlderPersons: Coding;
+    readonly PersonalCareForOlderPersons: Coding;
     /**
-     * Quit program
+     * 110: Quit program
      */
-    service_type_QuitProgram: Coding;
+    readonly QuitProgram: Coding;
     /**
-     * Residential alcohol and/or drug dependence treatment
+     * 111: Residential alcohol and/or drug dependence treatment
      */
-    service_type_ResidentialAlcoholDrugTreatment: Coding;
+    readonly ResidentialAlcoholDrugTreatment: Coding;
     /**
-     * Adult/community education
+     * 112: Adult/community education
      */
-    service_type_AdultCommunityEducation: Coding;
+    readonly AdultCommunityEducation: Coding;
     /**
-     * Higher education
+     * 113: Higher education
      */
-    service_type_HigherEducation: Coding;
+    readonly HigherEducation: Coding;
     /**
-     * Primary education
+     * 114: Primary education
      */
-    service_type_PrimaryEducation: Coding;
+    readonly PrimaryEducation: Coding;
     /**
-     * Secondary education
+     * 115: Secondary education
      */
-    service_type_SecondaryEducation: Coding;
+    readonly SecondaryEducation: Coding;
     /**
-     * Training &amp; vocational education
+     * 116: Training &amp; vocational education
      */
-    service_type_TrainingAndVocationalEducation: Coding;
+    readonly TrainingAndVocationalEducation: Coding;
     /**
-     * Emergency medical
+     * 117: Emergency medical
      */
-    service_type_EmergencyMedical: Coding;
+    readonly EmergencyMedical: Coding;
     /**
-     * Employment placement and/or support
+     * 118: Employment placement and/or support
      */
-    service_type_EmploymentPlacementAndOrSupport: Coding;
+    readonly EmploymentPlacementAndOrSupport: Coding;
     /**
-     * Vocational Rehabilitation
+     * 119: Vocational Rehabilitation
      */
-    service_type_VocationalRehabilitation: Coding;
+    readonly VocationalRehabilitation: Coding;
     /**
-     * Planned activity groups
+     * 12: Planned activity groups
      */
-    service_type_PlannedActivityGroups: Coding;
+    readonly PlannedActivityGroups: Coding;
     /**
-     * Workplace safety and/or accident prevention
+     * 120: Workplace safety and/or accident prevention
      */
-    service_type_WorkSafetyAccidentPrevention: Coding;
+    readonly WorkSafetyAccidentPrevention: Coding;
     /**
-     * Financial assistance
+     * 121: Financial assistance
      */
-    service_type_FinancialAssistance: Coding;
+    readonly FinancialAssistance: Coding;
     /**
-     * Financial information/advice
+     * 122: Financial information/advice
      */
-    service_type_FinancialInformationAdvice: Coding;
+    readonly FinancialInformationAdvice: Coding;
     /**
-     * Material aid
+     * 123: Material aid
      */
-    service_type_MaterialAid: Coding;
+    readonly MaterialAid: Coding;
     /**
-     * General Practice/GP (doctor)
+     * 124: General Practice/GP (doctor)
      */
-    service_type_GeneralPractice: Coding;
+    readonly GeneralPractice: Coding;
     /**
-     * Accommodation placement and/or support
+     * 125: Accommodation placement and/or support
      */
-    service_type_AccommodationPlacementSupport: Coding;
+    readonly AccommodationPlacementSupport: Coding;
     /**
-     * Crisis/emergency accommodation
+     * 126: Crisis/emergency accommodation
      */
-    service_type_CrisisEmergencyAccommodation: Coding;
+    readonly CrisisEmergencyAccommodation: Coding;
     /**
-     * Homelessness support
+     * 127: Homelessness support
      */
-    service_type_HomelessnessSupport: Coding;
+    readonly HomelessnessSupport: Coding;
     /**
-     * Housing information/referral
+     * 128: Housing information/referral
      */
-    service_type_HousingInformationReferral: Coding;
+    readonly HousingInformationReferral: Coding;
     /**
-     * Public rental housing
+     * 129: Public rental housing
      */
-    service_type_PublicRentalHousing: Coding;
+    readonly PublicRentalHousing: Coding;
     /**
-     * Acupuncture
+     * 13: Acupuncture
      */
-    service_type_Acupuncture: Coding;
+    readonly Acupuncture: Coding;
     /**
-     * Interpreting/Multilingual/Language service
+     * 130: Interpreting/Multilingual/Language service
      */
-    service_type_InterpretingMultilingualService: Coding;
+    readonly InterpretingMultilingualService: Coding;
     /**
-     * Juvenile Justice
+     * 131: Juvenile Justice
      */
-    service_type_JuvenileJustice: Coding;
+    readonly JuvenileJustice: Coding;
     /**
-     * Legal advocacy
+     * 132: Legal advocacy
      */
-    service_type_LegalAdvocacy: Coding;
+    readonly LegalAdvocacy: Coding;
     /**
-     * Legal information/advice/referral
+     * 133: Legal information/advice/referral
      */
-    service_type_LegalInformationAdviceReferral: Coding;
+    readonly LegalInformationAdviceReferral: Coding;
     /**
-     * Mental health advocacy
+     * 134: Mental health advocacy
      */
-    service_type_MentalHealthAdvocacy: Coding;
+    readonly MentalHealthAdvocacy: Coding;
     /**
-     * Mental health assessment/triage/crisis response
+     * 135: Mental health assessment/triage/crisis response
      */
-    service_type_MentalHealthAssessTriageCrisisResponse: Coding;
+    readonly MentalHealthAssessTriageCrisisResponse: Coding;
     /**
-     * Mental health case management/continuing care
+     * 136: Mental health case management/continuing care
      */
-    service_type_MentalHealthCaseManagement: Coding;
+    readonly MentalHealthCaseManagement: Coding;
     /**
-     * Mental health information/referral
+     * 137: Mental health information/referral
      */
-    service_type_MentalHealthInformationReferral: Coding;
+    readonly MentalHealthInformationReferral: Coding;
     /**
-     * Mental health inpatient services (hospital psychiatric unit) - requires referral
+     * 138: Mental health inpatient services (hospital psychiatric unit) - requires referral
      */
-    service_type_MentalHealthInpatientServices: Coding;
+    readonly MentalHealthInpatientServices: Coding;
     /**
-     * Mental health non-residential rehabilitation
+     * 139: Mental health non-residential rehabilitation
      */
-    service_type_MentalHealthNonResidentialRehab: Coding;
+    readonly MentalHealthNonResidentialRehab: Coding;
     /**
-     * Alexander technique therapy
+     * 14: Alexander technique therapy
      */
-    service_type_AlexanderTechniqueTherapy: Coding;
+    readonly AlexanderTechniqueTherapy: Coding;
     /**
-     * Mental health residential rehabilitation/community care unit
+     * 140: Mental health residential rehabilitation/community care unit
      */
-    service_type_MentalHealthResidentialRehabCCU: Coding;
+    readonly MentalHealthResidentialRehabCCU: Coding;
     /**
-     * Psychiatry (requires referral)
+     * 141: Psychiatry (requires referral)
      */
-    service_type_PsychiatryRequiresReferral: Coding;
+    readonly PsychiatryRequiresReferral: Coding;
     /**
-     * Psychology
+     * 142: Psychology
      */
-    service_type_Psychology: Coding;
+    readonly Psychology: Coding;
     /**
-     * Martial arts
+     * 143: Martial arts
      */
-    service_type_MartialArts: Coding;
+    readonly MartialArts: Coding;
     /**
-     * Personal fitness training
+     * 144: Personal fitness training
      */
-    service_type_PersonalFitnessTraining: Coding;
+    readonly PersonalFitnessTraining: Coding;
     /**
-     * Physical activity group
+     * 145: Physical activity group
      */
-    service_type_PhysicalActivityGroup: Coding;
+    readonly PhysicalActivityGroup: Coding;
     /**
-     * Physical activity programs
+     * 146: Physical activity programs
      */
-    service_type_PhysicalActivityPrograms: Coding;
+    readonly PhysicalActivityPrograms: Coding;
     /**
-     * Physical fitness testing
+     * 147: Physical fitness testing
      */
-    service_type_PhysicalFitnessTesting: Coding;
+    readonly PhysicalFitnessTesting: Coding;
     /**
-     * Pilates
+     * 148: Pilates
      */
-    service_type_Pilates: Coding;
+    readonly Pilates: Coding;
     /**
-     * Self defence
+     * 149: Self defence
      */
-    service_type_SelfDefence: Coding;
+    readonly SelfDefence: Coding;
     /**
-     * Aromatherapy
+     * 15: Aromatherapy
      */
-    service_type_Aromatherapy: Coding;
+    readonly Aromatherapy: Coding;
     /**
-     * Sporting club
+     * 150: Sporting club
      */
-    service_type_SportingClub: Coding;
+    readonly SportingClub: Coding;
     /**
-     * Yoga
+     * 151: Yoga
      */
-    service_type_Yoga: Coding;
+    readonly Yoga: Coding;
     /**
-     * Food safety
+     * 152: Food safety
      */
-    service_type_FoodSafety: Coding;
+    readonly FoodSafety: Coding;
     /**
-     * Health regulatory, inspection and/or certification
+     * 153: Health regulatory, inspection and/or certification
      */
-    service_type_HealthRegulatoryInspectionCert: Coding;
+    readonly HealthRegulatoryInspectionCert: Coding;
     /**
-     * Workplace health and/or safety inspection and/or certification
+     * 154: Workplace health and/or safety inspection and/or certification
      */
-    service_type_WorkHealthSafetyInspectionCert: Coding;
+    readonly WorkHealthSafetyInspectionCert: Coding;
     /**
-     * Carer support
+     * 155: Carer support
      */
-    service_type_CarerSupport: Coding;
+    readonly CarerSupport: Coding;
     /**
-     * Respite care
+     * 156: Respite care
      */
-    service_type_RespiteCare: Coding;
+    readonly RespiteCare: Coding;
     /**
-     * Anatomical Pathology (including Cytopathology &amp; Forensic Pathology)
+     * 157: Anatomical Pathology (including Cytopathology &amp; Forensic Pathology)
      */
-    service_type_AnatomicalPathology: Coding;
+    readonly AnatomicalPathology: Coding;
     /**
-     * Pathology - Clinical Chemistry
+     * 158: Pathology - Clinical Chemistry
      */
-    service_type_PathologyClinicalChemistry: Coding;
+    readonly PathologyClinicalChemistry: Coding;
     /**
-     * Pathology - General
+     * 159: Pathology - General
      */
-    service_type_PathologyGeneral: Coding;
+    readonly PathologyGeneral: Coding;
     /**
-     * Biorhythm services
+     * 16: Biorhythm services
      */
-    service_type_BiorhythmServices: Coding;
+    readonly BiorhythmServices: Coding;
     /**
-     * Pathology - Genetics
+     * 160: Pathology - Genetics
      */
-    service_type_PathologyGenetics: Coding;
+    readonly PathologyGenetics: Coding;
     /**
-     * Pathology - Haematology
+     * 161: Pathology - Haematology
      */
-    service_type_PathologyHaematology: Coding;
+    readonly PathologyHaematology: Coding;
     /**
-     * Pathology - Immunology
+     * 162: Pathology - Immunology
      */
-    service_type_PathologyImmunology: Coding;
+    readonly PathologyImmunology: Coding;
     /**
-     * Pathology - Microbiology
+     * 163: Pathology - Microbiology
      */
-    service_type_PathologyMicrobiology: Coding;
+    readonly PathologyMicrobiology: Coding;
     /**
-     * Anaesthesiology - Pain Medicine
+     * 164: Anaesthesiology - Pain Medicine
      */
-    service_type_AnaesthesiologyPainMedicine: Coding;
+    readonly AnaesthesiologyPainMedicine: Coding;
     /**
-     * Cardiology
+     * 165: Cardiology
      */
-    service_type_Cardiology: Coding;
+    readonly Cardiology: Coding;
     /**
-     * Clinical Genetics
+     * 166: Clinical Genetics
      */
-    service_type_ClinicalGenetics: Coding;
+    readonly ClinicalGenetics: Coding;
     /**
-     * Clinical Pharmacology
+     * 167: Clinical Pharmacology
      */
-    service_type_ClinicalPharmacology: Coding;
+    readonly ClinicalPharmacology: Coding;
     /**
-     * Dermatology
+     * 168: Dermatology
      */
-    service_type_Dermatology: Coding;
+    readonly Dermatology: Coding;
     /**
-     * Endocrinology
+     * 169: Endocrinology
      */
-    service_type_Endocrinology: Coding;
+    readonly Endocrinology: Coding;
     /**
-     * Bowen therapy
+     * 17: Bowen therapy
      */
-    service_type_BowenTherapy: Coding;
+    readonly BowenTherapy: Coding;
     /**
-     * Gastroenterology &amp; Hepatology
+     * 170: Gastroenterology &amp; Hepatology
      */
-    service_type_GastroenterologyAndHepatology: Coding;
+    readonly GastroenterologyAndHepatology: Coding;
     /**
-     * Geriatric medicine
+     * 171: Geriatric medicine
      */
-    service_type_GeriatricMedicine: Coding;
+    readonly GeriatricMedicine: Coding;
     /**
-     * Immunology &amp; Allergy
+     * 172: Immunology &amp; Allergy
      */
-    service_type_ImmunologyAndAllergy: Coding;
+    readonly ImmunologyAndAllergy: Coding;
     /**
-     * Infectious diseases
+     * 173: Infectious diseases
      */
-    service_type_InfectiousDiseases: Coding;
+    readonly InfectiousDiseases: Coding;
     /**
-     * Intensive care medicine
+     * 174: Intensive care medicine
      */
-    service_type_IntensiveCareMedicine: Coding;
+    readonly IntensiveCareMedicine: Coding;
     /**
-     * Medical Oncology
+     * 175: Medical Oncology
      */
-    service_type_MedicalOncology: Coding;
+    readonly MedicalOncology: Coding;
     /**
-     * Nephrology
+     * 176: Nephrology
      */
-    service_type_Nephrology: Coding;
+    readonly Nephrology: Coding;
     /**
-     * Neurology
+     * 177: Neurology
      */
-    service_type_Neurology: Coding;
+    readonly Neurology: Coding;
     /**
-     * Occupational Medicine
+     * 178: Occupational Medicine
      */
-    service_type_OccupationalMedicine: Coding;
+    readonly OccupationalMedicine: Coding;
     /**
-     * Palliative Medicine
+     * 179: Palliative Medicine
      */
-    service_type_PalliativeMedicine: Coding;
+    readonly PalliativeMedicine: Coding;
     /**
-     * Chinese herbal medicine
+     * 18: Chinese herbal medicine
      */
-    service_type_ChineseHerbalMedicine: Coding;
+    readonly ChineseHerbalMedicine: Coding;
     /**
-     * Public Health Medicine
+     * 180: Public Health Medicine
      */
-    service_type_PublicHealthMedicine: Coding;
+    readonly PublicHealthMedicine: Coding;
     /**
-     * Rehabilitation Medicine
+     * 181: Rehabilitation Medicine
      */
-    service_type_RehabilitationMedicine: Coding;
+    readonly RehabilitationMedicine: Coding;
     /**
-     * Rheumatology
+     * 182: Rheumatology
      */
-    service_type_Rheumatology: Coding;
+    readonly Rheumatology: Coding;
     /**
-     * Sleep Medicine
+     * 183: Sleep Medicine
      */
-    service_type_SleepMedicine: Coding;
+    readonly SleepMedicine: Coding;
     /**
-     * Thoracic medicine
+     * 184: Thoracic medicine
      */
-    service_type_ThoracicMedicine: Coding;
+    readonly ThoracicMedicine: Coding;
     /**
-     * Gynaecological Oncology
+     * 185: Gynaecological Oncology
      */
-    service_type_GynaecologicalOncology: Coding;
+    readonly GynaecologicalOncology: Coding;
     /**
-     * Obstetrics &amp; Gynaecology
+     * 186: Obstetrics &amp; Gynaecology
      */
-    service_type_ObstetricsAndGynaecology: Coding;
+    readonly ObstetricsAndGynaecology: Coding;
     /**
-     * Reproductive Endocrinology &amp; Infertility
+     * 187: Reproductive Endocrinology &amp; Infertility
      */
-    service_type_ReproductiveEndocrinologyInfertility: Coding;
+    readonly ReproductiveEndocrinologyInfertility: Coding;
     /**
-     * Urogynaecology
+     * 188: Urogynaecology
      */
-    service_type_Urogynaecology: Coding;
+    readonly Urogynaecology: Coding;
     /**
-     * Neonatology &amp; Perinatology
+     * 189: Neonatology &amp; Perinatology
      */
-    service_type_NeonatologyAndPerinatology: Coding;
+    readonly NeonatologyAndPerinatology: Coding;
     /**
-     * Feldenkrais
+     * 19: Feldenkrais
      */
-    service_type_Feldenkrais: Coding;
+    readonly Feldenkrais: Coding;
     /**
-     * Paediatric Cardiology
+     * 190: Paediatric Cardiology
      */
-    service_type_PaediatricCardiology: Coding;
+    readonly PaediatricCardiology: Coding;
     /**
-     * Paediatric Clinical Genetics
+     * 191: Paediatric Clinical Genetics
      */
-    service_type_PaediatricClinicalGenetics: Coding;
+    readonly PaediatricClinicalGenetics: Coding;
     /**
-     * Paediatric Clinical Pharmacology
+     * 192: Paediatric Clinical Pharmacology
      */
-    service_type_PaediatricClinicalPharmacology: Coding;
+    readonly PaediatricClinicalPharmacology: Coding;
     /**
-     * Paediatric Endocrinology
+     * 193: Paediatric Endocrinology
      */
-    service_type_PaediatricEndocrinology: Coding;
+    readonly PaediatricEndocrinology: Coding;
     /**
-     * Paediatric Gastroenterology &amp; Hepatology
+     * 194: Paediatric Gastroenterology &amp; Hepatology
      */
-    service_type_PaedGastroenterologyHepatology: Coding;
+    readonly PaedGastroenterologyHepatology: Coding;
     /**
-     * Paediatric Haematology
+     * 195: Paediatric Haematology
      */
-    service_type_PaediatricHaematology: Coding;
+    readonly PaediatricHaematology: Coding;
     /**
-     * Paediatric Immunology &amp; Allergy
+     * 196: Paediatric Immunology &amp; Allergy
      */
-    service_type_PaediatricImmunologyAndAllergy: Coding;
+    readonly PaediatricImmunologyAndAllergy: Coding;
     /**
-     * Paediatric Infectious diseases
+     * 197: Paediatric Infectious diseases
      */
-    service_type_PaediatricInfectiousDiseases: Coding;
+    readonly PaediatricInfectiousDiseases: Coding;
     /**
-     * Paediatric intensive care medicine
+     * 198: Paediatric intensive care medicine
      */
-    service_type_PaediatricIntensiveCareMedicine: Coding;
+    readonly PaediatricIntensiveCareMedicine: Coding;
     /**
-     * Paediatric Medical Oncology
+     * 199: Paediatric Medical Oncology
      */
-    service_type_PaediatricMedicalOncology: Coding;
+    readonly PaediatricMedicalOncology: Coding;
     /**
-     * Aged care assessment
+     * 2: Aged care assessment
      */
-    service_type_AgedCareAssessment: Coding;
+    readonly AgedCareAssessment: Coding;
     /**
-     * Homoeopathy
+     * 20: Homoeopathy
      */
-    service_type_Homoeopathy: Coding;
+    readonly Homoeopathy: Coding;
     /**
-     * Paediatric Medicine
+     * 200: Paediatric Medicine
      */
-    service_type_PaediatricMedicine: Coding;
+    readonly PaediatricMedicine: Coding;
     /**
-     * Paediatric Nephrology
+     * 201: Paediatric Nephrology
      */
-    service_type_PaediatricNephrology: Coding;
+    readonly PaediatricNephrology: Coding;
     /**
-     * Paediatric Neurology
+     * 202: Paediatric Neurology
      */
-    service_type_PaediatricNeurology: Coding;
+    readonly PaediatricNeurology: Coding;
     /**
-     * Paediatric Nuclear Medicine
+     * 203: Paediatric Nuclear Medicine
      */
-    service_type_PaediatricNuclearMedicine: Coding;
+    readonly PaediatricNuclearMedicine: Coding;
     /**
-     * Paediatric Rehabilitation Medicine
+     * 204: Paediatric Rehabilitation Medicine
      */
-    service_type_PaediatricRehabilitationMedicine: Coding;
+    readonly PaediatricRehabilitationMedicine: Coding;
     /**
-     * Paediatric Rheumatology
+     * 205: Paediatric Rheumatology
      */
-    service_type_PaediatricRheumatology: Coding;
+    readonly PaediatricRheumatology: Coding;
     /**
-     * Paediatric Sleep Medicine
+     * 206: Paediatric Sleep Medicine
      */
-    service_type_PaediatricSleepMedicine: Coding;
+    readonly PaediatricSleepMedicine: Coding;
     /**
-     * Paediatric Surgery
+     * 207: Paediatric Surgery
      */
-    service_type_PaediatricSurgery: Coding;
+    readonly PaediatricSurgery: Coding;
     /**
-     * Paediatric Thoracic Medicine
+     * 208: Paediatric Thoracic Medicine
      */
-    service_type_PaediatricThoracicMedicine: Coding;
+    readonly PaediatricThoracicMedicine: Coding;
     /**
-     * Diagnostic Radiology/Xray/CT/Fluoroscopy
+     * 209: Diagnostic Radiology/Xray/CT/Fluoroscopy
      */
-    service_type_DiagRadiologyXrayCTFluoroscopy: Coding;
+    readonly DiagRadiologyXrayCTFluoroscopy: Coding;
     /**
-     * Hydrotherapy
+     * 21: Hydrotherapy
      */
-    service_type_Hydrotherapy: Coding;
+    readonly Hydrotherapy: Coding;
     /**
-     * Diagnostic Ultrasound
+     * 210: Diagnostic Ultrasound
      */
-    service_type_DiagnosticUltrasound: Coding;
+    readonly DiagnosticUltrasound: Coding;
     /**
-     * Magnetic Resonance Imaging (MRI)
+     * 211: Magnetic Resonance Imaging (MRI)
      */
-    service_type_MagneticResonanceImagingMRI: Coding;
+    readonly MagneticResonanceImagingMRI: Coding;
     /**
-     * Nuclear Medicine
+     * 212: Nuclear Medicine
      */
-    service_type_NuclearMedicine: Coding;
+    readonly NuclearMedicine: Coding;
     /**
-     * Obstetric &amp; Gynaecological Ultrasound
+     * 213: Obstetric &amp; Gynaecological Ultrasound
      */
-    service_type_ObstetricGynaecologicalUltrasound: Coding;
+    readonly ObstetricGynaecologicalUltrasound: Coding;
     /**
-     * Radiation oncology
+     * 214: Radiation oncology
      */
-    service_type_RadiationOncology: Coding;
+    readonly RadiationOncology: Coding;
     /**
-     * Cardiothoracic surgery
+     * 215: Cardiothoracic surgery
      */
-    service_type_CardiothoracicSurgery: Coding;
+    readonly CardiothoracicSurgery: Coding;
     /**
-     * Neurosurgery
+     * 216: Neurosurgery
      */
-    service_type_Neurosurgery: Coding;
+    readonly Neurosurgery: Coding;
     /**
-     * Ophthalmology
+     * 217: Ophthalmology
      */
-    service_type_Ophthalmology: Coding;
+    readonly Ophthalmology: Coding;
     /**
-     * Orthopaedic surgery
+     * 218: Orthopaedic surgery
      */
-    service_type_OrthopaedicSurgery: Coding;
+    readonly OrthopaedicSurgery: Coding;
     /**
-     * Otolaryngology - Head &amp; Neck Surgery
+     * 219: Otolaryngology - Head &amp; Neck Surgery
      */
-    service_type_OtolaryngologyHeadAndNeckSurgery: Coding;
+    readonly OtolaryngologyHeadAndNeckSurgery: Coding;
     /**
-     * Hypnotherapy
+     * 22: Hypnotherapy
      */
-    service_type_Hypnotherapy: Coding;
+    readonly Hypnotherapy: Coding;
     /**
-     * Plastic &amp; Reconstructive Surgery
+     * 220: Plastic &amp; Reconstructive Surgery
      */
-    service_type_PlasticAndReconstructiveSurgery: Coding;
+    readonly PlasticAndReconstructiveSurgery: Coding;
     /**
-     * Surgery - General
+     * 221: Surgery - General
      */
-    service_type_SurgeryGeneral: Coding;
+    readonly SurgeryGeneral: Coding;
     /**
-     * Urology
+     * 222: Urology
      */
-    service_type_Urology: Coding;
+    readonly Urology: Coding;
     /**
-     * Vascular surgery
+     * 223: Vascular surgery
      */
-    service_type_VascularSurgery: Coding;
+    readonly VascularSurgery: Coding;
     /**
-     * Support groups
+     * 224: Support groups
      */
-    service_type_SupportGroups: Coding;
+    readonly SupportGroups: Coding;
     /**
-     * Air ambulance
+     * 225: Air ambulance
      */
-    service_type_AirAmbulance: Coding;
+    readonly AirAmbulance: Coding;
     /**
-     * Ambulance
+     * 226: Ambulance
      */
-    service_type_Ambulance: Coding;
+    readonly Ambulance: Coding;
     /**
-     * Blood transport
+     * 227: Blood transport
      */
-    service_type_BloodTransport: Coding;
+    readonly BloodTransport: Coding;
     /**
-     * Community bus
+     * 228: Community bus
      */
-    service_type_CommunityBus: Coding;
+    readonly CommunityBus: Coding;
     /**
-     * Flying doctor service
+     * 229: Flying doctor service
      */
-    service_type_FlyingDoctorService: Coding;
+    readonly FlyingDoctorService: Coding;
     /**
-     * Kinesiology
+     * 23: Kinesiology
      */
-    service_type_Kinesiology: Coding;
+    readonly Kinesiology: Coding;
     /**
-     * Patient transport
+     * 230: Patient transport
      */
-    service_type_PatientTransport: Coding;
+    readonly PatientTransport: Coding;
     /**
-     * A&amp;E
+     * 231: A&amp;E
      */
-    service_type_AAndE: Coding;
+    readonly AAndE: Coding;
     /**
-     * A&amp;EP
+     * 232: A&amp;EP
      */
-    service_type_AAndEP: Coding;
+    readonly AAndEP: Coding;
     /**
-     * Abuse
+     * 233: Abuse
      */
-    service_type_Abuse: Coding;
+    readonly Abuse: Coding;
     /**
-     * ACAS
+     * 234: ACAS
      */
-    service_type_ACAS: Coding;
+    readonly ACAS: Coding;
     /**
-     * Access
+     * 235: Access
      */
-    service_type_Access: Coding;
+    readonly Access: Coding;
     /**
-     * Accident
+     * 236: Accident
      */
-    service_type_Accident: Coding;
+    readonly Accident: Coding;
     /**
-     * Acute Inpatient Service's
+     * 237: Acute Inpatient Service's
      */
-    service_type_AcuteInpatientServ: Coding;
+    readonly AcuteInpatientServ: Coding;
     /**
-     * Adult Day Programs
+     * 238: Adult Day Programs
      */
-    service_type_AdultDayPrograms: Coding;
+    readonly AdultDayPrograms: Coding;
     /**
-     * Adult Mental Health Services
+     * 239: Adult Mental Health Services
      */
-    service_type_AdultMentalHealthServices: Coding;
+    readonly AdultMentalHealthServices: Coding;
     /**
-     * Magnetic therapy
+     * 24: Magnetic therapy
      */
-    service_type_MagneticTherapy: Coding;
+    readonly MagneticTherapy: Coding;
     /**
-     * Advice
+     * 240: Advice
      */
-    service_type_Advice: Coding;
+    readonly Advice: Coding;
     /**
-     * Advocacy
+     * 241: Advocacy
      */
-    service_type_Advocacy: Coding;
+    readonly Advocacy: Coding;
     /**
-     * Aged Persons Mental Health Residential Units
+     * 242: Aged Persons Mental Health Residential Units
      */
-    service_type_AgedPersonsMental: Coding;
+    readonly AgedPersonsMental: Coding;
     /**
-     * Aged Persons Mental Health Services
+     * 243: Aged Persons Mental Health Services
      */
-    service_type_AgedPersonsMental_2: Coding;
+    readonly AgedPersonsMental_243: Coding;
     /**
-     * Aged Persons Mental Health Teams
+     * 244: Aged Persons Mental Health Teams
      */
-    service_type_AgedPersonsMental_3: Coding;
+    readonly AgedPersonsMental_244: Coding;
     /**
-     * Aids
+     * 245: Aids
      */
-    service_type_Aids: Coding;
+    readonly Aids: Coding;
     /**
-     * Al-Anon
+     * 246: Al-Anon
      */
-    service_type_AlAnon: Coding;
+    readonly AlAnon: Coding;
     /**
-     * Alcohol
+     * 247: Alcohol
      */
-    service_type_Alcohol: Coding;
+    readonly Alcohol: Coding;
     /**
-     * Al-Teen
+     * 248: Al-Teen
      */
-    service_type_AlTeen: Coding;
+    readonly AlTeen: Coding;
     /**
-     * Antenatal
+     * 249: Antenatal
      */
-    service_type_Antenatal: Coding;
+    readonly Antenatal: Coding;
     /**
-     * Massage therapy
+     * 25: Massage therapy
      */
-    service_type_MassageTherapy: Coding;
+    readonly MassageTherapy: Coding;
     /**
-     * Anxiety
+     * 250: Anxiety
      */
-    service_type_Anxiety: Coding;
+    readonly Anxiety: Coding;
     /**
-     * Arthritis
+     * 251: Arthritis
      */
-    service_type_Arthritis: Coding;
+    readonly Arthritis: Coding;
     /**
-     * Assessment
+     * 252: Assessment
      */
-    service_type_Assessment: Coding;
+    readonly Assessment: Coding;
     /**
-     * Assistance
+     * 253: Assistance
      */
-    service_type_Assistance: Coding;
+    readonly Assistance: Coding;
     /**
-     * Asthma
+     * 254: Asthma
      */
-    service_type_Asthma: Coding;
+    readonly Asthma: Coding;
     /**
-     * ATSS
+     * 255: ATSS
      */
-    service_type_ATSS: Coding;
+    readonly ATSS: Coding;
     /**
-     * Attendant Care
+     * 256: Attendant Care
      */
-    service_type_AttendantCare: Coding;
+    readonly AttendantCare: Coding;
     /**
-     * Babies
+     * 257: Babies
      */
-    service_type_Babies: Coding;
+    readonly Babies: Coding;
     /**
-     * Bathroom Modification
+     * 258: Bathroom Modification
      */
-    service_type_BathroomModificatio: Coding;
+    readonly BathroomModificatio: Coding;
     /**
-     * Behavior
+     * 259: Behavior
      */
-    service_type_Behavior: Coding;
+    readonly Behavior: Coding;
     /**
-     * Meditation
+     * 26: Meditation
      */
-    service_type_Meditation: Coding;
+    readonly Meditation: Coding;
     /**
-     * Behavior Intervention
+     * 260: Behavior Intervention
      */
-    service_type_BehaviorInterventi: Coding;
+    readonly BehaviorInterventi: Coding;
     /**
-     * Bereavement
+     * 261: Bereavement
      */
-    service_type_Bereavement: Coding;
+    readonly Bereavement: Coding;
     /**
-     * Bipolar
+     * 262: Bipolar
      */
-    service_type_Bipolar: Coding;
+    readonly Bipolar: Coding;
     /**
-     * Birth
+     * 263: Birth
      */
-    service_type_Birth: Coding;
+    readonly Birth: Coding;
     /**
-     * Birth Control
+     * 264: Birth Control
      */
-    service_type_BirthControl: Coding;
+    readonly BirthControl: Coding;
     /**
-     * Birthing Options
+     * 265: Birthing Options
      */
-    service_type_BirthingOptions: Coding;
+    readonly BirthingOptions: Coding;
     /**
-     * BIST
+     * 266: BIST
      */
-    service_type_BIST: Coding;
+    readonly BIST: Coding;
     /**
-     * Blood
+     * 267: Blood
      */
-    service_type_Blood: Coding;
+    readonly Blood: Coding;
     /**
-     * Bone
+     * 268: Bone
      */
-    service_type_Bone: Coding;
+    readonly Bone: Coding;
     /**
-     * Bowel
+     * 269: Bowel
      */
-    service_type_Bowel: Coding;
+    readonly Bowel: Coding;
     /**
-     * Myotherapy
+     * 27: Myotherapy
      */
-    service_type_Myotherapy: Coding;
+    readonly Myotherapy: Coding;
     /**
-     * Brain
+     * 270: Brain
      */
-    service_type_Brain: Coding;
+    readonly Brain: Coding;
     /**
-     * Breast Feeding
+     * 271: Breast Feeding
      */
-    service_type_BreastFeeding: Coding;
+    readonly BreastFeeding: Coding;
     /**
-     * Breast Screen
+     * 272: Breast Screen
      */
-    service_type_BreastScreen: Coding;
+    readonly BreastScreen: Coding;
     /**
-     * Brokerage
+     * 273: Brokerage
      */
-    service_type_Brokerage: Coding;
+    readonly Brokerage: Coding;
     /**
-     * Cancer
+     * 274: Cancer
      */
-    service_type_Cancer: Coding;
+    readonly Cancer: Coding;
     /**
-     * Cancer Support
+     * 275: Cancer Support
      */
-    service_type_CancerSupport: Coding;
+    readonly CancerSupport: Coding;
     /**
-     * Cardiovascular Disease
+     * 276: Cardiovascular Disease
      */
-    service_type_CardiovascularDisea: Coding;
+    readonly CardiovascularDisea: Coding;
     /**
-     * Care Packages
+     * 277: Care Packages
      */
-    service_type_CarePackages: Coding;
+    readonly CarePackages: Coding;
     /**
-     * Carer
+     * 278: Carer
      */
-    service_type_Carer: Coding;
+    readonly Carer: Coding;
     /**
-     * Case Management
+     * 279: Case Management
      */
-    service_type_CaseManagement: Coding;
+    readonly CaseManagement: Coding;
     /**
-     * Naturopathy
+     * 28: Naturopathy
      */
-    service_type_Naturopathy: Coding;
+    readonly Naturopathy: Coding;
     /**
-     * Casualty
+     * 280: Casualty
      */
-    service_type_Casualty: Coding;
+    readonly Casualty: Coding;
     /**
-     * Centrelink
+     * 281: Centrelink
      */
-    service_type_Centrelink: Coding;
+    readonly Centrelink: Coding;
     /**
-     * Chemists
+     * 282: Chemists
      */
-    service_type_Chemists: Coding;
+    readonly Chemists: Coding;
     /**
-     * Child And Adolescent Mental Health Services
+     * 283: Child And Adolescent Mental Health Services
      */
-    service_type_ChildAndAdolescent: Coding;
+    readonly ChildAndAdolescent: Coding;
     /**
-     * Child Care
+     * 284: Child Care
      */
-    service_type_ChildCare: Coding;
+    readonly ChildCare: Coding;
     /**
-     * Child Services
+     * 285: Child Services
      */
-    service_type_ChildServices: Coding;
+    readonly ChildServices: Coding;
     /**
-     * Children
+     * 286: Children
      */
-    service_type_Children: Coding;
+    readonly Children: Coding;
     /**
-     * Children's Services
+     * 287: Children's Services
      */
-    service_type_ChildrenQuoteSServices: Coding;
+    readonly ChildrenQuoteSServices: Coding;
     /**
-     * Cholesterol
+     * 288: Cholesterol
      */
-    service_type_Cholesterol: Coding;
+    readonly Cholesterol: Coding;
     /**
-     * Clothing
+     * 289: Clothing
      */
-    service_type_Clothing: Coding;
+    readonly Clothing: Coding;
     /**
-     * Reflexology
+     * 29: Reflexology
      */
-    service_type_Reflexology: Coding;
+    readonly Reflexology: Coding;
     /**
-     * Community Based Accommodation
+     * 290: Community Based Accommodation
      */
-    service_type_CommunityBasedAcco: Coding;
+    readonly CommunityBasedAcco: Coding;
     /**
-     * Community Care Unit
+     * 291: Community Care Unit
      */
-    service_type_CommunityCareUnit: Coding;
+    readonly CommunityCareUnit: Coding;
     /**
-     * Community Child And Adolescent Mental Health Services
+     * 292: Community Child And Adolescent Mental Health Services
      */
-    service_type_CommunityChildAnd: Coding;
+    readonly CommunityChildAnd: Coding;
     /**
-     * Community Health
+     * 293: Community Health
      */
-    service_type_CommunityHealth: Coding;
+    readonly CommunityHealth: Coding;
     /**
-     * Community Residential Unit
+     * 294: Community Residential Unit
      */
-    service_type_CommunityResidentia: Coding;
+    readonly CommunityResidentia: Coding;
     /**
-     * Community Transport
+     * 295: Community Transport
      */
-    service_type_CommunityTransport: Coding;
+    readonly CommunityTransport: Coding;
     /**
-     * Companion Visiting
+     * 296: Companion Visiting
      */
-    service_type_CompanionVisiting: Coding;
+    readonly CompanionVisiting: Coding;
     /**
-     * Companionship
+     * 297: Companionship
      */
-    service_type_Companionship: Coding;
+    readonly Companionship: Coding;
     /**
-     * Consumer Advice
+     * 298: Consumer Advice
      */
-    service_type_ConsumerAdvice: Coding;
+    readonly ConsumerAdvice: Coding;
     /**
-     * Consumer Issues
+     * 299: Consumer Issues
      */
-    service_type_ConsumerIssues: Coding;
+    readonly ConsumerIssues: Coding;
     /**
-     * Aged Care information/referral
+     * 3: Aged Care information/referral
      */
-    service_type_AgedCareInformationReferral: Coding;
+    readonly AgedCareInformationReferral: Coding;
     /**
-     * Reiki
+     * 30: Reiki
      */
-    service_type_Reiki: Coding;
+    readonly Reiki: Coding;
     /**
-     * Continuing Care Services
+     * 300: Continuing Care Services
      */
-    service_type_ContinuingCareServ: Coding;
+    readonly ContinuingCareServ: Coding;
     /**
-     * Contraception Information
+     * 301: Contraception Information
      */
-    service_type_ContraceptionInform: Coding;
+    readonly ContraceptionInform: Coding;
     /**
-     * Coordinating Bodies
+     * 302: Coordinating Bodies
      */
-    service_type_CoordinatingBodies: Coding;
+    readonly CoordinatingBodies: Coding;
     /**
-     * Correctional Services
+     * 303: Correctional Services
      */
-    service_type_CorrectionalService: Coding;
+    readonly CorrectionalService: Coding;
     /**
-     * Council Environmental Health
+     * 304: Council Environmental Health
      */
-    service_type_CouncilEnvironmenta: Coding;
+    readonly CouncilEnvironmenta: Coding;
     /**
-     * Counselling
+     * 305: Counselling
      */
-    service_type_Counselling: Coding;
+    readonly Counselling: Coding;
     /**
-     * Criminal
+     * 306: Criminal
      */
-    service_type_Criminal: Coding;
+    readonly Criminal: Coding;
     /**
-     * Crises
+     * 307: Crises
      */
-    service_type_Crises: Coding;
+    readonly Crises: Coding;
     /**
-     * Crisis Assessment And Treatment Services (Cats)
+     * 308: Crisis Assessment And Treatment Services (Cats)
      */
-    service_type_CrisisAssessmentAn: Coding;
+    readonly CrisisAssessmentAn: Coding;
     /**
-     * Crisis Assistance
+     * 309: Crisis Assistance
      */
-    service_type_CrisisAssistance: Coding;
+    readonly CrisisAssistance: Coding;
     /**
-     * Relaxation therapy
+     * 31: Relaxation therapy
      */
-    service_type_RelaxationTherapy: Coding;
+    readonly RelaxationTherapy: Coding;
     /**
-     * Crisis Refuge
+     * 310: Crisis Refuge
      */
-    service_type_CrisisRefuge: Coding;
+    readonly CrisisRefuge: Coding;
     /**
-     * Day Program
+     * 311: Day Program
      */
-    service_type_DayProgram: Coding;
+    readonly DayProgram: Coding;
     /**
-     * Deaf
+     * 312: Deaf
      */
-    service_type_Deaf: Coding;
+    readonly Deaf: Coding;
     /**
-     * Dental Hygiene
+     * 313: Dental Hygiene
      */
-    service_type_DentalHygiene: Coding;
+    readonly DentalHygiene: Coding;
     /**
-     * Dentistry
+     * 314: Dentistry
      */
-    service_type_Dentistry: Coding;
+    readonly Dentistry: Coding;
     /**
-     * Dentures
+     * 315: Dentures
      */
-    service_type_Dentures: Coding;
+    readonly Dentures: Coding;
     /**
-     * Depression
+     * 316: Depression
      */
-    service_type_Depression: Coding;
+    readonly Depression: Coding;
     /**
-     * Detoxification
+     * 317: Detoxification
      */
-    service_type_Detoxification: Coding;
+    readonly Detoxification: Coding;
     /**
-     * Diabetes
+     * 318: Diabetes
      */
-    service_type_Diabetes: Coding;
+    readonly Diabetes: Coding;
     /**
-     * Diaphragm Fitting
+     * 319: Diaphragm Fitting
      */
-    service_type_DiaphragmFitting: Coding;
+    readonly DiaphragmFitting: Coding;
     /**
-     * Shiatsu
+     * 32: Shiatsu
      */
-    service_type_Shiatsu: Coding;
+    readonly Shiatsu: Coding;
     /**
-     * Dieticians
+     * 320: Dieticians
      */
-    service_type_Dieticians: Coding;
+    readonly Dieticians: Coding;
     /**
-     * Disabled Parking
+     * 321: Disabled Parking
      */
-    service_type_DisabledParking: Coding;
+    readonly DisabledParking: Coding;
     /**
-     * District Nursing
+     * 322: District Nursing
      */
-    service_type_DistrictNursing: Coding;
+    readonly DistrictNursing: Coding;
     /**
-     * Divorce
+     * 323: Divorce
      */
-    service_type_Divorce: Coding;
+    readonly Divorce: Coding;
     /**
-     * Doctors
+     * 324: Doctors
      */
-    service_type_Doctors: Coding;
+    readonly Doctors: Coding;
     /**
-     * Drink-Drive
+     * 325: Drink-Drive
      */
-    service_type_DrinkDrive: Coding;
+    readonly DrinkDrive: Coding;
     /**
-     * Dual Diagnosis Services
+     * 326: Dual Diagnosis Services
      */
-    service_type_DualDiagnosisServi: Coding;
+    readonly DualDiagnosisServi: Coding;
     /**
-     * Early Choice
+     * 327: Early Choice
      */
-    service_type_EarlyChoice: Coding;
+    readonly EarlyChoice: Coding;
     /**
-     * Eating Disorder
+     * 328: Eating Disorder
      */
-    service_type_EatingDisorder: Coding;
+    readonly EatingDisorder: Coding;
     /**
-     * Western herbal medicine
+     * 33: Western herbal medicine
      */
-    service_type_WesternHerbalMedicine: Coding;
+    readonly WesternHerbalMedicine: Coding;
     /**
-     * Emergency Relief
+     * 330: Emergency Relief
      */
-    service_type_EmergencyRelief: Coding;
+    readonly EmergencyRelief: Coding;
     /**
-     * Employment And Training
+     * 331: Employment And Training
      */
-    service_type_EmploymentAndTrain: Coding;
+    readonly EmploymentAndTrain: Coding;
     /**
-     * Environment
+     * 332: Environment
      */
-    service_type_Environment: Coding;
+    readonly Environment: Coding;
     /**
-     * Equipment
+     * 333: Equipment
      */
-    service_type_Equipment: Coding;
+    readonly Equipment: Coding;
     /**
-     * Exercise
+     * 334: Exercise
      */
-    service_type_Exercise: Coding;
+    readonly Exercise: Coding;
     /**
-     * Facility
+     * 335: Facility
      */
-    service_type_Facility: Coding;
+    readonly Facility: Coding;
     /**
-     * Family Choice
+     * 336: Family Choice
      */
-    service_type_FamilyChoice: Coding;
+    readonly FamilyChoice: Coding;
     /**
-     * Family Law
+     * 337: Family Law
      */
-    service_type_FamilyLaw: Coding;
+    readonly FamilyLaw: Coding;
     /**
-     * Family Options
+     * 338: Family Options
      */
-    service_type_FamilyOptions: Coding;
+    readonly FamilyOptions: Coding;
     /**
-     * Family Services
+     * 339: Family Services
      */
-    service_type_FamilyServices: Coding;
+    readonly FamilyServices: Coding;
     /**
-     * Family day care
+     * 34: Family day care
      */
-    service_type_FamilyDayCare: Coding;
+    readonly FamilyDayCare: Coding;
     /**
-     * FFYA
+     * 340: FFYA
      */
-    service_type_FFYA: Coding;
+    readonly FFYA: Coding;
     /**
-     * Financial Aid
+     * 341: Financial Aid
      */
-    service_type_FinancialAid: Coding;
+    readonly FinancialAid: Coding;
     /**
-     * Fitness
+     * 342: Fitness
      */
-    service_type_Fitness: Coding;
+    readonly Fitness: Coding;
     /**
-     * Flexible Care Packages
+     * 343: Flexible Care Packages
      */
-    service_type_FlexibleCarePackag: Coding;
+    readonly FlexibleCarePackag: Coding;
     /**
-     * Food
+     * 344: Food
      */
-    service_type_Food: Coding;
+    readonly Food: Coding;
     /**
-     * Food Vouchers
+     * 345: Food Vouchers
      */
-    service_type_FoodVouchers: Coding;
+    readonly FoodVouchers: Coding;
     /**
-     * Forensic Mental Health Services
+     * 346: Forensic Mental Health Services
      */
-    service_type_ForensicMentalHeal: Coding;
+    readonly ForensicMentalHeal: Coding;
     /**
-     * Futures
+     * 347: Futures
      */
-    service_type_Futures: Coding;
+    readonly Futures: Coding;
     /**
-     * Futures For Young Adults
+     * 348: Futures For Young Adults
      */
-    service_type_FuturesForYoungAd: Coding;
+    readonly FuturesForYoungAd: Coding;
     /**
-     * General Practitioners
+     * 349: General Practitioners
      */
-    service_type_GeneralPractitioner: Coding;
+    readonly GeneralPractitioner: Coding;
     /**
-     * Holiday programs
+     * 35: Holiday programs
      */
-    service_type_HolidayPrograms: Coding;
+    readonly HolidayPrograms: Coding;
     /**
-     * Grants
+     * 350: Grants
      */
-    service_type_Grants: Coding;
+    readonly Grants: Coding;
     /**
-     * Grief
+     * 351: Grief
      */
-    service_type_Grief: Coding;
+    readonly Grief: Coding;
     /**
-     * Grief Counselling
+     * 352: Grief Counselling
      */
-    service_type_GriefCounselling: Coding;
+    readonly GriefCounselling: Coding;
     /**
-     * HACC
+     * 353: HACC
      */
-    service_type_HACC: Coding;
+    readonly HACC: Coding;
     /**
-     * Heart Disease
+     * 354: Heart Disease
      */
-    service_type_HeartDisease: Coding;
+    readonly HeartDisease: Coding;
     /**
-     * Help
+     * 355: Help
      */
-    service_type_Help: Coding;
+    readonly Help: Coding;
     /**
-     * High Blood Pressure
+     * 356: High Blood Pressure
      */
-    service_type_HighBloodPressure: Coding;
+    readonly HighBloodPressure: Coding;
     /**
-     * Home Help
+     * 357: Home Help
      */
-    service_type_HomeHelp: Coding;
+    readonly HomeHelp: Coding;
     /**
-     * Home Nursing
+     * 358: Home Nursing
      */
-    service_type_HomeNursing: Coding;
+    readonly HomeNursing: Coding;
     /**
-     * Homefirst
+     * 359: Homefirst
      */
-    service_type_Homefirst: Coding;
+    readonly Homefirst: Coding;
     /**
-     * Kindergarten inclusion support for children with a disability
+     * 36: Kindergarten inclusion support for children with a disability
      */
-    service_type_KindergartenInclusionSupport: Coding;
+    readonly KindergartenInclusionSupport: Coding;
     /**
-     * Hospice Care
+     * 360: Hospice Care
      */
-    service_type_HospiceCare: Coding;
+    readonly HospiceCare: Coding;
     /**
-     * Hospital Services
+     * 361: Hospital Services
      */
-    service_type_HospitalServices: Coding;
+    readonly HospitalServices: Coding;
     /**
-     * Hospital To Home
+     * 362: Hospital To Home
      */
-    service_type_HospitalToHome: Coding;
+    readonly HospitalToHome: Coding;
     /**
-     * Hostel
+     * 364: Hostel
      */
-    service_type_Hostel: Coding;
+    readonly Hostel: Coding;
     /**
-     * Hostel Accommodation
+     * 365: Hostel Accommodation
      */
-    service_type_HostelAccommodation: Coding;
+    readonly HostelAccommodation: Coding;
     /**
-     * Household Items
+     * 366: Household Items
      */
-    service_type_HouseholdItems: Coding;
+    readonly HouseholdItems: Coding;
     /**
-     * Hypertension
+     * 367: Hypertension
      */
-    service_type_Hypertension: Coding;
+    readonly Hypertension: Coding;
     /**
-     * Illness
+     * 368: Illness
      */
-    service_type_Illness: Coding;
+    readonly Illness: Coding;
     /**
-     * Independent Living
+     * 369: Independent Living
      */
-    service_type_IndependentLiving: Coding;
+    readonly IndependentLiving: Coding;
     /**
-     * Kindergarten/preschool
+     * 37: Kindergarten/preschool
      */
-    service_type_KindergartenPreschool: Coding;
+    readonly KindergartenPreschool: Coding;
     /**
-     * Information
+     * 370: Information
      */
-    service_type_Information: Coding;
+    readonly Information: Coding;
     /**
-     * Injury
+     * 371: Injury
      */
-    service_type_Injury: Coding;
+    readonly Injury: Coding;
     /**
-     * Intake
+     * 372: Intake
      */
-    service_type_Intake: Coding;
+    readonly Intake: Coding;
     /**
-     * Intensive Mobile Youth Outreach Services (Imyos)
+     * 373: Intensive Mobile Youth Outreach Services (Imyos)
      */
-    service_type_IntensiveMobileYou: Coding;
+    readonly IntensiveMobileYou: Coding;
     /**
-     * Intervention
+     * 374: Intervention
      */
-    service_type_Intervention: Coding;
+    readonly Intervention: Coding;
     /**
-     * Job Searching
+     * 375: Job Searching
      */
-    service_type_JobSearching: Coding;
+    readonly JobSearching: Coding;
     /**
-     * Justice
+     * 376: Justice
      */
-    service_type_Justice: Coding;
+    readonly Justice: Coding;
     /**
-     * Leisure
+     * 377: Leisure
      */
-    service_type_Leisure: Coding;
+    readonly Leisure: Coding;
     /**
-     * Loans
+     * 378: Loans
      */
-    service_type_Loans: Coding;
+    readonly Loans: Coding;
     /**
-     * Low Income Earners
+     * 379: Low Income Earners
      */
-    service_type_LowIncomeEarners: Coding;
+    readonly LowIncomeEarners: Coding;
     /**
-     * Long day child care
+     * 38: Long day child care
      */
-    service_type_LongDayChildCare: Coding;
+    readonly LongDayChildCare: Coding;
     /**
-     * Lung
+     * 380: Lung
      */
-    service_type_Lung: Coding;
+    readonly Lung: Coding;
     /**
-     * Making A Difference
+     * 381: Making A Difference
      */
-    service_type_MakingADifference: Coding;
+    readonly MakingADifference: Coding;
     /**
-     * Medical Services
+     * 382: Medical Services
      */
-    service_type_MedicalServices: Coding;
+    readonly MedicalServices: Coding;
     /**
-     * Medical Specialists
+     * 383: Medical Specialists
      */
-    service_type_MedicalSpecialists: Coding;
+    readonly MedicalSpecialists: Coding;
     /**
-     * Medication Administration
+     * 384: Medication Administration
      */
-    service_type_MedicationAdministr: Coding;
+    readonly MedicationAdministr: Coding;
     /**
-     * Menstrual Information
+     * 385: Menstrual Information
      */
-    service_type_MenstrualInformatio: Coding;
+    readonly MenstrualInformatio: Coding;
     /**
-     * Methadone
+     * 386: Methadone
      */
-    service_type_Methadone: Coding;
+    readonly Methadone: Coding;
     /**
-     * Mobile Support And Treatment Services (MSTS)
+     * 387: Mobile Support And Treatment Services (MSTS)
      */
-    service_type_MobileSupportAndT: Coding;
+    readonly MobileSupportAndT: Coding;
     /**
-     * Motor Neurone
+     * 388: Motor Neurone
      */
-    service_type_MotorNeurone: Coding;
+    readonly MotorNeurone: Coding;
     /**
-     * Multiple Sclerosis
+     * 389: Multiple Sclerosis
      */
-    service_type_MultipleSclerosis: Coding;
+    readonly MultipleSclerosis: Coding;
     /**
-     * Occasional child care
+     * 39: Occasional child care
      */
-    service_type_OccasionalChildCare: Coding;
+    readonly OccasionalChildCare: Coding;
     /**
-     * Neighbourhood House
+     * 390: Neighbourhood House
      */
-    service_type_NeighbourhoodHouse: Coding;
+    readonly NeighbourhoodHouse: Coding;
     /**
-     * Nursing Home
+     * 391: Nursing Home
      */
-    service_type_NursingHome: Coding;
+    readonly NursingHome: Coding;
     /**
-     * Nursing Mothers
+     * 392: Nursing Mothers
      */
-    service_type_NursingMothers: Coding;
+    readonly NursingMothers: Coding;
     /**
-     * Obesity
+     * 393: Obesity
      */
-    service_type_Obesity: Coding;
+    readonly Obesity: Coding;
     /**
-     * Occupational Health &amp; Safety
+     * 394: Occupational Health &amp; Safety
      */
-    service_type_OccupationalHealth: Coding;
+    readonly OccupationalHealth: Coding;
     /**
-     * Optometrist
+     * 395: Optometrist
      */
-    service_type_Optometrist: Coding;
+    readonly Optometrist: Coding;
     /**
-     * Oral Hygiene
+     * 396: Oral Hygiene
      */
-    service_type_OralHygiene: Coding;
+    readonly OralHygiene: Coding;
     /**
-     * Outpatients
+     * 397: Outpatients
      */
-    service_type_Outpatients: Coding;
+    readonly Outpatients: Coding;
     /**
-     * Outreach Service
+     * 398: Outreach Service
      */
-    service_type_OutreachService: Coding;
+    readonly OutreachService: Coding;
     /**
-     * PADP
+     * 399: PADP
      */
-    service_type_PADP: Coding;
+    readonly PADP: Coding;
     /**
-     * Aged Residential Care
+     * 4: Aged Residential Care
      */
-    service_type_AgedResidentialCare: Coding;
+    readonly AgedResidentialCare: Coding;
     /**
-     * Outside school hours care
+     * 40: Outside school hours care
      */
-    service_type_OutsideSchoolHoursCare: Coding;
+    readonly OutsideSchoolHoursCare: Coding;
     /**
-     * Pain
+     * 400: Pain
      */
-    service_type_Pain: Coding;
+    readonly Pain: Coding;
     /**
-     * Pap Smear
+     * 401: Pap Smear
      */
-    service_type_PapSmear: Coding;
+    readonly PapSmear: Coding;
     /**
-     * Parenting
+     * 402: Parenting
      */
-    service_type_Parenting: Coding;
+    readonly Parenting: Coding;
     /**
-     * Peak Organizations
+     * 403: Peak Organizations
      */
-    service_type_PeakOrganizations: Coding;
+    readonly PeakOrganizations: Coding;
     /**
-     * Personal Care
+     * 404: Personal Care
      */
-    service_type_PersonalCare: Coding;
+    readonly PersonalCare: Coding;
     /**
-     * Pharmacies
+     * 405: Pharmacies
      */
-    service_type_Pharmacies: Coding;
+    readonly Pharmacies: Coding;
     /**
-     * Phobias
+     * 406: Phobias
      */
-    service_type_Phobias: Coding;
+    readonly Phobias: Coding;
     /**
-     * Physical
+     * 407: Physical
      */
-    service_type_Physical: Coding;
+    readonly Physical: Coding;
     /**
-     * Physical Activity
+     * 408: Physical Activity
      */
-    service_type_PhysicalActivity: Coding;
+    readonly PhysicalActivity: Coding;
     /**
-     * Postnatal
+     * 409: Postnatal
      */
-    service_type_Postnatal: Coding;
+    readonly Postnatal: Coding;
     /**
-     * Children's play programs
+     * 41: Children's play programs
      */
-    service_type_ChildrenQuoteSPlayPrograms: Coding;
+    readonly ChildrenQuoteSPlayPrograms: Coding;
     /**
-     * Pregnancy
+     * 410: Pregnancy
      */
-    service_type_Pregnancy: Coding;
+    readonly Pregnancy: Coding;
     /**
-     * Pregnancy Tests
+     * 411: Pregnancy Tests
      */
-    service_type_PregnancyTests: Coding;
+    readonly PregnancyTests: Coding;
     /**
-     * Preschool
+     * 412: Preschool
      */
-    service_type_Preschool: Coding;
+    readonly Preschool: Coding;
     /**
-     * Prescriptions
+     * 413: Prescriptions
      */
-    service_type_Prescriptions: Coding;
+    readonly Prescriptions: Coding;
     /**
-     * Primary Mental Health And Early Intervention Teams
+     * 414: Primary Mental Health And Early Intervention Teams
      */
-    service_type_PrimaryMentalHealt: Coding;
+    readonly PrimaryMentalHealt: Coding;
     /**
-     * Property Maintenance
+     * 415: Property Maintenance
      */
-    service_type_PropertyMaintenance: Coding;
+    readonly PropertyMaintenance: Coding;
     /**
-     * Prostate
+     * 416: Prostate
      */
-    service_type_Prostate: Coding;
+    readonly Prostate: Coding;
     /**
-     * Psychiatric
+     * 417: Psychiatric
      */
-    service_type_Psychiatric: Coding;
+    readonly Psychiatric: Coding;
     /**
-     * Psychiatric Disability Support Services - Home-Based Outreach
+     * 418: Psychiatric Disability Support Services - Home-Based Outreach
      */
-    service_type_PsychiatricDisabili: Coding;
+    readonly PsychiatricDisabili: Coding;
     /**
-     * Psychiatric Disability Support Services - Planned Respite
+     * 419: Psychiatric Disability Support Services - Planned Respite
      */
-    service_type_PsychiatricDisabili_2: Coding;
+    readonly PsychiatricDisabili_419: Coding;
     /**
-     * Parenting &amp; family management support/education
+     * 42: Parenting &amp; family management support/education
      */
-    service_type_ParentingFamilySupportEducation: Coding;
+    readonly ParentingFamilySupportEducation: Coding;
     /**
-     * Psychiatric Disability Support Services - Residential Rehabilitation
+     * 420: Psychiatric Disability Support Services - Residential Rehabilitation
      */
-    service_type_PsychiatricDisabili_3: Coding;
+    readonly PsychiatricDisabili_420: Coding;
     /**
-     * Psychiatric Disability Support Services Home-Based Outreach
+     * 421: Psychiatric Disability Support Services Home-Based Outreach
      */
-    service_type_PsychiatricDisabili_4: Coding;
+    readonly PsychiatricDisabili_421: Coding;
     /**
-     * Psychiatric Disability Support Services Mutual Support And Self Help
+     * 422: Psychiatric Disability Support Services Mutual Support And Self Help
      */
-    service_type_PsychiatricDisabili_5: Coding;
+    readonly PsychiatricDisabili_422: Coding;
     /**
-     * Psychiatric Support
+     * 423: Psychiatric Support
      */
-    service_type_PsychiatricSupport: Coding;
+    readonly PsychiatricSupport: Coding;
     /**
-     * Recreation
+     * 424: Recreation
      */
-    service_type_Recreation: Coding;
+    readonly Recreation: Coding;
     /**
-     * Referral
+     * 425: Referral
      */
-    service_type_Referral: Coding;
+    readonly Referral: Coding;
     /**
-     * Refuge
+     * 426: Refuge
      */
-    service_type_Refuge: Coding;
+    readonly Refuge: Coding;
     /**
-     * Rent Assistance
+     * 427: Rent Assistance
      */
-    service_type_RentAssistance: Coding;
+    readonly RentAssistance: Coding;
     /**
-     * Residential Facilities
+     * 428: Residential Facilities
      */
-    service_type_ResidentialFaciliti: Coding;
+    readonly ResidentialFaciliti: Coding;
     /**
-     * Residential Respite
+     * 429: Residential Respite
      */
-    service_type_ResidentialRespite: Coding;
+    readonly ResidentialRespite: Coding;
     /**
-     * Playgroup
+     * 43: Playgroup
      */
-    service_type_Playgroup: Coding;
+    readonly Playgroup: Coding;
     /**
-     * Respiratory
+     * 430: Respiratory
      */
-    service_type_Respiratory: Coding;
+    readonly Respiratory: Coding;
     /**
-     * Response
+     * 431: Response
      */
-    service_type_Response: Coding;
+    readonly Response: Coding;
     /**
-     * Rooming Houses
+     * 432: Rooming Houses
      */
-    service_type_RoomingHouses: Coding;
+    readonly RoomingHouses: Coding;
     /**
-     * Safe Sex
+     * 433: Safe Sex
      */
-    service_type_SafeSex: Coding;
+    readonly SafeSex: Coding;
     /**
-     * Secure Extended Care Inpatient Services
+     * 434: Secure Extended Care Inpatient Services
      */
-    service_type_SecureExtendedCare: Coding;
+    readonly SecureExtendedCare: Coding;
     /**
-     * Self Help
+     * 435: Self Help
      */
-    service_type_SelfHelp: Coding;
+    readonly SelfHelp: Coding;
     /**
-     * Separation
+     * 436: Separation
      */
-    service_type_Separation: Coding;
+    readonly Separation: Coding;
     /**
-     * Services
+     * 437: Services
      */
-    service_type_Services: Coding;
+    readonly Services: Coding;
     /**
-     * Sex Education
+     * 438: Sex Education
      */
-    service_type_SexEducation: Coding;
+    readonly SexEducation: Coding;
     /**
-     * Sexual Abuse
+     * 439: Sexual Abuse
      */
-    service_type_SexualAbuse: Coding;
+    readonly SexualAbuse: Coding;
     /**
-     * School nursing
+     * 44: School nursing
      */
-    service_type_SchoolNursing: Coding;
+    readonly SchoolNursing: Coding;
     /**
-     * Sexual Issues
+     * 440: Sexual Issues
      */
-    service_type_SexualIssues: Coding;
+    readonly SexualIssues: Coding;
     /**
-     * Sexually Transmitted Diseases
+     * 441: Sexually Transmitted Diseases
      */
-    service_type_SexuallyTransmitted: Coding;
+    readonly SexuallyTransmitted: Coding;
     /**
-     * SIDS
+     * 442: SIDS
      */
-    service_type_SIDS: Coding;
+    readonly SIDS: Coding;
     /**
-     * Social Support
+     * 443: Social Support
      */
-    service_type_SocialSupport: Coding;
+    readonly SocialSupport: Coding;
     /**
-     * Socialisation
+     * 444: Socialisation
      */
-    service_type_Socialisation: Coding;
+    readonly Socialisation: Coding;
     /**
-     * Special Needs
+     * 445: Special Needs
      */
-    service_type_SpecialNeeds: Coding;
+    readonly SpecialNeeds: Coding;
     /**
-     * Speech Therapist
+     * 446: Speech Therapist
      */
-    service_type_SpeechTherapist: Coding;
+    readonly SpeechTherapist: Coding;
     /**
-     * Splinting
+     * 447: Splinting
      */
-    service_type_Splinting: Coding;
+    readonly Splinting: Coding;
     /**
-     * Sport
+     * 448: Sport
      */
-    service_type_Sport: Coding;
+    readonly Sport: Coding;
     /**
-     * Statewide And Specialist Services
+     * 449: Statewide And Specialist Services
      */
-    service_type_StatewideAndSpecia: Coding;
+    readonly StatewideAndSpecia: Coding;
     /**
-     * Toy library
+     * 45: Toy library
      */
-    service_type_ToyLibrary: Coding;
+    readonly ToyLibrary: Coding;
     /**
-     * STD
+     * 450: STD
      */
-    service_type_STD: Coding;
+    readonly STD: Coding;
     /**
-     * STI
+     * 451: STI
      */
-    service_type_STI: Coding;
+    readonly STI: Coding;
     /**
-     * Stillbirth
+     * 452: Stillbirth
      */
-    service_type_Stillbirth: Coding;
+    readonly Stillbirth: Coding;
     /**
-     * Stomal Care
+     * 453: Stomal Care
      */
-    service_type_StomalCare: Coding;
+    readonly StomalCare: Coding;
     /**
-     * Stroke
+     * 454: Stroke
      */
-    service_type_Stroke: Coding;
+    readonly Stroke: Coding;
     /**
-     * Substance Abuse
+     * 455: Substance Abuse
      */
-    service_type_SubstanceAbuse: Coding;
+    readonly SubstanceAbuse: Coding;
     /**
-     * Support
+     * 456: Support
      */
-    service_type_Support: Coding;
+    readonly Support: Coding;
     /**
-     * Syringes
+     * 457: Syringes
      */
-    service_type_Syringes: Coding;
+    readonly Syringes: Coding;
     /**
-     * Teeth
+     * 458: Teeth
      */
-    service_type_Teeth: Coding;
+    readonly Teeth: Coding;
     /**
-     * Tenancy Advice
+     * 459: Tenancy Advice
      */
-    service_type_TenancyAdvice: Coding;
+    readonly TenancyAdvice: Coding;
     /**
-     * Child protection/child abuse report
+     * 46: Child protection/child abuse report
      */
-    service_type_ChildProtectionChildAbuseReport: Coding;
+    readonly ChildProtectionChildAbuseReport: Coding;
     /**
-     * Terminal Illness
+     * 460: Terminal Illness
      */
-    service_type_TerminalIllness: Coding;
+    readonly TerminalIllness: Coding;
     /**
-     * Therapy
+     * 461: Therapy
      */
-    service_type_Therapy: Coding;
+    readonly Therapy: Coding;
     /**
-     * Transcription
+     * 462: Transcription
      */
-    service_type_Transcription: Coding;
+    readonly Transcription: Coding;
     /**
-     * Translating Services
+     * 463: Translating Services
      */
-    service_type_TranslatingServices: Coding;
+    readonly TranslatingServices: Coding;
     /**
-     * Translator
+     * 464: Translator
      */
-    service_type_Translator: Coding;
+    readonly Translator: Coding;
     /**
-     * Transport
+     * 465: Transport
      */
-    service_type_Transport: Coding;
+    readonly Transport: Coding;
     /**
-     * Vertebrae
+     * 466: Vertebrae
      */
-    service_type_Vertebrae: Coding;
+    readonly Vertebrae: Coding;
     /**
-     * Violence
+     * 467: Violence
      */
-    service_type_Violence: Coding;
+    readonly Violence: Coding;
     /**
-     * Vocational Guidance
+     * 468: Vocational Guidance
      */
-    service_type_VocationalGuidance: Coding;
+    readonly VocationalGuidance: Coding;
     /**
-     * Weight
+     * 469: Weight
      */
-    service_type_Weight: Coding;
+    readonly Weight: Coding;
     /**
-     * Foster care
+     * 47: Foster care
      */
-    service_type_FosterCare: Coding;
+    readonly FosterCare: Coding;
     /**
-     * Welfare Assistance
+     * 470: Welfare Assistance
      */
-    service_type_WelfareAssistance: Coding;
+    readonly WelfareAssistance: Coding;
     /**
-     * Welfare Counselling
+     * 471: Welfare Counselling
      */
-    service_type_WelfareCounselling: Coding;
+    readonly WelfareCounselling: Coding;
     /**
-     * Wheelchairs
+     * 472: Wheelchairs
      */
-    service_type_Wheelchairs: Coding;
+    readonly Wheelchairs: Coding;
     /**
-     * Wound Management
+     * 473: Wound Management
      */
-    service_type_WoundManagement: Coding;
+    readonly WoundManagement: Coding;
     /**
-     * Young People At Risk
+     * 474: Young People At Risk
      */
-    service_type_YoungPeopleAtRisk: Coding;
+    readonly YoungPeopleAtRisk: Coding;
     /**
-     * Further Description - Community Health Care
+     * 475: Further Description - Community Health Care
      */
-    service_type_FurtherDescCommunityHealthCare: Coding;
+    readonly FurtherDescCommunityHealthCare: Coding;
     /**
-     * Library
+     * 476: Library
      */
-    service_type_Library: Coding;
+    readonly Library: Coding;
     /**
-     * Community Hours
+     * 477: Community Hours
      */
-    service_type_CommunityHours: Coding;
+    readonly CommunityHours: Coding;
     /**
-     * Further Description - Specialist Medical
+     * 478: Further Description - Specialist Medical
      */
-    service_type_FurtherDescSpecialistMedical: Coding;
+    readonly FurtherDescSpecialistMedical: Coding;
     /**
-     * Hepatology
+     * 479: Hepatology
      */
-    service_type_Hepatology: Coding;
+    readonly Hepatology: Coding;
     /**
-     * Residential/ out of home care
+     * 48: Residential/ out of home care
      */
-    service_type_ResidentialOutOfHomeCare: Coding;
+    readonly ResidentialOutOfHomeCare: Coding;
     /**
-     * Gastroenterology
+     * 480: Gastroenterology
      */
-    service_type_Gastroenterology: Coding;
+    readonly Gastroenterology: Coding;
     /**
-     * Gynaecology
+     * 481: Gynaecology
      */
-    service_type_Gynaecology: Coding;
+    readonly Gynaecology: Coding;
     /**
-     * Obstetrics
+     * 482: Obstetrics
      */
-    service_type_Obstetrics: Coding;
+    readonly Obstetrics: Coding;
     /**
-     * Further Description - Specialist Surgical
+     * 483: Further Description - Specialist Surgical
      */
-    service_type_FurtherDescSpecialistSurgical: Coding;
+    readonly FurtherDescSpecialistSurgical: Coding;
     /**
-     * Placement Protection
+     * 484: Placement Protection
      */
-    service_type_PlacementProtection: Coding;
+    readonly PlacementProtection: Coding;
     /**
-     * Family Violence
+     * 485: Family Violence
      */
-    service_type_FamilyViolence: Coding;
+    readonly FamilyViolence: Coding;
     /**
-     * Integrated Family Services
+     * 486: Integrated Family Services
      */
-    service_type_IntegratedFamilyServices: Coding;
+    readonly IntegratedFamilyServices: Coding;
     /**
-     * Diabetes Educator
+     * 488: Diabetes Educator
      */
-    service_type_DiabetesEducator: Coding;
+    readonly DiabetesEducator: Coding;
     /**
-     * Kinship Care
+     * 489: Kinship Care
      */
-    service_type_KinshipCare: Coding;
+    readonly KinshipCare: Coding;
     /**
-     * Support for young people leaving care
+     * 49: Support for young people leaving care
      */
-    service_type_SupportYoungPeopleLeavingCare: Coding;
+    readonly SupportYoungPeopleLeavingCare: Coding;
     /**
-     * General Mental Health Services
+     * 490: General Mental Health Services
      */
-    service_type_GeneralMentalHealthServices: Coding;
+    readonly GeneralMentalHealthServices: Coding;
     /**
-     * Exercise Physiology
+     * 491: Exercise Physiology
      */
-    service_type_ExercisePhysiology: Coding;
+    readonly ExercisePhysiology: Coding;
     /**
-     * Medical Research
+     * 492: Medical Research
      */
-    service_type_MedicalResearch: Coding;
+    readonly MedicalResearch: Coding;
     /**
-     * Youth
+     * 493: Youth
      */
-    service_type_Youth: Coding;
+    readonly Youth: Coding;
     /**
-     * Youth Services
+     * 494: Youth Services
      */
-    service_type_YouthServices: Coding;
+    readonly YouthServices: Coding;
     /**
-     * Youth Health
+     * 495: Youth Health
      */
-    service_type_YouthHealth: Coding;
+    readonly YouthHealth: Coding;
     /**
-     * Child and Family Services
+     * 496: Child and Family Services
      */
-    service_type_ChildAndFamilySer: Coding;
+    readonly ChildAndFamilySer: Coding;
     /**
-     * Home Visits
+     * 497: Home Visits
      */
-    service_type_HomeVisits: Coding;
+    readonly HomeVisits: Coding;
     /**
-     * Mobile Services
+     * 498: Mobile Services
      */
-    service_type_MobileServices: Coding;
+    readonly MobileServices: Coding;
     /**
-     * Case management for older persons
+     * 5: Case management for older persons
      */
-    service_type_CaseManagementForOlderPersons: Coding;
+    readonly CaseManagementForOlderPersons: Coding;
     /**
-     * Audiology
+     * 50: Audiology
      */
-    service_type_Audiology: Coding;
+    readonly Audiology: Coding;
     /**
-     * Before and/or After School Care
+     * 500: Before and/or After School Care
      */
-    service_type_BeforeAndOrAfter: Coding;
+    readonly BeforeAndOrAfter: Coding;
     /**
-     * Cancer Services
+     * 501: Cancer Services
      */
-    service_type_CancerServices: Coding;
+    readonly CancerServices: Coding;
     /**
-     * Integrated Cancer Services
+     * 502: Integrated Cancer Services
      */
-    service_type_IntegratedCancerSe: Coding;
+    readonly IntegratedCancerSe: Coding;
     /**
-     * Multidisciplinary Services
+     * 503: Multidisciplinary Services
      */
-    service_type_MultidisciplinarySe: Coding;
+    readonly MultidisciplinarySe: Coding;
     /**
-     * Multidisciplinary Cancer Services
+     * 504: Multidisciplinary Cancer Services
      */
-    service_type_MultidisciplinaryCa: Coding;
+    readonly MultidisciplinaryCa: Coding;
     /**
-     * Meetings
+     * 505: Meetings
      */
-    service_type_Meetings: Coding;
+    readonly Meetings: Coding;
     /**
-     * Blood pressure monitoring
+     * 506: Blood pressure monitoring
      */
-    service_type_BloodPressureMonit: Coding;
+    readonly BloodPressureMonit: Coding;
     /**
-     * Dose administration aid
+     * 507: Dose administration aid
      */
-    service_type_DoseAdministration: Coding;
+    readonly DoseAdministration: Coding;
     /**
-     * Medical Equipment Hire
+     * 508: Medical Equipment Hire
      */
-    service_type_MedicalEquipmentHi: Coding;
+    readonly MedicalEquipmentHi: Coding;
     /**
-     * Parenting &amp; family support/education
+     * 509: Parenting &amp; family support/education
      */
-    service_type_ParentingFamilySupportEducation_2: Coding;
+    readonly ParentingFamilySupportEducation_509: Coding;
     /**
-     * Blood donation
+     * 51: Blood donation
      */
-    service_type_BloodDonation: Coding;
+    readonly BloodDonation: Coding;
     /**
-     * Deputising Service
+     * 510: Deputising Service
      */
-    service_type_DeputisingService: Coding;
+    readonly DeputisingService: Coding;
     /**
-     * Cancer Support Groups
+     * 513: Cancer Support Groups
      */
-    service_type_CancerSupportGroups: Coding;
+    readonly CancerSupportGroups: Coding;
     /**
-     * Community Cancer Services
+     * 514: Community Cancer Services
      */
-    service_type_CommunityCancerServices: Coding;
+    readonly CommunityCancerServices: Coding;
     /**
-     * Chiropractic
+     * 52: Chiropractic
      */
-    service_type_Chiropractic: Coding;
+    readonly Chiropractic: Coding;
     /**
-     * Dietetics
+     * 53: Dietetics
      */
-    service_type_Dietetics: Coding;
+    readonly Dietetics: Coding;
     /**
-     * Disability Care Transport
+     * 530: Disability Care Transport
      */
-    service_type_DisabilityCareTransport: Coding;
+    readonly DisabilityCareTransport: Coding;
     /**
-     * Aged Care Transport
+     * 531: Aged Care Transport
      */
-    service_type_AgedCareTransport: Coding;
+    readonly AgedCareTransport: Coding;
     /**
-     * Diabetes Education service
+     * 532: Diabetes Education service
      */
-    service_type_DiabetesEducationS: Coding;
+    readonly DiabetesEducationS: Coding;
     /**
-     * Cardiac Rehabilitation Service
+     * 533: Cardiac Rehabilitation Service
      */
-    service_type_CardiacRehabilitati: Coding;
+    readonly CardiacRehabilitati: Coding;
     /**
-     * Young Adult Diabetes services (YADS)
+     * 534: Young Adult Diabetes services (YADS)
      */
-    service_type_YoungAdultDiabetes: Coding;
+    readonly YoungAdultDiabetes: Coding;
     /**
-     * Pulmonary Rehabilitation Service
+     * 535: Pulmonary Rehabilitation Service
      */
-    service_type_PulmonaryRehabilita: Coding;
+    readonly PulmonaryRehabilita: Coding;
     /**
-     * Art therapy
+     * 536: Art therapy
      */
-    service_type_ArtTherapy: Coding;
+    readonly ArtTherapy: Coding;
     /**
-     * Medication Reviews
+     * 537: Medication Reviews
      */
-    service_type_MedicationReviews: Coding;
+    readonly MedicationReviews: Coding;
     /**
-     * Telephone Counselling
+     * 538: Telephone Counselling
      */
-    service_type_TelephoneCounselling: Coding;
+    readonly TelephoneCounselling: Coding;
     /**
-     * Telephone Help Line
+     * 539: Telephone Help Line
      */
-    service_type_TelephoneHelpLine: Coding;
+    readonly TelephoneHelpLine: Coding;
     /**
-     * Family planning
+     * 54: Family planning
      */
-    service_type_FamilyPlanning: Coding;
+    readonly FamilyPlanning: Coding;
     /**
-     * Online Service
+     * 540: Online Service
      */
-    service_type_OnlineService: Coding;
+    readonly OnlineService: Coding;
     /**
-     * Crisis - Mental Health
+     * 541: Crisis - Mental Health
      */
-    service_type_CrisisMentalHealth: Coding;
+    readonly CrisisMentalHealth: Coding;
     /**
-     * Youth Crisis
+     * 542: Youth Crisis
      */
-    service_type_YouthCrisis: Coding;
+    readonly YouthCrisis: Coding;
     /**
-     * Sexual Assault
+     * 543: Sexual Assault
      */
-    service_type_SexualAssault: Coding;
+    readonly SexualAssault: Coding;
     /**
-     * GPAH Other
+     * 544: GPAH Other
      */
-    service_type_GPAHOther: Coding;
+    readonly GPAHOther: Coding;
     /**
-     * Paediatric Dermatology
+     * 545: Paediatric Dermatology
      */
-    service_type_PaediatricDermatology: Coding;
+    readonly PaediatricDermatology: Coding;
     /**
-     * Veterans Services
+     * 546: Veterans Services
      */
-    service_type_VeteransServices: Coding;
+    readonly VeteransServices: Coding;
     /**
-     * Veterans
+     * 547: Veterans
      */
-    service_type_Veterans: Coding;
+    readonly Veterans: Coding;
     /**
-     * Food Relief/food/meals
+     * 548: Food Relief/food/meals
      */
-    service_type_FoodReliefFoodMeals: Coding;
+    readonly FoodReliefFoodMeals: Coding;
     /**
-     * Health advocacy/Liaison service
+     * 55: Health advocacy/Liaison service
      */
-    service_type_HealthAdvocacyLiaisonService: Coding;
+    readonly HealthAdvocacyLiaisonService: Coding;
     /**
-     * Dementia Care
+     * 550: Dementia Care
      */
-    service_type_DementiaCare: Coding;
+    readonly DementiaCare: Coding;
     /**
-     * Alzheimer
+     * 551: Alzheimer
      */
-    service_type_Alzheimer: Coding;
+    readonly Alzheimer: Coding;
     /**
-     * Drug and/or alcohol support groups
+     * 552: Drug and/or alcohol support groups
      */
-    service_type_DrugAndOrAlcoholSupportGroups: Coding;
+    readonly DrugAndOrAlcoholSupportGroups: Coding;
     /**
-     * One on One Support/Mentoring/Coaching
+     * 553: One on One Support/Mentoring/Coaching
      */
-    service_type_VAL1On1SupportMentoringCoaching: Coding;
+    readonly VAL1On1SupportMentoringCoaching: Coding;
     /**
-     * Chronic Disease Management
+     * 554: Chronic Disease Management
      */
-    service_type_ChronicDiseaseManagement: Coding;
+    readonly ChronicDiseaseManagement: Coding;
     /**
-     * Liaison Services
+     * 555: Liaison Services
      */
-    service_type_LiaisonServices: Coding;
+    readonly LiaisonServices: Coding;
     /**
-     * Walk in Centre / non emergency
+     * 556: Walk in Centre / non emergency
      */
-    service_type_WalkInCentreNonEmergency: Coding;
+    readonly WalkInCentreNonEmergency: Coding;
     /**
-     * Inpatients
+     * 557: Inpatients
      */
-    service_type_Inpatients: Coding;
+    readonly Inpatients: Coding;
     /**
-     * Spiritual Counselling
+     * 558: Spiritual Counselling
      */
-    service_type_SpiritualCounselling: Coding;
+    readonly SpiritualCounselling: Coding;
     /**
-     * Women's Health
+     * 559: Women's Health
      */
-    service_type_WomenQuoteSHealth: Coding;
+    readonly WomenQuoteSHealth: Coding;
     /**
-     * Health information/referral
+     * 56: Health information/referral
      */
-    service_type_HealthInformationReferral: Coding;
+    readonly HealthInformationReferral: Coding;
     /**
-     * Men's Health
+     * 560: Men's Health
      */
-    service_type_MenQuoteSHealth: Coding;
+    readonly MenQuoteSHealth: Coding;
     /**
-     * Health education/Health awareness program
+     * 561: Health education/Health awareness program
      */
-    service_type_HealthEducationAwarenessProgram: Coding;
+    readonly HealthEducationAwarenessProgram: Coding;
     /**
-     * Test Message
+     * 562: Test Message
      */
-    service_type_TestMessage: Coding;
+    readonly TestMessage: Coding;
     /**
-     * Remedial Massage
+     * 563: Remedial Massage
      */
-    service_type_RemedialMassage: Coding;
+    readonly RemedialMassage: Coding;
     /**
-     * Adolescent Mental Health Services
+     * 564: Adolescent Mental Health Services
      */
-    service_type_AdolescentMentalHealthServices: Coding;
+    readonly AdolescentMentalHealthServices: Coding;
     /**
-     * Youth drop in/assistance/support
+     * 565: Youth drop in/assistance/support
      */
-    service_type_YouthDropInAssistanceSupport: Coding;
+    readonly YouthDropInAssistanceSupport: Coding;
     /**
-     * Aboriginal Health Worker
+     * 566: Aboriginal Health Worker
      */
-    service_type_AboriginalHealthWorker: Coding;
+    readonly AboriginalHealthWorker: Coding;
     /**
-     * Women's Health Clinic
+     * 567: Women's Health Clinic
      */
-    service_type_WomenQuoteSHealthClinic: Coding;
+    readonly WomenQuoteSHealthClinic: Coding;
     /**
-     * Men's Health Clinic
+     * 568: Men's Health Clinic
      */
-    service_type_MenQuoteSHealthClinic: Coding;
+    readonly MenQuoteSHealthClinic: Coding;
     /**
-     * Migrant Health Clinic
+     * 569: Migrant Health Clinic
      */
-    service_type_MigrantHealthClinic: Coding;
+    readonly MigrantHealthClinic: Coding;
     /**
-     * Immunization
+     * 57: Immunization
      */
-    service_type_Immunization: Coding;
+    readonly Immunization: Coding;
     /**
-     * Refugee Health Clinic
+     * 570: Refugee Health Clinic
      */
-    service_type_RefugeeHealthClinic: Coding;
+    readonly RefugeeHealthClinic: Coding;
     /**
-     * Aboriginal Health Clinic
+     * 571: Aboriginal Health Clinic
      */
-    service_type_AboriginalHealthClinic: Coding;
+    readonly AboriginalHealthClinic: Coding;
     /**
-     * Nurse Practitioner lead Clinic/s
+     * 572: Nurse Practitioner lead Clinic/s
      */
-    service_type_NursePractitionerLeadClinicS: Coding;
+    readonly NursePractitionerLeadClinicS: Coding;
     /**
-     * Nurse lead Clinic/s
+     * 573: Nurse lead Clinic/s
      */
-    service_type_NurseLeadClinicS: Coding;
+    readonly NurseLeadClinicS: Coding;
     /**
-     * Culturally tailored support groups
+     * 574: Culturally tailored support groups
      */
-    service_type_CulturallyTailoredSupportGroups: Coding;
+    readonly CulturallyTailoredSupportGroups: Coding;
     /**
-     * Culturally tailored health promotion
+     * 575: Culturally tailored health promotion
      */
-    service_type_CulturallyTailoredHealthPromotion: Coding;
+    readonly CulturallyTailoredHealthPromotion: Coding;
     /**
-     * Rehabilitation
+     * 576: Rehabilitation
      */
-    service_type_Rehabilitation: Coding;
+    readonly Rehabilitation: Coding;
     /**
-     * Education information/referral
+     * 577: Education information/referral
      */
-    service_type_EducationInformationReferral: Coding;
+    readonly EducationInformationReferral: Coding;
     /**
-     * Maternal &amp; child health
+     * 58: Maternal &amp; child health
      */
-    service_type_MaternalAndChildHealth: Coding;
+    readonly MaternalAndChildHealth: Coding;
     /**
-     * Social Work
+     * 580: Social Work
      */
-    service_type_SocialWork: Coding;
+    readonly SocialWork: Coding;
     /**
-     * Haematology
+     * 581: Haematology
      */
-    service_type_Haematology: Coding;
+    readonly Haematology: Coding;
     /**
-     * Maternity Shared Care
+     * 582: Maternity Shared Care
      */
-    service_type_MaternitySharedCar: Coding;
+    readonly MaternitySharedCar: Coding;
     /**
-     * Rehabilitation Service
+     * 583: Rehabilitation Service
      */
-    service_type_RehabilitationServi: Coding;
+    readonly RehabilitationServi: Coding;
     /**
-     * Cranio-Sacral Therapy
+     * 584: Cranio-Sacral Therapy
      */
-    service_type_CranioSacralTherapy: Coding;
+    readonly CranioSacralTherapy: Coding;
     /**
-     * Prosthetics &amp; Orthotics
+     * 585: Prosthetics &amp; Orthotics
      */
-    service_type_ProstheticsAndOrthotics: Coding;
+    readonly ProstheticsAndOrthotics: Coding;
     /**
-     * Home Medicine Review
+     * 589: Home Medicine Review
      */
-    service_type_HomeMedicineReview: Coding;
+    readonly HomeMedicineReview: Coding;
     /**
-     * Nursing
+     * 59: Nursing
      */
-    service_type_Nursing: Coding;
+    readonly Nursing: Coding;
     /**
-     * GPAH - Medical
+     * 590: GPAH - Medical
      */
-    service_type_GPAHMedical: Coding;
+    readonly GPAHMedical: Coding;
     /**
-     * Music Therapy
+     * 591: Music Therapy
      */
-    service_type_MusicTherapy: Coding;
+    readonly MusicTherapy: Coding;
     /**
-     * Falls Prevention
+     * 593: Falls Prevention
      */
-    service_type_FallsPrevention: Coding;
+    readonly FallsPrevention: Coding;
     /**
-     * Accommodation/Tenancy
+     * 599: Accommodation/Tenancy
      */
-    service_type_AccommodationTenancy: Coding;
+    readonly AccommodationTenancy: Coding;
     /**
-     * Delivered meals (meals on wheels)
+     * 6: Delivered meals (meals on wheels)
      */
-    service_type_DeliveredMealsMealsOnWheels: Coding;
+    readonly DeliveredMealsMealsOnWheels: Coding;
     /**
-     * Nutrition
+     * 60: Nutrition
      */
-    service_type_Nutrition: Coding;
+    readonly Nutrition: Coding;
     /**
-     * Assess-Skill, Ability, Needs
+     * 600: Assess-Skill, Ability, Needs
      */
-    service_type_AssessSkillAbilityNeeds: Coding;
+    readonly AssessSkillAbilityNeeds: Coding;
     /**
-     * Assist Access/Maintain Employ
+     * 601: Assist Access/Maintain Employ
      */
-    service_type_AssistAccessMaintainEmploy: Coding;
+    readonly AssistAccessMaintainEmploy: Coding;
     /**
-     * Assist Prod-Pers Care/Safety
+     * 602: Assist Prod-Pers Care/Safety
      */
-    service_type_AssistProdPersCareSafety: Coding;
+    readonly AssistProdPersCareSafety: Coding;
     /**
-     * Assist-Integrate School/Ed
+     * 603: Assist-Integrate School/Ed
      */
-    service_type_AssistIntegrateSchoolEd: Coding;
+    readonly AssistIntegrateSchoolEd: Coding;
     /**
-     * Assist-Life Stage, Transition
+     * 604: Assist-Life Stage, Transition
      */
-    service_type_AssistLifeStageTransition: Coding;
+    readonly AssistLifeStageTransition: Coding;
     /**
-     * Assist-Personal Activities
+     * 605: Assist-Personal Activities
      */
-    service_type_AssistPersonalActivities: Coding;
+    readonly AssistPersonalActivities: Coding;
     /**
-     * Assist-Travel/Transport
+     * 606: Assist-Travel/Transport
      */
-    service_type_AssistTravelTransport: Coding;
+    readonly AssistTravelTransport: Coding;
     /**
-     * Assistive Equip-General Tasks
+     * 607: Assistive Equip-General Tasks
      */
-    service_type_AssistiveEquipGeneralTasks: Coding;
+    readonly AssistiveEquipGeneralTasks: Coding;
     /**
-     * Assistive Equip-Recreation
+     * 608: Assistive Equip-Recreation
      */
-    service_type_AssistiveEquipRecreation: Coding;
+    readonly AssistiveEquipRecreation: Coding;
     /**
-     * Assistive Prod-Household Task
+     * 609: Assistive Prod-Household Task
      */
-    service_type_AssistiveProdHouseholdTask: Coding;
+    readonly AssistiveProdHouseholdTask: Coding;
     /**
-     * Occupational therapy
+     * 61: Occupational therapy
      */
-    service_type_OccupationalTherapy: Coding;
+    readonly OccupationalTherapy: Coding;
     /**
-     * Behavior Support
+     * 610: Behavior Support
      */
-    service_type_BehaviorSupport: Coding;
+    readonly BehaviorSupport: Coding;
     /**
-     * Comms &amp; Info Equipment
+     * 611: Comms &amp; Info Equipment
      */
-    service_type_CommsAndInfoEquipment: Coding;
+    readonly CommsAndInfoEquipment: Coding;
     /**
-     * Community Nursing Care
+     * 612: Community Nursing Care
      */
-    service_type_CommunityNursingCare: Coding;
+    readonly CommunityNursingCare: Coding;
     /**
-     * Daily Tasks/Shared Living
+     * 613: Daily Tasks/Shared Living
      */
-    service_type_DailyTasksSharedLiving: Coding;
+    readonly DailyTasksSharedLiving: Coding;
     /**
-     * Development-Life Skills
+     * 614: Development-Life Skills
      */
-    service_type_DevelopmentLifeSkills: Coding;
+    readonly DevelopmentLifeSkills: Coding;
     /**
-     * Early Childhood Supports
+     * 615: Early Childhood Supports
      */
-    service_type_EarlyChildhoodSupports: Coding;
+    readonly EarlyChildhoodSupports: Coding;
     /**
-     * Equipment Special Assess Setup
+     * 616: Equipment Special Assess Setup
      */
-    service_type_EquipmentSpecialAssessSetup: Coding;
+    readonly EquipmentSpecialAssessSetup: Coding;
     /**
-     * Hearing Equipment
+     * 617: Hearing Equipment
      */
-    service_type_HearingEquipment: Coding;
+    readonly HearingEquipment: Coding;
     /**
-     * Home Modification
+     * 618: Home Modification
      */
-    service_type_HomeModification: Coding;
+    readonly HomeModification: Coding;
     /**
-     * Household Tasks
+     * 619: Household Tasks
      */
-    service_type_HouseholdTasks: Coding;
+    readonly HouseholdTasks: Coding;
     /**
-     * Optometry
+     * 62: Optometry
      */
-    service_type_Optometry: Coding;
+    readonly Optometry: Coding;
     /**
-     * Interpret/Translate
+     * 620: Interpret/Translate
      */
-    service_type_InterpretTranslate: Coding;
+    readonly InterpretTranslate: Coding;
     /**
-     * Other Innovative Supports
+     * 621: Other Innovative Supports
      */
-    service_type_OtherInnovativeSupports: Coding;
+    readonly OtherInnovativeSupports: Coding;
     /**
-     * Participate Community
+     * 622: Participate Community
      */
-    service_type_ParticipateCommunity: Coding;
+    readonly ParticipateCommunity: Coding;
     /**
-     * Personal Mobility Equipment
+     * 623: Personal Mobility Equipment
      */
-    service_type_PersonalMobilityEquipment: Coding;
+    readonly PersonalMobilityEquipment: Coding;
     /**
-     * Physical Wellbeing
+     * 624: Physical Wellbeing
      */
-    service_type_PhysicalWellbeing: Coding;
+    readonly PhysicalWellbeing: Coding;
     /**
-     * Plan Management
+     * 625: Plan Management
      */
-    service_type_PlanManagement: Coding;
+    readonly PlanManagement: Coding;
     /**
-     * Therapeutic Supports
+     * 626: Therapeutic Supports
      */
-    service_type_TherapeuticSupports: Coding;
+    readonly TherapeuticSupports: Coding;
     /**
-     * Training-Travel Independence
+     * 627: Training-Travel Independence
      */
-    service_type_TrainingTravelIndependence: Coding;
+    readonly TrainingTravelIndependence: Coding;
     /**
-     * Vehicle modifications
+     * 628: Vehicle modifications
      */
-    service_type_VehicleModifications: Coding;
+    readonly VehicleModifications: Coding;
     /**
-     * Vision Equipment
+     * 629: Vision Equipment
      */
-    service_type_VisionEquipment: Coding;
+    readonly VisionEquipment: Coding;
     /**
-     * Osteopathy
+     * 63: Osteopathy
      */
-    service_type_Osteopathy: Coding;
+    readonly Osteopathy: Coding;
     /**
-     * Pharmacy
+     * 64: Pharmacy
      */
-    service_type_Pharmacy: Coding;
+    readonly Pharmacy: Coding;
     /**
-     * Physiotherapy
+     * 65: Physiotherapy
      */
-    service_type_Physiotherapy: Coding;
+    readonly Physiotherapy: Coding;
     /**
-     * Podiatry
+     * 66: Podiatry
      */
-    service_type_Podiatry: Coding;
+    readonly Podiatry: Coding;
     /**
-     * Sexual health
+     * 67: Sexual health
      */
-    service_type_SexualHealth: Coding;
+    readonly SexualHealth: Coding;
     /**
-     * Speech pathology/therapy
+     * 68: Speech pathology/therapy
      */
-    service_type_SpeechPathologyTherapy: Coding;
+    readonly SpeechPathologyTherapy: Coding;
     /**
-     * Bereavement counselling
+     * 69: Bereavement counselling
      */
-    service_type_BereavementCounselling: Coding;
+    readonly BereavementCounselling: Coding;
     /**
-     * Friendly visiting
+     * 7: Friendly visiting
      */
-    service_type_FriendlyVisiting: Coding;
+    readonly FriendlyVisiting: Coding;
     /**
-     * Crisis counselling
+     * 70: Crisis counselling
      */
-    service_type_CrisisCounselling: Coding;
+    readonly CrisisCounselling: Coding;
     /**
-     * Family counselling and/or family therapy
+     * 71: Family counselling and/or family therapy
      */
-    service_type_FamilyCounsellingTherapy: Coding;
+    readonly FamilyCounsellingTherapy: Coding;
     /**
-     * Family violence counselling
+     * 72: Family violence counselling
      */
-    service_type_FamilyViolenceCounselling: Coding;
+    readonly FamilyViolenceCounselling: Coding;
     /**
-     * Financial counselling
+     * 73: Financial counselling
      */
-    service_type_FinancialCounselling: Coding;
+    readonly FinancialCounselling: Coding;
     /**
-     * Generalist counselling
+     * 74: Generalist counselling
      */
-    service_type_GeneralistCounselling: Coding;
+    readonly GeneralistCounselling: Coding;
     /**
-     * Genetic counselling
+     * 75: Genetic counselling
      */
-    service_type_GeneticCounselling: Coding;
+    readonly GeneticCounselling: Coding;
     /**
-     * Health counselling
+     * 76: Health counselling
      */
-    service_type_HealthCounselling: Coding;
+    readonly HealthCounselling: Coding;
     /**
-     * Mediation
+     * 77: Mediation
      */
-    service_type_Mediation: Coding;
+    readonly Mediation: Coding;
     /**
-     * Problem gambling counselling
+     * 78: Problem gambling counselling
      */
-    service_type_ProblemGamblingCounselling: Coding;
+    readonly ProblemGamblingCounselling: Coding;
     /**
-     * Relationship counselling
+     * 79: Relationship counselling
      */
-    service_type_RelationshipCounselling: Coding;
+    readonly RelationshipCounselling: Coding;
     /**
-     * Home care/housekeeping assistance
+     * 8: Home care/housekeeping assistance
      */
-    service_type_HomeCareHousekeepingAssistance: Coding;
+    readonly HomeCareHousekeepingAssistance: Coding;
     /**
-     * Sexual assault counselling
+     * 80: Sexual assault counselling
      */
-    service_type_SexualAssaultCounselling: Coding;
+    readonly SexualAssaultCounselling: Coding;
     /**
-     * Trauma counselling
+     * 81: Trauma counselling
      */
-    service_type_TraumaCounselling: Coding;
+    readonly TraumaCounselling: Coding;
     /**
-     * Victims of crime counselling
+     * 82: Victims of crime counselling
      */
-    service_type_VictimsOfCrimeCounselling: Coding;
+    readonly VictimsOfCrimeCounselling: Coding;
     /**
-     * Cemetery operation
+     * 83: Cemetery operation
      */
-    service_type_CemeteryOperation: Coding;
+    readonly CemeteryOperation: Coding;
     /**
-     * Cremation
+     * 84: Cremation
      */
-    service_type_Cremation: Coding;
+    readonly Cremation: Coding;
     /**
-     * Death service information
+     * 85: Death service information
      */
-    service_type_DeathServiceInformation: Coding;
+    readonly DeathServiceInformation: Coding;
     /**
-     * Funeral services
+     * 86: Funeral services
      */
-    service_type_FuneralServices: Coding;
+    readonly FuneralServices: Coding;
     /**
-     * Endodontic
+     * 87: Endodontic
      */
-    service_type_Endodontic: Coding;
+    readonly Endodontic: Coding;
     /**
-     * General dental
+     * 88: General dental
      */
-    service_type_GeneralDental: Coding;
+    readonly GeneralDental: Coding;
     /**
-     * Oral medicine
+     * 89: Oral medicine
      */
-    service_type_OralMedicine: Coding;
+    readonly OralMedicine: Coding;
     /**
-     * Home maintenance and repair
+     * 9: Home maintenance and repair
      */
-    service_type_HomeMaintenanceAndRepair: Coding;
+    readonly HomeMaintenanceAndRepair: Coding;
     /**
-     * Oral surgery
+     * 90: Oral surgery
      */
-    service_type_OralSurgery: Coding;
+    readonly OralSurgery: Coding;
     /**
-     * Orthodontic
+     * 91: Orthodontic
      */
-    service_type_Orthodontic: Coding;
+    readonly Orthodontic: Coding;
     /**
-     * Paediatric Dentistry
+     * 92: Paediatric Dentistry
      */
-    service_type_PaediatricDentistry: Coding;
+    readonly PaediatricDentistry: Coding;
     /**
-     * Periodontic
+     * 93: Periodontic
      */
-    service_type_Periodontic: Coding;
+    readonly Periodontic: Coding;
     /**
-     * Prosthodontic
+     * 94: Prosthodontic
      */
-    service_type_Prosthodontic: Coding;
+    readonly Prosthodontic: Coding;
     /**
-     * Acquired brain injury information/referral
+     * 95: Acquired brain injury information/referral
      */
-    service_type_AcquiredBrainInjuryInfoReferral: Coding;
+    readonly AcquiredBrainInjuryInfoReferral: Coding;
     /**
-     * Disability advocacy
+     * 96: Disability advocacy
      */
-    service_type_DisabilityAdvocacy: Coding;
+    readonly DisabilityAdvocacy: Coding;
     /**
-     * Disability aids &amp; equipment
+     * 97: Disability aids &amp; equipment
      */
-    service_type_DisabilityAidsAndEquipment: Coding;
+    readonly DisabilityAidsAndEquipment: Coding;
     /**
-     * Disability case management
+     * 98: Disability case management
      */
-    service_type_DisabilityCaseManagement: Coding;
+    readonly DisabilityCaseManagement: Coding;
     /**
-     * Disability day programs &amp; activities
+     * 99: Disability day programs &amp; activities
      */
-    service_type_DisabilityDayProgramsActivities: Coding;
+    readonly DisabilityDayProgramsActivities: Coding;
 };
+/**
+ * This value set defines an example set of codes of service-types.
+ */
+export declare type ServiceTypeValueSetType = typeof ServiceTypeValueSet;
+/**
+ * This value set defines an example set of codes of service-types.
+ */
+export declare enum ServiceTypeValueSetEnum {
+    /**
+     * 1: Adoption &amp; permanent care information/support
+     */
+    AdoptionPermanentCareInfoSupport = "1",
+    /**
+     * 10: Personal alarms/alerts
+     */
+    PersonalAlarmsAlerts = "10",
+    /**
+     * 100: Disability information/referral
+     */
+    DisabilityInformationReferral = "100",
+    /**
+     * 101: Disability support packages
+     */
+    DisabilitySupportPackages = "101",
+    /**
+     * 102: Disability supported accommodation
+     */
+    DisabilitySupportedAccommodation = "102",
+    /**
+     * 103: Early childhood intervention
+     */
+    EarlyChildhoodIntervention = "103",
+    /**
+     * 104: Hearing aids &amp; equipment
+     */
+    HearingAidsAndEquipment = "104",
+    /**
+     * 105: Drug and/or alcohol counselling
+     */
+    DrugAndOrAlcoholCounselling = "105",
+    /**
+     * 106: Drug and/or alcohol information/referral
+     */
+    DrugAlcoholInformationReferral = "106",
+    /**
+     * 107: Needle &amp; Syringe exchange
+     */
+    NeedleAndSyringeExchange = "107",
+    /**
+     * 108: Non-residential alcohol and/or drug dependence treatment
+     */
+    NonResidAlcoholDrugTreatment = "108",
+    /**
+     * 109: Pharmacotherapy (eg. methadone) program
+     */
+    Pharmacotherapy = "109",
+    /**
+     * 11: Personal care for older persons
+     */
+    PersonalCareForOlderPersons = "11",
+    /**
+     * 110: Quit program
+     */
+    QuitProgram = "110",
+    /**
+     * 111: Residential alcohol and/or drug dependence treatment
+     */
+    ResidentialAlcoholDrugTreatment = "111",
+    /**
+     * 112: Adult/community education
+     */
+    AdultCommunityEducation = "112",
+    /**
+     * 113: Higher education
+     */
+    HigherEducation = "113",
+    /**
+     * 114: Primary education
+     */
+    PrimaryEducation = "114",
+    /**
+     * 115: Secondary education
+     */
+    SecondaryEducation = "115",
+    /**
+     * 116: Training &amp; vocational education
+     */
+    TrainingAndVocationalEducation = "116",
+    /**
+     * 117: Emergency medical
+     */
+    EmergencyMedical = "117",
+    /**
+     * 118: Employment placement and/or support
+     */
+    EmploymentPlacementAndOrSupport = "118",
+    /**
+     * 119: Vocational Rehabilitation
+     */
+    VocationalRehabilitation = "119",
+    /**
+     * 12: Planned activity groups
+     */
+    PlannedActivityGroups = "12",
+    /**
+     * 120: Workplace safety and/or accident prevention
+     */
+    WorkSafetyAccidentPrevention = "120",
+    /**
+     * 121: Financial assistance
+     */
+    FinancialAssistance = "121",
+    /**
+     * 122: Financial information/advice
+     */
+    FinancialInformationAdvice = "122",
+    /**
+     * 123: Material aid
+     */
+    MaterialAid = "123",
+    /**
+     * 124: General Practice/GP (doctor)
+     */
+    GeneralPractice = "124",
+    /**
+     * 125: Accommodation placement and/or support
+     */
+    AccommodationPlacementSupport = "125",
+    /**
+     * 126: Crisis/emergency accommodation
+     */
+    CrisisEmergencyAccommodation = "126",
+    /**
+     * 127: Homelessness support
+     */
+    HomelessnessSupport = "127",
+    /**
+     * 128: Housing information/referral
+     */
+    HousingInformationReferral = "128",
+    /**
+     * 129: Public rental housing
+     */
+    PublicRentalHousing = "129",
+    /**
+     * 13: Acupuncture
+     */
+    Acupuncture = "13",
+    /**
+     * 130: Interpreting/Multilingual/Language service
+     */
+    InterpretingMultilingualService = "130",
+    /**
+     * 131: Juvenile Justice
+     */
+    JuvenileJustice = "131",
+    /**
+     * 132: Legal advocacy
+     */
+    LegalAdvocacy = "132",
+    /**
+     * 133: Legal information/advice/referral
+     */
+    LegalInformationAdviceReferral = "133",
+    /**
+     * 134: Mental health advocacy
+     */
+    MentalHealthAdvocacy = "134",
+    /**
+     * 135: Mental health assessment/triage/crisis response
+     */
+    MentalHealthAssessTriageCrisisResponse = "135",
+    /**
+     * 136: Mental health case management/continuing care
+     */
+    MentalHealthCaseManagement = "136",
+    /**
+     * 137: Mental health information/referral
+     */
+    MentalHealthInformationReferral = "137",
+    /**
+     * 138: Mental health inpatient services (hospital psychiatric unit) - requires referral
+     */
+    MentalHealthInpatientServices = "138",
+    /**
+     * 139: Mental health non-residential rehabilitation
+     */
+    MentalHealthNonResidentialRehab = "139",
+    /**
+     * 14: Alexander technique therapy
+     */
+    AlexanderTechniqueTherapy = "14",
+    /**
+     * 140: Mental health residential rehabilitation/community care unit
+     */
+    MentalHealthResidentialRehabCCU = "140",
+    /**
+     * 141: Psychiatry (requires referral)
+     */
+    PsychiatryRequiresReferral = "141",
+    /**
+     * 142: Psychology
+     */
+    Psychology = "142",
+    /**
+     * 143: Martial arts
+     */
+    MartialArts = "143",
+    /**
+     * 144: Personal fitness training
+     */
+    PersonalFitnessTraining = "144",
+    /**
+     * 145: Physical activity group
+     */
+    PhysicalActivityGroup = "145",
+    /**
+     * 146: Physical activity programs
+     */
+    PhysicalActivityPrograms = "146",
+    /**
+     * 147: Physical fitness testing
+     */
+    PhysicalFitnessTesting = "147",
+    /**
+     * 148: Pilates
+     */
+    Pilates = "148",
+    /**
+     * 149: Self defence
+     */
+    SelfDefence = "149",
+    /**
+     * 15: Aromatherapy
+     */
+    Aromatherapy = "15",
+    /**
+     * 150: Sporting club
+     */
+    SportingClub = "150",
+    /**
+     * 151: Yoga
+     */
+    Yoga = "151",
+    /**
+     * 152: Food safety
+     */
+    FoodSafety = "152",
+    /**
+     * 153: Health regulatory, inspection and/or certification
+     */
+    HealthRegulatoryInspectionCert = "153",
+    /**
+     * 154: Workplace health and/or safety inspection and/or certification
+     */
+    WorkHealthSafetyInspectionCert = "154",
+    /**
+     * 155: Carer support
+     */
+    CarerSupport = "155",
+    /**
+     * 156: Respite care
+     */
+    RespiteCare = "156",
+    /**
+     * 157: Anatomical Pathology (including Cytopathology &amp; Forensic Pathology)
+     */
+    AnatomicalPathology = "157",
+    /**
+     * 158: Pathology - Clinical Chemistry
+     */
+    PathologyClinicalChemistry = "158",
+    /**
+     * 159: Pathology - General
+     */
+    PathologyGeneral = "159",
+    /**
+     * 16: Biorhythm services
+     */
+    BiorhythmServices = "16",
+    /**
+     * 160: Pathology - Genetics
+     */
+    PathologyGenetics = "160",
+    /**
+     * 161: Pathology - Haematology
+     */
+    PathologyHaematology = "161",
+    /**
+     * 162: Pathology - Immunology
+     */
+    PathologyImmunology = "162",
+    /**
+     * 163: Pathology - Microbiology
+     */
+    PathologyMicrobiology = "163",
+    /**
+     * 164: Anaesthesiology - Pain Medicine
+     */
+    AnaesthesiologyPainMedicine = "164",
+    /**
+     * 165: Cardiology
+     */
+    Cardiology = "165",
+    /**
+     * 166: Clinical Genetics
+     */
+    ClinicalGenetics = "166",
+    /**
+     * 167: Clinical Pharmacology
+     */
+    ClinicalPharmacology = "167",
+    /**
+     * 168: Dermatology
+     */
+    Dermatology = "168",
+    /**
+     * 169: Endocrinology
+     */
+    Endocrinology = "169",
+    /**
+     * 17: Bowen therapy
+     */
+    BowenTherapy = "17",
+    /**
+     * 170: Gastroenterology &amp; Hepatology
+     */
+    GastroenterologyAndHepatology = "170",
+    /**
+     * 171: Geriatric medicine
+     */
+    GeriatricMedicine = "171",
+    /**
+     * 172: Immunology &amp; Allergy
+     */
+    ImmunologyAndAllergy = "172",
+    /**
+     * 173: Infectious diseases
+     */
+    InfectiousDiseases = "173",
+    /**
+     * 174: Intensive care medicine
+     */
+    IntensiveCareMedicine = "174",
+    /**
+     * 175: Medical Oncology
+     */
+    MedicalOncology = "175",
+    /**
+     * 176: Nephrology
+     */
+    Nephrology = "176",
+    /**
+     * 177: Neurology
+     */
+    Neurology = "177",
+    /**
+     * 178: Occupational Medicine
+     */
+    OccupationalMedicine = "178",
+    /**
+     * 179: Palliative Medicine
+     */
+    PalliativeMedicine = "179",
+    /**
+     * 18: Chinese herbal medicine
+     */
+    ChineseHerbalMedicine = "18",
+    /**
+     * 180: Public Health Medicine
+     */
+    PublicHealthMedicine = "180",
+    /**
+     * 181: Rehabilitation Medicine
+     */
+    RehabilitationMedicine = "181",
+    /**
+     * 182: Rheumatology
+     */
+    Rheumatology = "182",
+    /**
+     * 183: Sleep Medicine
+     */
+    SleepMedicine = "183",
+    /**
+     * 184: Thoracic medicine
+     */
+    ThoracicMedicine = "184",
+    /**
+     * 185: Gynaecological Oncology
+     */
+    GynaecologicalOncology = "185",
+    /**
+     * 186: Obstetrics &amp; Gynaecology
+     */
+    ObstetricsAndGynaecology = "186",
+    /**
+     * 187: Reproductive Endocrinology &amp; Infertility
+     */
+    ReproductiveEndocrinologyInfertility = "187",
+    /**
+     * 188: Urogynaecology
+     */
+    Urogynaecology = "188",
+    /**
+     * 189: Neonatology &amp; Perinatology
+     */
+    NeonatologyAndPerinatology = "189",
+    /**
+     * 19: Feldenkrais
+     */
+    Feldenkrais = "19",
+    /**
+     * 190: Paediatric Cardiology
+     */
+    PaediatricCardiology = "190",
+    /**
+     * 191: Paediatric Clinical Genetics
+     */
+    PaediatricClinicalGenetics = "191",
+    /**
+     * 192: Paediatric Clinical Pharmacology
+     */
+    PaediatricClinicalPharmacology = "192",
+    /**
+     * 193: Paediatric Endocrinology
+     */
+    PaediatricEndocrinology = "193",
+    /**
+     * 194: Paediatric Gastroenterology &amp; Hepatology
+     */
+    PaedGastroenterologyHepatology = "194",
+    /**
+     * 195: Paediatric Haematology
+     */
+    PaediatricHaematology = "195",
+    /**
+     * 196: Paediatric Immunology &amp; Allergy
+     */
+    PaediatricImmunologyAndAllergy = "196",
+    /**
+     * 197: Paediatric Infectious diseases
+     */
+    PaediatricInfectiousDiseases = "197",
+    /**
+     * 198: Paediatric intensive care medicine
+     */
+    PaediatricIntensiveCareMedicine = "198",
+    /**
+     * 199: Paediatric Medical Oncology
+     */
+    PaediatricMedicalOncology = "199",
+    /**
+     * 2: Aged care assessment
+     */
+    AgedCareAssessment = "2",
+    /**
+     * 20: Homoeopathy
+     */
+    Homoeopathy = "20",
+    /**
+     * 200: Paediatric Medicine
+     */
+    PaediatricMedicine = "200",
+    /**
+     * 201: Paediatric Nephrology
+     */
+    PaediatricNephrology = "201",
+    /**
+     * 202: Paediatric Neurology
+     */
+    PaediatricNeurology = "202",
+    /**
+     * 203: Paediatric Nuclear Medicine
+     */
+    PaediatricNuclearMedicine = "203",
+    /**
+     * 204: Paediatric Rehabilitation Medicine
+     */
+    PaediatricRehabilitationMedicine = "204",
+    /**
+     * 205: Paediatric Rheumatology
+     */
+    PaediatricRheumatology = "205",
+    /**
+     * 206: Paediatric Sleep Medicine
+     */
+    PaediatricSleepMedicine = "206",
+    /**
+     * 207: Paediatric Surgery
+     */
+    PaediatricSurgery = "207",
+    /**
+     * 208: Paediatric Thoracic Medicine
+     */
+    PaediatricThoracicMedicine = "208",
+    /**
+     * 209: Diagnostic Radiology/Xray/CT/Fluoroscopy
+     */
+    DiagRadiologyXrayCTFluoroscopy = "209",
+    /**
+     * 21: Hydrotherapy
+     */
+    Hydrotherapy = "21",
+    /**
+     * 210: Diagnostic Ultrasound
+     */
+    DiagnosticUltrasound = "210",
+    /**
+     * 211: Magnetic Resonance Imaging (MRI)
+     */
+    MagneticResonanceImagingMRI = "211",
+    /**
+     * 212: Nuclear Medicine
+     */
+    NuclearMedicine = "212",
+    /**
+     * 213: Obstetric &amp; Gynaecological Ultrasound
+     */
+    ObstetricGynaecologicalUltrasound = "213",
+    /**
+     * 214: Radiation oncology
+     */
+    RadiationOncology = "214",
+    /**
+     * 215: Cardiothoracic surgery
+     */
+    CardiothoracicSurgery = "215",
+    /**
+     * 216: Neurosurgery
+     */
+    Neurosurgery = "216",
+    /**
+     * 217: Ophthalmology
+     */
+    Ophthalmology = "217",
+    /**
+     * 218: Orthopaedic surgery
+     */
+    OrthopaedicSurgery = "218",
+    /**
+     * 219: Otolaryngology - Head &amp; Neck Surgery
+     */
+    OtolaryngologyHeadAndNeckSurgery = "219",
+    /**
+     * 22: Hypnotherapy
+     */
+    Hypnotherapy = "22",
+    /**
+     * 220: Plastic &amp; Reconstructive Surgery
+     */
+    PlasticAndReconstructiveSurgery = "220",
+    /**
+     * 221: Surgery - General
+     */
+    SurgeryGeneral = "221",
+    /**
+     * 222: Urology
+     */
+    Urology = "222",
+    /**
+     * 223: Vascular surgery
+     */
+    VascularSurgery = "223",
+    /**
+     * 224: Support groups
+     */
+    SupportGroups = "224",
+    /**
+     * 225: Air ambulance
+     */
+    AirAmbulance = "225",
+    /**
+     * 226: Ambulance
+     */
+    Ambulance = "226",
+    /**
+     * 227: Blood transport
+     */
+    BloodTransport = "227",
+    /**
+     * 228: Community bus
+     */
+    CommunityBus = "228",
+    /**
+     * 229: Flying doctor service
+     */
+    FlyingDoctorService = "229",
+    /**
+     * 23: Kinesiology
+     */
+    Kinesiology = "23",
+    /**
+     * 230: Patient transport
+     */
+    PatientTransport = "230",
+    /**
+     * 231: A&amp;E
+     */
+    AAndE = "231",
+    /**
+     * 232: A&amp;EP
+     */
+    AAndEP = "232",
+    /**
+     * 233: Abuse
+     */
+    Abuse = "233",
+    /**
+     * 234: ACAS
+     */
+    ACAS = "234",
+    /**
+     * 235: Access
+     */
+    Access = "235",
+    /**
+     * 236: Accident
+     */
+    Accident = "236",
+    /**
+     * 237: Acute Inpatient Service's
+     */
+    AcuteInpatientServ = "237",
+    /**
+     * 238: Adult Day Programs
+     */
+    AdultDayPrograms = "238",
+    /**
+     * 239: Adult Mental Health Services
+     */
+    AdultMentalHealthServices = "239",
+    /**
+     * 24: Magnetic therapy
+     */
+    MagneticTherapy = "24",
+    /**
+     * 240: Advice
+     */
+    Advice = "240",
+    /**
+     * 241: Advocacy
+     */
+    Advocacy = "241",
+    /**
+     * 242: Aged Persons Mental Health Residential Units
+     */
+    AgedPersonsMental = "242",
+    /**
+     * 243: Aged Persons Mental Health Services
+     */
+    AgedPersonsMental_243 = "243",
+    /**
+     * 244: Aged Persons Mental Health Teams
+     */
+    AgedPersonsMental_244 = "244",
+    /**
+     * 245: Aids
+     */
+    Aids = "245",
+    /**
+     * 246: Al-Anon
+     */
+    AlAnon = "246",
+    /**
+     * 247: Alcohol
+     */
+    Alcohol = "247",
+    /**
+     * 248: Al-Teen
+     */
+    AlTeen = "248",
+    /**
+     * 249: Antenatal
+     */
+    Antenatal = "249",
+    /**
+     * 25: Massage therapy
+     */
+    MassageTherapy = "25",
+    /**
+     * 250: Anxiety
+     */
+    Anxiety = "250",
+    /**
+     * 251: Arthritis
+     */
+    Arthritis = "251",
+    /**
+     * 252: Assessment
+     */
+    Assessment = "252",
+    /**
+     * 253: Assistance
+     */
+    Assistance = "253",
+    /**
+     * 254: Asthma
+     */
+    Asthma = "254",
+    /**
+     * 255: ATSS
+     */
+    ATSS = "255",
+    /**
+     * 256: Attendant Care
+     */
+    AttendantCare = "256",
+    /**
+     * 257: Babies
+     */
+    Babies = "257",
+    /**
+     * 258: Bathroom Modification
+     */
+    BathroomModificatio = "258",
+    /**
+     * 259: Behavior
+     */
+    Behavior = "259",
+    /**
+     * 26: Meditation
+     */
+    Meditation = "26",
+    /**
+     * 260: Behavior Intervention
+     */
+    BehaviorInterventi = "260",
+    /**
+     * 261: Bereavement
+     */
+    Bereavement = "261",
+    /**
+     * 262: Bipolar
+     */
+    Bipolar = "262",
+    /**
+     * 263: Birth
+     */
+    Birth = "263",
+    /**
+     * 264: Birth Control
+     */
+    BirthControl = "264",
+    /**
+     * 265: Birthing Options
+     */
+    BirthingOptions = "265",
+    /**
+     * 266: BIST
+     */
+    BIST = "266",
+    /**
+     * 267: Blood
+     */
+    Blood = "267",
+    /**
+     * 268: Bone
+     */
+    Bone = "268",
+    /**
+     * 269: Bowel
+     */
+    Bowel = "269",
+    /**
+     * 27: Myotherapy
+     */
+    Myotherapy = "27",
+    /**
+     * 270: Brain
+     */
+    Brain = "270",
+    /**
+     * 271: Breast Feeding
+     */
+    BreastFeeding = "271",
+    /**
+     * 272: Breast Screen
+     */
+    BreastScreen = "272",
+    /**
+     * 273: Brokerage
+     */
+    Brokerage = "273",
+    /**
+     * 274: Cancer
+     */
+    Cancer = "274",
+    /**
+     * 275: Cancer Support
+     */
+    CancerSupport = "275",
+    /**
+     * 276: Cardiovascular Disease
+     */
+    CardiovascularDisea = "276",
+    /**
+     * 277: Care Packages
+     */
+    CarePackages = "277",
+    /**
+     * 278: Carer
+     */
+    Carer = "278",
+    /**
+     * 279: Case Management
+     */
+    CaseManagement = "279",
+    /**
+     * 28: Naturopathy
+     */
+    Naturopathy = "28",
+    /**
+     * 280: Casualty
+     */
+    Casualty = "280",
+    /**
+     * 281: Centrelink
+     */
+    Centrelink = "281",
+    /**
+     * 282: Chemists
+     */
+    Chemists = "282",
+    /**
+     * 283: Child And Adolescent Mental Health Services
+     */
+    ChildAndAdolescent = "283",
+    /**
+     * 284: Child Care
+     */
+    ChildCare = "284",
+    /**
+     * 285: Child Services
+     */
+    ChildServices = "285",
+    /**
+     * 286: Children
+     */
+    Children = "286",
+    /**
+     * 287: Children's Services
+     */
+    ChildrenQuoteSServices = "287",
+    /**
+     * 288: Cholesterol
+     */
+    Cholesterol = "288",
+    /**
+     * 289: Clothing
+     */
+    Clothing = "289",
+    /**
+     * 29: Reflexology
+     */
+    Reflexology = "29",
+    /**
+     * 290: Community Based Accommodation
+     */
+    CommunityBasedAcco = "290",
+    /**
+     * 291: Community Care Unit
+     */
+    CommunityCareUnit = "291",
+    /**
+     * 292: Community Child And Adolescent Mental Health Services
+     */
+    CommunityChildAnd = "292",
+    /**
+     * 293: Community Health
+     */
+    CommunityHealth = "293",
+    /**
+     * 294: Community Residential Unit
+     */
+    CommunityResidentia = "294",
+    /**
+     * 295: Community Transport
+     */
+    CommunityTransport = "295",
+    /**
+     * 296: Companion Visiting
+     */
+    CompanionVisiting = "296",
+    /**
+     * 297: Companionship
+     */
+    Companionship = "297",
+    /**
+     * 298: Consumer Advice
+     */
+    ConsumerAdvice = "298",
+    /**
+     * 299: Consumer Issues
+     */
+    ConsumerIssues = "299",
+    /**
+     * 3: Aged Care information/referral
+     */
+    AgedCareInformationReferral = "3",
+    /**
+     * 30: Reiki
+     */
+    Reiki = "30",
+    /**
+     * 300: Continuing Care Services
+     */
+    ContinuingCareServ = "300",
+    /**
+     * 301: Contraception Information
+     */
+    ContraceptionInform = "301",
+    /**
+     * 302: Coordinating Bodies
+     */
+    CoordinatingBodies = "302",
+    /**
+     * 303: Correctional Services
+     */
+    CorrectionalService = "303",
+    /**
+     * 304: Council Environmental Health
+     */
+    CouncilEnvironmenta = "304",
+    /**
+     * 305: Counselling
+     */
+    Counselling = "305",
+    /**
+     * 306: Criminal
+     */
+    Criminal = "306",
+    /**
+     * 307: Crises
+     */
+    Crises = "307",
+    /**
+     * 308: Crisis Assessment And Treatment Services (Cats)
+     */
+    CrisisAssessmentAn = "308",
+    /**
+     * 309: Crisis Assistance
+     */
+    CrisisAssistance = "309",
+    /**
+     * 31: Relaxation therapy
+     */
+    RelaxationTherapy = "31",
+    /**
+     * 310: Crisis Refuge
+     */
+    CrisisRefuge = "310",
+    /**
+     * 311: Day Program
+     */
+    DayProgram = "311",
+    /**
+     * 312: Deaf
+     */
+    Deaf = "312",
+    /**
+     * 313: Dental Hygiene
+     */
+    DentalHygiene = "313",
+    /**
+     * 314: Dentistry
+     */
+    Dentistry = "314",
+    /**
+     * 315: Dentures
+     */
+    Dentures = "315",
+    /**
+     * 316: Depression
+     */
+    Depression = "316",
+    /**
+     * 317: Detoxification
+     */
+    Detoxification = "317",
+    /**
+     * 318: Diabetes
+     */
+    Diabetes = "318",
+    /**
+     * 319: Diaphragm Fitting
+     */
+    DiaphragmFitting = "319",
+    /**
+     * 32: Shiatsu
+     */
+    Shiatsu = "32",
+    /**
+     * 320: Dieticians
+     */
+    Dieticians = "320",
+    /**
+     * 321: Disabled Parking
+     */
+    DisabledParking = "321",
+    /**
+     * 322: District Nursing
+     */
+    DistrictNursing = "322",
+    /**
+     * 323: Divorce
+     */
+    Divorce = "323",
+    /**
+     * 324: Doctors
+     */
+    Doctors = "324",
+    /**
+     * 325: Drink-Drive
+     */
+    DrinkDrive = "325",
+    /**
+     * 326: Dual Diagnosis Services
+     */
+    DualDiagnosisServi = "326",
+    /**
+     * 327: Early Choice
+     */
+    EarlyChoice = "327",
+    /**
+     * 328: Eating Disorder
+     */
+    EatingDisorder = "328",
+    /**
+     * 33: Western herbal medicine
+     */
+    WesternHerbalMedicine = "33",
+    /**
+     * 330: Emergency Relief
+     */
+    EmergencyRelief = "330",
+    /**
+     * 331: Employment And Training
+     */
+    EmploymentAndTrain = "331",
+    /**
+     * 332: Environment
+     */
+    Environment = "332",
+    /**
+     * 333: Equipment
+     */
+    Equipment = "333",
+    /**
+     * 334: Exercise
+     */
+    Exercise = "334",
+    /**
+     * 335: Facility
+     */
+    Facility = "335",
+    /**
+     * 336: Family Choice
+     */
+    FamilyChoice = "336",
+    /**
+     * 337: Family Law
+     */
+    FamilyLaw = "337",
+    /**
+     * 338: Family Options
+     */
+    FamilyOptions = "338",
+    /**
+     * 339: Family Services
+     */
+    FamilyServices = "339",
+    /**
+     * 34: Family day care
+     */
+    FamilyDayCare = "34",
+    /**
+     * 340: FFYA
+     */
+    FFYA = "340",
+    /**
+     * 341: Financial Aid
+     */
+    FinancialAid = "341",
+    /**
+     * 342: Fitness
+     */
+    Fitness = "342",
+    /**
+     * 343: Flexible Care Packages
+     */
+    FlexibleCarePackag = "343",
+    /**
+     * 344: Food
+     */
+    Food = "344",
+    /**
+     * 345: Food Vouchers
+     */
+    FoodVouchers = "345",
+    /**
+     * 346: Forensic Mental Health Services
+     */
+    ForensicMentalHeal = "346",
+    /**
+     * 347: Futures
+     */
+    Futures = "347",
+    /**
+     * 348: Futures For Young Adults
+     */
+    FuturesForYoungAd = "348",
+    /**
+     * 349: General Practitioners
+     */
+    GeneralPractitioner = "349",
+    /**
+     * 35: Holiday programs
+     */
+    HolidayPrograms = "35",
+    /**
+     * 350: Grants
+     */
+    Grants = "350",
+    /**
+     * 351: Grief
+     */
+    Grief = "351",
+    /**
+     * 352: Grief Counselling
+     */
+    GriefCounselling = "352",
+    /**
+     * 353: HACC
+     */
+    HACC = "353",
+    /**
+     * 354: Heart Disease
+     */
+    HeartDisease = "354",
+    /**
+     * 355: Help
+     */
+    Help = "355",
+    /**
+     * 356: High Blood Pressure
+     */
+    HighBloodPressure = "356",
+    /**
+     * 357: Home Help
+     */
+    HomeHelp = "357",
+    /**
+     * 358: Home Nursing
+     */
+    HomeNursing = "358",
+    /**
+     * 359: Homefirst
+     */
+    Homefirst = "359",
+    /**
+     * 36: Kindergarten inclusion support for children with a disability
+     */
+    KindergartenInclusionSupport = "36",
+    /**
+     * 360: Hospice Care
+     */
+    HospiceCare = "360",
+    /**
+     * 361: Hospital Services
+     */
+    HospitalServices = "361",
+    /**
+     * 362: Hospital To Home
+     */
+    HospitalToHome = "362",
+    /**
+     * 364: Hostel
+     */
+    Hostel = "364",
+    /**
+     * 365: Hostel Accommodation
+     */
+    HostelAccommodation = "365",
+    /**
+     * 366: Household Items
+     */
+    HouseholdItems = "366",
+    /**
+     * 367: Hypertension
+     */
+    Hypertension = "367",
+    /**
+     * 368: Illness
+     */
+    Illness = "368",
+    /**
+     * 369: Independent Living
+     */
+    IndependentLiving = "369",
+    /**
+     * 37: Kindergarten/preschool
+     */
+    KindergartenPreschool = "37",
+    /**
+     * 370: Information
+     */
+    Information = "370",
+    /**
+     * 371: Injury
+     */
+    Injury = "371",
+    /**
+     * 372: Intake
+     */
+    Intake = "372",
+    /**
+     * 373: Intensive Mobile Youth Outreach Services (Imyos)
+     */
+    IntensiveMobileYou = "373",
+    /**
+     * 374: Intervention
+     */
+    Intervention = "374",
+    /**
+     * 375: Job Searching
+     */
+    JobSearching = "375",
+    /**
+     * 376: Justice
+     */
+    Justice = "376",
+    /**
+     * 377: Leisure
+     */
+    Leisure = "377",
+    /**
+     * 378: Loans
+     */
+    Loans = "378",
+    /**
+     * 379: Low Income Earners
+     */
+    LowIncomeEarners = "379",
+    /**
+     * 38: Long day child care
+     */
+    LongDayChildCare = "38",
+    /**
+     * 380: Lung
+     */
+    Lung = "380",
+    /**
+     * 381: Making A Difference
+     */
+    MakingADifference = "381",
+    /**
+     * 382: Medical Services
+     */
+    MedicalServices = "382",
+    /**
+     * 383: Medical Specialists
+     */
+    MedicalSpecialists = "383",
+    /**
+     * 384: Medication Administration
+     */
+    MedicationAdministr = "384",
+    /**
+     * 385: Menstrual Information
+     */
+    MenstrualInformatio = "385",
+    /**
+     * 386: Methadone
+     */
+    Methadone = "386",
+    /**
+     * 387: Mobile Support And Treatment Services (MSTS)
+     */
+    MobileSupportAndT = "387",
+    /**
+     * 388: Motor Neurone
+     */
+    MotorNeurone = "388",
+    /**
+     * 389: Multiple Sclerosis
+     */
+    MultipleSclerosis = "389",
+    /**
+     * 39: Occasional child care
+     */
+    OccasionalChildCare = "39",
+    /**
+     * 390: Neighbourhood House
+     */
+    NeighbourhoodHouse = "390",
+    /**
+     * 391: Nursing Home
+     */
+    NursingHome = "391",
+    /**
+     * 392: Nursing Mothers
+     */
+    NursingMothers = "392",
+    /**
+     * 393: Obesity
+     */
+    Obesity = "393",
+    /**
+     * 394: Occupational Health &amp; Safety
+     */
+    OccupationalHealth = "394",
+    /**
+     * 395: Optometrist
+     */
+    Optometrist = "395",
+    /**
+     * 396: Oral Hygiene
+     */
+    OralHygiene = "396",
+    /**
+     * 397: Outpatients
+     */
+    Outpatients = "397",
+    /**
+     * 398: Outreach Service
+     */
+    OutreachService = "398",
+    /**
+     * 399: PADP
+     */
+    PADP = "399",
+    /**
+     * 4: Aged Residential Care
+     */
+    AgedResidentialCare = "4",
+    /**
+     * 40: Outside school hours care
+     */
+    OutsideSchoolHoursCare = "40",
+    /**
+     * 400: Pain
+     */
+    Pain = "400",
+    /**
+     * 401: Pap Smear
+     */
+    PapSmear = "401",
+    /**
+     * 402: Parenting
+     */
+    Parenting = "402",
+    /**
+     * 403: Peak Organizations
+     */
+    PeakOrganizations = "403",
+    /**
+     * 404: Personal Care
+     */
+    PersonalCare = "404",
+    /**
+     * 405: Pharmacies
+     */
+    Pharmacies = "405",
+    /**
+     * 406: Phobias
+     */
+    Phobias = "406",
+    /**
+     * 407: Physical
+     */
+    Physical = "407",
+    /**
+     * 408: Physical Activity
+     */
+    PhysicalActivity = "408",
+    /**
+     * 409: Postnatal
+     */
+    Postnatal = "409",
+    /**
+     * 41: Children's play programs
+     */
+    ChildrenQuoteSPlayPrograms = "41",
+    /**
+     * 410: Pregnancy
+     */
+    Pregnancy = "410",
+    /**
+     * 411: Pregnancy Tests
+     */
+    PregnancyTests = "411",
+    /**
+     * 412: Preschool
+     */
+    Preschool = "412",
+    /**
+     * 413: Prescriptions
+     */
+    Prescriptions = "413",
+    /**
+     * 414: Primary Mental Health And Early Intervention Teams
+     */
+    PrimaryMentalHealt = "414",
+    /**
+     * 415: Property Maintenance
+     */
+    PropertyMaintenance = "415",
+    /**
+     * 416: Prostate
+     */
+    Prostate = "416",
+    /**
+     * 417: Psychiatric
+     */
+    Psychiatric = "417",
+    /**
+     * 418: Psychiatric Disability Support Services - Home-Based Outreach
+     */
+    PsychiatricDisabili = "418",
+    /**
+     * 419: Psychiatric Disability Support Services - Planned Respite
+     */
+    PsychiatricDisabili_419 = "419",
+    /**
+     * 42: Parenting &amp; family management support/education
+     */
+    ParentingFamilySupportEducation = "42",
+    /**
+     * 420: Psychiatric Disability Support Services - Residential Rehabilitation
+     */
+    PsychiatricDisabili_420 = "420",
+    /**
+     * 421: Psychiatric Disability Support Services Home-Based Outreach
+     */
+    PsychiatricDisabili_421 = "421",
+    /**
+     * 422: Psychiatric Disability Support Services Mutual Support And Self Help
+     */
+    PsychiatricDisabili_422 = "422",
+    /**
+     * 423: Psychiatric Support
+     */
+    PsychiatricSupport = "423",
+    /**
+     * 424: Recreation
+     */
+    Recreation = "424",
+    /**
+     * 425: Referral
+     */
+    Referral = "425",
+    /**
+     * 426: Refuge
+     */
+    Refuge = "426",
+    /**
+     * 427: Rent Assistance
+     */
+    RentAssistance = "427",
+    /**
+     * 428: Residential Facilities
+     */
+    ResidentialFaciliti = "428",
+    /**
+     * 429: Residential Respite
+     */
+    ResidentialRespite = "429",
+    /**
+     * 43: Playgroup
+     */
+    Playgroup = "43",
+    /**
+     * 430: Respiratory
+     */
+    Respiratory = "430",
+    /**
+     * 431: Response
+     */
+    Response = "431",
+    /**
+     * 432: Rooming Houses
+     */
+    RoomingHouses = "432",
+    /**
+     * 433: Safe Sex
+     */
+    SafeSex = "433",
+    /**
+     * 434: Secure Extended Care Inpatient Services
+     */
+    SecureExtendedCare = "434",
+    /**
+     * 435: Self Help
+     */
+    SelfHelp = "435",
+    /**
+     * 436: Separation
+     */
+    Separation = "436",
+    /**
+     * 437: Services
+     */
+    Services = "437",
+    /**
+     * 438: Sex Education
+     */
+    SexEducation = "438",
+    /**
+     * 439: Sexual Abuse
+     */
+    SexualAbuse = "439",
+    /**
+     * 44: School nursing
+     */
+    SchoolNursing = "44",
+    /**
+     * 440: Sexual Issues
+     */
+    SexualIssues = "440",
+    /**
+     * 441: Sexually Transmitted Diseases
+     */
+    SexuallyTransmitted = "441",
+    /**
+     * 442: SIDS
+     */
+    SIDS = "442",
+    /**
+     * 443: Social Support
+     */
+    SocialSupport = "443",
+    /**
+     * 444: Socialisation
+     */
+    Socialisation = "444",
+    /**
+     * 445: Special Needs
+     */
+    SpecialNeeds = "445",
+    /**
+     * 446: Speech Therapist
+     */
+    SpeechTherapist = "446",
+    /**
+     * 447: Splinting
+     */
+    Splinting = "447",
+    /**
+     * 448: Sport
+     */
+    Sport = "448",
+    /**
+     * 449: Statewide And Specialist Services
+     */
+    StatewideAndSpecia = "449",
+    /**
+     * 45: Toy library
+     */
+    ToyLibrary = "45",
+    /**
+     * 450: STD
+     */
+    STD = "450",
+    /**
+     * 451: STI
+     */
+    STI = "451",
+    /**
+     * 452: Stillbirth
+     */
+    Stillbirth = "452",
+    /**
+     * 453: Stomal Care
+     */
+    StomalCare = "453",
+    /**
+     * 454: Stroke
+     */
+    Stroke = "454",
+    /**
+     * 455: Substance Abuse
+     */
+    SubstanceAbuse = "455",
+    /**
+     * 456: Support
+     */
+    Support = "456",
+    /**
+     * 457: Syringes
+     */
+    Syringes = "457",
+    /**
+     * 458: Teeth
+     */
+    Teeth = "458",
+    /**
+     * 459: Tenancy Advice
+     */
+    TenancyAdvice = "459",
+    /**
+     * 46: Child protection/child abuse report
+     */
+    ChildProtectionChildAbuseReport = "46",
+    /**
+     * 460: Terminal Illness
+     */
+    TerminalIllness = "460",
+    /**
+     * 461: Therapy
+     */
+    Therapy = "461",
+    /**
+     * 462: Transcription
+     */
+    Transcription = "462",
+    /**
+     * 463: Translating Services
+     */
+    TranslatingServices = "463",
+    /**
+     * 464: Translator
+     */
+    Translator = "464",
+    /**
+     * 465: Transport
+     */
+    Transport = "465",
+    /**
+     * 466: Vertebrae
+     */
+    Vertebrae = "466",
+    /**
+     * 467: Violence
+     */
+    Violence = "467",
+    /**
+     * 468: Vocational Guidance
+     */
+    VocationalGuidance = "468",
+    /**
+     * 469: Weight
+     */
+    Weight = "469",
+    /**
+     * 47: Foster care
+     */
+    FosterCare = "47",
+    /**
+     * 470: Welfare Assistance
+     */
+    WelfareAssistance = "470",
+    /**
+     * 471: Welfare Counselling
+     */
+    WelfareCounselling = "471",
+    /**
+     * 472: Wheelchairs
+     */
+    Wheelchairs = "472",
+    /**
+     * 473: Wound Management
+     */
+    WoundManagement = "473",
+    /**
+     * 474: Young People At Risk
+     */
+    YoungPeopleAtRisk = "474",
+    /**
+     * 475: Further Description - Community Health Care
+     */
+    FurtherDescCommunityHealthCare = "475",
+    /**
+     * 476: Library
+     */
+    Library = "476",
+    /**
+     * 477: Community Hours
+     */
+    CommunityHours = "477",
+    /**
+     * 478: Further Description - Specialist Medical
+     */
+    FurtherDescSpecialistMedical = "478",
+    /**
+     * 479: Hepatology
+     */
+    Hepatology = "479",
+    /**
+     * 48: Residential/ out of home care
+     */
+    ResidentialOutOfHomeCare = "48",
+    /**
+     * 480: Gastroenterology
+     */
+    Gastroenterology = "480",
+    /**
+     * 481: Gynaecology
+     */
+    Gynaecology = "481",
+    /**
+     * 482: Obstetrics
+     */
+    Obstetrics = "482",
+    /**
+     * 483: Further Description - Specialist Surgical
+     */
+    FurtherDescSpecialistSurgical = "483",
+    /**
+     * 484: Placement Protection
+     */
+    PlacementProtection = "484",
+    /**
+     * 485: Family Violence
+     */
+    FamilyViolence = "485",
+    /**
+     * 486: Integrated Family Services
+     */
+    IntegratedFamilyServices = "486",
+    /**
+     * 488: Diabetes Educator
+     */
+    DiabetesEducator = "488",
+    /**
+     * 489: Kinship Care
+     */
+    KinshipCare = "489",
+    /**
+     * 49: Support for young people leaving care
+     */
+    SupportYoungPeopleLeavingCare = "49",
+    /**
+     * 490: General Mental Health Services
+     */
+    GeneralMentalHealthServices = "490",
+    /**
+     * 491: Exercise Physiology
+     */
+    ExercisePhysiology = "491",
+    /**
+     * 492: Medical Research
+     */
+    MedicalResearch = "492",
+    /**
+     * 493: Youth
+     */
+    Youth = "493",
+    /**
+     * 494: Youth Services
+     */
+    YouthServices = "494",
+    /**
+     * 495: Youth Health
+     */
+    YouthHealth = "495",
+    /**
+     * 496: Child and Family Services
+     */
+    ChildAndFamilySer = "496",
+    /**
+     * 497: Home Visits
+     */
+    HomeVisits = "497",
+    /**
+     * 498: Mobile Services
+     */
+    MobileServices = "498",
+    /**
+     * 5: Case management for older persons
+     */
+    CaseManagementForOlderPersons = "5",
+    /**
+     * 50: Audiology
+     */
+    Audiology = "50",
+    /**
+     * 500: Before and/or After School Care
+     */
+    BeforeAndOrAfter = "500",
+    /**
+     * 501: Cancer Services
+     */
+    CancerServices = "501",
+    /**
+     * 502: Integrated Cancer Services
+     */
+    IntegratedCancerSe = "502",
+    /**
+     * 503: Multidisciplinary Services
+     */
+    MultidisciplinarySe = "503",
+    /**
+     * 504: Multidisciplinary Cancer Services
+     */
+    MultidisciplinaryCa = "504",
+    /**
+     * 505: Meetings
+     */
+    Meetings = "505",
+    /**
+     * 506: Blood pressure monitoring
+     */
+    BloodPressureMonit = "506",
+    /**
+     * 507: Dose administration aid
+     */
+    DoseAdministration = "507",
+    /**
+     * 508: Medical Equipment Hire
+     */
+    MedicalEquipmentHi = "508",
+    /**
+     * 509: Parenting &amp; family support/education
+     */
+    ParentingFamilySupportEducation_509 = "509",
+    /**
+     * 51: Blood donation
+     */
+    BloodDonation = "51",
+    /**
+     * 510: Deputising Service
+     */
+    DeputisingService = "510",
+    /**
+     * 513: Cancer Support Groups
+     */
+    CancerSupportGroups = "513",
+    /**
+     * 514: Community Cancer Services
+     */
+    CommunityCancerServices = "514",
+    /**
+     * 52: Chiropractic
+     */
+    Chiropractic = "52",
+    /**
+     * 53: Dietetics
+     */
+    Dietetics = "53",
+    /**
+     * 530: Disability Care Transport
+     */
+    DisabilityCareTransport = "530",
+    /**
+     * 531: Aged Care Transport
+     */
+    AgedCareTransport = "531",
+    /**
+     * 532: Diabetes Education service
+     */
+    DiabetesEducationS = "532",
+    /**
+     * 533: Cardiac Rehabilitation Service
+     */
+    CardiacRehabilitati = "533",
+    /**
+     * 534: Young Adult Diabetes services (YADS)
+     */
+    YoungAdultDiabetes = "534",
+    /**
+     * 535: Pulmonary Rehabilitation Service
+     */
+    PulmonaryRehabilita = "535",
+    /**
+     * 536: Art therapy
+     */
+    ArtTherapy = "536",
+    /**
+     * 537: Medication Reviews
+     */
+    MedicationReviews = "537",
+    /**
+     * 538: Telephone Counselling
+     */
+    TelephoneCounselling = "538",
+    /**
+     * 539: Telephone Help Line
+     */
+    TelephoneHelpLine = "539",
+    /**
+     * 54: Family planning
+     */
+    FamilyPlanning = "54",
+    /**
+     * 540: Online Service
+     */
+    OnlineService = "540",
+    /**
+     * 541: Crisis - Mental Health
+     */
+    CrisisMentalHealth = "541",
+    /**
+     * 542: Youth Crisis
+     */
+    YouthCrisis = "542",
+    /**
+     * 543: Sexual Assault
+     */
+    SexualAssault = "543",
+    /**
+     * 544: GPAH Other
+     */
+    GPAHOther = "544",
+    /**
+     * 545: Paediatric Dermatology
+     */
+    PaediatricDermatology = "545",
+    /**
+     * 546: Veterans Services
+     */
+    VeteransServices = "546",
+    /**
+     * 547: Veterans
+     */
+    Veterans = "547",
+    /**
+     * 548: Food Relief/food/meals
+     */
+    FoodReliefFoodMeals = "548",
+    /**
+     * 55: Health advocacy/Liaison service
+     */
+    HealthAdvocacyLiaisonService = "55",
+    /**
+     * 550: Dementia Care
+     */
+    DementiaCare = "550",
+    /**
+     * 551: Alzheimer
+     */
+    Alzheimer = "551",
+    /**
+     * 552: Drug and/or alcohol support groups
+     */
+    DrugAndOrAlcoholSupportGroups = "552",
+    /**
+     * 553: One on One Support/Mentoring/Coaching
+     */
+    VAL1On1SupportMentoringCoaching = "553",
+    /**
+     * 554: Chronic Disease Management
+     */
+    ChronicDiseaseManagement = "554",
+    /**
+     * 555: Liaison Services
+     */
+    LiaisonServices = "555",
+    /**
+     * 556: Walk in Centre / non emergency
+     */
+    WalkInCentreNonEmergency = "556",
+    /**
+     * 557: Inpatients
+     */
+    Inpatients = "557",
+    /**
+     * 558: Spiritual Counselling
+     */
+    SpiritualCounselling = "558",
+    /**
+     * 559: Women's Health
+     */
+    WomenQuoteSHealth = "559",
+    /**
+     * 56: Health information/referral
+     */
+    HealthInformationReferral = "56",
+    /**
+     * 560: Men's Health
+     */
+    MenQuoteSHealth = "560",
+    /**
+     * 561: Health education/Health awareness program
+     */
+    HealthEducationAwarenessProgram = "561",
+    /**
+     * 562: Test Message
+     */
+    TestMessage = "562",
+    /**
+     * 563: Remedial Massage
+     */
+    RemedialMassage = "563",
+    /**
+     * 564: Adolescent Mental Health Services
+     */
+    AdolescentMentalHealthServices = "564",
+    /**
+     * 565: Youth drop in/assistance/support
+     */
+    YouthDropInAssistanceSupport = "565",
+    /**
+     * 566: Aboriginal Health Worker
+     */
+    AboriginalHealthWorker = "566",
+    /**
+     * 567: Women's Health Clinic
+     */
+    WomenQuoteSHealthClinic = "567",
+    /**
+     * 568: Men's Health Clinic
+     */
+    MenQuoteSHealthClinic = "568",
+    /**
+     * 569: Migrant Health Clinic
+     */
+    MigrantHealthClinic = "569",
+    /**
+     * 57: Immunization
+     */
+    Immunization = "57",
+    /**
+     * 570: Refugee Health Clinic
+     */
+    RefugeeHealthClinic = "570",
+    /**
+     * 571: Aboriginal Health Clinic
+     */
+    AboriginalHealthClinic = "571",
+    /**
+     * 572: Nurse Practitioner lead Clinic/s
+     */
+    NursePractitionerLeadClinicS = "572",
+    /**
+     * 573: Nurse lead Clinic/s
+     */
+    NurseLeadClinicS = "573",
+    /**
+     * 574: Culturally tailored support groups
+     */
+    CulturallyTailoredSupportGroups = "574",
+    /**
+     * 575: Culturally tailored health promotion
+     */
+    CulturallyTailoredHealthPromotion = "575",
+    /**
+     * 576: Rehabilitation
+     */
+    Rehabilitation = "576",
+    /**
+     * 577: Education information/referral
+     */
+    EducationInformationReferral = "577",
+    /**
+     * 58: Maternal &amp; child health
+     */
+    MaternalAndChildHealth = "58",
+    /**
+     * 580: Social Work
+     */
+    SocialWork = "580",
+    /**
+     * 581: Haematology
+     */
+    Haematology = "581",
+    /**
+     * 582: Maternity Shared Care
+     */
+    MaternitySharedCar = "582",
+    /**
+     * 583: Rehabilitation Service
+     */
+    RehabilitationServi = "583",
+    /**
+     * 584: Cranio-Sacral Therapy
+     */
+    CranioSacralTherapy = "584",
+    /**
+     * 585: Prosthetics &amp; Orthotics
+     */
+    ProstheticsAndOrthotics = "585",
+    /**
+     * 589: Home Medicine Review
+     */
+    HomeMedicineReview = "589",
+    /**
+     * 59: Nursing
+     */
+    Nursing = "59",
+    /**
+     * 590: GPAH - Medical
+     */
+    GPAHMedical = "590",
+    /**
+     * 591: Music Therapy
+     */
+    MusicTherapy = "591",
+    /**
+     * 593: Falls Prevention
+     */
+    FallsPrevention = "593",
+    /**
+     * 599: Accommodation/Tenancy
+     */
+    AccommodationTenancy = "599",
+    /**
+     * 6: Delivered meals (meals on wheels)
+     */
+    DeliveredMealsMealsOnWheels = "6",
+    /**
+     * 60: Nutrition
+     */
+    Nutrition = "60",
+    /**
+     * 600: Assess-Skill, Ability, Needs
+     */
+    AssessSkillAbilityNeeds = "600",
+    /**
+     * 601: Assist Access/Maintain Employ
+     */
+    AssistAccessMaintainEmploy = "601",
+    /**
+     * 602: Assist Prod-Pers Care/Safety
+     */
+    AssistProdPersCareSafety = "602",
+    /**
+     * 603: Assist-Integrate School/Ed
+     */
+    AssistIntegrateSchoolEd = "603",
+    /**
+     * 604: Assist-Life Stage, Transition
+     */
+    AssistLifeStageTransition = "604",
+    /**
+     * 605: Assist-Personal Activities
+     */
+    AssistPersonalActivities = "605",
+    /**
+     * 606: Assist-Travel/Transport
+     */
+    AssistTravelTransport = "606",
+    /**
+     * 607: Assistive Equip-General Tasks
+     */
+    AssistiveEquipGeneralTasks = "607",
+    /**
+     * 608: Assistive Equip-Recreation
+     */
+    AssistiveEquipRecreation = "608",
+    /**
+     * 609: Assistive Prod-Household Task
+     */
+    AssistiveProdHouseholdTask = "609",
+    /**
+     * 61: Occupational therapy
+     */
+    OccupationalTherapy = "61",
+    /**
+     * 610: Behavior Support
+     */
+    BehaviorSupport = "610",
+    /**
+     * 611: Comms &amp; Info Equipment
+     */
+    CommsAndInfoEquipment = "611",
+    /**
+     * 612: Community Nursing Care
+     */
+    CommunityNursingCare = "612",
+    /**
+     * 613: Daily Tasks/Shared Living
+     */
+    DailyTasksSharedLiving = "613",
+    /**
+     * 614: Development-Life Skills
+     */
+    DevelopmentLifeSkills = "614",
+    /**
+     * 615: Early Childhood Supports
+     */
+    EarlyChildhoodSupports = "615",
+    /**
+     * 616: Equipment Special Assess Setup
+     */
+    EquipmentSpecialAssessSetup = "616",
+    /**
+     * 617: Hearing Equipment
+     */
+    HearingEquipment = "617",
+    /**
+     * 618: Home Modification
+     */
+    HomeModification = "618",
+    /**
+     * 619: Household Tasks
+     */
+    HouseholdTasks = "619",
+    /**
+     * 62: Optometry
+     */
+    Optometry = "62",
+    /**
+     * 620: Interpret/Translate
+     */
+    InterpretTranslate = "620",
+    /**
+     * 621: Other Innovative Supports
+     */
+    OtherInnovativeSupports = "621",
+    /**
+     * 622: Participate Community
+     */
+    ParticipateCommunity = "622",
+    /**
+     * 623: Personal Mobility Equipment
+     */
+    PersonalMobilityEquipment = "623",
+    /**
+     * 624: Physical Wellbeing
+     */
+    PhysicalWellbeing = "624",
+    /**
+     * 625: Plan Management
+     */
+    PlanManagement = "625",
+    /**
+     * 626: Therapeutic Supports
+     */
+    TherapeuticSupports = "626",
+    /**
+     * 627: Training-Travel Independence
+     */
+    TrainingTravelIndependence = "627",
+    /**
+     * 628: Vehicle modifications
+     */
+    VehicleModifications = "628",
+    /**
+     * 629: Vision Equipment
+     */
+    VisionEquipment = "629",
+    /**
+     * 63: Osteopathy
+     */
+    Osteopathy = "63",
+    /**
+     * 64: Pharmacy
+     */
+    Pharmacy = "64",
+    /**
+     * 65: Physiotherapy
+     */
+    Physiotherapy = "65",
+    /**
+     * 66: Podiatry
+     */
+    Podiatry = "66",
+    /**
+     * 67: Sexual health
+     */
+    SexualHealth = "67",
+    /**
+     * 68: Speech pathology/therapy
+     */
+    SpeechPathologyTherapy = "68",
+    /**
+     * 69: Bereavement counselling
+     */
+    BereavementCounselling = "69",
+    /**
+     * 7: Friendly visiting
+     */
+    FriendlyVisiting = "7",
+    /**
+     * 70: Crisis counselling
+     */
+    CrisisCounselling = "70",
+    /**
+     * 71: Family counselling and/or family therapy
+     */
+    FamilyCounsellingTherapy = "71",
+    /**
+     * 72: Family violence counselling
+     */
+    FamilyViolenceCounselling = "72",
+    /**
+     * 73: Financial counselling
+     */
+    FinancialCounselling = "73",
+    /**
+     * 74: Generalist counselling
+     */
+    GeneralistCounselling = "74",
+    /**
+     * 75: Genetic counselling
+     */
+    GeneticCounselling = "75",
+    /**
+     * 76: Health counselling
+     */
+    HealthCounselling = "76",
+    /**
+     * 77: Mediation
+     */
+    Mediation = "77",
+    /**
+     * 78: Problem gambling counselling
+     */
+    ProblemGamblingCounselling = "78",
+    /**
+     * 79: Relationship counselling
+     */
+    RelationshipCounselling = "79",
+    /**
+     * 8: Home care/housekeeping assistance
+     */
+    HomeCareHousekeepingAssistance = "8",
+    /**
+     * 80: Sexual assault counselling
+     */
+    SexualAssaultCounselling = "80",
+    /**
+     * 81: Trauma counselling
+     */
+    TraumaCounselling = "81",
+    /**
+     * 82: Victims of crime counselling
+     */
+    VictimsOfCrimeCounselling = "82",
+    /**
+     * 83: Cemetery operation
+     */
+    CemeteryOperation = "83",
+    /**
+     * 84: Cremation
+     */
+    Cremation = "84",
+    /**
+     * 85: Death service information
+     */
+    DeathServiceInformation = "85",
+    /**
+     * 86: Funeral services
+     */
+    FuneralServices = "86",
+    /**
+     * 87: Endodontic
+     */
+    Endodontic = "87",
+    /**
+     * 88: General dental
+     */
+    GeneralDental = "88",
+    /**
+     * 89: Oral medicine
+     */
+    OralMedicine = "89",
+    /**
+     * 9: Home maintenance and repair
+     */
+    HomeMaintenanceAndRepair = "9",
+    /**
+     * 90: Oral surgery
+     */
+    OralSurgery = "90",
+    /**
+     * 91: Orthodontic
+     */
+    Orthodontic = "91",
+    /**
+     * 92: Paediatric Dentistry
+     */
+    PaediatricDentistry = "92",
+    /**
+     * 93: Periodontic
+     */
+    Periodontic = "93",
+    /**
+     * 94: Prosthodontic
+     */
+    Prosthodontic = "94",
+    /**
+     * 95: Acquired brain injury information/referral
+     */
+    AcquiredBrainInjuryInfoReferral = "95",
+    /**
+     * 96: Disability advocacy
+     */
+    DisabilityAdvocacy = "96",
+    /**
+     * 97: Disability aids &amp; equipment
+     */
+    DisabilityAidsAndEquipment = "97",
+    /**
+     * 98: Disability case management
+     */
+    DisabilityCaseManagement = "98",
+    /**
+     * 99: Disability day programs &amp; activities
+     */
+    DisabilityDayProgramsActivities = "99"
+}
 //# sourceMappingURL=ServiceTypeValueSet.d.ts.map

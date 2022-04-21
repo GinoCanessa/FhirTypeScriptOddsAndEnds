@@ -1,10 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Ability of the primary source to push updates/alerts
  */
 export declare const VerificationresultCanPushUpdatesValueSet: {
-    verificationresult_can_push_updates_No: Coding;
-    verificationresult_can_push_updates_Undetermined: Coding;
-    verificationresult_can_push_updates_Yes: Coding;
+    /**
+     * Code: no
+     */
+    readonly No: Coding;
+    /**
+     * Code: undetermined
+     */
+    readonly Undetermined: Coding;
+    /**
+     * Code: yes
+     */
+    readonly Yes: Coding;
 };
+/**
+ * Ability of the primary source to push updates/alerts
+ */
+export declare type VerificationresultCanPushUpdatesValueSetType = typeof VerificationresultCanPushUpdatesValueSet;
+/**
+ * Ability of the primary source to push updates/alerts
+ */
+export declare enum VerificationresultCanPushUpdatesValueSetEnum {
+    /**
+     * Code: no
+     */
+    No = "no",
+    /**
+     * Code: undetermined
+     */
+    Undetermined = "undetermined",
+    /**
+     * Code: yes
+     */
+    Yes = "yes"
+}
 //# sourceMappingURL=VerificationresultCanPushUpdatesValueSet.d.ts.map

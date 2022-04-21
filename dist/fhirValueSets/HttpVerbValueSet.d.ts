@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.
  */
 export declare const HttpVerbValueSet: {
     /**
-     * HTTP DELETE Command.
+     * DELETE: HTTP DELETE Command.
      */
-    http_verb_DELETE: Coding;
+    readonly DELETE: Coding;
     /**
-     * HTTP GET Command.
+     * GET: HTTP GET Command.
      */
-    http_verb_GET: Coding;
+    readonly GET: Coding;
     /**
-     * HTTP HEAD Command.
+     * HEAD: HTTP HEAD Command.
      */
-    http_verb_HEAD: Coding;
+    readonly HEAD: Coding;
     /**
-     * HTTP PATCH Command.
+     * PATCH: HTTP PATCH Command.
      */
-    http_verb_PATCH: Coding;
+    readonly PATCH: Coding;
     /**
-     * HTTP POST Command.
+     * POST: HTTP POST Command.
      */
-    http_verb_POST: Coding;
+    readonly POST: Coding;
     /**
-     * HTTP PUT Command.
+     * PUT: HTTP PUT Command.
      */
-    http_verb_PUT: Coding;
+    readonly PUT: Coding;
 };
+/**
+ * HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.
+ */
+export declare type HttpVerbValueSetType = typeof HttpVerbValueSet;
+/**
+ * HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.
+ */
+export declare enum HttpVerbValueSetEnum {
+    /**
+     * DELETE: HTTP DELETE Command.
+     */
+    DELETE = "DELETE",
+    /**
+     * GET: HTTP GET Command.
+     */
+    GET = "GET",
+    /**
+     * HEAD: HTTP HEAD Command.
+     */
+    HEAD = "HEAD",
+    /**
+     * PATCH: HTTP PATCH Command.
+     */
+    PATCH = "PATCH",
+    /**
+     * POST: HTTP POST Command.
+     */
+    POST = "POST",
+    /**
+     * PUT: HTTP PUT Command.
+     */
+    PUT = "PUT"
+}
 //# sourceMappingURL=HttpVerbValueSet.d.ts.map

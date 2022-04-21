@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of Prescription Product codes.
  */
 export declare const VisionProductValueSet: {
     /**
-     * A lens to be fitted for wearing directly on an eye.
+     * contact: A lens to be fitted for wearing directly on an eye.
      */
-    vision_product_ContactLens: Coding;
+    readonly ContactLens: Coding;
     /**
-     * A lens to be fitted to a frame to comprise a pair of glasses.
+     * lens: A lens to be fitted to a frame to comprise a pair of glasses.
      */
-    vision_product_Lens: Coding;
+    readonly Lens: Coding;
 };
+/**
+ * This value set includes a smattering of Prescription Product codes.
+ */
+export declare type VisionProductValueSetType = typeof VisionProductValueSet;
+/**
+ * This value set includes a smattering of Prescription Product codes.
+ */
+export declare enum VisionProductValueSetEnum {
+    /**
+     * contact: A lens to be fitted for wearing directly on an eye.
+     */
+    ContactLens = "contact",
+    /**
+     * lens: A lens to be fitted to a frame to comprise a pair of glasses.
+     */
+    Lens = "lens"
+}
 //# sourceMappingURL=VisionProductValueSet.d.ts.map

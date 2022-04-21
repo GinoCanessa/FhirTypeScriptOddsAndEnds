@@ -1,55 +1,112 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Color of the container cap.
  */
 export declare const ContainerCapValueSet: {
     /**
-     * black cap.
+     * black: black cap.
      */
-    container_cap_BlackCap: Coding;
+    readonly BlackCap: Coding;
     /**
-     * brown cap.
+     * brown: brown cap.
      */
-    container_cap_BrownCap: Coding;
+    readonly BrownCap: Coding;
     /**
-     * dark yellow cap.
+     * dark-yellow: dark yellow cap.
      */
-    container_cap_DarkYellowCap: Coding;
+    readonly DarkYellowCap: Coding;
     /**
-     * green cap.
+     * green: green cap.
      */
-    container_cap_GreenCap: Coding;
+    readonly GreenCap: Coding;
     /**
-     * grey cap.
+     * grey: grey cap.
      */
-    container_cap_GreyCap: Coding;
+    readonly GreyCap: Coding;
     /**
-     * lavender cap.
+     * lavender: lavender cap.
      */
-    container_cap_LavenderCap: Coding;
+    readonly LavenderCap: Coding;
     /**
-     * light blue cap.
+     * light-blue: light blue cap.
      */
-    container_cap_LightBlueCap: Coding;
+    readonly LightBlueCap: Coding;
     /**
-     * light green cap.
+     * light-green: light green cap.
      */
-    container_cap_LightGreenCap: Coding;
+    readonly LightGreenCap: Coding;
     /**
-     * pink cap.
+     * pink: pink cap.
      */
-    container_cap_PinkCap: Coding;
+    readonly PinkCap: Coding;
     /**
-     * red cap.
+     * red: red cap.
      */
-    container_cap_RedCap: Coding;
+    readonly RedCap: Coding;
     /**
-     * white cap.
+     * white: white cap.
      */
-    container_cap_WhiteCap: Coding;
+    readonly WhiteCap: Coding;
     /**
-     * yellow cap.
+     * yellow: yellow cap.
      */
-    container_cap_YellowCap: Coding;
+    readonly YellowCap: Coding;
 };
+/**
+ * Color of the container cap.
+ */
+export declare type ContainerCapValueSetType = typeof ContainerCapValueSet;
+/**
+ * Color of the container cap.
+ */
+export declare enum ContainerCapValueSetEnum {
+    /**
+     * black: black cap.
+     */
+    BlackCap = "black",
+    /**
+     * brown: brown cap.
+     */
+    BrownCap = "brown",
+    /**
+     * dark-yellow: dark yellow cap.
+     */
+    DarkYellowCap = "dark-yellow",
+    /**
+     * green: green cap.
+     */
+    GreenCap = "green",
+    /**
+     * grey: grey cap.
+     */
+    GreyCap = "grey",
+    /**
+     * lavender: lavender cap.
+     */
+    LavenderCap = "lavender",
+    /**
+     * light-blue: light blue cap.
+     */
+    LightBlueCap = "light-blue",
+    /**
+     * light-green: light green cap.
+     */
+    LightGreenCap = "light-green",
+    /**
+     * pink: pink cap.
+     */
+    PinkCap = "pink",
+    /**
+     * red: red cap.
+     */
+    RedCap = "red",
+    /**
+     * white: white cap.
+     */
+    WhiteCap = "white",
+    /**
+     * yellow: yellow cap.
+     */
+    YellowCap = "yellow"
+}
 //# sourceMappingURL=ContainerCapValueSet.d.ts.map

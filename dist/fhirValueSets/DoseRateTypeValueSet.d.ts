@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The kind of dose or rate specified.
  */
 export declare const DoseRateTypeValueSet: {
     /**
-     * The dose specified is calculated by the prescriber or the system.
+     * calculated: The dose specified is calculated by the prescriber or the system.
      */
-    dose_rate_type_Calculated: Coding;
+    readonly Calculated: Coding;
     /**
-     * The dose specified is as ordered by the prescriber.
+     * ordered: The dose specified is as ordered by the prescriber.
      */
-    dose_rate_type_Ordered: Coding;
+    readonly Ordered: Coding;
 };
+/**
+ * The kind of dose or rate specified.
+ */
+export declare type DoseRateTypeValueSetType = typeof DoseRateTypeValueSet;
+/**
+ * The kind of dose or rate specified.
+ */
+export declare enum DoseRateTypeValueSetEnum {
+    /**
+     * calculated: The dose specified is calculated by the prescriber or the system.
+     */
+    Calculated = "calculated",
+    /**
+     * ordered: The dose specified is as ordered by the prescriber.
+     */
+    Ordered = "ordered"
+}
 //# sourceMappingURL=DoseRateTypeValueSet.d.ts.map

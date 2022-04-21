@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes for general categories of communications such as alerts, instructions, etc.
  */
 export declare const CommunicationCategoryValueSet: {
     /**
-     * The communication conveys an alert.
+     * alert: The communication conveys an alert.
      */
-    communication_category_Alert: Coding;
+    readonly Alert: Coding;
     /**
-     * The communication conveys an instruction.
+     * instruction: The communication conveys an instruction.
      */
-    communication_category_Instruction: Coding;
+    readonly Instruction: Coding;
     /**
-     * The communication conveys a notification.
+     * notification: The communication conveys a notification.
      */
-    communication_category_Notification: Coding;
+    readonly Notification: Coding;
     /**
-     * The communication conveys a reminder.
+     * reminder: The communication conveys a reminder.
      */
-    communication_category_Reminder: Coding;
+    readonly Reminder: Coding;
 };
+/**
+ * Codes for general categories of communications such as alerts, instructions, etc.
+ */
+export declare type CommunicationCategoryValueSetType = typeof CommunicationCategoryValueSet;
+/**
+ * Codes for general categories of communications such as alerts, instructions, etc.
+ */
+export declare enum CommunicationCategoryValueSetEnum {
+    /**
+     * alert: The communication conveys an alert.
+     */
+    Alert = "alert",
+    /**
+     * instruction: The communication conveys an instruction.
+     */
+    Instruction = "instruction",
+    /**
+     * notification: The communication conveys a notification.
+     */
+    Notification = "notification",
+    /**
+     * reminder: The communication conveys a reminder.
+     */
+    Reminder = "reminder"
+}
 //# sourceMappingURL=CommunicationCategoryValueSet.d.ts.map

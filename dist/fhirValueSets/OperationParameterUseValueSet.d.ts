@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Whether an operation parameter is an input or an output parameter.
  */
 export declare const OperationParameterUseValueSet: {
     /**
-     * This is an input parameter.
+     * in: This is an input parameter.
      */
-    operation_parameter_use_In: Coding;
+    readonly In: Coding;
     /**
-     * This is an output parameter.
+     * out: This is an output parameter.
      */
-    operation_parameter_use_Out: Coding;
+    readonly Out: Coding;
 };
+/**
+ * Whether an operation parameter is an input or an output parameter.
+ */
+export declare type OperationParameterUseValueSetType = typeof OperationParameterUseValueSet;
+/**
+ * Whether an operation parameter is an input or an output parameter.
+ */
+export declare enum OperationParameterUseValueSetEnum {
+    /**
+     * in: This is an input parameter.
+     */
+    In = "in",
+    /**
+     * out: This is an output parameter.
+     */
+    Out = "out"
+}
 //# sourceMappingURL=OperationParameterUseValueSet.d.ts.map

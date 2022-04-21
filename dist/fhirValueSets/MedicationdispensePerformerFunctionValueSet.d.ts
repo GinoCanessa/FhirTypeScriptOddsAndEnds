@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * MedicationDispense Performer Function Codes
  */
 export declare const MedicationdispensePerformerFunctionValueSet: {
     /**
-     * Performed initial quality assurance on the prepared medication
+     * checker: Performed initial quality assurance on the prepared medication
      */
-    medicationdispense_performer_function_Checker: Coding;
+    readonly Checker: Coding;
     /**
-     * Recorded the details of the request
+     * dataenterer: Recorded the details of the request
      */
-    medicationdispense_performer_function_DataEnterer: Coding;
+    readonly DataEnterer: Coding;
     /**
-     * Performed the final quality assurance on the prepared medication against the request. Typically, this is a pharmacist function.
+     * finalchecker: Performed the final quality assurance on the prepared medication against the request. Typically, this is a pharmacist function.
      */
-    medicationdispense_performer_function_FinalChecker: Coding;
+    readonly FinalChecker: Coding;
     /**
-     * Prepared the medication.
+     * packager: Prepared the medication.
      */
-    medicationdispense_performer_function_Packager: Coding;
+    readonly Packager: Coding;
 };
+/**
+ * MedicationDispense Performer Function Codes
+ */
+export declare type MedicationdispensePerformerFunctionValueSetType = typeof MedicationdispensePerformerFunctionValueSet;
+/**
+ * MedicationDispense Performer Function Codes
+ */
+export declare enum MedicationdispensePerformerFunctionValueSetEnum {
+    /**
+     * checker: Performed initial quality assurance on the prepared medication
+     */
+    Checker = "checker",
+    /**
+     * dataenterer: Recorded the details of the request
+     */
+    DataEnterer = "dataenterer",
+    /**
+     * finalchecker: Performed the final quality assurance on the prepared medication against the request. Typically, this is a pharmacist function.
+     */
+    FinalChecker = "finalchecker",
+    /**
+     * packager: Prepared the medication.
+     */
+    Packager = "packager"
+}
 //# sourceMappingURL=MedicationdispensePerformerFunctionValueSet.d.ts.map

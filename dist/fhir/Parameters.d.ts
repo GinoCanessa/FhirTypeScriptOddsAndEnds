@@ -1,4 +1,4 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * A parameter passed to or received from the operation.
  */
@@ -7,109 +7,161 @@ export declare type IParametersParameter = fhir.IBackboneElement & {
      * The name of the parameter (reference to the operation definition).
      */
     name: string | null;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.name
+     */
     _name?: fhir.IFhirElement | undefined;
-    /**
-     * Only one level of nested parameters is allowed.
-     */
-    part?: fhir.IParametersParameter[] | undefined;
-    /**
-     * When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it's general resource resolution methods.
-     */
-    resource?: fhir.IFhirResource | undefined;
     /**
      * If the parameter is a data type.
      */
     valueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueBase64Binary?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueBoolean?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueCanonical?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueCode?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueDate?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueDateTime?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueDecimal?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueId?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueInstant?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueInteger?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueMarkdown?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueOid?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valuePositiveInt?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueString?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueTime?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueUri?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueUrl?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueUuid?: fhir.IFhirElement | undefined;
     /**
      * If the parameter is a data type.
@@ -235,6 +287,14 @@ export declare type IParametersParameter = fhir.IBackboneElement & {
      * If the parameter is a data type.
      */
     valueMeta?: fhir.IMeta | undefined;
+    /**
+     * When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it's general resource resolution methods.
+     */
+    resource?: fhir.IFhirResource | undefined;
+    /**
+     * Only one level of nested parameters is allowed.
+     */
+    part?: fhir.IParametersParameter[] | undefined;
 };
 /**
  * This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
@@ -252,114 +312,166 @@ export declare type IParameters = fhir.IResource & {
 /**
  * A parameter passed to or received from the operation.
  */
-export declare class ParametersParameter extends fhir.BackboneElement implements fhir.IParametersParameter {
+export declare class ParametersParameter extends fhir.BackboneElement implements IParametersParameter {
     /**
      * The name of the parameter (reference to the operation definition).
      */
     name: string | null;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.name
+     */
     _name?: fhir.FhirElement | undefined;
-    /**
-     * Only one level of nested parameters is allowed.
-     */
-    part?: fhir.ParametersParameter[] | undefined;
-    /**
-     * When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it's general resource resolution methods.
-     */
-    resource?: fhir.FhirResource | undefined;
     /**
      * If the parameter is a data type.
      */
     valueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueBase64Binary?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueBoolean?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueCanonical?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueCode?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueDate?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueDateTime?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueDecimal?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueId?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueInstant?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueInteger?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueMarkdown?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueOid?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valuePositiveInt?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueString?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueTime?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueUri?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueUrl?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
      */
     valueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Parameters.parameter.value[x]
+     */
     _valueUuid?: fhir.FhirElement | undefined;
     /**
      * If the parameter is a data type.
@@ -486,22 +598,26 @@ export declare class ParametersParameter extends fhir.BackboneElement implements
      */
     valueMeta?: fhir.Meta | undefined;
     /**
+     * When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it's general resource resolution methods.
+     */
+    resource?: fhir.FhirResource | undefined;
+    /**
+     * Only one level of nested parameters is allowed.
+     */
+    part?: fhir.ParametersParameter[] | undefined;
+    /**
      * Default constructor for ParametersParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IParametersParameter>);
+    constructor(source?: Partial<IParametersParameter>);
     /**
-     * Check if the current ParametersParameter contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ParametersParameter from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IParametersParameter): ParametersParameter;
+    doModelValidation(): [string, string][];
 }
 /**
  * This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
  */
-export declare class Parameters extends fhir.Resource implements fhir.IParameters {
+export declare class Parameters extends fhir.Resource implements IParameters {
     /**
      * Resource Type Name
      */
@@ -513,14 +629,10 @@ export declare class Parameters extends fhir.Resource implements fhir.IParameter
     /**
      * Default constructor for Parameters - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IParameters>);
+    constructor(source?: Partial<IParameters>);
     /**
-     * Check if the current Parameters contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a Parameters from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IParameters): Parameters;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Parameters.d.ts.map

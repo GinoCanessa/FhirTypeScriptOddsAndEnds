@@ -1,1391 +1,2784 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The license that applies to an Implementation Guide (using an SPDX license Identifiers, or 'not-open-source'). The binding is required but new SPDX license Identifiers are allowed to be used (https://spdx.org/licenses/).
  */
 export declare const SpdxLicenseValueSet: {
     /**
-     * BSD Zero Clause License.
+     * 0BSD: BSD Zero Clause License.
      */
-    spdx_license_BSDZeroClauseLicense: Coding;
+    readonly BSDZeroClauseLicense: Coding;
     /**
-     * Attribution Assurance License.
+     * AAL: Attribution Assurance License.
      */
-    spdx_license_AttributionAssuranceLicense: Coding;
+    readonly AttributionAssuranceLicense: Coding;
     /**
-     * Abstyles License.
+     * Abstyles: Abstyles License.
      */
-    spdx_license_AbstylesLicense: Coding;
+    readonly AbstylesLicense: Coding;
     /**
-     * Adobe Systems Incorporated Source Code License Agreement.
+     * Adobe-2006: Adobe Systems Incorporated Source Code License Agreement.
      */
-    spdx_license_AdobeSystemsIncorporatedSourceCodeLicenseAgreement: Coding;
+    readonly AdobeSystemsIncorporatedSourceCodeLicenseAgreement: Coding;
     /**
-     * Adobe Glyph List License.
+     * Adobe-Glyph: Adobe Glyph List License.
      */
-    spdx_license_AdobeGlyphListLicense: Coding;
+    readonly AdobeGlyphListLicense: Coding;
     /**
-     * Amazon Digital Services License.
+     * ADSL: Amazon Digital Services License.
      */
-    spdx_license_AmazonDigitalServicesLicense: Coding;
+    readonly AmazonDigitalServicesLicense: Coding;
     /**
-     * Academic Free License v1.1.
+     * AFL-1.1: Academic Free License v1.1.
      */
-    spdx_license_AcademicFreeLicenseV11: Coding;
+    readonly AcademicFreeLicenseV11: Coding;
     /**
-     * Academic Free License v1.2.
+     * AFL-1.2: Academic Free License v1.2.
      */
-    spdx_license_AcademicFreeLicenseV12: Coding;
+    readonly AcademicFreeLicenseV12: Coding;
     /**
-     * Academic Free License v2.0.
+     * AFL-2.0: Academic Free License v2.0.
      */
-    spdx_license_AcademicFreeLicenseV20: Coding;
+    readonly AcademicFreeLicenseV20: Coding;
     /**
-     * Academic Free License v2.1.
+     * AFL-2.1: Academic Free License v2.1.
      */
-    spdx_license_AcademicFreeLicenseV21: Coding;
+    readonly AcademicFreeLicenseV21: Coding;
     /**
-     * Academic Free License v3.0.
+     * AFL-3.0: Academic Free License v3.0.
      */
-    spdx_license_AcademicFreeLicenseV30: Coding;
+    readonly AcademicFreeLicenseV30: Coding;
     /**
-     * Afmparse License.
+     * Afmparse: Afmparse License.
      */
-    spdx_license_AfmparseLicense: Coding;
+    readonly AfmparseLicense: Coding;
     /**
-     * Affero General Public License v1.0 only.
+     * AGPL-1.0-only: Affero General Public License v1.0 only.
      */
-    spdx_license_AfferoGeneralPublicLicenseV10Only: Coding;
+    readonly AfferoGeneralPublicLicenseV10Only: Coding;
     /**
-     * Affero General Public License v1.0 or later.
+     * AGPL-1.0-or-later: Affero General Public License v1.0 or later.
      */
-    spdx_license_AfferoGeneralPublicLicenseV10OrLater: Coding;
+    readonly AfferoGeneralPublicLicenseV10OrLater: Coding;
     /**
-     * GNU Affero General Public License v3.0 only.
+     * AGPL-3.0-only: GNU Affero General Public License v3.0 only.
      */
-    spdx_license_GNUAfferoGeneralPublicLicenseV30Only: Coding;
+    readonly GNUAfferoGeneralPublicLicenseV30Only: Coding;
     /**
-     * GNU Affero General Public License v3.0 or later.
+     * AGPL-3.0-or-later: GNU Affero General Public License v3.0 or later.
      */
-    spdx_license_GNUAfferoGeneralPublicLicenseV30OrLater: Coding;
+    readonly GNUAfferoGeneralPublicLicenseV30OrLater: Coding;
     /**
-     * Aladdin Free Public License.
+     * Aladdin: Aladdin Free Public License.
      */
-    spdx_license_AladdinFreePublicLicense: Coding;
+    readonly AladdinFreePublicLicense: Coding;
     /**
-     * AMD's plpa_map.c License.
+     * AMDPLPA: AMD's plpa_map.c License.
      */
-    spdx_license_AMDQuoteSPlpaMapCLicense: Coding;
+    readonly AMDQuoteSPlpaMapCLicense: Coding;
     /**
-     * Apple MIT License.
+     * AML: Apple MIT License.
      */
-    spdx_license_AppleMITLicense: Coding;
+    readonly AppleMITLicense: Coding;
     /**
-     * Academy of Motion Picture Arts and Sciences BSD.
+     * AMPAS: Academy of Motion Picture Arts and Sciences BSD.
      */
-    spdx_license_AcademyOfMotionPictureArtsAndSciencesBSD: Coding;
+    readonly AcademyOfMotionPictureArtsAndSciencesBSD: Coding;
     /**
-     * ANTLR Software Rights Notice.
+     * ANTLR-PD: ANTLR Software Rights Notice.
      */
-    spdx_license_ANTLRSoftwareRightsNotice: Coding;
+    readonly ANTLRSoftwareRightsNotice: Coding;
     /**
-     * Apache License 1.0.
+     * Apache-1.0: Apache License 1.0.
      */
-    spdx_license_ApacheLicense10: Coding;
+    readonly ApacheLicense10: Coding;
     /**
-     * Apache License 1.1.
+     * Apache-1.1: Apache License 1.1.
      */
-    spdx_license_ApacheLicense11: Coding;
+    readonly ApacheLicense11: Coding;
     /**
-     * Apache License 2.0.
+     * Apache-2.0: Apache License 2.0.
      */
-    spdx_license_ApacheLicense20: Coding;
+    readonly ApacheLicense20: Coding;
     /**
-     * Adobe Postscript AFM License.
+     * APAFML: Adobe Postscript AFM License.
      */
-    spdx_license_AdobePostscriptAFMLicense: Coding;
+    readonly AdobePostscriptAFMLicense: Coding;
     /**
-     * Adaptive Public License 1.0.
+     * APL-1.0: Adaptive Public License 1.0.
      */
-    spdx_license_AdaptivePublicLicense10: Coding;
+    readonly AdaptivePublicLicense10: Coding;
     /**
-     * Apple Public Source License 1.0.
+     * APSL-1.0: Apple Public Source License 1.0.
      */
-    spdx_license_ApplePublicSourceLicense10: Coding;
+    readonly ApplePublicSourceLicense10: Coding;
     /**
-     * Apple Public Source License 1.1.
+     * APSL-1.1: Apple Public Source License 1.1.
      */
-    spdx_license_ApplePublicSourceLicense11: Coding;
+    readonly ApplePublicSourceLicense11: Coding;
     /**
-     * Apple Public Source License 1.2.
+     * APSL-1.2: Apple Public Source License 1.2.
      */
-    spdx_license_ApplePublicSourceLicense12: Coding;
+    readonly ApplePublicSourceLicense12: Coding;
     /**
-     * Apple Public Source License 2.0.
+     * APSL-2.0: Apple Public Source License 2.0.
      */
-    spdx_license_ApplePublicSourceLicense20: Coding;
+    readonly ApplePublicSourceLicense20: Coding;
     /**
-     * Artistic License 1.0.
+     * Artistic-1.0: Artistic License 1.0.
      */
-    spdx_license_ArtisticLicense10: Coding;
+    readonly ArtisticLicense10: Coding;
     /**
-     * Artistic License 1.0 w/clause 8.
+     * Artistic-1.0-cl8: Artistic License 1.0 w/clause 8.
      */
-    spdx_license_ArtisticLicense10WClause8: Coding;
+    readonly ArtisticLicense10WClause8: Coding;
     /**
-     * Artistic License 1.0 (Perl).
+     * Artistic-1.0-Perl: Artistic License 1.0 (Perl).
      */
-    spdx_license_ArtisticLicense10Perl: Coding;
+    readonly ArtisticLicense10Perl: Coding;
     /**
-     * Artistic License 2.0.
+     * Artistic-2.0: Artistic License 2.0.
      */
-    spdx_license_ArtisticLicense20: Coding;
+    readonly ArtisticLicense20: Coding;
     /**
-     * Bahyph License.
+     * Bahyph: Bahyph License.
      */
-    spdx_license_BahyphLicense: Coding;
+    readonly BahyphLicense: Coding;
     /**
-     * Barr License.
+     * Barr: Barr License.
      */
-    spdx_license_BarrLicense: Coding;
+    readonly BarrLicense: Coding;
     /**
-     * Beerware License.
+     * Beerware: Beerware License.
      */
-    spdx_license_BeerwareLicense: Coding;
+    readonly BeerwareLicense: Coding;
     /**
-     * BitTorrent Open Source License v1.0.
+     * BitTorrent-1.0: BitTorrent Open Source License v1.0.
      */
-    spdx_license_BitTorrentOpenSourceLicenseV10: Coding;
+    readonly BitTorrentOpenSourceLicenseV10: Coding;
     /**
-     * BitTorrent Open Source License v1.1.
+     * BitTorrent-1.1: BitTorrent Open Source License v1.1.
      */
-    spdx_license_BitTorrentOpenSourceLicenseV11: Coding;
+    readonly BitTorrentOpenSourceLicenseV11: Coding;
     /**
-     * Borceux license.
+     * Borceux: Borceux license.
      */
-    spdx_license_BorceuxLicense: Coding;
+    readonly BorceuxLicense: Coding;
     /**
-     * BSD 1-Clause License.
+     * BSD-1-Clause: BSD 1-Clause License.
      */
-    spdx_license_BSD1ClauseLicense: Coding;
+    readonly BSD1ClauseLicense: Coding;
     /**
-     * BSD 2-Clause "Simplified" License.
+     * BSD-2-Clause: BSD 2-Clause "Simplified" License.
      */
-    spdx_license_BSD2ClauseQuotationSimplifiedQuotationLicense: Coding;
+    readonly BSD2ClauseQuotationSimplifiedQuotationLicense: Coding;
     /**
-     * BSD 2-Clause FreeBSD License.
+     * BSD-2-Clause-FreeBSD: BSD 2-Clause FreeBSD License.
      */
-    spdx_license_BSD2ClauseFreeBSDLicense: Coding;
+    readonly BSD2ClauseFreeBSDLicense: Coding;
     /**
-     * BSD 2-Clause NetBSD License.
+     * BSD-2-Clause-NetBSD: BSD 2-Clause NetBSD License.
      */
-    spdx_license_BSD2ClauseNetBSDLicense: Coding;
+    readonly BSD2ClauseNetBSDLicense: Coding;
     /**
-     * BSD-2-Clause Plus Patent License.
+     * BSD-2-Clause-Patent: BSD-2-Clause Plus Patent License.
      */
-    spdx_license_BSD2ClausePlusPatentLicense: Coding;
+    readonly BSD2ClausePlusPatentLicense: Coding;
     /**
-     * BSD 3-Clause "New" or "Revised" License.
+     * BSD-3-Clause: BSD 3-Clause "New" or "Revised" License.
      */
-    spdx_license_BSD3ClauseQuotationNewQuotationOrQuotationRevisedQuotationLicense: Coding;
+    readonly BSD3ClauseQuotationNewQuotationOrQuotationRevisedQuotationLicense: Coding;
     /**
-     * BSD with attribution.
+     * BSD-3-Clause-Attribution: BSD with attribution.
      */
-    spdx_license_BSDWithAttribution: Coding;
+    readonly BSDWithAttribution: Coding;
     /**
-     * BSD 3-Clause Clear License.
+     * BSD-3-Clause-Clear: BSD 3-Clause Clear License.
      */
-    spdx_license_BSD3ClauseClearLicense: Coding;
+    readonly BSD3ClauseClearLicense: Coding;
     /**
-     * Lawrence Berkeley National Labs BSD variant license.
+     * BSD-3-Clause-LBNL: Lawrence Berkeley National Labs BSD variant license.
      */
-    spdx_license_LawrenceBerkeleyNationalLabsBSDVariantLicense: Coding;
+    readonly LawrenceBerkeleyNationalLabsBSDVariantLicense: Coding;
     /**
-     * BSD 3-Clause No Nuclear License.
+     * BSD-3-Clause-No-Nuclear-License: BSD 3-Clause No Nuclear License.
      */
-    spdx_license_BSD3ClauseNoNuclearLicense: Coding;
+    readonly BSD3ClauseNoNuclearLicense: Coding;
     /**
-     * BSD 3-Clause No Nuclear License 2014.
+     * BSD-3-Clause-No-Nuclear-License-2014: BSD 3-Clause No Nuclear License 2014.
      */
-    spdx_license_BSD3ClauseNoNuclearLicense2014: Coding;
+    readonly BSD3ClauseNoNuclearLicense2014: Coding;
     /**
-     * BSD 3-Clause No Nuclear Warranty.
+     * BSD-3-Clause-No-Nuclear-Warranty: BSD 3-Clause No Nuclear Warranty.
      */
-    spdx_license_BSD3ClauseNoNuclearWarranty: Coding;
+    readonly BSD3ClauseNoNuclearWarranty: Coding;
     /**
-     * BSD 4-Clause "Original" or "Old" License.
+     * BSD-4-Clause: BSD 4-Clause "Original" or "Old" License.
      */
-    spdx_license_BSD4ClauseQuotationOriginalQuotationOrQuotationOldQuotationLicense: Coding;
+    readonly BSD4ClauseQuotationOriginalQuotationOrQuotationOldQuotationLicense: Coding;
     /**
-     * BSD-4-Clause (University of California-Specific).
+     * BSD-4-Clause-UC: BSD-4-Clause (University of California-Specific).
      */
-    spdx_license_BSD4ClauseUniversityOfCaliforniaSpecific: Coding;
+    readonly BSD4ClauseUniversityOfCaliforniaSpecific: Coding;
     /**
-     * BSD Protection License.
+     * BSD-Protection: BSD Protection License.
      */
-    spdx_license_BSDProtectionLicense: Coding;
+    readonly BSDProtectionLicense: Coding;
     /**
-     * BSD Source Code Attribution.
+     * BSD-Source-Code: BSD Source Code Attribution.
      */
-    spdx_license_BSDSourceCodeAttribution: Coding;
+    readonly BSDSourceCodeAttribution: Coding;
     /**
-     * Boost Software License 1.0.
+     * BSL-1.0: Boost Software License 1.0.
      */
-    spdx_license_BoostSoftwareLicense10: Coding;
+    readonly BoostSoftwareLicense10: Coding;
     /**
-     * bzip2 and libbzip2 License v1.0.5.
+     * bzip2-1.0.5: bzip2 and libbzip2 License v1.0.5.
      */
-    spdx_license_Bzip2AndLibbzip2LicenseV105: Coding;
+    readonly Bzip2AndLibbzip2LicenseV105: Coding;
     /**
-     * bzip2 and libbzip2 License v1.0.6.
+     * bzip2-1.0.6: bzip2 and libbzip2 License v1.0.6.
      */
-    spdx_license_Bzip2AndLibbzip2LicenseV106: Coding;
+    readonly Bzip2AndLibbzip2LicenseV106: Coding;
     /**
-     * Caldera License.
+     * Caldera: Caldera License.
      */
-    spdx_license_CalderaLicense: Coding;
+    readonly CalderaLicense: Coding;
     /**
-     * Computer Associates Trusted Open Source License 1.1.
+     * CATOSL-1.1: Computer Associates Trusted Open Source License 1.1.
      */
-    spdx_license_ComputerAssociatesTrustedOpenSourceLicense11: Coding;
+    readonly ComputerAssociatesTrustedOpenSourceLicense11: Coding;
     /**
-     * Creative Commons Attribution 1.0 Generic.
+     * CC-BY-1.0: Creative Commons Attribution 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttribution10Generic: Coding;
+    readonly CreativeCommonsAttribution10Generic: Coding;
     /**
-     * Creative Commons Attribution 2.0 Generic.
+     * CC-BY-2.0: Creative Commons Attribution 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttribution20Generic: Coding;
+    readonly CreativeCommonsAttribution20Generic: Coding;
     /**
-     * Creative Commons Attribution 2.5 Generic.
+     * CC-BY-2.5: Creative Commons Attribution 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttribution25Generic: Coding;
+    readonly CreativeCommonsAttribution25Generic: Coding;
     /**
-     * Creative Commons Attribution 3.0 Unported.
+     * CC-BY-3.0: Creative Commons Attribution 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttribution30Unported: Coding;
+    readonly CreativeCommonsAttribution30Unported: Coding;
     /**
-     * Creative Commons Attribution 4.0 International.
+     * CC-BY-4.0: Creative Commons Attribution 4.0 International.
      */
-    spdx_license_CreativeCommonsAttribution40International: Coding;
+    readonly CreativeCommonsAttribution40International: Coding;
     /**
-     * Creative Commons Attribution Non Commercial 1.0 Generic.
+     * CC-BY-NC-1.0: Creative Commons Attribution Non Commercial 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial10Generic: Coding;
+    readonly CreativeCommonsAttributionNonCommercial10Generic: Coding;
     /**
-     * Creative Commons Attribution Non Commercial 2.0 Generic.
+     * CC-BY-NC-2.0: Creative Commons Attribution Non Commercial 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial20Generic: Coding;
+    readonly CreativeCommonsAttributionNonCommercial20Generic: Coding;
     /**
-     * Creative Commons Attribution Non Commercial 2.5 Generic.
+     * CC-BY-NC-2.5: Creative Commons Attribution Non Commercial 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial25Generic: Coding;
+    readonly CreativeCommonsAttributionNonCommercial25Generic: Coding;
     /**
-     * Creative Commons Attribution Non Commercial 3.0 Unported.
+     * CC-BY-NC-3.0: Creative Commons Attribution Non Commercial 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial30Unported: Coding;
+    readonly CreativeCommonsAttributionNonCommercial30Unported: Coding;
     /**
-     * Creative Commons Attribution Non Commercial 4.0 International.
+     * CC-BY-NC-4.0: Creative Commons Attribution Non Commercial 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial40International: Coding;
+    readonly CreativeCommonsAttributionNonCommercial40International: Coding;
     /**
-     * Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic.
+     * CC-BY-NC-ND-1.0: Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives10Generic: Coding;
+    readonly CreativeCommonsAttributionNonCommercialNoDerivatives10Generic: Coding;
     /**
-     * Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic.
+     * CC-BY-NC-ND-2.0: Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives20Generic: Coding;
+    readonly CreativeCommonsAttributionNonCommercialNoDerivatives20Generic: Coding;
     /**
-     * Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic.
+     * CC-BY-NC-ND-2.5: Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives25Generic: Coding;
+    readonly CreativeCommonsAttributionNonCommercialNoDerivatives25Generic: Coding;
     /**
-     * Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported.
+     * CC-BY-NC-ND-3.0: Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives30Unported: Coding;
+    readonly CreativeCommonsAttributionNonCommercialNoDerivatives30Unported: Coding;
     /**
-     * Creative Commons Attribution Non Commercial No Derivatives 4.0 International.
+     * CC-BY-NC-ND-4.0: Creative Commons Attribution Non Commercial No Derivatives 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives40International: Coding;
+    readonly CreativeCommonsAttributionNonCommercialNoDerivatives40International: Coding;
     /**
-     * Creative Commons Attribution Non Commercial Share Alike 1.0 Generic.
+     * CC-BY-NC-SA-1.0: Creative Commons Attribution Non Commercial Share Alike 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike10Generic: Coding;
+    readonly CreativeCommonsAttributionNonCommercialShareAlike10Generic: Coding;
     /**
-     * Creative Commons Attribution Non Commercial Share Alike 2.0 Generic.
+     * CC-BY-NC-SA-2.0: Creative Commons Attribution Non Commercial Share Alike 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike20Generic: Coding;
+    readonly CreativeCommonsAttributionNonCommercialShareAlike20Generic: Coding;
     /**
-     * Creative Commons Attribution Non Commercial Share Alike 2.5 Generic.
+     * CC-BY-NC-SA-2.5: Creative Commons Attribution Non Commercial Share Alike 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike25Generic: Coding;
+    readonly CreativeCommonsAttributionNonCommercialShareAlike25Generic: Coding;
     /**
-     * Creative Commons Attribution Non Commercial Share Alike 3.0 Unported.
+     * CC-BY-NC-SA-3.0: Creative Commons Attribution Non Commercial Share Alike 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike30Unported: Coding;
+    readonly CreativeCommonsAttributionNonCommercialShareAlike30Unported: Coding;
     /**
-     * Creative Commons Attribution Non Commercial Share Alike 4.0 International.
+     * CC-BY-NC-SA-4.0: Creative Commons Attribution Non Commercial Share Alike 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike40International: Coding;
+    readonly CreativeCommonsAttributionNonCommercialShareAlike40International: Coding;
     /**
-     * Creative Commons Attribution No Derivatives 1.0 Generic.
+     * CC-BY-ND-1.0: Creative Commons Attribution No Derivatives 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives10Generic: Coding;
+    readonly CreativeCommonsAttributionNoDerivatives10Generic: Coding;
     /**
-     * Creative Commons Attribution No Derivatives 2.0 Generic.
+     * CC-BY-ND-2.0: Creative Commons Attribution No Derivatives 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives20Generic: Coding;
+    readonly CreativeCommonsAttributionNoDerivatives20Generic: Coding;
     /**
-     * Creative Commons Attribution No Derivatives 2.5 Generic.
+     * CC-BY-ND-2.5: Creative Commons Attribution No Derivatives 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives25Generic: Coding;
+    readonly CreativeCommonsAttributionNoDerivatives25Generic: Coding;
     /**
-     * Creative Commons Attribution No Derivatives 3.0 Unported.
+     * CC-BY-ND-3.0: Creative Commons Attribution No Derivatives 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives30Unported: Coding;
+    readonly CreativeCommonsAttributionNoDerivatives30Unported: Coding;
     /**
-     * Creative Commons Attribution No Derivatives 4.0 International.
+     * CC-BY-ND-4.0: Creative Commons Attribution No Derivatives 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives40International: Coding;
+    readonly CreativeCommonsAttributionNoDerivatives40International: Coding;
     /**
-     * Creative Commons Attribution Share Alike 1.0 Generic.
+     * CC-BY-SA-1.0: Creative Commons Attribution Share Alike 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike10Generic: Coding;
+    readonly CreativeCommonsAttributionShareAlike10Generic: Coding;
     /**
-     * Creative Commons Attribution Share Alike 2.0 Generic.
+     * CC-BY-SA-2.0: Creative Commons Attribution Share Alike 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike20Generic: Coding;
+    readonly CreativeCommonsAttributionShareAlike20Generic: Coding;
     /**
-     * Creative Commons Attribution Share Alike 2.5 Generic.
+     * CC-BY-SA-2.5: Creative Commons Attribution Share Alike 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike25Generic: Coding;
+    readonly CreativeCommonsAttributionShareAlike25Generic: Coding;
     /**
-     * Creative Commons Attribution Share Alike 3.0 Unported.
+     * CC-BY-SA-3.0: Creative Commons Attribution Share Alike 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike30Unported: Coding;
+    readonly CreativeCommonsAttributionShareAlike30Unported: Coding;
     /**
-     * Creative Commons Attribution Share Alike 4.0 International.
+     * CC-BY-SA-4.0: Creative Commons Attribution Share Alike 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike40International: Coding;
+    readonly CreativeCommonsAttributionShareAlike40International: Coding;
     /**
-     * Creative Commons Zero v1.0 Universal.
+     * CC0-1.0: Creative Commons Zero v1.0 Universal.
      */
-    spdx_license_CreativeCommonsZeroV10Universal: Coding;
+    readonly CreativeCommonsZeroV10Universal: Coding;
     /**
-     * Common Development and Distribution License 1.0.
+     * CDDL-1.0: Common Development and Distribution License 1.0.
      */
-    spdx_license_CommonDevelopmentAndDistributionLicense10: Coding;
+    readonly CommonDevelopmentAndDistributionLicense10: Coding;
     /**
-     * Common Development and Distribution License 1.1.
+     * CDDL-1.1: Common Development and Distribution License 1.1.
      */
-    spdx_license_CommonDevelopmentAndDistributionLicense11: Coding;
+    readonly CommonDevelopmentAndDistributionLicense11: Coding;
     /**
-     * Community Data License Agreement Permissive 1.0.
+     * CDLA-Permissive-1.0: Community Data License Agreement Permissive 1.0.
      */
-    spdx_license_CommunityDataLicenseAgreementPermissive10: Coding;
+    readonly CommunityDataLicenseAgreementPermissive10: Coding;
     /**
-     * Community Data License Agreement Sharing 1.0.
+     * CDLA-Sharing-1.0: Community Data License Agreement Sharing 1.0.
      */
-    spdx_license_CommunityDataLicenseAgreementSharing10: Coding;
+    readonly CommunityDataLicenseAgreementSharing10: Coding;
     /**
-     * CeCILL Free Software License Agreement v1.0.
+     * CECILL-1.0: CeCILL Free Software License Agreement v1.0.
      */
-    spdx_license_CeCILLFreeSoftwareLicenseAgreementV10: Coding;
+    readonly CeCILLFreeSoftwareLicenseAgreementV10: Coding;
     /**
-     * CeCILL Free Software License Agreement v1.1.
+     * CECILL-1.1: CeCILL Free Software License Agreement v1.1.
      */
-    spdx_license_CeCILLFreeSoftwareLicenseAgreementV11: Coding;
+    readonly CeCILLFreeSoftwareLicenseAgreementV11: Coding;
     /**
-     * CeCILL Free Software License Agreement v2.0.
+     * CECILL-2.0: CeCILL Free Software License Agreement v2.0.
      */
-    spdx_license_CeCILLFreeSoftwareLicenseAgreementV20: Coding;
+    readonly CeCILLFreeSoftwareLicenseAgreementV20: Coding;
     /**
-     * CeCILL Free Software License Agreement v2.1.
+     * CECILL-2.1: CeCILL Free Software License Agreement v2.1.
      */
-    spdx_license_CeCILLFreeSoftwareLicenseAgreementV21: Coding;
+    readonly CeCILLFreeSoftwareLicenseAgreementV21: Coding;
     /**
-     * CeCILL-B Free Software License Agreement.
+     * CECILL-B: CeCILL-B Free Software License Agreement.
      */
-    spdx_license_CeCILLBFreeSoftwareLicenseAgreement: Coding;
+    readonly CeCILLBFreeSoftwareLicenseAgreement: Coding;
     /**
-     * CeCILL-C Free Software License Agreement.
+     * CECILL-C: CeCILL-C Free Software License Agreement.
      */
-    spdx_license_CeCILLCFreeSoftwareLicenseAgreement: Coding;
+    readonly CeCILLCFreeSoftwareLicenseAgreement: Coding;
     /**
-     * Clarified Artistic License.
+     * ClArtistic: Clarified Artistic License.
      */
-    spdx_license_ClarifiedArtisticLicense: Coding;
+    readonly ClarifiedArtisticLicense: Coding;
     /**
-     * CNRI Jython License.
+     * CNRI-Jython: CNRI Jython License.
      */
-    spdx_license_CNRIJythonLicense: Coding;
+    readonly CNRIJythonLicense: Coding;
     /**
-     * CNRI Python License.
+     * CNRI-Python: CNRI Python License.
      */
-    spdx_license_CNRIPythonLicense: Coding;
+    readonly CNRIPythonLicense: Coding;
     /**
-     * CNRI Python Open Source GPL Compatible License Agreement.
+     * CNRI-Python-GPL-Compatible: CNRI Python Open Source GPL Compatible License Agreement.
      */
-    spdx_license_CNRIPythonOpenSourceGPLCompatibleLicenseAgreement: Coding;
+    readonly CNRIPythonOpenSourceGPLCompatibleLicenseAgreement: Coding;
     /**
-     * Condor Public License v1.1.
+     * Condor-1.1: Condor Public License v1.1.
      */
-    spdx_license_CondorPublicLicenseV11: Coding;
+    readonly CondorPublicLicenseV11: Coding;
     /**
-     * Common Public Attribution License 1.0.
+     * CPAL-1.0: Common Public Attribution License 1.0.
      */
-    spdx_license_CommonPublicAttributionLicense10: Coding;
+    readonly CommonPublicAttributionLicense10: Coding;
     /**
-     * Common Public License 1.0.
+     * CPL-1.0: Common Public License 1.0.
      */
-    spdx_license_CommonPublicLicense10: Coding;
+    readonly CommonPublicLicense10: Coding;
     /**
-     * Code Project Open License 1.02.
+     * CPOL-1.02: Code Project Open License 1.02.
      */
-    spdx_license_CodeProjectOpenLicense102: Coding;
+    readonly CodeProjectOpenLicense102: Coding;
     /**
-     * Crossword License.
+     * Crossword: Crossword License.
      */
-    spdx_license_CrosswordLicense: Coding;
+    readonly CrosswordLicense: Coding;
     /**
-     * CrystalStacker License.
+     * CrystalStacker: CrystalStacker License.
      */
-    spdx_license_CrystalStackerLicense: Coding;
+    readonly CrystalStackerLicense: Coding;
     /**
-     * CUA Office Public License v1.0.
+     * CUA-OPL-1.0: CUA Office Public License v1.0.
      */
-    spdx_license_CUAOfficePublicLicenseV10: Coding;
+    readonly CUAOfficePublicLicenseV10: Coding;
     /**
-     * Cube License.
+     * Cube: Cube License.
      */
-    spdx_license_CubeLicense: Coding;
+    readonly CubeLicense: Coding;
     /**
-     * curl License.
+     * curl: curl License.
      */
-    spdx_license_CurlLicense: Coding;
+    readonly CurlLicense: Coding;
     /**
-     * Deutsche Freie Software Lizenz.
+     * D-FSL-1.0: Deutsche Freie Software Lizenz.
      */
-    spdx_license_DeutscheFreieSoftwareLizenz: Coding;
+    readonly DeutscheFreieSoftwareLizenz: Coding;
     /**
-     * diffmark license.
+     * diffmark: diffmark license.
      */
-    spdx_license_DiffmarkLicense: Coding;
+    readonly DiffmarkLicense: Coding;
     /**
-     * DOC License.
+     * DOC: DOC License.
      */
-    spdx_license_DOCLicense: Coding;
+    readonly DOCLicense: Coding;
     /**
-     * Dotseqn License.
+     * Dotseqn: Dotseqn License.
      */
-    spdx_license_DotseqnLicense: Coding;
+    readonly DotseqnLicense: Coding;
     /**
-     * DSDP License.
+     * DSDP: DSDP License.
      */
-    spdx_license_DSDPLicense: Coding;
+    readonly DSDPLicense: Coding;
     /**
-     * dvipdfm License.
+     * dvipdfm: dvipdfm License.
      */
-    spdx_license_DvipdfmLicense: Coding;
+    readonly DvipdfmLicense: Coding;
     /**
-     * Educational Community License v1.0.
+     * ECL-1.0: Educational Community License v1.0.
      */
-    spdx_license_EducationalCommunityLicenseV10: Coding;
+    readonly EducationalCommunityLicenseV10: Coding;
     /**
-     * Educational Community License v2.0.
+     * ECL-2.0: Educational Community License v2.0.
      */
-    spdx_license_EducationalCommunityLicenseV20: Coding;
+    readonly EducationalCommunityLicenseV20: Coding;
     /**
-     * Eiffel Forum License v1.0.
+     * EFL-1.0: Eiffel Forum License v1.0.
      */
-    spdx_license_EiffelForumLicenseV10: Coding;
+    readonly EiffelForumLicenseV10: Coding;
     /**
-     * Eiffel Forum License v2.0.
+     * EFL-2.0: Eiffel Forum License v2.0.
      */
-    spdx_license_EiffelForumLicenseV20: Coding;
+    readonly EiffelForumLicenseV20: Coding;
     /**
-     * eGenix.com Public License 1.1.0.
+     * eGenix: eGenix.com Public License 1.1.0.
      */
-    spdx_license_EGenixComPublicLicense110: Coding;
+    readonly EGenixComPublicLicense110: Coding;
     /**
-     * Entessa Public License v1.0.
+     * Entessa: Entessa Public License v1.0.
      */
-    spdx_license_EntessaPublicLicenseV10: Coding;
+    readonly EntessaPublicLicenseV10: Coding;
     /**
-     * Eclipse Public License 1.0.
+     * EPL-1.0: Eclipse Public License 1.0.
      */
-    spdx_license_EclipsePublicLicense10: Coding;
+    readonly EclipsePublicLicense10: Coding;
     /**
-     * Eclipse Public License 2.0.
+     * EPL-2.0: Eclipse Public License 2.0.
      */
-    spdx_license_EclipsePublicLicense20: Coding;
+    readonly EclipsePublicLicense20: Coding;
     /**
-     * Erlang Public License v1.1.
+     * ErlPL-1.1: Erlang Public License v1.1.
      */
-    spdx_license_ErlangPublicLicenseV11: Coding;
+    readonly ErlangPublicLicenseV11: Coding;
     /**
-     * EU DataGrid Software License.
+     * EUDatagrid: EU DataGrid Software License.
      */
-    spdx_license_EUDataGridSoftwareLicense: Coding;
+    readonly EUDataGridSoftwareLicense: Coding;
     /**
-     * European Union Public License 1.0.
+     * EUPL-1.0: European Union Public License 1.0.
      */
-    spdx_license_EuropeanUnionPublicLicense10: Coding;
+    readonly EuropeanUnionPublicLicense10: Coding;
     /**
-     * European Union Public License 1.1.
+     * EUPL-1.1: European Union Public License 1.1.
      */
-    spdx_license_EuropeanUnionPublicLicense11: Coding;
+    readonly EuropeanUnionPublicLicense11: Coding;
     /**
-     * European Union Public License 1.2.
+     * EUPL-1.2: European Union Public License 1.2.
      */
-    spdx_license_EuropeanUnionPublicLicense12: Coding;
+    readonly EuropeanUnionPublicLicense12: Coding;
     /**
-     * Eurosym License.
+     * Eurosym: Eurosym License.
      */
-    spdx_license_EurosymLicense: Coding;
+    readonly EurosymLicense: Coding;
     /**
-     * Fair License.
+     * Fair: Fair License.
      */
-    spdx_license_FairLicense: Coding;
+    readonly FairLicense: Coding;
     /**
-     * Frameworx Open License 1.0.
+     * Frameworx-1.0: Frameworx Open License 1.0.
      */
-    spdx_license_FrameworxOpenLicense10: Coding;
+    readonly FrameworxOpenLicense10: Coding;
     /**
-     * FreeImage Public License v1.0.
+     * FreeImage: FreeImage Public License v1.0.
      */
-    spdx_license_FreeImagePublicLicenseV10: Coding;
+    readonly FreeImagePublicLicenseV10: Coding;
     /**
-     * FSF All Permissive License.
+     * FSFAP: FSF All Permissive License.
      */
-    spdx_license_FSFAllPermissiveLicense: Coding;
+    readonly FSFAllPermissiveLicense: Coding;
     /**
-     * FSF Unlimited License.
+     * FSFUL: FSF Unlimited License.
      */
-    spdx_license_FSFUnlimitedLicense: Coding;
+    readonly FSFUnlimitedLicense: Coding;
     /**
-     * FSF Unlimited License (with License Retention).
+     * FSFULLR: FSF Unlimited License (with License Retention).
      */
-    spdx_license_FSFUnlimitedLicenseWithLicenseRetention: Coding;
+    readonly FSFUnlimitedLicenseWithLicenseRetention: Coding;
     /**
-     * Freetype Project License.
+     * FTL: Freetype Project License.
      */
-    spdx_license_FreetypeProjectLicense: Coding;
+    readonly FreetypeProjectLicense: Coding;
     /**
-     * GNU Free Documentation License v1.1 only.
+     * GFDL-1.1-only: GNU Free Documentation License v1.1 only.
      */
-    spdx_license_GNUFreeDocumentationLicenseV11Only: Coding;
+    readonly GNUFreeDocumentationLicenseV11Only: Coding;
     /**
-     * GNU Free Documentation License v1.1 or later.
+     * GFDL-1.1-or-later: GNU Free Documentation License v1.1 or later.
      */
-    spdx_license_GNUFreeDocumentationLicenseV11OrLater: Coding;
+    readonly GNUFreeDocumentationLicenseV11OrLater: Coding;
     /**
-     * GNU Free Documentation License v1.2 only.
+     * GFDL-1.2-only: GNU Free Documentation License v1.2 only.
      */
-    spdx_license_GNUFreeDocumentationLicenseV12Only: Coding;
+    readonly GNUFreeDocumentationLicenseV12Only: Coding;
     /**
-     * GNU Free Documentation License v1.2 or later.
+     * GFDL-1.2-or-later: GNU Free Documentation License v1.2 or later.
      */
-    spdx_license_GNUFreeDocumentationLicenseV12OrLater: Coding;
+    readonly GNUFreeDocumentationLicenseV12OrLater: Coding;
     /**
-     * GNU Free Documentation License v1.3 only.
+     * GFDL-1.3-only: GNU Free Documentation License v1.3 only.
      */
-    spdx_license_GNUFreeDocumentationLicenseV13Only: Coding;
+    readonly GNUFreeDocumentationLicenseV13Only: Coding;
     /**
-     * GNU Free Documentation License v1.3 or later.
+     * GFDL-1.3-or-later: GNU Free Documentation License v1.3 or later.
      */
-    spdx_license_GNUFreeDocumentationLicenseV13OrLater: Coding;
+    readonly GNUFreeDocumentationLicenseV13OrLater: Coding;
     /**
-     * Giftware License.
+     * Giftware: Giftware License.
      */
-    spdx_license_GiftwareLicense: Coding;
+    readonly GiftwareLicense: Coding;
     /**
-     * GL2PS License.
+     * GL2PS: GL2PS License.
      */
-    spdx_license_GL2PSLicense: Coding;
+    readonly GL2PSLicense: Coding;
     /**
-     * 3dfx Glide License.
+     * Glide: 3dfx Glide License.
      */
-    spdx_license_VAL3dfxGlideLicense: Coding;
+    readonly VAL3dfxGlideLicense: Coding;
     /**
-     * Glulxe License.
+     * Glulxe: Glulxe License.
      */
-    spdx_license_GlulxeLicense: Coding;
+    readonly GlulxeLicense: Coding;
     /**
-     * gnuplot License.
+     * gnuplot: gnuplot License.
      */
-    spdx_license_GnuplotLicense: Coding;
+    readonly GnuplotLicense: Coding;
     /**
-     * GNU General Public License v1.0 only.
+     * GPL-1.0-only: GNU General Public License v1.0 only.
      */
-    spdx_license_GNUGeneralPublicLicenseV10Only: Coding;
+    readonly GNUGeneralPublicLicenseV10Only: Coding;
     /**
-     * GNU General Public License v1.0 or later.
+     * GPL-1.0-or-later: GNU General Public License v1.0 or later.
      */
-    spdx_license_GNUGeneralPublicLicenseV10OrLater: Coding;
+    readonly GNUGeneralPublicLicenseV10OrLater: Coding;
     /**
-     * GNU General Public License v2.0 only.
+     * GPL-2.0-only: GNU General Public License v2.0 only.
      */
-    spdx_license_GNUGeneralPublicLicenseV20Only: Coding;
+    readonly GNUGeneralPublicLicenseV20Only: Coding;
     /**
-     * GNU General Public License v2.0 or later.
+     * GPL-2.0-or-later: GNU General Public License v2.0 or later.
      */
-    spdx_license_GNUGeneralPublicLicenseV20OrLater: Coding;
+    readonly GNUGeneralPublicLicenseV20OrLater: Coding;
     /**
-     * GNU General Public License v3.0 only.
+     * GPL-3.0-only: GNU General Public License v3.0 only.
      */
-    spdx_license_GNUGeneralPublicLicenseV30Only: Coding;
+    readonly GNUGeneralPublicLicenseV30Only: Coding;
     /**
-     * GNU General Public License v3.0 or later.
+     * GPL-3.0-or-later: GNU General Public License v3.0 or later.
      */
-    spdx_license_GNUGeneralPublicLicenseV30OrLater: Coding;
+    readonly GNUGeneralPublicLicenseV30OrLater: Coding;
     /**
-     * gSOAP Public License v1.3b.
+     * gSOAP-1.3b: gSOAP Public License v1.3b.
      */
-    spdx_license_GSOAPPublicLicenseV13b: Coding;
+    readonly GSOAPPublicLicenseV13b: Coding;
     /**
-     * Haskell Language Report License.
+     * HaskellReport: Haskell Language Report License.
      */
-    spdx_license_HaskellLanguageReportLicense: Coding;
+    readonly HaskellLanguageReportLicense: Coding;
     /**
-     * Historical Permission Notice and Disclaimer.
+     * HPND: Historical Permission Notice and Disclaimer.
      */
-    spdx_license_HistoricalPermissionNoticeAndDisclaimer: Coding;
+    readonly HistoricalPermissionNoticeAndDisclaimer: Coding;
     /**
-     * IBM PowerPC Initialization and Boot Software.
+     * IBM-pibs: IBM PowerPC Initialization and Boot Software.
      */
-    spdx_license_IBMPowerPCInitializationAndBootSoftware: Coding;
+    readonly IBMPowerPCInitializationAndBootSoftware: Coding;
     /**
-     * ICU License.
+     * ICU: ICU License.
      */
-    spdx_license_ICULicense: Coding;
+    readonly ICULicense: Coding;
     /**
-     * Independent JPEG Group License.
+     * IJG: Independent JPEG Group License.
      */
-    spdx_license_IndependentJPEGGroupLicense: Coding;
+    readonly IndependentJPEGGroupLicense: Coding;
     /**
-     * ImageMagick License.
+     * ImageMagick: ImageMagick License.
      */
-    spdx_license_ImageMagickLicense: Coding;
+    readonly ImageMagickLicense: Coding;
     /**
-     * iMatix Standard Function Library Agreement.
+     * iMatix: iMatix Standard Function Library Agreement.
      */
-    spdx_license_IMatixStandardFunctionLibraryAgreement: Coding;
+    readonly IMatixStandardFunctionLibraryAgreement: Coding;
     /**
-     * Imlib2 License.
+     * Imlib2: Imlib2 License.
      */
-    spdx_license_Imlib2License: Coding;
+    readonly Imlib2License: Coding;
     /**
-     * Info-ZIP License.
+     * Info-ZIP: Info-ZIP License.
      */
-    spdx_license_InfoZIPLicense: Coding;
+    readonly InfoZIPLicense: Coding;
     /**
-     * Intel Open Source License.
+     * Intel: Intel Open Source License.
      */
-    spdx_license_IntelOpenSourceLicense: Coding;
+    readonly IntelOpenSourceLicense: Coding;
     /**
-     * Intel ACPI Software License Agreement.
+     * Intel-ACPI: Intel ACPI Software License Agreement.
      */
-    spdx_license_IntelACPISoftwareLicenseAgreement: Coding;
+    readonly IntelACPISoftwareLicenseAgreement: Coding;
     /**
-     * Interbase Public License v1.0.
+     * Interbase-1.0: Interbase Public License v1.0.
      */
-    spdx_license_InterbasePublicLicenseV10: Coding;
+    readonly InterbasePublicLicenseV10: Coding;
     /**
-     * IPA Font License.
+     * IPA: IPA Font License.
      */
-    spdx_license_IPAFontLicense: Coding;
+    readonly IPAFontLicense: Coding;
     /**
-     * IBM Public License v1.0.
+     * IPL-1.0: IBM Public License v1.0.
      */
-    spdx_license_IBMPublicLicenseV10: Coding;
+    readonly IBMPublicLicenseV10: Coding;
     /**
-     * ISC License.
+     * ISC: ISC License.
      */
-    spdx_license_ISCLicense: Coding;
+    readonly ISCLicense: Coding;
     /**
-     * JasPer License.
+     * JasPer-2.0: JasPer License.
      */
-    spdx_license_JasPerLicense: Coding;
+    readonly JasPerLicense: Coding;
     /**
-     * JSON License.
+     * JSON: JSON License.
      */
-    spdx_license_JSONLicense: Coding;
+    readonly JSONLicense: Coding;
     /**
-     * Licence Art Libre 1.2.
+     * LAL-1.2: Licence Art Libre 1.2.
      */
-    spdx_license_LicenceArtLibre12: Coding;
+    readonly LicenceArtLibre12: Coding;
     /**
-     * Licence Art Libre 1.3.
+     * LAL-1.3: Licence Art Libre 1.3.
      */
-    spdx_license_LicenceArtLibre13: Coding;
+    readonly LicenceArtLibre13: Coding;
     /**
-     * Latex2e License.
+     * Latex2e: Latex2e License.
      */
-    spdx_license_Latex2eLicense: Coding;
+    readonly Latex2eLicense: Coding;
     /**
-     * Leptonica License.
+     * Leptonica: Leptonica License.
      */
-    spdx_license_LeptonicaLicense: Coding;
+    readonly LeptonicaLicense: Coding;
     /**
-     * GNU Library General Public License v2 only.
+     * LGPL-2.0-only: GNU Library General Public License v2 only.
      */
-    spdx_license_GNULibraryGeneralPublicLicenseV2Only: Coding;
+    readonly GNULibraryGeneralPublicLicenseV2Only: Coding;
     /**
-     * GNU Library General Public License v2 or later.
+     * LGPL-2.0-or-later: GNU Library General Public License v2 or later.
      */
-    spdx_license_GNULibraryGeneralPublicLicenseV2OrLater: Coding;
+    readonly GNULibraryGeneralPublicLicenseV2OrLater: Coding;
     /**
-     * GNU Lesser General Public License v2.1 only.
+     * LGPL-2.1-only: GNU Lesser General Public License v2.1 only.
      */
-    spdx_license_GNULesserGeneralPublicLicenseV21Only: Coding;
+    readonly GNULesserGeneralPublicLicenseV21Only: Coding;
     /**
-     * GNU Lesser General Public License v2.1 or later.
+     * LGPL-2.1-or-later: GNU Lesser General Public License v2.1 or later.
      */
-    spdx_license_GNULesserGeneralPublicLicenseV21OrLater: Coding;
+    readonly GNULesserGeneralPublicLicenseV21OrLater: Coding;
     /**
-     * GNU Lesser General Public License v3.0 only.
+     * LGPL-3.0-only: GNU Lesser General Public License v3.0 only.
      */
-    spdx_license_GNULesserGeneralPublicLicenseV30Only: Coding;
+    readonly GNULesserGeneralPublicLicenseV30Only: Coding;
     /**
-     * GNU Lesser General Public License v3.0 or later.
+     * LGPL-3.0-or-later: GNU Lesser General Public License v3.0 or later.
      */
-    spdx_license_GNULesserGeneralPublicLicenseV30OrLater: Coding;
+    readonly GNULesserGeneralPublicLicenseV30OrLater: Coding;
     /**
-     * Lesser General Public License For Linguistic Resources.
+     * LGPLLR: Lesser General Public License For Linguistic Resources.
      */
-    spdx_license_LesserGeneralPublicLicenseForLinguisticResources: Coding;
+    readonly LesserGeneralPublicLicenseForLinguisticResources: Coding;
     /**
-     * libpng License.
+     * Libpng: libpng License.
      */
-    spdx_license_LibpngLicense: Coding;
+    readonly LibpngLicense: Coding;
     /**
-     * libtiff License.
+     * libtiff: libtiff License.
      */
-    spdx_license_LibtiffLicense: Coding;
+    readonly LibtiffLicense: Coding;
     /**
-     * Licence Libre du Québec – Permissive version 1.1.
+     * LiLiQ-P-1.1: Licence Libre du Québec – Permissive version 1.1.
      */
-    spdx_license_LicenceLibreDuQuebecPermissiveVersion11: Coding;
+    readonly LicenceLibreDuQuebecPermissiveVersion11: Coding;
     /**
-     * Licence Libre du Québec – Réciprocité version 1.1.
+     * LiLiQ-R-1.1: Licence Libre du Québec – Réciprocité version 1.1.
      */
-    spdx_license_LicenceLibreDuQuebecReciprociteVersion11: Coding;
+    readonly LicenceLibreDuQuebecReciprociteVersion11: Coding;
     /**
-     * Licence Libre du Québec – Réciprocité forte version 1.1.
+     * LiLiQ-Rplus-1.1: Licence Libre du Québec – Réciprocité forte version 1.1.
      */
-    spdx_license_LicenceLibreDuQuebecReciprociteForteVersion11: Coding;
+    readonly LicenceLibreDuQuebecReciprociteForteVersion11: Coding;
     /**
-     * Linux Kernel Variant of OpenIB.org license.
+     * Linux-OpenIB: Linux Kernel Variant of OpenIB.org license.
      */
-    spdx_license_LinuxKernelVariantOfOpenIBOrgLicense: Coding;
+    readonly LinuxKernelVariantOfOpenIBOrgLicense: Coding;
     /**
-     * Lucent Public License Version 1.0.
+     * LPL-1.0: Lucent Public License Version 1.0.
      */
-    spdx_license_LucentPublicLicenseVersion10: Coding;
+    readonly LucentPublicLicenseVersion10: Coding;
     /**
-     * Lucent Public License v1.02.
+     * LPL-1.02: Lucent Public License v1.02.
      */
-    spdx_license_LucentPublicLicenseV102: Coding;
+    readonly LucentPublicLicenseV102: Coding;
     /**
-     * LaTeX Project Public License v1.0.
+     * LPPL-1.0: LaTeX Project Public License v1.0.
      */
-    spdx_license_LaTeXProjectPublicLicenseV10: Coding;
+    readonly LaTeXProjectPublicLicenseV10: Coding;
     /**
-     * LaTeX Project Public License v1.1.
+     * LPPL-1.1: LaTeX Project Public License v1.1.
      */
-    spdx_license_LaTeXProjectPublicLicenseV11: Coding;
+    readonly LaTeXProjectPublicLicenseV11: Coding;
     /**
-     * LaTeX Project Public License v1.2.
+     * LPPL-1.2: LaTeX Project Public License v1.2.
      */
-    spdx_license_LaTeXProjectPublicLicenseV12: Coding;
+    readonly LaTeXProjectPublicLicenseV12: Coding;
     /**
-     * LaTeX Project Public License v1.3a.
+     * LPPL-1.3a: LaTeX Project Public License v1.3a.
      */
-    spdx_license_LaTeXProjectPublicLicenseV13a: Coding;
+    readonly LaTeXProjectPublicLicenseV13a: Coding;
     /**
-     * LaTeX Project Public License v1.3c.
+     * LPPL-1.3c: LaTeX Project Public License v1.3c.
      */
-    spdx_license_LaTeXProjectPublicLicenseV13c: Coding;
+    readonly LaTeXProjectPublicLicenseV13c: Coding;
     /**
-     * MakeIndex License.
+     * MakeIndex: MakeIndex License.
      */
-    spdx_license_MakeIndexLicense: Coding;
+    readonly MakeIndexLicense: Coding;
     /**
-     * MirOS License.
+     * MirOS: MirOS License.
      */
-    spdx_license_MirOSLicense: Coding;
+    readonly MirOSLicense: Coding;
     /**
-     * MIT License.
+     * MIT: MIT License.
      */
-    spdx_license_MITLicense: Coding;
+    readonly MITLicense: Coding;
     /**
-     * MIT No Attribution.
+     * MIT-0: MIT No Attribution.
      */
-    spdx_license_MITNoAttribution: Coding;
+    readonly MITNoAttribution: Coding;
     /**
-     * Enlightenment License (e16).
+     * MIT-advertising: Enlightenment License (e16).
      */
-    spdx_license_EnlightenmentLicenseE16: Coding;
+    readonly EnlightenmentLicenseE16: Coding;
     /**
-     * CMU License.
+     * MIT-CMU: CMU License.
      */
-    spdx_license_CMULicense: Coding;
+    readonly CMULicense: Coding;
     /**
-     * enna License.
+     * MIT-enna: enna License.
      */
-    spdx_license_EnnaLicense: Coding;
+    readonly EnnaLicense: Coding;
     /**
-     * feh License.
+     * MIT-feh: feh License.
      */
-    spdx_license_FehLicense: Coding;
+    readonly FehLicense: Coding;
     /**
-     * MIT +no-false-attribs license.
+     * MITNFA: MIT +no-false-attribs license.
      */
-    spdx_license_MITPlusNoFalseAttribsLicense: Coding;
+    readonly MITPlusNoFalseAttribsLicense: Coding;
     /**
-     * Motosoto License.
+     * Motosoto: Motosoto License.
      */
-    spdx_license_MotosotoLicense: Coding;
+    readonly MotosotoLicense: Coding;
     /**
-     * mpich2 License.
+     * mpich2: mpich2 License.
      */
-    spdx_license_Mpich2License: Coding;
+    readonly Mpich2License: Coding;
     /**
-     * Mozilla Public License 1.0.
+     * MPL-1.0: Mozilla Public License 1.0.
      */
-    spdx_license_MozillaPublicLicense10: Coding;
+    readonly MozillaPublicLicense10: Coding;
     /**
-     * Mozilla Public License 1.1.
+     * MPL-1.1: Mozilla Public License 1.1.
      */
-    spdx_license_MozillaPublicLicense11: Coding;
+    readonly MozillaPublicLicense11: Coding;
     /**
-     * Mozilla Public License 2.0.
+     * MPL-2.0: Mozilla Public License 2.0.
      */
-    spdx_license_MozillaPublicLicense20: Coding;
+    readonly MozillaPublicLicense20: Coding;
     /**
-     * Mozilla Public License 2.0 (no copyleft exception).
+     * MPL-2.0-no-copyleft-exception: Mozilla Public License 2.0 (no copyleft exception).
      */
-    spdx_license_MozillaPublicLicense20NoCopyleftException: Coding;
+    readonly MozillaPublicLicense20NoCopyleftException: Coding;
     /**
-     * Microsoft Public License.
+     * MS-PL: Microsoft Public License.
      */
-    spdx_license_MicrosoftPublicLicense: Coding;
+    readonly MicrosoftPublicLicense: Coding;
     /**
-     * Microsoft Reciprocal License.
+     * MS-RL: Microsoft Reciprocal License.
      */
-    spdx_license_MicrosoftReciprocalLicense: Coding;
+    readonly MicrosoftReciprocalLicense: Coding;
     /**
-     * Matrix Template Library License.
+     * MTLL: Matrix Template Library License.
      */
-    spdx_license_MatrixTemplateLibraryLicense: Coding;
+    readonly MatrixTemplateLibraryLicense: Coding;
     /**
-     * Multics License.
+     * Multics: Multics License.
      */
-    spdx_license_MulticsLicense: Coding;
+    readonly MulticsLicense: Coding;
     /**
-     * Mup License.
+     * Mup: Mup License.
      */
-    spdx_license_MupLicense: Coding;
+    readonly MupLicense: Coding;
     /**
-     * NASA Open Source Agreement 1.3.
+     * NASA-1.3: NASA Open Source Agreement 1.3.
      */
-    spdx_license_NASAOpenSourceAgreement13: Coding;
+    readonly NASAOpenSourceAgreement13: Coding;
     /**
-     * Naumen Public License.
+     * Naumen: Naumen Public License.
      */
-    spdx_license_NaumenPublicLicense: Coding;
+    readonly NaumenPublicLicense: Coding;
     /**
-     * Net Boolean Public License v1.
+     * NBPL-1.0: Net Boolean Public License v1.
      */
-    spdx_license_NetBooleanPublicLicenseV1: Coding;
+    readonly NetBooleanPublicLicenseV1: Coding;
     /**
-     * University of Illinois/NCSA Open Source License.
+     * NCSA: University of Illinois/NCSA Open Source License.
      */
-    spdx_license_UniversityOfIllinoisNCSAOpenSourceLicense: Coding;
+    readonly UniversityOfIllinoisNCSAOpenSourceLicense: Coding;
     /**
-     * Net-SNMP License.
+     * Net-SNMP: Net-SNMP License.
      */
-    spdx_license_NetSNMPLicense: Coding;
+    readonly NetSNMPLicense: Coding;
     /**
-     * NetCDF license.
+     * NetCDF: NetCDF license.
      */
-    spdx_license_NetCDFLicense: Coding;
+    readonly NetCDFLicense: Coding;
     /**
-     * Newsletr License.
+     * Newsletr: Newsletr License.
      */
-    spdx_license_NewsletrLicense: Coding;
+    readonly NewsletrLicense: Coding;
     /**
-     * Nethack General Public License.
+     * NGPL: Nethack General Public License.
      */
-    spdx_license_NethackGeneralPublicLicense: Coding;
+    readonly NethackGeneralPublicLicense: Coding;
     /**
-     * Norwegian Licence for Open Government Data.
+     * NLOD-1.0: Norwegian Licence for Open Government Data.
      */
-    spdx_license_NorwegianLicenceForOpenGovernmentData: Coding;
+    readonly NorwegianLicenceForOpenGovernmentData: Coding;
     /**
-     * No Limit Public License.
+     * NLPL: No Limit Public License.
      */
-    spdx_license_NoLimitPublicLicense: Coding;
+    readonly NoLimitPublicLicense: Coding;
     /**
-     * Nokia Open Source License.
+     * Nokia: Nokia Open Source License.
      */
-    spdx_license_NokiaOpenSourceLicense: Coding;
+    readonly NokiaOpenSourceLicense: Coding;
     /**
-     * Netizen Open Source License.
+     * NOSL: Netizen Open Source License.
      */
-    spdx_license_NetizenOpenSourceLicense: Coding;
+    readonly NetizenOpenSourceLicense: Coding;
     /**
-     * Not an open source license.
+     * not-open-source: Not an open source license.
      */
-    spdx_license_NotOpenSource: Coding;
+    readonly NotOpenSource: Coding;
     /**
-     * Noweb License.
+     * Noweb: Noweb License.
      */
-    spdx_license_NowebLicense: Coding;
+    readonly NowebLicense: Coding;
     /**
-     * Netscape Public License v1.0.
+     * NPL-1.0: Netscape Public License v1.0.
      */
-    spdx_license_NetscapePublicLicenseV10: Coding;
+    readonly NetscapePublicLicenseV10: Coding;
     /**
-     * Netscape Public License v1.1.
+     * NPL-1.1: Netscape Public License v1.1.
      */
-    spdx_license_NetscapePublicLicenseV11: Coding;
+    readonly NetscapePublicLicenseV11: Coding;
     /**
-     * Non-Profit Open Software License 3.0.
+     * NPOSL-3.0: Non-Profit Open Software License 3.0.
      */
-    spdx_license_NonProfitOpenSoftwareLicense30: Coding;
+    readonly NonProfitOpenSoftwareLicense30: Coding;
     /**
-     * NRL License.
+     * NRL: NRL License.
      */
-    spdx_license_NRLLicense: Coding;
+    readonly NRLLicense: Coding;
     /**
-     * NTP License.
+     * NTP: NTP License.
      */
-    spdx_license_NTPLicense: Coding;
+    readonly NTPLicense: Coding;
     /**
-     * Open CASCADE Technology Public License.
+     * OCCT-PL: Open CASCADE Technology Public License.
      */
-    spdx_license_OpenCASCADETechnologyPublicLicense: Coding;
+    readonly OpenCASCADETechnologyPublicLicense: Coding;
     /**
-     * OCLC Research Public License 2.0.
+     * OCLC-2.0: OCLC Research Public License 2.0.
      */
-    spdx_license_OCLCResearchPublicLicense20: Coding;
+    readonly OCLCResearchPublicLicense20: Coding;
     /**
-     * ODC Open Database License v1.0.
+     * ODbL-1.0: ODC Open Database License v1.0.
      */
-    spdx_license_ODCOpenDatabaseLicenseV10: Coding;
+    readonly ODCOpenDatabaseLicenseV10: Coding;
     /**
-     * SIL Open Font License 1.0.
+     * OFL-1.0: SIL Open Font License 1.0.
      */
-    spdx_license_SILOpenFontLicense10: Coding;
+    readonly SILOpenFontLicense10: Coding;
     /**
-     * SIL Open Font License 1.1.
+     * OFL-1.1: SIL Open Font License 1.1.
      */
-    spdx_license_SILOpenFontLicense11: Coding;
+    readonly SILOpenFontLicense11: Coding;
     /**
-     * Open Group Test Suite License.
+     * OGTSL: Open Group Test Suite License.
      */
-    spdx_license_OpenGroupTestSuiteLicense: Coding;
+    readonly OpenGroupTestSuiteLicense: Coding;
     /**
-     * Open LDAP Public License v1.1.
+     * OLDAP-1.1: Open LDAP Public License v1.1.
      */
-    spdx_license_OpenLDAPPublicLicenseV11: Coding;
+    readonly OpenLDAPPublicLicenseV11: Coding;
     /**
-     * Open LDAP Public License v1.2.
+     * OLDAP-1.2: Open LDAP Public License v1.2.
      */
-    spdx_license_OpenLDAPPublicLicenseV12: Coding;
+    readonly OpenLDAPPublicLicenseV12: Coding;
     /**
-     * Open LDAP Public License v1.3.
+     * OLDAP-1.3: Open LDAP Public License v1.3.
      */
-    spdx_license_OpenLDAPPublicLicenseV13: Coding;
+    readonly OpenLDAPPublicLicenseV13: Coding;
     /**
-     * Open LDAP Public License v1.4.
+     * OLDAP-1.4: Open LDAP Public License v1.4.
      */
-    spdx_license_OpenLDAPPublicLicenseV14: Coding;
+    readonly OpenLDAPPublicLicenseV14: Coding;
     /**
-     * Open LDAP Public License v2.0 (or possibly 2.0A and 2.0B).
+     * OLDAP-2.0: Open LDAP Public License v2.0 (or possibly 2.0A and 2.0B).
      */
-    spdx_license_OpenLDAPPublicLicenseV20OrPossibly20AAnd20B: Coding;
+    readonly OpenLDAPPublicLicenseV20OrPossibly20AAnd20B: Coding;
     /**
-     * Open LDAP Public License v2.0.1.
+     * OLDAP-2.0.1: Open LDAP Public License v2.0.1.
      */
-    spdx_license_OpenLDAPPublicLicenseV201: Coding;
+    readonly OpenLDAPPublicLicenseV201: Coding;
     /**
-     * Open LDAP Public License v2.1.
+     * OLDAP-2.1: Open LDAP Public License v2.1.
      */
-    spdx_license_OpenLDAPPublicLicenseV21: Coding;
+    readonly OpenLDAPPublicLicenseV21: Coding;
     /**
-     * Open LDAP Public License v2.2.
+     * OLDAP-2.2: Open LDAP Public License v2.2.
      */
-    spdx_license_OpenLDAPPublicLicenseV22: Coding;
+    readonly OpenLDAPPublicLicenseV22: Coding;
     /**
-     * Open LDAP Public License v2.2.1.
+     * OLDAP-2.2.1: Open LDAP Public License v2.2.1.
      */
-    spdx_license_OpenLDAPPublicLicenseV221: Coding;
+    readonly OpenLDAPPublicLicenseV221: Coding;
     /**
-     * Open LDAP Public License 2.2.2.
+     * OLDAP-2.2.2: Open LDAP Public License 2.2.2.
      */
-    spdx_license_OpenLDAPPublicLicense222: Coding;
+    readonly OpenLDAPPublicLicense222: Coding;
     /**
-     * Open LDAP Public License v2.3.
+     * OLDAP-2.3: Open LDAP Public License v2.3.
      */
-    spdx_license_OpenLDAPPublicLicenseV23: Coding;
+    readonly OpenLDAPPublicLicenseV23: Coding;
     /**
-     * Open LDAP Public License v2.4.
+     * OLDAP-2.4: Open LDAP Public License v2.4.
      */
-    spdx_license_OpenLDAPPublicLicenseV24: Coding;
+    readonly OpenLDAPPublicLicenseV24: Coding;
     /**
-     * Open LDAP Public License v2.5.
+     * OLDAP-2.5: Open LDAP Public License v2.5.
      */
-    spdx_license_OpenLDAPPublicLicenseV25: Coding;
+    readonly OpenLDAPPublicLicenseV25: Coding;
     /**
-     * Open LDAP Public License v2.6.
+     * OLDAP-2.6: Open LDAP Public License v2.6.
      */
-    spdx_license_OpenLDAPPublicLicenseV26: Coding;
+    readonly OpenLDAPPublicLicenseV26: Coding;
     /**
-     * Open LDAP Public License v2.7.
+     * OLDAP-2.7: Open LDAP Public License v2.7.
      */
-    spdx_license_OpenLDAPPublicLicenseV27: Coding;
+    readonly OpenLDAPPublicLicenseV27: Coding;
     /**
-     * Open LDAP Public License v2.8.
+     * OLDAP-2.8: Open LDAP Public License v2.8.
      */
-    spdx_license_OpenLDAPPublicLicenseV28: Coding;
+    readonly OpenLDAPPublicLicenseV28: Coding;
     /**
-     * Open Market License.
+     * OML: Open Market License.
      */
-    spdx_license_OpenMarketLicense: Coding;
+    readonly OpenMarketLicense: Coding;
     /**
-     * OpenSSL License.
+     * OpenSSL: OpenSSL License.
      */
-    spdx_license_OpenSSLLicense: Coding;
+    readonly OpenSSLLicense: Coding;
     /**
-     * Open Public License v1.0.
+     * OPL-1.0: Open Public License v1.0.
      */
-    spdx_license_OpenPublicLicenseV10: Coding;
+    readonly OpenPublicLicenseV10: Coding;
     /**
-     * OSET Public License version 2.1.
+     * OSET-PL-2.1: OSET Public License version 2.1.
      */
-    spdx_license_OSETPublicLicenseVersion21: Coding;
+    readonly OSETPublicLicenseVersion21: Coding;
     /**
-     * Open Software License 1.0.
+     * OSL-1.0: Open Software License 1.0.
      */
-    spdx_license_OpenSoftwareLicense10: Coding;
+    readonly OpenSoftwareLicense10: Coding;
     /**
-     * Open Software License 1.1.
+     * OSL-1.1: Open Software License 1.1.
      */
-    spdx_license_OpenSoftwareLicense11: Coding;
+    readonly OpenSoftwareLicense11: Coding;
     /**
-     * Open Software License 2.0.
+     * OSL-2.0: Open Software License 2.0.
      */
-    spdx_license_OpenSoftwareLicense20: Coding;
+    readonly OpenSoftwareLicense20: Coding;
     /**
-     * Open Software License 2.1.
+     * OSL-2.1: Open Software License 2.1.
      */
-    spdx_license_OpenSoftwareLicense21: Coding;
+    readonly OpenSoftwareLicense21: Coding;
     /**
-     * Open Software License 3.0.
+     * OSL-3.0: Open Software License 3.0.
      */
-    spdx_license_OpenSoftwareLicense30: Coding;
+    readonly OpenSoftwareLicense30: Coding;
     /**
-     * ODC Public Domain Dedication &amp; License 1.0.
+     * PDDL-1.0: ODC Public Domain Dedication &amp; License 1.0.
      */
-    spdx_license_ODCPublicDomainDedicationAndLicense10: Coding;
+    readonly ODCPublicDomainDedicationAndLicense10: Coding;
     /**
-     * PHP License v3.0.
+     * PHP-3.0: PHP License v3.0.
      */
-    spdx_license_PHPLicenseV30: Coding;
+    readonly PHPLicenseV30: Coding;
     /**
-     * PHP License v3.01.
+     * PHP-3.01: PHP License v3.01.
      */
-    spdx_license_PHPLicenseV301: Coding;
+    readonly PHPLicenseV301: Coding;
     /**
-     * Plexus Classworlds License.
+     * Plexus: Plexus Classworlds License.
      */
-    spdx_license_PlexusClassworldsLicense: Coding;
+    readonly PlexusClassworldsLicense: Coding;
     /**
-     * PostgreSQL License.
+     * PostgreSQL: PostgreSQL License.
      */
-    spdx_license_PostgreSQLLicense: Coding;
+    readonly PostgreSQLLicense: Coding;
     /**
-     * psfrag License.
+     * psfrag: psfrag License.
      */
-    spdx_license_PsfragLicense: Coding;
+    readonly PsfragLicense: Coding;
     /**
-     * psutils License.
+     * psutils: psutils License.
      */
-    spdx_license_PsutilsLicense: Coding;
+    readonly PsutilsLicense: Coding;
     /**
-     * Python License 2.0.
+     * Python-2.0: Python License 2.0.
      */
-    spdx_license_PythonLicense20: Coding;
+    readonly PythonLicense20: Coding;
     /**
-     * Qhull License.
+     * Qhull: Qhull License.
      */
-    spdx_license_QhullLicense: Coding;
+    readonly QhullLicense: Coding;
     /**
-     * Q Public License 1.0.
+     * QPL-1.0: Q Public License 1.0.
      */
-    spdx_license_QPublicLicense10: Coding;
+    readonly QPublicLicense10: Coding;
     /**
-     * Rdisc License.
+     * Rdisc: Rdisc License.
      */
-    spdx_license_RdiscLicense: Coding;
+    readonly RdiscLicense: Coding;
     /**
-     * Red Hat eCos Public License v1.1.
+     * RHeCos-1.1: Red Hat eCos Public License v1.1.
      */
-    spdx_license_RedHatECosPublicLicenseV11: Coding;
+    readonly RedHatECosPublicLicenseV11: Coding;
     /**
-     * Reciprocal Public License 1.1.
+     * RPL-1.1: Reciprocal Public License 1.1.
      */
-    spdx_license_ReciprocalPublicLicense11: Coding;
+    readonly ReciprocalPublicLicense11: Coding;
     /**
-     * Reciprocal Public License 1.5.
+     * RPL-1.5: Reciprocal Public License 1.5.
      */
-    spdx_license_ReciprocalPublicLicense15: Coding;
+    readonly ReciprocalPublicLicense15: Coding;
     /**
-     * RealNetworks Public Source License v1.0.
+     * RPSL-1.0: RealNetworks Public Source License v1.0.
      */
-    spdx_license_RealNetworksPublicSourceLicenseV10: Coding;
+    readonly RealNetworksPublicSourceLicenseV10: Coding;
     /**
-     * RSA Message-Digest License.
+     * RSA-MD: RSA Message-Digest License.
      */
-    spdx_license_RSAMessageDigestLicense: Coding;
+    readonly RSAMessageDigestLicense: Coding;
     /**
-     * Ricoh Source Code Public License.
+     * RSCPL: Ricoh Source Code Public License.
      */
-    spdx_license_RicohSourceCodePublicLicense: Coding;
+    readonly RicohSourceCodePublicLicense: Coding;
     /**
-     * Ruby License.
+     * Ruby: Ruby License.
      */
-    spdx_license_RubyLicense: Coding;
+    readonly RubyLicense: Coding;
     /**
-     * Sax Public Domain Notice.
+     * SAX-PD: Sax Public Domain Notice.
      */
-    spdx_license_SaxPublicDomainNotice: Coding;
+    readonly SaxPublicDomainNotice: Coding;
     /**
-     * Saxpath License.
+     * Saxpath: Saxpath License.
      */
-    spdx_license_SaxpathLicense: Coding;
+    readonly SaxpathLicense: Coding;
     /**
-     * SCEA Shared Source License.
+     * SCEA: SCEA Shared Source License.
      */
-    spdx_license_SCEASharedSourceLicense: Coding;
+    readonly SCEASharedSourceLicense: Coding;
     /**
-     * Sendmail License.
+     * Sendmail: Sendmail License.
      */
-    spdx_license_SendmailLicense: Coding;
+    readonly SendmailLicense: Coding;
     /**
-     * SGI Free Software License B v1.0.
+     * SGI-B-1.0: SGI Free Software License B v1.0.
      */
-    spdx_license_SGIFreeSoftwareLicenseBV10: Coding;
+    readonly SGIFreeSoftwareLicenseBV10: Coding;
     /**
-     * SGI Free Software License B v1.1.
+     * SGI-B-1.1: SGI Free Software License B v1.1.
      */
-    spdx_license_SGIFreeSoftwareLicenseBV11: Coding;
+    readonly SGIFreeSoftwareLicenseBV11: Coding;
     /**
-     * SGI Free Software License B v2.0.
+     * SGI-B-2.0: SGI Free Software License B v2.0.
      */
-    spdx_license_SGIFreeSoftwareLicenseBV20: Coding;
+    readonly SGIFreeSoftwareLicenseBV20: Coding;
     /**
-     * Simple Public License 2.0.
+     * SimPL-2.0: Simple Public License 2.0.
      */
-    spdx_license_SimplePublicLicense20: Coding;
+    readonly SimplePublicLicense20: Coding;
     /**
-     * Sun Industry Standards Source License v1.1.
+     * SISSL: Sun Industry Standards Source License v1.1.
      */
-    spdx_license_SunIndustryStandardsSourceLicenseV11: Coding;
+    readonly SunIndustryStandardsSourceLicenseV11: Coding;
     /**
-     * Sun Industry Standards Source License v1.2.
+     * SISSL-1.2: Sun Industry Standards Source License v1.2.
      */
-    spdx_license_SunIndustryStandardsSourceLicenseV12: Coding;
+    readonly SunIndustryStandardsSourceLicenseV12: Coding;
     /**
-     * Sleepycat License.
+     * Sleepycat: Sleepycat License.
      */
-    spdx_license_SleepycatLicense: Coding;
+    readonly SleepycatLicense: Coding;
     /**
-     * Standard ML of New Jersey License.
+     * SMLNJ: Standard ML of New Jersey License.
      */
-    spdx_license_StandardMLOfNewJerseyLicense: Coding;
+    readonly StandardMLOfNewJerseyLicense: Coding;
     /**
-     * Secure Messaging Protocol Public License.
+     * SMPPL: Secure Messaging Protocol Public License.
      */
-    spdx_license_SecureMessagingProtocolPublicLicense: Coding;
+    readonly SecureMessagingProtocolPublicLicense: Coding;
     /**
-     * SNIA Public License 1.1.
+     * SNIA: SNIA Public License 1.1.
      */
-    spdx_license_SNIAPublicLicense11: Coding;
+    readonly SNIAPublicLicense11: Coding;
     /**
-     * Spencer License 86.
+     * Spencer-86: Spencer License 86.
      */
-    spdx_license_SpencerLicense86: Coding;
+    readonly SpencerLicense86: Coding;
     /**
-     * Spencer License 94.
+     * Spencer-94: Spencer License 94.
      */
-    spdx_license_SpencerLicense94: Coding;
+    readonly SpencerLicense94: Coding;
     /**
-     * Spencer License 99.
+     * Spencer-99: Spencer License 99.
      */
-    spdx_license_SpencerLicense99: Coding;
+    readonly SpencerLicense99: Coding;
     /**
-     * Sun Public License v1.0.
+     * SPL-1.0: Sun Public License v1.0.
      */
-    spdx_license_SunPublicLicenseV10: Coding;
+    readonly SunPublicLicenseV10: Coding;
     /**
-     * SugarCRM Public License v1.1.3.
+     * SugarCRM-1.1.3: SugarCRM Public License v1.1.3.
      */
-    spdx_license_SugarCRMPublicLicenseV113: Coding;
+    readonly SugarCRMPublicLicenseV113: Coding;
     /**
-     * Scheme Widget Library (SWL) Software License Agreement.
+     * SWL: Scheme Widget Library (SWL) Software License Agreement.
      */
-    spdx_license_SchemeWidgetLibrarySWLSoftwareLicenseAgreement: Coding;
+    readonly SchemeWidgetLibrarySWLSoftwareLicenseAgreement: Coding;
     /**
-     * TCL/TK License.
+     * TCL: TCL/TK License.
      */
-    spdx_license_TCLTKLicense: Coding;
+    readonly TCLTKLicense: Coding;
     /**
-     * TCP Wrappers License.
+     * TCP-wrappers: TCP Wrappers License.
      */
-    spdx_license_TCPWrappersLicense: Coding;
+    readonly TCPWrappersLicense: Coding;
     /**
-     * TMate Open Source License.
+     * TMate: TMate Open Source License.
      */
-    spdx_license_TMateOpenSourceLicense: Coding;
+    readonly TMateOpenSourceLicense: Coding;
     /**
-     * TORQUE v2.5+ Software License v1.1.
+     * TORQUE-1.1: TORQUE v2.5+ Software License v1.1.
      */
-    spdx_license_TORQUEV25PlusSoftwareLicenseV11: Coding;
+    readonly TORQUEV25PlusSoftwareLicenseV11: Coding;
     /**
-     * Trusster Open Source License.
+     * TOSL: Trusster Open Source License.
      */
-    spdx_license_TrussterOpenSourceLicense: Coding;
+    readonly TrussterOpenSourceLicense: Coding;
     /**
-     * Unicode License Agreement - Data Files and Software (2015).
+     * Unicode-DFS-2015: Unicode License Agreement - Data Files and Software (2015).
      */
-    spdx_license_UnicodeLicenseAgreementDataFilesAndSoftware2015: Coding;
+    readonly UnicodeLicenseAgreementDataFilesAndSoftware2015: Coding;
     /**
-     * Unicode License Agreement - Data Files and Software (2016).
+     * Unicode-DFS-2016: Unicode License Agreement - Data Files and Software (2016).
      */
-    spdx_license_UnicodeLicenseAgreementDataFilesAndSoftware2016: Coding;
+    readonly UnicodeLicenseAgreementDataFilesAndSoftware2016: Coding;
     /**
-     * Unicode Terms of Use.
+     * Unicode-TOU: Unicode Terms of Use.
      */
-    spdx_license_UnicodeTermsOfUse: Coding;
+    readonly UnicodeTermsOfUse: Coding;
     /**
-     * The Unlicense.
+     * Unlicense: The Unlicense.
      */
-    spdx_license_TheUnlicense: Coding;
+    readonly TheUnlicense: Coding;
     /**
-     * Universal Permissive License v1.0.
+     * UPL-1.0: Universal Permissive License v1.0.
      */
-    spdx_license_UniversalPermissiveLicenseV10: Coding;
+    readonly UniversalPermissiveLicenseV10: Coding;
     /**
-     * Vim License.
+     * Vim: Vim License.
      */
-    spdx_license_VimLicense: Coding;
+    readonly VimLicense: Coding;
     /**
-     * VOSTROM Public License for Open Source.
+     * VOSTROM: VOSTROM Public License for Open Source.
      */
-    spdx_license_VOSTROMPublicLicenseForOpenSource: Coding;
+    readonly VOSTROMPublicLicenseForOpenSource: Coding;
     /**
-     * Vovida Software License v1.0.
+     * VSL-1.0: Vovida Software License v1.0.
      */
-    spdx_license_VovidaSoftwareLicenseV10: Coding;
+    readonly VovidaSoftwareLicenseV10: Coding;
     /**
-     * W3C Software Notice and License (2002-12-31).
+     * W3C: W3C Software Notice and License (2002-12-31).
      */
-    spdx_license_W3CSoftwareNoticeAndLicense20021231: Coding;
+    readonly W3CSoftwareNoticeAndLicense20021231: Coding;
     /**
-     * W3C Software Notice and License (1998-07-20).
+     * W3C-19980720: W3C Software Notice and License (1998-07-20).
      */
-    spdx_license_W3CSoftwareNoticeAndLicense19980720: Coding;
+    readonly W3CSoftwareNoticeAndLicense19980720: Coding;
     /**
-     * W3C Software Notice and Document License (2015-05-13).
+     * W3C-20150513: W3C Software Notice and Document License (2015-05-13).
      */
-    spdx_license_W3CSoftwareNoticeAndDocumentLicense20150513: Coding;
+    readonly W3CSoftwareNoticeAndDocumentLicense20150513: Coding;
     /**
-     * Sybase Open Watcom Public License 1.0.
+     * Watcom-1.0: Sybase Open Watcom Public License 1.0.
      */
-    spdx_license_SybaseOpenWatcomPublicLicense10: Coding;
+    readonly SybaseOpenWatcomPublicLicense10: Coding;
     /**
-     * Wsuipa License.
+     * Wsuipa: Wsuipa License.
      */
-    spdx_license_WsuipaLicense: Coding;
+    readonly WsuipaLicense: Coding;
     /**
-     * Do What The F*ck You Want To Public License.
+     * WTFPL: Do What The F*ck You Want To Public License.
      */
-    spdx_license_DoWhatTheFAsteriskCkYouWantToPublicLicense: Coding;
+    readonly DoWhatTheFAsteriskCkYouWantToPublicLicense: Coding;
     /**
-     * X11 License.
+     * X11: X11 License.
      */
-    spdx_license_X11License: Coding;
+    readonly X11License: Coding;
     /**
-     * Xerox License.
+     * Xerox: Xerox License.
      */
-    spdx_license_XeroxLicense: Coding;
+    readonly XeroxLicense: Coding;
     /**
-     * XFree86 License 1.1.
+     * XFree86-1.1: XFree86 License 1.1.
      */
-    spdx_license_XFree86License11: Coding;
+    readonly XFree86License11: Coding;
     /**
-     * xinetd License.
+     * xinetd: xinetd License.
      */
-    spdx_license_XinetdLicense: Coding;
+    readonly XinetdLicense: Coding;
     /**
-     * X.Net License.
+     * Xnet: X.Net License.
      */
-    spdx_license_XNetLicense: Coding;
+    readonly XNetLicense: Coding;
     /**
-     * XPP License.
+     * xpp: XPP License.
      */
-    spdx_license_XPPLicense: Coding;
+    readonly XPPLicense: Coding;
     /**
-     * XSkat License.
+     * XSkat: XSkat License.
      */
-    spdx_license_XSkatLicense: Coding;
+    readonly XSkatLicense: Coding;
     /**
-     * Yahoo! Public License v1.0.
+     * YPL-1.0: Yahoo! Public License v1.0.
      */
-    spdx_license_YahooNotPublicLicenseV10: Coding;
+    readonly YahooNotPublicLicenseV10: Coding;
     /**
-     * Yahoo! Public License v1.1.
+     * YPL-1.1: Yahoo! Public License v1.1.
      */
-    spdx_license_YahooNotPublicLicenseV11: Coding;
+    readonly YahooNotPublicLicenseV11: Coding;
     /**
-     * Zed License.
+     * Zed: Zed License.
      */
-    spdx_license_ZedLicense: Coding;
+    readonly ZedLicense: Coding;
     /**
-     * Zend License v2.0.
+     * Zend-2.0: Zend License v2.0.
      */
-    spdx_license_ZendLicenseV20: Coding;
+    readonly ZendLicenseV20: Coding;
     /**
-     * Zimbra Public License v1.3.
+     * Zimbra-1.3: Zimbra Public License v1.3.
      */
-    spdx_license_ZimbraPublicLicenseV13: Coding;
+    readonly ZimbraPublicLicenseV13: Coding;
     /**
-     * Zimbra Public License v1.4.
+     * Zimbra-1.4: Zimbra Public License v1.4.
      */
-    spdx_license_ZimbraPublicLicenseV14: Coding;
+    readonly ZimbraPublicLicenseV14: Coding;
     /**
-     * zlib License.
+     * Zlib: zlib License.
      */
-    spdx_license_ZlibLicense: Coding;
+    readonly ZlibLicense: Coding;
     /**
-     * zlib/libpng License with Acknowledgement.
+     * zlib-acknowledgement: zlib/libpng License with Acknowledgement.
      */
-    spdx_license_ZlibLibpngLicenseWithAcknowledgement: Coding;
+    readonly ZlibLibpngLicenseWithAcknowledgement: Coding;
     /**
-     * Zope Public License 1.1.
+     * ZPL-1.1: Zope Public License 1.1.
      */
-    spdx_license_ZopePublicLicense11: Coding;
+    readonly ZopePublicLicense11: Coding;
     /**
-     * Zope Public License 2.0.
+     * ZPL-2.0: Zope Public License 2.0.
      */
-    spdx_license_ZopePublicLicense20: Coding;
+    readonly ZopePublicLicense20: Coding;
     /**
-     * Zope Public License 2.1.
+     * ZPL-2.1: Zope Public License 2.1.
      */
-    spdx_license_ZopePublicLicense21: Coding;
+    readonly ZopePublicLicense21: Coding;
 };
+/**
+ * The license that applies to an Implementation Guide (using an SPDX license Identifiers, or 'not-open-source'). The binding is required but new SPDX license Identifiers are allowed to be used (https://spdx.org/licenses/).
+ */
+export declare type SpdxLicenseValueSetType = typeof SpdxLicenseValueSet;
+/**
+ * The license that applies to an Implementation Guide (using an SPDX license Identifiers, or 'not-open-source'). The binding is required but new SPDX license Identifiers are allowed to be used (https://spdx.org/licenses/).
+ */
+export declare enum SpdxLicenseValueSetEnum {
+    /**
+     * 0BSD: BSD Zero Clause License.
+     */
+    BSDZeroClauseLicense = "0BSD",
+    /**
+     * AAL: Attribution Assurance License.
+     */
+    AttributionAssuranceLicense = "AAL",
+    /**
+     * Abstyles: Abstyles License.
+     */
+    AbstylesLicense = "Abstyles",
+    /**
+     * Adobe-2006: Adobe Systems Incorporated Source Code License Agreement.
+     */
+    AdobeSystemsIncorporatedSourceCodeLicenseAgreement = "Adobe-2006",
+    /**
+     * Adobe-Glyph: Adobe Glyph List License.
+     */
+    AdobeGlyphListLicense = "Adobe-Glyph",
+    /**
+     * ADSL: Amazon Digital Services License.
+     */
+    AmazonDigitalServicesLicense = "ADSL",
+    /**
+     * AFL-1.1: Academic Free License v1.1.
+     */
+    AcademicFreeLicenseV11 = "AFL-1.1",
+    /**
+     * AFL-1.2: Academic Free License v1.2.
+     */
+    AcademicFreeLicenseV12 = "AFL-1.2",
+    /**
+     * AFL-2.0: Academic Free License v2.0.
+     */
+    AcademicFreeLicenseV20 = "AFL-2.0",
+    /**
+     * AFL-2.1: Academic Free License v2.1.
+     */
+    AcademicFreeLicenseV21 = "AFL-2.1",
+    /**
+     * AFL-3.0: Academic Free License v3.0.
+     */
+    AcademicFreeLicenseV30 = "AFL-3.0",
+    /**
+     * Afmparse: Afmparse License.
+     */
+    AfmparseLicense = "Afmparse",
+    /**
+     * AGPL-1.0-only: Affero General Public License v1.0 only.
+     */
+    AfferoGeneralPublicLicenseV10Only = "AGPL-1.0-only",
+    /**
+     * AGPL-1.0-or-later: Affero General Public License v1.0 or later.
+     */
+    AfferoGeneralPublicLicenseV10OrLater = "AGPL-1.0-or-later",
+    /**
+     * AGPL-3.0-only: GNU Affero General Public License v3.0 only.
+     */
+    GNUAfferoGeneralPublicLicenseV30Only = "AGPL-3.0-only",
+    /**
+     * AGPL-3.0-or-later: GNU Affero General Public License v3.0 or later.
+     */
+    GNUAfferoGeneralPublicLicenseV30OrLater = "AGPL-3.0-or-later",
+    /**
+     * Aladdin: Aladdin Free Public License.
+     */
+    AladdinFreePublicLicense = "Aladdin",
+    /**
+     * AMDPLPA: AMD's plpa_map.c License.
+     */
+    AMDQuoteSPlpaMapCLicense = "AMDPLPA",
+    /**
+     * AML: Apple MIT License.
+     */
+    AppleMITLicense = "AML",
+    /**
+     * AMPAS: Academy of Motion Picture Arts and Sciences BSD.
+     */
+    AcademyOfMotionPictureArtsAndSciencesBSD = "AMPAS",
+    /**
+     * ANTLR-PD: ANTLR Software Rights Notice.
+     */
+    ANTLRSoftwareRightsNotice = "ANTLR-PD",
+    /**
+     * Apache-1.0: Apache License 1.0.
+     */
+    ApacheLicense10 = "Apache-1.0",
+    /**
+     * Apache-1.1: Apache License 1.1.
+     */
+    ApacheLicense11 = "Apache-1.1",
+    /**
+     * Apache-2.0: Apache License 2.0.
+     */
+    ApacheLicense20 = "Apache-2.0",
+    /**
+     * APAFML: Adobe Postscript AFM License.
+     */
+    AdobePostscriptAFMLicense = "APAFML",
+    /**
+     * APL-1.0: Adaptive Public License 1.0.
+     */
+    AdaptivePublicLicense10 = "APL-1.0",
+    /**
+     * APSL-1.0: Apple Public Source License 1.0.
+     */
+    ApplePublicSourceLicense10 = "APSL-1.0",
+    /**
+     * APSL-1.1: Apple Public Source License 1.1.
+     */
+    ApplePublicSourceLicense11 = "APSL-1.1",
+    /**
+     * APSL-1.2: Apple Public Source License 1.2.
+     */
+    ApplePublicSourceLicense12 = "APSL-1.2",
+    /**
+     * APSL-2.0: Apple Public Source License 2.0.
+     */
+    ApplePublicSourceLicense20 = "APSL-2.0",
+    /**
+     * Artistic-1.0: Artistic License 1.0.
+     */
+    ArtisticLicense10 = "Artistic-1.0",
+    /**
+     * Artistic-1.0-cl8: Artistic License 1.0 w/clause 8.
+     */
+    ArtisticLicense10WClause8 = "Artistic-1.0-cl8",
+    /**
+     * Artistic-1.0-Perl: Artistic License 1.0 (Perl).
+     */
+    ArtisticLicense10Perl = "Artistic-1.0-Perl",
+    /**
+     * Artistic-2.0: Artistic License 2.0.
+     */
+    ArtisticLicense20 = "Artistic-2.0",
+    /**
+     * Bahyph: Bahyph License.
+     */
+    BahyphLicense = "Bahyph",
+    /**
+     * Barr: Barr License.
+     */
+    BarrLicense = "Barr",
+    /**
+     * Beerware: Beerware License.
+     */
+    BeerwareLicense = "Beerware",
+    /**
+     * BitTorrent-1.0: BitTorrent Open Source License v1.0.
+     */
+    BitTorrentOpenSourceLicenseV10 = "BitTorrent-1.0",
+    /**
+     * BitTorrent-1.1: BitTorrent Open Source License v1.1.
+     */
+    BitTorrentOpenSourceLicenseV11 = "BitTorrent-1.1",
+    /**
+     * Borceux: Borceux license.
+     */
+    BorceuxLicense = "Borceux",
+    /**
+     * BSD-1-Clause: BSD 1-Clause License.
+     */
+    BSD1ClauseLicense = "BSD-1-Clause",
+    /**
+     * BSD-2-Clause: BSD 2-Clause "Simplified" License.
+     */
+    BSD2ClauseQuotationSimplifiedQuotationLicense = "BSD-2-Clause",
+    /**
+     * BSD-2-Clause-FreeBSD: BSD 2-Clause FreeBSD License.
+     */
+    BSD2ClauseFreeBSDLicense = "BSD-2-Clause-FreeBSD",
+    /**
+     * BSD-2-Clause-NetBSD: BSD 2-Clause NetBSD License.
+     */
+    BSD2ClauseNetBSDLicense = "BSD-2-Clause-NetBSD",
+    /**
+     * BSD-2-Clause-Patent: BSD-2-Clause Plus Patent License.
+     */
+    BSD2ClausePlusPatentLicense = "BSD-2-Clause-Patent",
+    /**
+     * BSD-3-Clause: BSD 3-Clause "New" or "Revised" License.
+     */
+    BSD3ClauseQuotationNewQuotationOrQuotationRevisedQuotationLicense = "BSD-3-Clause",
+    /**
+     * BSD-3-Clause-Attribution: BSD with attribution.
+     */
+    BSDWithAttribution = "BSD-3-Clause-Attribution",
+    /**
+     * BSD-3-Clause-Clear: BSD 3-Clause Clear License.
+     */
+    BSD3ClauseClearLicense = "BSD-3-Clause-Clear",
+    /**
+     * BSD-3-Clause-LBNL: Lawrence Berkeley National Labs BSD variant license.
+     */
+    LawrenceBerkeleyNationalLabsBSDVariantLicense = "BSD-3-Clause-LBNL",
+    /**
+     * BSD-3-Clause-No-Nuclear-License: BSD 3-Clause No Nuclear License.
+     */
+    BSD3ClauseNoNuclearLicense = "BSD-3-Clause-No-Nuclear-License",
+    /**
+     * BSD-3-Clause-No-Nuclear-License-2014: BSD 3-Clause No Nuclear License 2014.
+     */
+    BSD3ClauseNoNuclearLicense2014 = "BSD-3-Clause-No-Nuclear-License-2014",
+    /**
+     * BSD-3-Clause-No-Nuclear-Warranty: BSD 3-Clause No Nuclear Warranty.
+     */
+    BSD3ClauseNoNuclearWarranty = "BSD-3-Clause-No-Nuclear-Warranty",
+    /**
+     * BSD-4-Clause: BSD 4-Clause "Original" or "Old" License.
+     */
+    BSD4ClauseQuotationOriginalQuotationOrQuotationOldQuotationLicense = "BSD-4-Clause",
+    /**
+     * BSD-4-Clause-UC: BSD-4-Clause (University of California-Specific).
+     */
+    BSD4ClauseUniversityOfCaliforniaSpecific = "BSD-4-Clause-UC",
+    /**
+     * BSD-Protection: BSD Protection License.
+     */
+    BSDProtectionLicense = "BSD-Protection",
+    /**
+     * BSD-Source-Code: BSD Source Code Attribution.
+     */
+    BSDSourceCodeAttribution = "BSD-Source-Code",
+    /**
+     * BSL-1.0: Boost Software License 1.0.
+     */
+    BoostSoftwareLicense10 = "BSL-1.0",
+    /**
+     * bzip2-1.0.5: bzip2 and libbzip2 License v1.0.5.
+     */
+    Bzip2AndLibbzip2LicenseV105 = "bzip2-1.0.5",
+    /**
+     * bzip2-1.0.6: bzip2 and libbzip2 License v1.0.6.
+     */
+    Bzip2AndLibbzip2LicenseV106 = "bzip2-1.0.6",
+    /**
+     * Caldera: Caldera License.
+     */
+    CalderaLicense = "Caldera",
+    /**
+     * CATOSL-1.1: Computer Associates Trusted Open Source License 1.1.
+     */
+    ComputerAssociatesTrustedOpenSourceLicense11 = "CATOSL-1.1",
+    /**
+     * CC-BY-1.0: Creative Commons Attribution 1.0 Generic.
+     */
+    CreativeCommonsAttribution10Generic = "CC-BY-1.0",
+    /**
+     * CC-BY-2.0: Creative Commons Attribution 2.0 Generic.
+     */
+    CreativeCommonsAttribution20Generic = "CC-BY-2.0",
+    /**
+     * CC-BY-2.5: Creative Commons Attribution 2.5 Generic.
+     */
+    CreativeCommonsAttribution25Generic = "CC-BY-2.5",
+    /**
+     * CC-BY-3.0: Creative Commons Attribution 3.0 Unported.
+     */
+    CreativeCommonsAttribution30Unported = "CC-BY-3.0",
+    /**
+     * CC-BY-4.0: Creative Commons Attribution 4.0 International.
+     */
+    CreativeCommonsAttribution40International = "CC-BY-4.0",
+    /**
+     * CC-BY-NC-1.0: Creative Commons Attribution Non Commercial 1.0 Generic.
+     */
+    CreativeCommonsAttributionNonCommercial10Generic = "CC-BY-NC-1.0",
+    /**
+     * CC-BY-NC-2.0: Creative Commons Attribution Non Commercial 2.0 Generic.
+     */
+    CreativeCommonsAttributionNonCommercial20Generic = "CC-BY-NC-2.0",
+    /**
+     * CC-BY-NC-2.5: Creative Commons Attribution Non Commercial 2.5 Generic.
+     */
+    CreativeCommonsAttributionNonCommercial25Generic = "CC-BY-NC-2.5",
+    /**
+     * CC-BY-NC-3.0: Creative Commons Attribution Non Commercial 3.0 Unported.
+     */
+    CreativeCommonsAttributionNonCommercial30Unported = "CC-BY-NC-3.0",
+    /**
+     * CC-BY-NC-4.0: Creative Commons Attribution Non Commercial 4.0 International.
+     */
+    CreativeCommonsAttributionNonCommercial40International = "CC-BY-NC-4.0",
+    /**
+     * CC-BY-NC-ND-1.0: Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic.
+     */
+    CreativeCommonsAttributionNonCommercialNoDerivatives10Generic = "CC-BY-NC-ND-1.0",
+    /**
+     * CC-BY-NC-ND-2.0: Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic.
+     */
+    CreativeCommonsAttributionNonCommercialNoDerivatives20Generic = "CC-BY-NC-ND-2.0",
+    /**
+     * CC-BY-NC-ND-2.5: Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic.
+     */
+    CreativeCommonsAttributionNonCommercialNoDerivatives25Generic = "CC-BY-NC-ND-2.5",
+    /**
+     * CC-BY-NC-ND-3.0: Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported.
+     */
+    CreativeCommonsAttributionNonCommercialNoDerivatives30Unported = "CC-BY-NC-ND-3.0",
+    /**
+     * CC-BY-NC-ND-4.0: Creative Commons Attribution Non Commercial No Derivatives 4.0 International.
+     */
+    CreativeCommonsAttributionNonCommercialNoDerivatives40International = "CC-BY-NC-ND-4.0",
+    /**
+     * CC-BY-NC-SA-1.0: Creative Commons Attribution Non Commercial Share Alike 1.0 Generic.
+     */
+    CreativeCommonsAttributionNonCommercialShareAlike10Generic = "CC-BY-NC-SA-1.0",
+    /**
+     * CC-BY-NC-SA-2.0: Creative Commons Attribution Non Commercial Share Alike 2.0 Generic.
+     */
+    CreativeCommonsAttributionNonCommercialShareAlike20Generic = "CC-BY-NC-SA-2.0",
+    /**
+     * CC-BY-NC-SA-2.5: Creative Commons Attribution Non Commercial Share Alike 2.5 Generic.
+     */
+    CreativeCommonsAttributionNonCommercialShareAlike25Generic = "CC-BY-NC-SA-2.5",
+    /**
+     * CC-BY-NC-SA-3.0: Creative Commons Attribution Non Commercial Share Alike 3.0 Unported.
+     */
+    CreativeCommonsAttributionNonCommercialShareAlike30Unported = "CC-BY-NC-SA-3.0",
+    /**
+     * CC-BY-NC-SA-4.0: Creative Commons Attribution Non Commercial Share Alike 4.0 International.
+     */
+    CreativeCommonsAttributionNonCommercialShareAlike40International = "CC-BY-NC-SA-4.0",
+    /**
+     * CC-BY-ND-1.0: Creative Commons Attribution No Derivatives 1.0 Generic.
+     */
+    CreativeCommonsAttributionNoDerivatives10Generic = "CC-BY-ND-1.0",
+    /**
+     * CC-BY-ND-2.0: Creative Commons Attribution No Derivatives 2.0 Generic.
+     */
+    CreativeCommonsAttributionNoDerivatives20Generic = "CC-BY-ND-2.0",
+    /**
+     * CC-BY-ND-2.5: Creative Commons Attribution No Derivatives 2.5 Generic.
+     */
+    CreativeCommonsAttributionNoDerivatives25Generic = "CC-BY-ND-2.5",
+    /**
+     * CC-BY-ND-3.0: Creative Commons Attribution No Derivatives 3.0 Unported.
+     */
+    CreativeCommonsAttributionNoDerivatives30Unported = "CC-BY-ND-3.0",
+    /**
+     * CC-BY-ND-4.0: Creative Commons Attribution No Derivatives 4.0 International.
+     */
+    CreativeCommonsAttributionNoDerivatives40International = "CC-BY-ND-4.0",
+    /**
+     * CC-BY-SA-1.0: Creative Commons Attribution Share Alike 1.0 Generic.
+     */
+    CreativeCommonsAttributionShareAlike10Generic = "CC-BY-SA-1.0",
+    /**
+     * CC-BY-SA-2.0: Creative Commons Attribution Share Alike 2.0 Generic.
+     */
+    CreativeCommonsAttributionShareAlike20Generic = "CC-BY-SA-2.0",
+    /**
+     * CC-BY-SA-2.5: Creative Commons Attribution Share Alike 2.5 Generic.
+     */
+    CreativeCommonsAttributionShareAlike25Generic = "CC-BY-SA-2.5",
+    /**
+     * CC-BY-SA-3.0: Creative Commons Attribution Share Alike 3.0 Unported.
+     */
+    CreativeCommonsAttributionShareAlike30Unported = "CC-BY-SA-3.0",
+    /**
+     * CC-BY-SA-4.0: Creative Commons Attribution Share Alike 4.0 International.
+     */
+    CreativeCommonsAttributionShareAlike40International = "CC-BY-SA-4.0",
+    /**
+     * CC0-1.0: Creative Commons Zero v1.0 Universal.
+     */
+    CreativeCommonsZeroV10Universal = "CC0-1.0",
+    /**
+     * CDDL-1.0: Common Development and Distribution License 1.0.
+     */
+    CommonDevelopmentAndDistributionLicense10 = "CDDL-1.0",
+    /**
+     * CDDL-1.1: Common Development and Distribution License 1.1.
+     */
+    CommonDevelopmentAndDistributionLicense11 = "CDDL-1.1",
+    /**
+     * CDLA-Permissive-1.0: Community Data License Agreement Permissive 1.0.
+     */
+    CommunityDataLicenseAgreementPermissive10 = "CDLA-Permissive-1.0",
+    /**
+     * CDLA-Sharing-1.0: Community Data License Agreement Sharing 1.0.
+     */
+    CommunityDataLicenseAgreementSharing10 = "CDLA-Sharing-1.0",
+    /**
+     * CECILL-1.0: CeCILL Free Software License Agreement v1.0.
+     */
+    CeCILLFreeSoftwareLicenseAgreementV10 = "CECILL-1.0",
+    /**
+     * CECILL-1.1: CeCILL Free Software License Agreement v1.1.
+     */
+    CeCILLFreeSoftwareLicenseAgreementV11 = "CECILL-1.1",
+    /**
+     * CECILL-2.0: CeCILL Free Software License Agreement v2.0.
+     */
+    CeCILLFreeSoftwareLicenseAgreementV20 = "CECILL-2.0",
+    /**
+     * CECILL-2.1: CeCILL Free Software License Agreement v2.1.
+     */
+    CeCILLFreeSoftwareLicenseAgreementV21 = "CECILL-2.1",
+    /**
+     * CECILL-B: CeCILL-B Free Software License Agreement.
+     */
+    CeCILLBFreeSoftwareLicenseAgreement = "CECILL-B",
+    /**
+     * CECILL-C: CeCILL-C Free Software License Agreement.
+     */
+    CeCILLCFreeSoftwareLicenseAgreement = "CECILL-C",
+    /**
+     * ClArtistic: Clarified Artistic License.
+     */
+    ClarifiedArtisticLicense = "ClArtistic",
+    /**
+     * CNRI-Jython: CNRI Jython License.
+     */
+    CNRIJythonLicense = "CNRI-Jython",
+    /**
+     * CNRI-Python: CNRI Python License.
+     */
+    CNRIPythonLicense = "CNRI-Python",
+    /**
+     * CNRI-Python-GPL-Compatible: CNRI Python Open Source GPL Compatible License Agreement.
+     */
+    CNRIPythonOpenSourceGPLCompatibleLicenseAgreement = "CNRI-Python-GPL-Compatible",
+    /**
+     * Condor-1.1: Condor Public License v1.1.
+     */
+    CondorPublicLicenseV11 = "Condor-1.1",
+    /**
+     * CPAL-1.0: Common Public Attribution License 1.0.
+     */
+    CommonPublicAttributionLicense10 = "CPAL-1.0",
+    /**
+     * CPL-1.0: Common Public License 1.0.
+     */
+    CommonPublicLicense10 = "CPL-1.0",
+    /**
+     * CPOL-1.02: Code Project Open License 1.02.
+     */
+    CodeProjectOpenLicense102 = "CPOL-1.02",
+    /**
+     * Crossword: Crossword License.
+     */
+    CrosswordLicense = "Crossword",
+    /**
+     * CrystalStacker: CrystalStacker License.
+     */
+    CrystalStackerLicense = "CrystalStacker",
+    /**
+     * CUA-OPL-1.0: CUA Office Public License v1.0.
+     */
+    CUAOfficePublicLicenseV10 = "CUA-OPL-1.0",
+    /**
+     * Cube: Cube License.
+     */
+    CubeLicense = "Cube",
+    /**
+     * curl: curl License.
+     */
+    CurlLicense = "curl",
+    /**
+     * D-FSL-1.0: Deutsche Freie Software Lizenz.
+     */
+    DeutscheFreieSoftwareLizenz = "D-FSL-1.0",
+    /**
+     * diffmark: diffmark license.
+     */
+    DiffmarkLicense = "diffmark",
+    /**
+     * DOC: DOC License.
+     */
+    DOCLicense = "DOC",
+    /**
+     * Dotseqn: Dotseqn License.
+     */
+    DotseqnLicense = "Dotseqn",
+    /**
+     * DSDP: DSDP License.
+     */
+    DSDPLicense = "DSDP",
+    /**
+     * dvipdfm: dvipdfm License.
+     */
+    DvipdfmLicense = "dvipdfm",
+    /**
+     * ECL-1.0: Educational Community License v1.0.
+     */
+    EducationalCommunityLicenseV10 = "ECL-1.0",
+    /**
+     * ECL-2.0: Educational Community License v2.0.
+     */
+    EducationalCommunityLicenseV20 = "ECL-2.0",
+    /**
+     * EFL-1.0: Eiffel Forum License v1.0.
+     */
+    EiffelForumLicenseV10 = "EFL-1.0",
+    /**
+     * EFL-2.0: Eiffel Forum License v2.0.
+     */
+    EiffelForumLicenseV20 = "EFL-2.0",
+    /**
+     * eGenix: eGenix.com Public License 1.1.0.
+     */
+    EGenixComPublicLicense110 = "eGenix",
+    /**
+     * Entessa: Entessa Public License v1.0.
+     */
+    EntessaPublicLicenseV10 = "Entessa",
+    /**
+     * EPL-1.0: Eclipse Public License 1.0.
+     */
+    EclipsePublicLicense10 = "EPL-1.0",
+    /**
+     * EPL-2.0: Eclipse Public License 2.0.
+     */
+    EclipsePublicLicense20 = "EPL-2.0",
+    /**
+     * ErlPL-1.1: Erlang Public License v1.1.
+     */
+    ErlangPublicLicenseV11 = "ErlPL-1.1",
+    /**
+     * EUDatagrid: EU DataGrid Software License.
+     */
+    EUDataGridSoftwareLicense = "EUDatagrid",
+    /**
+     * EUPL-1.0: European Union Public License 1.0.
+     */
+    EuropeanUnionPublicLicense10 = "EUPL-1.0",
+    /**
+     * EUPL-1.1: European Union Public License 1.1.
+     */
+    EuropeanUnionPublicLicense11 = "EUPL-1.1",
+    /**
+     * EUPL-1.2: European Union Public License 1.2.
+     */
+    EuropeanUnionPublicLicense12 = "EUPL-1.2",
+    /**
+     * Eurosym: Eurosym License.
+     */
+    EurosymLicense = "Eurosym",
+    /**
+     * Fair: Fair License.
+     */
+    FairLicense = "Fair",
+    /**
+     * Frameworx-1.0: Frameworx Open License 1.0.
+     */
+    FrameworxOpenLicense10 = "Frameworx-1.0",
+    /**
+     * FreeImage: FreeImage Public License v1.0.
+     */
+    FreeImagePublicLicenseV10 = "FreeImage",
+    /**
+     * FSFAP: FSF All Permissive License.
+     */
+    FSFAllPermissiveLicense = "FSFAP",
+    /**
+     * FSFUL: FSF Unlimited License.
+     */
+    FSFUnlimitedLicense = "FSFUL",
+    /**
+     * FSFULLR: FSF Unlimited License (with License Retention).
+     */
+    FSFUnlimitedLicenseWithLicenseRetention = "FSFULLR",
+    /**
+     * FTL: Freetype Project License.
+     */
+    FreetypeProjectLicense = "FTL",
+    /**
+     * GFDL-1.1-only: GNU Free Documentation License v1.1 only.
+     */
+    GNUFreeDocumentationLicenseV11Only = "GFDL-1.1-only",
+    /**
+     * GFDL-1.1-or-later: GNU Free Documentation License v1.1 or later.
+     */
+    GNUFreeDocumentationLicenseV11OrLater = "GFDL-1.1-or-later",
+    /**
+     * GFDL-1.2-only: GNU Free Documentation License v1.2 only.
+     */
+    GNUFreeDocumentationLicenseV12Only = "GFDL-1.2-only",
+    /**
+     * GFDL-1.2-or-later: GNU Free Documentation License v1.2 or later.
+     */
+    GNUFreeDocumentationLicenseV12OrLater = "GFDL-1.2-or-later",
+    /**
+     * GFDL-1.3-only: GNU Free Documentation License v1.3 only.
+     */
+    GNUFreeDocumentationLicenseV13Only = "GFDL-1.3-only",
+    /**
+     * GFDL-1.3-or-later: GNU Free Documentation License v1.3 or later.
+     */
+    GNUFreeDocumentationLicenseV13OrLater = "GFDL-1.3-or-later",
+    /**
+     * Giftware: Giftware License.
+     */
+    GiftwareLicense = "Giftware",
+    /**
+     * GL2PS: GL2PS License.
+     */
+    GL2PSLicense = "GL2PS",
+    /**
+     * Glide: 3dfx Glide License.
+     */
+    VAL3dfxGlideLicense = "Glide",
+    /**
+     * Glulxe: Glulxe License.
+     */
+    GlulxeLicense = "Glulxe",
+    /**
+     * gnuplot: gnuplot License.
+     */
+    GnuplotLicense = "gnuplot",
+    /**
+     * GPL-1.0-only: GNU General Public License v1.0 only.
+     */
+    GNUGeneralPublicLicenseV10Only = "GPL-1.0-only",
+    /**
+     * GPL-1.0-or-later: GNU General Public License v1.0 or later.
+     */
+    GNUGeneralPublicLicenseV10OrLater = "GPL-1.0-or-later",
+    /**
+     * GPL-2.0-only: GNU General Public License v2.0 only.
+     */
+    GNUGeneralPublicLicenseV20Only = "GPL-2.0-only",
+    /**
+     * GPL-2.0-or-later: GNU General Public License v2.0 or later.
+     */
+    GNUGeneralPublicLicenseV20OrLater = "GPL-2.0-or-later",
+    /**
+     * GPL-3.0-only: GNU General Public License v3.0 only.
+     */
+    GNUGeneralPublicLicenseV30Only = "GPL-3.0-only",
+    /**
+     * GPL-3.0-or-later: GNU General Public License v3.0 or later.
+     */
+    GNUGeneralPublicLicenseV30OrLater = "GPL-3.0-or-later",
+    /**
+     * gSOAP-1.3b: gSOAP Public License v1.3b.
+     */
+    GSOAPPublicLicenseV13b = "gSOAP-1.3b",
+    /**
+     * HaskellReport: Haskell Language Report License.
+     */
+    HaskellLanguageReportLicense = "HaskellReport",
+    /**
+     * HPND: Historical Permission Notice and Disclaimer.
+     */
+    HistoricalPermissionNoticeAndDisclaimer = "HPND",
+    /**
+     * IBM-pibs: IBM PowerPC Initialization and Boot Software.
+     */
+    IBMPowerPCInitializationAndBootSoftware = "IBM-pibs",
+    /**
+     * ICU: ICU License.
+     */
+    ICULicense = "ICU",
+    /**
+     * IJG: Independent JPEG Group License.
+     */
+    IndependentJPEGGroupLicense = "IJG",
+    /**
+     * ImageMagick: ImageMagick License.
+     */
+    ImageMagickLicense = "ImageMagick",
+    /**
+     * iMatix: iMatix Standard Function Library Agreement.
+     */
+    IMatixStandardFunctionLibraryAgreement = "iMatix",
+    /**
+     * Imlib2: Imlib2 License.
+     */
+    Imlib2License = "Imlib2",
+    /**
+     * Info-ZIP: Info-ZIP License.
+     */
+    InfoZIPLicense = "Info-ZIP",
+    /**
+     * Intel: Intel Open Source License.
+     */
+    IntelOpenSourceLicense = "Intel",
+    /**
+     * Intel-ACPI: Intel ACPI Software License Agreement.
+     */
+    IntelACPISoftwareLicenseAgreement = "Intel-ACPI",
+    /**
+     * Interbase-1.0: Interbase Public License v1.0.
+     */
+    InterbasePublicLicenseV10 = "Interbase-1.0",
+    /**
+     * IPA: IPA Font License.
+     */
+    IPAFontLicense = "IPA",
+    /**
+     * IPL-1.0: IBM Public License v1.0.
+     */
+    IBMPublicLicenseV10 = "IPL-1.0",
+    /**
+     * ISC: ISC License.
+     */
+    ISCLicense = "ISC",
+    /**
+     * JasPer-2.0: JasPer License.
+     */
+    JasPerLicense = "JasPer-2.0",
+    /**
+     * JSON: JSON License.
+     */
+    JSONLicense = "JSON",
+    /**
+     * LAL-1.2: Licence Art Libre 1.2.
+     */
+    LicenceArtLibre12 = "LAL-1.2",
+    /**
+     * LAL-1.3: Licence Art Libre 1.3.
+     */
+    LicenceArtLibre13 = "LAL-1.3",
+    /**
+     * Latex2e: Latex2e License.
+     */
+    Latex2eLicense = "Latex2e",
+    /**
+     * Leptonica: Leptonica License.
+     */
+    LeptonicaLicense = "Leptonica",
+    /**
+     * LGPL-2.0-only: GNU Library General Public License v2 only.
+     */
+    GNULibraryGeneralPublicLicenseV2Only = "LGPL-2.0-only",
+    /**
+     * LGPL-2.0-or-later: GNU Library General Public License v2 or later.
+     */
+    GNULibraryGeneralPublicLicenseV2OrLater = "LGPL-2.0-or-later",
+    /**
+     * LGPL-2.1-only: GNU Lesser General Public License v2.1 only.
+     */
+    GNULesserGeneralPublicLicenseV21Only = "LGPL-2.1-only",
+    /**
+     * LGPL-2.1-or-later: GNU Lesser General Public License v2.1 or later.
+     */
+    GNULesserGeneralPublicLicenseV21OrLater = "LGPL-2.1-or-later",
+    /**
+     * LGPL-3.0-only: GNU Lesser General Public License v3.0 only.
+     */
+    GNULesserGeneralPublicLicenseV30Only = "LGPL-3.0-only",
+    /**
+     * LGPL-3.0-or-later: GNU Lesser General Public License v3.0 or later.
+     */
+    GNULesserGeneralPublicLicenseV30OrLater = "LGPL-3.0-or-later",
+    /**
+     * LGPLLR: Lesser General Public License For Linguistic Resources.
+     */
+    LesserGeneralPublicLicenseForLinguisticResources = "LGPLLR",
+    /**
+     * Libpng: libpng License.
+     */
+    LibpngLicense = "Libpng",
+    /**
+     * libtiff: libtiff License.
+     */
+    LibtiffLicense = "libtiff",
+    /**
+     * LiLiQ-P-1.1: Licence Libre du Québec – Permissive version 1.1.
+     */
+    LicenceLibreDuQuebecPermissiveVersion11 = "LiLiQ-P-1.1",
+    /**
+     * LiLiQ-R-1.1: Licence Libre du Québec – Réciprocité version 1.1.
+     */
+    LicenceLibreDuQuebecReciprociteVersion11 = "LiLiQ-R-1.1",
+    /**
+     * LiLiQ-Rplus-1.1: Licence Libre du Québec – Réciprocité forte version 1.1.
+     */
+    LicenceLibreDuQuebecReciprociteForteVersion11 = "LiLiQ-Rplus-1.1",
+    /**
+     * Linux-OpenIB: Linux Kernel Variant of OpenIB.org license.
+     */
+    LinuxKernelVariantOfOpenIBOrgLicense = "Linux-OpenIB",
+    /**
+     * LPL-1.0: Lucent Public License Version 1.0.
+     */
+    LucentPublicLicenseVersion10 = "LPL-1.0",
+    /**
+     * LPL-1.02: Lucent Public License v1.02.
+     */
+    LucentPublicLicenseV102 = "LPL-1.02",
+    /**
+     * LPPL-1.0: LaTeX Project Public License v1.0.
+     */
+    LaTeXProjectPublicLicenseV10 = "LPPL-1.0",
+    /**
+     * LPPL-1.1: LaTeX Project Public License v1.1.
+     */
+    LaTeXProjectPublicLicenseV11 = "LPPL-1.1",
+    /**
+     * LPPL-1.2: LaTeX Project Public License v1.2.
+     */
+    LaTeXProjectPublicLicenseV12 = "LPPL-1.2",
+    /**
+     * LPPL-1.3a: LaTeX Project Public License v1.3a.
+     */
+    LaTeXProjectPublicLicenseV13a = "LPPL-1.3a",
+    /**
+     * LPPL-1.3c: LaTeX Project Public License v1.3c.
+     */
+    LaTeXProjectPublicLicenseV13c = "LPPL-1.3c",
+    /**
+     * MakeIndex: MakeIndex License.
+     */
+    MakeIndexLicense = "MakeIndex",
+    /**
+     * MirOS: MirOS License.
+     */
+    MirOSLicense = "MirOS",
+    /**
+     * MIT: MIT License.
+     */
+    MITLicense = "MIT",
+    /**
+     * MIT-0: MIT No Attribution.
+     */
+    MITNoAttribution = "MIT-0",
+    /**
+     * MIT-advertising: Enlightenment License (e16).
+     */
+    EnlightenmentLicenseE16 = "MIT-advertising",
+    /**
+     * MIT-CMU: CMU License.
+     */
+    CMULicense = "MIT-CMU",
+    /**
+     * MIT-enna: enna License.
+     */
+    EnnaLicense = "MIT-enna",
+    /**
+     * MIT-feh: feh License.
+     */
+    FehLicense = "MIT-feh",
+    /**
+     * MITNFA: MIT +no-false-attribs license.
+     */
+    MITPlusNoFalseAttribsLicense = "MITNFA",
+    /**
+     * Motosoto: Motosoto License.
+     */
+    MotosotoLicense = "Motosoto",
+    /**
+     * mpich2: mpich2 License.
+     */
+    Mpich2License = "mpich2",
+    /**
+     * MPL-1.0: Mozilla Public License 1.0.
+     */
+    MozillaPublicLicense10 = "MPL-1.0",
+    /**
+     * MPL-1.1: Mozilla Public License 1.1.
+     */
+    MozillaPublicLicense11 = "MPL-1.1",
+    /**
+     * MPL-2.0: Mozilla Public License 2.0.
+     */
+    MozillaPublicLicense20 = "MPL-2.0",
+    /**
+     * MPL-2.0-no-copyleft-exception: Mozilla Public License 2.0 (no copyleft exception).
+     */
+    MozillaPublicLicense20NoCopyleftException = "MPL-2.0-no-copyleft-exception",
+    /**
+     * MS-PL: Microsoft Public License.
+     */
+    MicrosoftPublicLicense = "MS-PL",
+    /**
+     * MS-RL: Microsoft Reciprocal License.
+     */
+    MicrosoftReciprocalLicense = "MS-RL",
+    /**
+     * MTLL: Matrix Template Library License.
+     */
+    MatrixTemplateLibraryLicense = "MTLL",
+    /**
+     * Multics: Multics License.
+     */
+    MulticsLicense = "Multics",
+    /**
+     * Mup: Mup License.
+     */
+    MupLicense = "Mup",
+    /**
+     * NASA-1.3: NASA Open Source Agreement 1.3.
+     */
+    NASAOpenSourceAgreement13 = "NASA-1.3",
+    /**
+     * Naumen: Naumen Public License.
+     */
+    NaumenPublicLicense = "Naumen",
+    /**
+     * NBPL-1.0: Net Boolean Public License v1.
+     */
+    NetBooleanPublicLicenseV1 = "NBPL-1.0",
+    /**
+     * NCSA: University of Illinois/NCSA Open Source License.
+     */
+    UniversityOfIllinoisNCSAOpenSourceLicense = "NCSA",
+    /**
+     * Net-SNMP: Net-SNMP License.
+     */
+    NetSNMPLicense = "Net-SNMP",
+    /**
+     * NetCDF: NetCDF license.
+     */
+    NetCDFLicense = "NetCDF",
+    /**
+     * Newsletr: Newsletr License.
+     */
+    NewsletrLicense = "Newsletr",
+    /**
+     * NGPL: Nethack General Public License.
+     */
+    NethackGeneralPublicLicense = "NGPL",
+    /**
+     * NLOD-1.0: Norwegian Licence for Open Government Data.
+     */
+    NorwegianLicenceForOpenGovernmentData = "NLOD-1.0",
+    /**
+     * NLPL: No Limit Public License.
+     */
+    NoLimitPublicLicense = "NLPL",
+    /**
+     * Nokia: Nokia Open Source License.
+     */
+    NokiaOpenSourceLicense = "Nokia",
+    /**
+     * NOSL: Netizen Open Source License.
+     */
+    NetizenOpenSourceLicense = "NOSL",
+    /**
+     * not-open-source: Not an open source license.
+     */
+    NotOpenSource = "not-open-source",
+    /**
+     * Noweb: Noweb License.
+     */
+    NowebLicense = "Noweb",
+    /**
+     * NPL-1.0: Netscape Public License v1.0.
+     */
+    NetscapePublicLicenseV10 = "NPL-1.0",
+    /**
+     * NPL-1.1: Netscape Public License v1.1.
+     */
+    NetscapePublicLicenseV11 = "NPL-1.1",
+    /**
+     * NPOSL-3.0: Non-Profit Open Software License 3.0.
+     */
+    NonProfitOpenSoftwareLicense30 = "NPOSL-3.0",
+    /**
+     * NRL: NRL License.
+     */
+    NRLLicense = "NRL",
+    /**
+     * NTP: NTP License.
+     */
+    NTPLicense = "NTP",
+    /**
+     * OCCT-PL: Open CASCADE Technology Public License.
+     */
+    OpenCASCADETechnologyPublicLicense = "OCCT-PL",
+    /**
+     * OCLC-2.0: OCLC Research Public License 2.0.
+     */
+    OCLCResearchPublicLicense20 = "OCLC-2.0",
+    /**
+     * ODbL-1.0: ODC Open Database License v1.0.
+     */
+    ODCOpenDatabaseLicenseV10 = "ODbL-1.0",
+    /**
+     * OFL-1.0: SIL Open Font License 1.0.
+     */
+    SILOpenFontLicense10 = "OFL-1.0",
+    /**
+     * OFL-1.1: SIL Open Font License 1.1.
+     */
+    SILOpenFontLicense11 = "OFL-1.1",
+    /**
+     * OGTSL: Open Group Test Suite License.
+     */
+    OpenGroupTestSuiteLicense = "OGTSL",
+    /**
+     * OLDAP-1.1: Open LDAP Public License v1.1.
+     */
+    OpenLDAPPublicLicenseV11 = "OLDAP-1.1",
+    /**
+     * OLDAP-1.2: Open LDAP Public License v1.2.
+     */
+    OpenLDAPPublicLicenseV12 = "OLDAP-1.2",
+    /**
+     * OLDAP-1.3: Open LDAP Public License v1.3.
+     */
+    OpenLDAPPublicLicenseV13 = "OLDAP-1.3",
+    /**
+     * OLDAP-1.4: Open LDAP Public License v1.4.
+     */
+    OpenLDAPPublicLicenseV14 = "OLDAP-1.4",
+    /**
+     * OLDAP-2.0: Open LDAP Public License v2.0 (or possibly 2.0A and 2.0B).
+     */
+    OpenLDAPPublicLicenseV20OrPossibly20AAnd20B = "OLDAP-2.0",
+    /**
+     * OLDAP-2.0.1: Open LDAP Public License v2.0.1.
+     */
+    OpenLDAPPublicLicenseV201 = "OLDAP-2.0.1",
+    /**
+     * OLDAP-2.1: Open LDAP Public License v2.1.
+     */
+    OpenLDAPPublicLicenseV21 = "OLDAP-2.1",
+    /**
+     * OLDAP-2.2: Open LDAP Public License v2.2.
+     */
+    OpenLDAPPublicLicenseV22 = "OLDAP-2.2",
+    /**
+     * OLDAP-2.2.1: Open LDAP Public License v2.2.1.
+     */
+    OpenLDAPPublicLicenseV221 = "OLDAP-2.2.1",
+    /**
+     * OLDAP-2.2.2: Open LDAP Public License 2.2.2.
+     */
+    OpenLDAPPublicLicense222 = "OLDAP-2.2.2",
+    /**
+     * OLDAP-2.3: Open LDAP Public License v2.3.
+     */
+    OpenLDAPPublicLicenseV23 = "OLDAP-2.3",
+    /**
+     * OLDAP-2.4: Open LDAP Public License v2.4.
+     */
+    OpenLDAPPublicLicenseV24 = "OLDAP-2.4",
+    /**
+     * OLDAP-2.5: Open LDAP Public License v2.5.
+     */
+    OpenLDAPPublicLicenseV25 = "OLDAP-2.5",
+    /**
+     * OLDAP-2.6: Open LDAP Public License v2.6.
+     */
+    OpenLDAPPublicLicenseV26 = "OLDAP-2.6",
+    /**
+     * OLDAP-2.7: Open LDAP Public License v2.7.
+     */
+    OpenLDAPPublicLicenseV27 = "OLDAP-2.7",
+    /**
+     * OLDAP-2.8: Open LDAP Public License v2.8.
+     */
+    OpenLDAPPublicLicenseV28 = "OLDAP-2.8",
+    /**
+     * OML: Open Market License.
+     */
+    OpenMarketLicense = "OML",
+    /**
+     * OpenSSL: OpenSSL License.
+     */
+    OpenSSLLicense = "OpenSSL",
+    /**
+     * OPL-1.0: Open Public License v1.0.
+     */
+    OpenPublicLicenseV10 = "OPL-1.0",
+    /**
+     * OSET-PL-2.1: OSET Public License version 2.1.
+     */
+    OSETPublicLicenseVersion21 = "OSET-PL-2.1",
+    /**
+     * OSL-1.0: Open Software License 1.0.
+     */
+    OpenSoftwareLicense10 = "OSL-1.0",
+    /**
+     * OSL-1.1: Open Software License 1.1.
+     */
+    OpenSoftwareLicense11 = "OSL-1.1",
+    /**
+     * OSL-2.0: Open Software License 2.0.
+     */
+    OpenSoftwareLicense20 = "OSL-2.0",
+    /**
+     * OSL-2.1: Open Software License 2.1.
+     */
+    OpenSoftwareLicense21 = "OSL-2.1",
+    /**
+     * OSL-3.0: Open Software License 3.0.
+     */
+    OpenSoftwareLicense30 = "OSL-3.0",
+    /**
+     * PDDL-1.0: ODC Public Domain Dedication &amp; License 1.0.
+     */
+    ODCPublicDomainDedicationAndLicense10 = "PDDL-1.0",
+    /**
+     * PHP-3.0: PHP License v3.0.
+     */
+    PHPLicenseV30 = "PHP-3.0",
+    /**
+     * PHP-3.01: PHP License v3.01.
+     */
+    PHPLicenseV301 = "PHP-3.01",
+    /**
+     * Plexus: Plexus Classworlds License.
+     */
+    PlexusClassworldsLicense = "Plexus",
+    /**
+     * PostgreSQL: PostgreSQL License.
+     */
+    PostgreSQLLicense = "PostgreSQL",
+    /**
+     * psfrag: psfrag License.
+     */
+    PsfragLicense = "psfrag",
+    /**
+     * psutils: psutils License.
+     */
+    PsutilsLicense = "psutils",
+    /**
+     * Python-2.0: Python License 2.0.
+     */
+    PythonLicense20 = "Python-2.0",
+    /**
+     * Qhull: Qhull License.
+     */
+    QhullLicense = "Qhull",
+    /**
+     * QPL-1.0: Q Public License 1.0.
+     */
+    QPublicLicense10 = "QPL-1.0",
+    /**
+     * Rdisc: Rdisc License.
+     */
+    RdiscLicense = "Rdisc",
+    /**
+     * RHeCos-1.1: Red Hat eCos Public License v1.1.
+     */
+    RedHatECosPublicLicenseV11 = "RHeCos-1.1",
+    /**
+     * RPL-1.1: Reciprocal Public License 1.1.
+     */
+    ReciprocalPublicLicense11 = "RPL-1.1",
+    /**
+     * RPL-1.5: Reciprocal Public License 1.5.
+     */
+    ReciprocalPublicLicense15 = "RPL-1.5",
+    /**
+     * RPSL-1.0: RealNetworks Public Source License v1.0.
+     */
+    RealNetworksPublicSourceLicenseV10 = "RPSL-1.0",
+    /**
+     * RSA-MD: RSA Message-Digest License.
+     */
+    RSAMessageDigestLicense = "RSA-MD",
+    /**
+     * RSCPL: Ricoh Source Code Public License.
+     */
+    RicohSourceCodePublicLicense = "RSCPL",
+    /**
+     * Ruby: Ruby License.
+     */
+    RubyLicense = "Ruby",
+    /**
+     * SAX-PD: Sax Public Domain Notice.
+     */
+    SaxPublicDomainNotice = "SAX-PD",
+    /**
+     * Saxpath: Saxpath License.
+     */
+    SaxpathLicense = "Saxpath",
+    /**
+     * SCEA: SCEA Shared Source License.
+     */
+    SCEASharedSourceLicense = "SCEA",
+    /**
+     * Sendmail: Sendmail License.
+     */
+    SendmailLicense = "Sendmail",
+    /**
+     * SGI-B-1.0: SGI Free Software License B v1.0.
+     */
+    SGIFreeSoftwareLicenseBV10 = "SGI-B-1.0",
+    /**
+     * SGI-B-1.1: SGI Free Software License B v1.1.
+     */
+    SGIFreeSoftwareLicenseBV11 = "SGI-B-1.1",
+    /**
+     * SGI-B-2.0: SGI Free Software License B v2.0.
+     */
+    SGIFreeSoftwareLicenseBV20 = "SGI-B-2.0",
+    /**
+     * SimPL-2.0: Simple Public License 2.0.
+     */
+    SimplePublicLicense20 = "SimPL-2.0",
+    /**
+     * SISSL: Sun Industry Standards Source License v1.1.
+     */
+    SunIndustryStandardsSourceLicenseV11 = "SISSL",
+    /**
+     * SISSL-1.2: Sun Industry Standards Source License v1.2.
+     */
+    SunIndustryStandardsSourceLicenseV12 = "SISSL-1.2",
+    /**
+     * Sleepycat: Sleepycat License.
+     */
+    SleepycatLicense = "Sleepycat",
+    /**
+     * SMLNJ: Standard ML of New Jersey License.
+     */
+    StandardMLOfNewJerseyLicense = "SMLNJ",
+    /**
+     * SMPPL: Secure Messaging Protocol Public License.
+     */
+    SecureMessagingProtocolPublicLicense = "SMPPL",
+    /**
+     * SNIA: SNIA Public License 1.1.
+     */
+    SNIAPublicLicense11 = "SNIA",
+    /**
+     * Spencer-86: Spencer License 86.
+     */
+    SpencerLicense86 = "Spencer-86",
+    /**
+     * Spencer-94: Spencer License 94.
+     */
+    SpencerLicense94 = "Spencer-94",
+    /**
+     * Spencer-99: Spencer License 99.
+     */
+    SpencerLicense99 = "Spencer-99",
+    /**
+     * SPL-1.0: Sun Public License v1.0.
+     */
+    SunPublicLicenseV10 = "SPL-1.0",
+    /**
+     * SugarCRM-1.1.3: SugarCRM Public License v1.1.3.
+     */
+    SugarCRMPublicLicenseV113 = "SugarCRM-1.1.3",
+    /**
+     * SWL: Scheme Widget Library (SWL) Software License Agreement.
+     */
+    SchemeWidgetLibrarySWLSoftwareLicenseAgreement = "SWL",
+    /**
+     * TCL: TCL/TK License.
+     */
+    TCLTKLicense = "TCL",
+    /**
+     * TCP-wrappers: TCP Wrappers License.
+     */
+    TCPWrappersLicense = "TCP-wrappers",
+    /**
+     * TMate: TMate Open Source License.
+     */
+    TMateOpenSourceLicense = "TMate",
+    /**
+     * TORQUE-1.1: TORQUE v2.5+ Software License v1.1.
+     */
+    TORQUEV25PlusSoftwareLicenseV11 = "TORQUE-1.1",
+    /**
+     * TOSL: Trusster Open Source License.
+     */
+    TrussterOpenSourceLicense = "TOSL",
+    /**
+     * Unicode-DFS-2015: Unicode License Agreement - Data Files and Software (2015).
+     */
+    UnicodeLicenseAgreementDataFilesAndSoftware2015 = "Unicode-DFS-2015",
+    /**
+     * Unicode-DFS-2016: Unicode License Agreement - Data Files and Software (2016).
+     */
+    UnicodeLicenseAgreementDataFilesAndSoftware2016 = "Unicode-DFS-2016",
+    /**
+     * Unicode-TOU: Unicode Terms of Use.
+     */
+    UnicodeTermsOfUse = "Unicode-TOU",
+    /**
+     * Unlicense: The Unlicense.
+     */
+    TheUnlicense = "Unlicense",
+    /**
+     * UPL-1.0: Universal Permissive License v1.0.
+     */
+    UniversalPermissiveLicenseV10 = "UPL-1.0",
+    /**
+     * Vim: Vim License.
+     */
+    VimLicense = "Vim",
+    /**
+     * VOSTROM: VOSTROM Public License for Open Source.
+     */
+    VOSTROMPublicLicenseForOpenSource = "VOSTROM",
+    /**
+     * VSL-1.0: Vovida Software License v1.0.
+     */
+    VovidaSoftwareLicenseV10 = "VSL-1.0",
+    /**
+     * W3C: W3C Software Notice and License (2002-12-31).
+     */
+    W3CSoftwareNoticeAndLicense20021231 = "W3C",
+    /**
+     * W3C-19980720: W3C Software Notice and License (1998-07-20).
+     */
+    W3CSoftwareNoticeAndLicense19980720 = "W3C-19980720",
+    /**
+     * W3C-20150513: W3C Software Notice and Document License (2015-05-13).
+     */
+    W3CSoftwareNoticeAndDocumentLicense20150513 = "W3C-20150513",
+    /**
+     * Watcom-1.0: Sybase Open Watcom Public License 1.0.
+     */
+    SybaseOpenWatcomPublicLicense10 = "Watcom-1.0",
+    /**
+     * Wsuipa: Wsuipa License.
+     */
+    WsuipaLicense = "Wsuipa",
+    /**
+     * WTFPL: Do What The F*ck You Want To Public License.
+     */
+    DoWhatTheFAsteriskCkYouWantToPublicLicense = "WTFPL",
+    /**
+     * X11: X11 License.
+     */
+    X11License = "X11",
+    /**
+     * Xerox: Xerox License.
+     */
+    XeroxLicense = "Xerox",
+    /**
+     * XFree86-1.1: XFree86 License 1.1.
+     */
+    XFree86License11 = "XFree86-1.1",
+    /**
+     * xinetd: xinetd License.
+     */
+    XinetdLicense = "xinetd",
+    /**
+     * Xnet: X.Net License.
+     */
+    XNetLicense = "Xnet",
+    /**
+     * xpp: XPP License.
+     */
+    XPPLicense = "xpp",
+    /**
+     * XSkat: XSkat License.
+     */
+    XSkatLicense = "XSkat",
+    /**
+     * YPL-1.0: Yahoo! Public License v1.0.
+     */
+    YahooNotPublicLicenseV10 = "YPL-1.0",
+    /**
+     * YPL-1.1: Yahoo! Public License v1.1.
+     */
+    YahooNotPublicLicenseV11 = "YPL-1.1",
+    /**
+     * Zed: Zed License.
+     */
+    ZedLicense = "Zed",
+    /**
+     * Zend-2.0: Zend License v2.0.
+     */
+    ZendLicenseV20 = "Zend-2.0",
+    /**
+     * Zimbra-1.3: Zimbra Public License v1.3.
+     */
+    ZimbraPublicLicenseV13 = "Zimbra-1.3",
+    /**
+     * Zimbra-1.4: Zimbra Public License v1.4.
+     */
+    ZimbraPublicLicenseV14 = "Zimbra-1.4",
+    /**
+     * Zlib: zlib License.
+     */
+    ZlibLicense = "Zlib",
+    /**
+     * zlib-acknowledgement: zlib/libpng License with Acknowledgement.
+     */
+    ZlibLibpngLicenseWithAcknowledgement = "zlib-acknowledgement",
+    /**
+     * ZPL-1.1: Zope Public License 1.1.
+     */
+    ZopePublicLicense11 = "ZPL-1.1",
+    /**
+     * ZPL-2.0: Zope Public License 2.0.
+     */
+    ZopePublicLicense20 = "ZPL-2.0",
+    /**
+     * ZPL-2.1: Zope Public License 2.1.
+     */
+    ZopePublicLicense21 = "ZPL-2.1"
+}
 //# sourceMappingURL=SpdxLicenseValueSet.d.ts.map

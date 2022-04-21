@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The free/busy status of the slot.
  */
 export declare const SlotstatusValueSet: {
     /**
-     * Indicates that the time interval is busy because one  or more events have been scheduled for that interval.
+     * busy: Indicates that the time interval is busy because one  or more events have been scheduled for that interval.
      */
-    slotstatus_Busy: Coding;
+    readonly Busy: Coding;
     /**
-     * Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval.
+     * busy-tentative: Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval.
      */
-    slotstatus_BusyTentative: Coding;
+    readonly BusyTentative: Coding;
     /**
-     * Indicates that the time interval is busy and that the interval cannot be scheduled.
+     * busy-unavailable: Indicates that the time interval is busy and that the interval cannot be scheduled.
      */
-    slotstatus_BusyUnavailable: Coding;
+    readonly BusyUnavailable: Coding;
     /**
-     * This instance should not have been part of this patient's medical record.
+     * entered-in-error: This instance should not have been part of this patient's medical record.
      */
-    slotstatus_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * Indicates that the time interval is free for scheduling.
+     * free: Indicates that the time interval is free for scheduling.
      */
-    slotstatus_Free: Coding;
+    readonly Free: Coding;
 };
+/**
+ * The free/busy status of the slot.
+ */
+export declare type SlotstatusValueSetType = typeof SlotstatusValueSet;
+/**
+ * The free/busy status of the slot.
+ */
+export declare enum SlotstatusValueSetEnum {
+    /**
+     * busy: Indicates that the time interval is busy because one  or more events have been scheduled for that interval.
+     */
+    Busy = "busy",
+    /**
+     * busy-tentative: Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval.
+     */
+    BusyTentative = "busy-tentative",
+    /**
+     * busy-unavailable: Indicates that the time interval is busy and that the interval cannot be scheduled.
+     */
+    BusyUnavailable = "busy-unavailable",
+    /**
+     * entered-in-error: This instance should not have been part of this patient's medical record.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * free: Indicates that the time interval is free for scheduling.
+     */
+    Free = "free"
+}
 //# sourceMappingURL=SlotstatusValueSet.d.ts.map

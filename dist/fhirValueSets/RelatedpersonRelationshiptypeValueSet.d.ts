@@ -1,457 +1,978 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A set of codes that can be used to indicate the relationship between a Patient and a Related Person.
  */
 export declare const RelatedpersonRelationshiptypeValueSet: {
     /**
-     * PersonalRelationshipRoleType
+     * _PersonalRelationshipRoleType: PersonalRelationshipRoleType
      */
-    v3_RoleCode_PersonalRelationshipRoleType: Coding;
+    readonly PersonalRelationshipRoleType: Coding;
     /**
-     * The player of the role (father) is a male who has taken the scoper (child) into their family through legal means and raises them as his own child.
+     * ADOPTF: The player of the role (father) is a male who has taken the scoper (child) into their family through legal means and raises them as his own child.
      */
-    v3_RoleCode_AdoptiveFather: Coding;
+    readonly AdoptiveFather: Coding;
     /**
-     * The player of the role (father) is a female who has taken the scoper (child) into their family through legal means and raises them as her own child.
+     * ADOPTM: The player of the role (father) is a female who has taken the scoper (child) into their family through legal means and raises them as her own child.
      */
-    v3_RoleCode_AdoptiveMother: Coding;
+    readonly AdoptiveMother: Coding;
     /**
-     * The player of the role (parent) has taken the scoper (child) into their family through legal means and raises them as his or her own child.
+     * ADOPTP: The player of the role (parent) has taken the scoper (child) into their family through legal means and raises them as his or her own child.
      */
-    v3_RoleCode_AdoptiveParent: Coding;
+    readonly AdoptiveParent: Coding;
     /**
-     * The player of the role is a sister of the scoping person's mother or father.
+     * AUNT: The player of the role is a sister of the scoping person's mother or father.
      */
-    v3_RoleCode_Aunt: Coding;
+    readonly Aunt: Coding;
     /**
-     * The player of the role is a male sharing one or both parents in common with the scoping entity.
+     * BRO: The player of the role is a male sharing one or both parents in common with the scoping entity.
      */
-    v3_RoleCode_Brother: Coding;
+    readonly Brother: Coding;
     /**
-     * The player of the role is: (1) a brother of the scoping person's spouse, or (2) the husband of the scoping person's sister, or (3) the husband of a sister of the scoping person's spouse.
+     * BROINLAW: The player of the role is: (1) a brother of the scoping person's spouse, or (2) the husband of the scoping person's sister, or (3) the husband of a sister of the scoping person's spouse.
      */
-    v3_RoleCode_BrotherInLaw: Coding;
+    readonly BrotherInLaw: Coding;
     /**
-     * The player of the role is a child of the scoping entity.
+     * Code: C
      */
-    v3_RoleCode_Child: Coding;
+    readonly EmergencyContact: Coding;
     /**
-     * The player of the role is a child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
+     * CHILD: The player of the role is a child of the scoping entity.
      */
-    v3_RoleCode_AdoptedChild: Coding;
+    readonly Child: Coding;
     /**
-     * The player of the role is a child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
+     * CHLDADOPT: The player of the role is a child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
      */
-    v3_RoleCode_FosterChild: Coding;
+    readonly AdoptedChild: Coding;
     /**
-     * The player of the role is the spouse of scoping person's child.
+     * CHLDFOST: The player of the role is a child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
      */
-    v3_RoleCode_ChildInLaw: Coding;
+    readonly FosterChild: Coding;
     /**
-     * The player of the role is a relative of the scoping person descended from a common ancestor, such as a 	grandparent, by two or more steps in a diverging line.
+     * CHLDINLAW: The player of the role is the spouse of scoping person's child.
      */
-    v3_RoleCode_Cousin: Coding;
+    readonly ChildInLaw: Coding;
     /**
-     * The player of the role is a female offspring of the scoping entity (parent).
+     * COUSN: The player of the role is a relative of the scoping person descended from a common ancestor, such as a 	grandparent, by two or more steps in a diverging line.
      */
-    v3_RoleCode_NaturalDaughter: Coding;
+    readonly Cousin: Coding;
     /**
-     * The player of the role is a female child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
+     * DAU: The player of the role is a female offspring of the scoping entity (parent).
      */
-    v3_RoleCode_AdoptedDaughter: Coding;
+    readonly NaturalDaughter: Coding;
     /**
-     * Description: The player of the role is a female child (of any type) of scoping entity (parent)
+     * DAUADOPT: The player of the role is a female child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
      */
-    v3_RoleCode_Daughter: Coding;
+    readonly AdoptedDaughter: Coding;
     /**
-     * The player of the role is a female child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
+     * DAUC: Description: The player of the role is a female child (of any type) of scoping entity (parent)
      */
-    v3_RoleCode_FosterDaughter: Coding;
+    readonly Daughter: Coding;
     /**
-     * The player of the role is the wife of scoping person's son.
+     * DAUFOST: The player of the role is a female child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
      */
-    v3_RoleCode_DaughterInLaw: Coding;
+    readonly FosterDaughter: Coding;
     /**
-     * The player of the role cohabits with the scoping person but is not the scoping person's spouse.
+     * DAUINLAW: The player of the role is the wife of scoping person's son.
      */
-    v3_RoleCode_DomesticPartner: Coding;
+    readonly DaughterInLaw: Coding;
     /**
-     * Description: A family member not having an immediate genetic or legal relationship e.g. Aunt, cousin, great grandparent, grandchild, grandparent, niece, nephew or uncle.
+     * DOMPART: The player of the role cohabits with the scoping person but is not the scoping person's spouse.
      */
-    v3_RoleCode_ExtendedFamilyMember: Coding;
+    readonly DomesticPartner: Coding;
     /**
-     * A relationship between two people characterizing their "familial" relationship
+     * Code: E
      */
-    v3_RoleCode_FamilyMember: Coding;
+    readonly Employer: Coding;
     /**
-     * Player of the role was previously joined to the scoping person in marriage and this marriage is now dissolved and inactive.
+     * EXT: Description: A family member not having an immediate genetic or legal relationship e.g. Aunt, cousin, great grandparent, grandchild, grandparent, niece, nephew or uncle.
+     */
+    readonly ExtendedFamilyMember: Coding;
+    /**
+     * Code: F
+     */
+    readonly FederalAgency: Coding;
+    /**
+     * FAMMEMB: A relationship between two people characterizing their "familial" relationship
+     */
+    readonly FamilyMember: Coding;
+    /**
+     * FMRSPS: Player of the role was previously joined to the scoping person in marriage and this marriage is now dissolved and inactive.
      *
      *
      *                            Usage Note: This is significant to indicate as some jurisdictions have different legal requirements for former spouse to access the patient's record, from a general friend.
      */
-    v3_RoleCode_FormerSpouse: Coding;
+    readonly FormerSpouse: Coding;
     /**
-     * The player of the role is a person who is known, liked, and trusted by the scoping person.
+     * FRND: The player of the role is a person who is known, liked, and trusted by the scoping person.
      */
-    v3_RoleCode_UnrelatedFriend: Coding;
+    readonly UnrelatedFriend: Coding;
     /**
-     * The player of the role is a male who begets or raises or nurtures the scoping entity (child).
+     * FTH: The player of the role is a male who begets or raises or nurtures the scoping entity (child).
      */
-    v3_RoleCode_Father: Coding;
+    readonly Father: Coding;
     /**
-     * The player of the role (parent) who is a male state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary.
+     * FTHFOST: The player of the role (parent) who is a male state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary.
      *
      *                         The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.
      */
-    v3_RoleCode_FosterFather: Coding;
+    readonly FosterFather: Coding;
     /**
-     * The player of the role is the father of the scoping person's husband or wife.
+     * FTHINLAW: The player of the role is the father of the scoping person's husband or wife.
      */
-    v3_RoleCode_FatherInLaw: Coding;
+    readonly FatherInLaw: Coding;
     /**
-     * The scoper and player were carried in the same womb and share common biological parents but are the product of distinct egg/sperm pairs.
+     * FTWIN: The scoper and player were carried in the same womb and share common biological parents but are the product of distinct egg/sperm pairs.
      */
-    v3_RoleCode_FraternalTwin: Coding;
+    readonly FraternalTwin: Coding;
     /**
-     * The scoper was carried in the same womb as the male player and shares common biological parents but is the product of a distinct egg/sperm pair.
+     * FTWINBRO: The scoper was carried in the same womb as the male player and shares common biological parents but is the product of a distinct egg/sperm pair.
      */
-    v3_RoleCode_FraternalTwinBrother: Coding;
+    readonly FraternalTwinBrother: Coding;
     /**
-     * The scoper was carried in the same womb as the female player and shares common biological parents but is the product of a distinct egg/sperm pair.
+     * FTWINSIS: The scoper was carried in the same womb as the female player and shares common biological parents but is the product of a distinct egg/sperm pair.
      */
-    v3_RoleCode_FraternalTwinSister: Coding;
+    readonly FraternalTwinSister: Coding;
     /**
-     * The player is a female whose womb carries the fetus of the scoper.  Generally used when the gestational mother and natural mother are not the same.
+     * GESTM: The player is a female whose womb carries the fetus of the scoper.  Generally used when the gestational mother and natural mother are not the same.
      */
-    v3_RoleCode_GestationalMother: Coding;
+    readonly GestationalMother: Coding;
     /**
-     * The player of the role is the father of the scoping person's grandparent.
+     * GGRFTH: The player of the role is the father of the scoping person's grandparent.
      */
-    v3_RoleCode_GreatGrandfather: Coding;
+    readonly GreatGrandfather: Coding;
     /**
-     * The player of the role is the mother of the scoping person's grandparent.
+     * GGRMTH: The player of the role is the mother of the scoping person's grandparent.
      */
-    v3_RoleCode_GreatGrandmother: Coding;
+    readonly GreatGrandmother: Coding;
     /**
-     * The player of the role is a parent of the scoping person's grandparent.
+     * GGRPRN: The player of the role is a parent of the scoping person's grandparent.
      */
-    v3_RoleCode_GreatGrandparent: Coding;
+    readonly GreatGrandparent: Coding;
     /**
-     * The player of the role is the father of the scoping person's mother or father.
+     * GRFTH: The player of the role is the father of the scoping person's mother or father.
      */
-    v3_RoleCode_Grandfather: Coding;
+    readonly Grandfather: Coding;
     /**
-     * The player of the role is the mother of the scoping person's mother or father.
+     * GRMTH: The player of the role is the mother of the scoping person's mother or father.
      */
-    v3_RoleCode_Grandmother: Coding;
+    readonly Grandmother: Coding;
     /**
-     * The player of the role is a child of the scoping person's son or daughter.
+     * GRNDCHILD: The player of the role is a child of the scoping person's son or daughter.
      */
-    v3_RoleCode_Grandchild: Coding;
+    readonly Grandchild: Coding;
     /**
-     * The player of the role is a daughter of the scoping person's son or daughter.
+     * GRNDDAU: The player of the role is a daughter of the scoping person's son or daughter.
      */
-    v3_RoleCode_Granddaughter: Coding;
+    readonly Granddaughter: Coding;
     /**
-     * The player of the role is a son of the scoping person's son or daughter.
+     * GRNDSON: The player of the role is a son of the scoping person's son or daughter.
      */
-    v3_RoleCode_Grandson: Coding;
+    readonly Grandson: Coding;
     /**
-     * The player of the role is a parent of the scoping person's mother or father.
+     * GRPRN: The player of the role is a parent of the scoping person's mother or father.
      */
-    v3_RoleCode_Grandparent: Coding;
+    readonly Grandparent: Coding;
     /**
-     * The player of the role is a male related to the scoping entity by sharing only one biological parent.
+     * HBRO: The player of the role is a male related to the scoping entity by sharing only one biological parent.
      */
-    v3_RoleCode_HalfBrother: Coding;
+    readonly HalfBrother: Coding;
     /**
-     * The player of the role is related to the scoping entity by sharing only one biological parent.
+     * HSIB: The player of the role is related to the scoping entity by sharing only one biological parent.
      */
-    v3_RoleCode_HalfSibling: Coding;
+    readonly HalfSibling: Coding;
     /**
-     * The player of the role is a female related to the scoping entity by sharing only one biological parent.
+     * HSIS: The player of the role is a female related to the scoping entity by sharing only one biological parent.
      */
-    v3_RoleCode_HalfSister: Coding;
+    readonly HalfSister: Coding;
     /**
-     * The player of the role is a man joined to a woman (scoping person) in marriage.
+     * HUSB: The player of the role is a man joined to a woman (scoping person) in marriage.
      */
-    v3_RoleCode_Husband: Coding;
+    readonly Husband: Coding;
     /**
-     * A relationship between an individual and a member of their spousal partner's immediate family.
+     * Code: I
      */
-    v3_RoleCode_Inlaw: Coding;
+    readonly InsuranceCompany: Coding;
     /**
-     * The scoper and player are offspring of the same egg-sperm pair.
+     * INLAW: A relationship between an individual and a member of their spousal partner's immediate family.
      */
-    v3_RoleCode_IdenticalTwin: Coding;
+    readonly Inlaw: Coding;
     /**
-     * The male scoper is an offspring of the same egg-sperm pair as the male player.
+     * ITWIN: The scoper and player are offspring of the same egg-sperm pair.
      */
-    v3_RoleCode_IdenticalTwinBrother: Coding;
+    readonly IdenticalTwin: Coding;
     /**
-     * The female scoper is an offspring of the same egg-sperm pair as the female player.
+     * ITWINBRO: The male scoper is an offspring of the same egg-sperm pair as the male player.
      */
-    v3_RoleCode_IdenticalTwinSister: Coding;
+    readonly IdenticalTwinBrother: Coding;
     /**
-     * Description:The player of the role is a biological sister of the scoping person's biological mother.
+     * ITWINSIS: The female scoper is an offspring of the same egg-sperm pair as the female player.
      */
-    v3_RoleCode_MaternalAunt: Coding;
+    readonly IdenticalTwinSister: Coding;
     /**
-     * Description:The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's mother's side, such as a grandparent, by two or more steps in a diverging line.
+     * MAUNT: Description:The player of the role is a biological sister of the scoping person's biological mother.
      */
-    v3_RoleCode_MaternalCousin: Coding;
+    readonly MaternalAunt: Coding;
     /**
-     * Description:The player of the role is the biological father of the scoping person's biological mother's parent.
+     * MCOUSN: Description:The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's mother's side, such as a grandparent, by two or more steps in a diverging line.
      */
-    v3_RoleCode_MaternalGreatGrandfather: Coding;
+    readonly MaternalCousin: Coding;
     /**
-     * Description:The player of the role is the biological mother of the scoping person's biological mother's parent.
+     * MGGRFTH: Description:The player of the role is the biological father of the scoping person's biological mother's parent.
      */
-    v3_RoleCode_MaternalGreatGrandmother: Coding;
+    readonly MaternalGreatGrandfather: Coding;
     /**
-     * Description:The player of the role is a biological parent of the scoping person's biological mother's parent.
+     * MGGRMTH: Description:The player of the role is the biological mother of the scoping person's biological mother's parent.
      */
-    v3_RoleCode_MaternalGreatGrandparent: Coding;
+    readonly MaternalGreatGrandmother: Coding;
     /**
-     * Description:The player of the role is the biological father of the scoping person's biological mother.
+     * MGGRPRN: Description:The player of the role is a biological parent of the scoping person's biological mother's parent.
      */
-    v3_RoleCode_MaternalGrandfather: Coding;
+    readonly MaternalGreatGrandparent: Coding;
     /**
-     * Description:The player of the role is the biological mother of the scoping person's biological mother.
+     * MGRFTH: Description:The player of the role is the biological father of the scoping person's biological mother.
      */
-    v3_RoleCode_MaternalGrandmother: Coding;
+    readonly MaternalGrandfather: Coding;
     /**
-     * Description:The player of the role is the biological parent of the scoping person's biological mother.
+     * MGRMTH: Description:The player of the role is the biological mother of the scoping person's biological mother.
      */
-    v3_RoleCode_MaternalGrandparent: Coding;
+    readonly MaternalGrandmother: Coding;
     /**
-     * The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).
+     * MGRPRN: Description:The player of the role is the biological parent of the scoping person's biological mother.
      */
-    v3_RoleCode_Mother: Coding;
+    readonly MaternalGrandparent: Coding;
     /**
-     * The player of the role (parent) who is a female state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary.
+     * MTH: The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).
+     */
+    readonly Mother: Coding;
+    /**
+     * MTHFOST: The player of the role (parent) who is a female state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary.
      *
      *                         The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.
      */
-    v3_RoleCode_FosterMother: Coding;
+    readonly FosterMother: Coding;
     /**
-     * The player of the role is the mother of the scoping person's husband or wife.
+     * MTHINLAW: The player of the role is the mother of the scoping person's husband or wife.
      */
-    v3_RoleCode_MotherInLaw: Coding;
+    readonly MotherInLaw: Coding;
     /**
-     * Description:The player of the role is a biological brother of the scoping person's biological mother.
+     * MUNCLE: Description:The player of the role is a biological brother of the scoping person's biological mother.
      */
-    v3_RoleCode_MaternalUncle: Coding;
+    readonly MaternalUncle: Coding;
     /**
-     * The player of the role lives near or next to the 	scoping person.
+     * Code: N
      */
-    v3_RoleCode_Neighbor: Coding;
+    readonly NextOfKin: Coding;
     /**
-     * The player of the role is a male having the same biological parents as the scoping entity.
+     * NBOR: The player of the role lives near or next to the 	scoping person.
      */
-    v3_RoleCode_NaturalBrother: Coding;
+    readonly Neighbor: Coding;
     /**
-     * The player of the role is an offspring of the scoping entity as determined by birth.
+     * NBRO: The player of the role is a male having the same biological parents as the scoping entity.
      */
-    v3_RoleCode_NaturalChild: Coding;
+    readonly NaturalBrother: Coding;
     /**
-     * The player of the role is a son of the scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
+     * NCHILD: The player of the role is an offspring of the scoping entity as determined by birth.
      */
-    v3_RoleCode_Nephew: Coding;
+    readonly NaturalChild: Coding;
     /**
-     * The player of the role is a male who begets the scoping entity (child).
+     * NEPHEW: The player of the role is a son of the scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
      */
-    v3_RoleCode_NaturalFather: Coding;
+    readonly Nephew: Coding;
     /**
-     * Indicates the biologic male parent of a fetus.
+     * NFTH: The player of the role is a male who begets the scoping entity (child).
      */
-    v3_RoleCode_NaturalFatherOfFetus: Coding;
+    readonly NaturalFather: Coding;
     /**
-     * The player of the role is a daughter of the scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
+     * NFTHF: Indicates the biologic male parent of a fetus.
      */
-    v3_RoleCode_Niece: Coding;
+    readonly NaturalFatherOfFetus: Coding;
     /**
-     * The player of the role is a child of scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
+     * NIECE: The player of the role is a daughter of the scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
      */
-    v3_RoleCode_NieceNephew: Coding;
+    readonly Niece: Coding;
     /**
-     * The player of the role is a female who conceives or gives birth to the scoping entity (child).
+     * NIENEPH: The player of the role is a child of scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
      */
-    v3_RoleCode_NaturalMother: Coding;
+    readonly NieceNephew: Coding;
     /**
-     * The player is the biologic female parent of the scoping fetus.
+     * NMTH: The player of the role is a female who conceives or gives birth to the scoping entity (child).
      */
-    v3_RoleCode_NaturalMotherOfFetus: Coding;
+    readonly NaturalMother: Coding;
     /**
-     * natural parent
+     * NMTHF: The player is the biologic female parent of the scoping fetus.
      */
-    v3_RoleCode_NaturalParent: Coding;
+    readonly NaturalMotherOfFetus: Coding;
     /**
-     * The player of the role has both biological parents in common with the scoping entity.
+     * NPRN: natural parent
      */
-    v3_RoleCode_NaturalSibling: Coding;
+    readonly NaturalParent: Coding;
     /**
-     * The player of the role is a female having the same biological parents as the scoping entity.
+     * NSIB: The player of the role has both biological parents in common with the scoping entity.
      */
-    v3_RoleCode_NaturalSister: Coding;
-    v2_0131_Other: Coding;
+    readonly NaturalSibling: Coding;
     /**
-     * The relationship that a person has with his or her self.
+     * NSIS: The player of the role is a female having the same biological parents as the scoping entity.
      */
-    v3_RoleCode_Self: Coding;
+    readonly NaturalSister: Coding;
     /**
-     * Description:The player of the role is a biological sister of the scoping person's biological father.
+     * Code: O
      */
-    v3_RoleCode_PaternalAunt: Coding;
+    readonly Other: Coding;
     /**
-     * Description:The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's father's side, such as a grandparent, by two or more steps in a diverging line.
+     * ONESELF: The relationship that a person has with his or her self.
      */
-    v3_RoleCode_PaternalCousin: Coding;
+    readonly Self: Coding;
     /**
-     * Description:The player of the role is the biological father of the scoping person's biological father's parent.
+     * PAUNT: Description:The player of the role is a biological sister of the scoping person's biological father.
      */
-    v3_RoleCode_PaternalGreatGrandfather: Coding;
+    readonly PaternalAunt: Coding;
     /**
-     * Description:The player of the role is the biological mother of the scoping person's biological father's parent.
+     * PCOUSN: Description:The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's father's side, such as a grandparent, by two or more steps in a diverging line.
      */
-    v3_RoleCode_PaternalGreatGrandmother: Coding;
+    readonly PaternalCousin: Coding;
     /**
-     * Description:The player of the role is a biological parent of the scoping person's biological father's parent.
+     * PGGRFTH: Description:The player of the role is the biological father of the scoping person's biological father's parent.
      */
-    v3_RoleCode_PaternalGreatGrandparent: Coding;
+    readonly PaternalGreatGrandfather: Coding;
     /**
-     * Description:The player of the role is the biological father of the scoping person's biological father.
+     * PGGRMTH: Description:The player of the role is the biological mother of the scoping person's biological father's parent.
      */
-    v3_RoleCode_PaternalGrandfather: Coding;
+    readonly PaternalGreatGrandmother: Coding;
     /**
-     * Description:The player of the role is the biological mother of the scoping person's biological father.
+     * PGGRPRN: Description:The player of the role is a biological parent of the scoping person's biological father's parent.
      */
-    v3_RoleCode_PaternalGrandmother: Coding;
+    readonly PaternalGreatGrandparent: Coding;
     /**
-     * Description:The player of the role is the biological parent of the scoping person's biological father.
+     * PGRFTH: Description:The player of the role is the biological father of the scoping person's biological father.
      */
-    v3_RoleCode_PaternalGrandparent: Coding;
+    readonly PaternalGrandfather: Coding;
     /**
-     * The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).
+     * PGRMTH: Description:The player of the role is the biological mother of the scoping person's biological father.
      */
-    v3_RoleCode_Parent: Coding;
+    readonly PaternalGrandmother: Coding;
     /**
-     * The player of the role (parent) who is a state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary.
+     * PGRPRN: Description:The player of the role is the biological parent of the scoping person's biological father.
+     */
+    readonly PaternalGrandparent: Coding;
+    /**
+     * PRN: The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).
+     */
+    readonly Parent: Coding;
+    /**
+     * PRNFOST: The player of the role (parent) who is a state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary.
      *
      *                         The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.
      */
-    v3_RoleCode_FosterParent: Coding;
+    readonly FosterParent: Coding;
     /**
-     * The player of the role is the parent of scoping person's husband or wife.
+     * PRNINLAW: The player of the role is the parent of scoping person's husband or wife.
      */
-    v3_RoleCode_ParentInLaw: Coding;
+    readonly ParentInLaw: Coding;
     /**
-     * Description:The player of the role is a biological brother of the scoping person's biological father.
+     * PUNCLE: Description:The player of the role is a biological brother of the scoping person's biological father.
      */
-    v3_RoleCode_PaternalUncle: Coding;
+    readonly PaternalUncle: Coding;
     /**
-     * One who shares living quarters with the subject.
+     * ROOM: One who shares living quarters with the subject.
      */
-    v3_RoleCode_Roommate: Coding;
+    readonly Roommate: Coding;
     /**
-     * The player of the role shares one or both parents in common with the scoping entity.
+     * Code: S
      */
-    v3_RoleCode_Sibling: Coding;
+    readonly StateAgency: Coding;
     /**
-     * The player of the role is: (1) a sibling of the scoping person's spouse, or (2) the spouse of the scoping person's sibling, or (3) the spouse of a sibling of the scoping person's spouse.
+     * SIB: The player of the role shares one or both parents in common with the scoping entity.
      */
-    v3_RoleCode_SiblingInLaw: Coding;
+    readonly Sibling: Coding;
     /**
-     * A person who is important to one's well being; especially a spouse or one in a similar relationship.  (The player is the one who is important)
+     * SIBINLAW: The player of the role is: (1) a sibling of the scoping person's spouse, or (2) the spouse of the scoping person's sibling, or (3) the spouse of a sibling of the scoping person's spouse.
      */
-    v3_RoleCode_SignificantOther: Coding;
+    readonly SiblingInLaw: Coding;
     /**
-     * The player of the role is a female sharing one or both parents in common with the scoping entity.
+     * SIGOTHR: A person who is important to one's well being; especially a spouse or one in a similar relationship.  (The player is the one who is important)
      */
-    v3_RoleCode_Sister: Coding;
+    readonly SignificantOther: Coding;
     /**
-     * The player of the role is: (1) a sister of the scoping person's spouse, or (2) the wife of the scoping person's brother, or (3) the wife of a brother of the scoping person's spouse.
+     * SIS: The player of the role is a female sharing one or both parents in common with the scoping entity.
      */
-    v3_RoleCode_SisterInLaw: Coding;
+    readonly Sister: Coding;
     /**
-     * The player of the role is a male offspring of the scoping entity (parent).
+     * SISINLAW: The player of the role is: (1) a sister of the scoping person's spouse, or (2) the wife of the scoping person's brother, or (3) the wife of a brother of the scoping person's spouse.
      */
-    v3_RoleCode_NaturalSon: Coding;
+    readonly SisterInLaw: Coding;
     /**
-     * The player of the role is a male child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
+     * SON: The player of the role is a male offspring of the scoping entity (parent).
      */
-    v3_RoleCode_AdoptedSon: Coding;
+    readonly NaturalSon: Coding;
     /**
-     * Description: The player of the role is a male child (of any type) of scoping entity (parent)
+     * SONADOPT: The player of the role is a male child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
      */
-    v3_RoleCode_Son: Coding;
+    readonly AdoptedSon: Coding;
     /**
-     * The player of the role is a male child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
+     * SONC: Description: The player of the role is a male child (of any type) of scoping entity (parent)
      */
-    v3_RoleCode_FosterSon: Coding;
+    readonly Son: Coding;
     /**
-     * The player of the role is the husband of scoping person's daughter.
+     * SONFOST: The player of the role is a male child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
      */
-    v3_RoleCode_SonInLaw: Coding;
+    readonly FosterSon: Coding;
     /**
-     * The player of the role is a marriage partner of the scoping person.
+     * SONINLAW: The player of the role is the husband of scoping person's daughter.
      */
-    v3_RoleCode_Spouse: Coding;
+    readonly SonInLaw: Coding;
     /**
-     * The player of the role is a son of the scoping person's stepparent.
+     * SPS: The player of the role is a marriage partner of the scoping person.
      */
-    v3_RoleCode_Stepbrother: Coding;
+    readonly Spouse: Coding;
     /**
-     * The player of the role is a child of the scoping person's spouse by a previous union.
+     * STPBRO: The player of the role is a son of the scoping person's stepparent.
      */
-    v3_RoleCode_StepChild: Coding;
+    readonly Stepbrother: Coding;
     /**
-     * The player of the role is a daughter of the scoping person's spouse by a previous union.
+     * STPCHLD: The player of the role is a child of the scoping person's spouse by a previous union.
      */
-    v3_RoleCode_Stepdaughter: Coding;
+    readonly StepChild: Coding;
     /**
-     * The player of the role is the husband of scoping person's mother and not the scoping person's natural father.
+     * STPDAU: The player of the role is a daughter of the scoping person's spouse by a previous union.
      */
-    v3_RoleCode_Stepfather: Coding;
+    readonly Stepdaughter: Coding;
     /**
-     * The player of the role is the wife of scoping person's father and not the scoping person's natural mother.
+     * STPFTH: The player of the role is the husband of scoping person's mother and not the scoping person's natural father.
      */
-    v3_RoleCode_Stepmother: Coding;
+    readonly Stepfather: Coding;
     /**
-     * The player of the role is the spouse of the scoping person's parent and not the scoping person's natural parent.
+     * STPMTH: The player of the role is the wife of scoping person's father and not the scoping person's natural mother.
      */
-    v3_RoleCode_StepParent: Coding;
+    readonly Stepmother: Coding;
     /**
-     * The player of the role is a child of the scoping person's stepparent.
+     * STPPRN: The player of the role is the spouse of the scoping person's parent and not the scoping person's natural parent.
      */
-    v3_RoleCode_StepSibling: Coding;
+    readonly StepParent: Coding;
     /**
-     * The player of the role is a daughter of the scoping person's stepparent.
+     * STPSIB: The player of the role is a child of the scoping person's stepparent.
      */
-    v3_RoleCode_Stepsister: Coding;
+    readonly StepSibling: Coding;
     /**
-     * The player of the role is a son of the scoping person's spouse by a previous union.
+     * STPSIS: The player of the role is a daughter of the scoping person's stepparent.
      */
-    v3_RoleCode_Stepson: Coding;
+    readonly Stepsister: Coding;
     /**
-     * The scoper and player were carried in the same womb and shared common biological parents.
+     * STPSON: The player of the role is a son of the scoping person's spouse by a previous union.
      */
-    v3_RoleCode_Twin: Coding;
+    readonly Stepson: Coding;
     /**
-     * The scoper was carried in the same womb as the male player and shares common biological parents.
+     * TWIN: The scoper and player were carried in the same womb and shared common biological parents.
      */
-    v3_RoleCode_TwinBrother: Coding;
+    readonly Twin: Coding;
     /**
-     * The scoper was carried in the same womb as the female player and shares common biological parents.
+     * TWINBRO: The scoper was carried in the same womb as the male player and shares common biological parents.
      */
-    v3_RoleCode_TwinSister: Coding;
+    readonly TwinBrother: Coding;
     /**
-     * The player of the role is a brother of the scoping person's mother or father.
+     * TWINSIS: The scoper was carried in the same womb as the female player and shares common biological parents.
      */
-    v3_RoleCode_Uncle: Coding;
+    readonly TwinSister: Coding;
     /**
-     * The player of the role is a woman joined to a man (scoping person) in marriage.
+     * Code: U
      */
-    v3_RoleCode_Wife: Coding;
+    readonly Unknown: Coding;
+    /**
+     * UNCLE: The player of the role is a brother of the scoping person's mother or father.
+     */
+    readonly Uncle: Coding;
+    /**
+     * WIFE: The player of the role is a woman joined to a man (scoping person) in marriage.
+     */
+    readonly Wife: Coding;
 };
+/**
+ * A set of codes that can be used to indicate the relationship between a Patient and a Related Person.
+ */
+export declare type RelatedpersonRelationshiptypeValueSetType = typeof RelatedpersonRelationshiptypeValueSet;
+/**
+ * A set of codes that can be used to indicate the relationship between a Patient and a Related Person.
+ */
+export declare enum RelatedpersonRelationshiptypeValueSetEnum {
+    /**
+     * _PersonalRelationshipRoleType: PersonalRelationshipRoleType
+     */
+    PersonalRelationshipRoleType = "_PersonalRelationshipRoleType",
+    /**
+     * ADOPTF: The player of the role (father) is a male who has taken the scoper (child) into their family through legal means and raises them as his own child.
+     */
+    AdoptiveFather = "ADOPTF",
+    /**
+     * ADOPTM: The player of the role (father) is a female who has taken the scoper (child) into their family through legal means and raises them as her own child.
+     */
+    AdoptiveMother = "ADOPTM",
+    /**
+     * ADOPTP: The player of the role (parent) has taken the scoper (child) into their family through legal means and raises them as his or her own child.
+     */
+    AdoptiveParent = "ADOPTP",
+    /**
+     * AUNT: The player of the role is a sister of the scoping person's mother or father.
+     */
+    Aunt = "AUNT",
+    /**
+     * BRO: The player of the role is a male sharing one or both parents in common with the scoping entity.
+     */
+    Brother = "BRO",
+    /**
+     * BROINLAW: The player of the role is: (1) a brother of the scoping person's spouse, or (2) the husband of the scoping person's sister, or (3) the husband of a sister of the scoping person's spouse.
+     */
+    BrotherInLaw = "BROINLAW",
+    /**
+     * Code: C
+     */
+    EmergencyContact = "C",
+    /**
+     * CHILD: The player of the role is a child of the scoping entity.
+     */
+    Child = "CHILD",
+    /**
+     * CHLDADOPT: The player of the role is a child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
+     */
+    AdoptedChild = "CHLDADOPT",
+    /**
+     * CHLDFOST: The player of the role is a child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
+     */
+    FosterChild = "CHLDFOST",
+    /**
+     * CHLDINLAW: The player of the role is the spouse of scoping person's child.
+     */
+    ChildInLaw = "CHLDINLAW",
+    /**
+     * COUSN: The player of the role is a relative of the scoping person descended from a common ancestor, such as a 	grandparent, by two or more steps in a diverging line.
+     */
+    Cousin = "COUSN",
+    /**
+     * DAU: The player of the role is a female offspring of the scoping entity (parent).
+     */
+    NaturalDaughter = "DAU",
+    /**
+     * DAUADOPT: The player of the role is a female child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
+     */
+    AdoptedDaughter = "DAUADOPT",
+    /**
+     * DAUC: Description: The player of the role is a female child (of any type) of scoping entity (parent)
+     */
+    Daughter = "DAUC",
+    /**
+     * DAUFOST: The player of the role is a female child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
+     */
+    FosterDaughter = "DAUFOST",
+    /**
+     * DAUINLAW: The player of the role is the wife of scoping person's son.
+     */
+    DaughterInLaw = "DAUINLAW",
+    /**
+     * DOMPART: The player of the role cohabits with the scoping person but is not the scoping person's spouse.
+     */
+    DomesticPartner = "DOMPART",
+    /**
+     * Code: E
+     */
+    Employer = "E",
+    /**
+     * EXT: Description: A family member not having an immediate genetic or legal relationship e.g. Aunt, cousin, great grandparent, grandchild, grandparent, niece, nephew or uncle.
+     */
+    ExtendedFamilyMember = "EXT",
+    /**
+     * Code: F
+     */
+    FederalAgency = "F",
+    /**
+     * FAMMEMB: A relationship between two people characterizing their "familial" relationship
+     */
+    FamilyMember = "FAMMEMB",
+    /**
+     * FMRSPS: Player of the role was previously joined to the scoping person in marriage and this marriage is now dissolved and inactive.
+     *
+     *
+     *                            Usage Note: This is significant to indicate as some jurisdictions have different legal requirements for former spouse to access the patient's record, from a general friend.
+     */
+    FormerSpouse = "FMRSPS",
+    /**
+     * FRND: The player of the role is a person who is known, liked, and trusted by the scoping person.
+     */
+    UnrelatedFriend = "FRND",
+    /**
+     * FTH: The player of the role is a male who begets or raises or nurtures the scoping entity (child).
+     */
+    Father = "FTH",
+    /**
+     * FTHFOST: The player of the role (parent) who is a male state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary.
+     *
+     *                         The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.
+     */
+    FosterFather = "FTHFOST",
+    /**
+     * FTHINLAW: The player of the role is the father of the scoping person's husband or wife.
+     */
+    FatherInLaw = "FTHINLAW",
+    /**
+     * FTWIN: The scoper and player were carried in the same womb and share common biological parents but are the product of distinct egg/sperm pairs.
+     */
+    FraternalTwin = "FTWIN",
+    /**
+     * FTWINBRO: The scoper was carried in the same womb as the male player and shares common biological parents but is the product of a distinct egg/sperm pair.
+     */
+    FraternalTwinBrother = "FTWINBRO",
+    /**
+     * FTWINSIS: The scoper was carried in the same womb as the female player and shares common biological parents but is the product of a distinct egg/sperm pair.
+     */
+    FraternalTwinSister = "FTWINSIS",
+    /**
+     * GESTM: The player is a female whose womb carries the fetus of the scoper.  Generally used when the gestational mother and natural mother are not the same.
+     */
+    GestationalMother = "GESTM",
+    /**
+     * GGRFTH: The player of the role is the father of the scoping person's grandparent.
+     */
+    GreatGrandfather = "GGRFTH",
+    /**
+     * GGRMTH: The player of the role is the mother of the scoping person's grandparent.
+     */
+    GreatGrandmother = "GGRMTH",
+    /**
+     * GGRPRN: The player of the role is a parent of the scoping person's grandparent.
+     */
+    GreatGrandparent = "GGRPRN",
+    /**
+     * GRFTH: The player of the role is the father of the scoping person's mother or father.
+     */
+    Grandfather = "GRFTH",
+    /**
+     * GRMTH: The player of the role is the mother of the scoping person's mother or father.
+     */
+    Grandmother = "GRMTH",
+    /**
+     * GRNDCHILD: The player of the role is a child of the scoping person's son or daughter.
+     */
+    Grandchild = "GRNDCHILD",
+    /**
+     * GRNDDAU: The player of the role is a daughter of the scoping person's son or daughter.
+     */
+    Granddaughter = "GRNDDAU",
+    /**
+     * GRNDSON: The player of the role is a son of the scoping person's son or daughter.
+     */
+    Grandson = "GRNDSON",
+    /**
+     * GRPRN: The player of the role is a parent of the scoping person's mother or father.
+     */
+    Grandparent = "GRPRN",
+    /**
+     * HBRO: The player of the role is a male related to the scoping entity by sharing only one biological parent.
+     */
+    HalfBrother = "HBRO",
+    /**
+     * HSIB: The player of the role is related to the scoping entity by sharing only one biological parent.
+     */
+    HalfSibling = "HSIB",
+    /**
+     * HSIS: The player of the role is a female related to the scoping entity by sharing only one biological parent.
+     */
+    HalfSister = "HSIS",
+    /**
+     * HUSB: The player of the role is a man joined to a woman (scoping person) in marriage.
+     */
+    Husband = "HUSB",
+    /**
+     * Code: I
+     */
+    InsuranceCompany = "I",
+    /**
+     * INLAW: A relationship between an individual and a member of their spousal partner's immediate family.
+     */
+    Inlaw = "INLAW",
+    /**
+     * ITWIN: The scoper and player are offspring of the same egg-sperm pair.
+     */
+    IdenticalTwin = "ITWIN",
+    /**
+     * ITWINBRO: The male scoper is an offspring of the same egg-sperm pair as the male player.
+     */
+    IdenticalTwinBrother = "ITWINBRO",
+    /**
+     * ITWINSIS: The female scoper is an offspring of the same egg-sperm pair as the female player.
+     */
+    IdenticalTwinSister = "ITWINSIS",
+    /**
+     * MAUNT: Description:The player of the role is a biological sister of the scoping person's biological mother.
+     */
+    MaternalAunt = "MAUNT",
+    /**
+     * MCOUSN: Description:The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's mother's side, such as a grandparent, by two or more steps in a diverging line.
+     */
+    MaternalCousin = "MCOUSN",
+    /**
+     * MGGRFTH: Description:The player of the role is the biological father of the scoping person's biological mother's parent.
+     */
+    MaternalGreatGrandfather = "MGGRFTH",
+    /**
+     * MGGRMTH: Description:The player of the role is the biological mother of the scoping person's biological mother's parent.
+     */
+    MaternalGreatGrandmother = "MGGRMTH",
+    /**
+     * MGGRPRN: Description:The player of the role is a biological parent of the scoping person's biological mother's parent.
+     */
+    MaternalGreatGrandparent = "MGGRPRN",
+    /**
+     * MGRFTH: Description:The player of the role is the biological father of the scoping person's biological mother.
+     */
+    MaternalGrandfather = "MGRFTH",
+    /**
+     * MGRMTH: Description:The player of the role is the biological mother of the scoping person's biological mother.
+     */
+    MaternalGrandmother = "MGRMTH",
+    /**
+     * MGRPRN: Description:The player of the role is the biological parent of the scoping person's biological mother.
+     */
+    MaternalGrandparent = "MGRPRN",
+    /**
+     * MTH: The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).
+     */
+    Mother = "MTH",
+    /**
+     * MTHFOST: The player of the role (parent) who is a female state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary.
+     *
+     *                         The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.
+     */
+    FosterMother = "MTHFOST",
+    /**
+     * MTHINLAW: The player of the role is the mother of the scoping person's husband or wife.
+     */
+    MotherInLaw = "MTHINLAW",
+    /**
+     * MUNCLE: Description:The player of the role is a biological brother of the scoping person's biological mother.
+     */
+    MaternalUncle = "MUNCLE",
+    /**
+     * Code: N
+     */
+    NextOfKin = "N",
+    /**
+     * NBOR: The player of the role lives near or next to the 	scoping person.
+     */
+    Neighbor = "NBOR",
+    /**
+     * NBRO: The player of the role is a male having the same biological parents as the scoping entity.
+     */
+    NaturalBrother = "NBRO",
+    /**
+     * NCHILD: The player of the role is an offspring of the scoping entity as determined by birth.
+     */
+    NaturalChild = "NCHILD",
+    /**
+     * NEPHEW: The player of the role is a son of the scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
+     */
+    Nephew = "NEPHEW",
+    /**
+     * NFTH: The player of the role is a male who begets the scoping entity (child).
+     */
+    NaturalFather = "NFTH",
+    /**
+     * NFTHF: Indicates the biologic male parent of a fetus.
+     */
+    NaturalFatherOfFetus = "NFTHF",
+    /**
+     * NIECE: The player of the role is a daughter of the scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
+     */
+    Niece = "NIECE",
+    /**
+     * NIENEPH: The player of the role is a child of scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
+     */
+    NieceNephew = "NIENEPH",
+    /**
+     * NMTH: The player of the role is a female who conceives or gives birth to the scoping entity (child).
+     */
+    NaturalMother = "NMTH",
+    /**
+     * NMTHF: The player is the biologic female parent of the scoping fetus.
+     */
+    NaturalMotherOfFetus = "NMTHF",
+    /**
+     * NPRN: natural parent
+     */
+    NaturalParent = "NPRN",
+    /**
+     * NSIB: The player of the role has both biological parents in common with the scoping entity.
+     */
+    NaturalSibling = "NSIB",
+    /**
+     * NSIS: The player of the role is a female having the same biological parents as the scoping entity.
+     */
+    NaturalSister = "NSIS",
+    /**
+     * Code: O
+     */
+    Other = "O",
+    /**
+     * ONESELF: The relationship that a person has with his or her self.
+     */
+    Self = "ONESELF",
+    /**
+     * PAUNT: Description:The player of the role is a biological sister of the scoping person's biological father.
+     */
+    PaternalAunt = "PAUNT",
+    /**
+     * PCOUSN: Description:The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's father's side, such as a grandparent, by two or more steps in a diverging line.
+     */
+    PaternalCousin = "PCOUSN",
+    /**
+     * PGGRFTH: Description:The player of the role is the biological father of the scoping person's biological father's parent.
+     */
+    PaternalGreatGrandfather = "PGGRFTH",
+    /**
+     * PGGRMTH: Description:The player of the role is the biological mother of the scoping person's biological father's parent.
+     */
+    PaternalGreatGrandmother = "PGGRMTH",
+    /**
+     * PGGRPRN: Description:The player of the role is a biological parent of the scoping person's biological father's parent.
+     */
+    PaternalGreatGrandparent = "PGGRPRN",
+    /**
+     * PGRFTH: Description:The player of the role is the biological father of the scoping person's biological father.
+     */
+    PaternalGrandfather = "PGRFTH",
+    /**
+     * PGRMTH: Description:The player of the role is the biological mother of the scoping person's biological father.
+     */
+    PaternalGrandmother = "PGRMTH",
+    /**
+     * PGRPRN: Description:The player of the role is the biological parent of the scoping person's biological father.
+     */
+    PaternalGrandparent = "PGRPRN",
+    /**
+     * PRN: The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).
+     */
+    Parent = "PRN",
+    /**
+     * PRNFOST: The player of the role (parent) who is a state-certified caregiver responsible for the scoper (child) who has been placed in the parent's care. The placement of the child is usually arranged through the government or a social-service agency, and temporary.
+     *
+     *                         The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.
+     */
+    FosterParent = "PRNFOST",
+    /**
+     * PRNINLAW: The player of the role is the parent of scoping person's husband or wife.
+     */
+    ParentInLaw = "PRNINLAW",
+    /**
+     * PUNCLE: Description:The player of the role is a biological brother of the scoping person's biological father.
+     */
+    PaternalUncle = "PUNCLE",
+    /**
+     * ROOM: One who shares living quarters with the subject.
+     */
+    Roommate = "ROOM",
+    /**
+     * Code: S
+     */
+    StateAgency = "S",
+    /**
+     * SIB: The player of the role shares one or both parents in common with the scoping entity.
+     */
+    Sibling = "SIB",
+    /**
+     * SIBINLAW: The player of the role is: (1) a sibling of the scoping person's spouse, or (2) the spouse of the scoping person's sibling, or (3) the spouse of a sibling of the scoping person's spouse.
+     */
+    SiblingInLaw = "SIBINLAW",
+    /**
+     * SIGOTHR: A person who is important to one's well being; especially a spouse or one in a similar relationship.  (The player is the one who is important)
+     */
+    SignificantOther = "SIGOTHR",
+    /**
+     * SIS: The player of the role is a female sharing one or both parents in common with the scoping entity.
+     */
+    Sister = "SIS",
+    /**
+     * SISINLAW: The player of the role is: (1) a sister of the scoping person's spouse, or (2) the wife of the scoping person's brother, or (3) the wife of a brother of the scoping person's spouse.
+     */
+    SisterInLaw = "SISINLAW",
+    /**
+     * SON: The player of the role is a male offspring of the scoping entity (parent).
+     */
+    NaturalSon = "SON",
+    /**
+     * SONADOPT: The player of the role is a male child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
+     */
+    AdoptedSon = "SONADOPT",
+    /**
+     * SONC: Description: The player of the role is a male child (of any type) of scoping entity (parent)
+     */
+    Son = "SONC",
+    /**
+     * SONFOST: The player of the role is a male child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
+     */
+    FosterSon = "SONFOST",
+    /**
+     * SONINLAW: The player of the role is the husband of scoping person's daughter.
+     */
+    SonInLaw = "SONINLAW",
+    /**
+     * SPS: The player of the role is a marriage partner of the scoping person.
+     */
+    Spouse = "SPS",
+    /**
+     * STPBRO: The player of the role is a son of the scoping person's stepparent.
+     */
+    Stepbrother = "STPBRO",
+    /**
+     * STPCHLD: The player of the role is a child of the scoping person's spouse by a previous union.
+     */
+    StepChild = "STPCHLD",
+    /**
+     * STPDAU: The player of the role is a daughter of the scoping person's spouse by a previous union.
+     */
+    Stepdaughter = "STPDAU",
+    /**
+     * STPFTH: The player of the role is the husband of scoping person's mother and not the scoping person's natural father.
+     */
+    Stepfather = "STPFTH",
+    /**
+     * STPMTH: The player of the role is the wife of scoping person's father and not the scoping person's natural mother.
+     */
+    Stepmother = "STPMTH",
+    /**
+     * STPPRN: The player of the role is the spouse of the scoping person's parent and not the scoping person's natural parent.
+     */
+    StepParent = "STPPRN",
+    /**
+     * STPSIB: The player of the role is a child of the scoping person's stepparent.
+     */
+    StepSibling = "STPSIB",
+    /**
+     * STPSIS: The player of the role is a daughter of the scoping person's stepparent.
+     */
+    Stepsister = "STPSIS",
+    /**
+     * STPSON: The player of the role is a son of the scoping person's spouse by a previous union.
+     */
+    Stepson = "STPSON",
+    /**
+     * TWIN: The scoper and player were carried in the same womb and shared common biological parents.
+     */
+    Twin = "TWIN",
+    /**
+     * TWINBRO: The scoper was carried in the same womb as the male player and shares common biological parents.
+     */
+    TwinBrother = "TWINBRO",
+    /**
+     * TWINSIS: The scoper was carried in the same womb as the female player and shares common biological parents.
+     */
+    TwinSister = "TWINSIS",
+    /**
+     * Code: U
+     */
+    Unknown = "U",
+    /**
+     * UNCLE: The player of the role is a brother of the scoping person's mother or father.
+     */
+    Uncle = "UNCLE",
+    /**
+     * WIFE: The player of the role is a woman joined to a man (scoping person) in marriage.
+     */
+    Wife = "WIFE"
+}
 //# sourceMappingURL=RelatedpersonRelationshiptypeValueSet.d.ts.map

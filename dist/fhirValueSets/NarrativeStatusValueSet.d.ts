@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The status of a resource narrative.
  */
 export declare const NarrativeStatusValueSet: {
     /**
-     * The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection.
+     * additional: The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection.
      */
-    narrative_status_Additional: Coding;
+    readonly Additional: Coding;
     /**
-     * The contents of the narrative are some equivalent of "No human-readable text provided in this case".
+     * empty: The contents of the narrative are some equivalent of "No human-readable text provided in this case".
      */
-    narrative_status_Empty: Coding;
+    readonly Empty: Coding;
     /**
-     * The contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions. The narrative SHALL reflect the impact of all modifier extensions.
+     * extensions: The contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions. The narrative SHALL reflect the impact of all modifier extensions.
      */
-    narrative_status_Extensions: Coding;
+    readonly Extensions: Coding;
     /**
-     * The contents of the narrative are entirely generated from the core elements in the content.
+     * generated: The contents of the narrative are entirely generated from the core elements in the content.
      */
-    narrative_status_Generated: Coding;
+    readonly Generated: Coding;
 };
+/**
+ * The status of a resource narrative.
+ */
+export declare type NarrativeStatusValueSetType = typeof NarrativeStatusValueSet;
+/**
+ * The status of a resource narrative.
+ */
+export declare enum NarrativeStatusValueSetEnum {
+    /**
+     * additional: The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection.
+     */
+    Additional = "additional",
+    /**
+     * empty: The contents of the narrative are some equivalent of "No human-readable text provided in this case".
+     */
+    Empty = "empty",
+    /**
+     * extensions: The contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions. The narrative SHALL reflect the impact of all modifier extensions.
+     */
+    Extensions = "extensions",
+    /**
+     * generated: The contents of the narrative are entirely generated from the core elements in the content.
+     */
+    Generated = "generated"
+}
 //# sourceMappingURL=NarrativeStatusValueSet.d.ts.map

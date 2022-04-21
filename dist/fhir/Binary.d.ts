@@ -1,4 +1,4 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.
  */
@@ -11,21 +11,27 @@ export declare type IBinary = fhir.IResource & {
      * MimeType of the binary content represented as a standard MimeType (BCP 13).
      */
     contentType: string | null;
-    _contentType?: fhir.IFhirElement | undefined;
     /**
-     * If the content type is itself base64 encoding, then this will be base64 encoded twice - what is created by un-base64ing the content must be the specified content type.
+     * Extended properties for primitive element: Binary.contentType
      */
-    data?: string | undefined;
-    _data?: fhir.IFhirElement | undefined;
+    _contentType?: fhir.IFhirElement | undefined;
     /**
      * Very often, a server will also know of a resource that references the binary, and can automatically apply the appropriate access rules based on that reference. However, there are some circumstances where this is not appropriate, e.g. the binary is uploaded directly to the server without any linking resource, the binary is referred to from multiple different resources, and/or the binary is content such as an application logo that has less protection than any of the resources that reference it.
      */
     securityContext?: fhir.IReference | undefined;
+    /**
+     * If the content type is itself base64 encoding, then this will be base64 encoded twice - what is created by un-base64ing the content must be the specified content type.
+     */
+    data?: string | undefined;
+    /**
+     * Extended properties for primitive element: Binary.data
+     */
+    _data?: fhir.IFhirElement | undefined;
 };
 /**
  * A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.
  */
-export declare class Binary extends fhir.Resource implements fhir.IBinary {
+export declare class Binary extends fhir.Resource implements IBinary {
     /**
      * Resource Type Name
      */
@@ -34,27 +40,29 @@ export declare class Binary extends fhir.Resource implements fhir.IBinary {
      * MimeType of the binary content represented as a standard MimeType (BCP 13).
      */
     contentType: string | null;
-    _contentType?: fhir.FhirElement | undefined;
     /**
-     * If the content type is itself base64 encoding, then this will be base64 encoded twice - what is created by un-base64ing the content must be the specified content type.
+     * Extended properties for primitive element: Binary.contentType
      */
-    data?: string | undefined;
-    _data?: fhir.FhirElement | undefined;
+    _contentType?: fhir.FhirElement | undefined;
     /**
      * Very often, a server will also know of a resource that references the binary, and can automatically apply the appropriate access rules based on that reference. However, there are some circumstances where this is not appropriate, e.g. the binary is uploaded directly to the server without any linking resource, the binary is referred to from multiple different resources, and/or the binary is content such as an application logo that has less protection than any of the resources that reference it.
      */
     securityContext?: fhir.Reference | undefined;
     /**
+     * If the content type is itself base64 encoding, then this will be base64 encoded twice - what is created by un-base64ing the content must be the specified content type.
+     */
+    data?: string | undefined;
+    /**
+     * Extended properties for primitive element: Binary.data
+     */
+    _data?: fhir.FhirElement | undefined;
+    /**
      * Default constructor for Binary - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IBinary>);
+    constructor(source?: Partial<IBinary>);
     /**
-     * Check if the current Binary contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a Binary from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IBinary): Binary;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Binary.d.ts.map

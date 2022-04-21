@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Describes the category of the metric.
  */
 export declare const MetricCategoryValueSet: {
     /**
-     * DeviceObservations generated for this DeviceMetric are calculated.
+     * calculation: DeviceObservations generated for this DeviceMetric are calculated.
      */
-    metric_category_Calculation: Coding;
+    readonly Calculation: Coding;
     /**
-     * DeviceObservations generated for this DeviceMetric are measured.
+     * measurement: DeviceObservations generated for this DeviceMetric are measured.
      */
-    metric_category_Measurement: Coding;
+    readonly Measurement: Coding;
     /**
-     * DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device.
+     * setting: DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device.
      */
-    metric_category_Setting: Coding;
+    readonly Setting: Coding;
     /**
-     * The category of this DeviceMetric is unspecified.
+     * unspecified: The category of this DeviceMetric is unspecified.
      */
-    metric_category_Unspecified: Coding;
+    readonly Unspecified: Coding;
 };
+/**
+ * Describes the category of the metric.
+ */
+export declare type MetricCategoryValueSetType = typeof MetricCategoryValueSet;
+/**
+ * Describes the category of the metric.
+ */
+export declare enum MetricCategoryValueSetEnum {
+    /**
+     * calculation: DeviceObservations generated for this DeviceMetric are calculated.
+     */
+    Calculation = "calculation",
+    /**
+     * measurement: DeviceObservations generated for this DeviceMetric are measured.
+     */
+    Measurement = "measurement",
+    /**
+     * setting: DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device.
+     */
+    Setting = "setting",
+    /**
+     * unspecified: The category of this DeviceMetric is unspecified.
+     */
+    Unspecified = "unspecified"
+}
 //# sourceMappingURL=MetricCategoryValueSet.d.ts.map

@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes identifying the category of observation range.
  */
 export declare const ObservationRangeCategoryValueSet: {
     /**
-     * Absolute Range for Ordinal and Continuous Observations. Results outside this range are not possible.
+     * absolute: Absolute Range for Ordinal and Continuous Observations. Results outside this range are not possible.
      */
-    observation_range_category_AbsoluteRange: Coding;
+    readonly AbsoluteRange: Coding;
     /**
-     * Critical Range for Ordinal and Continuous Observations.
+     * critical: Critical Range for Ordinal and Continuous Observations.
      */
-    observation_range_category_CriticalRange: Coding;
+    readonly CriticalRange: Coding;
     /**
-     * Reference (Normal) Range for Ordinal and Continuous Observations.
+     * reference: Reference (Normal) Range for Ordinal and Continuous Observations.
      */
-    observation_range_category_ReferenceRange: Coding;
+    readonly ReferenceRange: Coding;
 };
+/**
+ * Codes identifying the category of observation range.
+ */
+export declare type ObservationRangeCategoryValueSetType = typeof ObservationRangeCategoryValueSet;
+/**
+ * Codes identifying the category of observation range.
+ */
+export declare enum ObservationRangeCategoryValueSetEnum {
+    /**
+     * absolute: Absolute Range for Ordinal and Continuous Observations. Results outside this range are not possible.
+     */
+    AbsoluteRange = "absolute",
+    /**
+     * critical: Critical Range for Ordinal and Continuous Observations.
+     */
+    CriticalRange = "critical",
+    /**
+     * reference: Reference (Normal) Range for Ordinal and Continuous Observations.
+     */
+    ReferenceRange = "reference"
+}
 //# sourceMappingURL=ObservationRangeCategoryValueSet.d.ts.map

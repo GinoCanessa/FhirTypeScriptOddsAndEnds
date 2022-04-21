@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the body site where the vaccination occurred. This value set is provided as a suggestive example.
  */
 export declare const ImmunizationSiteValueSet: {
     /**
-     * left arm
+     * LA: left arm
      */
-    v3_ActSite_LeftArm: Coding;
+    readonly LeftArm: Coding;
     /**
-     * right arm
+     * RA: right arm
      */
-    v3_ActSite_RightArm: Coding;
+    readonly RightArm: Coding;
 };
+/**
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the body site where the vaccination occurred. This value set is provided as a suggestive example.
+ */
+export declare type ImmunizationSiteValueSetType = typeof ImmunizationSiteValueSet;
+/**
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the body site where the vaccination occurred. This value set is provided as a suggestive example.
+ */
+export declare enum ImmunizationSiteValueSetEnum {
+    /**
+     * LA: left arm
+     */
+    LeftArm = "LA",
+    /**
+     * RA: right arm
+     */
+    RightArm = "RA"
+}
 //# sourceMappingURL=ImmunizationSiteValueSet.d.ts.map

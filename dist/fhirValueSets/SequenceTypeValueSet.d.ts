@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Type if a sequence -- DNA, RNA, or amino acid sequence.
  */
 export declare const SequenceTypeValueSet: {
     /**
-     * Amino acid sequence.
+     * aa: Amino acid sequence.
      */
-    sequence_type_AASequence: Coding;
+    readonly AASequence: Coding;
     /**
-     * DNA Sequence.
+     * dna: DNA Sequence.
      */
-    sequence_type_DNASequence: Coding;
+    readonly DNASequence: Coding;
     /**
-     * RNA Sequence.
+     * rna: RNA Sequence.
      */
-    sequence_type_RNASequence: Coding;
+    readonly RNASequence: Coding;
 };
+/**
+ * Type if a sequence -- DNA, RNA, or amino acid sequence.
+ */
+export declare type SequenceTypeValueSetType = typeof SequenceTypeValueSet;
+/**
+ * Type if a sequence -- DNA, RNA, or amino acid sequence.
+ */
+export declare enum SequenceTypeValueSetEnum {
+    /**
+     * aa: Amino acid sequence.
+     */
+    AASequence = "aa",
+    /**
+     * dna: DNA Sequence.
+     */
+    DNASequence = "dna",
+    /**
+     * rna: RNA Sequence.
+     */
+    RNASequence = "rna"
+}
 //# sourceMappingURL=SequenceTypeValueSet.d.ts.map

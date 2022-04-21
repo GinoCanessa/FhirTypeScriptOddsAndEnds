@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Describes the typical color of representation.
  */
 export declare const MetricColorValueSet: {
     /**
-     * Color for representation - black.
+     * black: Color for representation - black.
      */
-    metric_color_ColorBlack: Coding;
+    readonly ColorBlack: Coding;
     /**
-     * Color for representation - blue.
+     * blue: Color for representation - blue.
      */
-    metric_color_ColorBlue: Coding;
+    readonly ColorBlue: Coding;
     /**
-     * Color for representation - cyan.
+     * cyan: Color for representation - cyan.
      */
-    metric_color_ColorCyan: Coding;
+    readonly ColorCyan: Coding;
     /**
-     * Color for representation - green.
+     * green: Color for representation - green.
      */
-    metric_color_ColorGreen: Coding;
+    readonly ColorGreen: Coding;
     /**
-     * Color for representation - magenta.
+     * magenta: Color for representation - magenta.
      */
-    metric_color_ColorMagenta: Coding;
+    readonly ColorMagenta: Coding;
     /**
-     * Color for representation - red.
+     * red: Color for representation - red.
      */
-    metric_color_ColorRed: Coding;
+    readonly ColorRed: Coding;
     /**
-     * Color for representation - white.
+     * white: Color for representation - white.
      */
-    metric_color_ColorWhite: Coding;
+    readonly ColorWhite: Coding;
     /**
-     * Color for representation - yellow.
+     * yellow: Color for representation - yellow.
      */
-    metric_color_ColorYellow: Coding;
+    readonly ColorYellow: Coding;
 };
+/**
+ * Describes the typical color of representation.
+ */
+export declare type MetricColorValueSetType = typeof MetricColorValueSet;
+/**
+ * Describes the typical color of representation.
+ */
+export declare enum MetricColorValueSetEnum {
+    /**
+     * black: Color for representation - black.
+     */
+    ColorBlack = "black",
+    /**
+     * blue: Color for representation - blue.
+     */
+    ColorBlue = "blue",
+    /**
+     * cyan: Color for representation - cyan.
+     */
+    ColorCyan = "cyan",
+    /**
+     * green: Color for representation - green.
+     */
+    ColorGreen = "green",
+    /**
+     * magenta: Color for representation - magenta.
+     */
+    ColorMagenta = "magenta",
+    /**
+     * red: Color for representation - red.
+     */
+    ColorRed = "red",
+    /**
+     * white: Color for representation - white.
+     */
+    ColorWhite = "white",
+    /**
+     * yellow: Color for representation - yellow.
+     */
+    ColorYellow = "yellow"
+}
 //# sourceMappingURL=MetricColorValueSet.d.ts.map

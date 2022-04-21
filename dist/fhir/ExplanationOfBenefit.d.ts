@@ -1,4 +1,42 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { RelatedClaimRelationshipValueSetType } from '../fhirValueSets/RelatedClaimRelationshipValueSet.js';
+import { PayeetypeValueSetType } from '../fhirValueSets/PayeetypeValueSet.js';
+import { ClaimCareteamroleValueSetType } from '../fhirValueSets/ClaimCareteamroleValueSet.js';
+import { ProviderQualificationValueSetType } from '../fhirValueSets/ProviderQualificationValueSet.js';
+import { ClaimInformationcategoryValueSetType } from '../fhirValueSets/ClaimInformationcategoryValueSet.js';
+import { ClaimExceptionValueSetType } from '../fhirValueSets/ClaimExceptionValueSet.js';
+import { MissingToothReasonValueSetType } from '../fhirValueSets/MissingToothReasonValueSet.js';
+import { ExDiagnosistypeValueSetType } from '../fhirValueSets/ExDiagnosistypeValueSet.js';
+import { ExDiagnosisOnAdmissionValueSetType } from '../fhirValueSets/ExDiagnosisOnAdmissionValueSet.js';
+import { ExDiagnosisrelatedgroupValueSetType } from '../fhirValueSets/ExDiagnosisrelatedgroupValueSet.js';
+import { ExProcedureTypeValueSetType } from '../fhirValueSets/ExProcedureTypeValueSet.js';
+import { Icd10ProceduresValueSetType } from '../fhirValueSets/Icd10ProceduresValueSet.js';
+import { V3ActIncidentCodeValueSetType } from '../fhirValueSets/V3ActIncidentCodeValueSet.js';
+import { AdjudicationValueSetType } from '../fhirValueSets/AdjudicationValueSet.js';
+import { AdjudicationReasonValueSetType } from '../fhirValueSets/AdjudicationReasonValueSet.js';
+import { ExRevenueCenterValueSetType } from '../fhirValueSets/ExRevenueCenterValueSet.js';
+import { ExBenefitcategoryValueSetType } from '../fhirValueSets/ExBenefitcategoryValueSet.js';
+import { ServiceUsclsValueSetType } from '../fhirValueSets/ServiceUsclsValueSet.js';
+import { ClaimModifiersValueSetType } from '../fhirValueSets/ClaimModifiersValueSet.js';
+import { ExProgramCodeValueSetType } from '../fhirValueSets/ExProgramCodeValueSet.js';
+import { ServicePlaceValueSetType } from '../fhirValueSets/ServicePlaceValueSet.js';
+import { ToothValueSetType } from '../fhirValueSets/ToothValueSet.js';
+import { SurfaceValueSetType } from '../fhirValueSets/SurfaceValueSet.js';
+import { ExPaymenttypeValueSetType } from '../fhirValueSets/ExPaymenttypeValueSet.js';
+import { PaymentAdjustmentReasonValueSetType } from '../fhirValueSets/PaymentAdjustmentReasonValueSet.js';
+import { NoteTypeValueSetType, NoteTypeValueSetEnum } from '../fhirValueSets/NoteTypeValueSet.js';
+import { LanguagesValueSetType } from '../fhirValueSets/LanguagesValueSet.js';
+import { BenefitTypeValueSetType } from '../fhirValueSets/BenefitTypeValueSet.js';
+import { BenefitNetworkValueSetType } from '../fhirValueSets/BenefitNetworkValueSet.js';
+import { BenefitUnitValueSetType } from '../fhirValueSets/BenefitUnitValueSet.js';
+import { BenefitTermValueSetType } from '../fhirValueSets/BenefitTermValueSet.js';
+import { ExplanationofbenefitStatusValueSetType, ExplanationofbenefitStatusValueSetEnum } from '../fhirValueSets/ExplanationofbenefitStatusValueSet.js';
+import { ClaimTypeValueSetType } from '../fhirValueSets/ClaimTypeValueSet.js';
+import { ClaimSubtypeValueSetType } from '../fhirValueSets/ClaimSubtypeValueSet.js';
+import { ClaimUseValueSetType, ClaimUseValueSetEnum } from '../fhirValueSets/ClaimUseValueSet.js';
+import { FundsreserveValueSetType } from '../fhirValueSets/FundsreserveValueSet.js';
+import { RemittanceOutcomeValueSetType, RemittanceOutcomeValueSetEnum } from '../fhirValueSets/RemittanceOutcomeValueSet.js';
+import { FormsValueSetType } from '../fhirValueSets/FormsValueSet.js';
 /**
  * For example,  for the original treatment and follow-up exams.
  */
@@ -8,58 +46,72 @@ export declare type IExplanationOfBenefitRelated = fhir.IBackboneElement & {
      */
     claim?: fhir.IReference | undefined;
     /**
-     * For example, Property/Casualty insurer claim number or Workers Compensation case number.
-     */
-    reference?: fhir.IIdentifier | undefined;
-    /**
      * For example, prior claim or umbrella.
      */
     relationship?: fhir.ICodeableConcept | undefined;
+    /**
+     * For example, Property/Casualty insurer claim number or Workers Compensation case number.
+     */
+    reference?: fhir.IIdentifier | undefined;
 };
 /**
  * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.
  */
 export declare type IExplanationOfBenefitPayee = fhir.IBackboneElement & {
     /**
-     * Not required if the payee is 'subscriber' or 'provider'.
-     */
-    party?: fhir.IReference | undefined;
-    /**
      * Type of Party to be reimbursed: Subscriber, provider, other.
      */
     type?: fhir.ICodeableConcept | undefined;
+    /**
+     * Not required if the payee is 'subscriber' or 'provider'.
+     */
+    party?: fhir.IReference | undefined;
 };
 /**
  * The members of the team who provided the products and services.
  */
 export declare type IExplanationOfBenefitCareTeam = fhir.IBackboneElement & {
     /**
+     * A number to uniquely identify care team entries.
+     */
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.careTeam.sequence
+     */
+    _sequence?: fhir.IFhirElement | undefined;
+    /**
      * Member of the team who provided the product or service.
      */
     provider: fhir.IReference | null;
     /**
-     * The qualification of the practitioner which is applicable for this service.
-     */
-    qualification?: fhir.ICodeableConcept | undefined;
-    /**
      * Responsible might not be required when there is only a single provider listed.
      */
     responsible?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.careTeam.responsible
+     */
     _responsible?: fhir.IFhirElement | undefined;
     /**
      * Role might not be required when there is only a single provider listed.
      */
     role?: fhir.ICodeableConcept | undefined;
     /**
-     * A number to uniquely identify care team entries.
+     * The qualification of the practitioner which is applicable for this service.
      */
-    sequence: number | null;
-    _sequence?: fhir.IFhirElement | undefined;
+    qualification?: fhir.ICodeableConcept | undefined;
 };
 /**
  * Often there are multiple jurisdiction specific valuesets which are required.
  */
 export declare type IExplanationOfBenefitSupportingInfo = fhir.IBackboneElement & {
+    /**
+     * A number to uniquely identify supporting information entries.
+     */
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.supportingInfo.sequence
+     */
+    _sequence?: fhir.IFhirElement | undefined;
     /**
      * This may contain a category for the local bill type codes.
      */
@@ -69,18 +121,12 @@ export declare type IExplanationOfBenefitSupportingInfo = fhir.IBackboneElement 
      */
     code?: fhir.ICodeableConcept | undefined;
     /**
-     * For example: the reason for the additional stay, or why a tooth is  missing.
-     */
-    reason?: fhir.ICoding | undefined;
-    /**
-     * A number to uniquely identify supporting information entries.
-     */
-    sequence: number | null;
-    _sequence?: fhir.IFhirElement | undefined;
-    /**
      * The date when or period to which this information refers.
      */
     timingDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.supportingInfo.timing[x]
+     */
     _timingDate?: fhir.IFhirElement | undefined;
     /**
      * The date when or period to which this information refers.
@@ -90,11 +136,17 @@ export declare type IExplanationOfBenefitSupportingInfo = fhir.IBackboneElement 
      * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.supportingInfo.value[x]
+     */
     _valueBoolean?: fhir.IFhirElement | undefined;
     /**
      * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.supportingInfo.value[x]
+     */
     _valueString?: fhir.IFhirElement | undefined;
     /**
      * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
@@ -108,11 +160,23 @@ export declare type IExplanationOfBenefitSupportingInfo = fhir.IBackboneElement 
      * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
      */
     valueReference?: fhir.IReference | undefined;
+    /**
+     * For example: the reason for the additional stay, or why a tooth is  missing.
+     */
+    reason?: fhir.ICoding | undefined;
 };
 /**
  * Information about diagnoses relevant to the claim items.
  */
 export declare type IExplanationOfBenefitDiagnosis = fhir.IBackboneElement & {
+    /**
+     * Diagnosis are presented in list order to their expected importance: primary, secondary, etc.
+     */
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.diagnosis.sequence
+     */
+    _sequence?: fhir.IFhirElement | undefined;
     /**
      * The nature of illness or problem in a coded form or as a reference to an external defined Condition.
      */
@@ -122,6 +186,10 @@ export declare type IExplanationOfBenefitDiagnosis = fhir.IBackboneElement & {
      */
     diagnosisReference?: fhir.IReference | undefined;
     /**
+     * For example: admitting, primary, secondary, discharge.
+     */
+    type?: fhir.ICodeableConcept[] | undefined;
+    /**
      * Indication of whether the diagnosis was present on admission to a facility.
      */
     onAdmission?: fhir.ICodeableConcept | undefined;
@@ -129,24 +197,30 @@ export declare type IExplanationOfBenefitDiagnosis = fhir.IBackboneElement & {
      * For example, DRG (Diagnosis Related Group) or a bundled billing code. A patient may have a diagnosis of a Myocardio-infarction and a DRG for HeartAttack would assigned. The Claim item (and possible subsequent claims) would refer to the DRG for those line items that were for services related to the heart attack event.
      */
     packageCode?: fhir.ICodeableConcept | undefined;
-    /**
-     * Diagnosis are presented in list order to their expected importance: primary, secondary, etc.
-     */
-    sequence: number | null;
-    _sequence?: fhir.IFhirElement | undefined;
-    /**
-     * For example: admitting, primary, secondary, discharge.
-     */
-    type?: fhir.ICodeableConcept[] | undefined;
 };
 /**
  * Procedures performed on the patient relevant to the billing items with the claim.
  */
 export declare type IExplanationOfBenefitProcedure = fhir.IBackboneElement & {
     /**
+     * A number to uniquely identify procedure entries.
+     */
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.procedure.sequence
+     */
+    _sequence?: fhir.IFhirElement | undefined;
+    /**
+     * When the condition was observed or the relative ranking.
+     */
+    type?: fhir.ICodeableConcept[] | undefined;
+    /**
      * Date and optionally time the procedure was performed.
      */
     date?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.procedure.date
+     */
     _date?: fhir.IFhirElement | undefined;
     /**
      * The code or reference to a Procedure resource which identifies the clinical intervention performed.
@@ -157,15 +231,6 @@ export declare type IExplanationOfBenefitProcedure = fhir.IBackboneElement & {
      */
     procedureReference?: fhir.IReference | undefined;
     /**
-     * A number to uniquely identify procedure entries.
-     */
-    sequence: number | null;
-    _sequence?: fhir.IFhirElement | undefined;
-    /**
-     * When the condition was observed or the relative ranking.
-     */
-    type?: fhir.ICodeableConcept[] | undefined;
-    /**
      * Unique Device Identifiers associated with this line item.
      */
     udi?: fhir.IReference[] | undefined;
@@ -175,18 +240,24 @@ export declare type IExplanationOfBenefitProcedure = fhir.IBackboneElement & {
  */
 export declare type IExplanationOfBenefitInsurance = fhir.IBackboneElement & {
     /**
+     * A patient may (will) have multiple insurance policies which provide reimbursement for healthcare services and products. For example, a person may also be covered by their spouse's policy and both appear in the list (and may be from the same insurer). This flag will be set to true for only one of the listed policies and that policy will be used for adjudicating this claim. Other claims would be created to request adjudication against the other listed policies.
+     */
+    focal: boolean | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.insurance.focal
+     */
+    _focal?: fhir.IFhirElement | undefined;
+    /**
      * Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system.
      */
     coverage: fhir.IReference | null;
     /**
-     * A patient may (will) have multiple insurance policies which provide reimbursement for healthcare services and products. For example, a person may also be covered by their spouse's policy and both appear in the list (and may be from the same insurer). This flag will be set to true for only one of the listed policies and that policy will be used for adjudicating this claim. Other claims would be created to request adjudication against the other listed policies.
-     */
-    focal: boolean | null;
-    _focal?: fhir.IFhirElement | undefined;
-    /**
      * This value is an alphanumeric string that may be provided over the phone, via text, via paper, or within a ClaimResponse resource and is not a FHIR Identifier.
      */
     preAuthRef?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.insurance.preAuthRef
+     */
     _preAuthRef?: fhir.IFhirElement[] | undefined;
 };
 /**
@@ -197,7 +268,14 @@ export declare type IExplanationOfBenefitAccident = fhir.IBackboneElement & {
      * The date of the accident has to precede the dates of the products and services but within a reasonable timeframe.
      */
     date?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.accident.date
+     */
     _date?: fhir.IFhirElement | undefined;
+    /**
+     * The type or context of the accident event for the purposes of selection of potential insurance coverages and determination of coordination between insurers.
+     */
+    type?: fhir.ICodeableConcept | undefined;
     /**
      * The physical location of the accident event.
      */
@@ -206,19 +284,11 @@ export declare type IExplanationOfBenefitAccident = fhir.IBackboneElement & {
      * The physical location of the accident event.
      */
     locationReference?: fhir.IReference | undefined;
-    /**
-     * The type or context of the accident event for the purposes of selection of potential insurance coverages and determination of coordination between insurers.
-     */
-    type?: fhir.ICodeableConcept | undefined;
 };
 /**
  * If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.
  */
 export declare type IExplanationOfBenefitItemAdjudication = fhir.IBackboneElement & {
-    /**
-     * For example, amount submitted, eligible amount, co-payment, and benefit payable.
-     */
-    amount?: fhir.IMoney | undefined;
     /**
      * For example, codes indicating: Co-Pay, deductible, eligible, benefit, tax, etc.
      */
@@ -228,9 +298,16 @@ export declare type IExplanationOfBenefitItemAdjudication = fhir.IBackboneElemen
      */
     reason?: fhir.ICodeableConcept | undefined;
     /**
+     * For example, amount submitted, eligible amount, co-payment, and benefit payable.
+     */
+    amount?: fhir.IMoney | undefined;
+    /**
      * For example: eligible percentage or co-payment percentage.
      */
     value?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.adjudication.value
+     */
     _value?: fhir.IFhirElement | undefined;
 };
 /**
@@ -238,35 +315,29 @@ export declare type IExplanationOfBenefitItemAdjudication = fhir.IBackboneElemen
  */
 export declare type IExplanationOfBenefitItemDetailSubDetail = fhir.IBackboneElement & {
     /**
-     * The adjudication results.
+     * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
      */
-    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.subDetail.sequence
+     */
+    _sequence?: fhir.IFhirElement | undefined;
+    /**
+     * The type of revenue or cost center providing the product and/or service.
+     */
+    revenue?: fhir.ICodeableConcept | undefined;
     /**
      * Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
      */
     category?: fhir.ICodeableConcept | undefined;
     /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
      */
-    factor?: number | undefined;
-    _factor?: fhir.IFhirElement | undefined;
+    productOrService: fhir.ICodeableConcept | null;
     /**
      * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours.
      */
     modifier?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
-     */
-    net?: fhir.IMoney | undefined;
-    /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
-     */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.IFhirElement[] | undefined;
-    /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
-     */
-    productOrService: fhir.ICodeableConcept | null;
     /**
      * For example: Neonatal program, child dental program or drug users recovery program.
      */
@@ -276,57 +347,66 @@ export declare type IExplanationOfBenefitItemDetailSubDetail = fhir.IBackboneEle
      */
     quantity?: fhir.IQuantity | undefined;
     /**
-     * The type of revenue or cost center providing the product and/or service.
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
      */
-    revenue?: fhir.ICodeableConcept | undefined;
+    unitPrice?: fhir.IMoney | undefined;
     /**
-     * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
      */
-    sequence: number | null;
-    _sequence?: fhir.IFhirElement | undefined;
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.subDetail.factor
+     */
+    _factor?: fhir.IFhirElement | undefined;
+    /**
+     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
+     */
+    net?: fhir.IMoney | undefined;
     /**
      * Unique Device Identifiers associated with this line item.
      */
     udi?: fhir.IReference[] | undefined;
     /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     * The numbers associated with notes below which apply to the adjudication of this item.
      */
-    unitPrice?: fhir.IMoney | undefined;
+    noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.subDetail.noteNumber
+     */
+    _noteNumber?: fhir.IFhirElement[] | undefined;
+    /**
+     * The adjudication results.
+     */
+    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
 };
 /**
  * Second-tier of goods and services.
  */
 export declare type IExplanationOfBenefitItemDetail = fhir.IBackboneElement & {
     /**
-     * The adjudication results.
+     * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
      */
-    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.sequence
+     */
+    _sequence?: fhir.IFhirElement | undefined;
+    /**
+     * The type of revenue or cost center providing the product and/or service.
+     */
+    revenue?: fhir.ICodeableConcept | undefined;
     /**
      * Examples include: Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
      */
     category?: fhir.ICodeableConcept | undefined;
     /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
      */
-    factor?: number | undefined;
-    _factor?: fhir.IFhirElement | undefined;
+    productOrService: fhir.ICodeableConcept | null;
     /**
      * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
      */
     modifier?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
-     */
-    net?: fhir.IMoney | undefined;
-    /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
-     */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.IFhirElement[] | undefined;
-    /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
-     */
-    productOrService: fhir.ICodeableConcept | null;
     /**
      * For example: Neonatal program, child dental program or drug users recovery program.
      */
@@ -336,71 +416,118 @@ export declare type IExplanationOfBenefitItemDetail = fhir.IBackboneElement & {
      */
     quantity?: fhir.IQuantity | undefined;
     /**
-     * The type of revenue or cost center providing the product and/or service.
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
      */
-    revenue?: fhir.ICodeableConcept | undefined;
+    unitPrice?: fhir.IMoney | undefined;
     /**
-     * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
      */
-    sequence: number | null;
-    _sequence?: fhir.IFhirElement | undefined;
+    factor?: number | undefined;
     /**
-     * Third-tier of goods and services.
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.factor
      */
-    subDetail?: fhir.IExplanationOfBenefitItemDetailSubDetail[] | undefined;
+    _factor?: fhir.IFhirElement | undefined;
+    /**
+     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
+     */
+    net?: fhir.IMoney | undefined;
     /**
      * Unique Device Identifiers associated with this line item.
      */
     udi?: fhir.IReference[] | undefined;
     /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     * The numbers associated with notes below which apply to the adjudication of this item.
      */
-    unitPrice?: fhir.IMoney | undefined;
+    noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.noteNumber
+     */
+    _noteNumber?: fhir.IFhirElement[] | undefined;
+    /**
+     * The adjudication results.
+     */
+    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
+     * Third-tier of goods and services.
+     */
+    subDetail?: fhir.IExplanationOfBenefitItemDetailSubDetail[] | undefined;
 };
 /**
  * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
  */
 export declare type IExplanationOfBenefitItem = fhir.IBackboneElement & {
     /**
-     * If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.
+     * A number to uniquely identify item entries.
      */
-    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
+    sequence: number | null;
     /**
-     * For example: Providing a tooth code, allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
+     * Extended properties for primitive element: ExplanationOfBenefit.item.sequence
      */
-    bodySite?: fhir.ICodeableConcept | undefined;
+    _sequence?: fhir.IFhirElement | undefined;
     /**
      * Care team members related to this service or product.
      */
     careTeamSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.careTeamSequence
+     */
     _careTeamSequence?: fhir.IFhirElement[] | undefined;
+    /**
+     * Diagnoses applicable for this service or product.
+     */
+    diagnosisSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.diagnosisSequence
+     */
+    _diagnosisSequence?: fhir.IFhirElement[] | undefined;
+    /**
+     * Procedures applicable for this service or product.
+     */
+    procedureSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.procedureSequence
+     */
+    _procedureSequence?: fhir.IFhirElement[] | undefined;
+    /**
+     * Exceptions, special conditions and supporting information applicable for this service or product.
+     */
+    informationSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.informationSequence
+     */
+    _informationSequence?: fhir.IFhirElement[] | undefined;
+    /**
+     * The type of revenue or cost center providing the product and/or service.
+     */
+    revenue?: fhir.ICodeableConcept | undefined;
     /**
      * Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
      */
     category?: fhir.ICodeableConcept | undefined;
     /**
-     * Second-tier of goods and services.
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
      */
-    detail?: fhir.IExplanationOfBenefitItemDetail[] | undefined;
+    productOrService: fhir.ICodeableConcept | null;
     /**
-     * Diagnoses applicable for this service or product.
+     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
      */
-    diagnosisSequence?: number[] | undefined;
-    _diagnosisSequence?: fhir.IFhirElement[] | undefined;
+    modifier?: fhir.ICodeableConcept[] | undefined;
     /**
-     * A billed item may include goods or services provided in multiple encounters.
+     * For example: Neonatal program, child dental program or drug users recovery program.
      */
-    encounter?: fhir.IReference[] | undefined;
+    programCode?: fhir.ICodeableConcept[] | undefined;
     /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     * The date or dates when the service or product was supplied, performed or completed.
      */
-    factor?: number | undefined;
-    _factor?: fhir.IFhirElement | undefined;
+    servicedDate?: string | undefined;
     /**
-     * Exceptions, special conditions and supporting information applicable for this service or product.
+     * Extended properties for primitive element: ExplanationOfBenefit.item.serviced[x]
      */
-    informationSequence?: number[] | undefined;
-    _informationSequence?: fhir.IFhirElement[] | undefined;
+    _servicedDate?: fhir.IFhirElement | undefined;
+    /**
+     * The date or dates when the service or product was supplied, performed or completed.
+     */
+    servicedPeriod?: fhir.IPeriod | undefined;
     /**
      * Where the product or service was provided.
      */
@@ -414,96 +541,70 @@ export declare type IExplanationOfBenefitItem = fhir.IBackboneElement & {
      */
     locationReference?: fhir.IReference | undefined;
     /**
-     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
+     * The number of repetitions of a service or product.
      */
-    modifier?: fhir.ICodeableConcept[] | undefined;
+    quantity?: fhir.IQuantity | undefined;
+    /**
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     */
+    unitPrice?: fhir.IMoney | undefined;
+    /**
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     */
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.factor
+     */
+    _factor?: fhir.IFhirElement | undefined;
     /**
      * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
      */
     net?: fhir.IMoney | undefined;
     /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
+     * Unique Device Identifiers associated with this line item.
      */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.IFhirElement[] | undefined;
+    udi?: fhir.IReference[] | undefined;
     /**
-     * Procedures applicable for this service or product.
+     * For example: Providing a tooth code, allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
      */
-    procedureSequence?: number[] | undefined;
-    _procedureSequence?: fhir.IFhirElement[] | undefined;
-    /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
-     */
-    productOrService: fhir.ICodeableConcept | null;
-    /**
-     * For example: Neonatal program, child dental program or drug users recovery program.
-     */
-    programCode?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * The number of repetitions of a service or product.
-     */
-    quantity?: fhir.IQuantity | undefined;
-    /**
-     * The type of revenue or cost center providing the product and/or service.
-     */
-    revenue?: fhir.ICodeableConcept | undefined;
-    /**
-     * A number to uniquely identify item entries.
-     */
-    sequence: number | null;
-    _sequence?: fhir.IFhirElement | undefined;
-    /**
-     * The date or dates when the service or product was supplied, performed or completed.
-     */
-    servicedDate?: string | undefined;
-    _servicedDate?: fhir.IFhirElement | undefined;
-    /**
-     * The date or dates when the service or product was supplied, performed or completed.
-     */
-    servicedPeriod?: fhir.IPeriod | undefined;
+    bodySite?: fhir.ICodeableConcept | undefined;
     /**
      * A region or surface of the bodySite, e.g. limb region or tooth surface(s).
      */
     subSite?: fhir.ICodeableConcept[] | undefined;
     /**
-     * Unique Device Identifiers associated with this line item.
+     * A billed item may include goods or services provided in multiple encounters.
      */
-    udi?: fhir.IReference[] | undefined;
+    encounter?: fhir.IReference[] | undefined;
     /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     * The numbers associated with notes below which apply to the adjudication of this item.
      */
-    unitPrice?: fhir.IMoney | undefined;
+    noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.noteNumber
+     */
+    _noteNumber?: fhir.IFhirElement[] | undefined;
+    /**
+     * If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.
+     */
+    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
+     * Second-tier of goods and services.
+     */
+    detail?: fhir.IExplanationOfBenefitItemDetail[] | undefined;
 };
 /**
  * The third-tier service adjudications for payor added services.
  */
 export declare type IExplanationOfBenefitAddItemDetailSubDetail = fhir.IBackboneElement & {
     /**
-     * The adjudication results.
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
      */
-    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
-    /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
-     */
-    factor?: number | undefined;
-    _factor?: fhir.IFhirElement | undefined;
+    productOrService: fhir.ICodeableConcept | null;
     /**
      * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
      */
     modifier?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
-     */
-    net?: fhir.IMoney | undefined;
-    /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
-     */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.IFhirElement[] | undefined;
-    /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
-     */
-    productOrService: fhir.ICodeableConcept | null;
     /**
      * The number of repetitions of a service or product.
      */
@@ -512,24 +613,59 @@ export declare type IExplanationOfBenefitAddItemDetailSubDetail = fhir.IBackbone
      * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
      */
     unitPrice?: fhir.IMoney | undefined;
+    /**
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     */
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detail.subDetail.factor
+     */
+    _factor?: fhir.IFhirElement | undefined;
+    /**
+     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
+     */
+    net?: fhir.IMoney | undefined;
+    /**
+     * The numbers associated with notes below which apply to the adjudication of this item.
+     */
+    noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detail.subDetail.noteNumber
+     */
+    _noteNumber?: fhir.IFhirElement[] | undefined;
+    /**
+     * The adjudication results.
+     */
+    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
 };
 /**
  * The second-tier service adjudications for payor added services.
  */
 export declare type IExplanationOfBenefitAddItemDetail = fhir.IBackboneElement & {
     /**
-     * The adjudication results.
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
      */
-    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
-    /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
-     */
-    factor?: number | undefined;
-    _factor?: fhir.IFhirElement | undefined;
+    productOrService: fhir.ICodeableConcept | null;
     /**
      * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
      */
     modifier?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * The number of repetitions of a service or product.
+     */
+    quantity?: fhir.IQuantity | undefined;
+    /**
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     */
+    unitPrice?: fhir.IMoney | undefined;
+    /**
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     */
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detail.factor
+     */
+    _factor?: fhir.IFhirElement | undefined;
     /**
      * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
      */
@@ -538,55 +674,75 @@ export declare type IExplanationOfBenefitAddItemDetail = fhir.IBackboneElement &
      * The numbers associated with notes below which apply to the adjudication of this item.
      */
     noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detail.noteNumber
+     */
     _noteNumber?: fhir.IFhirElement[] | undefined;
     /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
+     * The adjudication results.
      */
-    productOrService: fhir.ICodeableConcept | null;
-    /**
-     * The number of repetitions of a service or product.
-     */
-    quantity?: fhir.IQuantity | undefined;
+    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
     /**
      * The third-tier service adjudications for payor added services.
      */
     subDetail?: fhir.IExplanationOfBenefitAddItemDetailSubDetail[] | undefined;
-    /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
-     */
-    unitPrice?: fhir.IMoney | undefined;
 };
 /**
  * The first-tier service adjudications for payor added product or service lines.
  */
 export declare type IExplanationOfBenefitAddItem = fhir.IBackboneElement & {
     /**
-     * The adjudication results.
+     * Claim items which this service line is intended to replace.
      */
-    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
+    itemSequence?: number[] | undefined;
     /**
-     * For example, providing a tooth code allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.itemSequence
      */
-    bodySite?: fhir.ICodeableConcept | undefined;
-    /**
-     * The second-tier service adjudications for payor added services.
-     */
-    detail?: fhir.IExplanationOfBenefitAddItemDetail[] | undefined;
+    _itemSequence?: fhir.IFhirElement[] | undefined;
     /**
      * The sequence number of the details within the claim item which this line is intended to replace.
      */
     detailSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detailSequence
+     */
     _detailSequence?: fhir.IFhirElement[] | undefined;
     /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     * The sequence number of the sub-details woithin the details within the claim item which this line is intended to replace.
      */
-    factor?: number | undefined;
-    _factor?: fhir.IFhirElement | undefined;
+    subDetailSequence?: number[] | undefined;
     /**
-     * Claim items which this service line is intended to replace.
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.subDetailSequence
      */
-    itemSequence?: number[] | undefined;
-    _itemSequence?: fhir.IFhirElement[] | undefined;
+    _subDetailSequence?: fhir.IFhirElement[] | undefined;
+    /**
+     * The providers who are authorized for the services rendered to the patient.
+     */
+    provider?: fhir.IReference[] | undefined;
+    /**
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
+     */
+    productOrService: fhir.ICodeableConcept | null;
+    /**
+     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
+     */
+    modifier?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * For example: Neonatal program, child dental program or drug users recovery program.
+     */
+    programCode?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * The date or dates when the service or product was supplied, performed or completed.
+     */
+    servicedDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.serviced[x]
+     */
+    _servicedDate?: fhir.IFhirElement | undefined;
+    /**
+     * The date or dates when the service or product was supplied, performed or completed.
+     */
+    servicedPeriod?: fhir.IPeriod | undefined;
     /**
      * Where the product or service was provided.
      */
@@ -600,74 +756,71 @@ export declare type IExplanationOfBenefitAddItem = fhir.IBackboneElement & {
      */
     locationReference?: fhir.IReference | undefined;
     /**
-     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
+     * The number of repetitions of a service or product.
      */
-    modifier?: fhir.ICodeableConcept[] | undefined;
+    quantity?: fhir.IQuantity | undefined;
+    /**
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     */
+    unitPrice?: fhir.IMoney | undefined;
+    /**
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     */
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.factor
+     */
+    _factor?: fhir.IFhirElement | undefined;
     /**
      * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
      */
     net?: fhir.IMoney | undefined;
     /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
+     * For example, providing a tooth code allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
      */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.IFhirElement[] | undefined;
-    /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
-     */
-    productOrService: fhir.ICodeableConcept | null;
-    /**
-     * For example: Neonatal program, child dental program or drug users recovery program.
-     */
-    programCode?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * The providers who are authorized for the services rendered to the patient.
-     */
-    provider?: fhir.IReference[] | undefined;
-    /**
-     * The number of repetitions of a service or product.
-     */
-    quantity?: fhir.IQuantity | undefined;
-    /**
-     * The date or dates when the service or product was supplied, performed or completed.
-     */
-    servicedDate?: string | undefined;
-    _servicedDate?: fhir.IFhirElement | undefined;
-    /**
-     * The date or dates when the service or product was supplied, performed or completed.
-     */
-    servicedPeriod?: fhir.IPeriod | undefined;
-    /**
-     * The sequence number of the sub-details woithin the details within the claim item which this line is intended to replace.
-     */
-    subDetailSequence?: number[] | undefined;
-    _subDetailSequence?: fhir.IFhirElement[] | undefined;
+    bodySite?: fhir.ICodeableConcept | undefined;
     /**
      * A region or surface of the bodySite, e.g. limb region or tooth surface(s).
      */
     subSite?: fhir.ICodeableConcept[] | undefined;
     /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     * The numbers associated with notes below which apply to the adjudication of this item.
      */
-    unitPrice?: fhir.IMoney | undefined;
+    noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.noteNumber
+     */
+    _noteNumber?: fhir.IFhirElement[] | undefined;
+    /**
+     * The adjudication results.
+     */
+    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
+     * The second-tier service adjudications for payor added services.
+     */
+    detail?: fhir.IExplanationOfBenefitAddItemDetail[] | undefined;
 };
 /**
  * Totals for amounts submitted, co-pays, benefits payable etc.
  */
 export declare type IExplanationOfBenefitTotal = fhir.IBackboneElement & {
     /**
-     * Monetary total amount associated with the category.
-     */
-    amount: fhir.IMoney | null;
-    /**
      * For example, codes indicating: Co-Pay, deductible, eligible, benefit, tax, etc.
      */
     category: fhir.ICodeableConcept | null;
+    /**
+     * Monetary total amount associated with the category.
+     */
+    amount: fhir.IMoney | null;
 };
 /**
  * Payment details for the adjudication of the claim.
  */
 export declare type IExplanationOfBenefitPayment = fhir.IBackboneElement & {
+    /**
+     * Whether this represents partial or complete payment of the benefits payable.
+     */
+    type?: fhir.ICodeableConcept | undefined;
     /**
      * Insurers will deduct amounts owing from the provider (adjustment), such as a prior overpayment, from the amount owing to the provider (benefits payable) when payment is made to the provider.
      */
@@ -677,73 +830,90 @@ export declare type IExplanationOfBenefitPayment = fhir.IBackboneElement & {
      */
     adjustmentReason?: fhir.ICodeableConcept | undefined;
     /**
+     * Estimated date the payment will be issued or the actual issue date of payment.
+     */
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.payment.date
+     */
+    _date?: fhir.IFhirElement | undefined;
+    /**
      * Benefits payable less any payment adjustment.
      */
     amount?: fhir.IMoney | undefined;
     /**
-     * Estimated date the payment will be issued or the actual issue date of payment.
-     */
-    date?: string | undefined;
-    _date?: fhir.IFhirElement | undefined;
-    /**
      * For example: EFT number or check number.
      */
     identifier?: fhir.IIdentifier | undefined;
-    /**
-     * Whether this represents partial or complete payment of the benefits payable.
-     */
-    type?: fhir.ICodeableConcept | undefined;
 };
 /**
  * A note that describes or explains adjudication results in a human readable form.
  */
 export declare type IExplanationOfBenefitProcessNote = fhir.IBackboneElement & {
     /**
-     * Only required if the language is different from the resource language.
-     */
-    language?: fhir.ICodeableConcept | undefined;
-    /**
      * A number to uniquely identify a note entry.
      */
     number?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.processNote.number
+     */
     _number?: fhir.IFhirElement | undefined;
+    /**
+     * The business purpose of the note text.
+     */
+    type?: NoteTypeValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.processNote.type
+     */
+    _type?: fhir.IFhirElement | undefined;
     /**
      * The explanation or description associated with the processing.
      */
     text?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.processNote.text
+     */
     _text?: fhir.IFhirElement | undefined;
     /**
-     * The business purpose of the note text.
+     * Only required if the language is different from the resource language.
      */
-    type?: ExplanationOfBenefitProcessNoteTypeEnum | undefined;
-    _type?: fhir.IFhirElement | undefined;
+    language?: fhir.ICodeableConcept | undefined;
 };
 /**
  * Benefits Used to date.
  */
 export declare type IExplanationOfBenefitBenefitBalanceFinancial = fhir.IBackboneElement & {
     /**
+     * For example: deductible, visits, benefit amount.
+     */
+    type: fhir.ICodeableConcept | null;
+    /**
      * The quantity of the benefit which is permitted under the coverage.
      */
     allowedUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.financial.allowed[x]
+     */
     _allowedUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * The quantity of the benefit which is permitted under the coverage.
      */
     allowedString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.financial.allowed[x]
+     */
     _allowedString?: fhir.IFhirElement | undefined;
     /**
      * The quantity of the benefit which is permitted under the coverage.
      */
     allowedMoney?: fhir.IMoney | undefined;
     /**
-     * For example: deductible, visits, benefit amount.
-     */
-    type: fhir.ICodeableConcept | null;
-    /**
      * The quantity of the benefit which have been consumed to date.
      */
     usedUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.financial.used[x]
+     */
     _usedUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * The quantity of the benefit which have been consumed to date.
@@ -759,36 +929,45 @@ export declare type IExplanationOfBenefitBenefitBalance = fhir.IBackboneElement 
      */
     category: fhir.ICodeableConcept | null;
     /**
-     * For example, 'DENT2 covers 100% of basic, 50% of major but excludes Ortho, Implants and Cosmetic services'.
-     */
-    description?: string | undefined;
-    _description?: fhir.IFhirElement | undefined;
-    /**
      * True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage.
      */
     excluded?: boolean | undefined;
-    _excluded?: fhir.IFhirElement | undefined;
     /**
-     * Benefits Used to date.
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.excluded
      */
-    financial?: fhir.IExplanationOfBenefitBenefitBalanceFinancial[] | undefined;
+    _excluded?: fhir.IFhirElement | undefined;
     /**
      * For example: MED01, or DENT2.
      */
     name?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.name
+     */
     _name?: fhir.IFhirElement | undefined;
+    /**
+     * For example, 'DENT2 covers 100% of basic, 50% of major but excludes Ortho, Implants and Cosmetic services'.
+     */
+    description?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.description
+     */
+    _description?: fhir.IFhirElement | undefined;
     /**
      * Is a flag to indicate whether the benefits refer to in-network providers or out-of-network providers.
      */
     network?: fhir.ICodeableConcept | undefined;
     /**
+     * Indicates if the benefits apply to an individual or to the family.
+     */
+    unit?: fhir.ICodeableConcept | undefined;
+    /**
      * The term or period of the values such as 'maximum lifetime benefit' or 'maximum annual visits'.
      */
     term?: fhir.ICodeableConcept | undefined;
     /**
-     * Indicates if the benefits apply to an individual or to the family.
+     * Benefits Used to date.
      */
-    unit?: fhir.ICodeableConcept | undefined;
+    financial?: fhir.IExplanationOfBenefitBenefitBalanceFinancial[] | undefined;
 };
 /**
  * This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
@@ -799,33 +978,97 @@ export declare type IExplanationOfBenefit = fhir.IDomainResource & {
      */
     resourceType: "ExplanationOfBenefit";
     /**
-     * Details of a accident which resulted in injuries which required the products and services listed in the claim.
+     * A unique identifier assigned to this explanation of benefit.
      */
-    accident?: fhir.IExplanationOfBenefitAccident | undefined;
+    identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * The first-tier service adjudications for payor added product or service lines.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    addItem?: fhir.IExplanationOfBenefitAddItem[] | undefined;
+    status: ExplanationofbenefitStatusValueSetEnum | null;
     /**
-     * The adjudication results which are presented at the header level rather than at the line-item or add-item levels.
+     * Extended properties for primitive element: ExplanationOfBenefit.status
      */
-    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
+    _status?: fhir.IFhirElement | undefined;
     /**
-     * Balance by Benefit Category.
+     * The majority of jurisdictions use: oral, pharmacy, vision, professional and institutional, or variants on those terms, as the general styles of claims. The valueset is extensible to accommodate other jurisdictional requirements.
      */
-    benefitBalance?: fhir.IExplanationOfBenefitBenefitBalance[] | undefined;
+    type: fhir.ICodeableConcept | null;
     /**
-     * Not applicable when use=claim.
+     * This may contain the local bill type codes such as the US UB-04 bill type code.
      */
-    benefitPeriod?: fhir.IPeriod | undefined;
+    subType?: fhir.ICodeableConcept | undefined;
+    /**
+     * A code to indicate whether the nature of the request is: to request adjudication of products and services previously rendered; or requesting authorization and adjudication for provision in the future; or requesting the non-binding adjudication of the listed products and services which could be provided in the future.
+     */
+    use: ClaimUseValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.use
+     */
+    _use?: fhir.IFhirElement | undefined;
+    /**
+     * The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought.
+     */
+    patient: fhir.IReference | null;
     /**
      * Typically this would be today or in the past for a claim, and today or in the future for preauthorizations and prodeterminations. Typically line item dates of service should fall within the billing period if one is specified.
      */
     billablePeriod?: fhir.IPeriod | undefined;
     /**
-     * The members of the team who provided the products and services.
+     * This field is independent of the date of creation of the resource as it may reflect the creation date of a source document prior to digitization. Typically for claims all services must be completed as of this date.
      */
-    careTeam?: fhir.IExplanationOfBenefitCareTeam[] | undefined;
+    created: string | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.created
+     */
+    _created?: fhir.IFhirElement | undefined;
+    /**
+     * Individual who created the claim, predetermination or preauthorization.
+     */
+    enterer?: fhir.IReference | undefined;
+    /**
+     * The party responsible for authorization, adjudication and reimbursement.
+     */
+    insurer: fhir.IReference | null;
+    /**
+     * Typically this field would be 1..1 where this party is responsible for the claim but not necessarily professionally responsible for the provision of the individual products and services listed below.
+     */
+    provider: fhir.IReference | null;
+    /**
+     * If a claim processor is unable to complete the processing as per the priority then they should generate and error and not process the request.
+     */
+    priority?: fhir.ICodeableConcept | undefined;
+    /**
+     * This field is only used for preauthorizations.
+     */
+    fundsReserveRequested?: fhir.ICodeableConcept | undefined;
+    /**
+     * Fund would be release by a future claim quoting the preAuthRef of this response. Examples of values include: provider, patient, none.
+     */
+    fundsReserve?: fhir.ICodeableConcept | undefined;
+    /**
+     * For example,  for the original treatment and follow-up exams.
+     */
+    related?: fhir.IExplanationOfBenefitRelated[] | undefined;
+    /**
+     * Prescription to support the dispensing of pharmacy, device or vision products.
+     */
+    prescription?: fhir.IReference | undefined;
+    /**
+     * For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.
+     */
+    originalPrescription?: fhir.IReference | undefined;
+    /**
+     * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.
+     */
+    payee?: fhir.IExplanationOfBenefitPayee | undefined;
+    /**
+     * The referral resource which lists the date, practitioner, reason and other supporting information.
+     */
+    referral?: fhir.IReference | undefined;
+    /**
+     * Facility where the services were provided.
+     */
+    facility?: fhir.IReference | undefined;
     /**
      * The business identifier for the instance of the adjudication request: claim predetermination or preauthorization.
      */
@@ -835,246 +1078,221 @@ export declare type IExplanationOfBenefit = fhir.IDomainResource & {
      */
     claimResponse?: fhir.IReference | undefined;
     /**
-     * This field is independent of the date of creation of the resource as it may reflect the creation date of a source document prior to digitization. Typically for claims all services must be completed as of this date.
+     * The resource may be used to indicate that: the request has been held (queued) for processing; that it has been processed and errors found (error); that no errors were found and that some of the adjudication has been undertaken (partial) or that all of the adjudication has been undertaken (complete).
      */
-    created: string | null;
-    _created?: fhir.IFhirElement | undefined;
+    outcome: RemittanceOutcomeValueSetEnum | null;
     /**
-     * Information about diagnoses relevant to the claim items.
+     * Extended properties for primitive element: ExplanationOfBenefit.outcome
      */
-    diagnosis?: fhir.IExplanationOfBenefitDiagnosis[] | undefined;
+    _outcome?: fhir.IFhirElement | undefined;
     /**
      * A human readable description of the status of the adjudication.
      */
     disposition?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.disposition
+     */
     _disposition?: fhir.IFhirElement | undefined;
-    /**
-     * Individual who created the claim, predetermination or preauthorization.
-     */
-    enterer?: fhir.IReference | undefined;
-    /**
-     * Facility where the services were provided.
-     */
-    facility?: fhir.IReference | undefined;
-    /**
-     * Needed to permit insurers to include the actual form.
-     */
-    form?: fhir.IAttachment | undefined;
-    /**
-     * May be needed to identify specific jurisdictional forms.
-     */
-    formCode?: fhir.ICodeableConcept | undefined;
-    /**
-     * Fund would be release by a future claim quoting the preAuthRef of this response. Examples of values include: provider, patient, none.
-     */
-    fundsReserve?: fhir.ICodeableConcept | undefined;
-    /**
-     * This field is only used for preauthorizations.
-     */
-    fundsReserveRequested?: fhir.ICodeableConcept | undefined;
-    /**
-     * A unique identifier assigned to this explanation of benefit.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'Coverage.subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
-     */
-    insurance: fhir.IExplanationOfBenefitInsurance[] | null;
-    /**
-     * The party responsible for authorization, adjudication and reimbursement.
-     */
-    insurer: fhir.IReference | null;
-    /**
-     * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
-     */
-    item?: fhir.IExplanationOfBenefitItem[] | undefined;
-    /**
-     * For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.
-     */
-    originalPrescription?: fhir.IReference | undefined;
-    /**
-     * The resource may be used to indicate that: the request has been held (queued) for processing; that it has been processed and errors found (error); that no errors were found and that some of the adjudication has been undertaken (partial) or that all of the adjudication has been undertaken (complete).
-     */
-    outcome: ExplanationOfBenefitOutcomeEnum | null;
-    _outcome?: fhir.IFhirElement | undefined;
-    /**
-     * The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought.
-     */
-    patient: fhir.IReference | null;
-    /**
-     * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.
-     */
-    payee?: fhir.IExplanationOfBenefitPayee | undefined;
-    /**
-     * Payment details for the adjudication of the claim.
-     */
-    payment?: fhir.IExplanationOfBenefitPayment | undefined;
     /**
      * This value is only present on preauthorization adjudications.
      */
     preAuthRef?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.preAuthRef
+     */
     _preAuthRef?: fhir.IFhirElement[] | undefined;
     /**
      * This value is only present on preauthorization adjudications.
      */
     preAuthRefPeriod?: fhir.IPeriod[] | undefined;
     /**
-     * This indicates the relative order of a series of EOBs related to different coverages for the same suite of services.
+     * The members of the team who provided the products and services.
      */
-    precedence?: number | undefined;
-    _precedence?: fhir.IFhirElement | undefined;
-    /**
-     * Prescription to support the dispensing of pharmacy, device or vision products.
-     */
-    prescription?: fhir.IReference | undefined;
-    /**
-     * If a claim processor is unable to complete the processing as per the priority then they should generate and error and not process the request.
-     */
-    priority?: fhir.ICodeableConcept | undefined;
-    /**
-     * Procedures performed on the patient relevant to the billing items with the claim.
-     */
-    procedure?: fhir.IExplanationOfBenefitProcedure[] | undefined;
-    /**
-     * A note that describes or explains adjudication results in a human readable form.
-     */
-    processNote?: fhir.IExplanationOfBenefitProcessNote[] | undefined;
-    /**
-     * Typically this field would be 1..1 where this party is responsible for the claim but not necessarily professionally responsible for the provision of the individual products and services listed below.
-     */
-    provider: fhir.IReference | null;
-    /**
-     * The referral resource which lists the date, practitioner, reason and other supporting information.
-     */
-    referral?: fhir.IReference | undefined;
-    /**
-     * For example,  for the original treatment and follow-up exams.
-     */
-    related?: fhir.IExplanationOfBenefitRelated[] | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-     */
-    status: ExplanationOfBenefitStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * This may contain the local bill type codes such as the US UB-04 bill type code.
-     */
-    subType?: fhir.ICodeableConcept | undefined;
+    careTeam?: fhir.IExplanationOfBenefitCareTeam[] | undefined;
     /**
      * Often there are multiple jurisdiction specific valuesets which are required.
      */
     supportingInfo?: fhir.IExplanationOfBenefitSupportingInfo[] | undefined;
     /**
+     * Information about diagnoses relevant to the claim items.
+     */
+    diagnosis?: fhir.IExplanationOfBenefitDiagnosis[] | undefined;
+    /**
+     * Procedures performed on the patient relevant to the billing items with the claim.
+     */
+    procedure?: fhir.IExplanationOfBenefitProcedure[] | undefined;
+    /**
+     * This indicates the relative order of a series of EOBs related to different coverages for the same suite of services.
+     */
+    precedence?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.precedence
+     */
+    _precedence?: fhir.IFhirElement | undefined;
+    /**
+     * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'Coverage.subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
+     */
+    insurance: fhir.IExplanationOfBenefitInsurance[] | null;
+    /**
+     * Details of a accident which resulted in injuries which required the products and services listed in the claim.
+     */
+    accident?: fhir.IExplanationOfBenefitAccident | undefined;
+    /**
+     * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
+     */
+    item?: fhir.IExplanationOfBenefitItem[] | undefined;
+    /**
+     * The first-tier service adjudications for payor added product or service lines.
+     */
+    addItem?: fhir.IExplanationOfBenefitAddItem[] | undefined;
+    /**
+     * The adjudication results which are presented at the header level rather than at the line-item or add-item levels.
+     */
+    adjudication?: fhir.IExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
      * Totals for amounts submitted, co-pays, benefits payable etc.
      */
     total?: fhir.IExplanationOfBenefitTotal[] | undefined;
     /**
-     * The majority of jurisdictions use: oral, pharmacy, vision, professional and institutional, or variants on those terms, as the general styles of claims. The valueset is extensible to accommodate other jurisdictional requirements.
+     * Payment details for the adjudication of the claim.
      */
-    type: fhir.ICodeableConcept | null;
+    payment?: fhir.IExplanationOfBenefitPayment | undefined;
     /**
-     * A code to indicate whether the nature of the request is: to request adjudication of products and services previously rendered; or requesting authorization and adjudication for provision in the future; or requesting the non-binding adjudication of the listed products and services which could be provided in the future.
+     * May be needed to identify specific jurisdictional forms.
      */
-    use: ExplanationOfBenefitUseEnum | null;
-    _use?: fhir.IFhirElement | undefined;
+    formCode?: fhir.ICodeableConcept | undefined;
+    /**
+     * Needed to permit insurers to include the actual form.
+     */
+    form?: fhir.IAttachment | undefined;
+    /**
+     * A note that describes or explains adjudication results in a human readable form.
+     */
+    processNote?: fhir.IExplanationOfBenefitProcessNote[] | undefined;
+    /**
+     * Not applicable when use=claim.
+     */
+    benefitPeriod?: fhir.IPeriod | undefined;
+    /**
+     * Balance by Benefit Category.
+     */
+    benefitBalance?: fhir.IExplanationOfBenefitBenefitBalance[] | undefined;
 };
 /**
  * For example,  for the original treatment and follow-up exams.
  */
-export declare class ExplanationOfBenefitRelated extends fhir.BackboneElement implements fhir.IExplanationOfBenefitRelated {
+export declare class ExplanationOfBenefitRelated extends fhir.BackboneElement implements IExplanationOfBenefitRelated {
     /**
      * Reference to a related claim.
      */
     claim?: fhir.Reference | undefined;
     /**
-     * For example, Property/Casualty insurer claim number or Workers Compensation case number.
-     */
-    reference?: fhir.Identifier | undefined;
-    /**
      * For example, prior claim or umbrella.
      */
     relationship?: fhir.CodeableConcept | undefined;
     /**
+     * For example, Property/Casualty insurer claim number or Workers Compensation case number.
+     */
+    reference?: fhir.Identifier | undefined;
+    /**
      * Default constructor for ExplanationOfBenefitRelated - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitRelated>);
+    constructor(source?: Partial<IExplanationOfBenefitRelated>);
     /**
-     * Check if the current ExplanationOfBenefitRelated contains all required elements.
+     * Example-bound Value Set for relationship
      */
-    checkRequiredElements(): string[];
+    relationshipExampleValueSet(): RelatedClaimRelationshipValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitRelated from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitRelated): ExplanationOfBenefitRelated;
+    doModelValidation(): [string, string][];
 }
 /**
  * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.
  */
-export declare class ExplanationOfBenefitPayee extends fhir.BackboneElement implements fhir.IExplanationOfBenefitPayee {
-    /**
-     * Not required if the payee is 'subscriber' or 'provider'.
-     */
-    party?: fhir.Reference | undefined;
+export declare class ExplanationOfBenefitPayee extends fhir.BackboneElement implements IExplanationOfBenefitPayee {
     /**
      * Type of Party to be reimbursed: Subscriber, provider, other.
      */
     type?: fhir.CodeableConcept | undefined;
     /**
+     * Not required if the payee is 'subscriber' or 'provider'.
+     */
+    party?: fhir.Reference | undefined;
+    /**
      * Default constructor for ExplanationOfBenefitPayee - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitPayee>);
+    constructor(source?: Partial<IExplanationOfBenefitPayee>);
     /**
-     * Check if the current ExplanationOfBenefitPayee contains all required elements.
+     * Example-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeExampleValueSet(): PayeetypeValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitPayee from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitPayee): ExplanationOfBenefitPayee;
+    doModelValidation(): [string, string][];
 }
 /**
  * The members of the team who provided the products and services.
  */
-export declare class ExplanationOfBenefitCareTeam extends fhir.BackboneElement implements fhir.IExplanationOfBenefitCareTeam {
+export declare class ExplanationOfBenefitCareTeam extends fhir.BackboneElement implements IExplanationOfBenefitCareTeam {
+    /**
+     * A number to uniquely identify care team entries.
+     */
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.careTeam.sequence
+     */
+    _sequence?: fhir.FhirElement | undefined;
     /**
      * Member of the team who provided the product or service.
      */
     provider: fhir.Reference | null;
     /**
-     * The qualification of the practitioner which is applicable for this service.
-     */
-    qualification?: fhir.CodeableConcept | undefined;
-    /**
      * Responsible might not be required when there is only a single provider listed.
      */
     responsible?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.careTeam.responsible
+     */
     _responsible?: fhir.FhirElement | undefined;
     /**
      * Role might not be required when there is only a single provider listed.
      */
     role?: fhir.CodeableConcept | undefined;
     /**
-     * A number to uniquely identify care team entries.
+     * The qualification of the practitioner which is applicable for this service.
      */
-    sequence: number | null;
-    _sequence?: fhir.FhirElement | undefined;
+    qualification?: fhir.CodeableConcept | undefined;
     /**
      * Default constructor for ExplanationOfBenefitCareTeam - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitCareTeam>);
+    constructor(source?: Partial<IExplanationOfBenefitCareTeam>);
     /**
-     * Check if the current ExplanationOfBenefitCareTeam contains all required elements.
+     * Example-bound Value Set for role
      */
-    checkRequiredElements(): string[];
+    roleExampleValueSet(): ClaimCareteamroleValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitCareTeam from an object that MUST contain all required elements.
+     * Example-bound Value Set for qualification
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitCareTeam): ExplanationOfBenefitCareTeam;
+    qualificationExampleValueSet(): ProviderQualificationValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * Often there are multiple jurisdiction specific valuesets which are required.
  */
-export declare class ExplanationOfBenefitSupportingInfo extends fhir.BackboneElement implements fhir.IExplanationOfBenefitSupportingInfo {
+export declare class ExplanationOfBenefitSupportingInfo extends fhir.BackboneElement implements IExplanationOfBenefitSupportingInfo {
+    /**
+     * A number to uniquely identify supporting information entries.
+     */
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.supportingInfo.sequence
+     */
+    _sequence?: fhir.FhirElement | undefined;
     /**
      * This may contain a category for the local bill type codes.
      */
@@ -1084,18 +1302,12 @@ export declare class ExplanationOfBenefitSupportingInfo extends fhir.BackboneEle
      */
     code?: fhir.CodeableConcept | undefined;
     /**
-     * For example: the reason for the additional stay, or why a tooth is  missing.
-     */
-    reason?: fhir.Coding | undefined;
-    /**
-     * A number to uniquely identify supporting information entries.
-     */
-    sequence: number | null;
-    _sequence?: fhir.FhirElement | undefined;
-    /**
      * The date when or period to which this information refers.
      */
     timingDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.supportingInfo.timing[x]
+     */
     _timingDate?: fhir.FhirElement | undefined;
     /**
      * The date when or period to which this information refers.
@@ -1105,11 +1317,17 @@ export declare class ExplanationOfBenefitSupportingInfo extends fhir.BackboneEle
      * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.supportingInfo.value[x]
+     */
     _valueBoolean?: fhir.FhirElement | undefined;
     /**
      * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.supportingInfo.value[x]
+     */
     _valueString?: fhir.FhirElement | undefined;
     /**
      * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
@@ -1124,22 +1342,42 @@ export declare class ExplanationOfBenefitSupportingInfo extends fhir.BackboneEle
      */
     valueReference?: fhir.Reference | undefined;
     /**
+     * For example: the reason for the additional stay, or why a tooth is  missing.
+     */
+    reason?: fhir.Coding | undefined;
+    /**
      * Default constructor for ExplanationOfBenefitSupportingInfo - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitSupportingInfo>);
+    constructor(source?: Partial<IExplanationOfBenefitSupportingInfo>);
     /**
-     * Check if the current ExplanationOfBenefitSupportingInfo contains all required elements.
+     * Example-bound Value Set for category
      */
-    checkRequiredElements(): string[];
+    categoryExampleValueSet(): ClaimInformationcategoryValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitSupportingInfo from an object that MUST contain all required elements.
+     * Example-bound Value Set for code
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitSupportingInfo): ExplanationOfBenefitSupportingInfo;
+    codeExampleValueSet(): ClaimExceptionValueSetType;
+    /**
+     * Example-bound Value Set for reason
+     */
+    reasonExampleValueSet(): MissingToothReasonValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * Information about diagnoses relevant to the claim items.
  */
-export declare class ExplanationOfBenefitDiagnosis extends fhir.BackboneElement implements fhir.IExplanationOfBenefitDiagnosis {
+export declare class ExplanationOfBenefitDiagnosis extends fhir.BackboneElement implements IExplanationOfBenefitDiagnosis {
+    /**
+     * Diagnosis are presented in list order to their expected importance: primary, secondary, etc.
+     */
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.diagnosis.sequence
+     */
+    _sequence?: fhir.FhirElement | undefined;
     /**
      * The nature of illness or problem in a coded form or as a reference to an external defined Condition.
      */
@@ -1149,6 +1387,10 @@ export declare class ExplanationOfBenefitDiagnosis extends fhir.BackboneElement 
      */
     diagnosisReference?: fhir.Reference | undefined;
     /**
+     * For example: admitting, primary, secondary, discharge.
+     */
+    type?: fhir.CodeableConcept[] | undefined;
+    /**
      * Indication of whether the diagnosis was present on admission to a facility.
      */
     onAdmission?: fhir.CodeableConcept | undefined;
@@ -1157,35 +1399,49 @@ export declare class ExplanationOfBenefitDiagnosis extends fhir.BackboneElement 
      */
     packageCode?: fhir.CodeableConcept | undefined;
     /**
-     * Diagnosis are presented in list order to their expected importance: primary, secondary, etc.
-     */
-    sequence: number | null;
-    _sequence?: fhir.FhirElement | undefined;
-    /**
-     * For example: admitting, primary, secondary, discharge.
-     */
-    type?: fhir.CodeableConcept[] | undefined;
-    /**
      * Default constructor for ExplanationOfBenefitDiagnosis - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitDiagnosis>);
+    constructor(source?: Partial<IExplanationOfBenefitDiagnosis>);
     /**
-     * Check if the current ExplanationOfBenefitDiagnosis contains all required elements.
+     * Example-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeExampleValueSet(): ExDiagnosistypeValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitDiagnosis from an object that MUST contain all required elements.
+     * Example-bound Value Set for onAdmission
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitDiagnosis): ExplanationOfBenefitDiagnosis;
+    onAdmissionExampleValueSet(): ExDiagnosisOnAdmissionValueSetType;
+    /**
+     * Example-bound Value Set for packageCode
+     */
+    packageCodeExampleValueSet(): ExDiagnosisrelatedgroupValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * Procedures performed on the patient relevant to the billing items with the claim.
  */
-export declare class ExplanationOfBenefitProcedure extends fhir.BackboneElement implements fhir.IExplanationOfBenefitProcedure {
+export declare class ExplanationOfBenefitProcedure extends fhir.BackboneElement implements IExplanationOfBenefitProcedure {
+    /**
+     * A number to uniquely identify procedure entries.
+     */
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.procedure.sequence
+     */
+    _sequence?: fhir.FhirElement | undefined;
+    /**
+     * When the condition was observed or the relative ranking.
+     */
+    type?: fhir.CodeableConcept[] | undefined;
     /**
      * Date and optionally time the procedure was performed.
      */
     date?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.procedure.date
+     */
     _date?: fhir.FhirElement | undefined;
     /**
      * The code or reference to a Procedure resource which identifies the clinical intervention performed.
@@ -1196,71 +1452,79 @@ export declare class ExplanationOfBenefitProcedure extends fhir.BackboneElement 
      */
     procedureReference?: fhir.Reference | undefined;
     /**
-     * A number to uniquely identify procedure entries.
-     */
-    sequence: number | null;
-    _sequence?: fhir.FhirElement | undefined;
-    /**
-     * When the condition was observed or the relative ranking.
-     */
-    type?: fhir.CodeableConcept[] | undefined;
-    /**
      * Unique Device Identifiers associated with this line item.
      */
     udi?: fhir.Reference[] | undefined;
     /**
      * Default constructor for ExplanationOfBenefitProcedure - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitProcedure>);
+    constructor(source?: Partial<IExplanationOfBenefitProcedure>);
     /**
-     * Check if the current ExplanationOfBenefitProcedure contains all required elements.
+     * Example-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeExampleValueSet(): ExProcedureTypeValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitProcedure from an object that MUST contain all required elements.
+     * Example-bound Value Set for procedureCodeableConcept
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitProcedure): ExplanationOfBenefitProcedure;
+    procedureCodeableConceptExampleValueSet(): Icd10ProceduresValueSetType;
+    /**
+     * Example-bound Value Set for procedureReference
+     */
+    procedureReferenceExampleValueSet(): Icd10ProceduresValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'Coverage.subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
  */
-export declare class ExplanationOfBenefitInsurance extends fhir.BackboneElement implements fhir.IExplanationOfBenefitInsurance {
+export declare class ExplanationOfBenefitInsurance extends fhir.BackboneElement implements IExplanationOfBenefitInsurance {
+    /**
+     * A patient may (will) have multiple insurance policies which provide reimbursement for healthcare services and products. For example, a person may also be covered by their spouse's policy and both appear in the list (and may be from the same insurer). This flag will be set to true for only one of the listed policies and that policy will be used for adjudicating this claim. Other claims would be created to request adjudication against the other listed policies.
+     */
+    focal: boolean | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.insurance.focal
+     */
+    _focal?: fhir.FhirElement | undefined;
     /**
      * Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system.
      */
     coverage: fhir.Reference | null;
     /**
-     * A patient may (will) have multiple insurance policies which provide reimbursement for healthcare services and products. For example, a person may also be covered by their spouse's policy and both appear in the list (and may be from the same insurer). This flag will be set to true for only one of the listed policies and that policy will be used for adjudicating this claim. Other claims would be created to request adjudication against the other listed policies.
-     */
-    focal: boolean | null;
-    _focal?: fhir.FhirElement | undefined;
-    /**
      * This value is an alphanumeric string that may be provided over the phone, via text, via paper, or within a ClaimResponse resource and is not a FHIR Identifier.
      */
     preAuthRef?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.insurance.preAuthRef
+     */
     _preAuthRef?: fhir.FhirElement[] | undefined;
     /**
      * Default constructor for ExplanationOfBenefitInsurance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitInsurance>);
+    constructor(source?: Partial<IExplanationOfBenefitInsurance>);
     /**
-     * Check if the current ExplanationOfBenefitInsurance contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ExplanationOfBenefitInsurance from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IExplanationOfBenefitInsurance): ExplanationOfBenefitInsurance;
+    doModelValidation(): [string, string][];
 }
 /**
  * Details of a accident which resulted in injuries which required the products and services listed in the claim.
  */
-export declare class ExplanationOfBenefitAccident extends fhir.BackboneElement implements fhir.IExplanationOfBenefitAccident {
+export declare class ExplanationOfBenefitAccident extends fhir.BackboneElement implements IExplanationOfBenefitAccident {
     /**
      * The date of the accident has to precede the dates of the products and services but within a reasonable timeframe.
      */
     date?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.accident.date
+     */
     _date?: fhir.FhirElement | undefined;
+    /**
+     * The type or context of the accident event for the purposes of selection of potential insurance coverages and determination of coordination between insurers.
+     */
+    type?: fhir.CodeableConcept | undefined;
     /**
      * The physical location of the accident event.
      */
@@ -1270,30 +1534,22 @@ export declare class ExplanationOfBenefitAccident extends fhir.BackboneElement i
      */
     locationReference?: fhir.Reference | undefined;
     /**
-     * The type or context of the accident event for the purposes of selection of potential insurance coverages and determination of coordination between insurers.
-     */
-    type?: fhir.CodeableConcept | undefined;
-    /**
      * Default constructor for ExplanationOfBenefitAccident - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitAccident>);
+    constructor(source?: Partial<IExplanationOfBenefitAccident>);
     /**
-     * Check if the current ExplanationOfBenefitAccident contains all required elements.
+     * Extensible-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeExtensibleValueSet(): V3ActIncidentCodeValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitAccident from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitAccident): ExplanationOfBenefitAccident;
+    doModelValidation(): [string, string][];
 }
 /**
  * If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.
  */
-export declare class ExplanationOfBenefitItemAdjudication extends fhir.BackboneElement implements fhir.IExplanationOfBenefitItemAdjudication {
-    /**
-     * For example, amount submitted, eligible amount, co-payment, and benefit payable.
-     */
-    amount?: fhir.Money | undefined;
+export declare class ExplanationOfBenefitItemAdjudication extends fhir.BackboneElement implements IExplanationOfBenefitItemAdjudication {
     /**
      * For example, codes indicating: Co-Pay, deductible, eligible, benefit, tax, etc.
      */
@@ -1303,58 +1559,63 @@ export declare class ExplanationOfBenefitItemAdjudication extends fhir.BackboneE
      */
     reason?: fhir.CodeableConcept | undefined;
     /**
+     * For example, amount submitted, eligible amount, co-payment, and benefit payable.
+     */
+    amount?: fhir.Money | undefined;
+    /**
      * For example: eligible percentage or co-payment percentage.
      */
     value?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.adjudication.value
+     */
     _value?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ExplanationOfBenefitItemAdjudication - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitItemAdjudication>);
+    constructor(source?: Partial<IExplanationOfBenefitItemAdjudication>);
     /**
-     * Check if the current ExplanationOfBenefitItemAdjudication contains all required elements.
+     * Example-bound Value Set for category
      */
-    checkRequiredElements(): string[];
+    categoryExampleValueSet(): AdjudicationValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitItemAdjudication from an object that MUST contain all required elements.
+     * Example-bound Value Set for reason
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitItemAdjudication): ExplanationOfBenefitItemAdjudication;
+    reasonExampleValueSet(): AdjudicationReasonValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * Third-tier of goods and services.
  */
-export declare class ExplanationOfBenefitItemDetailSubDetail extends fhir.BackboneElement implements fhir.IExplanationOfBenefitItemDetailSubDetail {
+export declare class ExplanationOfBenefitItemDetailSubDetail extends fhir.BackboneElement implements IExplanationOfBenefitItemDetailSubDetail {
     /**
-     * The adjudication results.
+     * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
      */
-    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.subDetail.sequence
+     */
+    _sequence?: fhir.FhirElement | undefined;
+    /**
+     * The type of revenue or cost center providing the product and/or service.
+     */
+    revenue?: fhir.CodeableConcept | undefined;
     /**
      * Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
      */
     category?: fhir.CodeableConcept | undefined;
     /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
      */
-    factor?: number | undefined;
-    _factor?: fhir.FhirElement | undefined;
+    productOrService: fhir.CodeableConcept | null;
     /**
      * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours.
      */
     modifier?: fhir.CodeableConcept[] | undefined;
     /**
-     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
-     */
-    net?: fhir.Money | undefined;
-    /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
-     */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.FhirElement[] | undefined;
-    /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
-     */
-    productOrService: fhir.CodeableConcept | null;
-    /**
      * For example: Neonatal program, child dental program or drug users recovery program.
      */
     programCode?: fhir.CodeableConcept[] | undefined;
@@ -1363,69 +1624,94 @@ export declare class ExplanationOfBenefitItemDetailSubDetail extends fhir.Backbo
      */
     quantity?: fhir.Quantity | undefined;
     /**
-     * The type of revenue or cost center providing the product and/or service.
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
      */
-    revenue?: fhir.CodeableConcept | undefined;
+    unitPrice?: fhir.Money | undefined;
     /**
-     * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
      */
-    sequence: number | null;
-    _sequence?: fhir.FhirElement | undefined;
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.subDetail.factor
+     */
+    _factor?: fhir.FhirElement | undefined;
+    /**
+     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
+     */
+    net?: fhir.Money | undefined;
     /**
      * Unique Device Identifiers associated with this line item.
      */
     udi?: fhir.Reference[] | undefined;
     /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     * The numbers associated with notes below which apply to the adjudication of this item.
      */
-    unitPrice?: fhir.Money | undefined;
+    noteNumber?: number[] | undefined;
     /**
-     * Default constructor for ExplanationOfBenefitItemDetailSubDetail - initializes any required elements to null if a value is not provided.
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.subDetail.noteNumber
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitItemDetailSubDetail>);
-    /**
-     * Check if the current ExplanationOfBenefitItemDetailSubDetail contains all required elements.
-     */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ExplanationOfBenefitItemDetailSubDetail from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IExplanationOfBenefitItemDetailSubDetail): ExplanationOfBenefitItemDetailSubDetail;
-}
-/**
- * Second-tier of goods and services.
- */
-export declare class ExplanationOfBenefitItemDetail extends fhir.BackboneElement implements fhir.IExplanationOfBenefitItemDetail {
+    _noteNumber?: fhir.FhirElement[] | undefined;
     /**
      * The adjudication results.
      */
     adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
+     * Default constructor for ExplanationOfBenefitItemDetailSubDetail - initializes any required elements to null if a value is not provided.
+     */
+    constructor(source?: Partial<IExplanationOfBenefitItemDetailSubDetail>);
+    /**
+     * Example-bound Value Set for revenue
+     */
+    revenueExampleValueSet(): ExRevenueCenterValueSetType;
+    /**
+     * Example-bound Value Set for category
+     */
+    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    /**
+     * Example-bound Value Set for productOrService
+     */
+    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    /**
+     * Example-bound Value Set for modifier
+     */
+    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    /**
+     * Example-bound Value Set for programCode
+     */
+    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
+}
+/**
+ * Second-tier of goods and services.
+ */
+export declare class ExplanationOfBenefitItemDetail extends fhir.BackboneElement implements IExplanationOfBenefitItemDetail {
+    /**
+     * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
+     */
+    sequence: number | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.sequence
+     */
+    _sequence?: fhir.FhirElement | undefined;
+    /**
+     * The type of revenue or cost center providing the product and/or service.
+     */
+    revenue?: fhir.CodeableConcept | undefined;
     /**
      * Examples include: Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
      */
     category?: fhir.CodeableConcept | undefined;
     /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
      */
-    factor?: number | undefined;
-    _factor?: fhir.FhirElement | undefined;
+    productOrService: fhir.CodeableConcept | null;
     /**
      * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
      */
     modifier?: fhir.CodeableConcept[] | undefined;
-    /**
-     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
-     */
-    net?: fhir.Money | undefined;
-    /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
-     */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.FhirElement[] | undefined;
-    /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
-     */
-    productOrService: fhir.CodeableConcept | null;
     /**
      * For example: Neonatal program, child dental program or drug users recovery program.
      */
@@ -1435,305 +1721,146 @@ export declare class ExplanationOfBenefitItemDetail extends fhir.BackboneElement
      */
     quantity?: fhir.Quantity | undefined;
     /**
-     * The type of revenue or cost center providing the product and/or service.
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
      */
-    revenue?: fhir.CodeableConcept | undefined;
+    unitPrice?: fhir.Money | undefined;
     /**
-     * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
      */
-    sequence: number | null;
-    _sequence?: fhir.FhirElement | undefined;
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.factor
+     */
+    _factor?: fhir.FhirElement | undefined;
+    /**
+     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
+     */
+    net?: fhir.Money | undefined;
+    /**
+     * Unique Device Identifiers associated with this line item.
+     */
+    udi?: fhir.Reference[] | undefined;
+    /**
+     * The numbers associated with notes below which apply to the adjudication of this item.
+     */
+    noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.detail.noteNumber
+     */
+    _noteNumber?: fhir.FhirElement[] | undefined;
+    /**
+     * The adjudication results.
+     */
+    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
     /**
      * Third-tier of goods and services.
      */
     subDetail?: fhir.ExplanationOfBenefitItemDetailSubDetail[] | undefined;
     /**
-     * Unique Device Identifiers associated with this line item.
-     */
-    udi?: fhir.Reference[] | undefined;
-    /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
-     */
-    unitPrice?: fhir.Money | undefined;
-    /**
      * Default constructor for ExplanationOfBenefitItemDetail - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitItemDetail>);
+    constructor(source?: Partial<IExplanationOfBenefitItemDetail>);
     /**
-     * Check if the current ExplanationOfBenefitItemDetail contains all required elements.
+     * Example-bound Value Set for revenue
      */
-    checkRequiredElements(): string[];
+    revenueExampleValueSet(): ExRevenueCenterValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitItemDetail from an object that MUST contain all required elements.
+     * Example-bound Value Set for category
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitItemDetail): ExplanationOfBenefitItemDetail;
+    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    /**
+     * Example-bound Value Set for productOrService
+     */
+    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    /**
+     * Example-bound Value Set for modifier
+     */
+    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    /**
+     * Example-bound Value Set for programCode
+     */
+    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
  */
-export declare class ExplanationOfBenefitItem extends fhir.BackboneElement implements fhir.IExplanationOfBenefitItem {
+export declare class ExplanationOfBenefitItem extends fhir.BackboneElement implements IExplanationOfBenefitItem {
     /**
-     * If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.
+     * A number to uniquely identify item entries.
      */
-    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
+    sequence: number | null;
     /**
-     * For example: Providing a tooth code, allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
+     * Extended properties for primitive element: ExplanationOfBenefit.item.sequence
      */
-    bodySite?: fhir.CodeableConcept | undefined;
+    _sequence?: fhir.FhirElement | undefined;
     /**
      * Care team members related to this service or product.
      */
     careTeamSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.careTeamSequence
+     */
     _careTeamSequence?: fhir.FhirElement[] | undefined;
-    /**
-     * Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
-     */
-    category?: fhir.CodeableConcept | undefined;
-    /**
-     * Second-tier of goods and services.
-     */
-    detail?: fhir.ExplanationOfBenefitItemDetail[] | undefined;
     /**
      * Diagnoses applicable for this service or product.
      */
     diagnosisSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.diagnosisSequence
+     */
     _diagnosisSequence?: fhir.FhirElement[] | undefined;
-    /**
-     * A billed item may include goods or services provided in multiple encounters.
-     */
-    encounter?: fhir.Reference[] | undefined;
-    /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
-     */
-    factor?: number | undefined;
-    _factor?: fhir.FhirElement | undefined;
-    /**
-     * Exceptions, special conditions and supporting information applicable for this service or product.
-     */
-    informationSequence?: number[] | undefined;
-    _informationSequence?: fhir.FhirElement[] | undefined;
-    /**
-     * Where the product or service was provided.
-     */
-    locationCodeableConcept?: fhir.CodeableConcept | undefined;
-    /**
-     * Where the product or service was provided.
-     */
-    locationAddress?: fhir.Address | undefined;
-    /**
-     * Where the product or service was provided.
-     */
-    locationReference?: fhir.Reference | undefined;
-    /**
-     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
-     */
-    modifier?: fhir.CodeableConcept[] | undefined;
-    /**
-     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
-     */
-    net?: fhir.Money | undefined;
-    /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
-     */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.FhirElement[] | undefined;
     /**
      * Procedures applicable for this service or product.
      */
     procedureSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.procedureSequence
+     */
     _procedureSequence?: fhir.FhirElement[] | undefined;
     /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
+     * Exceptions, special conditions and supporting information applicable for this service or product.
      */
-    productOrService: fhir.CodeableConcept | null;
+    informationSequence?: number[] | undefined;
     /**
-     * For example: Neonatal program, child dental program or drug users recovery program.
+     * Extended properties for primitive element: ExplanationOfBenefit.item.informationSequence
      */
-    programCode?: fhir.CodeableConcept[] | undefined;
-    /**
-     * The number of repetitions of a service or product.
-     */
-    quantity?: fhir.Quantity | undefined;
+    _informationSequence?: fhir.FhirElement[] | undefined;
     /**
      * The type of revenue or cost center providing the product and/or service.
      */
     revenue?: fhir.CodeableConcept | undefined;
     /**
-     * A number to uniquely identify item entries.
+     * Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
      */
-    sequence: number | null;
-    _sequence?: fhir.FhirElement | undefined;
+    category?: fhir.CodeableConcept | undefined;
+    /**
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
+     */
+    productOrService: fhir.CodeableConcept | null;
+    /**
+     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
+     */
+    modifier?: fhir.CodeableConcept[] | undefined;
+    /**
+     * For example: Neonatal program, child dental program or drug users recovery program.
+     */
+    programCode?: fhir.CodeableConcept[] | undefined;
     /**
      * The date or dates when the service or product was supplied, performed or completed.
      */
     servicedDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.serviced[x]
+     */
     _servicedDate?: fhir.FhirElement | undefined;
     /**
      * The date or dates when the service or product was supplied, performed or completed.
      */
     servicedPeriod?: fhir.Period | undefined;
-    /**
-     * A region or surface of the bodySite, e.g. limb region or tooth surface(s).
-     */
-    subSite?: fhir.CodeableConcept[] | undefined;
-    /**
-     * Unique Device Identifiers associated with this line item.
-     */
-    udi?: fhir.Reference[] | undefined;
-    /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
-     */
-    unitPrice?: fhir.Money | undefined;
-    /**
-     * Default constructor for ExplanationOfBenefitItem - initializes any required elements to null if a value is not provided.
-     */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitItem>);
-    /**
-     * Check if the current ExplanationOfBenefitItem contains all required elements.
-     */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ExplanationOfBenefitItem from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IExplanationOfBenefitItem): ExplanationOfBenefitItem;
-}
-/**
- * The third-tier service adjudications for payor added services.
- */
-export declare class ExplanationOfBenefitAddItemDetailSubDetail extends fhir.BackboneElement implements fhir.IExplanationOfBenefitAddItemDetailSubDetail {
-    /**
-     * The adjudication results.
-     */
-    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
-    /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
-     */
-    factor?: number | undefined;
-    _factor?: fhir.FhirElement | undefined;
-    /**
-     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
-     */
-    modifier?: fhir.CodeableConcept[] | undefined;
-    /**
-     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
-     */
-    net?: fhir.Money | undefined;
-    /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
-     */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.FhirElement[] | undefined;
-    /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
-     */
-    productOrService: fhir.CodeableConcept | null;
-    /**
-     * The number of repetitions of a service or product.
-     */
-    quantity?: fhir.Quantity | undefined;
-    /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
-     */
-    unitPrice?: fhir.Money | undefined;
-    /**
-     * Default constructor for ExplanationOfBenefitAddItemDetailSubDetail - initializes any required elements to null if a value is not provided.
-     */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitAddItemDetailSubDetail>);
-    /**
-     * Check if the current ExplanationOfBenefitAddItemDetailSubDetail contains all required elements.
-     */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ExplanationOfBenefitAddItemDetailSubDetail from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IExplanationOfBenefitAddItemDetailSubDetail): ExplanationOfBenefitAddItemDetailSubDetail;
-}
-/**
- * The second-tier service adjudications for payor added services.
- */
-export declare class ExplanationOfBenefitAddItemDetail extends fhir.BackboneElement implements fhir.IExplanationOfBenefitAddItemDetail {
-    /**
-     * The adjudication results.
-     */
-    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
-    /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
-     */
-    factor?: number | undefined;
-    _factor?: fhir.FhirElement | undefined;
-    /**
-     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
-     */
-    modifier?: fhir.CodeableConcept[] | undefined;
-    /**
-     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
-     */
-    net?: fhir.Money | undefined;
-    /**
-     * The numbers associated with notes below which apply to the adjudication of this item.
-     */
-    noteNumber?: number[] | undefined;
-    _noteNumber?: fhir.FhirElement[] | undefined;
-    /**
-     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
-     */
-    productOrService: fhir.CodeableConcept | null;
-    /**
-     * The number of repetitions of a service or product.
-     */
-    quantity?: fhir.Quantity | undefined;
-    /**
-     * The third-tier service adjudications for payor added services.
-     */
-    subDetail?: fhir.ExplanationOfBenefitAddItemDetailSubDetail[] | undefined;
-    /**
-     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
-     */
-    unitPrice?: fhir.Money | undefined;
-    /**
-     * Default constructor for ExplanationOfBenefitAddItemDetail - initializes any required elements to null if a value is not provided.
-     */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitAddItemDetail>);
-    /**
-     * Check if the current ExplanationOfBenefitAddItemDetail contains all required elements.
-     */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ExplanationOfBenefitAddItemDetail from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IExplanationOfBenefitAddItemDetail): ExplanationOfBenefitAddItemDetail;
-}
-/**
- * The first-tier service adjudications for payor added product or service lines.
- */
-export declare class ExplanationOfBenefitAddItem extends fhir.BackboneElement implements fhir.IExplanationOfBenefitAddItem {
-    /**
-     * The adjudication results.
-     */
-    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
-    /**
-     * For example, providing a tooth code allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
-     */
-    bodySite?: fhir.CodeableConcept | undefined;
-    /**
-     * The second-tier service adjudications for payor added services.
-     */
-    detail?: fhir.ExplanationOfBenefitAddItemDetail[] | undefined;
-    /**
-     * The sequence number of the details within the claim item which this line is intended to replace.
-     */
-    detailSequence?: number[] | undefined;
-    _detailSequence?: fhir.FhirElement[] | undefined;
-    /**
-     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
-     */
-    factor?: number | undefined;
-    _factor?: fhir.FhirElement | undefined;
-    /**
-     * Claim items which this service line is intended to replace.
-     */
-    itemSequence?: number[] | undefined;
-    _itemSequence?: fhir.FhirElement[] | undefined;
     /**
      * Where the product or service was provided.
      */
@@ -1747,9 +1874,134 @@ export declare class ExplanationOfBenefitAddItem extends fhir.BackboneElement im
      */
     locationReference?: fhir.Reference | undefined;
     /**
+     * The number of repetitions of a service or product.
+     */
+    quantity?: fhir.Quantity | undefined;
+    /**
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     */
+    unitPrice?: fhir.Money | undefined;
+    /**
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     */
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.factor
+     */
+    _factor?: fhir.FhirElement | undefined;
+    /**
+     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
+     */
+    net?: fhir.Money | undefined;
+    /**
+     * Unique Device Identifiers associated with this line item.
+     */
+    udi?: fhir.Reference[] | undefined;
+    /**
+     * For example: Providing a tooth code, allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
+     */
+    bodySite?: fhir.CodeableConcept | undefined;
+    /**
+     * A region or surface of the bodySite, e.g. limb region or tooth surface(s).
+     */
+    subSite?: fhir.CodeableConcept[] | undefined;
+    /**
+     * A billed item may include goods or services provided in multiple encounters.
+     */
+    encounter?: fhir.Reference[] | undefined;
+    /**
+     * The numbers associated with notes below which apply to the adjudication of this item.
+     */
+    noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.item.noteNumber
+     */
+    _noteNumber?: fhir.FhirElement[] | undefined;
+    /**
+     * If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.
+     */
+    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
+     * Second-tier of goods and services.
+     */
+    detail?: fhir.ExplanationOfBenefitItemDetail[] | undefined;
+    /**
+     * Default constructor for ExplanationOfBenefitItem - initializes any required elements to null if a value is not provided.
+     */
+    constructor(source?: Partial<IExplanationOfBenefitItem>);
+    /**
+     * Example-bound Value Set for revenue
+     */
+    revenueExampleValueSet(): ExRevenueCenterValueSetType;
+    /**
+     * Example-bound Value Set for category
+     */
+    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    /**
+     * Example-bound Value Set for productOrService
+     */
+    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    /**
+     * Example-bound Value Set for modifier
+     */
+    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    /**
+     * Example-bound Value Set for programCode
+     */
+    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    /**
+     * Example-bound Value Set for locationCodeableConcept
+     */
+    locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
+    /**
+     * Example-bound Value Set for locationAddress
+     */
+    locationAddressExampleValueSet(): ServicePlaceValueSetType;
+    /**
+     * Example-bound Value Set for locationReference
+     */
+    locationReferenceExampleValueSet(): ServicePlaceValueSetType;
+    /**
+     * Example-bound Value Set for bodySite
+     */
+    bodySiteExampleValueSet(): ToothValueSetType;
+    /**
+     * Example-bound Value Set for subSite
+     */
+    subSiteExampleValueSet(): SurfaceValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
+}
+/**
+ * The third-tier service adjudications for payor added services.
+ */
+export declare class ExplanationOfBenefitAddItemDetailSubDetail extends fhir.BackboneElement implements IExplanationOfBenefitAddItemDetailSubDetail {
+    /**
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
+     */
+    productOrService: fhir.CodeableConcept | null;
+    /**
      * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
      */
     modifier?: fhir.CodeableConcept[] | undefined;
+    /**
+     * The number of repetitions of a service or product.
+     */
+    quantity?: fhir.Quantity | undefined;
+    /**
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     */
+    unitPrice?: fhir.Money | undefined;
+    /**
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     */
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detail.subDetail.factor
+     */
+    _factor?: fhir.FhirElement | undefined;
     /**
      * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
      */
@@ -1758,87 +2010,282 @@ export declare class ExplanationOfBenefitAddItem extends fhir.BackboneElement im
      * The numbers associated with notes below which apply to the adjudication of this item.
      */
     noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detail.subDetail.noteNumber
+     */
     _noteNumber?: fhir.FhirElement[] | undefined;
+    /**
+     * The adjudication results.
+     */
+    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
+     * Default constructor for ExplanationOfBenefitAddItemDetailSubDetail - initializes any required elements to null if a value is not provided.
+     */
+    constructor(source?: Partial<IExplanationOfBenefitAddItemDetailSubDetail>);
+    /**
+     * Example-bound Value Set for productOrService
+     */
+    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    /**
+     * Example-bound Value Set for modifier
+     */
+    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
+}
+/**
+ * The second-tier service adjudications for payor added services.
+ */
+export declare class ExplanationOfBenefitAddItemDetail extends fhir.BackboneElement implements IExplanationOfBenefitAddItemDetail {
     /**
      * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
      */
     productOrService: fhir.CodeableConcept | null;
     /**
-     * For example: Neonatal program, child dental program or drug users recovery program.
+     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
      */
-    programCode?: fhir.CodeableConcept[] | undefined;
-    /**
-     * The providers who are authorized for the services rendered to the patient.
-     */
-    provider?: fhir.Reference[] | undefined;
+    modifier?: fhir.CodeableConcept[] | undefined;
     /**
      * The number of repetitions of a service or product.
      */
     quantity?: fhir.Quantity | undefined;
     /**
+     * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
+     */
+    unitPrice?: fhir.Money | undefined;
+    /**
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     */
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detail.factor
+     */
+    _factor?: fhir.FhirElement | undefined;
+    /**
+     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
+     */
+    net?: fhir.Money | undefined;
+    /**
+     * The numbers associated with notes below which apply to the adjudication of this item.
+     */
+    noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detail.noteNumber
+     */
+    _noteNumber?: fhir.FhirElement[] | undefined;
+    /**
+     * The adjudication results.
+     */
+    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
+     * The third-tier service adjudications for payor added services.
+     */
+    subDetail?: fhir.ExplanationOfBenefitAddItemDetailSubDetail[] | undefined;
+    /**
+     * Default constructor for ExplanationOfBenefitAddItemDetail - initializes any required elements to null if a value is not provided.
+     */
+    constructor(source?: Partial<IExplanationOfBenefitAddItemDetail>);
+    /**
+     * Example-bound Value Set for productOrService
+     */
+    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    /**
+     * Example-bound Value Set for modifier
+     */
+    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
+}
+/**
+ * The first-tier service adjudications for payor added product or service lines.
+ */
+export declare class ExplanationOfBenefitAddItem extends fhir.BackboneElement implements IExplanationOfBenefitAddItem {
+    /**
+     * Claim items which this service line is intended to replace.
+     */
+    itemSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.itemSequence
+     */
+    _itemSequence?: fhir.FhirElement[] | undefined;
+    /**
+     * The sequence number of the details within the claim item which this line is intended to replace.
+     */
+    detailSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.detailSequence
+     */
+    _detailSequence?: fhir.FhirElement[] | undefined;
+    /**
+     * The sequence number of the sub-details woithin the details within the claim item which this line is intended to replace.
+     */
+    subDetailSequence?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.subDetailSequence
+     */
+    _subDetailSequence?: fhir.FhirElement[] | undefined;
+    /**
+     * The providers who are authorized for the services rendered to the patient.
+     */
+    provider?: fhir.Reference[] | undefined;
+    /**
+     * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
+     */
+    productOrService: fhir.CodeableConcept | null;
+    /**
+     * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
+     */
+    modifier?: fhir.CodeableConcept[] | undefined;
+    /**
+     * For example: Neonatal program, child dental program or drug users recovery program.
+     */
+    programCode?: fhir.CodeableConcept[] | undefined;
+    /**
      * The date or dates when the service or product was supplied, performed or completed.
      */
     servicedDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.serviced[x]
+     */
     _servicedDate?: fhir.FhirElement | undefined;
     /**
      * The date or dates when the service or product was supplied, performed or completed.
      */
     servicedPeriod?: fhir.Period | undefined;
     /**
-     * The sequence number of the sub-details woithin the details within the claim item which this line is intended to replace.
+     * Where the product or service was provided.
      */
-    subDetailSequence?: number[] | undefined;
-    _subDetailSequence?: fhir.FhirElement[] | undefined;
+    locationCodeableConcept?: fhir.CodeableConcept | undefined;
     /**
-     * A region or surface of the bodySite, e.g. limb region or tooth surface(s).
+     * Where the product or service was provided.
      */
-    subSite?: fhir.CodeableConcept[] | undefined;
+    locationAddress?: fhir.Address | undefined;
+    /**
+     * Where the product or service was provided.
+     */
+    locationReference?: fhir.Reference | undefined;
+    /**
+     * The number of repetitions of a service or product.
+     */
+    quantity?: fhir.Quantity | undefined;
     /**
      * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
      */
     unitPrice?: fhir.Money | undefined;
     /**
+     * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
+     */
+    factor?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.factor
+     */
+    _factor?: fhir.FhirElement | undefined;
+    /**
+     * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
+     */
+    net?: fhir.Money | undefined;
+    /**
+     * For example, providing a tooth code allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
+     */
+    bodySite?: fhir.CodeableConcept | undefined;
+    /**
+     * A region or surface of the bodySite, e.g. limb region or tooth surface(s).
+     */
+    subSite?: fhir.CodeableConcept[] | undefined;
+    /**
+     * The numbers associated with notes below which apply to the adjudication of this item.
+     */
+    noteNumber?: number[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.addItem.noteNumber
+     */
+    _noteNumber?: fhir.FhirElement[] | undefined;
+    /**
+     * The adjudication results.
+     */
+    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
+     * The second-tier service adjudications for payor added services.
+     */
+    detail?: fhir.ExplanationOfBenefitAddItemDetail[] | undefined;
+    /**
      * Default constructor for ExplanationOfBenefitAddItem - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitAddItem>);
+    constructor(source?: Partial<IExplanationOfBenefitAddItem>);
     /**
-     * Check if the current ExplanationOfBenefitAddItem contains all required elements.
+     * Example-bound Value Set for productOrService
      */
-    checkRequiredElements(): string[];
+    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitAddItem from an object that MUST contain all required elements.
+     * Example-bound Value Set for modifier
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitAddItem): ExplanationOfBenefitAddItem;
+    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    /**
+     * Example-bound Value Set for programCode
+     */
+    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    /**
+     * Example-bound Value Set for locationCodeableConcept
+     */
+    locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
+    /**
+     * Example-bound Value Set for locationAddress
+     */
+    locationAddressExampleValueSet(): ServicePlaceValueSetType;
+    /**
+     * Example-bound Value Set for locationReference
+     */
+    locationReferenceExampleValueSet(): ServicePlaceValueSetType;
+    /**
+     * Example-bound Value Set for bodySite
+     */
+    bodySiteExampleValueSet(): ToothValueSetType;
+    /**
+     * Example-bound Value Set for subSite
+     */
+    subSiteExampleValueSet(): SurfaceValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * Totals for amounts submitted, co-pays, benefits payable etc.
  */
-export declare class ExplanationOfBenefitTotal extends fhir.BackboneElement implements fhir.IExplanationOfBenefitTotal {
-    /**
-     * Monetary total amount associated with the category.
-     */
-    amount: fhir.Money | null;
+export declare class ExplanationOfBenefitTotal extends fhir.BackboneElement implements IExplanationOfBenefitTotal {
     /**
      * For example, codes indicating: Co-Pay, deductible, eligible, benefit, tax, etc.
      */
     category: fhir.CodeableConcept | null;
     /**
+     * Monetary total amount associated with the category.
+     */
+    amount: fhir.Money | null;
+    /**
      * Default constructor for ExplanationOfBenefitTotal - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitTotal>);
+    constructor(source?: Partial<IExplanationOfBenefitTotal>);
     /**
-     * Check if the current ExplanationOfBenefitTotal contains all required elements.
+     * Example-bound Value Set for category
      */
-    checkRequiredElements(): string[];
+    categoryExampleValueSet(): AdjudicationValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitTotal from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitTotal): ExplanationOfBenefitTotal;
+    doModelValidation(): [string, string][];
 }
 /**
  * Payment details for the adjudication of the claim.
  */
-export declare class ExplanationOfBenefitPayment extends fhir.BackboneElement implements fhir.IExplanationOfBenefitPayment {
+export declare class ExplanationOfBenefitPayment extends fhir.BackboneElement implements IExplanationOfBenefitPayment {
+    /**
+     * Whether this represents partial or complete payment of the benefits payable.
+     */
+    type?: fhir.CodeableConcept | undefined;
     /**
      * Insurers will deduct amounts owing from the provider (adjustment), such as a prior overpayment, from the amount owing to the provider (benefits payable) when payment is made to the provider.
      */
@@ -1848,97 +2295,122 @@ export declare class ExplanationOfBenefitPayment extends fhir.BackboneElement im
      */
     adjustmentReason?: fhir.CodeableConcept | undefined;
     /**
-     * Benefits payable less any payment adjustment.
-     */
-    amount?: fhir.Money | undefined;
-    /**
      * Estimated date the payment will be issued or the actual issue date of payment.
      */
     date?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.payment.date
+     */
     _date?: fhir.FhirElement | undefined;
+    /**
+     * Benefits payable less any payment adjustment.
+     */
+    amount?: fhir.Money | undefined;
     /**
      * For example: EFT number or check number.
      */
     identifier?: fhir.Identifier | undefined;
     /**
-     * Whether this represents partial or complete payment of the benefits payable.
-     */
-    type?: fhir.CodeableConcept | undefined;
-    /**
      * Default constructor for ExplanationOfBenefitPayment - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitPayment>);
+    constructor(source?: Partial<IExplanationOfBenefitPayment>);
     /**
-     * Check if the current ExplanationOfBenefitPayment contains all required elements.
+     * Example-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeExampleValueSet(): ExPaymenttypeValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitPayment from an object that MUST contain all required elements.
+     * Example-bound Value Set for adjustmentReason
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitPayment): ExplanationOfBenefitPayment;
+    adjustmentReasonExampleValueSet(): PaymentAdjustmentReasonValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * A note that describes or explains adjudication results in a human readable form.
  */
-export declare class ExplanationOfBenefitProcessNote extends fhir.BackboneElement implements fhir.IExplanationOfBenefitProcessNote {
+export declare class ExplanationOfBenefitProcessNote extends fhir.BackboneElement implements IExplanationOfBenefitProcessNote {
+    /**
+     * A number to uniquely identify a note entry.
+     */
+    number?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.processNote.number
+     */
+    _number?: fhir.FhirElement | undefined;
+    /**
+     * The business purpose of the note text.
+     */
+    type?: NoteTypeValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.processNote.type
+     */
+    _type?: fhir.FhirElement | undefined;
+    /**
+     * The explanation or description associated with the processing.
+     */
+    text?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.processNote.text
+     */
+    _text?: fhir.FhirElement | undefined;
     /**
      * Only required if the language is different from the resource language.
      */
     language?: fhir.CodeableConcept | undefined;
     /**
-     * A number to uniquely identify a note entry.
-     */
-    number?: number | undefined;
-    _number?: fhir.FhirElement | undefined;
-    /**
-     * The explanation or description associated with the processing.
-     */
-    text?: string | undefined;
-    _text?: fhir.FhirElement | undefined;
-    /**
-     * The business purpose of the note text.
-     */
-    type?: ExplanationOfBenefitProcessNoteTypeEnum | undefined;
-    _type?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for ExplanationOfBenefitProcessNote - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitProcessNote>);
+    constructor(source?: Partial<IExplanationOfBenefitProcessNote>);
     /**
-     * Check if the current ExplanationOfBenefitProcessNote contains all required elements.
+     * Required-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeRequiredValueSet(): NoteTypeValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitProcessNote from an object that MUST contain all required elements.
+     * Preferred-bound Value Set for language
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitProcessNote): ExplanationOfBenefitProcessNote;
+    languagePreferredValueSet(): LanguagesValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * Benefits Used to date.
  */
-export declare class ExplanationOfBenefitBenefitBalanceFinancial extends fhir.BackboneElement implements fhir.IExplanationOfBenefitBenefitBalanceFinancial {
+export declare class ExplanationOfBenefitBenefitBalanceFinancial extends fhir.BackboneElement implements IExplanationOfBenefitBenefitBalanceFinancial {
+    /**
+     * For example: deductible, visits, benefit amount.
+     */
+    type: fhir.CodeableConcept | null;
     /**
      * The quantity of the benefit which is permitted under the coverage.
      */
     allowedUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.financial.allowed[x]
+     */
     _allowedUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * The quantity of the benefit which is permitted under the coverage.
      */
     allowedString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.financial.allowed[x]
+     */
     _allowedString?: fhir.FhirElement | undefined;
     /**
      * The quantity of the benefit which is permitted under the coverage.
      */
     allowedMoney?: fhir.Money | undefined;
     /**
-     * For example: deductible, visits, benefit amount.
-     */
-    type: fhir.CodeableConcept | null;
-    /**
      * The quantity of the benefit which have been consumed to date.
      */
     usedUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.financial.used[x]
+     */
     _usedUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * The quantity of the benefit which have been consumed to date.
@@ -1947,104 +2419,189 @@ export declare class ExplanationOfBenefitBenefitBalanceFinancial extends fhir.Ba
     /**
      * Default constructor for ExplanationOfBenefitBenefitBalanceFinancial - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitBenefitBalanceFinancial>);
+    constructor(source?: Partial<IExplanationOfBenefitBenefitBalanceFinancial>);
     /**
-     * Check if the current ExplanationOfBenefitBenefitBalanceFinancial contains all required elements.
+     * Example-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeExampleValueSet(): BenefitTypeValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitBenefitBalanceFinancial from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitBenefitBalanceFinancial): ExplanationOfBenefitBenefitBalanceFinancial;
+    doModelValidation(): [string, string][];
 }
 /**
  * Balance by Benefit Category.
  */
-export declare class ExplanationOfBenefitBenefitBalance extends fhir.BackboneElement implements fhir.IExplanationOfBenefitBenefitBalance {
+export declare class ExplanationOfBenefitBenefitBalance extends fhir.BackboneElement implements IExplanationOfBenefitBenefitBalance {
     /**
      * Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
      */
     category: fhir.CodeableConcept | null;
     /**
-     * For example, 'DENT2 covers 100% of basic, 50% of major but excludes Ortho, Implants and Cosmetic services'.
-     */
-    description?: string | undefined;
-    _description?: fhir.FhirElement | undefined;
-    /**
      * True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage.
      */
     excluded?: boolean | undefined;
-    _excluded?: fhir.FhirElement | undefined;
     /**
-     * Benefits Used to date.
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.excluded
      */
-    financial?: fhir.ExplanationOfBenefitBenefitBalanceFinancial[] | undefined;
+    _excluded?: fhir.FhirElement | undefined;
     /**
      * For example: MED01, or DENT2.
      */
     name?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.name
+     */
     _name?: fhir.FhirElement | undefined;
+    /**
+     * For example, 'DENT2 covers 100% of basic, 50% of major but excludes Ortho, Implants and Cosmetic services'.
+     */
+    description?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.benefitBalance.description
+     */
+    _description?: fhir.FhirElement | undefined;
     /**
      * Is a flag to indicate whether the benefits refer to in-network providers or out-of-network providers.
      */
     network?: fhir.CodeableConcept | undefined;
     /**
-     * The term or period of the values such as 'maximum lifetime benefit' or 'maximum annual visits'.
-     */
-    term?: fhir.CodeableConcept | undefined;
-    /**
      * Indicates if the benefits apply to an individual or to the family.
      */
     unit?: fhir.CodeableConcept | undefined;
     /**
+     * The term or period of the values such as 'maximum lifetime benefit' or 'maximum annual visits'.
+     */
+    term?: fhir.CodeableConcept | undefined;
+    /**
+     * Benefits Used to date.
+     */
+    financial?: fhir.ExplanationOfBenefitBenefitBalanceFinancial[] | undefined;
+    /**
      * Default constructor for ExplanationOfBenefitBenefitBalance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefitBenefitBalance>);
+    constructor(source?: Partial<IExplanationOfBenefitBenefitBalance>);
     /**
-     * Check if the current ExplanationOfBenefitBenefitBalance contains all required elements.
+     * Example-bound Value Set for category
      */
-    checkRequiredElements(): string[];
+    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefitBenefitBalance from an object that MUST contain all required elements.
+     * Example-bound Value Set for network
      */
-    static fromStrict(source: fhir.IExplanationOfBenefitBenefitBalance): ExplanationOfBenefitBenefitBalance;
+    networkExampleValueSet(): BenefitNetworkValueSetType;
+    /**
+     * Example-bound Value Set for unit
+     */
+    unitExampleValueSet(): BenefitUnitValueSetType;
+    /**
+     * Example-bound Value Set for term
+     */
+    termExampleValueSet(): BenefitTermValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
  */
-export declare class ExplanationOfBenefit extends fhir.DomainResource implements fhir.IExplanationOfBenefit {
+export declare class ExplanationOfBenefit extends fhir.DomainResource implements IExplanationOfBenefit {
     /**
      * Resource Type Name
      */
     resourceType: "ExplanationOfBenefit";
     /**
-     * Details of a accident which resulted in injuries which required the products and services listed in the claim.
+     * A unique identifier assigned to this explanation of benefit.
      */
-    accident?: fhir.ExplanationOfBenefitAccident | undefined;
+    identifier?: fhir.Identifier[] | undefined;
     /**
-     * The first-tier service adjudications for payor added product or service lines.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    addItem?: fhir.ExplanationOfBenefitAddItem[] | undefined;
+    status: ExplanationofbenefitStatusValueSetEnum | null;
     /**
-     * The adjudication results which are presented at the header level rather than at the line-item or add-item levels.
+     * Extended properties for primitive element: ExplanationOfBenefit.status
      */
-    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
+    _status?: fhir.FhirElement | undefined;
     /**
-     * Balance by Benefit Category.
+     * The majority of jurisdictions use: oral, pharmacy, vision, professional and institutional, or variants on those terms, as the general styles of claims. The valueset is extensible to accommodate other jurisdictional requirements.
      */
-    benefitBalance?: fhir.ExplanationOfBenefitBenefitBalance[] | undefined;
+    type: fhir.CodeableConcept | null;
     /**
-     * Not applicable when use=claim.
+     * This may contain the local bill type codes such as the US UB-04 bill type code.
      */
-    benefitPeriod?: fhir.Period | undefined;
+    subType?: fhir.CodeableConcept | undefined;
+    /**
+     * A code to indicate whether the nature of the request is: to request adjudication of products and services previously rendered; or requesting authorization and adjudication for provision in the future; or requesting the non-binding adjudication of the listed products and services which could be provided in the future.
+     */
+    use: ClaimUseValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.use
+     */
+    _use?: fhir.FhirElement | undefined;
+    /**
+     * The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought.
+     */
+    patient: fhir.Reference | null;
     /**
      * Typically this would be today or in the past for a claim, and today or in the future for preauthorizations and prodeterminations. Typically line item dates of service should fall within the billing period if one is specified.
      */
     billablePeriod?: fhir.Period | undefined;
     /**
-     * The members of the team who provided the products and services.
+     * This field is independent of the date of creation of the resource as it may reflect the creation date of a source document prior to digitization. Typically for claims all services must be completed as of this date.
      */
-    careTeam?: fhir.ExplanationOfBenefitCareTeam[] | undefined;
+    created: string | null;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.created
+     */
+    _created?: fhir.FhirElement | undefined;
+    /**
+     * Individual who created the claim, predetermination or preauthorization.
+     */
+    enterer?: fhir.Reference | undefined;
+    /**
+     * The party responsible for authorization, adjudication and reimbursement.
+     */
+    insurer: fhir.Reference | null;
+    /**
+     * Typically this field would be 1..1 where this party is responsible for the claim but not necessarily professionally responsible for the provision of the individual products and services listed below.
+     */
+    provider: fhir.Reference | null;
+    /**
+     * If a claim processor is unable to complete the processing as per the priority then they should generate and error and not process the request.
+     */
+    priority?: fhir.CodeableConcept | undefined;
+    /**
+     * This field is only used for preauthorizations.
+     */
+    fundsReserveRequested?: fhir.CodeableConcept | undefined;
+    /**
+     * Fund would be release by a future claim quoting the preAuthRef of this response. Examples of values include: provider, patient, none.
+     */
+    fundsReserve?: fhir.CodeableConcept | undefined;
+    /**
+     * For example,  for the original treatment and follow-up exams.
+     */
+    related?: fhir.ExplanationOfBenefitRelated[] | undefined;
+    /**
+     * Prescription to support the dispensing of pharmacy, device or vision products.
+     */
+    prescription?: fhir.Reference | undefined;
+    /**
+     * For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.
+     */
+    originalPrescription?: fhir.Reference | undefined;
+    /**
+     * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.
+     */
+    payee?: fhir.ExplanationOfBenefitPayee | undefined;
+    /**
+     * The referral resource which lists the date, practitioner, reason and other supporting information.
+     */
+    referral?: fhir.Reference | undefined;
+    /**
+     * Facility where the services were provided.
+     */
+    facility?: fhir.Reference | undefined;
     /**
      * The business identifier for the instance of the adjudication request: claim predetermination or preauthorization.
      */
@@ -2054,193 +2611,144 @@ export declare class ExplanationOfBenefit extends fhir.DomainResource implements
      */
     claimResponse?: fhir.Reference | undefined;
     /**
-     * This field is independent of the date of creation of the resource as it may reflect the creation date of a source document prior to digitization. Typically for claims all services must be completed as of this date.
+     * The resource may be used to indicate that: the request has been held (queued) for processing; that it has been processed and errors found (error); that no errors were found and that some of the adjudication has been undertaken (partial) or that all of the adjudication has been undertaken (complete).
      */
-    created: string | null;
-    _created?: fhir.FhirElement | undefined;
+    outcome: RemittanceOutcomeValueSetEnum | null;
     /**
-     * Information about diagnoses relevant to the claim items.
+     * Extended properties for primitive element: ExplanationOfBenefit.outcome
      */
-    diagnosis?: fhir.ExplanationOfBenefitDiagnosis[] | undefined;
+    _outcome?: fhir.FhirElement | undefined;
     /**
      * A human readable description of the status of the adjudication.
      */
     disposition?: string | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.disposition
+     */
     _disposition?: fhir.FhirElement | undefined;
-    /**
-     * Individual who created the claim, predetermination or preauthorization.
-     */
-    enterer?: fhir.Reference | undefined;
-    /**
-     * Facility where the services were provided.
-     */
-    facility?: fhir.Reference | undefined;
-    /**
-     * Needed to permit insurers to include the actual form.
-     */
-    form?: fhir.Attachment | undefined;
-    /**
-     * May be needed to identify specific jurisdictional forms.
-     */
-    formCode?: fhir.CodeableConcept | undefined;
-    /**
-     * Fund would be release by a future claim quoting the preAuthRef of this response. Examples of values include: provider, patient, none.
-     */
-    fundsReserve?: fhir.CodeableConcept | undefined;
-    /**
-     * This field is only used for preauthorizations.
-     */
-    fundsReserveRequested?: fhir.CodeableConcept | undefined;
-    /**
-     * A unique identifier assigned to this explanation of benefit.
-     */
-    identifier?: fhir.Identifier[] | undefined;
-    /**
-     * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'Coverage.subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
-     */
-    insurance: fhir.ExplanationOfBenefitInsurance[] | null;
-    /**
-     * The party responsible for authorization, adjudication and reimbursement.
-     */
-    insurer: fhir.Reference | null;
-    /**
-     * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
-     */
-    item?: fhir.ExplanationOfBenefitItem[] | undefined;
-    /**
-     * For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.
-     */
-    originalPrescription?: fhir.Reference | undefined;
-    /**
-     * The resource may be used to indicate that: the request has been held (queued) for processing; that it has been processed and errors found (error); that no errors were found and that some of the adjudication has been undertaken (partial) or that all of the adjudication has been undertaken (complete).
-     */
-    outcome: ExplanationOfBenefitOutcomeEnum | null;
-    _outcome?: fhir.FhirElement | undefined;
-    /**
-     * The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought.
-     */
-    patient: fhir.Reference | null;
-    /**
-     * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.
-     */
-    payee?: fhir.ExplanationOfBenefitPayee | undefined;
-    /**
-     * Payment details for the adjudication of the claim.
-     */
-    payment?: fhir.ExplanationOfBenefitPayment | undefined;
     /**
      * This value is only present on preauthorization adjudications.
      */
     preAuthRef?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.preAuthRef
+     */
     _preAuthRef?: fhir.FhirElement[] | undefined;
     /**
      * This value is only present on preauthorization adjudications.
      */
     preAuthRefPeriod?: fhir.Period[] | undefined;
     /**
-     * This indicates the relative order of a series of EOBs related to different coverages for the same suite of services.
+     * The members of the team who provided the products and services.
      */
-    precedence?: number | undefined;
-    _precedence?: fhir.FhirElement | undefined;
-    /**
-     * Prescription to support the dispensing of pharmacy, device or vision products.
-     */
-    prescription?: fhir.Reference | undefined;
-    /**
-     * If a claim processor is unable to complete the processing as per the priority then they should generate and error and not process the request.
-     */
-    priority?: fhir.CodeableConcept | undefined;
-    /**
-     * Procedures performed on the patient relevant to the billing items with the claim.
-     */
-    procedure?: fhir.ExplanationOfBenefitProcedure[] | undefined;
-    /**
-     * A note that describes or explains adjudication results in a human readable form.
-     */
-    processNote?: fhir.ExplanationOfBenefitProcessNote[] | undefined;
-    /**
-     * Typically this field would be 1..1 where this party is responsible for the claim but not necessarily professionally responsible for the provision of the individual products and services listed below.
-     */
-    provider: fhir.Reference | null;
-    /**
-     * The referral resource which lists the date, practitioner, reason and other supporting information.
-     */
-    referral?: fhir.Reference | undefined;
-    /**
-     * For example,  for the original treatment and follow-up exams.
-     */
-    related?: fhir.ExplanationOfBenefitRelated[] | undefined;
-    /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
-     */
-    status: ExplanationOfBenefitStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
-    /**
-     * This may contain the local bill type codes such as the US UB-04 bill type code.
-     */
-    subType?: fhir.CodeableConcept | undefined;
+    careTeam?: fhir.ExplanationOfBenefitCareTeam[] | undefined;
     /**
      * Often there are multiple jurisdiction specific valuesets which are required.
      */
     supportingInfo?: fhir.ExplanationOfBenefitSupportingInfo[] | undefined;
     /**
+     * Information about diagnoses relevant to the claim items.
+     */
+    diagnosis?: fhir.ExplanationOfBenefitDiagnosis[] | undefined;
+    /**
+     * Procedures performed on the patient relevant to the billing items with the claim.
+     */
+    procedure?: fhir.ExplanationOfBenefitProcedure[] | undefined;
+    /**
+     * This indicates the relative order of a series of EOBs related to different coverages for the same suite of services.
+     */
+    precedence?: number | undefined;
+    /**
+     * Extended properties for primitive element: ExplanationOfBenefit.precedence
+     */
+    _precedence?: fhir.FhirElement | undefined;
+    /**
+     * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'Coverage.subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
+     */
+    insurance: fhir.ExplanationOfBenefitInsurance[] | null;
+    /**
+     * Details of a accident which resulted in injuries which required the products and services listed in the claim.
+     */
+    accident?: fhir.ExplanationOfBenefitAccident | undefined;
+    /**
+     * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
+     */
+    item?: fhir.ExplanationOfBenefitItem[] | undefined;
+    /**
+     * The first-tier service adjudications for payor added product or service lines.
+     */
+    addItem?: fhir.ExplanationOfBenefitAddItem[] | undefined;
+    /**
+     * The adjudication results which are presented at the header level rather than at the line-item or add-item levels.
+     */
+    adjudication?: fhir.ExplanationOfBenefitItemAdjudication[] | undefined;
+    /**
      * Totals for amounts submitted, co-pays, benefits payable etc.
      */
     total?: fhir.ExplanationOfBenefitTotal[] | undefined;
     /**
-     * The majority of jurisdictions use: oral, pharmacy, vision, professional and institutional, or variants on those terms, as the general styles of claims. The valueset is extensible to accommodate other jurisdictional requirements.
+     * Payment details for the adjudication of the claim.
      */
-    type: fhir.CodeableConcept | null;
+    payment?: fhir.ExplanationOfBenefitPayment | undefined;
     /**
-     * A code to indicate whether the nature of the request is: to request adjudication of products and services previously rendered; or requesting authorization and adjudication for provision in the future; or requesting the non-binding adjudication of the listed products and services which could be provided in the future.
+     * May be needed to identify specific jurisdictional forms.
      */
-    use: ExplanationOfBenefitUseEnum | null;
-    _use?: fhir.FhirElement | undefined;
+    formCode?: fhir.CodeableConcept | undefined;
+    /**
+     * Needed to permit insurers to include the actual form.
+     */
+    form?: fhir.Attachment | undefined;
+    /**
+     * A note that describes or explains adjudication results in a human readable form.
+     */
+    processNote?: fhir.ExplanationOfBenefitProcessNote[] | undefined;
+    /**
+     * Not applicable when use=claim.
+     */
+    benefitPeriod?: fhir.Period | undefined;
+    /**
+     * Balance by Benefit Category.
+     */
+    benefitBalance?: fhir.ExplanationOfBenefitBenefitBalance[] | undefined;
     /**
      * Default constructor for ExplanationOfBenefit - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IExplanationOfBenefit>);
+    constructor(source?: Partial<IExplanationOfBenefit>);
     /**
-     * Check if the current ExplanationOfBenefit contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): ExplanationofbenefitStatusValueSetType;
     /**
-     * Factory function to create a ExplanationOfBenefit from an object that MUST contain all required elements.
+     * Extensible-bound Value Set for type
      */
-    static fromStrict(source: fhir.IExplanationOfBenefit): ExplanationOfBenefit;
-}
-/**
- * Code Values for the ExplanationOfBenefit.processNote.type field
- */
-export declare enum ExplanationOfBenefitProcessNoteTypeEnum {
-    DISPLAY = "display",
-    PRINT = "print",
-    PRINTOPER = "printoper"
-}
-/**
- * Code Values for the ExplanationOfBenefit.outcome field
- */
-export declare enum ExplanationOfBenefitOutcomeEnum {
-    QUEUED = "queued",
-    COMPLETE = "complete",
-    ERROR = "error",
-    PARTIAL = "partial"
-}
-/**
- * Code Values for the ExplanationOfBenefit.status field
- */
-export declare enum ExplanationOfBenefitStatusEnum {
-    ACTIVE = "active",
-    CANCELLED = "cancelled",
-    DRAFT = "draft",
-    ENTERED_IN_ERROR = "entered-in-error"
-}
-/**
- * Code Values for the ExplanationOfBenefit.use field
- */
-export declare enum ExplanationOfBenefitUseEnum {
-    CLAIM = "claim",
-    PREAUTHORIZATION = "preauthorization",
-    PREDETERMINATION = "predetermination"
+    typeExtensibleValueSet(): ClaimTypeValueSetType;
+    /**
+     * Example-bound Value Set for subType
+     */
+    subTypeExampleValueSet(): ClaimSubtypeValueSetType;
+    /**
+     * Required-bound Value Set for use
+     */
+    useRequiredValueSet(): ClaimUseValueSetType;
+    /**
+     * Example-bound Value Set for fundsReserveRequested
+     */
+    fundsReserveRequestedExampleValueSet(): FundsreserveValueSetType;
+    /**
+     * Example-bound Value Set for fundsReserve
+     */
+    fundsReserveExampleValueSet(): FundsreserveValueSetType;
+    /**
+     * Required-bound Value Set for outcome
+     */
+    outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
+    /**
+     * Example-bound Value Set for formCode
+     */
+    formCodeExampleValueSet(): FormsValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=ExplanationOfBenefit.d.ts.map

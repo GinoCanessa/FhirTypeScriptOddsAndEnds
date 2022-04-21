@@ -1,55 +1,112 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of Benefit type codes.
  */
 export declare const BenefitTypeValueSet: {
     /**
-     * Maximum benefit allowable.
+     * benefit: Maximum benefit allowable.
      */
-    benefit_type_Benefit: Coding;
+    readonly Benefit: Coding;
     /**
-     * Copayment per service
+     * copay: Copayment per service
      */
-    benefit_type_CopaymentPerService: Coding;
+    readonly CopaymentPerService: Coding;
     /**
-     * Copayment maximum per service
+     * copay-maximum: Copayment maximum per service
      */
-    benefit_type_CopaymentMaximumPerService: Coding;
+    readonly CopaymentMaximumPerService: Coding;
     /**
-     * Copayment percentage per service
+     * copay-percent: Copayment percentage per service
      */
-    benefit_type_CopaymentPercentPerService: Coding;
+    readonly CopaymentPercentPerService: Coding;
     /**
-     * Cost to be incurred before benefits are applied
+     * deductible: Cost to be incurred before benefits are applied
      */
-    benefit_type_Deductible: Coding;
+    readonly Deductible: Coding;
     /**
-     * Medical Primary Health Coverage
+     * medical-primarycare: Medical Primary Health Coverage
      */
-    benefit_type_MedicalPrimaryHealthCoverage: Coding;
+    readonly MedicalPrimaryHealthCoverage: Coding;
     /**
-     * Pharmacy Dispense Coverage
+     * pharmacy-dispense: Pharmacy Dispense Coverage
      */
-    benefit_type_PharmacyDispenseCoverage: Coding;
+    readonly PharmacyDispenseCoverage: Coding;
     /**
-     * Type of room
+     * room: Type of room
      */
-    benefit_type_Room: Coding;
+    readonly Room: Coding;
     /**
-     * Contact Lenses
+     * vision-contacts: Contact Lenses
      */
-    benefit_type_VisionContactsCoverage: Coding;
+    readonly VisionContactsCoverage: Coding;
     /**
-     * Vision Exam
+     * vision-exam: Vision Exam
      */
-    benefit_type_VisionExam: Coding;
+    readonly VisionExam: Coding;
     /**
-     * Frames and lenses
+     * vision-glasses: Frames and lenses
      */
-    benefit_type_VisionGlasses: Coding;
+    readonly VisionGlasses: Coding;
     /**
-     * Service visit
+     * visit: Service visit
      */
-    benefit_type_Visit: Coding;
+    readonly Visit: Coding;
 };
+/**
+ * This value set includes a smattering of Benefit type codes.
+ */
+export declare type BenefitTypeValueSetType = typeof BenefitTypeValueSet;
+/**
+ * This value set includes a smattering of Benefit type codes.
+ */
+export declare enum BenefitTypeValueSetEnum {
+    /**
+     * benefit: Maximum benefit allowable.
+     */
+    Benefit = "benefit",
+    /**
+     * copay: Copayment per service
+     */
+    CopaymentPerService = "copay",
+    /**
+     * copay-maximum: Copayment maximum per service
+     */
+    CopaymentMaximumPerService = "copay-maximum",
+    /**
+     * copay-percent: Copayment percentage per service
+     */
+    CopaymentPercentPerService = "copay-percent",
+    /**
+     * deductible: Cost to be incurred before benefits are applied
+     */
+    Deductible = "deductible",
+    /**
+     * medical-primarycare: Medical Primary Health Coverage
+     */
+    MedicalPrimaryHealthCoverage = "medical-primarycare",
+    /**
+     * pharmacy-dispense: Pharmacy Dispense Coverage
+     */
+    PharmacyDispenseCoverage = "pharmacy-dispense",
+    /**
+     * room: Type of room
+     */
+    Room = "room",
+    /**
+     * vision-contacts: Contact Lenses
+     */
+    VisionContactsCoverage = "vision-contacts",
+    /**
+     * vision-exam: Vision Exam
+     */
+    VisionExam = "vision-exam",
+    /**
+     * vision-glasses: Frames and lenses
+     */
+    VisionGlasses = "vision-glasses",
+    /**
+     * visit: Service visit
+     */
+    Visit = "visit"
+}
 //# sourceMappingURL=BenefitTypeValueSet.d.ts.map

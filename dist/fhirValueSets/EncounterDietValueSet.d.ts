@@ -1,35 +1,72 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.
  */
 export declare const EncounterDietValueSet: {
     /**
-     * Excludes dairy products.
+     * dairy-free: Excludes dairy products.
      */
-    encounter_diet_DairyFree: Coding;
+    readonly DairyFree: Coding;
     /**
-     * Excludes ingredients containing gluten.
+     * gluten-free: Excludes ingredients containing gluten.
      */
-    encounter_diet_GlutenFree: Coding;
+    readonly GlutenFree: Coding;
     /**
-     * Foods that conform to Islamic law.
+     * halal: Foods that conform to Islamic law.
      */
-    encounter_diet_Halal: Coding;
+    readonly Halal: Coding;
     /**
-     * Foods that conform to Jewish dietary law.
+     * kosher: Foods that conform to Jewish dietary law.
      */
-    encounter_diet_Kosher: Coding;
+    readonly Kosher: Coding;
     /**
-     * Excludes ingredients containing nuts.
+     * nut-free: Excludes ingredients containing nuts.
      */
-    encounter_diet_NutFree: Coding;
+    readonly NutFree: Coding;
     /**
-     * Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances.
+     * vegan: Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances.
      */
-    encounter_diet_Vegan: Coding;
+    readonly Vegan: Coding;
     /**
-     * Food without meat, poultry or seafood.
+     * vegetarian: Food without meat, poultry or seafood.
      */
-    encounter_diet_Vegetarian: Coding;
+    readonly Vegetarian: Coding;
 };
+/**
+ * This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.
+ */
+export declare type EncounterDietValueSetType = typeof EncounterDietValueSet;
+/**
+ * This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.
+ */
+export declare enum EncounterDietValueSetEnum {
+    /**
+     * dairy-free: Excludes dairy products.
+     */
+    DairyFree = "dairy-free",
+    /**
+     * gluten-free: Excludes ingredients containing gluten.
+     */
+    GlutenFree = "gluten-free",
+    /**
+     * halal: Foods that conform to Islamic law.
+     */
+    Halal = "halal",
+    /**
+     * kosher: Foods that conform to Jewish dietary law.
+     */
+    Kosher = "kosher",
+    /**
+     * nut-free: Excludes ingredients containing nuts.
+     */
+    NutFree = "nut-free",
+    /**
+     * vegan: Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances.
+     */
+    Vegan = "vegan",
+    /**
+     * vegetarian: Food without meat, poultry or seafood.
+     */
+    Vegetarian = "vegetarian"
+}
 //# sourceMappingURL=EncounterDietValueSet.d.ts.map

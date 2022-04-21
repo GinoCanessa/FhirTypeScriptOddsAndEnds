@@ -1,11 +1,24 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set contract specific codes for offer party participation.
  */
 export declare const ContractPartyRoleValueSet: {
     /**
-     * To be completed
+     * flunky: To be completed
      */
-    contract_party_role_FLunky: Coding;
+    readonly FLunky: Coding;
 };
+/**
+ * This value set contract specific codes for offer party participation.
+ */
+export declare type ContractPartyRoleValueSetType = typeof ContractPartyRoleValueSet;
+/**
+ * This value set contract specific codes for offer party participation.
+ */
+export declare enum ContractPartyRoleValueSetEnum {
+    /**
+     * flunky: To be completed
+     */
+    FLunky = "flunky"
+}
 //# sourceMappingURL=ContractPartyRoleValueSet.d.ts.map

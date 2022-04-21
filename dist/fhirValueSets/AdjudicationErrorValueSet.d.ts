@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of adjudication codes.
  */
 export declare const AdjudicationErrorValueSet: {
     /**
-     * Missing Identifier
+     * a001: Missing Identifier
      */
-    adjudication_error_MissingIdentifier: Coding;
+    readonly MissingIdentifier: Coding;
     /**
-     * Missing Creation Date
+     * a002: Missing Creation Date
      */
-    adjudication_error_MissingCreationDate: Coding;
+    readonly MissingCreationDate: Coding;
 };
+/**
+ * This value set includes a smattering of adjudication codes.
+ */
+export declare type AdjudicationErrorValueSetType = typeof AdjudicationErrorValueSet;
+/**
+ * This value set includes a smattering of adjudication codes.
+ */
+export declare enum AdjudicationErrorValueSetEnum {
+    /**
+     * a001: Missing Identifier
+     */
+    MissingIdentifier = "a001",
+    /**
+     * a002: Missing Creation Date
+     */
+    MissingCreationDate = "a002"
+}
 //# sourceMappingURL=AdjudicationErrorValueSet.d.ts.map

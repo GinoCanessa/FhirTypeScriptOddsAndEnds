@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes CoverageEligibilityResponse Auth Support codes.
  */
 export declare const CoverageeligibilityresponseExAuthSupportValueSet: {
     /**
-     * A formal accident report as would be filed with police or a simlar official body.
+     * accidentreport: A formal accident report as would be filed with police or a simlar official body.
      */
-    coverageeligibilityresponse_ex_auth_support_AccidentReport: Coding;
+    readonly AccidentReport: Coding;
     /**
-     * A request or authorization for diagnostic imaging.
+     * diagnosticimageorder: A request or authorization for diagnostic imaging.
      */
-    coverageeligibilityresponse_ex_auth_support_DiagnosticImageOrder: Coding;
+    readonly DiagnosticImageOrder: Coding;
     /**
-     * A report on diagnostic image(s).
+     * diagnosticimagereport: A report on diagnostic image(s).
      */
-    coverageeligibilityresponse_ex_auth_support_DiagnosticImageReport: Coding;
+    readonly DiagnosticImageReport: Coding;
     /**
-     * A request or authorization for laboratory diagnostic tests.
+     * laborder: A request or authorization for laboratory diagnostic tests.
      */
-    coverageeligibilityresponse_ex_auth_support_LabOrder: Coding;
+    readonly LabOrder: Coding;
     /**
-     * A report on laboratory diagnostic test(s).
+     * labreport: A report on laboratory diagnostic test(s).
      */
-    coverageeligibilityresponse_ex_auth_support_LabReport: Coding;
+    readonly LabReport: Coding;
     /**
-     * A physical model of the affected area.
+     * model: A physical model of the affected area.
      */
-    coverageeligibilityresponse_ex_auth_support_Model: Coding;
+    readonly Model: Coding;
     /**
-     * A photograph of the affected area.
+     * picture: A photograph of the affected area.
      */
-    coverageeligibilityresponse_ex_auth_support_Picture: Coding;
+    readonly Picture: Coding;
     /**
-     * A report from a licensed professional regarding the siutation, condition or proposed treatment.
+     * professionalreport: A report from a licensed professional regarding the siutation, condition or proposed treatment.
      */
-    coverageeligibilityresponse_ex_auth_support_ProfessionalReport: Coding;
+    readonly ProfessionalReport: Coding;
 };
+/**
+ * This value set includes CoverageEligibilityResponse Auth Support codes.
+ */
+export declare type CoverageeligibilityresponseExAuthSupportValueSetType = typeof CoverageeligibilityresponseExAuthSupportValueSet;
+/**
+ * This value set includes CoverageEligibilityResponse Auth Support codes.
+ */
+export declare enum CoverageeligibilityresponseExAuthSupportValueSetEnum {
+    /**
+     * accidentreport: A formal accident report as would be filed with police or a simlar official body.
+     */
+    AccidentReport = "accidentreport",
+    /**
+     * diagnosticimageorder: A request or authorization for diagnostic imaging.
+     */
+    DiagnosticImageOrder = "diagnosticimageorder",
+    /**
+     * diagnosticimagereport: A report on diagnostic image(s).
+     */
+    DiagnosticImageReport = "diagnosticimagereport",
+    /**
+     * laborder: A request or authorization for laboratory diagnostic tests.
+     */
+    LabOrder = "laborder",
+    /**
+     * labreport: A report on laboratory diagnostic test(s).
+     */
+    LabReport = "labreport",
+    /**
+     * model: A physical model of the affected area.
+     */
+    Model = "model",
+    /**
+     * picture: A photograph of the affected area.
+     */
+    Picture = "picture",
+    /**
+     * professionalreport: A report from a licensed professional regarding the siutation, condition or proposed treatment.
+     */
+    ProfessionalReport = "professionalreport"
+}
 //# sourceMappingURL=CoverageeligibilityresponseExAuthSupportValueSet.d.ts.map

@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of Benefit Term codes.
  */
 export declare const BenefitTermValueSet: {
     /**
-     * Annual, renewing on the anniversary
+     * annual: Annual, renewing on the anniversary
      */
-    benefit_term_Annual: Coding;
+    readonly Annual: Coding;
     /**
-     * Per day
+     * day: Per day
      */
-    benefit_term_Day: Coding;
+    readonly Day: Coding;
     /**
-     * For the total term, lifetime, of the policy or coverage
+     * lifetime: For the total term, lifetime, of the policy or coverage
      */
-    benefit_term_Lifetime: Coding;
+    readonly Lifetime: Coding;
 };
+/**
+ * This value set includes a smattering of Benefit Term codes.
+ */
+export declare type BenefitTermValueSetType = typeof BenefitTermValueSet;
+/**
+ * This value set includes a smattering of Benefit Term codes.
+ */
+export declare enum BenefitTermValueSetEnum {
+    /**
+     * annual: Annual, renewing on the anniversary
+     */
+    Annual = "annual",
+    /**
+     * day: Per day
+     */
+    Day = "day",
+    /**
+     * lifetime: For the total term, lifetime, of the policy or coverage
+     */
+    Lifetime = "lifetime"
+}
 //# sourceMappingURL=BenefitTermValueSet.d.ts.map

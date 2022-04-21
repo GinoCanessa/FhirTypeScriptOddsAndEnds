@@ -1,4 +1,6 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js';
+import { PaymentStatusValueSetType } from '../fhirValueSets/PaymentStatusValueSet.js';
 /**
  * This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
  */
@@ -8,43 +10,17 @@ export declare type IPaymentNotice = fhir.IDomainResource & {
      */
     resourceType: "PaymentNotice";
     /**
-     * The amount sent to the payee.
-     */
-    amount: fhir.IMoney | null;
-    /**
-     * The date when this resource was created.
-     */
-    created: string | null;
-    _created?: fhir.IFhirElement | undefined;
-    /**
      * A unique identifier assigned to this payment notice.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * The party who will receive or has received payment that is the subject of this notification.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    payee?: fhir.IReference | undefined;
+    status: FmStatusValueSetEnum | null;
     /**
-     * A reference to the payment which is the subject of this notice.
+     * Extended properties for primitive element: PaymentNotice.status
      */
-    payment: fhir.IReference | null;
-    /**
-     * The date when the above payment action occurred.
-     */
-    paymentDate?: string | undefined;
-    _paymentDate?: fhir.IFhirElement | undefined;
-    /**
-     * Typically paid: payment sent, cleared: payment received.
-     */
-    paymentStatus?: fhir.ICodeableConcept | undefined;
-    /**
-     * The practitioner who is responsible for the services rendered to the patient.
-     */
-    provider?: fhir.IReference | undefined;
-    /**
-     * The party who is notified of the payment status.
-     */
-    recipient: fhir.IReference | null;
+    _status?: fhir.IFhirElement | undefined;
     /**
      * Reference of resource for which payment is being made.
      */
@@ -54,57 +30,66 @@ export declare type IPaymentNotice = fhir.IDomainResource & {
      */
     response?: fhir.IReference | undefined;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     * The date when this resource was created.
      */
-    status: PaymentNoticeStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
+    created: string | null;
+    /**
+     * Extended properties for primitive element: PaymentNotice.created
+     */
+    _created?: fhir.IFhirElement | undefined;
+    /**
+     * The practitioner who is responsible for the services rendered to the patient.
+     */
+    provider?: fhir.IReference | undefined;
+    /**
+     * A reference to the payment which is the subject of this notice.
+     */
+    payment: fhir.IReference | null;
+    /**
+     * The date when the above payment action occurred.
+     */
+    paymentDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: PaymentNotice.paymentDate
+     */
+    _paymentDate?: fhir.IFhirElement | undefined;
+    /**
+     * The party who will receive or has received payment that is the subject of this notification.
+     */
+    payee?: fhir.IReference | undefined;
+    /**
+     * The party who is notified of the payment status.
+     */
+    recipient: fhir.IReference | null;
+    /**
+     * The amount sent to the payee.
+     */
+    amount: fhir.IMoney | null;
+    /**
+     * Typically paid: payment sent, cleared: payment received.
+     */
+    paymentStatus?: fhir.ICodeableConcept | undefined;
 };
 /**
  * This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
  */
-export declare class PaymentNotice extends fhir.DomainResource implements fhir.IPaymentNotice {
+export declare class PaymentNotice extends fhir.DomainResource implements IPaymentNotice {
     /**
      * Resource Type Name
      */
     resourceType: "PaymentNotice";
     /**
-     * The amount sent to the payee.
-     */
-    amount: fhir.Money | null;
-    /**
-     * The date when this resource was created.
-     */
-    created: string | null;
-    _created?: fhir.FhirElement | undefined;
-    /**
      * A unique identifier assigned to this payment notice.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * The party who will receive or has received payment that is the subject of this notification.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    payee?: fhir.Reference | undefined;
+    status: FmStatusValueSetEnum | null;
     /**
-     * A reference to the payment which is the subject of this notice.
+     * Extended properties for primitive element: PaymentNotice.status
      */
-    payment: fhir.Reference | null;
-    /**
-     * The date when the above payment action occurred.
-     */
-    paymentDate?: string | undefined;
-    _paymentDate?: fhir.FhirElement | undefined;
-    /**
-     * Typically paid: payment sent, cleared: payment received.
-     */
-    paymentStatus?: fhir.CodeableConcept | undefined;
-    /**
-     * The practitioner who is responsible for the services rendered to the patient.
-     */
-    provider?: fhir.Reference | undefined;
-    /**
-     * The party who is notified of the payment status.
-     */
-    recipient: fhir.Reference | null;
+    _status?: fhir.FhirElement | undefined;
     /**
      * Reference of resource for which payment is being made.
      */
@@ -114,30 +99,60 @@ export declare class PaymentNotice extends fhir.DomainResource implements fhir.I
      */
     response?: fhir.Reference | undefined;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     * The date when this resource was created.
      */
-    status: PaymentNoticeStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
+    created: string | null;
+    /**
+     * Extended properties for primitive element: PaymentNotice.created
+     */
+    _created?: fhir.FhirElement | undefined;
+    /**
+     * The practitioner who is responsible for the services rendered to the patient.
+     */
+    provider?: fhir.Reference | undefined;
+    /**
+     * A reference to the payment which is the subject of this notice.
+     */
+    payment: fhir.Reference | null;
+    /**
+     * The date when the above payment action occurred.
+     */
+    paymentDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: PaymentNotice.paymentDate
+     */
+    _paymentDate?: fhir.FhirElement | undefined;
+    /**
+     * The party who will receive or has received payment that is the subject of this notification.
+     */
+    payee?: fhir.Reference | undefined;
+    /**
+     * The party who is notified of the payment status.
+     */
+    recipient: fhir.Reference | null;
+    /**
+     * The amount sent to the payee.
+     */
+    amount: fhir.Money | null;
+    /**
+     * Typically paid: payment sent, cleared: payment received.
+     */
+    paymentStatus?: fhir.CodeableConcept | undefined;
     /**
      * Default constructor for PaymentNotice - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IPaymentNotice>);
+    constructor(source?: Partial<IPaymentNotice>);
     /**
-     * Check if the current PaymentNotice contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): FmStatusValueSetType;
     /**
-     * Factory function to create a PaymentNotice from an object that MUST contain all required elements.
+     * Example-bound Value Set for paymentStatus
      */
-    static fromStrict(source: fhir.IPaymentNotice): PaymentNotice;
-}
-/**
- * Code Values for the PaymentNotice.status field
- */
-export declare enum PaymentNoticeStatusEnum {
-    ACTIVE = "active",
-    CANCELLED = "cancelled",
-    DRAFT = "draft",
-    ENTERED_IN_ERROR = "entered-in-error"
+    paymentStatusExampleValueSet(): PaymentStatusValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=PaymentNotice.d.ts.map

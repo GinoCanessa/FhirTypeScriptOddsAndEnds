@@ -1,4 +1,9 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { ServiceCategoryValueSetType } from '../fhirValueSets/ServiceCategoryValueSet.js';
+import { ServiceTypeValueSetType } from '../fhirValueSets/ServiceTypeValueSet.js';
+import { C80PracticeCodesValueSetType } from '../fhirValueSets/C80PracticeCodesValueSet.js';
+import { V20276ValueSetType } from '../fhirValueSets/V20276ValueSet.js';
+import { SlotstatusValueSetType, SlotstatusValueSetEnum } from '../fhirValueSets/SlotstatusValueSet.js';
 /**
  * A slot of time on a schedule that may be available for booking appointments.
  */
@@ -8,32 +13,9 @@ export declare type ISlot = fhir.IDomainResource & {
      */
     resourceType: "Slot";
     /**
-     * The style of appointment or patient that may be booked in the slot (not service type).
-     */
-    appointmentType?: fhir.ICodeableConcept | undefined;
-    /**
-     * Comments on the slot to describe any extended information. Such as custom constraints on the slot.
-     */
-    comment?: string | undefined;
-    _comment?: fhir.IFhirElement | undefined;
-    /**
-     * Date/Time that the slot is to conclude.
-     */
-    end: string | null;
-    _end?: fhir.IFhirElement | undefined;
-    /**
      * External Ids for this item.
      */
     identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * This slot has already been overbooked, appointments are unlikely to be accepted for this time.
-     */
-    overbooked?: boolean | undefined;
-    _overbooked?: fhir.IFhirElement | undefined;
-    /**
-     * The schedule resource that this slot defines an interval of status information.
-     */
-    schedule: fhir.IReference | null;
     /**
      * A broad categorization of the service that is to be performed during this appointment.
      */
@@ -47,51 +29,66 @@ export declare type ISlot = fhir.IDomainResource & {
      */
     specialty?: fhir.ICodeableConcept[] | undefined;
     /**
-     * Date/Time that the slot is to begin.
+     * The style of appointment or patient that may be booked in the slot (not service type).
      */
-    start: string | null;
-    _start?: fhir.IFhirElement | undefined;
+    appointmentType?: fhir.ICodeableConcept | undefined;
+    /**
+     * The schedule resource that this slot defines an interval of status information.
+     */
+    schedule: fhir.IReference | null;
     /**
      * busy | free | busy-unavailable | busy-tentative | entered-in-error.
      */
-    status: SlotStatusEnum | null;
+    status: SlotstatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Slot.status
+     */
     _status?: fhir.IFhirElement | undefined;
+    /**
+     * Date/Time that the slot is to begin.
+     */
+    start: string | null;
+    /**
+     * Extended properties for primitive element: Slot.start
+     */
+    _start?: fhir.IFhirElement | undefined;
+    /**
+     * Date/Time that the slot is to conclude.
+     */
+    end: string | null;
+    /**
+     * Extended properties for primitive element: Slot.end
+     */
+    _end?: fhir.IFhirElement | undefined;
+    /**
+     * This slot has already been overbooked, appointments are unlikely to be accepted for this time.
+     */
+    overbooked?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Slot.overbooked
+     */
+    _overbooked?: fhir.IFhirElement | undefined;
+    /**
+     * Comments on the slot to describe any extended information. Such as custom constraints on the slot.
+     */
+    comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: Slot.comment
+     */
+    _comment?: fhir.IFhirElement | undefined;
 };
 /**
  * A slot of time on a schedule that may be available for booking appointments.
  */
-export declare class Slot extends fhir.DomainResource implements fhir.ISlot {
+export declare class Slot extends fhir.DomainResource implements ISlot {
     /**
      * Resource Type Name
      */
     resourceType: "Slot";
     /**
-     * The style of appointment or patient that may be booked in the slot (not service type).
-     */
-    appointmentType?: fhir.CodeableConcept | undefined;
-    /**
-     * Comments on the slot to describe any extended information. Such as custom constraints on the slot.
-     */
-    comment?: string | undefined;
-    _comment?: fhir.FhirElement | undefined;
-    /**
-     * Date/Time that the slot is to conclude.
-     */
-    end: string | null;
-    _end?: fhir.FhirElement | undefined;
-    /**
      * External Ids for this item.
      */
     identifier?: fhir.Identifier[] | undefined;
-    /**
-     * This slot has already been overbooked, appointments are unlikely to be accepted for this time.
-     */
-    overbooked?: boolean | undefined;
-    _overbooked?: fhir.FhirElement | undefined;
-    /**
-     * The schedule resource that this slot defines an interval of status information.
-     */
-    schedule: fhir.Reference | null;
     /**
      * A broad categorization of the service that is to be performed during this appointment.
      */
@@ -105,36 +102,80 @@ export declare class Slot extends fhir.DomainResource implements fhir.ISlot {
      */
     specialty?: fhir.CodeableConcept[] | undefined;
     /**
-     * Date/Time that the slot is to begin.
+     * The style of appointment or patient that may be booked in the slot (not service type).
      */
-    start: string | null;
-    _start?: fhir.FhirElement | undefined;
+    appointmentType?: fhir.CodeableConcept | undefined;
+    /**
+     * The schedule resource that this slot defines an interval of status information.
+     */
+    schedule: fhir.Reference | null;
     /**
      * busy | free | busy-unavailable | busy-tentative | entered-in-error.
      */
-    status: SlotStatusEnum | null;
+    status: SlotstatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Slot.status
+     */
     _status?: fhir.FhirElement | undefined;
+    /**
+     * Date/Time that the slot is to begin.
+     */
+    start: string | null;
+    /**
+     * Extended properties for primitive element: Slot.start
+     */
+    _start?: fhir.FhirElement | undefined;
+    /**
+     * Date/Time that the slot is to conclude.
+     */
+    end: string | null;
+    /**
+     * Extended properties for primitive element: Slot.end
+     */
+    _end?: fhir.FhirElement | undefined;
+    /**
+     * This slot has already been overbooked, appointments are unlikely to be accepted for this time.
+     */
+    overbooked?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Slot.overbooked
+     */
+    _overbooked?: fhir.FhirElement | undefined;
+    /**
+     * Comments on the slot to describe any extended information. Such as custom constraints on the slot.
+     */
+    comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: Slot.comment
+     */
+    _comment?: fhir.FhirElement | undefined;
     /**
      * Default constructor for Slot - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISlot>);
+    constructor(source?: Partial<ISlot>);
     /**
-     * Check if the current Slot contains all required elements.
+     * Example-bound Value Set for serviceCategory
      */
-    checkRequiredElements(): string[];
+    serviceCategoryExampleValueSet(): ServiceCategoryValueSetType;
     /**
-     * Factory function to create a Slot from an object that MUST contain all required elements.
+     * Example-bound Value Set for serviceType
      */
-    static fromStrict(source: fhir.ISlot): Slot;
-}
-/**
- * Code Values for the Slot.status field
- */
-export declare enum SlotStatusEnum {
-    BUSY = "busy",
-    FREE = "free",
-    BUSY_UNAVAILABLE = "busy-unavailable",
-    BUSY_TENTATIVE = "busy-tentative",
-    ENTERED_IN_ERROR = "entered-in-error"
+    serviceTypeExampleValueSet(): ServiceTypeValueSetType;
+    /**
+     * Preferred-bound Value Set for specialty
+     */
+    specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
+    /**
+     * Preferred-bound Value Set for appointmentType
+     */
+    appointmentTypePreferredValueSet(): V20276ValueSetType;
+    /**
+     * Required-bound Value Set for status
+     */
+    statusRequiredValueSet(): SlotstatusValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Slot.d.ts.map

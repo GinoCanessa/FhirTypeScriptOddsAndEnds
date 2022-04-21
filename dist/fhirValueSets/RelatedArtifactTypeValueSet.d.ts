@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of relationship to the related artifact.
  */
 export declare const RelatedArtifactTypeValueSet: {
     /**
-     * Bibliographic citation for papers, references, or other relevant material for the knowledge resource. This is intended to allow for citation of related material, but that was not necessarily specifically prepared in connection with this knowledge resource.
+     * citation: Bibliographic citation for papers, references, or other relevant material for the knowledge resource. This is intended to allow for citation of related material, but that was not necessarily specifically prepared in connection with this knowledge resource.
      */
-    related_artifact_type_Citation: Coding;
+    readonly Citation: Coding;
     /**
-     * The knowledge resource is composed of the given related artifact.
+     * composed-of: The knowledge resource is composed of the given related artifact.
      */
-    related_artifact_type_ComposedOf: Coding;
+    readonly ComposedOf: Coding;
     /**
-     * The knowledge resource depends on the given related artifact.
+     * depends-on: The knowledge resource depends on the given related artifact.
      */
-    related_artifact_type_DependsOn: Coding;
+    readonly DependsOn: Coding;
     /**
-     * The knowledge resource is derived from the related artifact. This is intended to capture the relationship in which a particular knowledge resource is based on the content of another artifact, but is modified to capture either a different set of overall requirements, or a more specific set of requirements such as those involved in a particular institution or clinical setting.
+     * derived-from: The knowledge resource is derived from the related artifact. This is intended to capture the relationship in which a particular knowledge resource is based on the content of another artifact, but is modified to capture either a different set of overall requirements, or a more specific set of requirements such as those involved in a particular institution or clinical setting.
      */
-    related_artifact_type_DerivedFrom: Coding;
+    readonly DerivedFrom: Coding;
     /**
-     * Additional documentation for the knowledge resource. This would include additional instructions on usage as well as additional information on clinical context or appropriateness.
+     * documentation: Additional documentation for the knowledge resource. This would include additional instructions on usage as well as additional information on clinical context or appropriateness.
      */
-    related_artifact_type_Documentation: Coding;
+    readonly Documentation: Coding;
     /**
-     * A summary of the justification for the knowledge resource including supporting evidence, relevant guidelines, or other clinically important information. This information is intended to provide a way to make the justification for the knowledge resource available to the consumer of interventions or results produced by the knowledge resource.
+     * justification: A summary of the justification for the knowledge resource including supporting evidence, relevant guidelines, or other clinically important information. This information is intended to provide a way to make the justification for the knowledge resource available to the consumer of interventions or results produced by the knowledge resource.
      */
-    related_artifact_type_Justification: Coding;
+    readonly Justification: Coding;
     /**
-     * The previous version of the knowledge resource.
+     * predecessor: The previous version of the knowledge resource.
      */
-    related_artifact_type_Predecessor: Coding;
+    readonly Predecessor: Coding;
     /**
-     * The next version of the knowledge resource.
+     * successor: The next version of the knowledge resource.
      */
-    related_artifact_type_Successor: Coding;
+    readonly Successor: Coding;
 };
+/**
+ * The type of relationship to the related artifact.
+ */
+export declare type RelatedArtifactTypeValueSetType = typeof RelatedArtifactTypeValueSet;
+/**
+ * The type of relationship to the related artifact.
+ */
+export declare enum RelatedArtifactTypeValueSetEnum {
+    /**
+     * citation: Bibliographic citation for papers, references, or other relevant material for the knowledge resource. This is intended to allow for citation of related material, but that was not necessarily specifically prepared in connection with this knowledge resource.
+     */
+    Citation = "citation",
+    /**
+     * composed-of: The knowledge resource is composed of the given related artifact.
+     */
+    ComposedOf = "composed-of",
+    /**
+     * depends-on: The knowledge resource depends on the given related artifact.
+     */
+    DependsOn = "depends-on",
+    /**
+     * derived-from: The knowledge resource is derived from the related artifact. This is intended to capture the relationship in which a particular knowledge resource is based on the content of another artifact, but is modified to capture either a different set of overall requirements, or a more specific set of requirements such as those involved in a particular institution or clinical setting.
+     */
+    DerivedFrom = "derived-from",
+    /**
+     * documentation: Additional documentation for the knowledge resource. This would include additional instructions on usage as well as additional information on clinical context or appropriateness.
+     */
+    Documentation = "documentation",
+    /**
+     * justification: A summary of the justification for the knowledge resource including supporting evidence, relevant guidelines, or other clinically important information. This information is intended to provide a way to make the justification for the knowledge resource available to the consumer of interventions or results produced by the knowledge resource.
+     */
+    Justification = "justification",
+    /**
+     * predecessor: The previous version of the knowledge resource.
+     */
+    Predecessor = "predecessor",
+    /**
+     * successor: The next version of the knowledge resource.
+     */
+    Successor = "successor"
+}
 //# sourceMappingURL=RelatedArtifactTypeValueSet.d.ts.map

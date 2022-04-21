@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The possible sort directions, ascending or descending.
  */
 export declare const SortDirectionValueSet: {
     /**
-     * Sort by the value ascending, so that lower values appear first.
+     * ascending: Sort by the value ascending, so that lower values appear first.
      */
-    sort_direction_Ascending: Coding;
+    readonly Ascending: Coding;
     /**
-     * Sort by the value descending, so that lower values appear last.
+     * descending: Sort by the value descending, so that lower values appear last.
      */
-    sort_direction_Descending: Coding;
+    readonly Descending: Coding;
 };
+/**
+ * The possible sort directions, ascending or descending.
+ */
+export declare type SortDirectionValueSetType = typeof SortDirectionValueSet;
+/**
+ * The possible sort directions, ascending or descending.
+ */
+export declare enum SortDirectionValueSetEnum {
+    /**
+     * ascending: Sort by the value ascending, so that lower values appear first.
+     */
+    Ascending = "ascending",
+    /**
+     * descending: Sort by the value descending, so that lower values appear last.
+     */
+    Descending = "descending"
+}
 //# sourceMappingURL=SortDirectionValueSet.d.ts.map

@@ -1,20 +1,24 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { TriggerTypeValueSetType, TriggerTypeValueSetEnum } from '../fhirValueSets/TriggerTypeValueSet.js';
 /**
  * A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
  */
 export declare type ITriggerDefinition = fhir.IFhirElement & {
     /**
-     * This element can be only be specified for data type triggers and provides additional semantics for the trigger. The context available within the condition is based on the type of data event. For all events, the current resource will be available as context. In addition, for modification events, the previous resource will also be available. The expression may be inlined, or may be a simple absolute URI, which is a reference to a named expression within a logic library referenced by a library element or extension within the containing resource. If the expression is a FHIR Path expression, it evaluates in the context of a resource of one of the type identified in the data requirement, and may also refer to the variable %previous for delta comparisons on events of type data-changed, data-modified, and data-deleted which will always have the same type.
+     * The type of triggering event.
      */
-    condition?: fhir.IExpression | undefined;
+    type: TriggerTypeValueSetEnum | null;
     /**
-     * This element shall be present for any data type trigger.
+     * Extended properties for primitive element: TriggerDefinition.type
      */
-    data?: fhir.IDataRequirement[] | undefined;
+    _type?: fhir.IFhirElement | undefined;
     /**
      * An event name can be provided for all event types, but is required for named events. If a name is provided for a type other than named events, it is considered to be a shorthand for the semantics described by the formal description of the event.
      */
     name?: string | undefined;
+    /**
+     * Extended properties for primitive element: TriggerDefinition.name
+     */
     _name?: fhir.IFhirElement | undefined;
     /**
      * The timing of the event (if this is a periodic trigger).
@@ -28,34 +32,46 @@ export declare type ITriggerDefinition = fhir.IFhirElement & {
      * The timing of the event (if this is a periodic trigger).
      */
     timingDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: TriggerDefinition.timing[x]
+     */
     _timingDate?: fhir.IFhirElement | undefined;
     /**
      * The timing of the event (if this is a periodic trigger).
      */
     timingDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: TriggerDefinition.timing[x]
+     */
     _timingDateTime?: fhir.IFhirElement | undefined;
     /**
-     * The type of triggering event.
+     * This element shall be present for any data type trigger.
      */
-    type: TriggerDefinitionTypeEnum | null;
-    _type?: fhir.IFhirElement | undefined;
+    data?: fhir.IDataRequirement[] | undefined;
+    /**
+     * This element can be only be specified for data type triggers and provides additional semantics for the trigger. The context available within the condition is based on the type of data event. For all events, the current resource will be available as context. In addition, for modification events, the previous resource will also be available. The expression may be inlined, or may be a simple absolute URI, which is a reference to a named expression within a logic library referenced by a library element or extension within the containing resource. If the expression is a FHIR Path expression, it evaluates in the context of a resource of one of the type identified in the data requirement, and may also refer to the variable %previous for delta comparisons on events of type data-changed, data-modified, and data-deleted which will always have the same type.
+     */
+    condition?: fhir.IExpression | undefined;
 };
 /**
  * A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
  */
-export declare class TriggerDefinition extends fhir.FhirElement implements fhir.ITriggerDefinition {
+export declare class TriggerDefinition extends fhir.FhirElement implements ITriggerDefinition {
     /**
-     * This element can be only be specified for data type triggers and provides additional semantics for the trigger. The context available within the condition is based on the type of data event. For all events, the current resource will be available as context. In addition, for modification events, the previous resource will also be available. The expression may be inlined, or may be a simple absolute URI, which is a reference to a named expression within a logic library referenced by a library element or extension within the containing resource. If the expression is a FHIR Path expression, it evaluates in the context of a resource of one of the type identified in the data requirement, and may also refer to the variable %previous for delta comparisons on events of type data-changed, data-modified, and data-deleted which will always have the same type.
+     * The type of triggering event.
      */
-    condition?: fhir.Expression | undefined;
+    type: TriggerTypeValueSetEnum | null;
     /**
-     * This element shall be present for any data type trigger.
+     * Extended properties for primitive element: TriggerDefinition.type
      */
-    data?: fhir.DataRequirement[] | undefined;
+    _type?: fhir.FhirElement | undefined;
     /**
      * An event name can be provided for all event types, but is required for named events. If a name is provided for a type other than named events, it is considered to be a shorthand for the semantics described by the formal description of the event.
      */
     name?: string | undefined;
+    /**
+     * Extended properties for primitive element: TriggerDefinition.name
+     */
     _name?: fhir.FhirElement | undefined;
     /**
      * The timing of the event (if this is a periodic trigger).
@@ -69,41 +85,37 @@ export declare class TriggerDefinition extends fhir.FhirElement implements fhir.
      * The timing of the event (if this is a periodic trigger).
      */
     timingDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: TriggerDefinition.timing[x]
+     */
     _timingDate?: fhir.FhirElement | undefined;
     /**
      * The timing of the event (if this is a periodic trigger).
      */
     timingDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: TriggerDefinition.timing[x]
+     */
     _timingDateTime?: fhir.FhirElement | undefined;
     /**
-     * The type of triggering event.
+     * This element shall be present for any data type trigger.
      */
-    type: TriggerDefinitionTypeEnum | null;
-    _type?: fhir.FhirElement | undefined;
+    data?: fhir.DataRequirement[] | undefined;
+    /**
+     * This element can be only be specified for data type triggers and provides additional semantics for the trigger. The context available within the condition is based on the type of data event. For all events, the current resource will be available as context. In addition, for modification events, the previous resource will also be available. The expression may be inlined, or may be a simple absolute URI, which is a reference to a named expression within a logic library referenced by a library element or extension within the containing resource. If the expression is a FHIR Path expression, it evaluates in the context of a resource of one of the type identified in the data requirement, and may also refer to the variable %previous for delta comparisons on events of type data-changed, data-modified, and data-deleted which will always have the same type.
+     */
+    condition?: fhir.Expression | undefined;
     /**
      * Default constructor for TriggerDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ITriggerDefinition>);
+    constructor(source?: Partial<ITriggerDefinition>);
     /**
-     * Check if the current TriggerDefinition contains all required elements.
+     * Required-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeRequiredValueSet(): TriggerTypeValueSetType;
     /**
-     * Factory function to create a TriggerDefinition from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.ITriggerDefinition): TriggerDefinition;
-}
-/**
- * Code Values for the TriggerDefinition.type field
- */
-export declare enum TriggerDefinitionTypeEnum {
-    NAMED_EVENT = "named-event",
-    PERIODIC = "periodic",
-    DATA_CHANGED = "data-changed",
-    DATA_ADDED = "data-added",
-    DATA_MODIFIED = "data-modified",
-    DATA_REMOVED = "data-removed",
-    DATA_ACCESSED = "data-accessed",
-    DATA_ACCESS_ENDED = "data-access-ended"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=TriggerDefinition.d.ts.map

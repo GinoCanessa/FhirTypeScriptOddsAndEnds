@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How an entity was used in an activity.
  */
 export declare const ProvenanceEntityRoleValueSet: {
     /**
-     * A transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.
+     * derivation: A transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.
      */
-    provenance_entity_role_Derivation: Coding;
+    readonly Derivation: Coding;
     /**
-     * The repeat of (some or all of) an entity, such as text or image, by someone who might or might not be its original author.
+     * quotation: The repeat of (some or all of) an entity, such as text or image, by someone who might or might not be its original author.
      */
-    provenance_entity_role_Quotation: Coding;
+    readonly Quotation: Coding;
     /**
-     * A derivation for which the entity is removed from accessibility usually through the use of the Delete operation.
+     * removal: A derivation for which the entity is removed from accessibility usually through the use of the Delete operation.
      */
-    provenance_entity_role_Removal: Coding;
+    readonly Removal: Coding;
     /**
-     * A derivation for which the resulting entity is a revised version of some original.
+     * revision: A derivation for which the resulting entity is a revised version of some original.
      */
-    provenance_entity_role_Revision: Coding;
+    readonly Revision: Coding;
     /**
-     * A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight.
+     * source: A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight.
      */
-    provenance_entity_role_Source: Coding;
+    readonly Source: Coding;
 };
+/**
+ * How an entity was used in an activity.
+ */
+export declare type ProvenanceEntityRoleValueSetType = typeof ProvenanceEntityRoleValueSet;
+/**
+ * How an entity was used in an activity.
+ */
+export declare enum ProvenanceEntityRoleValueSetEnum {
+    /**
+     * derivation: A transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.
+     */
+    Derivation = "derivation",
+    /**
+     * quotation: The repeat of (some or all of) an entity, such as text or image, by someone who might or might not be its original author.
+     */
+    Quotation = "quotation",
+    /**
+     * removal: A derivation for which the entity is removed from accessibility usually through the use of the Delete operation.
+     */
+    Removal = "removal",
+    /**
+     * revision: A derivation for which the resulting entity is a revised version of some original.
+     */
+    Revision = "revision",
+    /**
+     * source: A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight.
+     */
+    Source = "source"
+}
 //# sourceMappingURL=ProvenanceEntityRoleValueSet.d.ts.map

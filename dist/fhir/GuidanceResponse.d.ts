@@ -1,4 +1,5 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { GuidanceResponseStatusValueSetType, GuidanceResponseStatusValueSetEnum } from '../fhirValueSets/GuidanceResponseStatusValueSet.js';
 /**
  * A guidance response is the formal response to a guidance request, including any output parameters returned by the evaluation, as well as the description of any proposed actions to be taken.
  */
@@ -8,17 +9,9 @@ export declare type IGuidanceResponse = fhir.IDomainResource & {
      */
     resourceType: "GuidanceResponse";
     /**
-     * If the evaluation could not be completed due to lack of information, or additional information would potentially result in a more accurate response, this element will a description of the data required in order to proceed with the evaluation. A subsequent request to the service should include this data.
+     * The identifier of the request associated with this response. If an identifier was given as part of the request, it will be reproduced here to enable the requester to more easily identify the response in a multi-request scenario.
      */
-    dataRequirement?: fhir.IDataRequirement[] | undefined;
-    /**
-     * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official copmletion of an encounter but still be tied to the context of the encounter.
-     */
-    encounter?: fhir.IReference | undefined;
-    /**
-     * Messages resulting from the evaluation of the artifact or artifacts. As part of evaluating the request, the engine may produce informational or warning messages. These messages will be provided by this element.
-     */
-    evaluationMessage?: fhir.IReference[] | undefined;
+    requestIdentifier?: fhir.IIdentifier | undefined;
     /**
      * Allows a service to provide  unique, business identifiers for the response.
      */
@@ -27,29 +20,46 @@ export declare type IGuidanceResponse = fhir.IDomainResource & {
      * An identifier, CodeableConcept or canonical reference to the guidance that was requested.
      */
     moduleUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: GuidanceResponse.module[x]
+     */
     _moduleUri?: fhir.IFhirElement | undefined;
     /**
      * An identifier, CodeableConcept or canonical reference to the guidance that was requested.
      */
     moduleCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: GuidanceResponse.module[x]
+     */
     _moduleCanonical?: fhir.IFhirElement | undefined;
     /**
      * An identifier, CodeableConcept or canonical reference to the guidance that was requested.
      */
     moduleCodeableConcept?: fhir.ICodeableConcept | undefined;
     /**
-     * Provides a mechanism to communicate additional information about the response.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    note?: fhir.IAnnotation[] | undefined;
+    status: GuidanceResponseStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: GuidanceResponse.status
+     */
+    _status?: fhir.IFhirElement | undefined;
+    /**
+     * The patient for which the request was processed.
+     */
+    subject?: fhir.IReference | undefined;
+    /**
+     * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official copmletion of an encounter but still be tied to the context of the encounter.
+     */
+    encounter?: fhir.IReference | undefined;
     /**
      * Indicates when the guidance response was processed.
      */
     occurrenceDateTime?: string | undefined;
-    _occurrenceDateTime?: fhir.IFhirElement | undefined;
     /**
-     * The output parameters of the evaluation, if any. Many modules will result in the return of specific resources such as procedure or communication requests that are returned as part of the operation result. However, modules may define specific outputs that would be returned as the result of the evaluation, and these would be returned in this element.
+     * Extended properties for primitive element: GuidanceResponse.occurrenceDateTime
      */
-    outputParameters?: fhir.IReference | undefined;
+    _occurrenceDateTime?: fhir.IFhirElement | undefined;
     /**
      * Provides a reference to the device that performed the guidance.
      */
@@ -63,43 +73,38 @@ export declare type IGuidanceResponse = fhir.IDomainResource & {
      */
     reasonReference?: fhir.IReference[] | undefined;
     /**
-     * The identifier of the request associated with this response. If an identifier was given as part of the request, it will be reproduced here to enable the requester to more easily identify the response in a multi-request scenario.
+     * Provides a mechanism to communicate additional information about the response.
      */
-    requestIdentifier?: fhir.IIdentifier | undefined;
+    note?: fhir.IAnnotation[] | undefined;
+    /**
+     * Messages resulting from the evaluation of the artifact or artifacts. As part of evaluating the request, the engine may produce informational or warning messages. These messages will be provided by this element.
+     */
+    evaluationMessage?: fhir.IReference[] | undefined;
+    /**
+     * The output parameters of the evaluation, if any. Many modules will result in the return of specific resources such as procedure or communication requests that are returned as part of the operation result. However, modules may define specific outputs that would be returned as the result of the evaluation, and these would be returned in this element.
+     */
+    outputParameters?: fhir.IReference | undefined;
     /**
      * The actions, if any, produced by the evaluation of the artifact.
      */
     result?: fhir.IReference | undefined;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     * If the evaluation could not be completed due to lack of information, or additional information would potentially result in a more accurate response, this element will a description of the data required in order to proceed with the evaluation. A subsequent request to the service should include this data.
      */
-    status: GuidanceResponseStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * The patient for which the request was processed.
-     */
-    subject?: fhir.IReference | undefined;
+    dataRequirement?: fhir.IDataRequirement[] | undefined;
 };
 /**
  * A guidance response is the formal response to a guidance request, including any output parameters returned by the evaluation, as well as the description of any proposed actions to be taken.
  */
-export declare class GuidanceResponse extends fhir.DomainResource implements fhir.IGuidanceResponse {
+export declare class GuidanceResponse extends fhir.DomainResource implements IGuidanceResponse {
     /**
      * Resource Type Name
      */
     resourceType: "GuidanceResponse";
     /**
-     * If the evaluation could not be completed due to lack of information, or additional information would potentially result in a more accurate response, this element will a description of the data required in order to proceed with the evaluation. A subsequent request to the service should include this data.
+     * The identifier of the request associated with this response. If an identifier was given as part of the request, it will be reproduced here to enable the requester to more easily identify the response in a multi-request scenario.
      */
-    dataRequirement?: fhir.DataRequirement[] | undefined;
-    /**
-     * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official copmletion of an encounter but still be tied to the context of the encounter.
-     */
-    encounter?: fhir.Reference | undefined;
-    /**
-     * Messages resulting from the evaluation of the artifact or artifacts. As part of evaluating the request, the engine may produce informational or warning messages. These messages will be provided by this element.
-     */
-    evaluationMessage?: fhir.Reference[] | undefined;
+    requestIdentifier?: fhir.Identifier | undefined;
     /**
      * Allows a service to provide  unique, business identifiers for the response.
      */
@@ -108,29 +113,46 @@ export declare class GuidanceResponse extends fhir.DomainResource implements fhi
      * An identifier, CodeableConcept or canonical reference to the guidance that was requested.
      */
     moduleUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: GuidanceResponse.module[x]
+     */
     _moduleUri?: fhir.FhirElement | undefined;
     /**
      * An identifier, CodeableConcept or canonical reference to the guidance that was requested.
      */
     moduleCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: GuidanceResponse.module[x]
+     */
     _moduleCanonical?: fhir.FhirElement | undefined;
     /**
      * An identifier, CodeableConcept or canonical reference to the guidance that was requested.
      */
     moduleCodeableConcept?: fhir.CodeableConcept | undefined;
     /**
-     * Provides a mechanism to communicate additional information about the response.
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    note?: fhir.Annotation[] | undefined;
+    status: GuidanceResponseStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: GuidanceResponse.status
+     */
+    _status?: fhir.FhirElement | undefined;
+    /**
+     * The patient for which the request was processed.
+     */
+    subject?: fhir.Reference | undefined;
+    /**
+     * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official copmletion of an encounter but still be tied to the context of the encounter.
+     */
+    encounter?: fhir.Reference | undefined;
     /**
      * Indicates when the guidance response was processed.
      */
     occurrenceDateTime?: string | undefined;
-    _occurrenceDateTime?: fhir.FhirElement | undefined;
     /**
-     * The output parameters of the evaluation, if any. Many modules will result in the return of specific resources such as procedure or communication requests that are returned as part of the operation result. However, modules may define specific outputs that would be returned as the result of the evaluation, and these would be returned in this element.
+     * Extended properties for primitive element: GuidanceResponse.occurrenceDateTime
      */
-    outputParameters?: fhir.Reference | undefined;
+    _occurrenceDateTime?: fhir.FhirElement | undefined;
     /**
      * Provides a reference to the device that performed the guidance.
      */
@@ -144,44 +166,36 @@ export declare class GuidanceResponse extends fhir.DomainResource implements fhi
      */
     reasonReference?: fhir.Reference[] | undefined;
     /**
-     * The identifier of the request associated with this response. If an identifier was given as part of the request, it will be reproduced here to enable the requester to more easily identify the response in a multi-request scenario.
+     * Provides a mechanism to communicate additional information about the response.
      */
-    requestIdentifier?: fhir.Identifier | undefined;
+    note?: fhir.Annotation[] | undefined;
+    /**
+     * Messages resulting from the evaluation of the artifact or artifacts. As part of evaluating the request, the engine may produce informational or warning messages. These messages will be provided by this element.
+     */
+    evaluationMessage?: fhir.Reference[] | undefined;
+    /**
+     * The output parameters of the evaluation, if any. Many modules will result in the return of specific resources such as procedure or communication requests that are returned as part of the operation result. However, modules may define specific outputs that would be returned as the result of the evaluation, and these would be returned in this element.
+     */
+    outputParameters?: fhir.Reference | undefined;
     /**
      * The actions, if any, produced by the evaluation of the artifact.
      */
     result?: fhir.Reference | undefined;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     * If the evaluation could not be completed due to lack of information, or additional information would potentially result in a more accurate response, this element will a description of the data required in order to proceed with the evaluation. A subsequent request to the service should include this data.
      */
-    status: GuidanceResponseStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
-    /**
-     * The patient for which the request was processed.
-     */
-    subject?: fhir.Reference | undefined;
+    dataRequirement?: fhir.DataRequirement[] | undefined;
     /**
      * Default constructor for GuidanceResponse - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IGuidanceResponse>);
+    constructor(source?: Partial<IGuidanceResponse>);
     /**
-     * Check if the current GuidanceResponse contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): GuidanceResponseStatusValueSetType;
     /**
-     * Factory function to create a GuidanceResponse from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IGuidanceResponse): GuidanceResponse;
-}
-/**
- * Code Values for the GuidanceResponse.status field
- */
-export declare enum GuidanceResponseStatusEnum {
-    SUCCESS = "success",
-    DATA_REQUESTED = "data-requested",
-    DATA_REQUIRED = "data-required",
-    IN_PROGRESS = "in-progress",
-    FAILURE = "failure",
-    ENTERED_IN_ERROR = "entered-in-error"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=GuidanceResponse.d.ts.map

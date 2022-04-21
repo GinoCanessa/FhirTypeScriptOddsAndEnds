@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Modifier type codes.
  */
 export declare const ClaimModifiersValueSet: {
     /**
-     * Repair of prior service or installation.
+     * a: Repair of prior service or installation.
      */
-    claim_modifiers_RepairOfPriorServiceOrInstallation: Coding;
+    readonly RepairOfPriorServiceOrInstallation: Coding;
     /**
-     * Temporary service or installation.
+     * b: Temporary service or installation.
      */
-    claim_modifiers_TemporaryServiceOrInstallation: Coding;
+    readonly TemporaryServiceOrInstallation: Coding;
     /**
-     * Treatment associated with TMJ.
+     * c: Treatment associated with TMJ.
      */
-    claim_modifiers_TMJTreatment: Coding;
+    readonly TMJTreatment: Coding;
     /**
-     * Implant or associated with an implant.
+     * e: Implant or associated with an implant.
      */
-    claim_modifiers_ImplantOrAssociatedWithAnImplant: Coding;
+    readonly ImplantOrAssociatedWithAnImplant: Coding;
     /**
-     * A Rush service or service performed outside of normal office hours.
+     * rooh: A Rush service or service performed outside of normal office hours.
      */
-    claim_modifiers_RushOrOutsideOfOfficeHours: Coding;
+    readonly RushOrOutsideOfOfficeHours: Coding;
     /**
-     * None.
+     * x: None.
      */
-    claim_modifiers_None: Coding;
+    readonly None: Coding;
 };
+/**
+ * This value set includes sample Modifier type codes.
+ */
+export declare type ClaimModifiersValueSetType = typeof ClaimModifiersValueSet;
+/**
+ * This value set includes sample Modifier type codes.
+ */
+export declare enum ClaimModifiersValueSetEnum {
+    /**
+     * a: Repair of prior service or installation.
+     */
+    RepairOfPriorServiceOrInstallation = "a",
+    /**
+     * b: Temporary service or installation.
+     */
+    TemporaryServiceOrInstallation = "b",
+    /**
+     * c: Treatment associated with TMJ.
+     */
+    TMJTreatment = "c",
+    /**
+     * e: Implant or associated with an implant.
+     */
+    ImplantOrAssociatedWithAnImplant = "e",
+    /**
+     * rooh: A Rush service or service performed outside of normal office hours.
+     */
+    RushOrOutsideOfOfficeHours = "rooh",
+    /**
+     * x: None.
+     */
+    None = "x"
+}
 //# sourceMappingURL=ClaimModifiersValueSet.d.ts.map

@@ -1,515 +1,1032 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  *  A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.
  */
 export declare const V3ServiceDeliveryLocationRoleTypeValueSet: {
     /**
-     * A role of a place that further classifies the clinical setting (e.g., cardiology clinic, primary care clinic, rehabilitation hospital, skilled nursing facility) in which care is delivered during an encounter.
+     * _DedicatedClinicalLocationRoleType: A role of a place that further classifies the clinical setting (e.g., cardiology clinic, primary care clinic, rehabilitation hospital, skilled nursing facility) in which care is delivered during an encounter.
      */
-    v3_RoleCode_DedicatedClinicalLocationRoleType: Coding;
+    readonly DedicatedClinicalLocationRoleType: Coding;
     /**
-     * A role of a place that further classifies a setting that is intended to house the provision of non-clinical services.
+     * _DedicatedNonClinicalLocationRoleType: A role of a place that further classifies a setting that is intended to house the provision of non-clinical services.
      */
-    v3_RoleCode_DedicatedNonClinicalLocationRoleType: Coding;
+    readonly DedicatedNonClinicalLocationRoleType: Coding;
     /**
-     * A role of a place that further classifies a setting that is intended to house the provision of services.
+     * _DedicatedServiceDeliveryLocationRoleType: A role of a place that further classifies a setting that is intended to house the provision of services.
      */
-    v3_RoleCode_DedicatedServiceDeliveryLocationRoleType: Coding;
+    readonly DedicatedServiceDeliveryLocationRoleType: Coding;
     /**
-     * IncidentalServiceDeliveryLocationRoleType
+     * _IncidentalServiceDeliveryLocationRoleType: IncidentalServiceDeliveryLocationRoleType
      */
-    v3_RoleCode_IncidentalServiceDeliveryLocationRoleType: Coding;
+    readonly IncidentalServiceDeliveryLocationRoleType: Coding;
     /**
-     * Location of an accident where healthcare service was delivered, such as a roadside.
+     * ACC: Location of an accident where healthcare service was delivered, such as a roadside.
      */
-    v3_RoleCode_AccidentSite: Coding;
+    readonly AccidentSite: Coding;
     /**
-     * Allergy clinic
+     * ALL: Allergy clinic
      */
-    v3_RoleCode_AllergyClinic: Coding;
+    readonly AllergyClinic: Coding;
     /**
-     * Location (mobile) where healthcare service was delivered, identified specifically as an ambulance.
+     * AMB: Location (mobile) where healthcare service was delivered, identified specifically as an ambulance.
      */
-    v3_RoleCode_Ambulance: Coding;
+    readonly Ambulance: Coding;
     /**
-     * Amputee clinic
+     * AMPUT: Amputee clinic
      */
-    v3_RoleCode_AmputeeClinic: Coding;
+    readonly AmputeeClinic: Coding;
     /**
-     * Bone marrow transplant clinic
+     * BMTC: Bone marrow transplant clinic
      */
-    v3_RoleCode_BoneMarrowTransplantClinic: Coding;
+    readonly BoneMarrowTransplantClinic: Coding;
     /**
-     * Bone marrow transplant unit
+     * BMTU: Bone marrow transplant unit
      */
-    v3_RoleCode_BoneMarrowTransplantUnit: Coding;
+    readonly BoneMarrowTransplantUnit: Coding;
     /**
-     * Breast clinic
+     * BREAST: Breast clinic
      */
-    v3_RoleCode_BreastClinic: Coding;
+    readonly BreastClinic: Coding;
     /**
-     * Child and adolescent neurology clinic
+     * CANC: Child and adolescent neurology clinic
      */
-    v3_RoleCode_ChildAndAdolescentNeurologyClinic: Coding;
+    readonly ChildAndAdolescentNeurologyClinic: Coding;
     /**
-     * Child and adolescent psychiatry clinic
+     * CAPC: Child and adolescent psychiatry clinic
      */
-    v3_RoleCode_ChildAndAdolescentPsychiatryClinic: Coding;
+    readonly ChildAndAdolescentPsychiatryClinic: Coding;
     /**
-     * Ambulatory Health Care Facilities; Clinic/Center; Rehabilitation: Cardiac Facilities
+     * CARD: Ambulatory Health Care Facilities; Clinic/Center; Rehabilitation: Cardiac Facilities
      */
-    v3_RoleCode_AmbulatoryHealthCareFacilitiesClinicCenterRehabilitationCardiacFacilities: Coding;
+    readonly AmbulatoryHealthCareFacilitiesClinicCenterRehabilitationCardiacFacilities: Coding;
     /**
-     * Cardiac catheterization lab
+     * CATH: Cardiac catheterization lab
      */
-    v3_RoleCode_CardiacCatheterizationLab: Coding;
+    readonly CardiacCatheterizationLab: Coding;
     /**
-     * Coronary care unit
+     * CCU: Coronary care unit
      */
-    v3_RoleCode_CoronaryCareUnit: Coding;
+    readonly CoronaryCareUnit: Coding;
     /**
-     * A specialty unit in hospital that focuses on chronic respirator patients and pulmonary failure
+     * CHEST: A specialty unit in hospital that focuses on chronic respirator patients and pulmonary failure
      */
-    v3_RoleCode_ChestUnit: Coding;
+    readonly ChestUnit: Coding;
     /**
-     * (1) A hospital including a physical plant and personnel that provides multidisciplinary diagnosis and treatment for diseases that have one or more of the following characteristics: is permanent; leaves residual disability; is caused by nonreversible pathological alteration; requires special training of the patient for rehabilitation; and/or may be expected to require a long period of supervision or care. In addition, patients require the safety, security, and shelter of these specialized inpatient or partial hospitalization settings. (2) A hospital that provides medical and skilled nursing services to patients with long-term illnesses who are not in an acute phase but who require an intensity of services not available in nursing homes
+     * CHR: (1) A hospital including a physical plant and personnel that provides multidisciplinary diagnosis and treatment for diseases that have one or more of the following characteristics: is permanent; leaves residual disability; is caused by nonreversible pathological alteration; requires special training of the patient for rehabilitation; and/or may be expected to require a long period of supervision or care. In addition, patients require the safety, security, and shelter of these specialized inpatient or partial hospitalization settings. (2) A hospital that provides medical and skilled nursing services to patients with long-term illnesses who are not in an acute phase but who require an intensity of services not available in nursing homes
      */
-    v3_RoleCode_ChronicCareFacility: Coding;
+    readonly ChronicCareFacility: Coding;
     /**
-     * Coagulation clinic
+     * COAG: Coagulation clinic
      */
-    v3_RoleCode_CoagulationClinic: Coding;
+    readonly CoagulationClinic: Coding;
     /**
-     * Community location where healthcare is delivered.
+     * COMM: Community location where healthcare is delivered.
      */
-    v3_RoleCode_CommunityLocation: Coding;
+    readonly CommunityLocation: Coding;
     /**
-     * Colon and rectal surgery clinic
+     * CRS: Colon and rectal surgery clinic
      */
-    v3_RoleCode_ColonAndRectalSurgeryClinic: Coding;
+    readonly ColonAndRectalSurgeryClinic: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include providing front-line services to the population of a defined geographic area such as: healthcare services and social services, preventive or curative, rehabilitation or reintegration.
+     * CSC: Description: A location that plays the role of delivering services which may include providing front-line services to the population of a defined geographic area such as: healthcare services and social services, preventive or curative, rehabilitation or reintegration.
      */
-    v3_RoleCode_CommunityServiceCenter: Coding;
+    readonly CommunityServiceCenter: Coding;
     /**
-     * A practice setting where cardiovascular diagnostic procedures or therapeutic interventions are performed (e.g., cardiac catheterization lab, echocardiography suite)
+     * CVDX: A practice setting where cardiovascular diagnostic procedures or therapeutic interventions are performed (e.g., cardiac catheterization lab, echocardiography suite)
      */
-    v3_RoleCode_CardiovascularDiagnosticsOrTherapeuticsUnit: Coding;
+    readonly CardiovascularDiagnosticsOrTherapeuticsUnit: Coding;
     /**
-     * Location address where medical supplies were transported to for use.
+     * DADDR: Location address where medical supplies were transported to for use.
      */
-    v3_RoleCode_DeliveryAddress: Coding;
+    readonly DeliveryAddress: Coding;
     /**
-     * Dermatology clinic
+     * DERM: Dermatology clinic
      */
-    v3_RoleCode_DermatologyClinic: Coding;
+    readonly DermatologyClinic: Coding;
     /**
-     * A practice setting where diagnostic procedures or therapeutic interventions are performed
+     * DX: A practice setting where diagnostic procedures or therapeutic interventions are performed
      */
-    v3_RoleCode_DiagnosticsOrTherapeuticsUnit: Coding;
+    readonly DiagnosticsOrTherapeuticsUnit: Coding;
     /**
-     * Echocardiography lab
+     * ECHO: Echocardiography lab
      */
-    v3_RoleCode_EchocardiographyLab: Coding;
+    readonly EchocardiographyLab: Coding;
     /**
-     * Endocrinology clinic
+     * ENDO: Endocrinology clinic
      */
-    v3_RoleCode_EndocrinologyClinic: Coding;
+    readonly EndocrinologyClinic: Coding;
     /**
-     * (X12N 261QD0000N)
+     * ENDOS: (X12N 261QD0000N)
      */
-    v3_RoleCode_EndoscopyLab: Coding;
+    readonly EndoscopyLab: Coding;
     /**
-     * Otorhinolaryngology clinic
+     * ENT: Otorhinolaryngology clinic
      */
-    v3_RoleCode_OtorhinolaryngologyClinic: Coding;
+    readonly OtorhinolaryngologyClinic: Coding;
     /**
-     * Epilepsy unit
+     * EPIL: Epilepsy unit
      */
-    v3_RoleCode_EpilepsyUnit: Coding;
+    readonly EpilepsyUnit: Coding;
     /**
-     * The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.
+     * ER: The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.
      */
-    v3_RoleCode_EmergencyRoom: Coding;
+    readonly EmergencyRoom: Coding;
     /**
-     * Emergency trauma unit
+     * ETU: Emergency trauma unit
      */
-    v3_RoleCode_EmergencyTraumaUnit: Coding;
+    readonly EmergencyTraumaUnit: Coding;
     /**
-     * Family medicine clinic
+     * FMC: Family medicine clinic
      */
-    v3_RoleCode_FamilyMedicineClinic: Coding;
+    readonly FamilyMedicineClinic: Coding;
     /**
-     * (X12N 282N00000N)
+     * GACH: (X12N 282N00000N)
      */
-    v3_RoleCode_HospitalsGeneralAcuteCareHospital: Coding;
+    readonly HospitalsGeneralAcuteCareHospital: Coding;
     /**
-     * Gastroenterology clinic
+     * GI: Gastroenterology clinic
      */
-    v3_RoleCode_GastroenterologyClinic: Coding;
+    readonly GastroenterologyClinic: Coding;
     /**
-     * A practice setting where GI procedures (such as endoscopies) are performed
+     * GIDX: A practice setting where GI procedures (such as endoscopies) are performed
      */
-    v3_RoleCode_GastroenterologyDiagnosticsOrTherapeuticsLab: Coding;
+    readonly GastroenterologyDiagnosticsOrTherapeuticsLab: Coding;
     /**
-     * General internal medicine clinic
+     * GIM: General internal medicine clinic
      */
-    v3_RoleCode_GeneralInternalMedicineClinic: Coding;
+    readonly GeneralInternalMedicineClinic: Coding;
     /**
-     * Gynecology clinic
+     * GYN: Gynecology clinic
      */
-    v3_RoleCode_GynecologyClinic: Coding;
+    readonly GynecologyClinic: Coding;
     /**
-     * Hand clinic
+     * HAND: Hand clinic
      */
-    v3_RoleCode_HandClinic: Coding;
+    readonly HandClinic: Coding;
     /**
-     * Hemodialysis unit
+     * HD: Hemodialysis unit
      */
-    v3_RoleCode_HemodialysisUnit: Coding;
+    readonly HemodialysisUnit: Coding;
     /**
-     * Hematology clinic
+     * HEM: Hematology clinic
      */
-    v3_RoleCode_HematologyClinic: Coding;
+    readonly HematologyClinic: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include tests done based on clinical specimens to get health information about a patient as pertaining to the diagnosis, treatment and prevention of disease.  Hospital laboratories may be further divided into specialized units such as Anatomic Pathology, Microbiology, and Biochemistry.
+     * HLAB: Description: A location that plays the role of delivering services which may include tests done based on clinical specimens to get health information about a patient as pertaining to the diagnosis, treatment and prevention of disease.  Hospital laboratories may be further divided into specialized units such as Anatomic Pathology, Microbiology, and Biochemistry.
      */
-    v3_RoleCode_HospitalLaboratory: Coding;
+    readonly HospitalLaboratory: Coding;
     /**
-     * An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.
+     * HOSP: An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.
      */
-    v3_RoleCode_Hospital: Coding;
+    readonly Hospital: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include the branch of medicine that uses ionizing and non-ionizing radiation to diagnose and treat diseases.  The radiology unit may be further divided into subspecialties such as Imaging, Cardiovascular, Thoracic, and Ultrasound.
+     * HRAD: Description: A location that plays the role of delivering services which may include the branch of medicine that uses ionizing and non-ionizing radiation to diagnose and treat diseases.  The radiology unit may be further divided into subspecialties such as Imaging, Cardiovascular, Thoracic, and Ultrasound.
      */
-    v3_RoleCode_RadiologyUnit: Coding;
+    readonly RadiologyUnit: Coding;
     /**
-     * Hypertension clinic
+     * HTN: Hypertension clinic
      */
-    v3_RoleCode_HypertensionClinic: Coding;
+    readonly HypertensionClinic: Coding;
     /**
-     * Hospital unit
+     * HU: Hospital unit
      */
-    v3_RoleCode_HospitalUnit: Coding;
+    readonly HospitalUnit: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include collecting specimens and/or samples from patients for laboratory testing purposes, but does not perform any tests or analysis functions.
+     * HUSCS: Description: A location that plays the role of delivering services which may include collecting specimens and/or samples from patients for laboratory testing purposes, but does not perform any tests or analysis functions.
      */
-    v3_RoleCode_SpecimenCollectionSite: Coding;
+    readonly SpecimenCollectionSite: Coding;
     /**
-     * Intensive care unit
+     * ICU: Intensive care unit
      */
-    v3_RoleCode_IntensiveCareUnit: Coding;
+    readonly IntensiveCareUnit: Coding;
     /**
-     * Focuses on assessing disability
+     * IEC: Focuses on assessing disability
      */
-    v3_RoleCode_ImpairmentEvaluationCenter: Coding;
+    readonly ImpairmentEvaluationCenter: Coding;
     /**
-     * Infectious disease clinic
+     * INFD: Infectious disease clinic
      */
-    v3_RoleCode_InfectiousDiseaseClinic: Coding;
+    readonly InfectiousDiseaseClinic: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include tests are done on clinical specimens to get health information about a patient pertaining to the diagnosis, treatment, and prevention of disease for a hospital visit longer than one day.
+     * INLAB: Description: A location that plays the role of delivering services which may include tests are done on clinical specimens to get health information about a patient pertaining to the diagnosis, treatment, and prevention of disease for a hospital visit longer than one day.
      */
-    v3_RoleCode_InpatientLaboratory: Coding;
+    readonly InpatientLaboratory: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include providing judicious, safe, efficacious, appropriate and cost effective use of medicines for treatment of patients for visits longer than one day. The distinction between inpatient pharmacies and retail (or outpatient) pharmacies is that they are part of a patient's continuity of care while staying in the hospital.
+     * INPHARM: Description: A location that plays the role of delivering services which may include providing judicious, safe, efficacious, appropriate and cost effective use of medicines for treatment of patients for visits longer than one day. The distinction between inpatient pharmacies and retail (or outpatient) pharmacies is that they are part of a patient's continuity of care while staying in the hospital.
      */
-    v3_RoleCode_InpatientPharmacy: Coding;
+    readonly InpatientPharmacy: Coding;
     /**
-     * Infertility clinic
+     * INV: Infertility clinic
      */
-    v3_RoleCode_InfertilityClinic: Coding;
+    readonly InfertilityClinic: Coding;
     /**
-     * Lympedema clinic
+     * LYMPH: Lympedema clinic
      */
-    v3_RoleCode_LympedemaClinic: Coding;
+    readonly LympedemaClinic: Coding;
     /**
-     * Description: A location that plays the role of delivering services which include biochemistry, hematology, microbiology, immunochemistry, and toxicology.
+     * MBL: Description: A location that plays the role of delivering services which include biochemistry, hematology, microbiology, immunochemistry, and toxicology.
      */
-    v3_RoleCode_MedicalLaboratory: Coding;
+    readonly MedicalLaboratory: Coding;
     /**
-     * Medical genetics clinic
+     * MGEN: Medical genetics clinic
      */
-    v3_RoleCode_MedicalGeneticsClinic: Coding;
+    readonly MedicalGeneticsClinic: Coding;
     /**
-     * A health care facility operated by the Department of Defense or other military operation.
+     * MHSP: A health care facility operated by the Department of Defense or other military operation.
      */
-    v3_RoleCode_MilitaryHospital: Coding;
+    readonly MilitaryHospital: Coding;
     /**
-     * Location (mobile) where healthcare service was delivered.
+     * MOBL: Location (mobile) where healthcare service was delivered.
      */
-    v3_RoleCode_MobileUnit: Coding;
+    readonly MobileUnit: Coding;
     /**
-     * Nursing or custodial care facility
+     * NCCF: Nursing or custodial care facility
      */
-    v3_RoleCode_NursingOrCustodialCareFacility: Coding;
+    readonly NursingOrCustodialCareFacility: Coding;
     /**
-     * Neurology critical care and stroke unit
+     * NCCS: Neurology critical care and stroke unit
      */
-    v3_RoleCode_NeurologyCriticalCareAndStrokeUnit: Coding;
+    readonly NeurologyCriticalCareAndStrokeUnit: Coding;
     /**
-     * Nephrology clinic
+     * NEPH: Nephrology clinic
      */
-    v3_RoleCode_NephrologyClinic: Coding;
+    readonly NephrologyClinic: Coding;
     /**
-     * Neurology clinic
+     * NEUR: Neurology clinic
      */
-    v3_RoleCode_NeurologyClinic: Coding;
+    readonly NeurologyClinic: Coding;
     /**
-     * Neurosurgery unit
+     * NS: Neurosurgery unit
      */
-    v3_RoleCode_NeurosurgeryUnit: Coding;
+    readonly NeurosurgeryUnit: Coding;
     /**
-     * Obstetrics clinic
+     * OB: Obstetrics clinic
      */
-    v3_RoleCode_ObstetricsClinic: Coding;
+    readonly ObstetricsClinic: Coding;
     /**
-     * Outpatient facility
+     * OF: Outpatient facility
      */
-    v3_RoleCode_OutpatientFacility: Coding;
+    readonly OutpatientFacility: Coding;
     /**
-     * Oral and maxillofacial surgery clinic
+     * OMS: Oral and maxillofacial surgery clinic
      */
-    v3_RoleCode_OralAndMaxillofacialSurgeryClinic: Coding;
+    readonly OralAndMaxillofacialSurgeryClinic: Coding;
     /**
-     * Medical oncology clinic
+     * ONCL: Medical oncology clinic
      */
-    v3_RoleCode_MedicalOncologyClinic: Coding;
+    readonly MedicalOncologyClinic: Coding;
     /**
-     * Opthalmology clinic
+     * OPH: Opthalmology clinic
      */
-    v3_RoleCode_OpthalmologyClinic: Coding;
+    readonly OpthalmologyClinic: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include examination, diagnosis, treatment, management, and prevention of diseases and disorders of the eye as well as prescribing and fitting appropriate corrective lenses (glasses or contact lenses) as needed.  Optometry clinics may also provide tests for visual field screening, measuring intra-ocular pressure and ophthalmoscopy, as and when required.
+     * OPTC: Description: A location that plays the role of delivering services which may include examination, diagnosis, treatment, management, and prevention of diseases and disorders of the eye as well as prescribing and fitting appropriate corrective lenses (glasses or contact lenses) as needed.  Optometry clinics may also provide tests for visual field screening, measuring intra-ocular pressure and ophthalmoscopy, as and when required.
      */
-    v3_RoleCode_OptometryClinic: Coding;
+    readonly OptometryClinic: Coding;
     /**
-     * Orthopedics clinic
+     * ORTHO: Orthopedics clinic
      */
-    v3_RoleCode_OrthopedicsClinic: Coding;
+    readonly OrthopedicsClinic: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include tests are done on clinical specimens to get health information about a patient pertaining to the diagnosis, treatment, and prevention of disease for same day visits.
+     * OUTLAB: Description: A location that plays the role of delivering services which may include tests are done on clinical specimens to get health information about a patient pertaining to the diagnosis, treatment, and prevention of disease for same day visits.
      */
-    v3_RoleCode_OutpatientLaboratory: Coding;
+    readonly OutpatientLaboratory: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include providing judicious, safe, efficacious, appropriate and cost effective use of medicines for treatment of patients for outpatient visits and may also be used for discharge prescriptions.
+     * OUTPHARM: Description: A location that plays the role of delivering services which may include providing judicious, safe, efficacious, appropriate and cost effective use of medicines for treatment of patients for outpatient visits and may also be used for discharge prescriptions.
      */
-    v3_RoleCode_OutpatientPharmacy: Coding;
+    readonly OutpatientPharmacy: Coding;
     /**
-     * (X12N 261QP3300N)
+     * PAINCL: (X12N 261QP3300N)
      */
-    v3_RoleCode_PainClinic: Coding;
+    readonly PainClinic: Coding;
     /**
-     * (X12N 261QP2300N)
+     * PC: (X12N 261QP2300N)
      */
-    v3_RoleCode_PrimaryCareClinic: Coding;
+    readonly PrimaryCareClinic: Coding;
     /**
-     * Pediatrics clinic
+     * PEDC: Pediatrics clinic
      */
-    v3_RoleCode_PediatricsClinic: Coding;
+    readonly PediatricsClinic: Coding;
     /**
-     * Pediatric cardiology clinic
+     * PEDCARD: Pediatric cardiology clinic
      */
-    v3_RoleCode_PediatricCardiologyClinic: Coding;
+    readonly PediatricCardiologyClinic: Coding;
     /**
-     * Pediatric endocrinology clinic
+     * PEDE: Pediatric endocrinology clinic
      */
-    v3_RoleCode_PediatricEndocrinologyClinic: Coding;
+    readonly PediatricEndocrinologyClinic: Coding;
     /**
-     * Pediatric gastroenterology clinic
+     * PEDGI: Pediatric gastroenterology clinic
      */
-    v3_RoleCode_PediatricGastroenterologyClinic: Coding;
+    readonly PediatricGastroenterologyClinic: Coding;
     /**
-     * Pediatric hematology clinic
+     * PEDHEM: Pediatric hematology clinic
      */
-    v3_RoleCode_PediatricHematologyClinic: Coding;
+    readonly PediatricHematologyClinic: Coding;
     /**
-     * Pediatric oncology clinic
+     * PEDHO: Pediatric oncology clinic
      */
-    v3_RoleCode_PediatricOncologyClinic: Coding;
+    readonly PediatricOncologyClinic: Coding;
     /**
-     * Pediatric intensive care unit
+     * PEDICU: Pediatric intensive care unit
      */
-    v3_RoleCode_PediatricIntensiveCareUnit: Coding;
+    readonly PediatricIntensiveCareUnit: Coding;
     /**
-     * Pediatric infectious disease clinic
+     * PEDID: Pediatric infectious disease clinic
      */
-    v3_RoleCode_PediatricInfectiousDiseaseClinic: Coding;
+    readonly PediatricInfectiousDiseaseClinic: Coding;
     /**
-     * Pediatric nephrology clinic
+     * PEDNEPH: Pediatric nephrology clinic
      */
-    v3_RoleCode_PediatricNephrologyClinic: Coding;
+    readonly PediatricNephrologyClinic: Coding;
     /**
-     * Pediatric neonatal intensive care unit
+     * PEDNICU: Pediatric neonatal intensive care unit
      */
-    v3_RoleCode_PediatricNeonatalIntensiveCareUnit: Coding;
+    readonly PediatricNeonatalIntensiveCareUnit: Coding;
     /**
-     * Pediatric rheumatology clinic
+     * PEDRHEUM: Pediatric rheumatology clinic
      */
-    v3_RoleCode_PediatricRheumatologyClinic: Coding;
+    readonly PediatricRheumatologyClinic: Coding;
     /**
-     * Pediatric unit
+     * PEDU: Pediatric unit
      */
-    v3_RoleCode_PediatricUnit: Coding;
+    readonly PediatricUnit: Coding;
     /**
-     * Location where healthcare service was delivered, identified as a pharmacy.
+     * PHARM: Location where healthcare service was delivered, identified as a pharmacy.
      */
-    v3_RoleCode_Pharmacy: Coding;
+    readonly Pharmacy: Coding;
     /**
-     * (X12N 273R00000N)
+     * PHU: (X12N 273R00000N)
      */
-    v3_RoleCode_PsychiatricHospitalUnit: Coding;
+    readonly PsychiatricHospitalUnit: Coding;
     /**
-     * Plastic surgery clinic
+     * PLS: Plastic surgery clinic
      */
-    v3_RoleCode_PlasticSurgeryClinic: Coding;
+    readonly PlasticSurgeryClinic: Coding;
     /**
-     * (X12N 261QP1100N)
+     * POD: (X12N 261QP1100N)
      */
-    v3_RoleCode_PodiatryClinic: Coding;
+    readonly PodiatryClinic: Coding;
     /**
-     * Pain rehabilitation center
+     * PRC: Pain rehabilitation center
      */
-    v3_RoleCode_PainRehabilitationCenter: Coding;
+    readonly PainRehabilitationCenter: Coding;
     /**
-     * Preventive medicine clinic
+     * PREV: Preventive medicine clinic
      */
-    v3_RoleCode_PreventiveMedicineClinic: Coding;
+    readonly PreventiveMedicineClinic: Coding;
     /**
-     * Proctology clinic
+     * PROCTO: Proctology clinic
      */
-    v3_RoleCode_ProctologyClinic: Coding;
+    readonly ProctologyClinic: Coding;
     /**
-     * Location where healthcare service was delivered, identified as the healthcare provider's practice office.
+     * PROFF: Location where healthcare service was delivered, identified as the healthcare provider's practice office.
      */
-    v3_RoleCode_ProviderQuoteSOffice: Coding;
+    readonly ProviderQuoteSOffice: Coding;
     /**
-     * Prosthodontics clinic
+     * PROS: Prosthodontics clinic
      */
-    v3_RoleCode_ProsthodonticsClinic: Coding;
+    readonly ProsthodonticsClinic: Coding;
     /**
-     * Psychology clinic
+     * PSI: Psychology clinic
      */
-    v3_RoleCode_PsychologyClinic: Coding;
+    readonly PsychologyClinic: Coding;
     /**
-     * Psychiatry clinic
+     * PSY: Psychiatry clinic
      */
-    v3_RoleCode_PsychiatryClinic: Coding;
+    readonly PsychiatryClinic: Coding;
     /**
-     * Healthcare facility that cares for patients with psychiatric illness(s).
+     * PSYCHF: Healthcare facility that cares for patients with psychiatric illness(s).
      */
-    v3_RoleCode_PsychatricCareFacility: Coding;
+    readonly PsychatricCareFacility: Coding;
     /**
-     * location where healthcare was delivered which is the residence of the Patient.
+     * PTRES: location where healthcare was delivered which is the residence of the Patient.
      */
-    v3_RoleCode_PatientQuoteSResidence: Coding;
+    readonly PatientQuoteSResidence: Coding;
     /**
-     * A practice setting where radiology services (diagnostic or therapeutic) are provided            (X12N 261QR0200N)
+     * RADDX: A practice setting where radiology services (diagnostic or therapeutic) are provided            (X12N 261QR0200N)
      */
-    v3_RoleCode_RadiologyDiagnosticsOrTherapeuticsUnit: Coding;
+    readonly RadiologyDiagnosticsOrTherapeuticsUnit: Coding;
     /**
-     * (X12N 261QX0203N)
+     * RADO: (X12N 261QX0203N)
      */
-    v3_RoleCode_RadiationOncologyUnit: Coding;
+    readonly RadiationOncologyUnit: Coding;
     /**
-     * (X12N 283X00000N)
+     * RH: (X12N 283X00000N)
      */
-    v3_RoleCode_RehabilitationHospital: Coding;
+    readonly RehabilitationHospital: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include life training and/or social support to people with addictions.
+     * RHAT: Description: A location that plays the role of delivering services which may include life training and/or social support to people with addictions.
      */
-    v3_RoleCode_AddictionTreatmentCenter: Coding;
+    readonly AddictionTreatmentCenter: Coding;
     /**
-     * Rheumatology clinic
+     * RHEUM: Rheumatology clinic
      */
-    v3_RoleCode_RheumatologyClinic: Coding;
+    readonly RheumatologyClinic: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include adaptation, rehabilitation and social integration services for people with intellectual and/or pervasive development disorders such as autism or severe behaviour disorder.
+     * RHII: Description: A location that plays the role of delivering services which may include adaptation, rehabilitation and social integration services for people with intellectual and/or pervasive development disorders such as autism or severe behaviour disorder.
      */
-    v3_RoleCode_IntellectualImpairmentCenter: Coding;
+    readonly IntellectualImpairmentCenter: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may social support services for adolescents who are pregnant or have child and are experiencing adaptation issues/difficulties in their current or eventual parenting role.
+     * RHMAD: Description: A location that plays the role of delivering services which may social support services for adolescents who are pregnant or have child and are experiencing adaptation issues/difficulties in their current or eventual parenting role.
      */
-    v3_RoleCode_ParentsWithAdjustmentDifficultiesCenter: Coding;
+    readonly ParentsWithAdjustmentDifficultiesCenter: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include adaptation, rehabilitation and social integration services for people with physical impairments.
+     * RHPI: Description: A location that plays the role of delivering services which may include adaptation, rehabilitation and social integration services for people with physical impairments.
      */
-    v3_RoleCode_PhysicalImpairmentCenter: Coding;
+    readonly PhysicalImpairmentCenter: Coding;
     /**
-     * Description: A location that plays the role of delivering services for people with hearing impairments.
+     * RHPIH: Description: A location that plays the role of delivering services for people with hearing impairments.
      */
-    v3_RoleCode_PhysicalImpairmentHearingCenter: Coding;
+    readonly PhysicalImpairmentHearingCenter: Coding;
     /**
-     * Description: A location that plays the role of delivering services for people with motor skill impairments.
+     * RHPIMS: Description: A location that plays the role of delivering services for people with motor skill impairments.
      */
-    v3_RoleCode_PhysicalImpairmentMotorSkillsCenter: Coding;
+    readonly PhysicalImpairmentMotorSkillsCenter: Coding;
     /**
-     * Description: A location that plays the role of delivering services for people with visual skill impairments.
+     * RHPIVS: Description: A location that plays the role of delivering services for people with visual skill impairments.
      */
-    v3_RoleCode_PhysicalImpairmentVisualSkillsCenter: Coding;
+    readonly PhysicalImpairmentVisualSkillsCenter: Coding;
     /**
-     * Rehabilitation hospital unit
+     * RHU: Rehabilitation hospital unit
      */
-    v3_RoleCode_RehabilitationHospitalUnit: Coding;
+    readonly RehabilitationHospitalUnit: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include life training and/or social support services for the adaption, rehabilitation and social integration of youths with adjustment difficulties.
+     * RHYAD: Description: A location that plays the role of delivering services which may include life training and/or social support services for the adaption, rehabilitation and social integration of youths with adjustment difficulties.
      */
-    v3_RoleCode_YouthsWithAdjustmentDifficultiesCenter: Coding;
+    readonly YouthsWithAdjustmentDifficultiesCenter: Coding;
     /**
-     * Neuroradiology unit
+     * RNEU: Neuroradiology unit
      */
-    v3_RoleCode_NeuroradiologyUnit: Coding;
+    readonly NeuroradiologyUnit: Coding;
     /**
-     * Residential treatment facility
+     * RTF: Residential treatment facility
      */
-    v3_RoleCode_ResidentialTreatmentFacility: Coding;
+    readonly ResidentialTreatmentFacility: Coding;
     /**
-     * Location where healthcare service was delivered, identified as a school or educational facility.
+     * SCHOOL: Location where healthcare service was delivered, identified as a school or educational facility.
      */
-    v3_RoleCode_School: Coding;
+    readonly School: Coding;
     /**
-     * (X12N 261QA1200N)
+     * SLEEP: (X12N 261QA1200N)
      */
-    v3_RoleCode_SleepDisordersUnit: Coding;
+    readonly SleepDisordersUnit: Coding;
     /**
-     * (X12N 314000000N)
+     * SNF: (X12N 314000000N)
      */
-    v3_RoleCode_SkilledNursingFacility: Coding;
+    readonly SkilledNursingFacility: Coding;
     /**
-     * Sports medicine clinic
+     * SPMED: Sports medicine clinic
      */
-    v3_RoleCode_SportsMedicineClinic: Coding;
+    readonly SportsMedicineClinic: Coding;
     /**
-     * Surgery clinic
+     * SU: Surgery clinic
      */
-    v3_RoleCode_SurgeryClinic: Coding;
+    readonly SurgeryClinic: Coding;
     /**
-     * (X12N 324500000N)
+     * SURF: (X12N 324500000N)
      */
-    v3_RoleCode_SubstanceUseRehabilitationFacility: Coding;
+    readonly SubstanceUseRehabilitationFacility: Coding;
     /**
-     * Transplant clinic
+     * TR: Transplant clinic
      */
-    v3_RoleCode_TransplantClinic: Coding;
+    readonly TransplantClinic: Coding;
     /**
-     * Travel and geographic medicine clinic
+     * TRAVEL: Travel and geographic medicine clinic
      */
-    v3_RoleCode_TravelAndGeographicMedicineClinic: Coding;
+    readonly TravelAndGeographicMedicineClinic: Coding;
     /**
-     * Description: A location that plays the role of delivering services which may include: social emergency services required for a young person as required under any jurisdictional youth laws, child placement, and family mediation in the defined geographical area the SDL is responsible for. It may provide expertise in a judiciary setting on child custody, adoption and biological history research.
+     * UPC: Description: A location that plays the role of delivering services which may include: social emergency services required for a young person as required under any jurisdictional youth laws, child placement, and family mediation in the defined geographical area the SDL is responsible for. It may provide expertise in a judiciary setting on child custody, adoption and biological history research.
      */
-    v3_RoleCode_UnderageProtectionCenter: Coding;
+    readonly UnderageProtectionCenter: Coding;
     /**
-     * Urology clinic
+     * URO: Urology clinic
      */
-    v3_RoleCode_UrologyClinic: Coding;
+    readonly UrologyClinic: Coding;
     /**
-     * Wound clinic
+     * WND: Wound clinic
      */
-    v3_RoleCode_WoundClinic: Coding;
+    readonly WoundClinic: Coding;
     /**
-     * Location where healthcare service was delivered, identified as a work place.
+     * WORK: Location where healthcare service was delivered, identified as a work place.
      */
-    v3_RoleCode_WorkSite: Coding;
+    readonly WorkSite: Coding;
 };
+/**
+ *  A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.
+ */
+export declare type V3ServiceDeliveryLocationRoleTypeValueSetType = typeof V3ServiceDeliveryLocationRoleTypeValueSet;
+/**
+ *  A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.
+ */
+export declare enum V3ServiceDeliveryLocationRoleTypeValueSetEnum {
+    /**
+     * _DedicatedClinicalLocationRoleType: A role of a place that further classifies the clinical setting (e.g., cardiology clinic, primary care clinic, rehabilitation hospital, skilled nursing facility) in which care is delivered during an encounter.
+     */
+    DedicatedClinicalLocationRoleType = "_DedicatedClinicalLocationRoleType",
+    /**
+     * _DedicatedNonClinicalLocationRoleType: A role of a place that further classifies a setting that is intended to house the provision of non-clinical services.
+     */
+    DedicatedNonClinicalLocationRoleType = "_DedicatedNonClinicalLocationRoleType",
+    /**
+     * _DedicatedServiceDeliveryLocationRoleType: A role of a place that further classifies a setting that is intended to house the provision of services.
+     */
+    DedicatedServiceDeliveryLocationRoleType = "_DedicatedServiceDeliveryLocationRoleType",
+    /**
+     * _IncidentalServiceDeliveryLocationRoleType: IncidentalServiceDeliveryLocationRoleType
+     */
+    IncidentalServiceDeliveryLocationRoleType = "_IncidentalServiceDeliveryLocationRoleType",
+    /**
+     * ACC: Location of an accident where healthcare service was delivered, such as a roadside.
+     */
+    AccidentSite = "ACC",
+    /**
+     * ALL: Allergy clinic
+     */
+    AllergyClinic = "ALL",
+    /**
+     * AMB: Location (mobile) where healthcare service was delivered, identified specifically as an ambulance.
+     */
+    Ambulance = "AMB",
+    /**
+     * AMPUT: Amputee clinic
+     */
+    AmputeeClinic = "AMPUT",
+    /**
+     * BMTC: Bone marrow transplant clinic
+     */
+    BoneMarrowTransplantClinic = "BMTC",
+    /**
+     * BMTU: Bone marrow transplant unit
+     */
+    BoneMarrowTransplantUnit = "BMTU",
+    /**
+     * BREAST: Breast clinic
+     */
+    BreastClinic = "BREAST",
+    /**
+     * CANC: Child and adolescent neurology clinic
+     */
+    ChildAndAdolescentNeurologyClinic = "CANC",
+    /**
+     * CAPC: Child and adolescent psychiatry clinic
+     */
+    ChildAndAdolescentPsychiatryClinic = "CAPC",
+    /**
+     * CARD: Ambulatory Health Care Facilities; Clinic/Center; Rehabilitation: Cardiac Facilities
+     */
+    AmbulatoryHealthCareFacilitiesClinicCenterRehabilitationCardiacFacilities = "CARD",
+    /**
+     * CATH: Cardiac catheterization lab
+     */
+    CardiacCatheterizationLab = "CATH",
+    /**
+     * CCU: Coronary care unit
+     */
+    CoronaryCareUnit = "CCU",
+    /**
+     * CHEST: A specialty unit in hospital that focuses on chronic respirator patients and pulmonary failure
+     */
+    ChestUnit = "CHEST",
+    /**
+     * CHR: (1) A hospital including a physical plant and personnel that provides multidisciplinary diagnosis and treatment for diseases that have one or more of the following characteristics: is permanent; leaves residual disability; is caused by nonreversible pathological alteration; requires special training of the patient for rehabilitation; and/or may be expected to require a long period of supervision or care. In addition, patients require the safety, security, and shelter of these specialized inpatient or partial hospitalization settings. (2) A hospital that provides medical and skilled nursing services to patients with long-term illnesses who are not in an acute phase but who require an intensity of services not available in nursing homes
+     */
+    ChronicCareFacility = "CHR",
+    /**
+     * COAG: Coagulation clinic
+     */
+    CoagulationClinic = "COAG",
+    /**
+     * COMM: Community location where healthcare is delivered.
+     */
+    CommunityLocation = "COMM",
+    /**
+     * CRS: Colon and rectal surgery clinic
+     */
+    ColonAndRectalSurgeryClinic = "CRS",
+    /**
+     * CSC: Description: A location that plays the role of delivering services which may include providing front-line services to the population of a defined geographic area such as: healthcare services and social services, preventive or curative, rehabilitation or reintegration.
+     */
+    CommunityServiceCenter = "CSC",
+    /**
+     * CVDX: A practice setting where cardiovascular diagnostic procedures or therapeutic interventions are performed (e.g., cardiac catheterization lab, echocardiography suite)
+     */
+    CardiovascularDiagnosticsOrTherapeuticsUnit = "CVDX",
+    /**
+     * DADDR: Location address where medical supplies were transported to for use.
+     */
+    DeliveryAddress = "DADDR",
+    /**
+     * DERM: Dermatology clinic
+     */
+    DermatologyClinic = "DERM",
+    /**
+     * DX: A practice setting where diagnostic procedures or therapeutic interventions are performed
+     */
+    DiagnosticsOrTherapeuticsUnit = "DX",
+    /**
+     * ECHO: Echocardiography lab
+     */
+    EchocardiographyLab = "ECHO",
+    /**
+     * ENDO: Endocrinology clinic
+     */
+    EndocrinologyClinic = "ENDO",
+    /**
+     * ENDOS: (X12N 261QD0000N)
+     */
+    EndoscopyLab = "ENDOS",
+    /**
+     * ENT: Otorhinolaryngology clinic
+     */
+    OtorhinolaryngologyClinic = "ENT",
+    /**
+     * EPIL: Epilepsy unit
+     */
+    EpilepsyUnit = "EPIL",
+    /**
+     * ER: The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.
+     */
+    EmergencyRoom = "ER",
+    /**
+     * ETU: Emergency trauma unit
+     */
+    EmergencyTraumaUnit = "ETU",
+    /**
+     * FMC: Family medicine clinic
+     */
+    FamilyMedicineClinic = "FMC",
+    /**
+     * GACH: (X12N 282N00000N)
+     */
+    HospitalsGeneralAcuteCareHospital = "GACH",
+    /**
+     * GI: Gastroenterology clinic
+     */
+    GastroenterologyClinic = "GI",
+    /**
+     * GIDX: A practice setting where GI procedures (such as endoscopies) are performed
+     */
+    GastroenterologyDiagnosticsOrTherapeuticsLab = "GIDX",
+    /**
+     * GIM: General internal medicine clinic
+     */
+    GeneralInternalMedicineClinic = "GIM",
+    /**
+     * GYN: Gynecology clinic
+     */
+    GynecologyClinic = "GYN",
+    /**
+     * HAND: Hand clinic
+     */
+    HandClinic = "HAND",
+    /**
+     * HD: Hemodialysis unit
+     */
+    HemodialysisUnit = "HD",
+    /**
+     * HEM: Hematology clinic
+     */
+    HematologyClinic = "HEM",
+    /**
+     * HLAB: Description: A location that plays the role of delivering services which may include tests done based on clinical specimens to get health information about a patient as pertaining to the diagnosis, treatment and prevention of disease.  Hospital laboratories may be further divided into specialized units such as Anatomic Pathology, Microbiology, and Biochemistry.
+     */
+    HospitalLaboratory = "HLAB",
+    /**
+     * HOSP: An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.
+     */
+    Hospital = "HOSP",
+    /**
+     * HRAD: Description: A location that plays the role of delivering services which may include the branch of medicine that uses ionizing and non-ionizing radiation to diagnose and treat diseases.  The radiology unit may be further divided into subspecialties such as Imaging, Cardiovascular, Thoracic, and Ultrasound.
+     */
+    RadiologyUnit = "HRAD",
+    /**
+     * HTN: Hypertension clinic
+     */
+    HypertensionClinic = "HTN",
+    /**
+     * HU: Hospital unit
+     */
+    HospitalUnit = "HU",
+    /**
+     * HUSCS: Description: A location that plays the role of delivering services which may include collecting specimens and/or samples from patients for laboratory testing purposes, but does not perform any tests or analysis functions.
+     */
+    SpecimenCollectionSite = "HUSCS",
+    /**
+     * ICU: Intensive care unit
+     */
+    IntensiveCareUnit = "ICU",
+    /**
+     * IEC: Focuses on assessing disability
+     */
+    ImpairmentEvaluationCenter = "IEC",
+    /**
+     * INFD: Infectious disease clinic
+     */
+    InfectiousDiseaseClinic = "INFD",
+    /**
+     * INLAB: Description: A location that plays the role of delivering services which may include tests are done on clinical specimens to get health information about a patient pertaining to the diagnosis, treatment, and prevention of disease for a hospital visit longer than one day.
+     */
+    InpatientLaboratory = "INLAB",
+    /**
+     * INPHARM: Description: A location that plays the role of delivering services which may include providing judicious, safe, efficacious, appropriate and cost effective use of medicines for treatment of patients for visits longer than one day. The distinction between inpatient pharmacies and retail (or outpatient) pharmacies is that they are part of a patient's continuity of care while staying in the hospital.
+     */
+    InpatientPharmacy = "INPHARM",
+    /**
+     * INV: Infertility clinic
+     */
+    InfertilityClinic = "INV",
+    /**
+     * LYMPH: Lympedema clinic
+     */
+    LympedemaClinic = "LYMPH",
+    /**
+     * MBL: Description: A location that plays the role of delivering services which include biochemistry, hematology, microbiology, immunochemistry, and toxicology.
+     */
+    MedicalLaboratory = "MBL",
+    /**
+     * MGEN: Medical genetics clinic
+     */
+    MedicalGeneticsClinic = "MGEN",
+    /**
+     * MHSP: A health care facility operated by the Department of Defense or other military operation.
+     */
+    MilitaryHospital = "MHSP",
+    /**
+     * MOBL: Location (mobile) where healthcare service was delivered.
+     */
+    MobileUnit = "MOBL",
+    /**
+     * NCCF: Nursing or custodial care facility
+     */
+    NursingOrCustodialCareFacility = "NCCF",
+    /**
+     * NCCS: Neurology critical care and stroke unit
+     */
+    NeurologyCriticalCareAndStrokeUnit = "NCCS",
+    /**
+     * NEPH: Nephrology clinic
+     */
+    NephrologyClinic = "NEPH",
+    /**
+     * NEUR: Neurology clinic
+     */
+    NeurologyClinic = "NEUR",
+    /**
+     * NS: Neurosurgery unit
+     */
+    NeurosurgeryUnit = "NS",
+    /**
+     * OB: Obstetrics clinic
+     */
+    ObstetricsClinic = "OB",
+    /**
+     * OF: Outpatient facility
+     */
+    OutpatientFacility = "OF",
+    /**
+     * OMS: Oral and maxillofacial surgery clinic
+     */
+    OralAndMaxillofacialSurgeryClinic = "OMS",
+    /**
+     * ONCL: Medical oncology clinic
+     */
+    MedicalOncologyClinic = "ONCL",
+    /**
+     * OPH: Opthalmology clinic
+     */
+    OpthalmologyClinic = "OPH",
+    /**
+     * OPTC: Description: A location that plays the role of delivering services which may include examination, diagnosis, treatment, management, and prevention of diseases and disorders of the eye as well as prescribing and fitting appropriate corrective lenses (glasses or contact lenses) as needed.  Optometry clinics may also provide tests for visual field screening, measuring intra-ocular pressure and ophthalmoscopy, as and when required.
+     */
+    OptometryClinic = "OPTC",
+    /**
+     * ORTHO: Orthopedics clinic
+     */
+    OrthopedicsClinic = "ORTHO",
+    /**
+     * OUTLAB: Description: A location that plays the role of delivering services which may include tests are done on clinical specimens to get health information about a patient pertaining to the diagnosis, treatment, and prevention of disease for same day visits.
+     */
+    OutpatientLaboratory = "OUTLAB",
+    /**
+     * OUTPHARM: Description: A location that plays the role of delivering services which may include providing judicious, safe, efficacious, appropriate and cost effective use of medicines for treatment of patients for outpatient visits and may also be used for discharge prescriptions.
+     */
+    OutpatientPharmacy = "OUTPHARM",
+    /**
+     * PAINCL: (X12N 261QP3300N)
+     */
+    PainClinic = "PAINCL",
+    /**
+     * PC: (X12N 261QP2300N)
+     */
+    PrimaryCareClinic = "PC",
+    /**
+     * PEDC: Pediatrics clinic
+     */
+    PediatricsClinic = "PEDC",
+    /**
+     * PEDCARD: Pediatric cardiology clinic
+     */
+    PediatricCardiologyClinic = "PEDCARD",
+    /**
+     * PEDE: Pediatric endocrinology clinic
+     */
+    PediatricEndocrinologyClinic = "PEDE",
+    /**
+     * PEDGI: Pediatric gastroenterology clinic
+     */
+    PediatricGastroenterologyClinic = "PEDGI",
+    /**
+     * PEDHEM: Pediatric hematology clinic
+     */
+    PediatricHematologyClinic = "PEDHEM",
+    /**
+     * PEDHO: Pediatric oncology clinic
+     */
+    PediatricOncologyClinic = "PEDHO",
+    /**
+     * PEDICU: Pediatric intensive care unit
+     */
+    PediatricIntensiveCareUnit = "PEDICU",
+    /**
+     * PEDID: Pediatric infectious disease clinic
+     */
+    PediatricInfectiousDiseaseClinic = "PEDID",
+    /**
+     * PEDNEPH: Pediatric nephrology clinic
+     */
+    PediatricNephrologyClinic = "PEDNEPH",
+    /**
+     * PEDNICU: Pediatric neonatal intensive care unit
+     */
+    PediatricNeonatalIntensiveCareUnit = "PEDNICU",
+    /**
+     * PEDRHEUM: Pediatric rheumatology clinic
+     */
+    PediatricRheumatologyClinic = "PEDRHEUM",
+    /**
+     * PEDU: Pediatric unit
+     */
+    PediatricUnit = "PEDU",
+    /**
+     * PHARM: Location where healthcare service was delivered, identified as a pharmacy.
+     */
+    Pharmacy = "PHARM",
+    /**
+     * PHU: (X12N 273R00000N)
+     */
+    PsychiatricHospitalUnit = "PHU",
+    /**
+     * PLS: Plastic surgery clinic
+     */
+    PlasticSurgeryClinic = "PLS",
+    /**
+     * POD: (X12N 261QP1100N)
+     */
+    PodiatryClinic = "POD",
+    /**
+     * PRC: Pain rehabilitation center
+     */
+    PainRehabilitationCenter = "PRC",
+    /**
+     * PREV: Preventive medicine clinic
+     */
+    PreventiveMedicineClinic = "PREV",
+    /**
+     * PROCTO: Proctology clinic
+     */
+    ProctologyClinic = "PROCTO",
+    /**
+     * PROFF: Location where healthcare service was delivered, identified as the healthcare provider's practice office.
+     */
+    ProviderQuoteSOffice = "PROFF",
+    /**
+     * PROS: Prosthodontics clinic
+     */
+    ProsthodonticsClinic = "PROS",
+    /**
+     * PSI: Psychology clinic
+     */
+    PsychologyClinic = "PSI",
+    /**
+     * PSY: Psychiatry clinic
+     */
+    PsychiatryClinic = "PSY",
+    /**
+     * PSYCHF: Healthcare facility that cares for patients with psychiatric illness(s).
+     */
+    PsychatricCareFacility = "PSYCHF",
+    /**
+     * PTRES: location where healthcare was delivered which is the residence of the Patient.
+     */
+    PatientQuoteSResidence = "PTRES",
+    /**
+     * RADDX: A practice setting where radiology services (diagnostic or therapeutic) are provided            (X12N 261QR0200N)
+     */
+    RadiologyDiagnosticsOrTherapeuticsUnit = "RADDX",
+    /**
+     * RADO: (X12N 261QX0203N)
+     */
+    RadiationOncologyUnit = "RADO",
+    /**
+     * RH: (X12N 283X00000N)
+     */
+    RehabilitationHospital = "RH",
+    /**
+     * RHAT: Description: A location that plays the role of delivering services which may include life training and/or social support to people with addictions.
+     */
+    AddictionTreatmentCenter = "RHAT",
+    /**
+     * RHEUM: Rheumatology clinic
+     */
+    RheumatologyClinic = "RHEUM",
+    /**
+     * RHII: Description: A location that plays the role of delivering services which may include adaptation, rehabilitation and social integration services for people with intellectual and/or pervasive development disorders such as autism or severe behaviour disorder.
+     */
+    IntellectualImpairmentCenter = "RHII",
+    /**
+     * RHMAD: Description: A location that plays the role of delivering services which may social support services for adolescents who are pregnant or have child and are experiencing adaptation issues/difficulties in their current or eventual parenting role.
+     */
+    ParentsWithAdjustmentDifficultiesCenter = "RHMAD",
+    /**
+     * RHPI: Description: A location that plays the role of delivering services which may include adaptation, rehabilitation and social integration services for people with physical impairments.
+     */
+    PhysicalImpairmentCenter = "RHPI",
+    /**
+     * RHPIH: Description: A location that plays the role of delivering services for people with hearing impairments.
+     */
+    PhysicalImpairmentHearingCenter = "RHPIH",
+    /**
+     * RHPIMS: Description: A location that plays the role of delivering services for people with motor skill impairments.
+     */
+    PhysicalImpairmentMotorSkillsCenter = "RHPIMS",
+    /**
+     * RHPIVS: Description: A location that plays the role of delivering services for people with visual skill impairments.
+     */
+    PhysicalImpairmentVisualSkillsCenter = "RHPIVS",
+    /**
+     * RHU: Rehabilitation hospital unit
+     */
+    RehabilitationHospitalUnit = "RHU",
+    /**
+     * RHYAD: Description: A location that plays the role of delivering services which may include life training and/or social support services for the adaption, rehabilitation and social integration of youths with adjustment difficulties.
+     */
+    YouthsWithAdjustmentDifficultiesCenter = "RHYAD",
+    /**
+     * RNEU: Neuroradiology unit
+     */
+    NeuroradiologyUnit = "RNEU",
+    /**
+     * RTF: Residential treatment facility
+     */
+    ResidentialTreatmentFacility = "RTF",
+    /**
+     * SCHOOL: Location where healthcare service was delivered, identified as a school or educational facility.
+     */
+    School = "SCHOOL",
+    /**
+     * SLEEP: (X12N 261QA1200N)
+     */
+    SleepDisordersUnit = "SLEEP",
+    /**
+     * SNF: (X12N 314000000N)
+     */
+    SkilledNursingFacility = "SNF",
+    /**
+     * SPMED: Sports medicine clinic
+     */
+    SportsMedicineClinic = "SPMED",
+    /**
+     * SU: Surgery clinic
+     */
+    SurgeryClinic = "SU",
+    /**
+     * SURF: (X12N 324500000N)
+     */
+    SubstanceUseRehabilitationFacility = "SURF",
+    /**
+     * TR: Transplant clinic
+     */
+    TransplantClinic = "TR",
+    /**
+     * TRAVEL: Travel and geographic medicine clinic
+     */
+    TravelAndGeographicMedicineClinic = "TRAVEL",
+    /**
+     * UPC: Description: A location that plays the role of delivering services which may include: social emergency services required for a young person as required under any jurisdictional youth laws, child placement, and family mediation in the defined geographical area the SDL is responsible for. It may provide expertise in a judiciary setting on child custody, adoption and biological history research.
+     */
+    UnderageProtectionCenter = "UPC",
+    /**
+     * URO: Urology clinic
+     */
+    UrologyClinic = "URO",
+    /**
+     * WND: Wound clinic
+     */
+    WoundClinic = "WND",
+    /**
+     * WORK: Location where healthcare service was delivered, identified as a work place.
+     */
+    WorkSite = "WORK"
+}
 //# sourceMappingURL=V3ServiceDeliveryLocationRoleTypeValueSet.d.ts.map

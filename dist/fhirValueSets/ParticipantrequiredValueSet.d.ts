@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Is the Participant required to attend the appointment.
  */
 export declare const ParticipantrequiredValueSet: {
     /**
-     * The participant is excluded from the appointment, and might not be informed of the appointment taking place. (Appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
+     * information-only: The participant is excluded from the appointment, and might not be informed of the appointment taking place. (Appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
      */
-    participantrequired_InformationOnly: Coding;
+    readonly InformationOnly: Coding;
     /**
-     * The participant may optionally attend the appointment.
+     * optional: The participant may optionally attend the appointment.
      */
-    participantrequired_Optional: Coding;
+    readonly Optional: Coding;
     /**
-     * The participant is required to attend the appointment.
+     * required: The participant is required to attend the appointment.
      */
-    participantrequired_Required: Coding;
+    readonly Required: Coding;
 };
+/**
+ * Is the Participant required to attend the appointment.
+ */
+export declare type ParticipantrequiredValueSetType = typeof ParticipantrequiredValueSet;
+/**
+ * Is the Participant required to attend the appointment.
+ */
+export declare enum ParticipantrequiredValueSetEnum {
+    /**
+     * information-only: The participant is excluded from the appointment, and might not be informed of the appointment taking place. (Appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
+     */
+    InformationOnly = "information-only",
+    /**
+     * optional: The participant may optionally attend the appointment.
+     */
+    Optional = "optional",
+    /**
+     * required: The participant is required to attend the appointment.
+     */
+    Required = "required"
+}
 //# sourceMappingURL=ParticipantrequiredValueSet.d.ts.map

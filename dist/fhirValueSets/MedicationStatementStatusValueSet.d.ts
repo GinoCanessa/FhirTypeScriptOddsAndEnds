@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Medication Status Codes
  */
 export declare const MedicationStatementStatusValueSet: {
     /**
-     * The medication is still being taken.
+     * active: The medication is still being taken.
      */
-    medication_statement_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The medication is no longer being taken.
+     * completed: The medication is no longer being taken.
      */
-    medication_statement_status_Completed: Coding;
+    readonly Completed: Coding;
     /**
-     * Some of the actions that are implied by the medication statement may have occurred.  For example, the patient may have taken some of the medication.  Clinical decision support systems should take this status into account.
+     * entered-in-error: Some of the actions that are implied by the medication statement may have occurred.  For example, the patient may have taken some of the medication.  Clinical decision support systems should take this status into account.
      */
-    medication_statement_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The medication may be taken at some time in the future.
+     * intended: The medication may be taken at some time in the future.
      */
-    medication_statement_status_Intended: Coding;
+    readonly Intended: Coding;
     /**
-     * The medication was not consumed by the patient
+     * not-taken: The medication was not consumed by the patient
      */
-    medication_statement_status_NotTaken: Coding;
+    readonly NotTaken: Coding;
     /**
-     * Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called 'suspended'.
+     * on-hold: Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called 'suspended'.
      */
-    medication_statement_status_OnHold: Coding;
+    readonly OnHold: Coding;
     /**
-     * Actions implied by the statement have been permanently halted, before all of them occurred. This should not be used if the statement was entered in error.
+     * stopped: Actions implied by the statement have been permanently halted, before all of them occurred. This should not be used if the statement was entered in error.
      */
-    medication_statement_status_Stopped: Coding;
+    readonly Stopped: Coding;
     /**
-     * The state of the medication use is not currently known.
+     * unknown: The state of the medication use is not currently known.
      */
-    medication_statement_status_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * Medication Status Codes
+ */
+export declare type MedicationStatementStatusValueSetType = typeof MedicationStatementStatusValueSet;
+/**
+ * Medication Status Codes
+ */
+export declare enum MedicationStatementStatusValueSetEnum {
+    /**
+     * active: The medication is still being taken.
+     */
+    Active = "active",
+    /**
+     * completed: The medication is no longer being taken.
+     */
+    Completed = "completed",
+    /**
+     * entered-in-error: Some of the actions that are implied by the medication statement may have occurred.  For example, the patient may have taken some of the medication.  Clinical decision support systems should take this status into account.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * intended: The medication may be taken at some time in the future.
+     */
+    Intended = "intended",
+    /**
+     * not-taken: The medication was not consumed by the patient
+     */
+    NotTaken = "not-taken",
+    /**
+     * on-hold: Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called 'suspended'.
+     */
+    OnHold = "on-hold",
+    /**
+     * stopped: Actions implied by the statement have been permanently halted, before all of them occurred. This should not be used if the statement was entered in error.
+     */
+    Stopped = "stopped",
+    /**
+     * unknown: The state of the medication use is not currently known.
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=MedicationStatementStatusValueSet.d.ts.map

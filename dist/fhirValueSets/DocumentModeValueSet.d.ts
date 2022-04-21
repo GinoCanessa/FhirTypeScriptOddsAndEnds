@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Whether the application produces or consumes documents.
  */
 export declare const DocumentModeValueSet: {
     /**
-     * The application consumes documents of the specified type.
+     * consumer: The application consumes documents of the specified type.
      */
-    document_mode_Consumer: Coding;
+    readonly Consumer: Coding;
     /**
-     * The application produces documents of the specified type.
+     * producer: The application produces documents of the specified type.
      */
-    document_mode_Producer: Coding;
+    readonly Producer: Coding;
 };
+/**
+ * Whether the application produces or consumes documents.
+ */
+export declare type DocumentModeValueSetType = typeof DocumentModeValueSet;
+/**
+ * Whether the application produces or consumes documents.
+ */
+export declare enum DocumentModeValueSetEnum {
+    /**
+     * consumer: The application consumes documents of the specified type.
+     */
+    Consumer = "consumer",
+    /**
+     * producer: The application produces documents of the specified type.
+     */
+    Producer = "producer"
+}
 //# sourceMappingURL=DocumentModeValueSet.d.ts.map

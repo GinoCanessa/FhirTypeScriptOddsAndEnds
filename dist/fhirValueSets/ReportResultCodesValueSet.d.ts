@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The reported execution result.
  */
 export declare const ReportResultCodesValueSet: {
     /**
-     * One or more test operations failed one or more asserts.
+     * fail: One or more test operations failed one or more asserts.
      */
-    report_result_codes_Fail: Coding;
+    readonly Fail: Coding;
     /**
-     * All test operations successfully passed all asserts.
+     * pass: All test operations successfully passed all asserts.
      */
-    report_result_codes_Pass: Coding;
+    readonly Pass: Coding;
     /**
-     * One or more test operations is pending execution completion.
+     * pending: One or more test operations is pending execution completion.
      */
-    report_result_codes_Pending: Coding;
+    readonly Pending: Coding;
 };
+/**
+ * The reported execution result.
+ */
+export declare type ReportResultCodesValueSetType = typeof ReportResultCodesValueSet;
+/**
+ * The reported execution result.
+ */
+export declare enum ReportResultCodesValueSetEnum {
+    /**
+     * fail: One or more test operations failed one or more asserts.
+     */
+    Fail = "fail",
+    /**
+     * pass: All test operations successfully passed all asserts.
+     */
+    Pass = "pass",
+    /**
+     * pending: One or more test operations is pending execution completion.
+     */
+    Pending = "pending"
+}
 //# sourceMappingURL=ReportResultCodesValueSet.d.ts.map

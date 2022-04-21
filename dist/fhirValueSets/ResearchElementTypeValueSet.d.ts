@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The possible types of research elements (E.g. Population, Exposure, Outcome).
  */
 export declare const ResearchElementTypeValueSet: {
     /**
-     * The element defines an exposure within the population that is being researched.
+     * exposure: The element defines an exposure within the population that is being researched.
      */
-    research_element_type_Exposure: Coding;
+    readonly Exposure: Coding;
     /**
-     * The element defines an outcome within the population that is being researched.
+     * outcome: The element defines an outcome within the population that is being researched.
      */
-    research_element_type_Outcome: Coding;
+    readonly Outcome: Coding;
     /**
-     * The element defines the population that forms the basis for research.
+     * population: The element defines the population that forms the basis for research.
      */
-    research_element_type_Population: Coding;
+    readonly Population: Coding;
 };
+/**
+ * The possible types of research elements (E.g. Population, Exposure, Outcome).
+ */
+export declare type ResearchElementTypeValueSetType = typeof ResearchElementTypeValueSet;
+/**
+ * The possible types of research elements (E.g. Population, Exposure, Outcome).
+ */
+export declare enum ResearchElementTypeValueSetEnum {
+    /**
+     * exposure: The element defines an exposure within the population that is being researched.
+     */
+    Exposure = "exposure",
+    /**
+     * outcome: The element defines an outcome within the population that is being researched.
+     */
+    Outcome = "outcome",
+    /**
+     * population: The element defines the population that forms the basis for research.
+     */
+    Population = "population"
+}
 //# sourceMappingURL=ResearchElementTypeValueSet.d.ts.map

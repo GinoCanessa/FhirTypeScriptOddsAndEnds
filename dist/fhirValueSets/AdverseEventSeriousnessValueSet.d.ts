@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Overall seriousness of this event for the patient.
  */
 export declare const AdverseEventSeriousnessValueSet: {
     /**
-     * Non-serious.
+     * Non-serious: Non-serious.
      */
-    adverse_event_seriousness_NonSerious: Coding;
+    readonly NonSerious: Coding;
     /**
-     * Serious.
+     * Serious: Serious.
      */
-    adverse_event_seriousness_Serious: Coding;
+    readonly Serious: Coding;
     /**
-     * Is a congenital anomaly/birth defect.
+     * SeriousIsBirthDefect: Is a congenital anomaly/birth defect.
      */
-    adverse_event_seriousness_IsACongenitalAnomalyBirthDefect: Coding;
+    readonly IsACongenitalAnomalyBirthDefect: Coding;
     /**
-     * Is Life-threatening.
+     * SeriousIsLifeThreatening: Is Life-threatening.
      */
-    adverse_event_seriousness_IsLifeThreatening: Coding;
+    readonly IsLifeThreatening: Coding;
     /**
-     * Requires intervention to prevent permanent impairment or damage (i.e., an important medical event that requires medical judgement).
+     * SeriousRequiresPreventImpairment: Requires intervention to prevent permanent impairment or damage (i.e., an important medical event that requires medical judgement).
      */
-    adverse_event_seriousness_RequiresInterventionToPreventPermanentImpairment: Coding;
+    readonly RequiresInterventionToPreventPermanentImpairment: Coding;
     /**
-     * Results in death.
+     * SeriousResultsInDeath: Results in death.
      */
-    adverse_event_seriousness_ResultsInDeath: Coding;
+    readonly ResultsInDeath: Coding;
     /**
-     * Results in persistent or significant disability/incapacity.
+     * SeriousResultsInDisability: Results in persistent or significant disability/incapacity.
      */
-    adverse_event_seriousness_ResultsInPersistentOrSignificantDisabilityIncapacity: Coding;
+    readonly ResultsInPersistentOrSignificantDisabilityIncapacity: Coding;
     /**
-     * Requires inpatient hospitalization or causes prolongation of existing hospitalization.
+     * SeriousResultsInHospitalization: Requires inpatient hospitalization or causes prolongation of existing hospitalization.
      */
-    adverse_event_seriousness_RequiresOrProlongsInpatientHospitalization: Coding;
+    readonly RequiresOrProlongsInpatientHospitalization: Coding;
 };
+/**
+ * Overall seriousness of this event for the patient.
+ */
+export declare type AdverseEventSeriousnessValueSetType = typeof AdverseEventSeriousnessValueSet;
+/**
+ * Overall seriousness of this event for the patient.
+ */
+export declare enum AdverseEventSeriousnessValueSetEnum {
+    /**
+     * Non-serious: Non-serious.
+     */
+    NonSerious = "Non-serious",
+    /**
+     * Serious: Serious.
+     */
+    Serious = "Serious",
+    /**
+     * SeriousIsBirthDefect: Is a congenital anomaly/birth defect.
+     */
+    IsACongenitalAnomalyBirthDefect = "SeriousIsBirthDefect",
+    /**
+     * SeriousIsLifeThreatening: Is Life-threatening.
+     */
+    IsLifeThreatening = "SeriousIsLifeThreatening",
+    /**
+     * SeriousRequiresPreventImpairment: Requires intervention to prevent permanent impairment or damage (i.e., an important medical event that requires medical judgement).
+     */
+    RequiresInterventionToPreventPermanentImpairment = "SeriousRequiresPreventImpairment",
+    /**
+     * SeriousResultsInDeath: Results in death.
+     */
+    ResultsInDeath = "SeriousResultsInDeath",
+    /**
+     * SeriousResultsInDisability: Results in persistent or significant disability/incapacity.
+     */
+    ResultsInPersistentOrSignificantDisabilityIncapacity = "SeriousResultsInDisability",
+    /**
+     * SeriousResultsInHospitalization: Requires inpatient hospitalization or causes prolongation of existing hospitalization.
+     */
+    RequiresOrProlongsInpatientHospitalization = "SeriousResultsInHospitalization"
+}
 //# sourceMappingURL=AdverseEventSeriousnessValueSet.d.ts.map

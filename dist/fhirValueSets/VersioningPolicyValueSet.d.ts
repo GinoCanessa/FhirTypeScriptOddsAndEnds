@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How the system supports versioning for a resource.
  */
 export declare const VersioningPolicyValueSet: {
     /**
-     * VersionId meta-property is not supported (server) or used (client).
+     * no-version: VersionId meta-property is not supported (server) or used (client).
      */
-    versioning_policy_NoVersionIdSupport: Coding;
+    readonly NoVersionIdSupport: Coding;
     /**
-     * VersionId meta-property is supported (server) or used (client).
+     * versioned: VersionId meta-property is supported (server) or used (client).
      */
-    versioning_policy_Versioned: Coding;
+    readonly Versioned: Coding;
     /**
-     * VersionId must be correct for updates (server) or will be specified (If-match header) for updates (client).
+     * versioned-update: VersionId must be correct for updates (server) or will be specified (If-match header) for updates (client).
      */
-    versioning_policy_VersionIdTrackedFully: Coding;
+    readonly VersionIdTrackedFully: Coding;
 };
+/**
+ * How the system supports versioning for a resource.
+ */
+export declare type VersioningPolicyValueSetType = typeof VersioningPolicyValueSet;
+/**
+ * How the system supports versioning for a resource.
+ */
+export declare enum VersioningPolicyValueSetEnum {
+    /**
+     * no-version: VersionId meta-property is not supported (server) or used (client).
+     */
+    NoVersionIdSupport = "no-version",
+    /**
+     * versioned: VersionId meta-property is supported (server) or used (client).
+     */
+    Versioned = "versioned",
+    /**
+     * versioned-update: VersionId must be correct for updates (server) or will be specified (If-match header) for updates (client).
+     */
+    VersionIdTrackedFully = "versioned-update"
+}
 //# sourceMappingURL=VersioningPolicyValueSet.d.ts.map

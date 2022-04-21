@@ -1,63 +1,128 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Overall categorization of the event, e.g. product-related or situational.
  */
 export declare const AdverseEventCategoryValueSet: {
     /**
-     * The adverse event pertains to an expired drug.
+     * expired-drug: The adverse event pertains to an expired drug.
      */
-    adverse_event_category_ExpiredDrug: Coding;
+    readonly ExpiredDrug: Coding;
     /**
-     * The adverse event pertains to incorrect perscribing information.
+     * incorrect-prescribing-information: The adverse event pertains to incorrect perscribing information.
      */
-    adverse_event_category_IncorrectPrescribingInformation: Coding;
+    readonly IncorrectPrescribingInformation: Coding;
     /**
-     * The adverse event pertains to a medical device use error.
+     * medical-device-use-error: The adverse event pertains to a medical device use error.
      */
-    adverse_event_category_MedicalDeviceUseError: Coding;
+    readonly MedicalDeviceUseError: Coding;
     /**
-     * The adverse event pertains to a problem with a different manufacturer of the same medication.
+     * problem-different-manufacturer: The adverse event pertains to a problem with a different manufacturer of the same medication.
      */
-    adverse_event_category_ProblemWithDifferentManufacturerOfSameMedicine: Coding;
+    readonly ProblemWithDifferentManufacturerOfSameMedicine: Coding;
     /**
-     * The adverse event pertains to a product problem.
+     * product-problem: The adverse event pertains to a product problem.
      */
-    adverse_event_category_ProductProblem: Coding;
+    readonly ProductProblem: Coding;
     /**
-     * The adverse event pertains to product quality.
+     * product-quality: The adverse event pertains to product quality.
      */
-    adverse_event_category_ProductQuality: Coding;
+    readonly ProductQuality: Coding;
     /**
-     * The adverse event pertains to a product use error.
+     * product-use-error: The adverse event pertains to a product use error.
      */
-    adverse_event_category_ProductUseError: Coding;
+    readonly ProductUseError: Coding;
     /**
-     * The adverse event pertains to an unsafe physical environment.
+     * unsafe-physical-environment: The adverse event pertains to an unsafe physical environment.
      */
-    adverse_event_category_UnsafePhysicalEnvironment: Coding;
+    readonly UnsafePhysicalEnvironment: Coding;
     /**
-     * The adverse event pertains to a wrong dose.
+     * wrong-dose: The adverse event pertains to a wrong dose.
      */
-    adverse_event_category_WrongDose: Coding;
+    readonly WrongDose: Coding;
     /**
-     * The adverse event pertains to a wrong duration.
+     * wrong-duration: The adverse event pertains to a wrong duration.
      */
-    adverse_event_category_WrongDuration: Coding;
+    readonly WrongDuration: Coding;
     /**
-     * The adverse event pertains to a wrong rate.
+     * wrong-rate: The adverse event pertains to a wrong rate.
      */
-    adverse_event_category_WrongRate: Coding;
+    readonly WrongRate: Coding;
     /**
-     * The adverse event pertains to a wrong route of administration.
+     * wrong-route-of-administration: The adverse event pertains to a wrong route of administration.
      */
-    adverse_event_category_WrongRouteOfAdministration: Coding;
+    readonly WrongRouteOfAdministration: Coding;
     /**
-     * The adverse event pertains to a wrong technique.
+     * wrong-technique: The adverse event pertains to a wrong technique.
      */
-    adverse_event_category_WrongTechnique: Coding;
+    readonly WrongTechnique: Coding;
     /**
-     * The adverse event pertains to a wrong time.
+     * wrong-time: The adverse event pertains to a wrong time.
      */
-    adverse_event_category_WrongTime: Coding;
+    readonly WrongTime: Coding;
 };
+/**
+ * Overall categorization of the event, e.g. product-related or situational.
+ */
+export declare type AdverseEventCategoryValueSetType = typeof AdverseEventCategoryValueSet;
+/**
+ * Overall categorization of the event, e.g. product-related or situational.
+ */
+export declare enum AdverseEventCategoryValueSetEnum {
+    /**
+     * expired-drug: The adverse event pertains to an expired drug.
+     */
+    ExpiredDrug = "expired-drug",
+    /**
+     * incorrect-prescribing-information: The adverse event pertains to incorrect perscribing information.
+     */
+    IncorrectPrescribingInformation = "incorrect-prescribing-information",
+    /**
+     * medical-device-use-error: The adverse event pertains to a medical device use error.
+     */
+    MedicalDeviceUseError = "medical-device-use-error",
+    /**
+     * problem-different-manufacturer: The adverse event pertains to a problem with a different manufacturer of the same medication.
+     */
+    ProblemWithDifferentManufacturerOfSameMedicine = "problem-different-manufacturer",
+    /**
+     * product-problem: The adverse event pertains to a product problem.
+     */
+    ProductProblem = "product-problem",
+    /**
+     * product-quality: The adverse event pertains to product quality.
+     */
+    ProductQuality = "product-quality",
+    /**
+     * product-use-error: The adverse event pertains to a product use error.
+     */
+    ProductUseError = "product-use-error",
+    /**
+     * unsafe-physical-environment: The adverse event pertains to an unsafe physical environment.
+     */
+    UnsafePhysicalEnvironment = "unsafe-physical-environment",
+    /**
+     * wrong-dose: The adverse event pertains to a wrong dose.
+     */
+    WrongDose = "wrong-dose",
+    /**
+     * wrong-duration: The adverse event pertains to a wrong duration.
+     */
+    WrongDuration = "wrong-duration",
+    /**
+     * wrong-rate: The adverse event pertains to a wrong rate.
+     */
+    WrongRate = "wrong-rate",
+    /**
+     * wrong-route-of-administration: The adverse event pertains to a wrong route of administration.
+     */
+    WrongRouteOfAdministration = "wrong-route-of-administration",
+    /**
+     * wrong-technique: The adverse event pertains to a wrong technique.
+     */
+    WrongTechnique = "wrong-technique",
+    /**
+     * wrong-time: The adverse event pertains to a wrong time.
+     */
+    WrongTime = "wrong-time"
+}
 //# sourceMappingURL=AdverseEventCategoryValueSet.d.ts.map

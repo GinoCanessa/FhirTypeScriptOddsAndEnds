@@ -1,94 +1,102 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { ContactPointSystemValueSetType, ContactPointSystemValueSetEnum } from '../fhirValueSets/ContactPointSystemValueSet.js';
+import { ContactPointUseValueSetType, ContactPointUseValueSetEnum } from '../fhirValueSets/ContactPointUseValueSet.js';
 /**
  * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
  */
 export declare type IContactPoint = fhir.IFhirElement & {
     /**
-     * Time period when the contact point was/is in use.
-     */
-    period?: fhir.IPeriod | undefined;
-    /**
-     * Note that rank does not necessarily follow the order in which the contacts are represented in the instance.
-     */
-    rank?: number | undefined;
-    _rank?: fhir.IFhirElement | undefined;
-    /**
      * Telecommunications form for contact point - what communications system is required to make use of the contact.
      */
-    system?: ContactPointSystemEnum | undefined;
-    _system?: fhir.IFhirElement | undefined;
+    system?: ContactPointSystemValueSetEnum | undefined;
     /**
-     * Applications can assume that a contact is current unless it explicitly says that it is temporary or old.
+     * Extended properties for primitive element: ContactPoint.system
      */
-    use?: ContactPointUseEnum | undefined;
-    _use?: fhir.IFhirElement | undefined;
+    _system?: fhir.IFhirElement | undefined;
     /**
      * Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.
      */
     value?: string | undefined;
+    /**
+     * Extended properties for primitive element: ContactPoint.value
+     */
     _value?: fhir.IFhirElement | undefined;
+    /**
+     * Applications can assume that a contact is current unless it explicitly says that it is temporary or old.
+     */
+    use?: ContactPointUseValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: ContactPoint.use
+     */
+    _use?: fhir.IFhirElement | undefined;
+    /**
+     * Note that rank does not necessarily follow the order in which the contacts are represented in the instance.
+     */
+    rank?: number | undefined;
+    /**
+     * Extended properties for primitive element: ContactPoint.rank
+     */
+    _rank?: fhir.IFhirElement | undefined;
+    /**
+     * Time period when the contact point was/is in use.
+     */
+    period?: fhir.IPeriod | undefined;
 };
 /**
  * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
  */
-export declare class ContactPoint extends fhir.FhirElement implements fhir.IContactPoint {
+export declare class ContactPoint extends fhir.FhirElement implements IContactPoint {
+    /**
+     * Telecommunications form for contact point - what communications system is required to make use of the contact.
+     */
+    system?: ContactPointSystemValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: ContactPoint.system
+     */
+    _system?: fhir.FhirElement | undefined;
+    /**
+     * Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.
+     */
+    value?: string | undefined;
+    /**
+     * Extended properties for primitive element: ContactPoint.value
+     */
+    _value?: fhir.FhirElement | undefined;
+    /**
+     * Applications can assume that a contact is current unless it explicitly says that it is temporary or old.
+     */
+    use?: ContactPointUseValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: ContactPoint.use
+     */
+    _use?: fhir.FhirElement | undefined;
+    /**
+     * Note that rank does not necessarily follow the order in which the contacts are represented in the instance.
+     */
+    rank?: number | undefined;
+    /**
+     * Extended properties for primitive element: ContactPoint.rank
+     */
+    _rank?: fhir.FhirElement | undefined;
     /**
      * Time period when the contact point was/is in use.
      */
     period?: fhir.Period | undefined;
     /**
-     * Note that rank does not necessarily follow the order in which the contacts are represented in the instance.
-     */
-    rank?: number | undefined;
-    _rank?: fhir.FhirElement | undefined;
-    /**
-     * Telecommunications form for contact point - what communications system is required to make use of the contact.
-     */
-    system?: ContactPointSystemEnum | undefined;
-    _system?: fhir.FhirElement | undefined;
-    /**
-     * Applications can assume that a contact is current unless it explicitly says that it is temporary or old.
-     */
-    use?: ContactPointUseEnum | undefined;
-    _use?: fhir.FhirElement | undefined;
-    /**
-     * Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.
-     */
-    value?: string | undefined;
-    _value?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for ContactPoint - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IContactPoint>);
+    constructor(source?: Partial<IContactPoint>);
     /**
-     * Check if the current ContactPoint contains all required elements.
+     * Required-bound Value Set for system
      */
-    checkRequiredElements(): string[];
+    systemRequiredValueSet(): ContactPointSystemValueSetType;
     /**
-     * Factory function to create a ContactPoint from an object that MUST contain all required elements.
+     * Required-bound Value Set for use
      */
-    static fromStrict(source: fhir.IContactPoint): ContactPoint;
-}
-/**
- * Code Values for the ContactPoint.system field
- */
-export declare enum ContactPointSystemEnum {
-    PHONE = "phone",
-    FAX = "fax",
-    EMAIL = "email",
-    PAGER = "pager",
-    URL = "url",
-    SMS = "sms",
-    OTHER = "other"
-}
-/**
- * Code Values for the ContactPoint.use field
- */
-export declare enum ContactPointUseEnum {
-    HOME = "home",
-    WORK = "work",
-    TEMP = "temp",
-    OLD = "old",
-    MOBILE = "mobile"
+    useRequiredValueSet(): ContactPointUseValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=ContactPoint.d.ts.map

@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How resource references can be aggregated.
  */
 export declare const ResourceAggregationModeValueSet: {
     /**
-     * The resource the reference points to will be found in the same bundle as the resource that includes the reference.
+     * bundled: The resource the reference points to will be found in the same bundle as the resource that includes the reference.
      */
-    resource_aggregation_mode_Bundled: Coding;
+    readonly Bundled: Coding;
     /**
-     * The reference is a local reference to a contained resource.
+     * contained: The reference is a local reference to a contained resource.
      */
-    resource_aggregation_mode_Contained: Coding;
+    readonly Contained: Coding;
     /**
-     * The reference to a resource that has to be resolved externally to the resource that includes the reference.
+     * referenced: The reference to a resource that has to be resolved externally to the resource that includes the reference.
      */
-    resource_aggregation_mode_Referenced: Coding;
+    readonly Referenced: Coding;
 };
+/**
+ * How resource references can be aggregated.
+ */
+export declare type ResourceAggregationModeValueSetType = typeof ResourceAggregationModeValueSet;
+/**
+ * How resource references can be aggregated.
+ */
+export declare enum ResourceAggregationModeValueSetEnum {
+    /**
+     * bundled: The resource the reference points to will be found in the same bundle as the resource that includes the reference.
+     */
+    Bundled = "bundled",
+    /**
+     * contained: The reference is a local reference to a contained resource.
+     */
+    Contained = "contained",
+    /**
+     * referenced: The reference to a resource that has to be resolved externally to the resource that includes the reference.
+     */
+    Referenced = "referenced"
+}
 //# sourceMappingURL=ResourceAggregationModeValueSet.d.ts.map

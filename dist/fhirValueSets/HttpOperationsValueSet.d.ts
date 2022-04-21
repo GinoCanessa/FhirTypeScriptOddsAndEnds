@@ -1,35 +1,72 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The allowable request method or HTTP operation codes.
  */
 export declare const HttpOperationsValueSet: {
     /**
-     * HTTP DELETE operation.
+     * delete: HTTP DELETE operation.
      */
-    http_operations_DELETE: Coding;
+    readonly DELETE: Coding;
     /**
-     * HTTP GET operation.
+     * get: HTTP GET operation.
      */
-    http_operations_GET: Coding;
+    readonly GET: Coding;
     /**
-     * HTTP HEAD operation.
+     * head: HTTP HEAD operation.
      */
-    http_operations_HEAD: Coding;
+    readonly HEAD: Coding;
     /**
-     * HTTP OPTIONS operation.
+     * options: HTTP OPTIONS operation.
      */
-    http_operations_OPTIONS: Coding;
+    readonly OPTIONS: Coding;
     /**
-     * HTTP PATCH operation.
+     * patch: HTTP PATCH operation.
      */
-    http_operations_PATCH: Coding;
+    readonly PATCH: Coding;
     /**
-     * HTTP POST operation.
+     * post: HTTP POST operation.
      */
-    http_operations_POST: Coding;
+    readonly POST: Coding;
     /**
-     * HTTP PUT operation.
+     * put: HTTP PUT operation.
      */
-    http_operations_PUT: Coding;
+    readonly PUT: Coding;
 };
+/**
+ * The allowable request method or HTTP operation codes.
+ */
+export declare type HttpOperationsValueSetType = typeof HttpOperationsValueSet;
+/**
+ * The allowable request method or HTTP operation codes.
+ */
+export declare enum HttpOperationsValueSetEnum {
+    /**
+     * delete: HTTP DELETE operation.
+     */
+    DELETE = "delete",
+    /**
+     * get: HTTP GET operation.
+     */
+    GET = "get",
+    /**
+     * head: HTTP HEAD operation.
+     */
+    HEAD = "head",
+    /**
+     * options: HTTP OPTIONS operation.
+     */
+    OPTIONS = "options",
+    /**
+     * patch: HTTP PATCH operation.
+     */
+    PATCH = "patch",
+    /**
+     * post: HTTP POST operation.
+     */
+    POST = "post",
+    /**
+     * put: HTTP PUT operation.
+     */
+    PUT = "put"
+}
 //# sourceMappingURL=HttpOperationsValueSet.d.ts.map

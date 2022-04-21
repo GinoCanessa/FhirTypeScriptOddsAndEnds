@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.
  */
 export declare const ReasonMedicationGivenCodesValueSet: {
     /**
-     * No reason known.
+     * a: No reason known.
      */
-    reason_medication_given_codes_None: Coding;
+    readonly None: Coding;
     /**
-     * The administration was following an ordered protocol.
+     * b: The administration was following an ordered protocol.
      */
-    reason_medication_given_codes_GivenAsOrdered: Coding;
+    readonly GivenAsOrdered: Coding;
     /**
-     * The administration was needed to treat an emergency.
+     * c: The administration was needed to treat an emergency.
      */
-    reason_medication_given_codes_Emergency: Coding;
+    readonly Emergency: Coding;
 };
+/**
+ * This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.
+ */
+export declare type ReasonMedicationGivenCodesValueSetType = typeof ReasonMedicationGivenCodesValueSet;
+/**
+ * This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.
+ */
+export declare enum ReasonMedicationGivenCodesValueSetEnum {
+    /**
+     * a: No reason known.
+     */
+    None = "a",
+    /**
+     * b: The administration was following an ordered protocol.
+     */
+    GivenAsOrdered = "b",
+    /**
+     * c: The administration was needed to treat an emergency.
+     */
+    Emergency = "c"
+}
 //# sourceMappingURL=ReasonMedicationGivenCodesValueSet.d.ts.map

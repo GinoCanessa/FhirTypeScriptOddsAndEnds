@@ -1,67 +1,136 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A list of all the request resource types defined in this version of the FHIR specification.
  */
 export declare const RequestResourceTypesValueSet: {
     /**
-     * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
+     * Appointment: A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
      */
-    request_resource_types_Appointment: Coding;
+    readonly Appointment: Coding;
     /**
-     * A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
+     * AppointmentResponse: A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
      */
-    request_resource_types_AppointmentResponse: Coding;
+    readonly AppointmentResponse: Coding;
     /**
-     * Healthcare plan for patient or group.
+     * CarePlan: Healthcare plan for patient or group.
      */
-    request_resource_types_CarePlan: Coding;
+    readonly CarePlan: Coding;
     /**
-     * Claim, Pre-determination or Pre-authorization.
+     * Claim: Claim, Pre-determination or Pre-authorization.
      */
-    request_resource_types_Claim: Coding;
+    readonly Claim: Coding;
     /**
-     * A request for information to be sent to a receiver.
+     * CommunicationRequest: A request for information to be sent to a receiver.
      */
-    request_resource_types_CommunicationRequest: Coding;
+    readonly CommunicationRequest: Coding;
     /**
-     * Legal Agreement.
+     * Contract: Legal Agreement.
      */
-    request_resource_types_Contract: Coding;
+    readonly Contract: Coding;
     /**
-     * Medical device request.
+     * DeviceRequest: Medical device request.
      */
-    request_resource_types_DeviceRequest: Coding;
+    readonly DeviceRequest: Coding;
     /**
-     * Enrollment request.
+     * EnrollmentRequest: Enrollment request.
      */
-    request_resource_types_EnrollmentRequest: Coding;
+    readonly EnrollmentRequest: Coding;
     /**
-     * Guidance or advice relating to an immunization.
+     * ImmunizationRecommendation: Guidance or advice relating to an immunization.
      */
-    request_resource_types_ImmunizationRecommendation: Coding;
+    readonly ImmunizationRecommendation: Coding;
     /**
-     * Ordering of medication for patient or group.
+     * MedicationRequest: Ordering of medication for patient or group.
      */
-    request_resource_types_MedicationRequest: Coding;
+    readonly MedicationRequest: Coding;
     /**
-     * Diet, formula or nutritional supplement request.
+     * NutritionOrder: Diet, formula or nutritional supplement request.
      */
-    request_resource_types_NutritionOrder: Coding;
+    readonly NutritionOrder: Coding;
     /**
-     * A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
+     * ServiceRequest: A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
      */
-    request_resource_types_ServiceRequest: Coding;
+    readonly ServiceRequest: Coding;
     /**
-     * Request for a medication, substance or device.
+     * SupplyRequest: Request for a medication, substance or device.
      */
-    request_resource_types_SupplyRequest: Coding;
+    readonly SupplyRequest: Coding;
     /**
-     * A task to be performed.
+     * Task: A task to be performed.
      */
-    request_resource_types_Task: Coding;
+    readonly Task: Coding;
     /**
-     * Prescription for vision correction products for a patient.
+     * VisionPrescription: Prescription for vision correction products for a patient.
      */
-    request_resource_types_VisionPrescription: Coding;
+    readonly VisionPrescription: Coding;
 };
+/**
+ * A list of all the request resource types defined in this version of the FHIR specification.
+ */
+export declare type RequestResourceTypesValueSetType = typeof RequestResourceTypesValueSet;
+/**
+ * A list of all the request resource types defined in this version of the FHIR specification.
+ */
+export declare enum RequestResourceTypesValueSetEnum {
+    /**
+     * Appointment: A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
+     */
+    Appointment = "Appointment",
+    /**
+     * AppointmentResponse: A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
+     */
+    AppointmentResponse = "AppointmentResponse",
+    /**
+     * CarePlan: Healthcare plan for patient or group.
+     */
+    CarePlan = "CarePlan",
+    /**
+     * Claim: Claim, Pre-determination or Pre-authorization.
+     */
+    Claim = "Claim",
+    /**
+     * CommunicationRequest: A request for information to be sent to a receiver.
+     */
+    CommunicationRequest = "CommunicationRequest",
+    /**
+     * Contract: Legal Agreement.
+     */
+    Contract = "Contract",
+    /**
+     * DeviceRequest: Medical device request.
+     */
+    DeviceRequest = "DeviceRequest",
+    /**
+     * EnrollmentRequest: Enrollment request.
+     */
+    EnrollmentRequest = "EnrollmentRequest",
+    /**
+     * ImmunizationRecommendation: Guidance or advice relating to an immunization.
+     */
+    ImmunizationRecommendation = "ImmunizationRecommendation",
+    /**
+     * MedicationRequest: Ordering of medication for patient or group.
+     */
+    MedicationRequest = "MedicationRequest",
+    /**
+     * NutritionOrder: Diet, formula or nutritional supplement request.
+     */
+    NutritionOrder = "NutritionOrder",
+    /**
+     * ServiceRequest: A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
+     */
+    ServiceRequest = "ServiceRequest",
+    /**
+     * SupplyRequest: Request for a medication, substance or device.
+     */
+    SupplyRequest = "SupplyRequest",
+    /**
+     * Task: A task to be performed.
+     */
+    Task = "Task",
+    /**
+     * VisionPrescription: Prescription for vision correction products for a patient.
+     */
+    VisionPrescription = "VisionPrescription"
+}
 //# sourceMappingURL=RequestResourceTypesValueSet.d.ts.map

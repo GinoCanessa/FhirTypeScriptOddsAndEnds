@@ -1,167 +1,336 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * More detailed code concerning the type of the audit event - defined by DICOM with some FHIR specific additions.
  */
 export declare const AuditEventSubTypeValueSet: {
     /**
-     * Audit event: Application Entity has started
+     * 110120: Audit event: Application Entity has started
      */
-    dicom_dcim_ApplicationStart: Coding;
+    readonly ApplicationStart: Coding;
     /**
-     * Audit event: Application Entity has stopped
+     * 110121: Audit event: Application Entity has stopped
      */
-    dicom_dcim_ApplicationStop: Coding;
+    readonly ApplicationStop: Coding;
     /**
-     * Audit event: User login has been attempted
+     * 110122: Audit event: User login has been attempted
      */
-    dicom_dcim_Login: Coding;
+    readonly Login: Coding;
     /**
-     * Audit event: User logout has been attempted
+     * 110123: Audit event: User logout has been attempted
      */
-    dicom_dcim_Logout: Coding;
+    readonly Logout: Coding;
     /**
-     * Audit event: Node has been attached
+     * 110124: Audit event: Node has been attached
      */
-    dicom_dcim_Attach: Coding;
+    readonly Attach: Coding;
     /**
-     * Audit event: Node has been detached
+     * 110125: Audit event: Node has been detached
      */
-    dicom_dcim_Detach: Coding;
+    readonly Detach: Coding;
     /**
-     * Audit event: Node Authentication has been attempted
+     * 110126: Audit event: Node Authentication has been attempted
      */
-    dicom_dcim_NodeAuthentication: Coding;
+    readonly NodeAuthentication: Coding;
     /**
-     * Audit event: Emergency Override has started
+     * 110127: Audit event: Emergency Override has started
      */
-    dicom_dcim_EmergencyOverrideStarted: Coding;
+    readonly EmergencyOverrideStarted: Coding;
     /**
-     * Audit event: Network configuration has been changed
+     * 110128: Audit event: Network configuration has been changed
      */
-    dicom_dcim_NetworkConfiguration: Coding;
+    readonly NetworkConfiguration: Coding;
     /**
-     * Audit event: Security configuration has been changed
+     * 110129: Audit event: Security configuration has been changed
      */
-    dicom_dcim_SecurityConfiguration: Coding;
+    readonly SecurityConfiguration: Coding;
     /**
-     * Audit event: Hardware configuration has been changed
+     * 110130: Audit event: Hardware configuration has been changed
      */
-    dicom_dcim_HardwareConfiguration: Coding;
+    readonly HardwareConfiguration: Coding;
     /**
-     * Audit event: Software configuration has been changed
+     * 110131: Audit event: Software configuration has been changed
      */
-    dicom_dcim_SoftwareConfiguration: Coding;
+    readonly SoftwareConfiguration: Coding;
     /**
-     * Audit event: A use of a restricted function has been attempted
+     * 110132: Audit event: A use of a restricted function has been attempted
      */
-    dicom_dcim_UseOfRestrictedFunction: Coding;
+    readonly UseOfRestrictedFunction: Coding;
     /**
-     * Audit event: Audit recording has been stopped
+     * 110133: Audit event: Audit recording has been stopped
      */
-    dicom_dcim_AuditRecordingStopped: Coding;
+    readonly AuditRecordingStopped: Coding;
     /**
-     * Audit event: Audit recording has been started
+     * 110134: Audit event: Audit recording has been started
      */
-    dicom_dcim_AuditRecordingStarted: Coding;
+    readonly AuditRecordingStarted: Coding;
     /**
-     * Audit event: Security attributes of an object have been changed
+     * 110135: Audit event: Security attributes of an object have been changed
      */
-    dicom_dcim_ObjectSecurityAttributesChanged: Coding;
+    readonly ObjectSecurityAttributesChanged: Coding;
     /**
-     * Audit event: Security roles have been changed
+     * 110136: Audit event: Security roles have been changed
      */
-    dicom_dcim_SecurityRolesChanged: Coding;
+    readonly SecurityRolesChanged: Coding;
     /**
-     * Audit event: Security attributes of a user have been changed
+     * 110137: Audit event: Security attributes of a user have been changed
      */
-    dicom_dcim_UserSecurityAttributesChanged: Coding;
+    readonly UserSecurityAttributesChanged: Coding;
     /**
-     * Audit event: Emergency Override has Stopped
+     * 110138: Audit event: Emergency Override has Stopped
      */
-    dicom_dcim_EmergencyOverrideStopped: Coding;
+    readonly EmergencyOverrideStopped: Coding;
     /**
-     * Audit event: Remote Service Operation has Begun
+     * 110139: Audit event: Remote Service Operation has Begun
      */
-    dicom_dcim_RemoteServiceOperationStarted: Coding;
+    readonly RemoteServiceOperationStarted: Coding;
     /**
-     * Audit event: Remote Service Operation has Stopped
+     * 110140: Audit event: Remote Service Operation has Stopped
      */
-    dicom_dcim_RemoteServiceOperationStopped: Coding;
+    readonly RemoteServiceOperationStopped: Coding;
     /**
-     * Audit event: Local Service Operation has Begun
+     * 110141: Audit event: Local Service Operation has Begun
      */
-    dicom_dcim_LocalServiceOperationStarted: Coding;
+    readonly LocalServiceOperationStarted: Coding;
     /**
-     * Audit event: Local Service Operation Stopped
+     * 110142: Audit event: Local Service Operation Stopped
      */
-    dicom_dcim_LocalServiceOperationStopped: Coding;
+    readonly LocalServiceOperationStopped: Coding;
     /**
-     * perform a set of a separate interactions in a single http operation
+     * batch: perform a set of a separate interactions in a single http operation
      */
-    restful_interaction_Batch: Coding;
+    readonly Batch: Coding;
     /**
-     * Get a Capability Statement for the system.
+     * capabilities: Get a Capability Statement for the system.
      */
-    restful_interaction_Capabilities: Coding;
+    readonly Capabilities: Coding;
     /**
-     * Create a new resource with a server assigned id.
+     * create: Create a new resource with a server assigned id.
      */
-    restful_interaction_Create: Coding;
+    readonly Create: Coding;
     /**
-     * Delete a resource.
+     * delete: Delete a resource.
      */
-    restful_interaction_Delete: Coding;
+    readonly Delete: Coding;
     /**
-     * Retrieve the change history for a particular resource, type of resource, or the entire system.
+     * history: Retrieve the change history for a particular resource, type of resource, or the entire system.
      */
-    restful_interaction_History: Coding;
+    readonly History: Coding;
     /**
-     * Retrieve the change history for a particular resource.
+     * history-instance: Retrieve the change history for a particular resource.
      */
-    restful_interaction_HistoryInstance: Coding;
+    readonly HistoryInstance: Coding;
     /**
-     * Retrieve the change history for all resources on a system.
+     * history-system: Retrieve the change history for all resources on a system.
      */
-    restful_interaction_HistorySystem: Coding;
+    readonly HistorySystem: Coding;
     /**
-     * Retrieve the change history for all resources of a particular type.
+     * history-type: Retrieve the change history for all resources of a particular type.
      */
-    restful_interaction_HistoryType: Coding;
+    readonly HistoryType: Coding;
     /**
-     * Perform an operation as defined by an OperationDefinition.
+     * operation: Perform an operation as defined by an OperationDefinition.
      */
-    restful_interaction_Operation: Coding;
+    readonly Operation: Coding;
     /**
-     * Update an existing resource by posting a set of changes to it.
+     * patch: Update an existing resource by posting a set of changes to it.
      */
-    restful_interaction_Patch: Coding;
+    readonly Patch: Coding;
     /**
-     * Read the current state of the resource.
+     * read: Read the current state of the resource.
      */
-    restful_interaction_Read: Coding;
+    readonly Read: Coding;
     /**
-     * Search a resource type or all resources based on some filter criteria.
+     * search: Search a resource type or all resources based on some filter criteria.
      */
-    restful_interaction_Search: Coding;
+    readonly Search: Coding;
     /**
-     * Search all resources based on some filter criteria.
+     * search-system: Search all resources based on some filter criteria.
      */
-    restful_interaction_SearchSystem: Coding;
+    readonly SearchSystem: Coding;
     /**
-     * Search all resources of the specified type based on some filter criteria.
+     * search-type: Search all resources of the specified type based on some filter criteria.
      */
-    restful_interaction_SearchType: Coding;
+    readonly SearchType: Coding;
     /**
-     * Update, create or delete a set of resources as a single transaction.
+     * transaction: Update, create or delete a set of resources as a single transaction.
      */
-    restful_interaction_Transaction: Coding;
+    readonly Transaction: Coding;
     /**
-     * Update an existing resource by its id (or create it if it is new).
+     * update: Update an existing resource by its id (or create it if it is new).
      */
-    restful_interaction_Update: Coding;
+    readonly Update: Coding;
     /**
-     * Read the state of a specific version of the resource.
+     * vread: Read the state of a specific version of the resource.
      */
-    restful_interaction_Vread: Coding;
+    readonly Vread: Coding;
 };
+/**
+ * More detailed code concerning the type of the audit event - defined by DICOM with some FHIR specific additions.
+ */
+export declare type AuditEventSubTypeValueSetType = typeof AuditEventSubTypeValueSet;
+/**
+ * More detailed code concerning the type of the audit event - defined by DICOM with some FHIR specific additions.
+ */
+export declare enum AuditEventSubTypeValueSetEnum {
+    /**
+     * 110120: Audit event: Application Entity has started
+     */
+    ApplicationStart = "110120",
+    /**
+     * 110121: Audit event: Application Entity has stopped
+     */
+    ApplicationStop = "110121",
+    /**
+     * 110122: Audit event: User login has been attempted
+     */
+    Login = "110122",
+    /**
+     * 110123: Audit event: User logout has been attempted
+     */
+    Logout = "110123",
+    /**
+     * 110124: Audit event: Node has been attached
+     */
+    Attach = "110124",
+    /**
+     * 110125: Audit event: Node has been detached
+     */
+    Detach = "110125",
+    /**
+     * 110126: Audit event: Node Authentication has been attempted
+     */
+    NodeAuthentication = "110126",
+    /**
+     * 110127: Audit event: Emergency Override has started
+     */
+    EmergencyOverrideStarted = "110127",
+    /**
+     * 110128: Audit event: Network configuration has been changed
+     */
+    NetworkConfiguration = "110128",
+    /**
+     * 110129: Audit event: Security configuration has been changed
+     */
+    SecurityConfiguration = "110129",
+    /**
+     * 110130: Audit event: Hardware configuration has been changed
+     */
+    HardwareConfiguration = "110130",
+    /**
+     * 110131: Audit event: Software configuration has been changed
+     */
+    SoftwareConfiguration = "110131",
+    /**
+     * 110132: Audit event: A use of a restricted function has been attempted
+     */
+    UseOfRestrictedFunction = "110132",
+    /**
+     * 110133: Audit event: Audit recording has been stopped
+     */
+    AuditRecordingStopped = "110133",
+    /**
+     * 110134: Audit event: Audit recording has been started
+     */
+    AuditRecordingStarted = "110134",
+    /**
+     * 110135: Audit event: Security attributes of an object have been changed
+     */
+    ObjectSecurityAttributesChanged = "110135",
+    /**
+     * 110136: Audit event: Security roles have been changed
+     */
+    SecurityRolesChanged = "110136",
+    /**
+     * 110137: Audit event: Security attributes of a user have been changed
+     */
+    UserSecurityAttributesChanged = "110137",
+    /**
+     * 110138: Audit event: Emergency Override has Stopped
+     */
+    EmergencyOverrideStopped = "110138",
+    /**
+     * 110139: Audit event: Remote Service Operation has Begun
+     */
+    RemoteServiceOperationStarted = "110139",
+    /**
+     * 110140: Audit event: Remote Service Operation has Stopped
+     */
+    RemoteServiceOperationStopped = "110140",
+    /**
+     * 110141: Audit event: Local Service Operation has Begun
+     */
+    LocalServiceOperationStarted = "110141",
+    /**
+     * 110142: Audit event: Local Service Operation Stopped
+     */
+    LocalServiceOperationStopped = "110142",
+    /**
+     * batch: perform a set of a separate interactions in a single http operation
+     */
+    Batch = "batch",
+    /**
+     * capabilities: Get a Capability Statement for the system.
+     */
+    Capabilities = "capabilities",
+    /**
+     * create: Create a new resource with a server assigned id.
+     */
+    Create = "create",
+    /**
+     * delete: Delete a resource.
+     */
+    Delete = "delete",
+    /**
+     * history: Retrieve the change history for a particular resource, type of resource, or the entire system.
+     */
+    History = "history",
+    /**
+     * history-instance: Retrieve the change history for a particular resource.
+     */
+    HistoryInstance = "history-instance",
+    /**
+     * history-system: Retrieve the change history for all resources on a system.
+     */
+    HistorySystem = "history-system",
+    /**
+     * history-type: Retrieve the change history for all resources of a particular type.
+     */
+    HistoryType = "history-type",
+    /**
+     * operation: Perform an operation as defined by an OperationDefinition.
+     */
+    Operation = "operation",
+    /**
+     * patch: Update an existing resource by posting a set of changes to it.
+     */
+    Patch = "patch",
+    /**
+     * read: Read the current state of the resource.
+     */
+    Read = "read",
+    /**
+     * search: Search a resource type or all resources based on some filter criteria.
+     */
+    Search = "search",
+    /**
+     * search-system: Search all resources based on some filter criteria.
+     */
+    SearchSystem = "search-system",
+    /**
+     * search-type: Search all resources of the specified type based on some filter criteria.
+     */
+    SearchType = "search-type",
+    /**
+     * transaction: Update, create or delete a set of resources as a single transaction.
+     */
+    Transaction = "transaction",
+    /**
+     * update: Update an existing resource by its id (or create it if it is new).
+     */
+    Update = "update",
+    /**
+     * vread: Read the state of a specific version of the resource.
+     */
+    Vread = "vread"
+}
 //# sourceMappingURL=AuditEventSubTypeValueSet.d.ts.map

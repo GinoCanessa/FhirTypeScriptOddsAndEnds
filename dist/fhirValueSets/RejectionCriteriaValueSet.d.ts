@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Criterion for rejection of the specimen by laboratory.
  */
 export declare const RejectionCriteriaValueSet: {
     /**
-     * specimen container broken.
+     * broken: specimen container broken.
      */
-    rejection_criteria_BrokenSpecimenContainer: Coding;
+    readonly BrokenSpecimenContainer: Coding;
     /**
-     * specimen clotted.
+     * clotted: specimen clotted.
      */
-    rejection_criteria_SpecimenClotted: Coding;
+    readonly SpecimenClotted: Coding;
     /**
-     * blood specimen hemolized.
+     * hemolized: blood specimen hemolized.
      */
-    rejection_criteria_HemolizedSpecimen: Coding;
+    readonly HemolizedSpecimen: Coding;
     /**
-     * insufficient quantity of specimen.
+     * insufficient: insufficient quantity of specimen.
      */
-    rejection_criteria_InsufficientSpecimenVolume: Coding;
+    readonly InsufficientSpecimenVolume: Coding;
     /**
-     * specimen temperature inappropriate.
+     * wrong-temperature: specimen temperature inappropriate.
      */
-    rejection_criteria_SpecimenTemperatureInappropriate: Coding;
+    readonly SpecimenTemperatureInappropriate: Coding;
 };
+/**
+ * Criterion for rejection of the specimen by laboratory.
+ */
+export declare type RejectionCriteriaValueSetType = typeof RejectionCriteriaValueSet;
+/**
+ * Criterion for rejection of the specimen by laboratory.
+ */
+export declare enum RejectionCriteriaValueSetEnum {
+    /**
+     * broken: specimen container broken.
+     */
+    BrokenSpecimenContainer = "broken",
+    /**
+     * clotted: specimen clotted.
+     */
+    SpecimenClotted = "clotted",
+    /**
+     * hemolized: blood specimen hemolized.
+     */
+    HemolizedSpecimen = "hemolized",
+    /**
+     * insufficient: insufficient quantity of specimen.
+     */
+    InsufficientSpecimenVolume = "insufficient",
+    /**
+     * wrong-temperature: specimen temperature inappropriate.
+     */
+    SpecimenTemperatureInappropriate = "wrong-temperature"
+}
 //# sourceMappingURL=RejectionCriteriaValueSet.d.ts.map

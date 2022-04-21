@@ -1,13 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * TODO (and should this be required?).
  */
 export declare const AdverseEventOutcomeValueSet: {
-    adverse_event_outcome_Fatal: Coding;
-    adverse_event_outcome_Ongoing: Coding;
-    adverse_event_outcome_Recovering: Coding;
-    adverse_event_outcome_Resolved: Coding;
-    adverse_event_outcome_ResolvedWithSequelae: Coding;
-    adverse_event_outcome_Unknown: Coding;
+    /**
+     * Code: fatal
+     */
+    readonly Fatal: Coding;
+    /**
+     * Code: ongoing
+     */
+    readonly Ongoing: Coding;
+    /**
+     * Code: recovering
+     */
+    readonly Recovering: Coding;
+    /**
+     * Code: resolved
+     */
+    readonly Resolved: Coding;
+    /**
+     * Code: resolvedWithSequelae
+     */
+    readonly ResolvedWithSequelae: Coding;
+    /**
+     * Code: unknown
+     */
+    readonly Unknown: Coding;
 };
+/**
+ * TODO (and should this be required?).
+ */
+export declare type AdverseEventOutcomeValueSetType = typeof AdverseEventOutcomeValueSet;
+/**
+ * TODO (and should this be required?).
+ */
+export declare enum AdverseEventOutcomeValueSetEnum {
+    /**
+     * Code: fatal
+     */
+    Fatal = "fatal",
+    /**
+     * Code: ongoing
+     */
+    Ongoing = "ongoing",
+    /**
+     * Code: recovering
+     */
+    Recovering = "recovering",
+    /**
+     * Code: resolved
+     */
+    Resolved = "resolved",
+    /**
+     * Code: resolvedWithSequelae
+     */
+    ResolvedWithSequelae = "resolvedWithSequelae",
+    /**
+     * Code: unknown
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=AdverseEventOutcomeValueSet.d.ts.map

@@ -1,47 +1,118 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set defines the set of codes that can be used to indicate the marital status of a person.
  */
 export declare const MaritalStatusValueSet: {
     /**
-     * Marriage contract has been declared null and to not have existed
+     * A: Marriage contract has been declared null and to not have existed
      */
-    v3_MaritalStatus_Annulled: Coding;
+    readonly Annulled: Coding;
     /**
-     * Marriage contract has been declared dissolved and inactive
+     * D: Marriage contract has been declared dissolved and inactive
      */
-    v3_MaritalStatus_Divorced: Coding;
+    readonly Divorced: Coding;
     /**
-     * Subject to an Interlocutory Decree.
+     * I: Subject to an Interlocutory Decree.
      */
-    v3_MaritalStatus_Interlocutory: Coding;
+    readonly Interlocutory: Coding;
     /**
-     * Legally Separated
+     * L: Legally Separated
      */
-    v3_MaritalStatus_LegallySeparated: Coding;
+    readonly LegallySeparated: Coding;
     /**
-     * A current marriage contract is active
+     * M: A current marriage contract is active
      */
-    v3_MaritalStatus_Married: Coding;
+    readonly Married: Coding;
     /**
-     * More than 1 current spouse
+     * P: More than 1 current spouse
      */
-    v3_MaritalStatus_Polygamous: Coding;
+    readonly Polygamous: Coding;
     /**
-     * No marriage contract has ever been entered
+     * S: No marriage contract has ever been entered
      */
-    v3_MaritalStatus_NeverMarried: Coding;
+    readonly NeverMarried: Coding;
     /**
-     * Person declares that a domestic partner relationship exists.
+     * T: Person declares that a domestic partner relationship exists.
      */
-    v3_MaritalStatus_DomesticPartner: Coding;
+    readonly DomesticPartner: Coding;
     /**
-     * Currently not in a marriage contract.
+     * U: Currently not in a marriage contract.
      */
-    v3_MaritalStatus_Unmarried: Coding;
+    readonly Unmarried: Coding;
     /**
-     * The spouse has died
+     * UNK: Description:A proper value is applicable, but not known.
+     *
+     *
+     *                            Usage Notes: This means the actual value is not known.  If the only thing that is unknown is how to properly express the value in the necessary constraints (value set, datatype, etc.), then the OTH or UNC flavor should be used.  No properties should be included for a datatype with this property unless:
+     *
+     *
+     *                            Those properties themselves directly translate to a semantic of "unknown".  (E.g. a local code sent as a translation that conveys 'unknown')
+     *                            Those properties further qualify the nature of what is unknown.  (E.g. specifying a use code of "H" and a URL prefix of "tel:" to convey that it is the home phone number that is unknown.)
      */
-    v3_MaritalStatus_Widowed: Coding;
+    readonly Unknown: Coding;
+    /**
+     * W: The spouse has died
+     */
+    readonly Widowed: Coding;
 };
+/**
+ * This value set defines the set of codes that can be used to indicate the marital status of a person.
+ */
+export declare type MaritalStatusValueSetType = typeof MaritalStatusValueSet;
+/**
+ * This value set defines the set of codes that can be used to indicate the marital status of a person.
+ */
+export declare enum MaritalStatusValueSetEnum {
+    /**
+     * A: Marriage contract has been declared null and to not have existed
+     */
+    Annulled = "A",
+    /**
+     * D: Marriage contract has been declared dissolved and inactive
+     */
+    Divorced = "D",
+    /**
+     * I: Subject to an Interlocutory Decree.
+     */
+    Interlocutory = "I",
+    /**
+     * L: Legally Separated
+     */
+    LegallySeparated = "L",
+    /**
+     * M: A current marriage contract is active
+     */
+    Married = "M",
+    /**
+     * P: More than 1 current spouse
+     */
+    Polygamous = "P",
+    /**
+     * S: No marriage contract has ever been entered
+     */
+    NeverMarried = "S",
+    /**
+     * T: Person declares that a domestic partner relationship exists.
+     */
+    DomesticPartner = "T",
+    /**
+     * U: Currently not in a marriage contract.
+     */
+    Unmarried = "U",
+    /**
+     * UNK: Description:A proper value is applicable, but not known.
+     *
+     *
+     *                            Usage Notes: This means the actual value is not known.  If the only thing that is unknown is how to properly express the value in the necessary constraints (value set, datatype, etc.), then the OTH or UNC flavor should be used.  No properties should be included for a datatype with this property unless:
+     *
+     *
+     *                            Those properties themselves directly translate to a semantic of "unknown".  (E.g. a local code sent as a translation that conveys 'unknown')
+     *                            Those properties further qualify the nature of what is unknown.  (E.g. specifying a use code of "H" and a URL prefix of "tel:" to convey that it is the home phone number that is unknown.)
+     */
+    Unknown = "UNK",
+    /**
+     * W: The spouse has died
+     */
+    Widowed = "W"
+}
 //# sourceMappingURL=MaritalStatusValueSet.d.ts.map

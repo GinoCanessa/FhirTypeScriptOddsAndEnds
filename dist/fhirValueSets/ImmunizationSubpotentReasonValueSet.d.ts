@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.
  */
 export declare const ImmunizationSubpotentReasonValueSet: {
     /**
-     * The vaccine experienced a cold chain break.
+     * coldchainbreak: The vaccine experienced a cold chain break.
      */
-    immunization_subpotent_reason_ColdChainBreak: Coding;
+    readonly ColdChainBreak: Coding;
     /**
-     * The full volume of the dose was not administered to the patient.
+     * partial: The full volume of the dose was not administered to the patient.
      */
-    immunization_subpotent_reason_PartialDose: Coding;
+    readonly PartialDose: Coding;
     /**
-     * The vaccine was recalled by the manufacturer.
+     * recall: The vaccine was recalled by the manufacturer.
      */
-    immunization_subpotent_reason_ManufacturerRecall: Coding;
+    readonly ManufacturerRecall: Coding;
 };
+/**
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.
+ */
+export declare type ImmunizationSubpotentReasonValueSetType = typeof ImmunizationSubpotentReasonValueSet;
+/**
+ * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.
+ */
+export declare enum ImmunizationSubpotentReasonValueSetEnum {
+    /**
+     * coldchainbreak: The vaccine experienced a cold chain break.
+     */
+    ColdChainBreak = "coldchainbreak",
+    /**
+     * partial: The full volume of the dose was not administered to the patient.
+     */
+    PartialDose = "partial",
+    /**
+     * recall: The vaccine was recalled by the manufacturer.
+     */
+    ManufacturerRecall = "recall"
+}
 //# sourceMappingURL=ImmunizationSubpotentReasonValueSet.d.ts.map

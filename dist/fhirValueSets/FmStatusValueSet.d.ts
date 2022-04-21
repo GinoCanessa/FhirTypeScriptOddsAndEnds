@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes Status codes.
  */
 export declare const FmStatusValueSet: {
     /**
-     * The instance is currently in-force.
+     * active: The instance is currently in-force.
      */
-    fm_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The instance is withdrawn, rescinded or reversed.
+     * cancelled: The instance is withdrawn, rescinded or reversed.
      */
-    fm_status_Cancelled: Coding;
+    readonly Cancelled: Coding;
     /**
-     * A new instance the contents of which is not complete.
+     * draft: A new instance the contents of which is not complete.
      */
-    fm_status_Draft: Coding;
+    readonly Draft: Coding;
     /**
-     * The instance was entered in error.
+     * entered-in-error: The instance was entered in error.
      */
-    fm_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
 };
+/**
+ * This value set includes Status codes.
+ */
+export declare type FmStatusValueSetType = typeof FmStatusValueSet;
+/**
+ * This value set includes Status codes.
+ */
+export declare enum FmStatusValueSetEnum {
+    /**
+     * active: The instance is currently in-force.
+     */
+    Active = "active",
+    /**
+     * cancelled: The instance is withdrawn, rescinded or reversed.
+     */
+    Cancelled = "cancelled",
+    /**
+     * draft: A new instance the contents of which is not complete.
+     */
+    Draft = "draft",
+    /**
+     * entered-in-error: The instance was entered in error.
+     */
+    EnteredInError = "entered-in-error"
+}
 //# sourceMappingURL=FmStatusValueSet.d.ts.map

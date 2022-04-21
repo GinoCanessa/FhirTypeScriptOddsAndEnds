@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The way in which a person authenticated a composition.
  */
 export declare const CompositionAttestationModeValueSet: {
     /**
-     * The person authenticated the content and accepted legal responsibility for its content.
+     * legal: The person authenticated the content and accepted legal responsibility for its content.
      */
-    composition_attestation_mode_Legal: Coding;
+    readonly Legal: Coding;
     /**
-     * The organization authenticated the content as consistent with their policies and procedures.
+     * official: The organization authenticated the content as consistent with their policies and procedures.
      */
-    composition_attestation_mode_Official: Coding;
+    readonly Official: Coding;
     /**
-     * The person authenticated the content in their personal capacity.
+     * personal: The person authenticated the content in their personal capacity.
      */
-    composition_attestation_mode_Personal: Coding;
+    readonly Personal: Coding;
     /**
-     * The person authenticated the content in their professional capacity.
+     * professional: The person authenticated the content in their professional capacity.
      */
-    composition_attestation_mode_Professional: Coding;
+    readonly Professional: Coding;
 };
+/**
+ * The way in which a person authenticated a composition.
+ */
+export declare type CompositionAttestationModeValueSetType = typeof CompositionAttestationModeValueSet;
+/**
+ * The way in which a person authenticated a composition.
+ */
+export declare enum CompositionAttestationModeValueSetEnum {
+    /**
+     * legal: The person authenticated the content and accepted legal responsibility for its content.
+     */
+    Legal = "legal",
+    /**
+     * official: The organization authenticated the content as consistent with their policies and procedures.
+     */
+    Official = "official",
+    /**
+     * personal: The person authenticated the content in their personal capacity.
+     */
+    Personal = "personal",
+    /**
+     * professional: The person authenticated the content in their professional capacity.
+     */
+    Professional = "professional"
+}
 //# sourceMappingURL=CompositionAttestationModeValueSet.d.ts.map

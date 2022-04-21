@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Contract Term Type codes.
  */
 export declare const ContractTermTypeValueSet: {
     /**
-     * Based on specialized statutes that deal with particular subjects.
+     * statutory: Based on specialized statutes that deal with particular subjects.
      */
-    contract_term_type_Statutory: Coding;
+    readonly Statutory: Coding;
     /**
-     * Execution of the term in the contract is conditional on the execution of other actions.
+     * subject-to: Execution of the term in the contract is conditional on the execution of other actions.
      */
-    contract_term_type_SubjectTo: Coding;
+    readonly SubjectTo: Coding;
 };
+/**
+ * This value set includes sample Contract Term Type codes.
+ */
+export declare type ContractTermTypeValueSetType = typeof ContractTermTypeValueSet;
+/**
+ * This value set includes sample Contract Term Type codes.
+ */
+export declare enum ContractTermTypeValueSetEnum {
+    /**
+     * statutory: Based on specialized statutes that deal with particular subjects.
+     */
+    Statutory = "statutory",
+    /**
+     * subject-to: Execution of the term in the contract is conditional on the execution of other actions.
+     */
+    SubjectTo = "subject-to"
+}
 //# sourceMappingURL=ContractTermTypeValueSet.d.ts.map

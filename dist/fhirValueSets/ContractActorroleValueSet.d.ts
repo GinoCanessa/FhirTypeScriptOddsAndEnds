@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Contract Actor Role codes.
  */
 export declare const ContractActorroleValueSet: {
     /**
-     * A receiver, human or animal, of health care related goods and services.
+     * patient: A receiver, human or animal, of health care related goods and services.
      */
-    contract_actorrole_Patient: Coding;
+    readonly Patient: Coding;
     /**
-     * Someone who provides health care related services to people or animals including both clinical and support services.
+     * practitioner: Someone who provides health care related services to people or animals including both clinical and support services.
      */
-    contract_actorrole_Practitioner: Coding;
+    readonly Practitioner: Coding;
 };
+/**
+ * This value set includes sample Contract Actor Role codes.
+ */
+export declare type ContractActorroleValueSetType = typeof ContractActorroleValueSet;
+/**
+ * This value set includes sample Contract Actor Role codes.
+ */
+export declare enum ContractActorroleValueSetEnum {
+    /**
+     * patient: A receiver, human or animal, of health care related goods and services.
+     */
+    Patient = "patient",
+    /**
+     * practitioner: Someone who provides health care related services to people or animals including both clinical and support services.
+     */
+    Practitioner = "practitioner"
+}
 //# sourceMappingURL=ContractActorroleValueSet.d.ts.map

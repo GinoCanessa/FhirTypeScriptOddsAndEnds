@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A coded concept listing the eye codes.
  */
 export declare const VisionEyeCodesValueSet: {
     /**
-     * Left Eye.
+     * left: Left Eye.
      */
-    vision_eye_codes_LeftEye: Coding;
+    readonly LeftEye: Coding;
     /**
-     * Right Eye.
+     * right: Right Eye.
      */
-    vision_eye_codes_RightEye: Coding;
+    readonly RightEye: Coding;
 };
+/**
+ * A coded concept listing the eye codes.
+ */
+export declare type VisionEyeCodesValueSetType = typeof VisionEyeCodesValueSet;
+/**
+ * A coded concept listing the eye codes.
+ */
+export declare enum VisionEyeCodesValueSetEnum {
+    /**
+     * left: Left Eye.
+     */
+    LeftEye = "left",
+    /**
+     * right: Right Eye.
+     */
+    RightEye = "right"
+}
 //# sourceMappingURL=VisionEyeCodesValueSet.d.ts.map

@@ -1,8 +1,19 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { ObservationCodesValueSetType } from '../fhirValueSets/ObservationCodesValueSet.js';
+import { GoalStatusValueSetType, GoalStatusValueSetEnum } from '../fhirValueSets/GoalStatusValueSet.js';
+import { GoalAchievementValueSetType } from '../fhirValueSets/GoalAchievementValueSet.js';
+import { GoalCategoryValueSetType } from '../fhirValueSets/GoalCategoryValueSet.js';
+import { GoalPriorityValueSetType } from '../fhirValueSets/GoalPriorityValueSet.js';
+import { ClinicalFindingsValueSetType } from '../fhirValueSets/ClinicalFindingsValueSet.js';
+import { GoalStartEventValueSetType } from '../fhirValueSets/GoalStartEventValueSet.js';
 /**
  * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
  */
 export declare type IGoalTarget = fhir.IBackboneElement & {
+    /**
+     * The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.
+     */
+    measure?: fhir.ICodeableConcept | undefined;
     /**
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
      */
@@ -19,16 +30,25 @@ export declare type IGoalTarget = fhir.IBackboneElement & {
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
      */
     detailString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.target.detail[x]
+     */
     _detailString?: fhir.IFhirElement | undefined;
     /**
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
      */
     detailBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Goal.target.detail[x]
+     */
     _detailBoolean?: fhir.IFhirElement | undefined;
     /**
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
      */
     detailInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: Goal.target.detail[x]
+     */
     _detailInteger?: fhir.IFhirElement | undefined;
     /**
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
@@ -38,15 +58,14 @@ export declare type IGoalTarget = fhir.IBackboneElement & {
      * Indicates either the date or the duration after start by which the goal should be met.
      */
     dueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.target.due[x]
+     */
     _dueDate?: fhir.IFhirElement | undefined;
     /**
      * Indicates either the date or the duration after start by which the goal should be met.
      */
     dueDuration?: fhir.IDuration | undefined;
-    /**
-     * The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.
-     */
-    measure?: fhir.ICodeableConcept | undefined;
 };
 /**
  * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
@@ -57,34 +76,78 @@ export declare type IGoal = fhir.IDomainResource & {
      */
     resourceType: "Goal";
     /**
-     * Describes the progression, or lack thereof, towards the goal against the target.
-     */
-    achievementStatus?: fhir.ICodeableConcept | undefined;
-    /**
-     * The identified conditions and other health record elements that are intended to be addressed by the goal.
-     */
-    addresses?: fhir.IReference[] | undefined;
-    /**
-     * Indicates a category the goal falls within.
-     */
-    category?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * If no code is available, use CodeableConcept.text.
-     */
-    description: fhir.ICodeableConcept | null;
-    /**
-     * This is the individual responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).
-     */
-    expressedBy?: fhir.IReference | undefined;
-    /**
      * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
      * This element is labeled as a modifier because the lifecycleStatus contains codes that mark the resource as not currently valid.
      */
-    lifecycleStatus: GoalLifecycleStatusEnum | null;
+    lifecycleStatus: GoalStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Goal.lifecycleStatus
+     */
     _lifecycleStatus?: fhir.IFhirElement | undefined;
+    /**
+     * Describes the progression, or lack thereof, towards the goal against the target.
+     */
+    achievementStatus?: fhir.ICodeableConcept | undefined;
+    /**
+     * Indicates a category the goal falls within.
+     */
+    category?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * Extensions are available to track priorities as established by each participant (i.e. Priority from the patient's perspective, different practitioners' perspectives, family member's perspectives)
+     * The ordinal extension on Coding can be used to convey a numerically comparable ranking to priority.  (Keep in mind that different coding systems may use a "low value=important".
+     */
+    priority?: fhir.ICodeableConcept | undefined;
+    /**
+     * If no code is available, use CodeableConcept.text.
+     */
+    description: fhir.ICodeableConcept | null;
+    /**
+     * Identifies the patient, group or organization for whom the goal is being established.
+     */
+    subject: fhir.IReference | null;
+    /**
+     * The date or event after which the goal should begin being pursued.
+     */
+    startDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.start[x]
+     */
+    _startDate?: fhir.IFhirElement | undefined;
+    /**
+     * The date or event after which the goal should begin being pursued.
+     */
+    startCodeableConcept?: fhir.ICodeableConcept | undefined;
+    /**
+     * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
+     */
+    target?: fhir.IGoalTarget[] | undefined;
+    /**
+     * To see the date for past statuses, query history.
+     */
+    statusDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.statusDate
+     */
+    _statusDate?: fhir.IFhirElement | undefined;
+    /**
+     * This will typically be captured for statuses such as rejected, on-hold or cancelled, but could be present for others.
+     */
+    statusReason?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.statusReason
+     */
+    _statusReason?: fhir.IFhirElement | undefined;
+    /**
+     * This is the individual responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).
+     */
+    expressedBy?: fhir.IReference | undefined;
+    /**
+     * The identified conditions and other health record elements that are intended to be addressed by the goal.
+     */
+    addresses?: fhir.IReference[] | undefined;
     /**
      * May be used for progress notes, concerns or other related information that doesn't actually describe the goal itself.
      */
@@ -97,43 +160,15 @@ export declare type IGoal = fhir.IDomainResource & {
      * The goal outcome is independent of the outcome of the related activities.  For example, if the Goal is to achieve a target body weight of 150 lb and a care plan activity is defined to diet, then the care plan’s activity outcome could be calories consumed whereas goal outcome is an observation for the actual body weight measured.
      */
     outcomeReference?: fhir.IReference[] | undefined;
-    /**
-     * Extensions are available to track priorities as established by each participant (i.e. Priority from the patient's perspective, different practitioners' perspectives, family member's perspectives)
-     * The ordinal extension on Coding can be used to convey a numerically comparable ranking to priority.  (Keep in mind that different coding systems may use a "low value=important".
-     */
-    priority?: fhir.ICodeableConcept | undefined;
-    /**
-     * The date or event after which the goal should begin being pursued.
-     */
-    startDate?: string | undefined;
-    _startDate?: fhir.IFhirElement | undefined;
-    /**
-     * The date or event after which the goal should begin being pursued.
-     */
-    startCodeableConcept?: fhir.ICodeableConcept | undefined;
-    /**
-     * To see the date for past statuses, query history.
-     */
-    statusDate?: string | undefined;
-    _statusDate?: fhir.IFhirElement | undefined;
-    /**
-     * This will typically be captured for statuses such as rejected, on-hold or cancelled, but could be present for others.
-     */
-    statusReason?: string | undefined;
-    _statusReason?: fhir.IFhirElement | undefined;
-    /**
-     * Identifies the patient, group or organization for whom the goal is being established.
-     */
-    subject: fhir.IReference | null;
-    /**
-     * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
-     */
-    target?: fhir.IGoalTarget[] | undefined;
 };
 /**
  * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
  */
-export declare class GoalTarget extends fhir.BackboneElement implements fhir.IGoalTarget {
+export declare class GoalTarget extends fhir.BackboneElement implements IGoalTarget {
+    /**
+     * The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.
+     */
+    measure?: fhir.CodeableConcept | undefined;
     /**
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
      */
@@ -150,16 +185,25 @@ export declare class GoalTarget extends fhir.BackboneElement implements fhir.IGo
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
      */
     detailString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.target.detail[x]
+     */
     _detailString?: fhir.FhirElement | undefined;
     /**
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
      */
     detailBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Goal.target.detail[x]
+     */
     _detailBoolean?: fhir.FhirElement | undefined;
     /**
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
      */
     detailInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: Goal.target.detail[x]
+     */
     _detailInteger?: fhir.FhirElement | undefined;
     /**
      * A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Goal.target.measure defines a coded value.
@@ -169,56 +213,35 @@ export declare class GoalTarget extends fhir.BackboneElement implements fhir.IGo
      * Indicates either the date or the duration after start by which the goal should be met.
      */
     dueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.target.due[x]
+     */
     _dueDate?: fhir.FhirElement | undefined;
     /**
      * Indicates either the date or the duration after start by which the goal should be met.
      */
     dueDuration?: fhir.Duration | undefined;
     /**
-     * The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.
-     */
-    measure?: fhir.CodeableConcept | undefined;
-    /**
      * Default constructor for GoalTarget - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IGoalTarget>);
+    constructor(source?: Partial<IGoalTarget>);
     /**
-     * Check if the current GoalTarget contains all required elements.
+     * Example-bound Value Set for measure
      */
-    checkRequiredElements(): string[];
+    measureExampleValueSet(): ObservationCodesValueSetType;
     /**
-     * Factory function to create a GoalTarget from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IGoalTarget): GoalTarget;
+    doModelValidation(): [string, string][];
 }
 /**
  * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
  */
-export declare class Goal extends fhir.DomainResource implements fhir.IGoal {
+export declare class Goal extends fhir.DomainResource implements IGoal {
     /**
      * Resource Type Name
      */
     resourceType: "Goal";
-    /**
-     * Describes the progression, or lack thereof, towards the goal against the target.
-     */
-    achievementStatus?: fhir.CodeableConcept | undefined;
-    /**
-     * The identified conditions and other health record elements that are intended to be addressed by the goal.
-     */
-    addresses?: fhir.Reference[] | undefined;
-    /**
-     * Indicates a category the goal falls within.
-     */
-    category?: fhir.CodeableConcept[] | undefined;
-    /**
-     * If no code is available, use CodeableConcept.text.
-     */
-    description: fhir.CodeableConcept | null;
-    /**
-     * This is the individual responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).
-     */
-    expressedBy?: fhir.Reference | undefined;
     /**
      * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
      */
@@ -226,8 +249,72 @@ export declare class Goal extends fhir.DomainResource implements fhir.IGoal {
     /**
      * This element is labeled as a modifier because the lifecycleStatus contains codes that mark the resource as not currently valid.
      */
-    lifecycleStatus: GoalLifecycleStatusEnum | null;
+    lifecycleStatus: GoalStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Goal.lifecycleStatus
+     */
     _lifecycleStatus?: fhir.FhirElement | undefined;
+    /**
+     * Describes the progression, or lack thereof, towards the goal against the target.
+     */
+    achievementStatus?: fhir.CodeableConcept | undefined;
+    /**
+     * Indicates a category the goal falls within.
+     */
+    category?: fhir.CodeableConcept[] | undefined;
+    /**
+     * Extensions are available to track priorities as established by each participant (i.e. Priority from the patient's perspective, different practitioners' perspectives, family member's perspectives)
+     * The ordinal extension on Coding can be used to convey a numerically comparable ranking to priority.  (Keep in mind that different coding systems may use a "low value=important".
+     */
+    priority?: fhir.CodeableConcept | undefined;
+    /**
+     * If no code is available, use CodeableConcept.text.
+     */
+    description: fhir.CodeableConcept | null;
+    /**
+     * Identifies the patient, group or organization for whom the goal is being established.
+     */
+    subject: fhir.Reference | null;
+    /**
+     * The date or event after which the goal should begin being pursued.
+     */
+    startDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.start[x]
+     */
+    _startDate?: fhir.FhirElement | undefined;
+    /**
+     * The date or event after which the goal should begin being pursued.
+     */
+    startCodeableConcept?: fhir.CodeableConcept | undefined;
+    /**
+     * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
+     */
+    target?: fhir.GoalTarget[] | undefined;
+    /**
+     * To see the date for past statuses, query history.
+     */
+    statusDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.statusDate
+     */
+    _statusDate?: fhir.FhirElement | undefined;
+    /**
+     * This will typically be captured for statuses such as rejected, on-hold or cancelled, but could be present for others.
+     */
+    statusReason?: string | undefined;
+    /**
+     * Extended properties for primitive element: Goal.statusReason
+     */
+    _statusReason?: fhir.FhirElement | undefined;
+    /**
+     * This is the individual responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).
+     */
+    expressedBy?: fhir.Reference | undefined;
+    /**
+     * The identified conditions and other health record elements that are intended to be addressed by the goal.
+     */
+    addresses?: fhir.Reference[] | undefined;
     /**
      * May be used for progress notes, concerns or other related information that doesn't actually describe the goal itself.
      */
@@ -241,62 +328,44 @@ export declare class Goal extends fhir.DomainResource implements fhir.IGoal {
      */
     outcomeReference?: fhir.Reference[] | undefined;
     /**
-     * Extensions are available to track priorities as established by each participant (i.e. Priority from the patient's perspective, different practitioners' perspectives, family member's perspectives)
-     * The ordinal extension on Coding can be used to convey a numerically comparable ranking to priority.  (Keep in mind that different coding systems may use a "low value=important".
-     */
-    priority?: fhir.CodeableConcept | undefined;
-    /**
-     * The date or event after which the goal should begin being pursued.
-     */
-    startDate?: string | undefined;
-    _startDate?: fhir.FhirElement | undefined;
-    /**
-     * The date or event after which the goal should begin being pursued.
-     */
-    startCodeableConcept?: fhir.CodeableConcept | undefined;
-    /**
-     * To see the date for past statuses, query history.
-     */
-    statusDate?: string | undefined;
-    _statusDate?: fhir.FhirElement | undefined;
-    /**
-     * This will typically be captured for statuses such as rejected, on-hold or cancelled, but could be present for others.
-     */
-    statusReason?: string | undefined;
-    _statusReason?: fhir.FhirElement | undefined;
-    /**
-     * Identifies the patient, group or organization for whom the goal is being established.
-     */
-    subject: fhir.Reference | null;
-    /**
-     * When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.
-     */
-    target?: fhir.GoalTarget[] | undefined;
-    /**
      * Default constructor for Goal - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IGoal>);
+    constructor(source?: Partial<IGoal>);
     /**
-     * Check if the current Goal contains all required elements.
+     * Required-bound Value Set for lifecycleStatus
      */
-    checkRequiredElements(): string[];
+    lifecycleStatusRequiredValueSet(): GoalStatusValueSetType;
     /**
-     * Factory function to create a Goal from an object that MUST contain all required elements.
+     * Preferred-bound Value Set for achievementStatus
      */
-    static fromStrict(source: fhir.IGoal): Goal;
-}
-/**
- * Code Values for the Goal.lifecycleStatus field
- */
-export declare enum GoalLifecycleStatusEnum {
-    PROPOSED = "proposed",
-    PLANNED = "planned",
-    ACCEPTED = "accepted",
-    ACTIVE = "active",
-    ON_HOLD = "on-hold",
-    COMPLETED = "completed",
-    CANCELLED = "cancelled",
-    ENTERED_IN_ERROR = "entered-in-error",
-    REJECTED = "rejected"
+    achievementStatusPreferredValueSet(): GoalAchievementValueSetType;
+    /**
+     * Example-bound Value Set for category
+     */
+    categoryExampleValueSet(): GoalCategoryValueSetType;
+    /**
+     * Preferred-bound Value Set for priority
+     */
+    priorityPreferredValueSet(): GoalPriorityValueSetType;
+    /**
+     * Example-bound Value Set for description
+     */
+    descriptionExampleValueSet(): ClinicalFindingsValueSetType;
+    /**
+     * Example-bound Value Set for startDate
+     */
+    startDateExampleValueSet(): GoalStartEventValueSetType;
+    /**
+     * Example-bound Value Set for startCodeableConcept
+     */
+    startCodeableConceptExampleValueSet(): GoalStartEventValueSetType;
+    /**
+     * Example-bound Value Set for outcomeCode
+     */
+    outcomeCodeExampleValueSet(): ClinicalFindingsValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Goal.d.ts.map

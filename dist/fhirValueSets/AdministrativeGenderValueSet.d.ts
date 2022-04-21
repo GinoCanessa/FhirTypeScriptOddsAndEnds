@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The gender of a person used for administrative purposes.
  */
 export declare const AdministrativeGenderValueSet: {
     /**
-     * Female.
+     * female: Female.
      */
-    administrative_gender_Female: Coding;
+    readonly Female: Coding;
     /**
-     * Male.
+     * male: Male.
      */
-    administrative_gender_Male: Coding;
+    readonly Male: Coding;
     /**
-     * Other.
+     * other: Other.
      */
-    administrative_gender_Other: Coding;
+    readonly Other: Coding;
     /**
-     * Unknown.
+     * unknown: Unknown.
      */
-    administrative_gender_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * The gender of a person used for administrative purposes.
+ */
+export declare type AdministrativeGenderValueSetType = typeof AdministrativeGenderValueSet;
+/**
+ * The gender of a person used for administrative purposes.
+ */
+export declare enum AdministrativeGenderValueSetEnum {
+    /**
+     * female: Female.
+     */
+    Female = "female",
+    /**
+     * male: Male.
+     */
+    Male = "male",
+    /**
+     * other: Other.
+     */
+    Other = "other",
+    /**
+     * unknown: Unknown.
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=AdministrativeGenderValueSet.d.ts.map

@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Use of contact point.
  */
 export declare const ContactPointUseValueSet: {
     /**
-     * A communication contact point at a home; attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.
+     * home: A communication contact point at a home; attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.
      */
-    contact_point_use_Home: Coding;
+    readonly Home: Coding;
     /**
-     * A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes, suitable for urgent matters, not the first choice for routine business.
+     * mobile: A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes, suitable for urgent matters, not the first choice for routine business.
      */
-    contact_point_use_Mobile: Coding;
+    readonly Mobile: Coding;
     /**
-     * This contact point is no longer in use (or was never correct, but retained for records).
+     * old: This contact point is no longer in use (or was never correct, but retained for records).
      */
-    contact_point_use_Old: Coding;
+    readonly Old: Coding;
     /**
-     * A temporary contact point. The period can provide more detailed information.
+     * temp: A temporary contact point. The period can provide more detailed information.
      */
-    contact_point_use_Temp: Coding;
+    readonly Temp: Coding;
     /**
-     * An office contact point. First choice for business related contacts during business hours.
+     * work: An office contact point. First choice for business related contacts during business hours.
      */
-    contact_point_use_Work: Coding;
+    readonly Work: Coding;
 };
+/**
+ * Use of contact point.
+ */
+export declare type ContactPointUseValueSetType = typeof ContactPointUseValueSet;
+/**
+ * Use of contact point.
+ */
+export declare enum ContactPointUseValueSetEnum {
+    /**
+     * home: A communication contact point at a home; attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.
+     */
+    Home = "home",
+    /**
+     * mobile: A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes, suitable for urgent matters, not the first choice for routine business.
+     */
+    Mobile = "mobile",
+    /**
+     * old: This contact point is no longer in use (or was never correct, but retained for records).
+     */
+    Old = "old",
+    /**
+     * temp: A temporary contact point. The period can provide more detailed information.
+     */
+    Temp = "temp",
+    /**
+     * work: An office contact point. First choice for business related contacts during business hours.
+     */
+    Work = "work"
+}
 //# sourceMappingURL=ContactPointUseValueSet.d.ts.map

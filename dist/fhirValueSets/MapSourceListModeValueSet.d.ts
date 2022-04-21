@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * If field is a list, how to manage the source.
  */
 export declare const MapSourceListModeValueSet: {
     /**
-     * Only process this rule for the first in the list.
+     * first: Only process this rule for the first in the list.
      */
-    map_source_list_mode_First: Coding;
+    readonly First: Coding;
     /**
-     * Only process this rule for the last in the list.
+     * last: Only process this rule for the last in the list.
      */
-    map_source_list_mode_Last: Coding;
+    readonly Last: Coding;
     /**
-     * Process this rule for all but the first.
+     * not_first: Process this rule for all but the first.
      */
-    map_source_list_mode_AllButTheFirst: Coding;
+    readonly AllButTheFirst: Coding;
     /**
-     * Process this rule for all but the last.
+     * not_last: Process this rule for all but the last.
      */
-    map_source_list_mode_AllButTheLast: Coding;
+    readonly AllButTheLast: Coding;
     /**
-     * Only process this rule is there is only item.
+     * only_one: Only process this rule is there is only item.
      */
-    map_source_list_mode_EnforceOnlyOne: Coding;
+    readonly EnforceOnlyOne: Coding;
 };
+/**
+ * If field is a list, how to manage the source.
+ */
+export declare type MapSourceListModeValueSetType = typeof MapSourceListModeValueSet;
+/**
+ * If field is a list, how to manage the source.
+ */
+export declare enum MapSourceListModeValueSetEnum {
+    /**
+     * first: Only process this rule for the first in the list.
+     */
+    First = "first",
+    /**
+     * last: Only process this rule for the last in the list.
+     */
+    Last = "last",
+    /**
+     * not_first: Process this rule for all but the first.
+     */
+    AllButTheFirst = "not_first",
+    /**
+     * not_last: Process this rule for all but the last.
+     */
+    AllButTheLast = "not_last",
+    /**
+     * only_one: Only process this rule is there is only item.
+     */
+    EnforceOnlyOne = "only_one"
+}
 //# sourceMappingURL=MapSourceListModeValueSet.d.ts.map

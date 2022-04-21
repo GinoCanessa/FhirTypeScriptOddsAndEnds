@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes indicating the kind of the price component.
  */
 export declare const InvoicePriceComponentTypeValueSet: {
     /**
-     * the amount is the base price used for calculating the total price before applying surcharges, discount or taxes.
+     * base: the amount is the base price used for calculating the total price before applying surcharges, discount or taxes.
      */
-    invoice_priceComponentType_BasePrice: Coding;
+    readonly BasePrice: Coding;
     /**
-     * the amount is a deduction applied on the base price.
+     * deduction: the amount is a deduction applied on the base price.
      */
-    invoice_priceComponentType_Deduction: Coding;
+    readonly Deduction: Coding;
     /**
-     * the amount is a discount applied on the base price.
+     * discount: the amount is a discount applied on the base price.
      */
-    invoice_priceComponentType_Discount: Coding;
+    readonly Discount: Coding;
     /**
-     * the amount is of informational character, it has not been applied in the calculation of the total price.
+     * informational: the amount is of informational character, it has not been applied in the calculation of the total price.
      */
-    invoice_priceComponentType_Informational: Coding;
+    readonly Informational: Coding;
     /**
-     * the amount is a surcharge applied on the base price.
+     * surcharge: the amount is a surcharge applied on the base price.
      */
-    invoice_priceComponentType_Surcharge: Coding;
+    readonly Surcharge: Coding;
     /**
-     * the amount is the tax component of the total price.
+     * tax: the amount is the tax component of the total price.
      */
-    invoice_priceComponentType_Tax: Coding;
+    readonly Tax: Coding;
 };
+/**
+ * Codes indicating the kind of the price component.
+ */
+export declare type InvoicePriceComponentTypeValueSetType = typeof InvoicePriceComponentTypeValueSet;
+/**
+ * Codes indicating the kind of the price component.
+ */
+export declare enum InvoicePriceComponentTypeValueSetEnum {
+    /**
+     * base: the amount is the base price used for calculating the total price before applying surcharges, discount or taxes.
+     */
+    BasePrice = "base",
+    /**
+     * deduction: the amount is a deduction applied on the base price.
+     */
+    Deduction = "deduction",
+    /**
+     * discount: the amount is a discount applied on the base price.
+     */
+    Discount = "discount",
+    /**
+     * informational: the amount is of informational character, it has not been applied in the calculation of the total price.
+     */
+    Informational = "informational",
+    /**
+     * surcharge: the amount is a surcharge applied on the base price.
+     */
+    Surcharge = "surcharge",
+    /**
+     * tax: the amount is the tax component of the total price.
+     */
+    Tax = "tax"
+}
 //# sourceMappingURL=InvoicePriceComponentTypeValueSet.d.ts.map

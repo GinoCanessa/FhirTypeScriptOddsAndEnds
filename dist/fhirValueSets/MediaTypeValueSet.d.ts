@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes for high level media categories.
  */
 export declare const MediaTypeValueSet: {
     /**
-     * The media consists of a sound recording
+     * audio: The media consists of a sound recording
      */
-    media_type_Audio: Coding;
+    readonly Audio: Coding;
     /**
-     * The media consists of one or more unmoving images, including photographs, computer-generated graphs and charts, and scanned documents
+     * image: The media consists of one or more unmoving images, including photographs, computer-generated graphs and charts, and scanned documents
      */
-    media_type_Image: Coding;
+    readonly Image: Coding;
     /**
-     * The media consists of a series of frames that capture a moving image
+     * video: The media consists of a series of frames that capture a moving image
      */
-    media_type_Video: Coding;
+    readonly Video: Coding;
 };
+/**
+ * Codes for high level media categories.
+ */
+export declare type MediaTypeValueSetType = typeof MediaTypeValueSet;
+/**
+ * Codes for high level media categories.
+ */
+export declare enum MediaTypeValueSetEnum {
+    /**
+     * audio: The media consists of a sound recording
+     */
+    Audio = "audio",
+    /**
+     * image: The media consists of one or more unmoving images, including photographs, computer-generated graphs and charts, and scanned documents
+     */
+    Image = "image",
+    /**
+     * video: The media consists of a series of frames that capture a moving image
+     */
+    Video = "video"
+}
 //# sourceMappingURL=MediaTypeValueSet.d.ts.map

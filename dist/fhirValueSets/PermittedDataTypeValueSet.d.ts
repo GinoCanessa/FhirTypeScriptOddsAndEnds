@@ -1,51 +1,104 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Permitted data type for observation value.
  */
 export declare const PermittedDataTypeValueSet: {
     /**
-     * true or false.
+     * boolean: true or false.
      */
-    permitted_data_type_Boolean: Coding;
+    readonly VALBoolean: Coding;
     /**
-     * A coded concept from a reference terminology and/or text.
+     * CodeableConcept: A coded concept from a reference terminology and/or text.
      */
-    permitted_data_type_CodeableConcept: Coding;
+    readonly CodeableConcept: Coding;
     /**
-     * A date, date-time or partial date (e.g. just year or year + month) as used in human communication.
+     * dateTime: A date, date-time or partial date (e.g. just year or year + month) as used in human communication.
      */
-    permitted_data_type_DateTime: Coding;
+    readonly DateTime: Coding;
     /**
-     * A signed integer.
+     * integer: A signed integer.
      */
-    permitted_data_type_Integer: Coding;
+    readonly Integer: Coding;
     /**
-     * A time range defined by start and end date/time.
+     * Period: A time range defined by start and end date/time.
      */
-    permitted_data_type_Period: Coding;
+    readonly Period: Coding;
     /**
-     * A measured amount.
+     * Quantity: A measured amount.
      */
-    permitted_data_type_Quantity: Coding;
+    readonly Quantity: Coding;
     /**
-     * A set of values bounded by low and high.
+     * Range: A set of values bounded by low and high.
      */
-    permitted_data_type_Range: Coding;
+    readonly Range: Coding;
     /**
-     * A ratio of two Quantity values - a numerator and a denominator.
+     * Ratio: A ratio of two Quantity values - a numerator and a denominator.
      */
-    permitted_data_type_Ratio: Coding;
+    readonly Ratio: Coding;
     /**
-     * A series of measurements taken by a device.
+     * SampledData: A series of measurements taken by a device.
      */
-    permitted_data_type_SampledData: Coding;
+    readonly SampledData: Coding;
     /**
-     * A sequence of Unicode characters.
+     * string: A sequence of Unicode characters.
      */
-    permitted_data_type_String: Coding;
+    readonly VALString: Coding;
     /**
-     * A time during the day, in the format hh:mm:ss.
+     * time: A time during the day, in the format hh:mm:ss.
      */
-    permitted_data_type_Time: Coding;
+    readonly Time: Coding;
 };
+/**
+ * Permitted data type for observation value.
+ */
+export declare type PermittedDataTypeValueSetType = typeof PermittedDataTypeValueSet;
+/**
+ * Permitted data type for observation value.
+ */
+export declare enum PermittedDataTypeValueSetEnum {
+    /**
+     * boolean: true or false.
+     */
+    VALBoolean = "boolean",
+    /**
+     * CodeableConcept: A coded concept from a reference terminology and/or text.
+     */
+    CodeableConcept = "CodeableConcept",
+    /**
+     * dateTime: A date, date-time or partial date (e.g. just year or year + month) as used in human communication.
+     */
+    DateTime = "dateTime",
+    /**
+     * integer: A signed integer.
+     */
+    Integer = "integer",
+    /**
+     * Period: A time range defined by start and end date/time.
+     */
+    Period = "Period",
+    /**
+     * Quantity: A measured amount.
+     */
+    Quantity = "Quantity",
+    /**
+     * Range: A set of values bounded by low and high.
+     */
+    Range = "Range",
+    /**
+     * Ratio: A ratio of two Quantity values - a numerator and a denominator.
+     */
+    Ratio = "Ratio",
+    /**
+     * SampledData: A series of measurements taken by a device.
+     */
+    SampledData = "SampledData",
+    /**
+     * string: A sequence of Unicode characters.
+     */
+    VALString = "string",
+    /**
+     * time: A time during the day, in the format hh:mm:ss.
+     */
+    Time = "time"
+}
 //# sourceMappingURL=PermittedDataTypeValueSet.d.ts.map

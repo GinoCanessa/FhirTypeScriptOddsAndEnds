@@ -1,11 +1,24 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set contract specific codes for asset type.
  */
 export declare const ContractAssettypeValueSet: {
     /**
-     * To be completed
+     * participation: To be completed
      */
-    contract_assettype_Participation: Coding;
+    readonly Participation: Coding;
 };
+/**
+ * This value set contract specific codes for asset type.
+ */
+export declare type ContractAssettypeValueSetType = typeof ContractAssettypeValueSet;
+/**
+ * This value set contract specific codes for asset type.
+ */
+export declare enum ContractAssettypeValueSetEnum {
+    /**
+     * participation: To be completed
+     */
+    Participation = "participation"
+}
 //# sourceMappingURL=ContractAssettypeValueSet.d.ts.map

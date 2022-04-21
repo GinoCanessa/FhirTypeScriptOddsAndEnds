@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A code that indicates how the server supports conditional delete.
  */
 export declare const ConditionalDeleteStatusValueSet: {
     /**
-     * Conditional deletes are supported, and multiple resources can be deleted in a single interaction.
+     * multiple: Conditional deletes are supported, and multiple resources can be deleted in a single interaction.
      */
-    conditional_delete_status_MultipleDeletesSupported: Coding;
+    readonly MultipleDeletesSupported: Coding;
     /**
-     * No support for conditional deletes.
+     * not-supported: No support for conditional deletes.
      */
-    conditional_delete_status_NotSupported: Coding;
+    readonly NotSupported: Coding;
     /**
-     * Conditional deletes are supported, but only single resources at a time.
+     * single: Conditional deletes are supported, but only single resources at a time.
      */
-    conditional_delete_status_SingleDeletesSupported: Coding;
+    readonly SingleDeletesSupported: Coding;
 };
+/**
+ * A code that indicates how the server supports conditional delete.
+ */
+export declare type ConditionalDeleteStatusValueSetType = typeof ConditionalDeleteStatusValueSet;
+/**
+ * A code that indicates how the server supports conditional delete.
+ */
+export declare enum ConditionalDeleteStatusValueSetEnum {
+    /**
+     * multiple: Conditional deletes are supported, and multiple resources can be deleted in a single interaction.
+     */
+    MultipleDeletesSupported = "multiple",
+    /**
+     * not-supported: No support for conditional deletes.
+     */
+    NotSupported = "not-supported",
+    /**
+     * single: Conditional deletes are supported, but only single resources at a time.
+     */
+    SingleDeletesSupported = "single"
+}
 //# sourceMappingURL=ConditionalDeleteStatusValueSet.d.ts.map

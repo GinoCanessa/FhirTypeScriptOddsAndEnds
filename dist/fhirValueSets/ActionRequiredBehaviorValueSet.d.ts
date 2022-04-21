@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Defines expectations around whether an action or action group is required.
  */
 export declare const ActionRequiredBehaviorValueSet: {
     /**
-     * An action with this behavior may be included in the set of actions processed by the end user.
+     * could: An action with this behavior may be included in the set of actions processed by the end user.
      */
-    action_required_behavior_Could: Coding;
+    readonly Could: Coding;
     /**
-     * An action with this behavior must be included in the actions processed by the end user; the end user SHALL NOT choose not to include this action.
+     * must: An action with this behavior must be included in the actions processed by the end user; the end user SHALL NOT choose not to include this action.
      */
-    action_required_behavior_Must: Coding;
+    readonly Must: Coding;
     /**
-     * An action with this behavior must be included in the set of actions processed by the end user, unless the end user provides documentation as to why the action was not included.
+     * must-unless-documented: An action with this behavior must be included in the set of actions processed by the end user, unless the end user provides documentation as to why the action was not included.
      */
-    action_required_behavior_MustUnlessDocumented: Coding;
+    readonly MustUnlessDocumented: Coding;
 };
+/**
+ * Defines expectations around whether an action or action group is required.
+ */
+export declare type ActionRequiredBehaviorValueSetType = typeof ActionRequiredBehaviorValueSet;
+/**
+ * Defines expectations around whether an action or action group is required.
+ */
+export declare enum ActionRequiredBehaviorValueSetEnum {
+    /**
+     * could: An action with this behavior may be included in the set of actions processed by the end user.
+     */
+    Could = "could",
+    /**
+     * must: An action with this behavior must be included in the actions processed by the end user; the end user SHALL NOT choose not to include this action.
+     */
+    Must = "must",
+    /**
+     * must-unless-documented: An action with this behavior must be included in the set of actions processed by the end user, unless the end user provides documentation as to why the action was not included.
+     */
+    MustUnlessDocumented = "must-unless-documented"
+}
 //# sourceMappingURL=ActionRequiredBehaviorValueSet.d.ts.map

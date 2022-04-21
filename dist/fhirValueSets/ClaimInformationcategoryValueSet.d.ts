@@ -1,63 +1,128 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Information Category codes.
  */
 export declare const ClaimInformationcategoryValueSet: {
     /**
-     * Materials attached such as images, documents and resources.
+     * attachment: Materials attached such as images, documents and resources.
      */
-    claim_informationcategory_Attachment: Coding;
+    readonly Attachment: Coding;
     /**
-     * Discharge status and discharge to locations.
+     * discharge: Discharge status and discharge to locations.
      */
-    claim_informationcategory_Discharge: Coding;
+    readonly Discharge: Coding;
     /**
-     * An indication that the patient was unable to work, the period if known otherwise a Yes/No (boolean).
+     * employmentimpacted: An indication that the patient was unable to work, the period if known otherwise a Yes/No (boolean).
      */
-    claim_informationcategory_EmploymentImpacted: Coding;
+    readonly EmploymentImpacted: Coding;
     /**
-     * Insurance policy exceptions.
+     * exception: Insurance policy exceptions.
      */
-    claim_informationcategory_Exception: Coding;
+    readonly Exception: Coding;
     /**
-     * The external cause of an illness or injury.
+     * externalcause: The external cause of an illness or injury.
      */
-    claim_informationcategory_ExternalCaause: Coding;
+    readonly ExternalCaause: Coding;
     /**
-     * An indication that the patient was hospitalized, the period if known otherwise a Yes/No (boolean).
+     * hospitalized: An indication that the patient was hospitalized, the period if known otherwise a Yes/No (boolean).
      */
-    claim_informationcategory_Hospitalized: Coding;
+    readonly Hospitalized: Coding;
     /**
-     * Codes conveying additional situation and condition information.
+     * info: Codes conveying additional situation and condition information.
      */
-    claim_informationcategory_Information: Coding;
+    readonly Information: Coding;
     /**
-     * Materials being forwarded, e.g. Models, molds, images, documents.
+     * material: Materials being forwarded, e.g. Models, molds, images, documents.
      */
-    claim_informationcategory_MaterialsForwarded: Coding;
+    readonly MaterialsForwarded: Coding;
     /**
-     * Teeth which are missing for any reason, for example: prior extraction, never developed.
+     * missingtooth: Teeth which are missing for any reason, for example: prior extraction, never developed.
      */
-    claim_informationcategory_MissingTooth: Coding;
+    readonly MissingTooth: Coding;
     /**
-     * Period, start or end dates of aspects of the Condition.
+     * onset: Period, start or end dates of aspects of the Condition.
      */
-    claim_informationcategory_Onset: Coding;
+    readonly Onset: Coding;
     /**
-     * Other information identified by the type.system.
+     * other: Other information identified by the type.system.
      */
-    claim_informationcategory_Other: Coding;
+    readonly Other: Coding;
     /**
-     * The reason for the patient visit.
+     * patientreasonforvisit: The reason for the patient visit.
      */
-    claim_informationcategory_PatientReasonForVisit: Coding;
+    readonly PatientReasonForVisit: Coding;
     /**
-     * The type of prosthesis and date of supply if a previously supplied prosthesis.
+     * prosthesis: The type of prosthesis and date of supply if a previously supplied prosthesis.
      */
-    claim_informationcategory_Prosthesis: Coding;
+    readonly Prosthesis: Coding;
     /**
-     * Nature and date of the related event e.g. Last exam, service, X-ray etc.
+     * related: Nature and date of the related event e.g. Last exam, service, X-ray etc.
      */
-    claim_informationcategory_RelatedServices: Coding;
+    readonly RelatedServices: Coding;
 };
+/**
+ * This value set includes sample Information Category codes.
+ */
+export declare type ClaimInformationcategoryValueSetType = typeof ClaimInformationcategoryValueSet;
+/**
+ * This value set includes sample Information Category codes.
+ */
+export declare enum ClaimInformationcategoryValueSetEnum {
+    /**
+     * attachment: Materials attached such as images, documents and resources.
+     */
+    Attachment = "attachment",
+    /**
+     * discharge: Discharge status and discharge to locations.
+     */
+    Discharge = "discharge",
+    /**
+     * employmentimpacted: An indication that the patient was unable to work, the period if known otherwise a Yes/No (boolean).
+     */
+    EmploymentImpacted = "employmentimpacted",
+    /**
+     * exception: Insurance policy exceptions.
+     */
+    Exception = "exception",
+    /**
+     * externalcause: The external cause of an illness or injury.
+     */
+    ExternalCaause = "externalcause",
+    /**
+     * hospitalized: An indication that the patient was hospitalized, the period if known otherwise a Yes/No (boolean).
+     */
+    Hospitalized = "hospitalized",
+    /**
+     * info: Codes conveying additional situation and condition information.
+     */
+    Information = "info",
+    /**
+     * material: Materials being forwarded, e.g. Models, molds, images, documents.
+     */
+    MaterialsForwarded = "material",
+    /**
+     * missingtooth: Teeth which are missing for any reason, for example: prior extraction, never developed.
+     */
+    MissingTooth = "missingtooth",
+    /**
+     * onset: Period, start or end dates of aspects of the Condition.
+     */
+    Onset = "onset",
+    /**
+     * other: Other information identified by the type.system.
+     */
+    Other = "other",
+    /**
+     * patientreasonforvisit: The reason for the patient visit.
+     */
+    PatientReasonForVisit = "patientreasonforvisit",
+    /**
+     * prosthesis: The type of prosthesis and date of supply if a previously supplied prosthesis.
+     */
+    Prosthesis = "prosthesis",
+    /**
+     * related: Nature and date of the related event e.g. Last exam, service, X-ray etc.
+     */
+    RelatedServices = "related"
+}
 //# sourceMappingURL=ClaimInformationcategoryValueSet.d.ts.map

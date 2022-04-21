@@ -1,75 +1,152 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Distinguishes groups from questions and display text and indicates data type for questions.
  */
 export declare const ItemTypeValueSet: {
     /**
-     * Question with binary content such as an image, PDF, etc. as an answer (valueAttachment).
+     * attachment: Question with binary content such as an image, PDF, etc. as an answer (valueAttachment).
      */
-    item_type_Attachment: Coding;
+    readonly Attachment: Coding;
     /**
-     * Question with a yes/no answer (valueBoolean).
+     * boolean: Question with a yes/no answer (valueBoolean).
      */
-    item_type_Boolean: Coding;
+    readonly Boolean: Coding;
     /**
-     * Question with a Coding drawn from a list of possible answers (specified in either the answerOption property, or via the valueset referenced in the answerValueSet property) as an answer (valueCoding).
+     * choice: Question with a Coding drawn from a list of possible answers (specified in either the answerOption property, or via the valueset referenced in the answerValueSet property) as an answer (valueCoding).
      */
-    item_type_Choice: Coding;
+    readonly Choice: Coding;
     /**
-     * Question with a date answer (valueDate).
+     * date: Question with a date answer (valueDate).
      */
-    item_type_Date: Coding;
+    readonly Date: Coding;
     /**
-     * Question with a date and time answer (valueDateTime).
+     * dateTime: Question with a date and time answer (valueDateTime).
      */
-    item_type_DateTime: Coding;
+    readonly DateTime: Coding;
     /**
-     * Question with is a real number answer (valueDecimal).
+     * decimal: Question with is a real number answer (valueDecimal).
      */
-    item_type_Decimal: Coding;
+    readonly Decimal: Coding;
     /**
-     * Text for display that will not capture an answer or have child items.
+     * display: Text for display that will not capture an answer or have child items.
      */
-    item_type_Display: Coding;
+    readonly Display: Coding;
     /**
-     * An item with no direct answer but should have at least one child item.
+     * group: An item with no direct answer but should have at least one child item.
      */
-    item_type_Group: Coding;
+    readonly Group: Coding;
     /**
-     * Question with an integer answer (valueInteger).
+     * integer: Question with an integer answer (valueInteger).
      */
-    item_type_Integer: Coding;
+    readonly Integer: Coding;
     /**
-     * Answer is a Coding drawn from a list of possible answers (as with the choice type) or a free-text entry in a string (valueCoding or valueString).
+     * open-choice: Answer is a Coding drawn from a list of possible answers (as with the choice type) or a free-text entry in a string (valueCoding or valueString).
      */
-    item_type_OpenChoice: Coding;
+    readonly OpenChoice: Coding;
     /**
-     * Question with a combination of a numeric value and unit, potentially with a comparator (&lt;, &gt;, etc.) as an answer. (valueQuantity) There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to define what unit should be captured (or the unit that has a ucum conversion from the provided unit).
+     * quantity: Question with a combination of a numeric value and unit, potentially with a comparator (&lt;, &gt;, etc.) as an answer. (valueQuantity) There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to define what unit should be captured (or the unit that has a ucum conversion from the provided unit).
      */
-    item_type_Quantity: Coding;
+    readonly Quantity: Coding;
     /**
-     * An item that defines a specific answer to be captured, and which may have child items. (the answer provided in the QuestionnaireResponse should be of the defined datatype).
+     * question: An item that defines a specific answer to be captured, and which may have child items. (the answer provided in the QuestionnaireResponse should be of the defined datatype).
      */
-    item_type_Question: Coding;
+    readonly Question: Coding;
     /**
-     * Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference).
+     * reference: Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference).
      */
-    item_type_Reference: Coding;
+    readonly Reference: Coding;
     /**
-     * Question with a short (few words to short sentence) free-text entry answer (valueString).
+     * string: Question with a short (few words to short sentence) free-text entry answer (valueString).
      */
-    item_type_String: Coding;
+    readonly String: Coding;
     /**
-     * Question with a long (potentially multi-paragraph) free-text entry answer (valueString).
+     * text: Question with a long (potentially multi-paragraph) free-text entry answer (valueString).
      */
-    item_type_Text: Coding;
+    readonly Text: Coding;
     /**
-     * Question with a time (hour:minute:second) answer independent of date. (valueTime).
+     * time: Question with a time (hour:minute:second) answer independent of date. (valueTime).
      */
-    item_type_Time: Coding;
+    readonly Time: Coding;
     /**
-     * Question with a URL (website, FTP site, etc.) answer (valueUri).
+     * url: Question with a URL (website, FTP site, etc.) answer (valueUri).
      */
-    item_type_Url: Coding;
+    readonly Url: Coding;
 };
+/**
+ * Distinguishes groups from questions and display text and indicates data type for questions.
+ */
+export declare type ItemTypeValueSetType = typeof ItemTypeValueSet;
+/**
+ * Distinguishes groups from questions and display text and indicates data type for questions.
+ */
+export declare enum ItemTypeValueSetEnum {
+    /**
+     * attachment: Question with binary content such as an image, PDF, etc. as an answer (valueAttachment).
+     */
+    Attachment = "attachment",
+    /**
+     * boolean: Question with a yes/no answer (valueBoolean).
+     */
+    Boolean = "boolean",
+    /**
+     * choice: Question with a Coding drawn from a list of possible answers (specified in either the answerOption property, or via the valueset referenced in the answerValueSet property) as an answer (valueCoding).
+     */
+    Choice = "choice",
+    /**
+     * date: Question with a date answer (valueDate).
+     */
+    Date = "date",
+    /**
+     * dateTime: Question with a date and time answer (valueDateTime).
+     */
+    DateTime = "dateTime",
+    /**
+     * decimal: Question with is a real number answer (valueDecimal).
+     */
+    Decimal = "decimal",
+    /**
+     * display: Text for display that will not capture an answer or have child items.
+     */
+    Display = "display",
+    /**
+     * group: An item with no direct answer but should have at least one child item.
+     */
+    Group = "group",
+    /**
+     * integer: Question with an integer answer (valueInteger).
+     */
+    Integer = "integer",
+    /**
+     * open-choice: Answer is a Coding drawn from a list of possible answers (as with the choice type) or a free-text entry in a string (valueCoding or valueString).
+     */
+    OpenChoice = "open-choice",
+    /**
+     * quantity: Question with a combination of a numeric value and unit, potentially with a comparator (&lt;, &gt;, etc.) as an answer. (valueQuantity) There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to define what unit should be captured (or the unit that has a ucum conversion from the provided unit).
+     */
+    Quantity = "quantity",
+    /**
+     * question: An item that defines a specific answer to be captured, and which may have child items. (the answer provided in the QuestionnaireResponse should be of the defined datatype).
+     */
+    Question = "question",
+    /**
+     * reference: Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference).
+     */
+    Reference = "reference",
+    /**
+     * string: Question with a short (few words to short sentence) free-text entry answer (valueString).
+     */
+    String = "string",
+    /**
+     * text: Question with a long (potentially multi-paragraph) free-text entry answer (valueString).
+     */
+    Text = "text",
+    /**
+     * time: Question with a time (hour:minute:second) answer independent of date. (valueTime).
+     */
+    Time = "time",
+    /**
+     * url: Question with a URL (website, FTP site, etc.) answer (valueUri).
+     */
+    Url = "url"
+}
 //# sourceMappingURL=ItemTypeValueSet.d.ts.map

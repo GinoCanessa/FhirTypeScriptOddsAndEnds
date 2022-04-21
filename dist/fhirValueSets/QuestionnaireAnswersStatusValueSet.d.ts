@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Lifecycle status of the questionnaire response.
  */
 export declare const QuestionnaireAnswersStatusValueSet: {
     /**
-     * This QuestionnaireResponse has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards.
+     * amended: This QuestionnaireResponse has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards.
      */
-    questionnaire_answers_status_Amended: Coding;
+    readonly Amended: Coding;
     /**
-     * This QuestionnaireResponse has been filled out with answers and the current content is regarded as definitive.
+     * completed: This QuestionnaireResponse has been filled out with answers and the current content is regarded as definitive.
      */
-    questionnaire_answers_status_Completed: Coding;
+    readonly Completed: Coding;
     /**
-     * This QuestionnaireResponse was entered in error and voided.
+     * entered-in-error: This QuestionnaireResponse was entered in error and voided.
      */
-    questionnaire_answers_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * This QuestionnaireResponse has been partially filled out with answers but changes or additions are still expected to be made to it.
+     * in-progress: This QuestionnaireResponse has been partially filled out with answers but changes or additions are still expected to be made to it.
      */
-    questionnaire_answers_status_InProgress: Coding;
+    readonly InProgress: Coding;
     /**
-     * This QuestionnaireResponse has been partially filled out with answers but has been abandoned. It is unknown whether changes or additions are expected to be made to it.
+     * stopped: This QuestionnaireResponse has been partially filled out with answers but has been abandoned. It is unknown whether changes or additions are expected to be made to it.
      */
-    questionnaire_answers_status_Stopped: Coding;
+    readonly Stopped: Coding;
 };
+/**
+ * Lifecycle status of the questionnaire response.
+ */
+export declare type QuestionnaireAnswersStatusValueSetType = typeof QuestionnaireAnswersStatusValueSet;
+/**
+ * Lifecycle status of the questionnaire response.
+ */
+export declare enum QuestionnaireAnswersStatusValueSetEnum {
+    /**
+     * amended: This QuestionnaireResponse has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards.
+     */
+    Amended = "amended",
+    /**
+     * completed: This QuestionnaireResponse has been filled out with answers and the current content is regarded as definitive.
+     */
+    Completed = "completed",
+    /**
+     * entered-in-error: This QuestionnaireResponse was entered in error and voided.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * in-progress: This QuestionnaireResponse has been partially filled out with answers but changes or additions are still expected to be made to it.
+     */
+    InProgress = "in-progress",
+    /**
+     * stopped: This QuestionnaireResponse has been partially filled out with answers but has been abandoned. It is unknown whether changes or additions are expected to be made to it.
+     */
+    Stopped = "stopped"
+}
 //# sourceMappingURL=QuestionnaireAnswersStatusValueSet.d.ts.map

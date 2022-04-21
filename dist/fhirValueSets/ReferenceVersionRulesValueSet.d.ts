@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Whether a reference needs to be version specific or version independent, or whether either can be used.
  */
 export declare const ReferenceVersionRulesValueSet: {
     /**
-     * The reference may be either version independent or version specific.
+     * either: The reference may be either version independent or version specific.
      */
-    reference_version_rules_EitherSpecificOrIndependent: Coding;
+    readonly EitherSpecificOrIndependent: Coding;
     /**
-     * The reference must be version independent.
+     * independent: The reference must be version independent.
      */
-    reference_version_rules_VersionIndependent: Coding;
+    readonly VersionIndependent: Coding;
     /**
-     * The reference must be version specific.
+     * specific: The reference must be version specific.
      */
-    reference_version_rules_VersionSpecific: Coding;
+    readonly VersionSpecific: Coding;
 };
+/**
+ * Whether a reference needs to be version specific or version independent, or whether either can be used.
+ */
+export declare type ReferenceVersionRulesValueSetType = typeof ReferenceVersionRulesValueSet;
+/**
+ * Whether a reference needs to be version specific or version independent, or whether either can be used.
+ */
+export declare enum ReferenceVersionRulesValueSetEnum {
+    /**
+     * either: The reference may be either version independent or version specific.
+     */
+    EitherSpecificOrIndependent = "either",
+    /**
+     * independent: The reference must be version independent.
+     */
+    VersionIndependent = "independent",
+    /**
+     * specific: The reference must be version specific.
+     */
+    VersionSpecific = "specific"
+}
 //# sourceMappingURL=ReferenceVersionRulesValueSet.d.ts.map

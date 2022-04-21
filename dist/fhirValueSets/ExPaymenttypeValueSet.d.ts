@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes example Payment Type codes.
  */
 export declare const ExPaymenttypeValueSet: {
     /**
-     * Complete (final) payment of the benefit under the Claim less any adjustments.
+     * complete: Complete (final) payment of the benefit under the Claim less any adjustments.
      */
-    ex_paymenttype_Complete: Coding;
+    readonly Complete: Coding;
     /**
-     * Partial payment of the benefit under the Claim less any adjustments.
+     * partial: Partial payment of the benefit under the Claim less any adjustments.
      */
-    ex_paymenttype_Partial: Coding;
+    readonly Partial: Coding;
 };
+/**
+ * This value set includes example Payment Type codes.
+ */
+export declare type ExPaymenttypeValueSetType = typeof ExPaymenttypeValueSet;
+/**
+ * This value set includes example Payment Type codes.
+ */
+export declare enum ExPaymenttypeValueSetEnum {
+    /**
+     * complete: Complete (final) payment of the benefit under the Claim less any adjustments.
+     */
+    Complete = "complete",
+    /**
+     * partial: Partial payment of the benefit under the Claim less any adjustments.
+     */
+    Partial = "partial"
+}
 //# sourceMappingURL=ExPaymenttypeValueSet.d.ts.map

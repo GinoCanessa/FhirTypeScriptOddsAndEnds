@@ -1,4 +1,4 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * The specific medication, food or laboratory test that interacts.
  */
@@ -21,10 +21,25 @@ export declare type IMedicinalProductInteraction = fhir.IDomainResource & {
      */
     resourceType: "MedicinalProductInteraction";
     /**
+     * The medication for which this is a described interaction.
+     */
+    subject?: fhir.IReference[] | undefined;
+    /**
      * The interaction described.
      */
     description?: string | undefined;
+    /**
+     * Extended properties for primitive element: MedicinalProductInteraction.description
+     */
     _description?: fhir.IFhirElement | undefined;
+    /**
+     * The specific medication, food or laboratory test that interacts.
+     */
+    interactant?: fhir.IMedicinalProductInteractionInteractant[] | undefined;
+    /**
+     * The type of the interaction e.g. drug-drug interaction, drug-food interaction, drug-lab test interaction.
+     */
+    type?: fhir.ICodeableConcept | undefined;
     /**
      * The effect of the interaction, for example "reduced gastric absorption of primary medication".
      */
@@ -34,26 +49,14 @@ export declare type IMedicinalProductInteraction = fhir.IDomainResource & {
      */
     incidence?: fhir.ICodeableConcept | undefined;
     /**
-     * The specific medication, food or laboratory test that interacts.
-     */
-    interactant?: fhir.IMedicinalProductInteractionInteractant[] | undefined;
-    /**
      * Actions for managing the interaction.
      */
     management?: fhir.ICodeableConcept | undefined;
-    /**
-     * The medication for which this is a described interaction.
-     */
-    subject?: fhir.IReference[] | undefined;
-    /**
-     * The type of the interaction e.g. drug-drug interaction, drug-food interaction, drug-lab test interaction.
-     */
-    type?: fhir.ICodeableConcept | undefined;
 };
 /**
  * The specific medication, food or laboratory test that interacts.
  */
-export declare class MedicinalProductInteractionInteractant extends fhir.BackboneElement implements fhir.IMedicinalProductInteractionInteractant {
+export declare class MedicinalProductInteractionInteractant extends fhir.BackboneElement implements IMedicinalProductInteractionInteractant {
     /**
      * The specific medication, food or laboratory test that interacts.
      */
@@ -65,29 +68,40 @@ export declare class MedicinalProductInteractionInteractant extends fhir.Backbon
     /**
      * Default constructor for MedicinalProductInteractionInteractant - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductInteractionInteractant>);
+    constructor(source?: Partial<IMedicinalProductInteractionInteractant>);
     /**
-     * Check if the current MedicinalProductInteractionInteractant contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductInteractionInteractant from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductInteractionInteractant): MedicinalProductInteractionInteractant;
+    doModelValidation(): [string, string][];
 }
 /**
  * The interactions of the medicinal product with other medicinal products, or other forms of interactions.
  */
-export declare class MedicinalProductInteraction extends fhir.DomainResource implements fhir.IMedicinalProductInteraction {
+export declare class MedicinalProductInteraction extends fhir.DomainResource implements IMedicinalProductInteraction {
     /**
      * Resource Type Name
      */
     resourceType: "MedicinalProductInteraction";
     /**
+     * The medication for which this is a described interaction.
+     */
+    subject?: fhir.Reference[] | undefined;
+    /**
      * The interaction described.
      */
     description?: string | undefined;
+    /**
+     * Extended properties for primitive element: MedicinalProductInteraction.description
+     */
     _description?: fhir.FhirElement | undefined;
+    /**
+     * The specific medication, food or laboratory test that interacts.
+     */
+    interactant?: fhir.MedicinalProductInteractionInteractant[] | undefined;
+    /**
+     * The type of the interaction e.g. drug-drug interaction, drug-food interaction, drug-lab test interaction.
+     */
+    type?: fhir.CodeableConcept | undefined;
     /**
      * The effect of the interaction, for example "reduced gastric absorption of primary medication".
      */
@@ -97,32 +111,16 @@ export declare class MedicinalProductInteraction extends fhir.DomainResource imp
      */
     incidence?: fhir.CodeableConcept | undefined;
     /**
-     * The specific medication, food or laboratory test that interacts.
-     */
-    interactant?: fhir.MedicinalProductInteractionInteractant[] | undefined;
-    /**
      * Actions for managing the interaction.
      */
     management?: fhir.CodeableConcept | undefined;
     /**
-     * The medication for which this is a described interaction.
-     */
-    subject?: fhir.Reference[] | undefined;
-    /**
-     * The type of the interaction e.g. drug-drug interaction, drug-food interaction, drug-lab test interaction.
-     */
-    type?: fhir.CodeableConcept | undefined;
-    /**
      * Default constructor for MedicinalProductInteraction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductInteraction>);
+    constructor(source?: Partial<IMedicinalProductInteraction>);
     /**
-     * Check if the current MedicinalProductInteraction contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductInteraction from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductInteraction): MedicinalProductInteraction;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=MedicinalProductInteraction.d.ts.map

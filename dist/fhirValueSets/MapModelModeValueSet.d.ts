@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How the referenced structure is used in this mapping.
  */
 export declare const MapModelModeValueSet: {
     /**
-     * This structure describes an instance that the mapping engine may ask to create that is used a target of data.
+     * produced: This structure describes an instance that the mapping engine may ask to create that is used a target of data.
      */
-    map_model_mode_ProducedStructureDefinition: Coding;
+    readonly ProducedStructureDefinition: Coding;
     /**
-     * This structure describes an instance that the mapping engine may ask for that is used a source of data.
+     * queried: This structure describes an instance that the mapping engine may ask for that is used a source of data.
      */
-    map_model_mode_QueriedStructureDefinition: Coding;
+    readonly QueriedStructureDefinition: Coding;
     /**
-     * This structure describes an instance passed to the mapping engine that is used a source of data.
+     * source: This structure describes an instance passed to the mapping engine that is used a source of data.
      */
-    map_model_mode_SourceStructureDefinition: Coding;
+    readonly SourceStructureDefinition: Coding;
     /**
-     * This structure describes an instance passed to the mapping engine that is used a target of data.
+     * target: This structure describes an instance passed to the mapping engine that is used a target of data.
      */
-    map_model_mode_TargetStructureDefinition: Coding;
+    readonly TargetStructureDefinition: Coding;
 };
+/**
+ * How the referenced structure is used in this mapping.
+ */
+export declare type MapModelModeValueSetType = typeof MapModelModeValueSet;
+/**
+ * How the referenced structure is used in this mapping.
+ */
+export declare enum MapModelModeValueSetEnum {
+    /**
+     * produced: This structure describes an instance that the mapping engine may ask to create that is used a target of data.
+     */
+    ProducedStructureDefinition = "produced",
+    /**
+     * queried: This structure describes an instance that the mapping engine may ask for that is used a source of data.
+     */
+    QueriedStructureDefinition = "queried",
+    /**
+     * source: This structure describes an instance passed to the mapping engine that is used a source of data.
+     */
+    SourceStructureDefinition = "source",
+    /**
+     * target: This structure describes an instance passed to the mapping engine that is used a target of data.
+     */
+    TargetStructureDefinition = "target"
+}
 //# sourceMappingURL=MapModelModeValueSet.d.ts.map

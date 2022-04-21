@@ -1,11 +1,24 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set contract specific codes for status.
  */
 export declare const ContractExpirationTypeValueSet: {
     /**
-     * To be completed
+     * breach: To be completed
      */
-    contract_expiration_type_Breach: Coding;
+    readonly Breach: Coding;
 };
+/**
+ * This value set contract specific codes for status.
+ */
+export declare type ContractExpirationTypeValueSetType = typeof ContractExpirationTypeValueSet;
+/**
+ * This value set contract specific codes for status.
+ */
+export declare enum ContractExpirationTypeValueSetEnum {
+    /**
+     * breach: To be completed
+     */
+    Breach = "breach"
+}
 //# sourceMappingURL=ContractExpirationTypeValueSet.d.ts.map

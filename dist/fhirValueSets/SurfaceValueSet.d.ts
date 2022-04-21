@@ -1,51 +1,104 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of FDI tooth surface codes.
  */
 export declare const SurfaceValueSet: {
     /**
-     * The surface of a posterior tooth facing the cheeks.
+     * B: The surface of a posterior tooth facing the cheeks.
      */
-    surface_Buccal: Coding;
+    readonly Buccal: Coding;
     /**
-     * The surface of a tooth that faces away from the midline of the face.
+     * D: The surface of a tooth that faces away from the midline of the face.
      */
-    surface_Distal: Coding;
+    readonly Distal: Coding;
     /**
-     * The Distoincisal surfaces of a tooth.
+     * DI: The Distoincisal surfaces of a tooth.
      */
-    surface_Distoincisal: Coding;
+    readonly Distoincisal: Coding;
     /**
-     * The Distoclusal surfaces of a tooth.
+     * DO: The Distoclusal surfaces of a tooth.
      */
-    surface_Distoclusal: Coding;
+    readonly Distoclusal: Coding;
     /**
-     * The biting edge of anterior teeth.
+     * I: The biting edge of anterior teeth.
      */
-    surface_Incisal: Coding;
+    readonly Incisal: Coding;
     /**
-     * The surface of a tooth facing the tongue.
+     * L: The surface of a tooth facing the tongue.
      */
-    surface_Lingual: Coding;
+    readonly Lingual: Coding;
     /**
-     * The surface of a tooth that is closest to the midline (middle) of the face.
+     * M: The surface of a tooth that is closest to the midline (middle) of the face.
      */
-    surface_Mesial: Coding;
+    readonly Mesial: Coding;
     /**
-     * The Mesioclusal surfaces of a tooth.
+     * MO: The Mesioclusal surfaces of a tooth.
      */
-    surface_Mesioclusal: Coding;
+    readonly Mesioclusal: Coding;
     /**
-     * The Mesioclusodistal surfaces of a tooth.
+     * MOD: The Mesioclusodistal surfaces of a tooth.
      */
-    surface_Mesioclusodistal: Coding;
+    readonly Mesioclusodistal: Coding;
     /**
-     * The chewing surface of posterior teeth.
+     * O: The chewing surface of posterior teeth.
      */
-    surface_Occlusal: Coding;
+    readonly Occlusal: Coding;
     /**
-     * The surface of a tooth facing the lips.
+     * V: The surface of a tooth facing the lips.
      */
-    surface_Ventral: Coding;
+    readonly Ventral: Coding;
 };
+/**
+ * This value set includes a smattering of FDI tooth surface codes.
+ */
+export declare type SurfaceValueSetType = typeof SurfaceValueSet;
+/**
+ * This value set includes a smattering of FDI tooth surface codes.
+ */
+export declare enum SurfaceValueSetEnum {
+    /**
+     * B: The surface of a posterior tooth facing the cheeks.
+     */
+    Buccal = "B",
+    /**
+     * D: The surface of a tooth that faces away from the midline of the face.
+     */
+    Distal = "D",
+    /**
+     * DI: The Distoincisal surfaces of a tooth.
+     */
+    Distoincisal = "DI",
+    /**
+     * DO: The Distoclusal surfaces of a tooth.
+     */
+    Distoclusal = "DO",
+    /**
+     * I: The biting edge of anterior teeth.
+     */
+    Incisal = "I",
+    /**
+     * L: The surface of a tooth facing the tongue.
+     */
+    Lingual = "L",
+    /**
+     * M: The surface of a tooth that is closest to the midline (middle) of the face.
+     */
+    Mesial = "M",
+    /**
+     * MO: The Mesioclusal surfaces of a tooth.
+     */
+    Mesioclusal = "MO",
+    /**
+     * MOD: The Mesioclusodistal surfaces of a tooth.
+     */
+    Mesioclusodistal = "MOD",
+    /**
+     * O: The chewing surface of posterior teeth.
+     */
+    Occlusal = "O",
+    /**
+     * V: The surface of a tooth facing the lips.
+     */
+    Ventral = "V"
+}
 //# sourceMappingURL=SurfaceValueSet.d.ts.map

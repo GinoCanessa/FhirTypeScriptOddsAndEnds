@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The purpose of the Claim: predetermination, preauthorization, claim.
  */
 export declare const ClaimUseValueSet: {
     /**
-     * The treatment is complete and this represents a Claim for the services.
+     * claim: The treatment is complete and this represents a Claim for the services.
      */
-    claim_use_Claim: Coding;
+    readonly Claim: Coding;
     /**
-     * The treatment is proposed and this represents a Pre-authorization for the services.
+     * preauthorization: The treatment is proposed and this represents a Pre-authorization for the services.
      */
-    claim_use_Preauthorization: Coding;
+    readonly Preauthorization: Coding;
     /**
-     * The treatment is proposed and this represents a Pre-determination for the services.
+     * predetermination: The treatment is proposed and this represents a Pre-determination for the services.
      */
-    claim_use_Predetermination: Coding;
+    readonly Predetermination: Coding;
 };
+/**
+ * The purpose of the Claim: predetermination, preauthorization, claim.
+ */
+export declare type ClaimUseValueSetType = typeof ClaimUseValueSet;
+/**
+ * The purpose of the Claim: predetermination, preauthorization, claim.
+ */
+export declare enum ClaimUseValueSetEnum {
+    /**
+     * claim: The treatment is complete and this represents a Claim for the services.
+     */
+    Claim = "claim",
+    /**
+     * preauthorization: The treatment is proposed and this represents a Pre-authorization for the services.
+     */
+    Preauthorization = "preauthorization",
+    /**
+     * predetermination: The treatment is proposed and this represents a Pre-determination for the services.
+     */
+    Predetermination = "predetermination"
+}
 //# sourceMappingURL=ClaimUseValueSet.d.ts.map

@@ -1,57 +1,57 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * Moiety, for structural modifications.
  */
 export declare type ISubstanceSpecificationMoiety = fhir.IBackboneElement & {
     /**
-     * Quantitative value for this moiety.
+     * Role that the moiety is playing.
      */
-    amountQuantity?: fhir.IQuantity | undefined;
-    /**
-     * Quantitative value for this moiety.
-     */
-    amountString?: string | undefined;
-    _amountString?: fhir.IFhirElement | undefined;
+    role?: fhir.ICodeableConcept | undefined;
     /**
      * Identifier by which this moiety substance is known.
      */
     identifier?: fhir.IIdentifier | undefined;
     /**
-     * Molecular formula.
-     */
-    molecularFormula?: string | undefined;
-    _molecularFormula?: fhir.IFhirElement | undefined;
-    /**
      * Textual name for this moiety substance.
      */
     name?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.moiety.name
+     */
     _name?: fhir.IFhirElement | undefined;
+    /**
+     * Stereochemistry type.
+     */
+    stereochemistry?: fhir.ICodeableConcept | undefined;
     /**
      * Optical activity type.
      */
     opticalActivity?: fhir.ICodeableConcept | undefined;
     /**
-     * Role that the moiety is playing.
+     * Molecular formula.
      */
-    role?: fhir.ICodeableConcept | undefined;
+    molecularFormula?: string | undefined;
     /**
-     * Stereochemistry type.
+     * Extended properties for primitive element: SubstanceSpecification.moiety.molecularFormula
      */
-    stereochemistry?: fhir.ICodeableConcept | undefined;
+    _molecularFormula?: fhir.IFhirElement | undefined;
+    /**
+     * Quantitative value for this moiety.
+     */
+    amountQuantity?: fhir.IQuantity | undefined;
+    /**
+     * Quantitative value for this moiety.
+     */
+    amountString?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.moiety.amount[x]
+     */
+    _amountString?: fhir.IFhirElement | undefined;
 };
 /**
  * General specifications for this substance, including how it is related to other substances.
  */
 export declare type ISubstanceSpecificationProperty = fhir.IBackboneElement & {
-    /**
-     * Quantitative value for this property.
-     */
-    amountQuantity?: fhir.IQuantity | undefined;
-    /**
-     * Quantitative value for this property.
-     */
-    amountString?: string | undefined;
-    _amountString?: fhir.IFhirElement | undefined;
     /**
      * A category for this property, e.g. Physical, Chemical, Enzymatic.
      */
@@ -61,6 +61,14 @@ export declare type ISubstanceSpecificationProperty = fhir.IBackboneElement & {
      */
     code?: fhir.ICodeableConcept | undefined;
     /**
+     * Parameters that were used in the measurement of a property (e.g. for viscosity: measured at 20C with a pH of 7.1).
+     */
+    parameters?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.property.parameters
+     */
+    _parameters?: fhir.IFhirElement | undefined;
+    /**
      * A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).
      */
     definingSubstanceReference?: fhir.IReference | undefined;
@@ -69,19 +77,22 @@ export declare type ISubstanceSpecificationProperty = fhir.IBackboneElement & {
      */
     definingSubstanceCodeableConcept?: fhir.ICodeableConcept | undefined;
     /**
-     * Parameters that were used in the measurement of a property (e.g. for viscosity: measured at 20C with a pH of 7.1).
+     * Quantitative value for this property.
      */
-    parameters?: string | undefined;
-    _parameters?: fhir.IFhirElement | undefined;
+    amountQuantity?: fhir.IQuantity | undefined;
+    /**
+     * Quantitative value for this property.
+     */
+    amountString?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.property.amount[x]
+     */
+    _amountString?: fhir.IFhirElement | undefined;
 };
 /**
  * The molecular weight or weight range (for proteins, polymers or nucleic acids).
  */
 export declare type ISubstanceSpecificationStructureIsotopeMolecularWeight = fhir.IBackboneElement & {
-    /**
-     * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
-     */
-    amount?: fhir.IQuantity | undefined;
     /**
      * The method by which the molecular weight was determined.
      */
@@ -90,23 +101,19 @@ export declare type ISubstanceSpecificationStructureIsotopeMolecularWeight = fhi
      * Type of molecular weight such as exact, average (also known as. number average), weight average.
      */
     type?: fhir.ICodeableConcept | undefined;
+    /**
+     * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
+     */
+    amount?: fhir.IQuantity | undefined;
 };
 /**
  * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
  */
 export declare type ISubstanceSpecificationStructureIsotope = fhir.IBackboneElement & {
     /**
-     * Half life - for a non-natural nuclide.
-     */
-    halfLife?: fhir.IQuantity | undefined;
-    /**
      * Substance identifier for each non-natural or radioisotope.
      */
     identifier?: fhir.IIdentifier | undefined;
-    /**
-     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
-     */
-    molecularWeight?: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight | undefined;
     /**
      * Substance name for each non-natural or radioisotope.
      */
@@ -115,63 +122,80 @@ export declare type ISubstanceSpecificationStructureIsotope = fhir.IBackboneElem
      * The type of isotopic substitution present in a single substance.
      */
     substitution?: fhir.ICodeableConcept | undefined;
+    /**
+     * Half life - for a non-natural nuclide.
+     */
+    halfLife?: fhir.IQuantity | undefined;
+    /**
+     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+     */
+    molecularWeight?: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight | undefined;
 };
 /**
  * Molecular structural representation.
  */
 export declare type ISubstanceSpecificationStructureRepresentation = fhir.IBackboneElement & {
     /**
-     * An attached file with the structural representation.
+     * The type of structure (e.g. Full, Partial, Representative).
      */
-    attachment?: fhir.IAttachment | undefined;
+    type?: fhir.ICodeableConcept | undefined;
     /**
      * The structural representation as text string in a format e.g. InChI, SMILES, MOLFILE, CDX.
      */
     representation?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.structure.representation.representation
+     */
     _representation?: fhir.IFhirElement | undefined;
     /**
-     * The type of structure (e.g. Full, Partial, Representative).
+     * An attached file with the structural representation.
      */
-    type?: fhir.ICodeableConcept | undefined;
+    attachment?: fhir.IAttachment | undefined;
 };
 /**
  * Structural information.
  */
 export declare type ISubstanceSpecificationStructure = fhir.IBackboneElement & {
     /**
-     * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
+     * Stereochemistry type.
      */
-    isotope?: fhir.ISubstanceSpecificationStructureIsotope[] | undefined;
-    /**
-     * Molecular formula.
-     */
-    molecularFormula?: string | undefined;
-    _molecularFormula?: fhir.IFhirElement | undefined;
-    /**
-     * Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.
-     */
-    molecularFormulaByMoiety?: string | undefined;
-    _molecularFormulaByMoiety?: fhir.IFhirElement | undefined;
-    /**
-     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
-     */
-    molecularWeight?: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight | undefined;
+    stereochemistry?: fhir.ICodeableConcept | undefined;
     /**
      * Optical activity type.
      */
     opticalActivity?: fhir.ICodeableConcept | undefined;
     /**
-     * Molecular structural representation.
+     * Molecular formula.
      */
-    representation?: fhir.ISubstanceSpecificationStructureRepresentation[] | undefined;
+    molecularFormula?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.structure.molecularFormula
+     */
+    _molecularFormula?: fhir.IFhirElement | undefined;
+    /**
+     * Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.
+     */
+    molecularFormulaByMoiety?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.structure.molecularFormulaByMoiety
+     */
+    _molecularFormulaByMoiety?: fhir.IFhirElement | undefined;
+    /**
+     * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
+     */
+    isotope?: fhir.ISubstanceSpecificationStructureIsotope[] | undefined;
+    /**
+     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+     */
+    molecularWeight?: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight | undefined;
     /**
      * Supporting literature.
      */
     source?: fhir.IReference[] | undefined;
     /**
-     * Stereochemistry type.
+     * Molecular structural representation.
      */
-    stereochemistry?: fhir.ICodeableConcept | undefined;
+    representation?: fhir.ISubstanceSpecificationStructureRepresentation[] | undefined;
 };
 /**
  * Codes associated with the substance.
@@ -182,15 +206,6 @@ export declare type ISubstanceSpecificationCode = fhir.IBackboneElement & {
      */
     code?: fhir.ICodeableConcept | undefined;
     /**
-     * Any comment can be provided in this field, if necessary.
-     */
-    comment?: string | undefined;
-    _comment?: fhir.IFhirElement | undefined;
-    /**
-     * Supporting literature.
-     */
-    source?: fhir.IReference[] | undefined;
-    /**
      * Status of the code assignment.
      */
     status?: fhir.ICodeableConcept | undefined;
@@ -198,7 +213,22 @@ export declare type ISubstanceSpecificationCode = fhir.IBackboneElement & {
      * The date at which the code status is changed as part of the terminology maintenance.
      */
     statusDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.code.statusDate
+     */
     _statusDate?: fhir.IFhirElement | undefined;
+    /**
+     * Any comment can be provided in this field, if necessary.
+     */
+    comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.code.comment
+     */
+    _comment?: fhir.IFhirElement | undefined;
+    /**
+     * Supporting literature.
+     */
+    source?: fhir.IReference[] | undefined;
 };
 /**
  * Details of the official nature of this name.
@@ -209,19 +239,50 @@ export declare type ISubstanceSpecificationNameOfficial = fhir.IBackboneElement 
      */
     authority?: fhir.ICodeableConcept | undefined;
     /**
-     * Date of official name change.
-     */
-    date?: string | undefined;
-    _date?: fhir.IFhirElement | undefined;
-    /**
      * The status of the official name.
      */
     status?: fhir.ICodeableConcept | undefined;
+    /**
+     * Date of official name change.
+     */
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.name.official.date
+     */
+    _date?: fhir.IFhirElement | undefined;
 };
 /**
  * Names applicable to this substance.
  */
 export declare type ISubstanceSpecificationName = fhir.IBackboneElement & {
+    /**
+     * The actual name.
+     */
+    name: string | null;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.name.name
+     */
+    _name?: fhir.IFhirElement | undefined;
+    /**
+     * Name type.
+     */
+    type?: fhir.ICodeableConcept | undefined;
+    /**
+     * The status of the name.
+     */
+    status?: fhir.ICodeableConcept | undefined;
+    /**
+     * If this is the preferred name for this substance.
+     */
+    preferred?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.name.preferred
+     */
+    _preferred?: fhir.IFhirElement | undefined;
+    /**
+     * Language of the name.
+     */
+    language?: fhir.ICodeableConcept[] | undefined;
     /**
      * The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.
      */
@@ -231,32 +292,6 @@ export declare type ISubstanceSpecificationName = fhir.IBackboneElement & {
      */
     jurisdiction?: fhir.ICodeableConcept[] | undefined;
     /**
-     * Language of the name.
-     */
-    language?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * The actual name.
-     */
-    name: string | null;
-    _name?: fhir.IFhirElement | undefined;
-    /**
-     * Details of the official nature of this name.
-     */
-    official?: fhir.ISubstanceSpecificationNameOfficial[] | undefined;
-    /**
-     * If this is the preferred name for this substance.
-     */
-    preferred?: boolean | undefined;
-    _preferred?: fhir.IFhirElement | undefined;
-    /**
-     * Supporting literature.
-     */
-    source?: fhir.IReference[] | undefined;
-    /**
-     * The status of the name.
-     */
-    status?: fhir.ICodeableConcept | undefined;
-    /**
      * A synonym of this name.
      */
     synonym?: fhir.ISubstanceSpecificationName[] | undefined;
@@ -265,14 +300,38 @@ export declare type ISubstanceSpecificationName = fhir.IBackboneElement & {
      */
     translation?: fhir.ISubstanceSpecificationName[] | undefined;
     /**
-     * Name type.
+     * Details of the official nature of this name.
      */
-    type?: fhir.ICodeableConcept | undefined;
+    official?: fhir.ISubstanceSpecificationNameOfficial[] | undefined;
+    /**
+     * Supporting literature.
+     */
+    source?: fhir.IReference[] | undefined;
 };
 /**
  * A link between this substance and another, with details of the relationship.
  */
 export declare type ISubstanceSpecificationRelationship = fhir.IBackboneElement & {
+    /**
+     * A pointer to another substance, as a resource or just a representational code.
+     */
+    substanceReference?: fhir.IReference | undefined;
+    /**
+     * A pointer to another substance, as a resource or just a representational code.
+     */
+    substanceCodeableConcept?: fhir.ICodeableConcept | undefined;
+    /**
+     * For example "salt to parent", "active moiety", "starting material".
+     */
+    relationship?: fhir.ICodeableConcept | undefined;
+    /**
+     * For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.
+     */
+    isDefining?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.relationship.isDefining
+     */
+    _isDefining?: fhir.IFhirElement | undefined;
     /**
      * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
      */
@@ -289,6 +348,9 @@ export declare type ISubstanceSpecificationRelationship = fhir.IBackboneElement 
      * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
      */
     amountString?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.relationship.amount[x]
+     */
     _amountString?: fhir.IFhirElement | undefined;
     /**
      * For use when the numeric.
@@ -299,26 +361,9 @@ export declare type ISubstanceSpecificationRelationship = fhir.IBackboneElement 
      */
     amountType?: fhir.ICodeableConcept | undefined;
     /**
-     * For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.
-     */
-    isDefining?: boolean | undefined;
-    _isDefining?: fhir.IFhirElement | undefined;
-    /**
-     * For example "salt to parent", "active moiety", "starting material".
-     */
-    relationship?: fhir.ICodeableConcept | undefined;
-    /**
      * Supporting literature.
      */
     source?: fhir.IReference[] | undefined;
-    /**
-     * A pointer to another substance, as a resource or just a representational code.
-     */
-    substanceReference?: fhir.IReference | undefined;
-    /**
-     * A pointer to another substance, as a resource or just a representational code.
-     */
-    substanceCodeableConcept?: fhir.ICodeableConcept | undefined;
 };
 /**
  * The detailed description of a substance, typically at a level beyond what is used for prescribing.
@@ -329,39 +374,73 @@ export declare type ISubstanceSpecification = fhir.IDomainResource & {
      */
     resourceType: "SubstanceSpecification";
     /**
-     * Codes associated with the substance.
+     * Identifier by which this substance is known.
      */
-    code?: fhir.ISubstanceSpecificationCode[] | undefined;
+    identifier?: fhir.IIdentifier | undefined;
     /**
-     * Textual comment about this record of a substance.
+     * High level categorization, e.g. polymer or nucleic acid.
      */
-    comment?: string | undefined;
-    _comment?: fhir.IFhirElement | undefined;
+    type?: fhir.ICodeableConcept | undefined;
     /**
-     * Textual description of the substance.
+     * Status of substance within the catalogue e.g. approved.
      */
-    description?: string | undefined;
-    _description?: fhir.IFhirElement | undefined;
+    status?: fhir.ICodeableConcept | undefined;
     /**
      * If the substance applies to only human or veterinary use.
      */
     domain?: fhir.ICodeableConcept | undefined;
     /**
-     * Identifier by which this substance is known.
+     * Textual description of the substance.
      */
-    identifier?: fhir.IIdentifier | undefined;
+    description?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.description
+     */
+    _description?: fhir.IFhirElement | undefined;
+    /**
+     * Supporting literature.
+     */
+    source?: fhir.IReference[] | undefined;
+    /**
+     * Textual comment about this record of a substance.
+     */
+    comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.comment
+     */
+    _comment?: fhir.IFhirElement | undefined;
     /**
      * Moiety, for structural modifications.
      */
     moiety?: fhir.ISubstanceSpecificationMoiety[] | undefined;
     /**
-     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+     * General specifications for this substance, including how it is related to other substances.
      */
-    molecularWeight?: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight[] | undefined;
+    property?: fhir.ISubstanceSpecificationProperty[] | undefined;
+    /**
+     * General information detailing this substance.
+     */
+    referenceInformation?: fhir.IReference | undefined;
+    /**
+     * Structural information.
+     */
+    structure?: fhir.ISubstanceSpecificationStructure | undefined;
+    /**
+     * Codes associated with the substance.
+     */
+    code?: fhir.ISubstanceSpecificationCode[] | undefined;
     /**
      * Names applicable to this substance.
      */
     name?: fhir.ISubstanceSpecificationName[] | undefined;
+    /**
+     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+     */
+    molecularWeight?: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight[] | undefined;
+    /**
+     * A link between this substance and another, with details of the relationship.
+     */
+    relationship?: fhir.ISubstanceSpecificationRelationship[] | undefined;
     /**
      * Data items specific to nucleic acids.
      */
@@ -371,107 +450,75 @@ export declare type ISubstanceSpecification = fhir.IDomainResource & {
      */
     polymer?: fhir.IReference | undefined;
     /**
-     * General specifications for this substance, including how it is related to other substances.
-     */
-    property?: fhir.ISubstanceSpecificationProperty[] | undefined;
-    /**
      * Data items specific to proteins.
      */
     protein?: fhir.IReference | undefined;
     /**
-     * General information detailing this substance.
-     */
-    referenceInformation?: fhir.IReference | undefined;
-    /**
-     * A link between this substance and another, with details of the relationship.
-     */
-    relationship?: fhir.ISubstanceSpecificationRelationship[] | undefined;
-    /**
-     * Supporting literature.
-     */
-    source?: fhir.IReference[] | undefined;
-    /**
      * Material or taxonomic/anatomical source for the substance.
      */
     sourceMaterial?: fhir.IReference | undefined;
-    /**
-     * Status of substance within the catalogue e.g. approved.
-     */
-    status?: fhir.ICodeableConcept | undefined;
-    /**
-     * Structural information.
-     */
-    structure?: fhir.ISubstanceSpecificationStructure | undefined;
-    /**
-     * High level categorization, e.g. polymer or nucleic acid.
-     */
-    type?: fhir.ICodeableConcept | undefined;
 };
 /**
  * Moiety, for structural modifications.
  */
-export declare class SubstanceSpecificationMoiety extends fhir.BackboneElement implements fhir.ISubstanceSpecificationMoiety {
-    /**
-     * Quantitative value for this moiety.
-     */
-    amountQuantity?: fhir.Quantity | undefined;
-    /**
-     * Quantitative value for this moiety.
-     */
-    amountString?: string | undefined;
-    _amountString?: fhir.FhirElement | undefined;
-    /**
-     * Identifier by which this moiety substance is known.
-     */
-    identifier?: fhir.Identifier | undefined;
-    /**
-     * Molecular formula.
-     */
-    molecularFormula?: string | undefined;
-    _molecularFormula?: fhir.FhirElement | undefined;
-    /**
-     * Textual name for this moiety substance.
-     */
-    name?: string | undefined;
-    _name?: fhir.FhirElement | undefined;
-    /**
-     * Optical activity type.
-     */
-    opticalActivity?: fhir.CodeableConcept | undefined;
+export declare class SubstanceSpecificationMoiety extends fhir.BackboneElement implements ISubstanceSpecificationMoiety {
     /**
      * Role that the moiety is playing.
      */
     role?: fhir.CodeableConcept | undefined;
     /**
+     * Identifier by which this moiety substance is known.
+     */
+    identifier?: fhir.Identifier | undefined;
+    /**
+     * Textual name for this moiety substance.
+     */
+    name?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.moiety.name
+     */
+    _name?: fhir.FhirElement | undefined;
+    /**
      * Stereochemistry type.
      */
     stereochemistry?: fhir.CodeableConcept | undefined;
     /**
+     * Optical activity type.
+     */
+    opticalActivity?: fhir.CodeableConcept | undefined;
+    /**
+     * Molecular formula.
+     */
+    molecularFormula?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.moiety.molecularFormula
+     */
+    _molecularFormula?: fhir.FhirElement | undefined;
+    /**
+     * Quantitative value for this moiety.
+     */
+    amountQuantity?: fhir.Quantity | undefined;
+    /**
+     * Quantitative value for this moiety.
+     */
+    amountString?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.moiety.amount[x]
+     */
+    _amountString?: fhir.FhirElement | undefined;
+    /**
      * Default constructor for SubstanceSpecificationMoiety - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationMoiety>);
+    constructor(source?: Partial<ISubstanceSpecificationMoiety>);
     /**
-     * Check if the current SubstanceSpecificationMoiety contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecificationMoiety from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecificationMoiety): SubstanceSpecificationMoiety;
+    doModelValidation(): [string, string][];
 }
 /**
  * General specifications for this substance, including how it is related to other substances.
  */
-export declare class SubstanceSpecificationProperty extends fhir.BackboneElement implements fhir.ISubstanceSpecificationProperty {
-    /**
-     * Quantitative value for this property.
-     */
-    amountQuantity?: fhir.Quantity | undefined;
-    /**
-     * Quantitative value for this property.
-     */
-    amountString?: string | undefined;
-    _amountString?: fhir.FhirElement | undefined;
+export declare class SubstanceSpecificationProperty extends fhir.BackboneElement implements ISubstanceSpecificationProperty {
     /**
      * A category for this property, e.g. Physical, Chemical, Enzymatic.
      */
@@ -481,6 +528,14 @@ export declare class SubstanceSpecificationProperty extends fhir.BackboneElement
      */
     code?: fhir.CodeableConcept | undefined;
     /**
+     * Parameters that were used in the measurement of a property (e.g. for viscosity: measured at 20C with a pH of 7.1).
+     */
+    parameters?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.property.parameters
+     */
+    _parameters?: fhir.FhirElement | undefined;
+    /**
      * A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).
      */
     definingSubstanceReference?: fhir.Reference | undefined;
@@ -489,31 +544,30 @@ export declare class SubstanceSpecificationProperty extends fhir.BackboneElement
      */
     definingSubstanceCodeableConcept?: fhir.CodeableConcept | undefined;
     /**
-     * Parameters that were used in the measurement of a property (e.g. for viscosity: measured at 20C with a pH of 7.1).
+     * Quantitative value for this property.
      */
-    parameters?: string | undefined;
-    _parameters?: fhir.FhirElement | undefined;
+    amountQuantity?: fhir.Quantity | undefined;
+    /**
+     * Quantitative value for this property.
+     */
+    amountString?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.property.amount[x]
+     */
+    _amountString?: fhir.FhirElement | undefined;
     /**
      * Default constructor for SubstanceSpecificationProperty - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationProperty>);
+    constructor(source?: Partial<ISubstanceSpecificationProperty>);
     /**
-     * Check if the current SubstanceSpecificationProperty contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecificationProperty from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecificationProperty): SubstanceSpecificationProperty;
+    doModelValidation(): [string, string][];
 }
 /**
  * The molecular weight or weight range (for proteins, polymers or nucleic acids).
  */
-export declare class SubstanceSpecificationStructureIsotopeMolecularWeight extends fhir.BackboneElement implements fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight {
-    /**
-     * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
-     */
-    amount?: fhir.Quantity | undefined;
+export declare class SubstanceSpecificationStructureIsotopeMolecularWeight extends fhir.BackboneElement implements ISubstanceSpecificationStructureIsotopeMolecularWeight {
     /**
      * The method by which the molecular weight was determined.
      */
@@ -523,34 +577,26 @@ export declare class SubstanceSpecificationStructureIsotopeMolecularWeight exten
      */
     type?: fhir.CodeableConcept | undefined;
     /**
+     * Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.
+     */
+    amount?: fhir.Quantity | undefined;
+    /**
      * Default constructor for SubstanceSpecificationStructureIsotopeMolecularWeight - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight>);
+    constructor(source?: Partial<ISubstanceSpecificationStructureIsotopeMolecularWeight>);
     /**
-     * Check if the current SubstanceSpecificationStructureIsotopeMolecularWeight contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecificationStructureIsotopeMolecularWeight from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight): SubstanceSpecificationStructureIsotopeMolecularWeight;
+    doModelValidation(): [string, string][];
 }
 /**
  * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
  */
-export declare class SubstanceSpecificationStructureIsotope extends fhir.BackboneElement implements fhir.ISubstanceSpecificationStructureIsotope {
-    /**
-     * Half life - for a non-natural nuclide.
-     */
-    halfLife?: fhir.Quantity | undefined;
+export declare class SubstanceSpecificationStructureIsotope extends fhir.BackboneElement implements ISubstanceSpecificationStructureIsotope {
     /**
      * Substance identifier for each non-natural or radioisotope.
      */
     identifier?: fhir.Identifier | undefined;
-    /**
-     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
-     */
-    molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeight | undefined;
     /**
      * Substance name for each non-natural or radioisotope.
      */
@@ -560,116 +606,112 @@ export declare class SubstanceSpecificationStructureIsotope extends fhir.Backbon
      */
     substitution?: fhir.CodeableConcept | undefined;
     /**
-     * Default constructor for SubstanceSpecificationStructureIsotope - initializes any required elements to null if a value is not provided.
+     * Half life - for a non-natural nuclide.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationStructureIsotope>);
-    /**
-     * Check if the current SubstanceSpecificationStructureIsotope contains all required elements.
-     */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecificationStructureIsotope from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecificationStructureIsotope): SubstanceSpecificationStructureIsotope;
-}
-/**
- * Molecular structural representation.
- */
-export declare class SubstanceSpecificationStructureRepresentation extends fhir.BackboneElement implements fhir.ISubstanceSpecificationStructureRepresentation {
-    /**
-     * An attached file with the structural representation.
-     */
-    attachment?: fhir.Attachment | undefined;
-    /**
-     * The structural representation as text string in a format e.g. InChI, SMILES, MOLFILE, CDX.
-     */
-    representation?: string | undefined;
-    _representation?: fhir.FhirElement | undefined;
-    /**
-     * The type of structure (e.g. Full, Partial, Representative).
-     */
-    type?: fhir.CodeableConcept | undefined;
-    /**
-     * Default constructor for SubstanceSpecificationStructureRepresentation - initializes any required elements to null if a value is not provided.
-     */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationStructureRepresentation>);
-    /**
-     * Check if the current SubstanceSpecificationStructureRepresentation contains all required elements.
-     */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecificationStructureRepresentation from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecificationStructureRepresentation): SubstanceSpecificationStructureRepresentation;
-}
-/**
- * Structural information.
- */
-export declare class SubstanceSpecificationStructure extends fhir.BackboneElement implements fhir.ISubstanceSpecificationStructure {
-    /**
-     * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
-     */
-    isotope?: fhir.SubstanceSpecificationStructureIsotope[] | undefined;
-    /**
-     * Molecular formula.
-     */
-    molecularFormula?: string | undefined;
-    _molecularFormula?: fhir.FhirElement | undefined;
-    /**
-     * Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.
-     */
-    molecularFormulaByMoiety?: string | undefined;
-    _molecularFormulaByMoiety?: fhir.FhirElement | undefined;
+    halfLife?: fhir.Quantity | undefined;
     /**
      * The molecular weight or weight range (for proteins, polymers or nucleic acids).
      */
     molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeight | undefined;
     /**
-     * Optical activity type.
+     * Default constructor for SubstanceSpecificationStructureIsotope - initializes any required elements to null if a value is not provided.
      */
-    opticalActivity?: fhir.CodeableConcept | undefined;
+    constructor(source?: Partial<ISubstanceSpecificationStructureIsotope>);
     /**
-     * Molecular structural representation.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    representation?: fhir.SubstanceSpecificationStructureRepresentation[] | undefined;
+    doModelValidation(): [string, string][];
+}
+/**
+ * Molecular structural representation.
+ */
+export declare class SubstanceSpecificationStructureRepresentation extends fhir.BackboneElement implements ISubstanceSpecificationStructureRepresentation {
     /**
-     * Supporting literature.
+     * The type of structure (e.g. Full, Partial, Representative).
      */
-    source?: fhir.Reference[] | undefined;
+    type?: fhir.CodeableConcept | undefined;
+    /**
+     * The structural representation as text string in a format e.g. InChI, SMILES, MOLFILE, CDX.
+     */
+    representation?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.structure.representation.representation
+     */
+    _representation?: fhir.FhirElement | undefined;
+    /**
+     * An attached file with the structural representation.
+     */
+    attachment?: fhir.Attachment | undefined;
+    /**
+     * Default constructor for SubstanceSpecificationStructureRepresentation - initializes any required elements to null if a value is not provided.
+     */
+    constructor(source?: Partial<ISubstanceSpecificationStructureRepresentation>);
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
+}
+/**
+ * Structural information.
+ */
+export declare class SubstanceSpecificationStructure extends fhir.BackboneElement implements ISubstanceSpecificationStructure {
     /**
      * Stereochemistry type.
      */
     stereochemistry?: fhir.CodeableConcept | undefined;
     /**
-     * Default constructor for SubstanceSpecificationStructure - initializes any required elements to null if a value is not provided.
+     * Optical activity type.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationStructure>);
+    opticalActivity?: fhir.CodeableConcept | undefined;
     /**
-     * Check if the current SubstanceSpecificationStructure contains all required elements.
+     * Molecular formula.
      */
-    checkRequiredElements(): string[];
+    molecularFormula?: string | undefined;
     /**
-     * Factory function to create a SubstanceSpecificationStructure from an object that MUST contain all required elements.
+     * Extended properties for primitive element: SubstanceSpecification.structure.molecularFormula
      */
-    static fromStrict(source: fhir.ISubstanceSpecificationStructure): SubstanceSpecificationStructure;
-}
-/**
- * Codes associated with the substance.
- */
-export declare class SubstanceSpecificationCode extends fhir.BackboneElement implements fhir.ISubstanceSpecificationCode {
+    _molecularFormula?: fhir.FhirElement | undefined;
     /**
-     * The specific code.
+     * Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.
      */
-    code?: fhir.CodeableConcept | undefined;
+    molecularFormulaByMoiety?: string | undefined;
     /**
-     * Any comment can be provided in this field, if necessary.
+     * Extended properties for primitive element: SubstanceSpecification.structure.molecularFormulaByMoiety
      */
-    comment?: string | undefined;
-    _comment?: fhir.FhirElement | undefined;
+    _molecularFormulaByMoiety?: fhir.FhirElement | undefined;
+    /**
+     * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
+     */
+    isotope?: fhir.SubstanceSpecificationStructureIsotope[] | undefined;
+    /**
+     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+     */
+    molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeight | undefined;
     /**
      * Supporting literature.
      */
     source?: fhir.Reference[] | undefined;
+    /**
+     * Molecular structural representation.
+     */
+    representation?: fhir.SubstanceSpecificationStructureRepresentation[] | undefined;
+    /**
+     * Default constructor for SubstanceSpecificationStructure - initializes any required elements to null if a value is not provided.
+     */
+    constructor(source?: Partial<ISubstanceSpecificationStructure>);
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
+}
+/**
+ * Codes associated with the substance.
+ */
+export declare class SubstanceSpecificationCode extends fhir.BackboneElement implements ISubstanceSpecificationCode {
+    /**
+     * The specific code.
+     */
+    code?: fhir.CodeableConcept | undefined;
     /**
      * Status of the code assignment.
      */
@@ -678,54 +720,92 @@ export declare class SubstanceSpecificationCode extends fhir.BackboneElement imp
      * The date at which the code status is changed as part of the terminology maintenance.
      */
     statusDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.code.statusDate
+     */
     _statusDate?: fhir.FhirElement | undefined;
+    /**
+     * Any comment can be provided in this field, if necessary.
+     */
+    comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.code.comment
+     */
+    _comment?: fhir.FhirElement | undefined;
+    /**
+     * Supporting literature.
+     */
+    source?: fhir.Reference[] | undefined;
     /**
      * Default constructor for SubstanceSpecificationCode - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationCode>);
+    constructor(source?: Partial<ISubstanceSpecificationCode>);
     /**
-     * Check if the current SubstanceSpecificationCode contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecificationCode from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecificationCode): SubstanceSpecificationCode;
+    doModelValidation(): [string, string][];
 }
 /**
  * Details of the official nature of this name.
  */
-export declare class SubstanceSpecificationNameOfficial extends fhir.BackboneElement implements fhir.ISubstanceSpecificationNameOfficial {
+export declare class SubstanceSpecificationNameOfficial extends fhir.BackboneElement implements ISubstanceSpecificationNameOfficial {
     /**
      * Which authority uses this official name.
      */
     authority?: fhir.CodeableConcept | undefined;
     /**
-     * Date of official name change.
-     */
-    date?: string | undefined;
-    _date?: fhir.FhirElement | undefined;
-    /**
      * The status of the official name.
      */
     status?: fhir.CodeableConcept | undefined;
     /**
+     * Date of official name change.
+     */
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.name.official.date
+     */
+    _date?: fhir.FhirElement | undefined;
+    /**
      * Default constructor for SubstanceSpecificationNameOfficial - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationNameOfficial>);
+    constructor(source?: Partial<ISubstanceSpecificationNameOfficial>);
     /**
-     * Check if the current SubstanceSpecificationNameOfficial contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecificationNameOfficial from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecificationNameOfficial): SubstanceSpecificationNameOfficial;
+    doModelValidation(): [string, string][];
 }
 /**
  * Names applicable to this substance.
  */
-export declare class SubstanceSpecificationName extends fhir.BackboneElement implements fhir.ISubstanceSpecificationName {
+export declare class SubstanceSpecificationName extends fhir.BackboneElement implements ISubstanceSpecificationName {
+    /**
+     * The actual name.
+     */
+    name: string | null;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.name.name
+     */
+    _name?: fhir.FhirElement | undefined;
+    /**
+     * Name type.
+     */
+    type?: fhir.CodeableConcept | undefined;
+    /**
+     * The status of the name.
+     */
+    status?: fhir.CodeableConcept | undefined;
+    /**
+     * If this is the preferred name for this substance.
+     */
+    preferred?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.name.preferred
+     */
+    _preferred?: fhir.FhirElement | undefined;
+    /**
+     * Language of the name.
+     */
+    language?: fhir.CodeableConcept[] | undefined;
     /**
      * The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.
      */
@@ -735,32 +815,6 @@ export declare class SubstanceSpecificationName extends fhir.BackboneElement imp
      */
     jurisdiction?: fhir.CodeableConcept[] | undefined;
     /**
-     * Language of the name.
-     */
-    language?: fhir.CodeableConcept[] | undefined;
-    /**
-     * The actual name.
-     */
-    name: string | null;
-    _name?: fhir.FhirElement | undefined;
-    /**
-     * Details of the official nature of this name.
-     */
-    official?: fhir.SubstanceSpecificationNameOfficial[] | undefined;
-    /**
-     * If this is the preferred name for this substance.
-     */
-    preferred?: boolean | undefined;
-    _preferred?: fhir.FhirElement | undefined;
-    /**
-     * Supporting literature.
-     */
-    source?: fhir.Reference[] | undefined;
-    /**
-     * The status of the name.
-     */
-    status?: fhir.CodeableConcept | undefined;
-    /**
      * A synonym of this name.
      */
     synonym?: fhir.SubstanceSpecificationName[] | undefined;
@@ -769,26 +823,46 @@ export declare class SubstanceSpecificationName extends fhir.BackboneElement imp
      */
     translation?: fhir.SubstanceSpecificationName[] | undefined;
     /**
-     * Name type.
+     * Details of the official nature of this name.
      */
-    type?: fhir.CodeableConcept | undefined;
+    official?: fhir.SubstanceSpecificationNameOfficial[] | undefined;
+    /**
+     * Supporting literature.
+     */
+    source?: fhir.Reference[] | undefined;
     /**
      * Default constructor for SubstanceSpecificationName - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationName>);
+    constructor(source?: Partial<ISubstanceSpecificationName>);
     /**
-     * Check if the current SubstanceSpecificationName contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecificationName from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecificationName): SubstanceSpecificationName;
+    doModelValidation(): [string, string][];
 }
 /**
  * A link between this substance and another, with details of the relationship.
  */
-export declare class SubstanceSpecificationRelationship extends fhir.BackboneElement implements fhir.ISubstanceSpecificationRelationship {
+export declare class SubstanceSpecificationRelationship extends fhir.BackboneElement implements ISubstanceSpecificationRelationship {
+    /**
+     * A pointer to another substance, as a resource or just a representational code.
+     */
+    substanceReference?: fhir.Reference | undefined;
+    /**
+     * A pointer to another substance, as a resource or just a representational code.
+     */
+    substanceCodeableConcept?: fhir.CodeableConcept | undefined;
+    /**
+     * For example "salt to parent", "active moiety", "starting material".
+     */
+    relationship?: fhir.CodeableConcept | undefined;
+    /**
+     * For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.
+     */
+    isDefining?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.relationship.isDefining
+     */
+    _isDefining?: fhir.FhirElement | undefined;
     /**
      * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
      */
@@ -805,6 +879,9 @@ export declare class SubstanceSpecificationRelationship extends fhir.BackboneEle
      * A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.
      */
     amountString?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.relationship.amount[x]
+     */
     _amountString?: fhir.FhirElement | undefined;
     /**
      * For use when the numeric.
@@ -815,81 +892,94 @@ export declare class SubstanceSpecificationRelationship extends fhir.BackboneEle
      */
     amountType?: fhir.CodeableConcept | undefined;
     /**
-     * For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.
-     */
-    isDefining?: boolean | undefined;
-    _isDefining?: fhir.FhirElement | undefined;
-    /**
-     * For example "salt to parent", "active moiety", "starting material".
-     */
-    relationship?: fhir.CodeableConcept | undefined;
-    /**
      * Supporting literature.
      */
     source?: fhir.Reference[] | undefined;
     /**
-     * A pointer to another substance, as a resource or just a representational code.
-     */
-    substanceReference?: fhir.Reference | undefined;
-    /**
-     * A pointer to another substance, as a resource or just a representational code.
-     */
-    substanceCodeableConcept?: fhir.CodeableConcept | undefined;
-    /**
      * Default constructor for SubstanceSpecificationRelationship - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecificationRelationship>);
+    constructor(source?: Partial<ISubstanceSpecificationRelationship>);
     /**
-     * Check if the current SubstanceSpecificationRelationship contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecificationRelationship from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecificationRelationship): SubstanceSpecificationRelationship;
+    doModelValidation(): [string, string][];
 }
 /**
  * The detailed description of a substance, typically at a level beyond what is used for prescribing.
  */
-export declare class SubstanceSpecification extends fhir.DomainResource implements fhir.ISubstanceSpecification {
+export declare class SubstanceSpecification extends fhir.DomainResource implements ISubstanceSpecification {
     /**
      * Resource Type Name
      */
     resourceType: "SubstanceSpecification";
     /**
-     * Codes associated with the substance.
+     * Identifier by which this substance is known.
      */
-    code?: fhir.SubstanceSpecificationCode[] | undefined;
+    identifier?: fhir.Identifier | undefined;
     /**
-     * Textual comment about this record of a substance.
+     * High level categorization, e.g. polymer or nucleic acid.
      */
-    comment?: string | undefined;
-    _comment?: fhir.FhirElement | undefined;
+    type?: fhir.CodeableConcept | undefined;
     /**
-     * Textual description of the substance.
+     * Status of substance within the catalogue e.g. approved.
      */
-    description?: string | undefined;
-    _description?: fhir.FhirElement | undefined;
+    status?: fhir.CodeableConcept | undefined;
     /**
      * If the substance applies to only human or veterinary use.
      */
     domain?: fhir.CodeableConcept | undefined;
     /**
-     * Identifier by which this substance is known.
+     * Textual description of the substance.
      */
-    identifier?: fhir.Identifier | undefined;
+    description?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.description
+     */
+    _description?: fhir.FhirElement | undefined;
+    /**
+     * Supporting literature.
+     */
+    source?: fhir.Reference[] | undefined;
+    /**
+     * Textual comment about this record of a substance.
+     */
+    comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: SubstanceSpecification.comment
+     */
+    _comment?: fhir.FhirElement | undefined;
     /**
      * Moiety, for structural modifications.
      */
     moiety?: fhir.SubstanceSpecificationMoiety[] | undefined;
     /**
-     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+     * General specifications for this substance, including how it is related to other substances.
      */
-    molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeight[] | undefined;
+    property?: fhir.SubstanceSpecificationProperty[] | undefined;
+    /**
+     * General information detailing this substance.
+     */
+    referenceInformation?: fhir.Reference | undefined;
+    /**
+     * Structural information.
+     */
+    structure?: fhir.SubstanceSpecificationStructure | undefined;
+    /**
+     * Codes associated with the substance.
+     */
+    code?: fhir.SubstanceSpecificationCode[] | undefined;
     /**
      * Names applicable to this substance.
      */
     name?: fhir.SubstanceSpecificationName[] | undefined;
+    /**
+     * The molecular weight or weight range (for proteins, polymers or nucleic acids).
+     */
+    molecularWeight?: fhir.SubstanceSpecificationStructureIsotopeMolecularWeight[] | undefined;
+    /**
+     * A link between this substance and another, with details of the relationship.
+     */
+    relationship?: fhir.SubstanceSpecificationRelationship[] | undefined;
     /**
      * Data items specific to nucleic acids.
      */
@@ -899,52 +989,20 @@ export declare class SubstanceSpecification extends fhir.DomainResource implemen
      */
     polymer?: fhir.Reference | undefined;
     /**
-     * General specifications for this substance, including how it is related to other substances.
-     */
-    property?: fhir.SubstanceSpecificationProperty[] | undefined;
-    /**
      * Data items specific to proteins.
      */
     protein?: fhir.Reference | undefined;
-    /**
-     * General information detailing this substance.
-     */
-    referenceInformation?: fhir.Reference | undefined;
-    /**
-     * A link between this substance and another, with details of the relationship.
-     */
-    relationship?: fhir.SubstanceSpecificationRelationship[] | undefined;
-    /**
-     * Supporting literature.
-     */
-    source?: fhir.Reference[] | undefined;
     /**
      * Material or taxonomic/anatomical source for the substance.
      */
     sourceMaterial?: fhir.Reference | undefined;
     /**
-     * Status of substance within the catalogue e.g. approved.
-     */
-    status?: fhir.CodeableConcept | undefined;
-    /**
-     * Structural information.
-     */
-    structure?: fhir.SubstanceSpecificationStructure | undefined;
-    /**
-     * High level categorization, e.g. polymer or nucleic acid.
-     */
-    type?: fhir.CodeableConcept | undefined;
-    /**
      * Default constructor for SubstanceSpecification - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceSpecification>);
+    constructor(source?: Partial<ISubstanceSpecification>);
     /**
-     * Check if the current SubstanceSpecification contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceSpecification from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceSpecification): SubstanceSpecification;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=SubstanceSpecification.d.ts.map

@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The kind of response to a message.
  */
 export declare const ResponseCodeValueSet: {
     /**
-     * The message was rejected because of a problem with the content. There is no point in re-sending without change. The response narrative SHALL describe the issue.
+     * fatal-error: The message was rejected because of a problem with the content. There is no point in re-sending without change. The response narrative SHALL describe the issue.
      */
-    response_code_FatalError: Coding;
+    readonly FatalError: Coding;
     /**
-     * The message was accepted and processed without error.
+     * ok: The message was accepted and processed without error.
      */
-    response_code_OK: Coding;
+    readonly OK: Coding;
     /**
-     * Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required.
+     * transient-error: Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required.
      */
-    response_code_TransientError: Coding;
+    readonly TransientError: Coding;
 };
+/**
+ * The kind of response to a message.
+ */
+export declare type ResponseCodeValueSetType = typeof ResponseCodeValueSet;
+/**
+ * The kind of response to a message.
+ */
+export declare enum ResponseCodeValueSetEnum {
+    /**
+     * fatal-error: The message was rejected because of a problem with the content. There is no point in re-sending without change. The response narrative SHALL describe the issue.
+     */
+    FatalError = "fatal-error",
+    /**
+     * ok: The message was accepted and processed without error.
+     */
+    OK = "ok",
+    /**
+     * transient-error: Some internal unexpected error occurred - wait and try again. Note - this is usually used for things like database unavailable, which may be expected to resolve, though human intervention may be required.
+     */
+    TransientError = "transient-error"
+}
 //# sourceMappingURL=ResponseCodeValueSet.d.ts.map

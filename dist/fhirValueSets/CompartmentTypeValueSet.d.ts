@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Which type a compartment definition describes.
  */
 export declare const CompartmentTypeValueSet: {
     /**
-     * The compartment definition is for the device compartment.
+     * Device: The compartment definition is for the device compartment.
      */
-    compartment_type_Device: Coding;
+    readonly Device: Coding;
     /**
-     * The compartment definition is for the encounter compartment.
+     * Encounter: The compartment definition is for the encounter compartment.
      */
-    compartment_type_Encounter: Coding;
+    readonly Encounter: Coding;
     /**
-     * The compartment definition is for the patient compartment.
+     * Patient: The compartment definition is for the patient compartment.
      */
-    compartment_type_Patient: Coding;
+    readonly Patient: Coding;
     /**
-     * The compartment definition is for the practitioner compartment.
+     * Practitioner: The compartment definition is for the practitioner compartment.
      */
-    compartment_type_Practitioner: Coding;
+    readonly Practitioner: Coding;
     /**
-     * The compartment definition is for the related-person compartment.
+     * RelatedPerson: The compartment definition is for the related-person compartment.
      */
-    compartment_type_RelatedPerson: Coding;
+    readonly RelatedPerson: Coding;
 };
+/**
+ * Which type a compartment definition describes.
+ */
+export declare type CompartmentTypeValueSetType = typeof CompartmentTypeValueSet;
+/**
+ * Which type a compartment definition describes.
+ */
+export declare enum CompartmentTypeValueSetEnum {
+    /**
+     * Device: The compartment definition is for the device compartment.
+     */
+    Device = "Device",
+    /**
+     * Encounter: The compartment definition is for the encounter compartment.
+     */
+    Encounter = "Encounter",
+    /**
+     * Patient: The compartment definition is for the patient compartment.
+     */
+    Patient = "Patient",
+    /**
+     * Practitioner: The compartment definition is for the practitioner compartment.
+     */
+    Practitioner = "Practitioner",
+    /**
+     * RelatedPerson: The compartment definition is for the related-person compartment.
+     */
+    RelatedPerson = "RelatedPerson"
+}
 //# sourceMappingURL=CompartmentTypeValueSet.d.ts.map

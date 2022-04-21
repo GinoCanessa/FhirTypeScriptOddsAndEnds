@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Type for quality report.
  */
 export declare const QualityTypeValueSet: {
     /**
-     * INDEL Comparison.
+     * indel: INDEL Comparison.
      */
-    quality_type_INDELComparison: Coding;
+    readonly INDELComparison: Coding;
     /**
-     * SNP Comparison.
+     * snp: SNP Comparison.
      */
-    quality_type_SNPComparison: Coding;
+    readonly SNPComparison: Coding;
     /**
-     * UNKNOWN Comparison.
+     * unknown: UNKNOWN Comparison.
      */
-    quality_type_UNKNOWNComparison: Coding;
+    readonly UNKNOWNComparison: Coding;
 };
+/**
+ * Type for quality report.
+ */
+export declare type QualityTypeValueSetType = typeof QualityTypeValueSet;
+/**
+ * Type for quality report.
+ */
+export declare enum QualityTypeValueSetEnum {
+    /**
+     * indel: INDEL Comparison.
+     */
+    INDELComparison = "indel",
+    /**
+     * snp: SNP Comparison.
+     */
+    SNPComparison = "snp",
+    /**
+     * unknown: UNKNOWN Comparison.
+     */
+    UNKNOWNComparison = "unknown"
+}
 //# sourceMappingURL=QualityTypeValueSet.d.ts.map

@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * BiologicallyDerived Product Storage Scale.
  */
 export declare const ProductStorageScaleValueSet: {
     /**
-     * Celsius or centigrade temperature scale.
+     * celsius: Celsius or centigrade temperature scale.
      */
-    product_storage_scale_Celsius: Coding;
+    readonly Celsius: Coding;
     /**
-     * Fahrenheit temperature scale.
+     * farenheit: Fahrenheit temperature scale.
      */
-    product_storage_scale_Fahrenheit: Coding;
+    readonly Fahrenheit: Coding;
     /**
-     * Kelvin absolute thermodynamic temperature scale.
+     * kelvin: Kelvin absolute thermodynamic temperature scale.
      */
-    product_storage_scale_Kelvin: Coding;
+    readonly Kelvin: Coding;
 };
+/**
+ * BiologicallyDerived Product Storage Scale.
+ */
+export declare type ProductStorageScaleValueSetType = typeof ProductStorageScaleValueSet;
+/**
+ * BiologicallyDerived Product Storage Scale.
+ */
+export declare enum ProductStorageScaleValueSetEnum {
+    /**
+     * celsius: Celsius or centigrade temperature scale.
+     */
+    Celsius = "celsius",
+    /**
+     * farenheit: Fahrenheit temperature scale.
+     */
+    Fahrenheit = "farenheit",
+    /**
+     * kelvin: Kelvin absolute thermodynamic temperature scale.
+     */
+    Kelvin = "kelvin"
+}
 //# sourceMappingURL=ProductStorageScaleValueSet.d.ts.map

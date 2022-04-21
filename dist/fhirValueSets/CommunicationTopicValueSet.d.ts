@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes describing the purpose or content of the communication.
  */
 export declare const CommunicationTopicValueSet: {
     /**
-     * The purpose or content of the communication is an appointment reminder.
+     * appointment-reminder: The purpose or content of the communication is an appointment reminder.
      */
-    communication_topic_AppointmentReminder: Coding;
+    readonly AppointmentReminder: Coding;
     /**
-     * The purpose or content of the communication is a phone consult.
+     * phone-consult: The purpose or content of the communication is a phone consult.
      */
-    communication_topic_PhoneConsult: Coding;
+    readonly PhoneConsult: Coding;
     /**
-     * The purpose or content of the communication is a prescription refill request.
+     * prescription-refill-request: The purpose or content of the communication is a prescription refill request.
      */
-    communication_topic_PrescriptionRefillRequest: Coding;
+    readonly PrescriptionRefillRequest: Coding;
     /**
-     * The purpose or content of the communication is a progress update.
+     * progress-update: The purpose or content of the communication is a progress update.
      */
-    communication_topic_ProgressUpdate: Coding;
+    readonly ProgressUpdate: Coding;
     /**
-     * The purpose or content of the communication is to report labs.
+     * report-labs: The purpose or content of the communication is to report labs.
      */
-    communication_topic_ReportLabs: Coding;
+    readonly ReportLabs: Coding;
     /**
-     * The purpose or content of the communication is a summary report.
+     * summary-report: The purpose or content of the communication is a summary report.
      */
-    communication_topic_SummaryReport: Coding;
+    readonly SummaryReport: Coding;
 };
+/**
+ * Codes describing the purpose or content of the communication.
+ */
+export declare type CommunicationTopicValueSetType = typeof CommunicationTopicValueSet;
+/**
+ * Codes describing the purpose or content of the communication.
+ */
+export declare enum CommunicationTopicValueSetEnum {
+    /**
+     * appointment-reminder: The purpose or content of the communication is an appointment reminder.
+     */
+    AppointmentReminder = "appointment-reminder",
+    /**
+     * phone-consult: The purpose or content of the communication is a phone consult.
+     */
+    PhoneConsult = "phone-consult",
+    /**
+     * prescription-refill-request: The purpose or content of the communication is a prescription refill request.
+     */
+    PrescriptionRefillRequest = "prescription-refill-request",
+    /**
+     * progress-update: The purpose or content of the communication is a progress update.
+     */
+    ProgressUpdate = "progress-update",
+    /**
+     * report-labs: The purpose or content of the communication is to report labs.
+     */
+    ReportLabs = "report-labs",
+    /**
+     * summary-report: The purpose or content of the communication is a summary report.
+     */
+    SummaryReport = "summary-report"
+}
 //# sourceMappingURL=CommunicationTopicValueSet.d.ts.map

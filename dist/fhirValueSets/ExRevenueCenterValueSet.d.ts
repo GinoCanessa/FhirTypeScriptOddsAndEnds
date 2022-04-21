@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Revenue Center codes.
  */
 export declare const ExRevenueCenterValueSet: {
     /**
-     * Vision Clinic
+     * 0010: Vision Clinic
      */
-    ex_revenue_center_VisionClinic: Coding;
+    readonly VisionClinic: Coding;
     /**
-     * Anaesthesia.
+     * 0370: Anaesthesia.
      */
-    ex_revenue_center_Anaesthesia: Coding;
+    readonly Anaesthesia: Coding;
     /**
-     * Physical Therapy.
+     * 0420: Physical Therapy.
      */
-    ex_revenue_center_PhysicalTherapy: Coding;
+    readonly PhysicalTherapy: Coding;
     /**
-     * Physical Therapy - visit charge.
+     * 0421: Physical Therapy - visit charge.
      */
-    ex_revenue_center_PhysicalTherapy_2: Coding;
+    readonly PhysicalTherapy_0421: Coding;
     /**
-     * Speech-Language Pathology.
+     * 0440: Speech-Language Pathology.
      */
-    ex_revenue_center_SpeechLanguagePathology: Coding;
+    readonly SpeechLanguagePathology: Coding;
     /**
-     * Speech-Language Pathology- visit charge
+     * 0441: Speech-Language Pathology- visit charge
      */
-    ex_revenue_center_SpeechLanguagePathologyVisit: Coding;
+    readonly SpeechLanguagePathologyVisit: Coding;
     /**
-     * Emergency Room
+     * 0450: Emergency Room
      */
-    ex_revenue_center_EmergencyRoom: Coding;
+    readonly EmergencyRoom: Coding;
     /**
-     * Emergency Room - EM/EMTALA
+     * 0451: Emergency Room - EM/EMTALA
      */
-    ex_revenue_center_EmergencyRoomEMEMTALA: Coding;
+    readonly EmergencyRoomEMEMTALA: Coding;
     /**
-     * Emergency Room - beyond EMTALA
+     * 0452: Emergency Room - beyond EMTALA
      */
-    ex_revenue_center_EmergencyRoomBeyondEMTALA: Coding;
+    readonly EmergencyRoomBeyondEMTALA: Coding;
 };
+/**
+ * This value set includes sample Revenue Center codes.
+ */
+export declare type ExRevenueCenterValueSetType = typeof ExRevenueCenterValueSet;
+/**
+ * This value set includes sample Revenue Center codes.
+ */
+export declare enum ExRevenueCenterValueSetEnum {
+    /**
+     * 0010: Vision Clinic
+     */
+    VisionClinic = "0010",
+    /**
+     * 0370: Anaesthesia.
+     */
+    Anaesthesia = "0370",
+    /**
+     * 0420: Physical Therapy.
+     */
+    PhysicalTherapy = "0420",
+    /**
+     * 0421: Physical Therapy - visit charge.
+     */
+    PhysicalTherapy_0421 = "0421",
+    /**
+     * 0440: Speech-Language Pathology.
+     */
+    SpeechLanguagePathology = "0440",
+    /**
+     * 0441: Speech-Language Pathology- visit charge
+     */
+    SpeechLanguagePathologyVisit = "0441",
+    /**
+     * 0450: Emergency Room
+     */
+    EmergencyRoom = "0450",
+    /**
+     * 0451: Emergency Room - EM/EMTALA
+     */
+    EmergencyRoomEMEMTALA = "0451",
+    /**
+     * 0452: Emergency Room - beyond EMTALA
+     */
+    EmergencyRoomBeyondEMTALA = "0452"
+}
 //# sourceMappingURL=ExRevenueCenterValueSet.d.ts.map

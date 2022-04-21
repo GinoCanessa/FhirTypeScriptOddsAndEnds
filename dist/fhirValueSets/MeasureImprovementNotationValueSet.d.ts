@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Observation values that indicate what change in a measurement value or score is indicative of an improvement in the measured item or scored issue.
  */
 export declare const MeasureImprovementNotationValueSet: {
     /**
-     * Improvement is indicated as a decrease in the score or measurement (e.g. Lower score indicates better quality).
+     * decrease: Improvement is indicated as a decrease in the score or measurement (e.g. Lower score indicates better quality).
      */
-    measure_improvement_notation_DecreasedScoreIndicatesImprovement: Coding;
+    readonly DecreasedScoreIndicatesImprovement: Coding;
     /**
-     * Improvement is indicated as an increase in the score or measurement (e.g. Higher score indicates better quality).
+     * increase: Improvement is indicated as an increase in the score or measurement (e.g. Higher score indicates better quality).
      */
-    measure_improvement_notation_IncreasedScoreIndicatesImprovement: Coding;
+    readonly IncreasedScoreIndicatesImprovement: Coding;
 };
+/**
+ * Observation values that indicate what change in a measurement value or score is indicative of an improvement in the measured item or scored issue.
+ */
+export declare type MeasureImprovementNotationValueSetType = typeof MeasureImprovementNotationValueSet;
+/**
+ * Observation values that indicate what change in a measurement value or score is indicative of an improvement in the measured item or scored issue.
+ */
+export declare enum MeasureImprovementNotationValueSetEnum {
+    /**
+     * decrease: Improvement is indicated as a decrease in the score or measurement (e.g. Lower score indicates better quality).
+     */
+    DecreasedScoreIndicatesImprovement = "decrease",
+    /**
+     * increase: Improvement is indicated as an increase in the score or measurement (e.g. Higher score indicates better quality).
+     */
+    IncreasedScoreIndicatesImprovement = "increase"
+}
 //# sourceMappingURL=MeasureImprovementNotationValueSet.d.ts.map

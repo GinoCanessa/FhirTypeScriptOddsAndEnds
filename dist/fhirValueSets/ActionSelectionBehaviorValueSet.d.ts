@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Defines selection behavior of a group.
  */
 export declare const ActionSelectionBehaviorValueSet: {
     /**
-     * All the actions in the group must be selected as a single unit.
+     * all: All the actions in the group must be selected as a single unit.
      */
-    action_selection_behavior_All: Coding;
+    readonly All: Coding;
     /**
-     * All the actions in the group are meant to be chosen as a single unit: either all must be selected by the end user, or none may be selected.
+     * all-or-none: All the actions in the group are meant to be chosen as a single unit: either all must be selected by the end user, or none may be selected.
      */
-    action_selection_behavior_AllOrNone: Coding;
+    readonly AllOrNone: Coding;
     /**
-     * Any number of the actions in the group may be chosen, from zero to all.
+     * any: Any number of the actions in the group may be chosen, from zero to all.
      */
-    action_selection_behavior_Any: Coding;
+    readonly Any: Coding;
     /**
-     * The end user may choose zero or at most one of the actions in the group.
+     * at-most-one: The end user may choose zero or at most one of the actions in the group.
      */
-    action_selection_behavior_AtMostOne: Coding;
+    readonly AtMostOne: Coding;
     /**
-     * The end user must choose one and only one of the selectable actions in the group. The user SHALL NOT choose none of the actions in the group.
+     * exactly-one: The end user must choose one and only one of the selectable actions in the group. The user SHALL NOT choose none of the actions in the group.
      */
-    action_selection_behavior_ExactlyOne: Coding;
+    readonly ExactlyOne: Coding;
     /**
-     * The end user must choose a minimum of one, and as many additional as desired.
+     * one-or-more: The end user must choose a minimum of one, and as many additional as desired.
      */
-    action_selection_behavior_OneOrMore: Coding;
+    readonly OneOrMore: Coding;
 };
+/**
+ * Defines selection behavior of a group.
+ */
+export declare type ActionSelectionBehaviorValueSetType = typeof ActionSelectionBehaviorValueSet;
+/**
+ * Defines selection behavior of a group.
+ */
+export declare enum ActionSelectionBehaviorValueSetEnum {
+    /**
+     * all: All the actions in the group must be selected as a single unit.
+     */
+    All = "all",
+    /**
+     * all-or-none: All the actions in the group are meant to be chosen as a single unit: either all must be selected by the end user, or none may be selected.
+     */
+    AllOrNone = "all-or-none",
+    /**
+     * any: Any number of the actions in the group may be chosen, from zero to all.
+     */
+    Any = "any",
+    /**
+     * at-most-one: The end user may choose zero or at most one of the actions in the group.
+     */
+    AtMostOne = "at-most-one",
+    /**
+     * exactly-one: The end user must choose one and only one of the selectable actions in the group. The user SHALL NOT choose none of the actions in the group.
+     */
+    ExactlyOne = "exactly-one",
+    /**
+     * one-or-more: The end user must choose a minimum of one, and as many additional as desired.
+     */
+    OneOrMore = "one-or-more"
+}
 //# sourceMappingURL=ActionSelectionBehaviorValueSet.d.ts.map

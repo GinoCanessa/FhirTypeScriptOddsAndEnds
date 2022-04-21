@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Type for strand.
  */
 export declare const StrandTypeValueSet: {
     /**
-     * Crick strand of reference sequence.
+     * crick: Crick strand of reference sequence.
      */
-    strand_type_CrickStrandOfReferenceSeq: Coding;
+    readonly CrickStrandOfReferenceSeq: Coding;
     /**
-     * Watson strand of reference sequence.
+     * watson: Watson strand of reference sequence.
      */
-    strand_type_WatsonStrandOfReferenceSeq: Coding;
+    readonly WatsonStrandOfReferenceSeq: Coding;
 };
+/**
+ * Type for strand.
+ */
+export declare type StrandTypeValueSetType = typeof StrandTypeValueSet;
+/**
+ * Type for strand.
+ */
+export declare enum StrandTypeValueSetEnum {
+    /**
+     * crick: Crick strand of reference sequence.
+     */
+    CrickStrandOfReferenceSeq = "crick",
+    /**
+     * watson: Watson strand of reference sequence.
+     */
+    WatsonStrandOfReferenceSeq = "watson"
+}
 //# sourceMappingURL=StrandTypeValueSet.d.ts.map

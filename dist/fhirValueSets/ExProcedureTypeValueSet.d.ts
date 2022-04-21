@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes example Procedure Type codes.
  */
 export declare const ExProcedureTypeValueSet: {
     /**
-     * The first procedure in a series required to produce and overall patient outcome.
+     * primary: The first procedure in a series required to produce and overall patient outcome.
      */
-    ex_procedure_type_PrimaryProcedure: Coding;
+    readonly PrimaryProcedure: Coding;
     /**
-     * The second procedure in a series required to produce and overall patient outcome.
+     * secondary: The second procedure in a series required to produce and overall patient outcome.
      */
-    ex_procedure_type_SecondaryProcedure: Coding;
+    readonly SecondaryProcedure: Coding;
 };
+/**
+ * This value set includes example Procedure Type codes.
+ */
+export declare type ExProcedureTypeValueSetType = typeof ExProcedureTypeValueSet;
+/**
+ * This value set includes example Procedure Type codes.
+ */
+export declare enum ExProcedureTypeValueSetEnum {
+    /**
+     * primary: The first procedure in a series required to produce and overall patient outcome.
+     */
+    PrimaryProcedure = "primary",
+    /**
+     * secondary: The second procedure in a series required to produce and overall patient outcome.
+     */
+    SecondaryProcedure = "secondary"
+}
 //# sourceMappingURL=ExProcedureTypeValueSet.d.ts.map

@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The clinical priority of a diagnostic order.
  */
 export declare const RequestPriorityValueSet: {
     /**
-     * The request should be actioned as soon as possible - higher priority than urgent.
+     * asap: The request should be actioned as soon as possible - higher priority than urgent.
      */
-    request_priority_ASAP: Coding;
+    readonly ASAP: Coding;
     /**
-     * The request has normal priority.
+     * routine: The request has normal priority.
      */
-    request_priority_Routine: Coding;
+    readonly Routine: Coding;
     /**
-     * The request should be actioned immediately - highest possible priority.  E.g. an emergency.
+     * stat: The request should be actioned immediately - highest possible priority.  E.g. an emergency.
      */
-    request_priority_STAT: Coding;
+    readonly STAT: Coding;
     /**
-     * The request should be actioned promptly - higher priority than routine.
+     * urgent: The request should be actioned promptly - higher priority than routine.
      */
-    request_priority_Urgent: Coding;
+    readonly Urgent: Coding;
 };
+/**
+ * The clinical priority of a diagnostic order.
+ */
+export declare type RequestPriorityValueSetType = typeof RequestPriorityValueSet;
+/**
+ * The clinical priority of a diagnostic order.
+ */
+export declare enum RequestPriorityValueSetEnum {
+    /**
+     * asap: The request should be actioned as soon as possible - higher priority than urgent.
+     */
+    ASAP = "asap",
+    /**
+     * routine: The request has normal priority.
+     */
+    Routine = "routine",
+    /**
+     * stat: The request should be actioned immediately - highest possible priority.  E.g. an emergency.
+     */
+    STAT = "stat",
+    /**
+     * urgent: The request should be actioned promptly - higher priority than routine.
+     */
+    Urgent = "urgent"
+}
 //# sourceMappingURL=RequestPriorityValueSet.d.ts.map

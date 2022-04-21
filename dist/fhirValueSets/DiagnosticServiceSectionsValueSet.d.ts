@@ -1,48 +1,344 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes all the codes in HL7 V2 table 0074.
  */
 export declare const DiagnosticServiceSectionsValueSet: {
-    v2_0074_Audiology: Coding;
-    v2_0074_BloodGases: Coding;
-    v2_0074_BloodBank: Coding;
-    v2_0074_Cytogenetics: Coding;
-    v2_0074_Chemistry: Coding;
-    v2_0074_Cytopathology: Coding;
-    v2_0074_CATScan: Coding;
-    v2_0074_CardiacCatheterization: Coding;
-    v2_0074_CardiacUltrasound: Coding;
-    v2_0074_ElectrocardiacEGEKGEECHolter: Coding;
-    v2_0074_ElectroneuroEEGEMGEPPSG: Coding;
-    v2_0074_Genetics: Coding;
-    v2_0074_Hematology: Coding;
-    v2_0074_BedsideICUMonitoring: Coding;
-    v2_0074_Immunology: Coding;
-    v2_0074_Laboratory: Coding;
-    v2_0074_Microbiology: Coding;
-    v2_0074_Mycobacteriology: Coding;
-    v2_0074_Mycology: Coding;
-    v2_0074_NuclearMagneticResonance: Coding;
-    v2_0074_NuclearMedicineScan: Coding;
-    v2_0074_NursingServiceMeasures: Coding;
-    v2_0074_OutsideLab: Coding;
-    v2_0074_OccupationalTherapy: Coding;
-    v2_0074_Other: Coding;
-    v2_0074_OBUltrasound: Coding;
-    v2_0074_PulmonaryFunction: Coding;
-    v2_0074_Pharmacy: Coding;
-    v2_0074_PhysicianHxDxAdmissionNoteEtc: Coding;
-    v2_0074_PhysicalTherapy: Coding;
-    v2_0074_Radiology: Coding;
-    v2_0074_RespiratoryCareTherapy: Coding;
-    v2_0074_RadiationTherapy: Coding;
-    v2_0074_RadiologyUltrasound: Coding;
-    v2_0074_Radiograph: Coding;
-    v2_0074_SurgicalPathology: Coding;
-    v2_0074_Serology: Coding;
-    v2_0074_Toxicology: Coding;
-    v2_0074_Virology: Coding;
-    v2_0074_VascularUltrasound: Coding;
-    v2_0074_Cineradiograph: Coding;
+    /**
+     * Code: AU
+     */
+    readonly Audiology: Coding;
+    /**
+     * Code: BG
+     */
+    readonly BloodGases: Coding;
+    /**
+     * Code: BLB
+     */
+    readonly BloodBank: Coding;
+    /**
+     * Code: CG
+     */
+    readonly Cytogenetics: Coding;
+    /**
+     * Code: CH
+     */
+    readonly Chemistry: Coding;
+    /**
+     * Code: CP
+     */
+    readonly Cytopathology: Coding;
+    /**
+     * Code: CT
+     */
+    readonly CATScan: Coding;
+    /**
+     * Code: CTH
+     */
+    readonly CardiacCatheterization: Coding;
+    /**
+     * Code: CUS
+     */
+    readonly CardiacUltrasound: Coding;
+    /**
+     * Code: EC
+     */
+    readonly ElectrocardiacEGEKGEECHolter: Coding;
+    /**
+     * Code: EN
+     */
+    readonly ElectroneuroEEGEMGEPPSG: Coding;
+    /**
+     * Code: GE
+     */
+    readonly Genetics: Coding;
+    /**
+     * Code: HM
+     */
+    readonly Hematology: Coding;
+    /**
+     * Code: ICU
+     */
+    readonly BedsideICUMonitoring: Coding;
+    /**
+     * Code: IMM
+     */
+    readonly Immunology: Coding;
+    /**
+     * Code: LAB
+     */
+    readonly Laboratory: Coding;
+    /**
+     * Code: MB
+     */
+    readonly Microbiology: Coding;
+    /**
+     * Code: MCB
+     */
+    readonly Mycobacteriology: Coding;
+    /**
+     * Code: MYC
+     */
+    readonly Mycology: Coding;
+    /**
+     * Code: NMR
+     */
+    readonly NuclearMagneticResonance: Coding;
+    /**
+     * Code: NMS
+     */
+    readonly NuclearMedicineScan: Coding;
+    /**
+     * Code: NRS
+     */
+    readonly NursingServiceMeasures: Coding;
+    /**
+     * Code: OSL
+     */
+    readonly OutsideLab: Coding;
+    /**
+     * Code: OT
+     */
+    readonly OccupationalTherapy: Coding;
+    /**
+     * Code: OTH
+     */
+    readonly Other: Coding;
+    /**
+     * Code: OUS
+     */
+    readonly OBUltrasound: Coding;
+    /**
+     * Code: PF
+     */
+    readonly PulmonaryFunction: Coding;
+    /**
+     * Code: PHR
+     */
+    readonly Pharmacy: Coding;
+    /**
+     * Code: PHY
+     */
+    readonly PhysicianHxDxAdmissionNoteEtc: Coding;
+    /**
+     * Code: PT
+     */
+    readonly PhysicalTherapy: Coding;
+    /**
+     * Code: RAD
+     */
+    readonly Radiology: Coding;
+    /**
+     * Code: RC
+     */
+    readonly RespiratoryCareTherapy: Coding;
+    /**
+     * Code: RT
+     */
+    readonly RadiationTherapy: Coding;
+    /**
+     * Code: RUS
+     */
+    readonly RadiologyUltrasound: Coding;
+    /**
+     * Code: RX
+     */
+    readonly Radiograph: Coding;
+    /**
+     * Code: SP
+     */
+    readonly SurgicalPathology: Coding;
+    /**
+     * Code: SR
+     */
+    readonly Serology: Coding;
+    /**
+     * Code: TX
+     */
+    readonly Toxicology: Coding;
+    /**
+     * Code: VR
+     */
+    readonly Virology: Coding;
+    /**
+     * Code: VUS
+     */
+    readonly VascularUltrasound: Coding;
+    /**
+     * Code: XRC
+     */
+    readonly Cineradiograph: Coding;
 };
+/**
+ * This value set includes all the codes in HL7 V2 table 0074.
+ */
+export declare type DiagnosticServiceSectionsValueSetType = typeof DiagnosticServiceSectionsValueSet;
+/**
+ * This value set includes all the codes in HL7 V2 table 0074.
+ */
+export declare enum DiagnosticServiceSectionsValueSetEnum {
+    /**
+     * Code: AU
+     */
+    Audiology = "AU",
+    /**
+     * Code: BG
+     */
+    BloodGases = "BG",
+    /**
+     * Code: BLB
+     */
+    BloodBank = "BLB",
+    /**
+     * Code: CG
+     */
+    Cytogenetics = "CG",
+    /**
+     * Code: CH
+     */
+    Chemistry = "CH",
+    /**
+     * Code: CP
+     */
+    Cytopathology = "CP",
+    /**
+     * Code: CT
+     */
+    CATScan = "CT",
+    /**
+     * Code: CTH
+     */
+    CardiacCatheterization = "CTH",
+    /**
+     * Code: CUS
+     */
+    CardiacUltrasound = "CUS",
+    /**
+     * Code: EC
+     */
+    ElectrocardiacEGEKGEECHolter = "EC",
+    /**
+     * Code: EN
+     */
+    ElectroneuroEEGEMGEPPSG = "EN",
+    /**
+     * Code: GE
+     */
+    Genetics = "GE",
+    /**
+     * Code: HM
+     */
+    Hematology = "HM",
+    /**
+     * Code: ICU
+     */
+    BedsideICUMonitoring = "ICU",
+    /**
+     * Code: IMM
+     */
+    Immunology = "IMM",
+    /**
+     * Code: LAB
+     */
+    Laboratory = "LAB",
+    /**
+     * Code: MB
+     */
+    Microbiology = "MB",
+    /**
+     * Code: MCB
+     */
+    Mycobacteriology = "MCB",
+    /**
+     * Code: MYC
+     */
+    Mycology = "MYC",
+    /**
+     * Code: NMR
+     */
+    NuclearMagneticResonance = "NMR",
+    /**
+     * Code: NMS
+     */
+    NuclearMedicineScan = "NMS",
+    /**
+     * Code: NRS
+     */
+    NursingServiceMeasures = "NRS",
+    /**
+     * Code: OSL
+     */
+    OutsideLab = "OSL",
+    /**
+     * Code: OT
+     */
+    OccupationalTherapy = "OT",
+    /**
+     * Code: OTH
+     */
+    Other = "OTH",
+    /**
+     * Code: OUS
+     */
+    OBUltrasound = "OUS",
+    /**
+     * Code: PF
+     */
+    PulmonaryFunction = "PF",
+    /**
+     * Code: PHR
+     */
+    Pharmacy = "PHR",
+    /**
+     * Code: PHY
+     */
+    PhysicianHxDxAdmissionNoteEtc = "PHY",
+    /**
+     * Code: PT
+     */
+    PhysicalTherapy = "PT",
+    /**
+     * Code: RAD
+     */
+    Radiology = "RAD",
+    /**
+     * Code: RC
+     */
+    RespiratoryCareTherapy = "RC",
+    /**
+     * Code: RT
+     */
+    RadiationTherapy = "RT",
+    /**
+     * Code: RUS
+     */
+    RadiologyUltrasound = "RUS",
+    /**
+     * Code: RX
+     */
+    Radiograph = "RX",
+    /**
+     * Code: SP
+     */
+    SurgicalPathology = "SP",
+    /**
+     * Code: SR
+     */
+    Serology = "SR",
+    /**
+     * Code: TX
+     */
+    Toxicology = "TX",
+    /**
+     * Code: VR
+     */
+    Virology = "VR",
+    /**
+     * Code: VUS
+     */
+    VascularUltrasound = "VUS",
+    /**
+     * Code: XRC
+     */
+    Cineradiograph = "XRC"
+}
 //# sourceMappingURL=DiagnosticServiceSectionsValueSet.d.ts.map

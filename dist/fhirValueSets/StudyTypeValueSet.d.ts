@@ -1,35 +1,72 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Types of research studies (types of research methods).
  */
 export declare const StudyTypeValueSet: {
     /**
-     * case-control study.
+     * case-control: case-control study.
      */
-    study_type_CaseControlStudy: Coding;
+    readonly CaseControlStudy: Coding;
     /**
-     * a single case report.
+     * case-report: a single case report.
      */
-    study_type_CaseReport: Coding;
+    readonly CaseReport: Coding;
     /**
-     * controlled (but not randomized) trial.
+     * CCT: controlled (but not randomized) trial.
      */
-    study_type_ControlledTrialNonRandomized: Coding;
+    readonly ControlledTrialNonRandomized: Coding;
     /**
-     * observational study comparing cohorts.
+     * cohort: observational study comparing cohorts.
      */
-    study_type_ComparativeCohortStudy: Coding;
+    readonly ComparativeCohortStudy: Coding;
     /**
-     * a combination of 1 or more types of studies.
+     * mixed: a combination of 1 or more types of studies.
      */
-    study_type_MixedMethods: Coding;
+    readonly MixedMethods: Coding;
     /**
-     * randomized controlled trial.
+     * RCT: randomized controlled trial.
      */
-    study_type_RandomizedTrial: Coding;
+    readonly RandomizedTrial: Coding;
     /**
-     * uncontrolled cohort or case series.
+     * series: uncontrolled cohort or case series.
      */
-    study_type_UncontrolledCohortOrCaseSeries: Coding;
+    readonly UncontrolledCohortOrCaseSeries: Coding;
 };
+/**
+ * Types of research studies (types of research methods).
+ */
+export declare type StudyTypeValueSetType = typeof StudyTypeValueSet;
+/**
+ * Types of research studies (types of research methods).
+ */
+export declare enum StudyTypeValueSetEnum {
+    /**
+     * case-control: case-control study.
+     */
+    CaseControlStudy = "case-control",
+    /**
+     * case-report: a single case report.
+     */
+    CaseReport = "case-report",
+    /**
+     * CCT: controlled (but not randomized) trial.
+     */
+    ControlledTrialNonRandomized = "CCT",
+    /**
+     * cohort: observational study comparing cohorts.
+     */
+    ComparativeCohortStudy = "cohort",
+    /**
+     * mixed: a combination of 1 or more types of studies.
+     */
+    MixedMethods = "mixed",
+    /**
+     * RCT: randomized controlled trial.
+     */
+    RandomizedTrial = "RCT",
+    /**
+     * series: uncontrolled cohort or case series.
+     */
+    UncontrolledCohortOrCaseSeries = "series"
+}
 //# sourceMappingURL=StudyTypeValueSet.d.ts.map

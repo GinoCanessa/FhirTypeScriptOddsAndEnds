@@ -1,4 +1,4 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * Describe the undesirable effects of the medicinal product.
  */
@@ -7,6 +7,14 @@ export declare type IMedicinalProductUndesirableEffect = fhir.IDomainResource & 
      * Resource Type Name
      */
     resourceType: "MedicinalProductUndesirableEffect";
+    /**
+     * The medication for which this is an indication.
+     */
+    subject?: fhir.IReference[] | undefined;
+    /**
+     * The symptom, condition or undesirable effect.
+     */
+    symptomConditionEffect?: fhir.ICodeableConcept | undefined;
     /**
      * Classification of the effect.
      */
@@ -19,23 +27,23 @@ export declare type IMedicinalProductUndesirableEffect = fhir.IDomainResource & 
      * The population group to which this applies.
      */
     population?: fhir.IPopulation[] | undefined;
-    /**
-     * The medication for which this is an indication.
-     */
-    subject?: fhir.IReference[] | undefined;
-    /**
-     * The symptom, condition or undesirable effect.
-     */
-    symptomConditionEffect?: fhir.ICodeableConcept | undefined;
 };
 /**
  * Describe the undesirable effects of the medicinal product.
  */
-export declare class MedicinalProductUndesirableEffect extends fhir.DomainResource implements fhir.IMedicinalProductUndesirableEffect {
+export declare class MedicinalProductUndesirableEffect extends fhir.DomainResource implements IMedicinalProductUndesirableEffect {
     /**
      * Resource Type Name
      */
     resourceType: "MedicinalProductUndesirableEffect";
+    /**
+     * The medication for which this is an indication.
+     */
+    subject?: fhir.Reference[] | undefined;
+    /**
+     * The symptom, condition or undesirable effect.
+     */
+    symptomConditionEffect?: fhir.CodeableConcept | undefined;
     /**
      * Classification of the effect.
      */
@@ -49,24 +57,12 @@ export declare class MedicinalProductUndesirableEffect extends fhir.DomainResour
      */
     population?: fhir.Population[] | undefined;
     /**
-     * The medication for which this is an indication.
-     */
-    subject?: fhir.Reference[] | undefined;
-    /**
-     * The symptom, condition or undesirable effect.
-     */
-    symptomConditionEffect?: fhir.CodeableConcept | undefined;
-    /**
      * Default constructor for MedicinalProductUndesirableEffect - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductUndesirableEffect>);
+    constructor(source?: Partial<IMedicinalProductUndesirableEffect>);
     /**
-     * Check if the current MedicinalProductUndesirableEffect contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductUndesirableEffect from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductUndesirableEffect): MedicinalProductUndesirableEffect;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=MedicinalProductUndesirableEffect.d.ts.map

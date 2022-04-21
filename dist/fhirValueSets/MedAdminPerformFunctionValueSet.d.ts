@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * MedicationAdministration Performer Function Codes
  */
 export declare const MedAdminPerformFunctionValueSet: {
     /**
-     * A person, non-person living subject, organization or device that who actually and principally carries out the action
+     * performer: A person, non-person living subject, organization or device that who actually and principally carries out the action
      */
-    med_admin_perform_function_Performer: Coding;
+    readonly Performer: Coding;
     /**
-     * A person who verifies the correctness and appropriateness of the service (plan, order, event, etc.) and hence takes on accountability.
+     * verifier: A person who verifies the correctness and appropriateness of the service (plan, order, event, etc.) and hence takes on accountability.
      */
-    med_admin_perform_function_Verifier: Coding;
+    readonly Verifier: Coding;
     /**
-     * A person witnessing the action happening without doing anything. A witness is not necessarily aware, much less approves of anything stated in the service event. Example for a witness is students watching an operation or an advanced directive witness.
+     * witness: A person witnessing the action happening without doing anything. A witness is not necessarily aware, much less approves of anything stated in the service event. Example for a witness is students watching an operation or an advanced directive witness.
      */
-    med_admin_perform_function_Witness: Coding;
+    readonly Witness: Coding;
 };
+/**
+ * MedicationAdministration Performer Function Codes
+ */
+export declare type MedAdminPerformFunctionValueSetType = typeof MedAdminPerformFunctionValueSet;
+/**
+ * MedicationAdministration Performer Function Codes
+ */
+export declare enum MedAdminPerformFunctionValueSetEnum {
+    /**
+     * performer: A person, non-person living subject, organization or device that who actually and principally carries out the action
+     */
+    Performer = "performer",
+    /**
+     * verifier: A person who verifies the correctness and appropriateness of the service (plan, order, event, etc.) and hence takes on accountability.
+     */
+    Verifier = "verifier",
+    /**
+     * witness: A person witnessing the action happening without doing anything. A witness is not necessarily aware, much less approves of anything stated in the service event. Example for a witness is students watching an operation or an advanced directive witness.
+     */
+    Witness = "witness"
+}
 //# sourceMappingURL=MedAdminPerformFunctionValueSet.d.ts.map

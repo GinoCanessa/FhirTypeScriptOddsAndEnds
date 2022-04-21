@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Describes the type of a metric calibration.
  */
 export declare const MetricCalibrationTypeValueSet: {
     /**
-     * Gain metric calibration method.
+     * gain: Gain metric calibration method.
      */
-    metric_calibration_type_Gain: Coding;
+    readonly Gain: Coding;
     /**
-     * Offset metric calibration method.
+     * offset: Offset metric calibration method.
      */
-    metric_calibration_type_Offset: Coding;
+    readonly Offset: Coding;
     /**
-     * Two-point metric calibration method.
+     * two-point: Two-point metric calibration method.
      */
-    metric_calibration_type_TwoPoint: Coding;
+    readonly TwoPoint: Coding;
     /**
-     * Metric calibration method has not been identified.
+     * unspecified: Metric calibration method has not been identified.
      */
-    metric_calibration_type_Unspecified: Coding;
+    readonly Unspecified: Coding;
 };
+/**
+ * Describes the type of a metric calibration.
+ */
+export declare type MetricCalibrationTypeValueSetType = typeof MetricCalibrationTypeValueSet;
+/**
+ * Describes the type of a metric calibration.
+ */
+export declare enum MetricCalibrationTypeValueSetEnum {
+    /**
+     * gain: Gain metric calibration method.
+     */
+    Gain = "gain",
+    /**
+     * offset: Offset metric calibration method.
+     */
+    Offset = "offset",
+    /**
+     * two-point: Two-point metric calibration method.
+     */
+    TwoPoint = "two-point",
+    /**
+     * unspecified: Metric calibration method has not been identified.
+     */
+    Unspecified = "unspecified"
+}
 //# sourceMappingURL=MetricCalibrationTypeValueSet.d.ts.map

@@ -1,51 +1,104 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of operator to use for assertion.
  */
 export declare const AssertOperatorCodesValueSet: {
     /**
-     * Compare value string contains a known value.
+     * contains: Compare value string contains a known value.
      */
-    assert_operator_codes_Contains: Coding;
+    readonly Contains: Coding;
     /**
-     * Compare value is empty.
+     * empty: Compare value is empty.
      */
-    assert_operator_codes_Empty: Coding;
+    readonly Empty: Coding;
     /**
-     * Default value. Equals comparison.
+     * equals: Default value. Equals comparison.
      */
-    assert_operator_codes_Equals: Coding;
+    readonly Equals: Coding;
     /**
-     * Evaluate the FHIRPath expression as a boolean condition.
+     * eval: Evaluate the FHIRPath expression as a boolean condition.
      */
-    assert_operator_codes_Evaluate: Coding;
+    readonly Evaluate: Coding;
     /**
-     * Compare value to be greater than a known value.
+     * greaterThan: Compare value to be greater than a known value.
      */
-    assert_operator_codes_GreaterThan: Coding;
+    readonly GreaterThan: Coding;
     /**
-     * Compare value within a known set of values.
+     * in: Compare value within a known set of values.
      */
-    assert_operator_codes_In: Coding;
+    readonly In: Coding;
     /**
-     * Compare value to be less than a known value.
+     * lessThan: Compare value to be less than a known value.
      */
-    assert_operator_codes_LessThan: Coding;
+    readonly LessThan: Coding;
     /**
-     * Compare value string does not contain a known value.
+     * notContains: Compare value string does not contain a known value.
      */
-    assert_operator_codes_NotContains: Coding;
+    readonly NotContains: Coding;
     /**
-     * Compare value is not empty.
+     * notEmpty: Compare value is not empty.
      */
-    assert_operator_codes_NotEmpty: Coding;
+    readonly NotEmpty: Coding;
     /**
-     * Not equals comparison.
+     * notEquals: Not equals comparison.
      */
-    assert_operator_codes_NotEquals: Coding;
+    readonly NotEquals: Coding;
     /**
-     * Compare value not within a known set of values.
+     * notIn: Compare value not within a known set of values.
      */
-    assert_operator_codes_NotIn: Coding;
+    readonly NotIn: Coding;
 };
+/**
+ * The type of operator to use for assertion.
+ */
+export declare type AssertOperatorCodesValueSetType = typeof AssertOperatorCodesValueSet;
+/**
+ * The type of operator to use for assertion.
+ */
+export declare enum AssertOperatorCodesValueSetEnum {
+    /**
+     * contains: Compare value string contains a known value.
+     */
+    Contains = "contains",
+    /**
+     * empty: Compare value is empty.
+     */
+    Empty = "empty",
+    /**
+     * equals: Default value. Equals comparison.
+     */
+    Equals = "equals",
+    /**
+     * eval: Evaluate the FHIRPath expression as a boolean condition.
+     */
+    Evaluate = "eval",
+    /**
+     * greaterThan: Compare value to be greater than a known value.
+     */
+    GreaterThan = "greaterThan",
+    /**
+     * in: Compare value within a known set of values.
+     */
+    In = "in",
+    /**
+     * lessThan: Compare value to be less than a known value.
+     */
+    LessThan = "lessThan",
+    /**
+     * notContains: Compare value string does not contain a known value.
+     */
+    NotContains = "notContains",
+    /**
+     * notEmpty: Compare value is not empty.
+     */
+    NotEmpty = "notEmpty",
+    /**
+     * notEquals: Not equals comparison.
+     */
+    NotEquals = "notEquals",
+    /**
+     * notIn: Compare value not within a known set of values.
+     */
+    NotIn = "notIn"
+}
 //# sourceMappingURL=AssertOperatorCodesValueSet.d.ts.map

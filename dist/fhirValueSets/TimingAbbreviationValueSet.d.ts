@@ -1,71 +1,144 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Code for a known / defined timing pattern.
  */
 export declare const TimingAbbreviationValueSet: {
     /**
-     * Every morning at institution specified times.
+     * AM: Every morning at institution specified times.
      */
-    v3_GTSAbbreviation_AM: Coding;
+    readonly AM: Coding;
     /**
-     * At bedtime (institution specified time).
+     * BED: At bedtime (institution specified time).
      */
-    v3_GTSAbbreviation_AtBedtime: Coding;
+    readonly AtBedtime: Coding;
     /**
-     * Two times a day at institution specified time
+     * BID: Two times a day at institution specified time
      */
-    v3_GTSAbbreviation_BID: Coding;
+    readonly BID: Coding;
     /**
-     * Monthly at institution specified time.
+     * MO: Monthly at institution specified time.
      */
-    v3_GTSAbbreviation_Monthly: Coding;
+    readonly Monthly: Coding;
     /**
-     * Every afternoon at institution specified times.
+     * PM: Every afternoon at institution specified times.
      */
-    v3_GTSAbbreviation_PM: Coding;
+    readonly PM: Coding;
     /**
-     * Every hour at institution specified times.
+     * Q1H: Every hour at institution specified times.
      */
-    v3_GTSAbbreviation_EveryHour: Coding;
+    readonly EveryHour: Coding;
     /**
-     * Every 2 hours at institution specified times.
+     * Q2H: Every 2 hours at institution specified times.
      */
-    v3_GTSAbbreviation_Every2Hours: Coding;
+    readonly Every2Hours: Coding;
     /**
-     * Every 3 hours at institution specified times.
+     * Q3H: Every 3 hours at institution specified times.
      */
-    v3_GTSAbbreviation_Every3Hours: Coding;
+    readonly Every3Hours: Coding;
     /**
-     * Every 4 hours at institution specified time
+     * Q4H: Every 4 hours at institution specified time
      */
-    v3_GTSAbbreviation_Q4H: Coding;
+    readonly Q4H: Coding;
     /**
-     * Every 6 hours at institution specified time
+     * Q6H: Every 6 hours at institution specified time
      */
-    v3_GTSAbbreviation_Q6H: Coding;
+    readonly Q6H: Coding;
     /**
-     * Every 8 hours at institution specified times.
+     * Q8H: Every 8 hours at institution specified times.
      */
-    v3_GTSAbbreviation_Every8Hours: Coding;
+    readonly Every8Hours: Coding;
     /**
-     * Every day at institution specified times.
+     * QD: Every day at institution specified times.
      */
-    v3_GTSAbbreviation_QD: Coding;
+    readonly QD: Coding;
     /**
-     * Four times a day at institution specified time
+     * QID: Four times a day at institution specified time
      */
-    v3_GTSAbbreviation_QID: Coding;
+    readonly QID: Coding;
     /**
-     * Every other day at institution specified times.
+     * QOD: Every other day at institution specified times.
      */
-    v3_GTSAbbreviation_QOD: Coding;
+    readonly QOD: Coding;
     /**
-     * Three times a day at institution specified time
+     * TID: Three times a day at institution specified time
      */
-    v3_GTSAbbreviation_TID: Coding;
+    readonly TID: Coding;
     /**
-     * Weekly at institution specified time.
+     * WK: Weekly at institution specified time.
      */
-    v3_GTSAbbreviation_Weekly: Coding;
+    readonly Weekly: Coding;
 };
+/**
+ * Code for a known / defined timing pattern.
+ */
+export declare type TimingAbbreviationValueSetType = typeof TimingAbbreviationValueSet;
+/**
+ * Code for a known / defined timing pattern.
+ */
+export declare enum TimingAbbreviationValueSetEnum {
+    /**
+     * AM: Every morning at institution specified times.
+     */
+    AM = "AM",
+    /**
+     * BED: At bedtime (institution specified time).
+     */
+    AtBedtime = "BED",
+    /**
+     * BID: Two times a day at institution specified time
+     */
+    BID = "BID",
+    /**
+     * MO: Monthly at institution specified time.
+     */
+    Monthly = "MO",
+    /**
+     * PM: Every afternoon at institution specified times.
+     */
+    PM = "PM",
+    /**
+     * Q1H: Every hour at institution specified times.
+     */
+    EveryHour = "Q1H",
+    /**
+     * Q2H: Every 2 hours at institution specified times.
+     */
+    Every2Hours = "Q2H",
+    /**
+     * Q3H: Every 3 hours at institution specified times.
+     */
+    Every3Hours = "Q3H",
+    /**
+     * Q4H: Every 4 hours at institution specified time
+     */
+    Q4H = "Q4H",
+    /**
+     * Q6H: Every 6 hours at institution specified time
+     */
+    Q6H = "Q6H",
+    /**
+     * Q8H: Every 8 hours at institution specified times.
+     */
+    Every8Hours = "Q8H",
+    /**
+     * QD: Every day at institution specified times.
+     */
+    QD = "QD",
+    /**
+     * QID: Four times a day at institution specified time
+     */
+    QID = "QID",
+    /**
+     * QOD: Every other day at institution specified times.
+     */
+    QOD = "QOD",
+    /**
+     * TID: Three times a day at institution specified time
+     */
+    TID = "TID",
+    /**
+     * WK: Weekly at institution specified time.
+     */
+    Weekly = "WK"
+}
 //# sourceMappingURL=TimingAbbreviationValueSet.d.ts.map

@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Medication Status Codes
  */
 export declare const MedicationStatementCategoryValueSet: {
     /**
-     * Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
+     * community: Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
      */
-    medication_statement_category_Community: Coding;
+    readonly Community: Coding;
     /**
-     * Includes orders for medications to be administered or consumed in an inpatient or acute care setting
+     * inpatient: Includes orders for medications to be administered or consumed in an inpatient or acute care setting
      */
-    medication_statement_category_Inpatient: Coding;
+    readonly Inpatient: Coding;
     /**
-     * Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+     * outpatient: Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
      */
-    medication_statement_category_Outpatient: Coding;
+    readonly Outpatient: Coding;
     /**
-     * Includes statements about medication use, including over the counter medication, provided by the patient, agent or another provider
+     * patientspecified: Includes statements about medication use, including over the counter medication, provided by the patient, agent or another provider
      */
-    medication_statement_category_PatientSpecified: Coding;
+    readonly PatientSpecified: Coding;
 };
+/**
+ * Medication Status Codes
+ */
+export declare type MedicationStatementCategoryValueSetType = typeof MedicationStatementCategoryValueSet;
+/**
+ * Medication Status Codes
+ */
+export declare enum MedicationStatementCategoryValueSetEnum {
+    /**
+     * community: Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
+     */
+    Community = "community",
+    /**
+     * inpatient: Includes orders for medications to be administered or consumed in an inpatient or acute care setting
+     */
+    Inpatient = "inpatient",
+    /**
+     * outpatient: Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+     */
+    Outpatient = "outpatient",
+    /**
+     * patientspecified: Includes statements about medication use, including over the counter medication, provided by the patient, agent or another provider
+     */
+    PatientSpecified = "patientspecified"
+}
 //# sourceMappingURL=MedicationStatementCategoryValueSet.d.ts.map

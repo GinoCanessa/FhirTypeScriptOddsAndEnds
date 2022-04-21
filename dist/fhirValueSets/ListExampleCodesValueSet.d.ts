@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Example use codes for the List resource - typical kinds of use.
  */
 export declare const ListExampleCodesValueSet: {
     /**
-     * A list of part adverse reactions.
+     * adverserxns: A list of part adverse reactions.
      */
-    list_example_codes_AdverseReactions: Coding;
+    readonly AdverseReactions: Coding;
     /**
-     * A list of alerts for the patient.
+     * alerts: A list of alerts for the patient.
      */
-    list_example_codes_Alerts: Coding;
+    readonly Alerts: Coding;
     /**
-     * A list of Allergies for the patient.
+     * allergies: A list of Allergies for the patient.
      */
-    list_example_codes_Allergies: Coding;
+    readonly Allergies: Coding;
     /**
-     * A list of medication statements for the patient.
+     * medications: A list of medication statements for the patient.
      */
-    list_example_codes_MedicationList: Coding;
+    readonly MedicationList: Coding;
     /**
-     * A set of care plans that apply in a particular context of care.
+     * plans: A set of care plans that apply in a particular context of care.
      */
-    list_example_codes_CarePlans: Coding;
+    readonly CarePlans: Coding;
     /**
-     * A list of problems that the patient is known of have (or have had in the past).
+     * problems: A list of problems that the patient is known of have (or have had in the past).
      */
-    list_example_codes_ProblemList: Coding;
+    readonly ProblemList: Coding;
     /**
-     * A set of protocols to be followed.
+     * protocols: A set of protocols to be followed.
      */
-    list_example_codes_Protocols: Coding;
+    readonly Protocols: Coding;
     /**
-     * A list of items waiting for an event (perhaps a surgical patient waiting list).
+     * waiting: A list of items waiting for an event (perhaps a surgical patient waiting list).
      */
-    list_example_codes_WaitingList: Coding;
+    readonly WaitingList: Coding;
     /**
-     * A list of items that constitute a set of work to be performed (typically this code would be specialized for more specific uses, such as a ward round list).
+     * worklist: A list of items that constitute a set of work to be performed (typically this code would be specialized for more specific uses, such as a ward round list).
      */
-    list_example_codes_Worklist: Coding;
+    readonly Worklist: Coding;
 };
+/**
+ * Example use codes for the List resource - typical kinds of use.
+ */
+export declare type ListExampleCodesValueSetType = typeof ListExampleCodesValueSet;
+/**
+ * Example use codes for the List resource - typical kinds of use.
+ */
+export declare enum ListExampleCodesValueSetEnum {
+    /**
+     * adverserxns: A list of part adverse reactions.
+     */
+    AdverseReactions = "adverserxns",
+    /**
+     * alerts: A list of alerts for the patient.
+     */
+    Alerts = "alerts",
+    /**
+     * allergies: A list of Allergies for the patient.
+     */
+    Allergies = "allergies",
+    /**
+     * medications: A list of medication statements for the patient.
+     */
+    MedicationList = "medications",
+    /**
+     * plans: A set of care plans that apply in a particular context of care.
+     */
+    CarePlans = "plans",
+    /**
+     * problems: A list of problems that the patient is known of have (or have had in the past).
+     */
+    ProblemList = "problems",
+    /**
+     * protocols: A set of protocols to be followed.
+     */
+    Protocols = "protocols",
+    /**
+     * waiting: A list of items waiting for an event (perhaps a surgical patient waiting list).
+     */
+    WaitingList = "waiting",
+    /**
+     * worklist: A list of items that constitute a set of work to be performed (typically this code would be specialized for more specific uses, such as a ward round list).
+     */
+    Worklist = "worklist"
+}
 //# sourceMappingURL=ListExampleCodesValueSet.d.ts.map

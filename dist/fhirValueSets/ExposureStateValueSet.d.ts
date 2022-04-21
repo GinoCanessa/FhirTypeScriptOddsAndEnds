@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Whether the results by exposure is describing the results for the primary exposure of interest (exposure) or the alternative state (exposureAlternative).
  */
 export declare const ExposureStateValueSet: {
     /**
-     * used when the results by exposure is describing the results for the primary exposure of interest.
+     * exposure: used when the results by exposure is describing the results for the primary exposure of interest.
      */
-    exposure_state_Exposure: Coding;
+    readonly Exposure: Coding;
     /**
-     * used when the results by exposure is describing the results for the alternative exposure state, control state or comparator state.
+     * exposure-alternative: used when the results by exposure is describing the results for the alternative exposure state, control state or comparator state.
      */
-    exposure_state_ExposureAlternative: Coding;
+    readonly ExposureAlternative: Coding;
 };
+/**
+ * Whether the results by exposure is describing the results for the primary exposure of interest (exposure) or the alternative state (exposureAlternative).
+ */
+export declare type ExposureStateValueSetType = typeof ExposureStateValueSet;
+/**
+ * Whether the results by exposure is describing the results for the primary exposure of interest (exposure) or the alternative state (exposureAlternative).
+ */
+export declare enum ExposureStateValueSetEnum {
+    /**
+     * exposure: used when the results by exposure is describing the results for the primary exposure of interest.
+     */
+    Exposure = "exposure",
+    /**
+     * exposure-alternative: used when the results by exposure is describing the results for the alternative exposure state, control state or comparator state.
+     */
+    ExposureAlternative = "exposure-alternative"
+}
 //# sourceMappingURL=ExposureStateValueSet.d.ts.map

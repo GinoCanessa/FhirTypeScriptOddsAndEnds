@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Overall nature of the adverse event, e.g. real or potential.
  */
 export declare const AdverseEventActualityValueSet: {
     /**
-     * The adverse event actually happened regardless of whether anyone was affected or harmed.
+     * actual: The adverse event actually happened regardless of whether anyone was affected or harmed.
      */
-    adverse_event_actuality_AdverseEvent: Coding;
+    readonly AdverseEvent: Coding;
     /**
-     * A potential adverse event.
+     * potential: A potential adverse event.
      */
-    adverse_event_actuality_PotentialAdverseEvent: Coding;
+    readonly PotentialAdverseEvent: Coding;
 };
+/**
+ * Overall nature of the adverse event, e.g. real or potential.
+ */
+export declare type AdverseEventActualityValueSetType = typeof AdverseEventActualityValueSet;
+/**
+ * Overall nature of the adverse event, e.g. real or potential.
+ */
+export declare enum AdverseEventActualityValueSetEnum {
+    /**
+     * actual: The adverse event actually happened regardless of whether anyone was affected or harmed.
+     */
+    AdverseEvent = "actual",
+    /**
+     * potential: A potential adverse event.
+     */
+    PotentialAdverseEvent = "potential"
+}
 //# sourceMappingURL=AdverseEventActualityValueSet.d.ts.map

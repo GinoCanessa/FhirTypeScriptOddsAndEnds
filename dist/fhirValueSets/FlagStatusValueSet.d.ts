@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error.
  */
 export declare const FlagStatusValueSet: {
     /**
-     * A current flag that should be displayed to a user. A system may use the category to determine which user roles should view the flag.
+     * active: A current flag that should be displayed to a user. A system may use the category to determine which user roles should view the flag.
      */
-    flag_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The flag was added in error and should no longer be displayed.
+     * entered-in-error: The flag was added in error and should no longer be displayed.
      */
-    flag_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The flag no longer needs to be displayed.
+     * inactive: The flag no longer needs to be displayed.
      */
-    flag_status_Inactive: Coding;
+    readonly Inactive: Coding;
 };
+/**
+ * Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error.
+ */
+export declare type FlagStatusValueSetType = typeof FlagStatusValueSet;
+/**
+ * Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error.
+ */
+export declare enum FlagStatusValueSetEnum {
+    /**
+     * active: A current flag that should be displayed to a user. A system may use the category to determine which user roles should view the flag.
+     */
+    Active = "active",
+    /**
+     * entered-in-error: The flag was added in error and should no longer be displayed.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * inactive: The flag no longer needs to be displayed.
+     */
+    Inactive = "inactive"
+}
 //# sourceMappingURL=FlagStatusValueSet.d.ts.map

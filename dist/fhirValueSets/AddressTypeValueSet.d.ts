@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of an address (physical / postal).
  */
 export declare const AddressTypeValueSet: {
     /**
-     * An address that is both physical and postal.
+     * both: An address that is both physical and postal.
      */
-    address_type_PostalAndPhysical: Coding;
+    readonly PostalAndPhysical: Coding;
     /**
-     * A physical address that can be visited.
+     * physical: A physical address that can be visited.
      */
-    address_type_Physical: Coding;
+    readonly Physical: Coding;
     /**
-     * Mailing addresses - PO Boxes and care-of addresses.
+     * postal: Mailing addresses - PO Boxes and care-of addresses.
      */
-    address_type_Postal: Coding;
+    readonly Postal: Coding;
 };
+/**
+ * The type of an address (physical / postal).
+ */
+export declare type AddressTypeValueSetType = typeof AddressTypeValueSet;
+/**
+ * The type of an address (physical / postal).
+ */
+export declare enum AddressTypeValueSetEnum {
+    /**
+     * both: An address that is both physical and postal.
+     */
+    PostalAndPhysical = "both",
+    /**
+     * physical: A physical address that can be visited.
+     */
+    Physical = "physical",
+    /**
+     * postal: Mailing addresses - PO Boxes and care-of addresses.
+     */
+    Postal = "postal"
+}
 //# sourceMappingURL=AddressTypeValueSet.d.ts.map

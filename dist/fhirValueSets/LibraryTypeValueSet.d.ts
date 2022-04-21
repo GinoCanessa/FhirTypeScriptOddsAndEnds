@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of knowledge asset this library contains.
  */
 export declare const LibraryTypeValueSet: {
     /**
-     * The resource is a collection of knowledge assets.
+     * asset-collection: The resource is a collection of knowledge assets.
      */
-    library_type_AssetCollection: Coding;
+    readonly AssetCollection: Coding;
     /**
-     * The resource is a shareable library of formalized knowledge.
+     * logic-library: The resource is a shareable library of formalized knowledge.
      */
-    library_type_LogicLibrary: Coding;
+    readonly LogicLibrary: Coding;
     /**
-     * The resource is a definition of an information model.
+     * model-definition: The resource is a definition of an information model.
      */
-    library_type_ModelDefinition: Coding;
+    readonly ModelDefinition: Coding;
     /**
-     * The resource defines the dependencies, parameters, and data requirements for a particular module or evaluation context.
+     * module-definition: The resource defines the dependencies, parameters, and data requirements for a particular module or evaluation context.
      */
-    library_type_ModuleDefinition: Coding;
+    readonly ModuleDefinition: Coding;
 };
+/**
+ * The type of knowledge asset this library contains.
+ */
+export declare type LibraryTypeValueSetType = typeof LibraryTypeValueSet;
+/**
+ * The type of knowledge asset this library contains.
+ */
+export declare enum LibraryTypeValueSetEnum {
+    /**
+     * asset-collection: The resource is a collection of knowledge assets.
+     */
+    AssetCollection = "asset-collection",
+    /**
+     * logic-library: The resource is a shareable library of formalized knowledge.
+     */
+    LogicLibrary = "logic-library",
+    /**
+     * model-definition: The resource is a definition of an information model.
+     */
+    ModelDefinition = "model-definition",
+    /**
+     * module-definition: The resource defines the dependencies, parameters, and data requirements for a particular module or evaluation context.
+     */
+    ModuleDefinition = "module-definition"
+}
 //# sourceMappingURL=LibraryTypeValueSet.d.ts.map

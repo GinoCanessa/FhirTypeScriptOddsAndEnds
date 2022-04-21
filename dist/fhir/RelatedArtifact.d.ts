@@ -1,105 +1,129 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { RelatedArtifactTypeValueSetType, RelatedArtifactTypeValueSetEnum } from '../fhirValueSets/RelatedArtifactTypeValueSet.js';
 /**
  * Related artifacts such as additional documentation, justification, or bibliographic references.
  */
 export declare type IRelatedArtifact = fhir.IFhirElement & {
     /**
-     * Additional structured information about citations should be captured as extensions.
+     * The type of relationship to the related artifact.
      */
-    citation?: string | undefined;
-    _citation?: fhir.IFhirElement | undefined;
+    type: RelatedArtifactTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.type
+     */
+    _type?: fhir.IFhirElement | undefined;
+    /**
+     * A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.
+     */
+    label?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.label
+     */
+    _label?: fhir.IFhirElement | undefined;
     /**
      * A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.
      */
     display?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.display
+     */
     _display?: fhir.IFhirElement | undefined;
+    /**
+     * Additional structured information about citations should be captured as extensions.
+     */
+    citation?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.citation
+     */
+    _citation?: fhir.IFhirElement | undefined;
+    /**
+     * If a document or resource element is present, this element SHALL NOT be provided (use the url or reference in the Attachment or resource reference).
+     */
+    url?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.url
+     */
+    _url?: fhir.IFhirElement | undefined;
     /**
      * The document being referenced, represented as an attachment. This is exclusive with the resource element.
      */
     document?: fhir.IAttachment | undefined;
     /**
-     * A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.
-     */
-    label?: string | undefined;
-    _label?: fhir.IFhirElement | undefined;
-    /**
      * If the type is predecessor, this is a reference to the succeeding knowledge resource. If the type is successor, this is a reference to the prior knowledge resource.
      */
     resource?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.resource
+     */
     _resource?: fhir.IFhirElement | undefined;
-    /**
-     * The type of relationship to the related artifact.
-     */
-    type: RelatedArtifactTypeEnum | null;
-    _type?: fhir.IFhirElement | undefined;
-    /**
-     * If a document or resource element is present, this element SHALL NOT be provided (use the url or reference in the Attachment or resource reference).
-     */
-    url?: string | undefined;
-    _url?: fhir.IFhirElement | undefined;
 };
 /**
  * Related artifacts such as additional documentation, justification, or bibliographic references.
  */
-export declare class RelatedArtifact extends fhir.FhirElement implements fhir.IRelatedArtifact {
+export declare class RelatedArtifact extends fhir.FhirElement implements IRelatedArtifact {
     /**
-     * Additional structured information about citations should be captured as extensions.
+     * The type of relationship to the related artifact.
      */
-    citation?: string | undefined;
-    _citation?: fhir.FhirElement | undefined;
+    type: RelatedArtifactTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.type
+     */
+    _type?: fhir.FhirElement | undefined;
+    /**
+     * A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.
+     */
+    label?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.label
+     */
+    _label?: fhir.FhirElement | undefined;
     /**
      * A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.
      */
     display?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.display
+     */
     _display?: fhir.FhirElement | undefined;
+    /**
+     * Additional structured information about citations should be captured as extensions.
+     */
+    citation?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.citation
+     */
+    _citation?: fhir.FhirElement | undefined;
+    /**
+     * If a document or resource element is present, this element SHALL NOT be provided (use the url or reference in the Attachment or resource reference).
+     */
+    url?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.url
+     */
+    _url?: fhir.FhirElement | undefined;
     /**
      * The document being referenced, represented as an attachment. This is exclusive with the resource element.
      */
     document?: fhir.Attachment | undefined;
     /**
-     * A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.
-     */
-    label?: string | undefined;
-    _label?: fhir.FhirElement | undefined;
-    /**
      * If the type is predecessor, this is a reference to the succeeding knowledge resource. If the type is successor, this is a reference to the prior knowledge resource.
      */
     resource?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedArtifact.resource
+     */
     _resource?: fhir.FhirElement | undefined;
-    /**
-     * The type of relationship to the related artifact.
-     */
-    type: RelatedArtifactTypeEnum | null;
-    _type?: fhir.FhirElement | undefined;
-    /**
-     * If a document or resource element is present, this element SHALL NOT be provided (use the url or reference in the Attachment or resource reference).
-     */
-    url?: string | undefined;
-    _url?: fhir.FhirElement | undefined;
     /**
      * Default constructor for RelatedArtifact - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IRelatedArtifact>);
+    constructor(source?: Partial<IRelatedArtifact>);
     /**
-     * Check if the current RelatedArtifact contains all required elements.
+     * Required-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeRequiredValueSet(): RelatedArtifactTypeValueSetType;
     /**
-     * Factory function to create a RelatedArtifact from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IRelatedArtifact): RelatedArtifact;
-}
-/**
- * Code Values for the RelatedArtifact.type field
- */
-export declare enum RelatedArtifactTypeEnum {
-    DOCUMENTATION = "documentation",
-    JUSTIFICATION = "justification",
-    CITATION = "citation",
-    PREDECESSOR = "predecessor",
-    SUCCESSOR = "successor",
-    DERIVED_FROM = "derived-from",
-    DEPENDS_ON = "depends-on",
-    COMPOSED_OF = "composed-of"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=RelatedArtifact.d.ts.map

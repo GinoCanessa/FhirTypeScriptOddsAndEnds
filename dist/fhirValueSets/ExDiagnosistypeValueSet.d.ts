@@ -1,55 +1,112 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes example Diagnosis Type codes.
  */
 export declare const ExDiagnosistypeValueSet: {
     /**
-     * The diagnosis given as the reason why the patient was admitted to the hospital.
+     * admitting: The diagnosis given as the reason why the patient was admitted to the hospital.
      */
-    ex_diagnosistype_AdmittingDiagnosis: Coding;
+    readonly AdmittingDiagnosis: Coding;
     /**
-     * A diagnosis made on the basis of medical signs and patient-reported symptoms, rather than diagnostic tests.
+     * clinical: A diagnosis made on the basis of medical signs and patient-reported symptoms, rather than diagnostic tests.
      */
-    ex_diagnosistype_ClinicalDiagnosis: Coding;
+    readonly ClinicalDiagnosis: Coding;
     /**
-     * One of a set of the possible diagnoses that could be connected to the signs, symptoms, and lab findings.
+     * differential: One of a set of the possible diagnoses that could be connected to the signs, symptoms, and lab findings.
      */
-    ex_diagnosistype_DifferentialDiagnosis: Coding;
+    readonly DifferentialDiagnosis: Coding;
     /**
-     * The diagnosis given when the patient is discharged from the hospital.
+     * discharge: The diagnosis given when the patient is discharged from the hospital.
      */
-    ex_diagnosistype_DischargeDiagnosis: Coding;
+    readonly DischargeDiagnosis: Coding;
     /**
-     * A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of the patient.
+     * laboratory: A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of the patient.
      */
-    ex_diagnosistype_LaboratoryDiagnosis: Coding;
+    readonly LaboratoryDiagnosis: Coding;
     /**
-     * A diagnosis which identifies people's responses to situations in their lives, such as a readiness to change or a willingness to accept assistance.
+     * nursing: A diagnosis which identifies people's responses to situations in their lives, such as a readiness to change or a willingness to accept assistance.
      */
-    ex_diagnosistype_NursingDiagnosis: Coding;
+    readonly NursingDiagnosis: Coding;
     /**
-     * A diagnosis determined prior to birth.
+     * prenatal: A diagnosis determined prior to birth.
      */
-    ex_diagnosistype_PrenatalDiagnosis: Coding;
+    readonly PrenatalDiagnosis: Coding;
     /**
-     * The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment.
+     * principal: The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment.
      */
-    ex_diagnosistype_PrincipalDiagnosis: Coding;
+    readonly PrincipalDiagnosis: Coding;
     /**
-     * A diagnosis based primarily on the results from medical imaging studies.
+     * radiology: A diagnosis based primarily on the results from medical imaging studies.
      */
-    ex_diagnosistype_RadiologyDiagnosis: Coding;
+    readonly RadiologyDiagnosis: Coding;
     /**
-     * A diagnosis determined using telemedicine techniques.
+     * remote: A diagnosis determined using telemedicine techniques.
      */
-    ex_diagnosistype_RemoteDiagnosis: Coding;
+    readonly RemoteDiagnosis: Coding;
     /**
-     * The labeling of an illness in a specific historical event using modern knowledge, methods and disease classifications.
+     * retrospective: The labeling of an illness in a specific historical event using modern knowledge, methods and disease classifications.
      */
-    ex_diagnosistype_RetrospectiveDiagnosis: Coding;
+    readonly RetrospectiveDiagnosis: Coding;
     /**
-     * A diagnosis determined by the patient.
+     * self: A diagnosis determined by the patient.
      */
-    ex_diagnosistype_SelfDiagnosis: Coding;
+    readonly SelfDiagnosis: Coding;
 };
+/**
+ * This value set includes example Diagnosis Type codes.
+ */
+export declare type ExDiagnosistypeValueSetType = typeof ExDiagnosistypeValueSet;
+/**
+ * This value set includes example Diagnosis Type codes.
+ */
+export declare enum ExDiagnosistypeValueSetEnum {
+    /**
+     * admitting: The diagnosis given as the reason why the patient was admitted to the hospital.
+     */
+    AdmittingDiagnosis = "admitting",
+    /**
+     * clinical: A diagnosis made on the basis of medical signs and patient-reported symptoms, rather than diagnostic tests.
+     */
+    ClinicalDiagnosis = "clinical",
+    /**
+     * differential: One of a set of the possible diagnoses that could be connected to the signs, symptoms, and lab findings.
+     */
+    DifferentialDiagnosis = "differential",
+    /**
+     * discharge: The diagnosis given when the patient is discharged from the hospital.
+     */
+    DischargeDiagnosis = "discharge",
+    /**
+     * laboratory: A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of the patient.
+     */
+    LaboratoryDiagnosis = "laboratory",
+    /**
+     * nursing: A diagnosis which identifies people's responses to situations in their lives, such as a readiness to change or a willingness to accept assistance.
+     */
+    NursingDiagnosis = "nursing",
+    /**
+     * prenatal: A diagnosis determined prior to birth.
+     */
+    PrenatalDiagnosis = "prenatal",
+    /**
+     * principal: The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment.
+     */
+    PrincipalDiagnosis = "principal",
+    /**
+     * radiology: A diagnosis based primarily on the results from medical imaging studies.
+     */
+    RadiologyDiagnosis = "radiology",
+    /**
+     * remote: A diagnosis determined using telemedicine techniques.
+     */
+    RemoteDiagnosis = "remote",
+    /**
+     * retrospective: The labeling of an illness in a specific historical event using modern knowledge, methods and disease classifications.
+     */
+    RetrospectiveDiagnosis = "retrospective",
+    /**
+     * self: A diagnosis determined by the patient.
+     */
+    SelfDiagnosis = "self"
+}
 //# sourceMappingURL=ExDiagnosistypeValueSet.d.ts.map

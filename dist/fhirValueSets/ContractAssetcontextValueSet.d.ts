@@ -1,11 +1,24 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set contract specific codes for asset context.
  */
 export declare const ContractAssetcontextValueSet: {
     /**
-     * To be completed
+     * custodian: To be completed
      */
-    contract_assetcontext_Custodian: Coding;
+    readonly Custodian: Coding;
 };
+/**
+ * This value set contract specific codes for asset context.
+ */
+export declare type ContractAssetcontextValueSetType = typeof ContractAssetcontextValueSet;
+/**
+ * This value set contract specific codes for asset context.
+ */
+export declare enum ContractAssetcontextValueSetEnum {
+    /**
+     * custodian: To be completed
+     */
+    Custodian = "custodian"
+}
 //# sourceMappingURL=ContractAssetcontextValueSet.d.ts.map

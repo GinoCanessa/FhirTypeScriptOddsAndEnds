@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.
  */
 export declare const MessageReasonEncounterValueSet: {
     /**
-     * The patient has temporarily left the institution.
+     * absent: The patient has temporarily left the institution.
      */
-    message_reason_encounter_Absent: Coding;
+    readonly Absent: Coding;
     /**
-     * The patient has been admitted.
+     * admit: The patient has been admitted.
      */
-    message_reason_encounter_Admit: Coding;
+    readonly Admit: Coding;
     /**
-     * The patient has been discharged.
+     * discharge: The patient has been discharged.
      */
-    message_reason_encounter_Discharge: Coding;
+    readonly Discharge: Coding;
     /**
-     * Encounter details have been updated (e.g. to correct a coding error).
+     * edit: Encounter details have been updated (e.g. to correct a coding error).
      */
-    message_reason_encounter_Edit: Coding;
+    readonly Edit: Coding;
     /**
-     * The patient has been moved to a new location.
+     * moved: The patient has been moved to a new location.
      */
-    message_reason_encounter_Moved: Coding;
+    readonly Moved: Coding;
     /**
-     * The patient has returned from a temporary absence.
+     * return: The patient has returned from a temporary absence.
      */
-    message_reason_encounter_Returned: Coding;
+    readonly Returned: Coding;
 };
+/**
+ * Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.
+ */
+export declare type MessageReasonEncounterValueSetType = typeof MessageReasonEncounterValueSet;
+/**
+ * Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.
+ */
+export declare enum MessageReasonEncounterValueSetEnum {
+    /**
+     * absent: The patient has temporarily left the institution.
+     */
+    Absent = "absent",
+    /**
+     * admit: The patient has been admitted.
+     */
+    Admit = "admit",
+    /**
+     * discharge: The patient has been discharged.
+     */
+    Discharge = "discharge",
+    /**
+     * edit: Encounter details have been updated (e.g. to correct a coding error).
+     */
+    Edit = "edit",
+    /**
+     * moved: The patient has been moved to a new location.
+     */
+    Moved = "moved",
+    /**
+     * return: The patient has returned from a temporary absence.
+     */
+    Returned = "return"
+}
 //# sourceMappingURL=MessageReasonEncounterValueSet.d.ts.map

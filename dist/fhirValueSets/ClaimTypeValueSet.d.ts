@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes Claim Type codes.
  */
 export declare const ClaimTypeValueSet: {
     /**
-     * Hospital, clinic and typically inpatient claims.
+     * institutional: Hospital, clinic and typically inpatient claims.
      */
-    claim_type_Institutional: Coding;
+    readonly Institutional: Coding;
     /**
-     * Dental, Denture and Hygiene claims.
+     * oral: Dental, Denture and Hygiene claims.
      */
-    claim_type_Oral: Coding;
+    readonly Oral: Coding;
     /**
-     * Pharmacy claims for goods and services.
+     * pharmacy: Pharmacy claims for goods and services.
      */
-    claim_type_Pharmacy: Coding;
+    readonly Pharmacy: Coding;
     /**
-     * Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology, rehabilitative, consulting.
+     * professional: Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology, rehabilitative, consulting.
      */
-    claim_type_Professional: Coding;
+    readonly Professional: Coding;
     /**
-     * Vision claims for professional services and products such as glasses and contact lenses.
+     * vision: Vision claims for professional services and products such as glasses and contact lenses.
      */
-    claim_type_Vision: Coding;
+    readonly Vision: Coding;
 };
+/**
+ * This value set includes Claim Type codes.
+ */
+export declare type ClaimTypeValueSetType = typeof ClaimTypeValueSet;
+/**
+ * This value set includes Claim Type codes.
+ */
+export declare enum ClaimTypeValueSetEnum {
+    /**
+     * institutional: Hospital, clinic and typically inpatient claims.
+     */
+    Institutional = "institutional",
+    /**
+     * oral: Dental, Denture and Hygiene claims.
+     */
+    Oral = "oral",
+    /**
+     * pharmacy: Pharmacy claims for goods and services.
+     */
+    Pharmacy = "pharmacy",
+    /**
+     * professional: Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology, rehabilitative, consulting.
+     */
+    Professional = "professional",
+    /**
+     * vision: Vision claims for professional services and products such as glasses and contact lenses.
+     */
+    Vision = "vision"
+}
 //# sourceMappingURL=ClaimTypeValueSet.d.ts.map

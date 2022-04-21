@@ -1,61 +1,65 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { ContributorTypeValueSetType, ContributorTypeValueSetEnum } from '../fhirValueSets/ContributorTypeValueSet.js';
 /**
  * A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
  */
 export declare type IContributor = fhir.IFhirElement & {
     /**
-     * Contact details to assist a user in finding and communicating with the contributor.
+     * The type of contributor.
      */
-    contact?: fhir.IContactDetail[] | undefined;
+    type: ContributorTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Contributor.type
+     */
+    _type?: fhir.IFhirElement | undefined;
     /**
      * The name of the individual or organization responsible for the contribution.
      */
     name: string | null;
+    /**
+     * Extended properties for primitive element: Contributor.name
+     */
     _name?: fhir.IFhirElement | undefined;
     /**
-     * The type of contributor.
+     * Contact details to assist a user in finding and communicating with the contributor.
      */
-    type: ContributorTypeEnum | null;
-    _type?: fhir.IFhirElement | undefined;
+    contact?: fhir.IContactDetail[] | undefined;
 };
 /**
  * A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
  */
-export declare class Contributor extends fhir.FhirElement implements fhir.IContributor {
+export declare class Contributor extends fhir.FhirElement implements IContributor {
+    /**
+     * The type of contributor.
+     */
+    type: ContributorTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Contributor.type
+     */
+    _type?: fhir.FhirElement | undefined;
+    /**
+     * The name of the individual or organization responsible for the contribution.
+     */
+    name: string | null;
+    /**
+     * Extended properties for primitive element: Contributor.name
+     */
+    _name?: fhir.FhirElement | undefined;
     /**
      * Contact details to assist a user in finding and communicating with the contributor.
      */
     contact?: fhir.ContactDetail[] | undefined;
     /**
-     * The name of the individual or organization responsible for the contribution.
-     */
-    name: string | null;
-    _name?: fhir.FhirElement | undefined;
-    /**
-     * The type of contributor.
-     */
-    type: ContributorTypeEnum | null;
-    _type?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for Contributor - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IContributor>);
+    constructor(source?: Partial<IContributor>);
     /**
-     * Check if the current Contributor contains all required elements.
+     * Required-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeRequiredValueSet(): ContributorTypeValueSetType;
     /**
-     * Factory function to create a Contributor from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IContributor): Contributor;
-}
-/**
- * Code Values for the Contributor.type field
- */
-export declare enum ContributorTypeEnum {
-    AUTHOR = "author",
-    EDITOR = "editor",
-    REVIEWER = "reviewer",
-    ENDORSER = "endorser"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Contributor.d.ts.map

@@ -1,10 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * TODO.
  */
 export declare const AdverseEventCausalityMethodValueSet: {
-    adverse_event_causality_method_Bayesian: Coding;
-    adverse_event_causality_method_Checklist: Coding;
-    adverse_event_causality_method_ProbabilityScale: Coding;
+    /**
+     * Code: Bayesian
+     */
+    readonly Bayesian: Coding;
+    /**
+     * Code: Checklist
+     */
+    readonly Checklist: Coding;
+    /**
+     * Code: ProbabilityScale
+     */
+    readonly ProbabilityScale: Coding;
 };
+/**
+ * TODO.
+ */
+export declare type AdverseEventCausalityMethodValueSetType = typeof AdverseEventCausalityMethodValueSet;
+/**
+ * TODO.
+ */
+export declare enum AdverseEventCausalityMethodValueSetEnum {
+    /**
+     * Code: Bayesian
+     */
+    Bayesian = "Bayesian",
+    /**
+     * Code: Checklist
+     */
+    Checklist = "Checklist",
+    /**
+     * Code: ProbabilityScale
+     */
+    ProbabilityScale = "ProbabilityScale"
+}
 //# sourceMappingURL=AdverseEventCausalityMethodValueSet.d.ts.map

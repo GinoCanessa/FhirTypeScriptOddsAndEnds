@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The frequency with which the target must be validated
  */
 export declare const VerificationresultNeedValueSet: {
     /**
-     * ***TODO***
+     * initial: ***TODO***
      */
-    verificationresult_need_Initial: Coding;
+    readonly Initial: Coding;
     /**
-     * ***TODO***
+     * none: ***TODO***
      */
-    verificationresult_need_None: Coding;
+    readonly None: Coding;
     /**
-     * ***TODO***
+     * periodic: ***TODO***
      */
-    verificationresult_need_Periodic: Coding;
+    readonly Periodic: Coding;
 };
+/**
+ * The frequency with which the target must be validated
+ */
+export declare type VerificationresultNeedValueSetType = typeof VerificationresultNeedValueSet;
+/**
+ * The frequency with which the target must be validated
+ */
+export declare enum VerificationresultNeedValueSetEnum {
+    /**
+     * initial: ***TODO***
+     */
+    Initial = "initial",
+    /**
+     * none: ***TODO***
+     */
+    None = "none",
+    /**
+     * periodic: ***TODO***
+     */
+    Periodic = "periodic"
+}
 //# sourceMappingURL=VerificationresultNeedValueSet.d.ts.map

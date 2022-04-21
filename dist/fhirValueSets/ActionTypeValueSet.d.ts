@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of action to be performed.
  */
 export declare const ActionTypeValueSet: {
     /**
-     * The action is to create a new resource.
+     * create: The action is to create a new resource.
      */
-    action_type_Create: Coding;
+    readonly Create: Coding;
     /**
-     * The action is to fire a specific event.
+     * fire-event: The action is to fire a specific event.
      */
-    action_type_FireEvent: Coding;
+    readonly FireEvent: Coding;
     /**
-     * The action is to remove an existing resource.
+     * remove: The action is to remove an existing resource.
      */
-    action_type_Remove: Coding;
+    readonly Remove: Coding;
     /**
-     * The action is to update an existing resource.
+     * update: The action is to update an existing resource.
      */
-    action_type_Update: Coding;
+    readonly Update: Coding;
 };
+/**
+ * The type of action to be performed.
+ */
+export declare type ActionTypeValueSetType = typeof ActionTypeValueSet;
+/**
+ * The type of action to be performed.
+ */
+export declare enum ActionTypeValueSetEnum {
+    /**
+     * create: The action is to create a new resource.
+     */
+    Create = "create",
+    /**
+     * fire-event: The action is to fire a specific event.
+     */
+    FireEvent = "fire-event",
+    /**
+     * remove: The action is to remove an existing resource.
+     */
+    Remove = "remove",
+    /**
+     * update: The action is to update an existing resource.
+     */
+    Update = "update"
+}
 //# sourceMappingURL=ActionTypeValueSet.d.ts.map

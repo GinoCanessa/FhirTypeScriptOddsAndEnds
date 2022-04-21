@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The composite scoring method of the measure.
  */
 export declare const CompositeMeasureScoringValueSet: {
     /**
-     * All-or-nothing scoring includes an individual in the numerator of the composite measure if they are in the numerators of all of the component measures in which they are in the denominator.
+     * all-or-nothing: All-or-nothing scoring includes an individual in the numerator of the composite measure if they are in the numerators of all of the component measures in which they are in the denominator.
      */
-    composite_measure_scoring_AllOrNothing: Coding;
+    readonly AllOrNothing: Coding;
     /**
-     * Linear scoring gives an individual a score based on the number of numerators in which they appear.
+     * linear: Linear scoring gives an individual a score based on the number of numerators in which they appear.
      */
-    composite_measure_scoring_Linear: Coding;
+    readonly Linear: Coding;
     /**
-     * Opportunity scoring combines the scores from component measures by combining the numerators and denominators for each component.
+     * opportunity: Opportunity scoring combines the scores from component measures by combining the numerators and denominators for each component.
      */
-    composite_measure_scoring_Opportunity: Coding;
+    readonly Opportunity: Coding;
     /**
-     * Weighted scoring gives an individual a score based on a weighted factor for each component numerator in which they appear.
+     * weighted: Weighted scoring gives an individual a score based on a weighted factor for each component numerator in which they appear.
      */
-    composite_measure_scoring_Weighted: Coding;
+    readonly Weighted: Coding;
 };
+/**
+ * The composite scoring method of the measure.
+ */
+export declare type CompositeMeasureScoringValueSetType = typeof CompositeMeasureScoringValueSet;
+/**
+ * The composite scoring method of the measure.
+ */
+export declare enum CompositeMeasureScoringValueSetEnum {
+    /**
+     * all-or-nothing: All-or-nothing scoring includes an individual in the numerator of the composite measure if they are in the numerators of all of the component measures in which they are in the denominator.
+     */
+    AllOrNothing = "all-or-nothing",
+    /**
+     * linear: Linear scoring gives an individual a score based on the number of numerators in which they appear.
+     */
+    Linear = "linear",
+    /**
+     * opportunity: Opportunity scoring combines the scores from component measures by combining the numerators and denominators for each component.
+     */
+    Opportunity = "opportunity",
+    /**
+     * weighted: Weighted scoring gives an individual a score based on a weighted factor for each component numerator in which they appear.
+     */
+    Weighted = "weighted"
+}
 //# sourceMappingURL=CompositeMeasureScoringValueSet.d.ts.map

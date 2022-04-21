@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How a capability statement is intended to be used.
  */
 export declare const CapabilityStatementKindValueSet: {
     /**
-     * The CapabilityStatement instance represents the capabilities of a system or piece of software, independent of a particular installation.
+     * capability: The CapabilityStatement instance represents the capabilities of a system or piece of software, independent of a particular installation.
      */
-    capability_statement_kind_Capability: Coding;
+    readonly Capability: Coding;
     /**
-     * The CapabilityStatement instance represents the present capabilities of a specific system instance.  This is the kind returned by /metadata for a FHIR server end-point.
+     * instance: The CapabilityStatement instance represents the present capabilities of a specific system instance.  This is the kind returned by /metadata for a FHIR server end-point.
      */
-    capability_statement_kind_Instance: Coding;
+    readonly Instance: Coding;
     /**
-     * The CapabilityStatement instance represents a set of requirements for other systems to meet; e.g. as part of an implementation guide or 'request for proposal'.
+     * requirements: The CapabilityStatement instance represents a set of requirements for other systems to meet; e.g. as part of an implementation guide or 'request for proposal'.
      */
-    capability_statement_kind_Requirements: Coding;
+    readonly Requirements: Coding;
 };
+/**
+ * How a capability statement is intended to be used.
+ */
+export declare type CapabilityStatementKindValueSetType = typeof CapabilityStatementKindValueSet;
+/**
+ * How a capability statement is intended to be used.
+ */
+export declare enum CapabilityStatementKindValueSetEnum {
+    /**
+     * capability: The CapabilityStatement instance represents the capabilities of a system or piece of software, independent of a particular installation.
+     */
+    Capability = "capability",
+    /**
+     * instance: The CapabilityStatement instance represents the present capabilities of a specific system instance.  This is the kind returned by /metadata for a FHIR server end-point.
+     */
+    Instance = "instance",
+    /**
+     * requirements: The CapabilityStatement instance represents a set of requirements for other systems to meet; e.g. as part of an implementation guide or 'request for proposal'.
+     */
+    Requirements = "requirements"
+}
 //# sourceMappingURL=CapabilityStatementKindValueSet.d.ts.map

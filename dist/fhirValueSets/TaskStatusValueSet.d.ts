@@ -1,55 +1,112 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The current status of the task.
  */
 export declare const TaskStatusValueSet: {
     /**
-     * The potential performer has agreed to execute the task but has not yet started work.
+     * accepted: The potential performer has agreed to execute the task but has not yet started work.
      */
-    task_status_Accepted: Coding;
+    readonly Accepted: Coding;
     /**
-     * The task was not completed.
+     * cancelled: The task was not completed.
      */
-    task_status_Cancelled: Coding;
+    readonly Cancelled: Coding;
     /**
-     * The task has been completed.
+     * completed: The task has been completed.
      */
-    task_status_Completed: Coding;
+    readonly Completed: Coding;
     /**
-     * The task is not yet ready to be acted upon.
+     * draft: The task is not yet ready to be acted upon.
      */
-    task_status_Draft: Coding;
+    readonly Draft: Coding;
     /**
-     * The task should never have existed and is retained only because of the possibility it may have used.
+     * entered-in-error: The task should never have existed and is retained only because of the possibility it may have used.
      */
-    task_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The task was attempted but could not be completed due to some error.
+     * failed: The task was attempted but could not be completed due to some error.
      */
-    task_status_Failed: Coding;
+    readonly Failed: Coding;
     /**
-     * The task has been started but is not yet complete.
+     * in-progress: The task has been started but is not yet complete.
      */
-    task_status_InProgress: Coding;
+    readonly InProgress: Coding;
     /**
-     * The task has been started but work has been paused.
+     * on-hold: The task has been started but work has been paused.
      */
-    task_status_OnHold: Coding;
+    readonly OnHold: Coding;
     /**
-     * The task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given.
+     * ready: The task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given.
      */
-    task_status_Ready: Coding;
+    readonly Ready: Coding;
     /**
-     * A potential performer has claimed ownership of the task and is evaluating whether to perform it.
+     * received: A potential performer has claimed ownership of the task and is evaluating whether to perform it.
      */
-    task_status_Received: Coding;
+    readonly Received: Coding;
     /**
-     * The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action.
+     * rejected: The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action.
      */
-    task_status_Rejected: Coding;
+    readonly Rejected: Coding;
     /**
-     * The task is ready to be acted upon and action is sought.
+     * requested: The task is ready to be acted upon and action is sought.
      */
-    task_status_Requested: Coding;
+    readonly Requested: Coding;
 };
+/**
+ * The current status of the task.
+ */
+export declare type TaskStatusValueSetType = typeof TaskStatusValueSet;
+/**
+ * The current status of the task.
+ */
+export declare enum TaskStatusValueSetEnum {
+    /**
+     * accepted: The potential performer has agreed to execute the task but has not yet started work.
+     */
+    Accepted = "accepted",
+    /**
+     * cancelled: The task was not completed.
+     */
+    Cancelled = "cancelled",
+    /**
+     * completed: The task has been completed.
+     */
+    Completed = "completed",
+    /**
+     * draft: The task is not yet ready to be acted upon.
+     */
+    Draft = "draft",
+    /**
+     * entered-in-error: The task should never have existed and is retained only because of the possibility it may have used.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * failed: The task was attempted but could not be completed due to some error.
+     */
+    Failed = "failed",
+    /**
+     * in-progress: The task has been started but is not yet complete.
+     */
+    InProgress = "in-progress",
+    /**
+     * on-hold: The task has been started but work has been paused.
+     */
+    OnHold = "on-hold",
+    /**
+     * ready: The task is ready to be performed, but no action has yet been taken.  Used in place of requested/received/accepted/rejected when request assignment and acceptance is a given.
+     */
+    Ready = "ready",
+    /**
+     * received: A potential performer has claimed ownership of the task and is evaluating whether to perform it.
+     */
+    Received = "received",
+    /**
+     * rejected: The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action.
+     */
+    Rejected = "rejected",
+    /**
+     * requested: The task is ready to be acted upon and action is sought.
+     */
+    Requested = "requested"
+}
 //# sourceMappingURL=TaskStatusValueSet.d.ts.map

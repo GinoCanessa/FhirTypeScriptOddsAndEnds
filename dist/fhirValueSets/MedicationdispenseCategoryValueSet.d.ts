@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * MedicationDispense Category Codes
  */
 export declare const MedicationdispenseCategoryValueSet: {
     /**
-     * Includes dispenses for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
+     * community: Includes dispenses for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
      */
-    medicationdispense_category_Community: Coding;
+    readonly Community: Coding;
     /**
-     * Includes dispenses for medications created when the patient is being released from a facility.
+     * discharge: Includes dispenses for medications created when the patient is being released from a facility.
      */
-    medicationdispense_category_Discharge: Coding;
+    readonly Discharge: Coding;
     /**
-     * Includes dispenses for medications to be administered or consumed in an inpatient or acute care setting.
+     * inpatient: Includes dispenses for medications to be administered or consumed in an inpatient or acute care setting.
      */
-    medicationdispense_category_Inpatient: Coding;
+    readonly Inpatient: Coding;
     /**
-     * Includes dispenses for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office).
+     * outpatient: Includes dispenses for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office).
      */
-    medicationdispense_category_Outpatient: Coding;
+    readonly Outpatient: Coding;
 };
+/**
+ * MedicationDispense Category Codes
+ */
+export declare type MedicationdispenseCategoryValueSetType = typeof MedicationdispenseCategoryValueSet;
+/**
+ * MedicationDispense Category Codes
+ */
+export declare enum MedicationdispenseCategoryValueSetEnum {
+    /**
+     * community: Includes dispenses for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
+     */
+    Community = "community",
+    /**
+     * discharge: Includes dispenses for medications created when the patient is being released from a facility.
+     */
+    Discharge = "discharge",
+    /**
+     * inpatient: Includes dispenses for medications to be administered or consumed in an inpatient or acute care setting.
+     */
+    Inpatient = "inpatient",
+    /**
+     * outpatient: Includes dispenses for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office).
+     */
+    Outpatient = "outpatient"
+}
 //# sourceMappingURL=MedicationdispenseCategoryValueSet.d.ts.map

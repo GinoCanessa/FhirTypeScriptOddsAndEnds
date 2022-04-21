@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The mode of a RESTful capability statement.
  */
 export declare const RestfulCapabilityModeValueSet: {
     /**
-     * The application acts as a client for this resource.
+     * client: The application acts as a client for this resource.
      */
-    restful_capability_mode_Client: Coding;
+    readonly Client: Coding;
     /**
-     * The application acts as a server for this resource.
+     * server: The application acts as a server for this resource.
      */
-    restful_capability_mode_Server: Coding;
+    readonly Server: Coding;
 };
+/**
+ * The mode of a RESTful capability statement.
+ */
+export declare type RestfulCapabilityModeValueSetType = typeof RestfulCapabilityModeValueSet;
+/**
+ * The mode of a RESTful capability statement.
+ */
+export declare enum RestfulCapabilityModeValueSetEnum {
+    /**
+     * client: The application acts as a client for this resource.
+     */
+    Client = "client",
+    /**
+     * server: The application acts as a server for this resource.
+     */
+    Server = "server"
+}
 //# sourceMappingURL=RestfulCapabilityModeValueSet.d.ts.map

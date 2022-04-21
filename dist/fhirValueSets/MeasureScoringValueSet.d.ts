@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The scoring type of the measure.
  */
 export declare const MeasureScoringValueSet: {
     /**
-     * The measure is a cohort definition.
+     * cohort: The measure is a cohort definition.
      */
-    measure_scoring_Cohort: Coding;
+    readonly Cohort: Coding;
     /**
-     * The score is defined by a calculation of some quantity.
+     * continuous-variable: The score is defined by a calculation of some quantity.
      */
-    measure_scoring_ContinuousVariable: Coding;
+    readonly ContinuousVariable: Coding;
     /**
-     * The measure score is defined using a proportion.
+     * proportion: The measure score is defined using a proportion.
      */
-    measure_scoring_Proportion: Coding;
+    readonly Proportion: Coding;
     /**
-     * The measure score is defined using a ratio.
+     * ratio: The measure score is defined using a ratio.
      */
-    measure_scoring_Ratio: Coding;
+    readonly Ratio: Coding;
 };
+/**
+ * The scoring type of the measure.
+ */
+export declare type MeasureScoringValueSetType = typeof MeasureScoringValueSet;
+/**
+ * The scoring type of the measure.
+ */
+export declare enum MeasureScoringValueSetEnum {
+    /**
+     * cohort: The measure is a cohort definition.
+     */
+    Cohort = "cohort",
+    /**
+     * continuous-variable: The score is defined by a calculation of some quantity.
+     */
+    ContinuousVariable = "continuous-variable",
+    /**
+     * proportion: The measure score is defined using a proportion.
+     */
+    Proportion = "proportion",
+    /**
+     * ratio: The measure score is defined using a ratio.
+     */
+    Ratio = "ratio"
+}
 //# sourceMappingURL=MeasureScoringValueSet.d.ts.map

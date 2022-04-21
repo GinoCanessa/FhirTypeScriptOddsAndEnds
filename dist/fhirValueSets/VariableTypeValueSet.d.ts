@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The possible types of variables for exposures or outcomes (E.g. Dichotomous, Continuous, Descriptive).
  */
 export declare const VariableTypeValueSet: {
     /**
-     * The variable is a continuous result such as a quantity.
+     * continuous: The variable is a continuous result such as a quantity.
      */
-    variable_type_Continuous: Coding;
+    readonly Continuous: Coding;
     /**
-     * The variable is described narratively rather than quantitatively.
+     * descriptive: The variable is described narratively rather than quantitatively.
      */
-    variable_type_Descriptive: Coding;
+    readonly Descriptive: Coding;
     /**
-     * The variable is dichotomous, such as present or absent.
+     * dichotomous: The variable is dichotomous, such as present or absent.
      */
-    variable_type_Dichotomous: Coding;
+    readonly Dichotomous: Coding;
 };
+/**
+ * The possible types of variables for exposures or outcomes (E.g. Dichotomous, Continuous, Descriptive).
+ */
+export declare type VariableTypeValueSetType = typeof VariableTypeValueSet;
+/**
+ * The possible types of variables for exposures or outcomes (E.g. Dichotomous, Continuous, Descriptive).
+ */
+export declare enum VariableTypeValueSetEnum {
+    /**
+     * continuous: The variable is a continuous result such as a quantity.
+     */
+    Continuous = "continuous",
+    /**
+     * descriptive: The variable is described narratively rather than quantitatively.
+     */
+    Descriptive = "descriptive",
+    /**
+     * dichotomous: The variable is dichotomous, such as present or absent.
+     */
+    Dichotomous = "dichotomous"
+}
 //# sourceMappingURL=VariableTypeValueSet.d.ts.map

@@ -1,41 +1,65 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { DiscriminatorTypeValueSetType, DiscriminatorTypeValueSetEnum } from '../fhirValueSets/DiscriminatorTypeValueSet.js';
+import { ResourceSlicingRulesValueSetType, ResourceSlicingRulesValueSetEnum } from '../fhirValueSets/ResourceSlicingRulesValueSet.js';
+import { DefinedTypesValueSetType } from '../fhirValueSets/DefinedTypesValueSet.js';
+import { ResourceAggregationModeValueSetType, ResourceAggregationModeValueSetEnum } from '../fhirValueSets/ResourceAggregationModeValueSet.js';
+import { ReferenceVersionRulesValueSetType, ReferenceVersionRulesValueSetEnum } from '../fhirValueSets/ReferenceVersionRulesValueSet.js';
+import { ConstraintSeverityValueSetType, ConstraintSeverityValueSetEnum } from '../fhirValueSets/ConstraintSeverityValueSet.js';
+import { BindingStrengthValueSetType, BindingStrengthValueSetEnum } from '../fhirValueSets/BindingStrengthValueSet.js';
+import { PropertyRepresentationValueSetType, PropertyRepresentationValueSetEnum } from '../fhirValueSets/PropertyRepresentationValueSet.js';
+import { ObservationCodesValueSetType } from '../fhirValueSets/ObservationCodesValueSet.js';
 /**
  * If there is no discriminator, the content is hard to process, so this should be avoided.
  */
 export declare type IElementDefinitionSlicingDiscriminator = fhir.IFhirElement & {
     /**
+     * How the element value is interpreted when discrimination is evaluated.
+     */
+    type: DiscriminatorTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.slicing.discriminator.type
+     */
+    _type?: fhir.IFhirElement | undefined;
+    /**
      * The only FHIRPath functions that are allowed are as(type), resolve(), and extension(url).
      */
     path: string | null;
-    _path?: fhir.IFhirElement | undefined;
     /**
-     * How the element value is interpreted when discrimination is evaluated.
+     * Extended properties for primitive element: ElementDefinition.slicing.discriminator.path
      */
-    type: ElementDefinitionSlicingDiscriminatorTypeEnum | null;
-    _type?: fhir.IFhirElement | undefined;
+    _path?: fhir.IFhirElement | undefined;
 };
 /**
  * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
  */
 export declare type IElementDefinitionSlicing = fhir.IFhirElement & {
     /**
-     * If it's really not possible to differentiate them, the design should be re-evaluated to make the content usable.
-     */
-    description?: string | undefined;
-    _description?: fhir.IFhirElement | undefined;
-    /**
      * If there is no discriminator, the content is hard to process, so this should be avoided.
      */
     discriminator?: fhir.IElementDefinitionSlicingDiscriminator[] | undefined;
     /**
+     * If it's really not possible to differentiate them, the design should be re-evaluated to make the content usable.
+     */
+    description?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.slicing.description
+     */
+    _description?: fhir.IFhirElement | undefined;
+    /**
      * Order should only be required when it is a pressing concern for presentation. Profile authors should consider making the order a feature of the rules about the narrative, not the rules about the data - requiring ordered data makes the profile much less re-usable.
      */
     ordered?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.slicing.ordered
+     */
     _ordered?: fhir.IFhirElement | undefined;
     /**
      * Allowing additional elements makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile.
      */
-    rules: ElementDefinitionSlicingRulesEnum | null;
+    rules: ResourceSlicingRulesValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.slicing.rules
+     */
     _rules?: fhir.IFhirElement | undefined;
 };
 /**
@@ -43,49 +67,73 @@ export declare type IElementDefinitionSlicing = fhir.IFhirElement & {
  */
 export declare type IElementDefinitionBase = fhir.IFhirElement & {
     /**
-     * This is provided to code generation, since the serialization representation in JSON differs depending on whether the base element has max &gt; 1. Also, some forms of code generation may differ.
+     * The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](structuredefinition.html#) without a StructureDefinition.base.
      */
-    max: string | null;
-    _max?: fhir.IFhirElement | undefined;
+    path: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.base.path
+     */
+    _path?: fhir.IFhirElement | undefined;
     /**
      * This is provided for consistency with max, and may affect code generation of mandatory elements of the base resource are generated differently (some reference implementations have done this).
      */
     min: number | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.base.min
+     */
     _min?: fhir.IFhirElement | undefined;
     /**
-     * The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](structuredefinition.html#) without a StructureDefinition.base.
+     * This is provided to code generation, since the serialization representation in JSON differs depending on whether the base element has max &gt; 1. Also, some forms of code generation may differ.
      */
-    path: string | null;
-    _path?: fhir.IFhirElement | undefined;
+    max: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.base.max
+     */
+    _max?: fhir.IFhirElement | undefined;
 };
 /**
  * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
  */
 export declare type IElementDefinitionType = fhir.IFhirElement & {
     /**
-     * See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
-     */
-    aggregation?: ElementDefinitionTypeAggregationEnum[] | undefined;
-    _aggregation?: fhir.IFhirElement[] | undefined;
-    /**
      * If the element is a reference to another resource, this element contains "Reference", and the targetProfile element defines what resources can be referenced. The targetProfile may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient).
      */
     code: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.code
+     */
     _code?: fhir.IFhirElement | undefined;
     /**
      * It is possible to profile  backbone element (e.g. part of a resource), using the [profile-element](extension-elementdefinition-profile-element.html) extension.
      */
     profile?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.profile
+     */
     _profile?: fhir.IFhirElement[] | undefined;
     /**
      * Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.
      */
     targetProfile?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.targetProfile
+     */
     _targetProfile?: fhir.IFhirElement[] | undefined;
+    /**
+     * See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
+     */
+    aggregation?: ResourceAggregationModeValueSetEnum[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.aggregation
+     */
+    _aggregation?: fhir.IFhirElement[] | undefined;
     /**
      * The base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
      */
-    versioning?: ElementDefinitionTypeVersioningEnum | undefined;
+    versioning?: ReferenceVersionRulesValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.versioning
+     */
     _versioning?: fhir.IFhirElement | undefined;
 };
 /**
@@ -96,101 +144,161 @@ export declare type IElementDefinitionExample = fhir.IFhirElement & {
      * Describes the purpose of this example amoung the set of examples.
      */
     label: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.label
+     */
     _label?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueBase64Binary?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueBoolean?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueCanonical?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueCode?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueDate?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueDateTime?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueDecimal?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueId?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueInstant?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueInteger?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueMarkdown?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueOid?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valuePositiveInt?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueString?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueTime?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueUri?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueUrl?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueUuid?: fhir.IFhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
@@ -322,59 +430,89 @@ export declare type IElementDefinitionExample = fhir.IFhirElement & {
  */
 export declare type IElementDefinitionConstraint = fhir.IFhirElement & {
     /**
-     * In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.
-     */
-    expression?: string | undefined;
-    _expression?: fhir.IFhirElement | undefined;
-    /**
-     * Should be expressed in business terms as much as possible.
-     */
-    human: string | null;
-    _human?: fhir.IFhirElement | undefined;
-    /**
      * Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
      */
     key: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.key
+     */
     _key?: fhir.IFhirElement | undefined;
     /**
      * To be used if the reason for the constraint might not be intuitive to all implementers.
      */
     requirements?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.requirements
+     */
     _requirements?: fhir.IFhirElement | undefined;
     /**
      * This allows constraints to be asserted as "shall" (error) and "should" (warning).
      */
-    severity: ElementDefinitionConstraintSeverityEnum | null;
+    severity: ConstraintSeverityValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.severity
+     */
     _severity?: fhir.IFhirElement | undefined;
     /**
-     * This is used when, e.g. rendering, where it is not useful to present inherited constraints when rendering the snapshot.
+     * Should be expressed in business terms as much as possible.
      */
-    source?: string | undefined;
-    _source?: fhir.IFhirElement | undefined;
+    human: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.human
+     */
+    _human?: fhir.IFhirElement | undefined;
+    /**
+     * In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.
+     */
+    expression?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.expression
+     */
+    _expression?: fhir.IFhirElement | undefined;
     /**
      * Elements SHALL use "f" as the namespace prefix for the FHIR namespace, and "x" for the xhtml namespace, and SHALL NOT use any other prefixes.     Note: XPath is generally considered not useful because it does not apply to JSON and other formats and because of XSLT implementation issues, and may be removed in the future.
      */
     xpath?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.xpath
+     */
     _xpath?: fhir.IFhirElement | undefined;
+    /**
+     * This is used when, e.g. rendering, where it is not useful to present inherited constraints when rendering the snapshot.
+     */
+    source?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.source
+     */
+    _source?: fhir.IFhirElement | undefined;
 };
 /**
  * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
  */
 export declare type IElementDefinitionBinding = fhir.IFhirElement & {
     /**
+     * For further discussion, see [Using Terminologies](terminologies.html).
+     */
+    strength: BindingStrengthValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.binding.strength
+     */
+    _strength?: fhir.IFhirElement | undefined;
+    /**
      * Describes the intended use of this particular set of codes.
      */
     description?: string | undefined;
-    _description?: fhir.IFhirElement | undefined;
     /**
-     * For further discussion, see [Using Terminologies](terminologies.html).
+     * Extended properties for primitive element: ElementDefinition.binding.description
      */
-    strength: ElementDefinitionBindingStrengthEnum | null;
-    _strength?: fhir.IFhirElement | undefined;
+    _description?: fhir.IFhirElement | undefined;
     /**
      * The reference may be version-specific or not (e.g. have a |[version] at the end of the canonical URL).
      */
     valueSet?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.binding.valueSet
+     */
     _valueSet?: fhir.IFhirElement | undefined;
 };
 /**
@@ -382,179 +520,332 @@ export declare type IElementDefinitionBinding = fhir.IFhirElement & {
  */
 export declare type IElementDefinitionMapping = fhir.IFhirElement & {
     /**
-     * Comments that provide information about the mapping or its use.
-     */
-    comment?: string | undefined;
-    _comment?: fhir.IFhirElement | undefined;
-    /**
      * An internal reference to the definition of a mapping.
      */
     identity: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mapping.identity
+     */
     _identity?: fhir.IFhirElement | undefined;
     /**
      * If omitted, then there can be no expectation of computational interpretation of the mapping.
      */
     language?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mapping.language
+     */
     _language?: fhir.IFhirElement | undefined;
     /**
      * For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies.
      */
     map: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mapping.map
+     */
     _map?: fhir.IFhirElement | undefined;
+    /**
+     * Comments that provide information about the mapping or its use.
+     */
+    comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mapping.comment
+     */
+    _comment?: fhir.IFhirElement | undefined;
 };
 /**
  * Captures constraints on each element within the resource, profile, or extension.
  */
 export declare type IElementDefinition = fhir.IBackboneElement & {
     /**
-     * Identifies additional names by which this element might also be known.
+     * The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
      */
-    alias?: string[] | undefined;
-    _alias?: fhir.IFhirElement[] | undefined;
+    path: string | null;
     /**
-     * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
+     * Extended properties for primitive element: ElementDefinition.path
      */
-    base?: fhir.IElementDefinitionBase | undefined;
+    _path?: fhir.IFhirElement | undefined;
     /**
-     * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
+     * In resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.).
      */
-    binding?: fhir.IElementDefinitionBinding | undefined;
+    representation?: PropertyRepresentationValueSetEnum[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.representation
+     */
+    _representation?: fhir.IFhirElement[] | undefined;
+    /**
+     * The name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.).
+     */
+    sliceName?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.sliceName
+     */
+    _sliceName?: fhir.IFhirElement | undefined;
+    /**
+     * If set to true, an ancestor profile SHALL have a slicing definition with this name.  If set to false, no ancestor profile is permitted to have a slicing definition with this name.
+     */
+    sliceIsConstraining?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.sliceIsConstraining
+     */
+    _sliceIsConstraining?: fhir.IFhirElement | undefined;
+    /**
+     * See also the extension (http://hl7.org/fhir/StructureDefinition/elementdefinition-question)[extension-elementdefinition-question.html].
+     */
+    label?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.label
+     */
+    _label?: fhir.IFhirElement | undefined;
     /**
      * The concept SHALL be properly aligned with the data element definition and other constraints, as defined in the code system, including relationships, of any code listed here.  Where multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself. The mappings may be used to provide more or less granular or structured equivalences in the code system.
      */
     code?: fhir.ICoding[] | undefined;
     /**
+     * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
+     */
+    slicing?: fhir.IElementDefinitionSlicing | undefined;
+    /**
+     * It is easy for a different short definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing short definitions in a profile.
+     */
+    short?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.short
+     */
+    _short?: fhir.IFhirElement | undefined;
+    /**
+     * It is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions in a profile.
+     */
+    definition?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.definition
+     */
+    _definition?: fhir.IFhirElement | undefined;
+    /**
      * If it is possible to capture usage rules using constraints, that mechanism should be used in preference to this element.
      */
     comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.comment
+     */
     _comment?: fhir.IFhirElement | undefined;
     /**
-     * A reference to an invariant that may make additional statements about the cardinality or value in the instance.
+     * This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.
      */
-    condition?: string[] | undefined;
-    _condition?: fhir.IFhirElement[] | undefined;
+    requirements?: string | undefined;
     /**
-     * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
+     * Extended properties for primitive element: ElementDefinition.requirements
      */
-    constraint?: fhir.IElementDefinitionConstraint[] | undefined;
+    _requirements?: fhir.IFhirElement | undefined;
+    /**
+     * Identifies additional names by which this element might also be known.
+     */
+    alias?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.alias
+     */
+    _alias?: fhir.IFhirElement[] | undefined;
+    /**
+     * The minimum number of times this element SHALL appear in the instance.
+     */
+    min?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.min
+     */
+    _min?: fhir.IFhirElement | undefined;
+    /**
+     * The maximum number of times this element is permitted to appear in the instance.
+     */
+    max?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.max
+     */
+    _max?: fhir.IFhirElement | undefined;
+    /**
+     * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
+     */
+    base?: fhir.IElementDefinitionBase | undefined;
     /**
      * ContentReferences can only be defined in specializations, not constrained types, and they cannot be changed and always reference the non-constrained definition.
      */
     contentReference?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.contentReference
+     */
     _contentReference?: fhir.IFhirElement | undefined;
+    /**
+     * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
+     */
+    type?: fhir.IElementDefinitionType[] | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueBase64Binary?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueBoolean?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueCanonical?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueCode?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueDate?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueDateTime?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueDecimal?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueId?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueInstant?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueInteger?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueMarkdown?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueOid?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValuePositiveInt?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueString?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueTime?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueUri?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueUrl?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueUuid?: fhir.IFhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
@@ -712,108 +1003,172 @@ export declare type IElementDefinition = fhir.IBackboneElement & {
      */
     defaultValueMeta?: fhir.IMeta | undefined;
     /**
-     * It is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions in a profile.
+     * Implicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope.
      */
-    definition?: string | undefined;
-    _definition?: fhir.IFhirElement | undefined;
+    meaningWhenMissing?: string | undefined;
     /**
-     * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
+     * Extended properties for primitive element: ElementDefinition.meaningWhenMissing
      */
-    example?: fhir.IElementDefinitionExample[] | undefined;
+    _meaningWhenMissing?: fhir.IFhirElement | undefined;
+    /**
+     * This element can only be asserted on repeating elements and can only be introduced when defining resources or data types.  It can be further refined profiled elements but if absent in the base type, a profile cannot assert meaning.
+     */
+    orderMeaning?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.orderMeaning
+     */
+    _orderMeaning?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedBase64Binary?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedBoolean?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedCanonical?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedCode?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedDate?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedDateTime?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedDecimal?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedId?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedId?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedInstant?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedInteger?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedMarkdown?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedOid?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedPositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedPositiveInt?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedString?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedTime?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedUri?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedUrl?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedUuid?: fhir.IFhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
@@ -940,246 +1295,156 @@ export declare type IElementDefinition = fhir.IBackboneElement & {
      */
     fixedMeta?: fhir.IMeta | undefined;
     /**
-     * Only the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles. An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear.
-     */
-    isModifier?: boolean | undefined;
-    _isModifier?: fhir.IFhirElement | undefined;
-    /**
-     * Explains how that element affects the interpretation of the resource or element that contains it.
-     */
-    isModifierReason?: string | undefined;
-    _isModifierReason?: fhir.IFhirElement | undefined;
-    /**
-     * Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance, so servers might not support per-profile use of the isSummary flag. When a request is made with _summary=true, serailisers only include elements marked as 'isSummary = true'. Other than Attachment.data, all data type properties are included in the summary form. In resource and data type definitions, if an element is at the root or has a parent that is 'mustSupport' and the minimum cardinality is 1 or the element is a modifier, it must be marked as isSummary=true.
-     */
-    isSummary?: boolean | undefined;
-    _isSummary?: fhir.IFhirElement | undefined;
-    /**
-     * See also the extension (http://hl7.org/fhir/StructureDefinition/elementdefinition-question)[extension-elementdefinition-question.html].
-     */
-    label?: string | undefined;
-    _label?: fhir.IFhirElement | undefined;
-    /**
-     * Mappings are not necessarily specific enough for safe translation.
-     */
-    mapping?: fhir.IElementDefinitionMapping[] | undefined;
-    /**
-     * The maximum number of times this element is permitted to appear in the instance.
-     */
-    max?: string | undefined;
-    _max?: fhir.IFhirElement | undefined;
-    /**
-     * Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.
-     */
-    maxLength?: number | undefined;
-    _maxLength?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueDate?: string | undefined;
-    _maxValueDate?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueDateTime?: string | undefined;
-    _maxValueDateTime?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueInstant?: string | undefined;
-    _maxValueInstant?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueTime?: string | undefined;
-    _maxValueTime?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueDecimal?: number | undefined;
-    _maxValueDecimal?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueInteger?: number | undefined;
-    _maxValueInteger?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValuePositiveInt?: number | undefined;
-    _maxValuePositiveInt?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueUnsignedInt?: number | undefined;
-    _maxValueUnsignedInt?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueQuantity?: fhir.IQuantity | undefined;
-    /**
-     * Implicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope.
-     */
-    meaningWhenMissing?: string | undefined;
-    _meaningWhenMissing?: fhir.IFhirElement | undefined;
-    /**
-     * The minimum number of times this element SHALL appear in the instance.
-     */
-    min?: number | undefined;
-    _min?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueDate?: string | undefined;
-    _minValueDate?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueDateTime?: string | undefined;
-    _minValueDateTime?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueInstant?: string | undefined;
-    _minValueInstant?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueTime?: string | undefined;
-    _minValueTime?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueDecimal?: number | undefined;
-    _minValueDecimal?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueInteger?: number | undefined;
-    _minValueInteger?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValuePositiveInt?: number | undefined;
-    _minValuePositiveInt?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueUnsignedInt?: number | undefined;
-    _minValueUnsignedInt?: fhir.IFhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueQuantity?: fhir.IQuantity | undefined;
-    /**
-     * "Something useful" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make musSupport = true if it is false in the base type but cannot make mustSupport = false if it is true in the base type.   This is done in [Resource Profiles](profiling.html#mustsupport), where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
-     */
-    mustSupport?: boolean | undefined;
-    _mustSupport?: fhir.IFhirElement | undefined;
-    /**
-     * This element can only be asserted on repeating elements and can only be introduced when defining resources or data types.  It can be further refined profiled elements but if absent in the base type, a profile cannot assert meaning.
-     */
-    orderMeaning?: string | undefined;
-    _orderMeaning?: fhir.IFhirElement | undefined;
-    /**
-     * The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
-     */
-    path: string | null;
-    _path?: fhir.IFhirElement | undefined;
-    /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternBase64Binary?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternBoolean?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternCanonical?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternCode?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternDate?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternDateTime?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternDecimal?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternId?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternId?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternInstant?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternInteger?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternMarkdown?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternOid?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternPositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternPositiveInt?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternString?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternTime?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternUri?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternUrl?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternUuid?: fhir.IFhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
@@ -1306,279 +1571,549 @@ export declare type IElementDefinition = fhir.IBackboneElement & {
      */
     patternMeta?: fhir.IMeta | undefined;
     /**
-     * In resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.).
+     * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
      */
-    representation?: ElementDefinitionRepresentationEnum[] | undefined;
-    _representation?: fhir.IFhirElement[] | undefined;
+    example?: fhir.IElementDefinitionExample[] | undefined;
     /**
-     * This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
      */
-    requirements?: string | undefined;
-    _requirements?: fhir.IFhirElement | undefined;
+    minValueDate?: string | undefined;
     /**
-     * It is easy for a different short definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing short definitions in a profile.
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
      */
-    short?: string | undefined;
-    _short?: fhir.IFhirElement | undefined;
+    _minValueDate?: fhir.IFhirElement | undefined;
     /**
-     * If set to true, an ancestor profile SHALL have a slicing definition with this name.  If set to false, no ancestor profile is permitted to have a slicing definition with this name.
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
      */
-    sliceIsConstraining?: boolean | undefined;
-    _sliceIsConstraining?: fhir.IFhirElement | undefined;
+    minValueDateTime?: string | undefined;
     /**
-     * The name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.).
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
      */
-    sliceName?: string | undefined;
-    _sliceName?: fhir.IFhirElement | undefined;
+    _minValueDateTime?: fhir.IFhirElement | undefined;
     /**
-     * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
      */
-    slicing?: fhir.IElementDefinitionSlicing | undefined;
+    minValueInstant?: string | undefined;
     /**
-     * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
      */
-    type?: fhir.IElementDefinitionType[] | undefined;
+    _minValueInstant?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValueTime?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValueDecimal?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValueInteger?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValuePositiveInt?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValueUnsignedInt?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueQuantity?: fhir.IQuantity | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueDate?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueDateTime?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueInstant?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueTime?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueDecimal?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueInteger?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValuePositiveInt?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueUnsignedInt?: fhir.IFhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueQuantity?: fhir.IQuantity | undefined;
+    /**
+     * Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.
+     */
+    maxLength?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxLength
+     */
+    _maxLength?: fhir.IFhirElement | undefined;
+    /**
+     * A reference to an invariant that may make additional statements about the cardinality or value in the instance.
+     */
+    condition?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.condition
+     */
+    _condition?: fhir.IFhirElement[] | undefined;
+    /**
+     * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
+     */
+    constraint?: fhir.IElementDefinitionConstraint[] | undefined;
+    /**
+     * "Something useful" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make musSupport = true if it is false in the base type but cannot make mustSupport = false if it is true in the base type.   This is done in [Resource Profiles](profiling.html#mustsupport), where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
+     */
+    mustSupport?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mustSupport
+     */
+    _mustSupport?: fhir.IFhirElement | undefined;
+    /**
+     * Only the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles. An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear.
+     */
+    isModifier?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.isModifier
+     */
+    _isModifier?: fhir.IFhirElement | undefined;
+    /**
+     * Explains how that element affects the interpretation of the resource or element that contains it.
+     */
+    isModifierReason?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.isModifierReason
+     */
+    _isModifierReason?: fhir.IFhirElement | undefined;
+    /**
+     * Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance, so servers might not support per-profile use of the isSummary flag. When a request is made with _summary=true, serailisers only include elements marked as 'isSummary = true'. Other than Attachment.data, all data type properties are included in the summary form. In resource and data type definitions, if an element is at the root or has a parent that is 'mustSupport' and the minimum cardinality is 1 or the element is a modifier, it must be marked as isSummary=true.
+     */
+    isSummary?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.isSummary
+     */
+    _isSummary?: fhir.IFhirElement | undefined;
+    /**
+     * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
+     */
+    binding?: fhir.IElementDefinitionBinding | undefined;
+    /**
+     * Mappings are not necessarily specific enough for safe translation.
+     */
+    mapping?: fhir.IElementDefinitionMapping[] | undefined;
 };
 /**
  * If there is no discriminator, the content is hard to process, so this should be avoided.
  */
-export declare class ElementDefinitionSlicingDiscriminator extends fhir.FhirElement implements fhir.IElementDefinitionSlicingDiscriminator {
+export declare class ElementDefinitionSlicingDiscriminator extends fhir.FhirElement implements IElementDefinitionSlicingDiscriminator {
+    /**
+     * How the element value is interpreted when discrimination is evaluated.
+     */
+    type: DiscriminatorTypeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.slicing.discriminator.type
+     */
+    _type?: fhir.FhirElement | undefined;
     /**
      * The only FHIRPath functions that are allowed are as(type), resolve(), and extension(url).
      */
     path: string | null;
-    _path?: fhir.FhirElement | undefined;
     /**
-     * How the element value is interpreted when discrimination is evaluated.
+     * Extended properties for primitive element: ElementDefinition.slicing.discriminator.path
      */
-    type: ElementDefinitionSlicingDiscriminatorTypeEnum | null;
-    _type?: fhir.FhirElement | undefined;
+    _path?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ElementDefinitionSlicingDiscriminator - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IElementDefinitionSlicingDiscriminator>);
+    constructor(source?: Partial<IElementDefinitionSlicingDiscriminator>);
     /**
-     * Check if the current ElementDefinitionSlicingDiscriminator contains all required elements.
+     * Required-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeRequiredValueSet(): DiscriminatorTypeValueSetType;
     /**
-     * Factory function to create a ElementDefinitionSlicingDiscriminator from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IElementDefinitionSlicingDiscriminator): ElementDefinitionSlicingDiscriminator;
+    doModelValidation(): [string, string][];
 }
 /**
  * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
  */
-export declare class ElementDefinitionSlicing extends fhir.FhirElement implements fhir.IElementDefinitionSlicing {
-    /**
-     * If it's really not possible to differentiate them, the design should be re-evaluated to make the content usable.
-     */
-    description?: string | undefined;
-    _description?: fhir.FhirElement | undefined;
+export declare class ElementDefinitionSlicing extends fhir.FhirElement implements IElementDefinitionSlicing {
     /**
      * If there is no discriminator, the content is hard to process, so this should be avoided.
      */
     discriminator?: fhir.ElementDefinitionSlicingDiscriminator[] | undefined;
     /**
+     * If it's really not possible to differentiate them, the design should be re-evaluated to make the content usable.
+     */
+    description?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.slicing.description
+     */
+    _description?: fhir.FhirElement | undefined;
+    /**
      * Order should only be required when it is a pressing concern for presentation. Profile authors should consider making the order a feature of the rules about the narrative, not the rules about the data - requiring ordered data makes the profile much less re-usable.
      */
     ordered?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.slicing.ordered
+     */
     _ordered?: fhir.FhirElement | undefined;
     /**
      * Allowing additional elements makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile.
      */
-    rules: ElementDefinitionSlicingRulesEnum | null;
+    rules: ResourceSlicingRulesValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.slicing.rules
+     */
     _rules?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ElementDefinitionSlicing - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IElementDefinitionSlicing>);
+    constructor(source?: Partial<IElementDefinitionSlicing>);
     /**
-     * Check if the current ElementDefinitionSlicing contains all required elements.
+     * Required-bound Value Set for rules
      */
-    checkRequiredElements(): string[];
+    rulesRequiredValueSet(): ResourceSlicingRulesValueSetType;
     /**
-     * Factory function to create a ElementDefinitionSlicing from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IElementDefinitionSlicing): ElementDefinitionSlicing;
+    doModelValidation(): [string, string][];
 }
 /**
  * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
  */
-export declare class ElementDefinitionBase extends fhir.FhirElement implements fhir.IElementDefinitionBase {
-    /**
-     * This is provided to code generation, since the serialization representation in JSON differs depending on whether the base element has max &gt; 1. Also, some forms of code generation may differ.
-     */
-    max: string | null;
-    _max?: fhir.FhirElement | undefined;
-    /**
-     * This is provided for consistency with max, and may affect code generation of mandatory elements of the base resource are generated differently (some reference implementations have done this).
-     */
-    min: number | null;
-    _min?: fhir.FhirElement | undefined;
+export declare class ElementDefinitionBase extends fhir.FhirElement implements IElementDefinitionBase {
     /**
      * The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](structuredefinition.html#) without a StructureDefinition.base.
      */
     path: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.base.path
+     */
     _path?: fhir.FhirElement | undefined;
+    /**
+     * This is provided for consistency with max, and may affect code generation of mandatory elements of the base resource are generated differently (some reference implementations have done this).
+     */
+    min: number | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.base.min
+     */
+    _min?: fhir.FhirElement | undefined;
+    /**
+     * This is provided to code generation, since the serialization representation in JSON differs depending on whether the base element has max &gt; 1. Also, some forms of code generation may differ.
+     */
+    max: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.base.max
+     */
+    _max?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ElementDefinitionBase - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IElementDefinitionBase>);
+    constructor(source?: Partial<IElementDefinitionBase>);
     /**
-     * Check if the current ElementDefinitionBase contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ElementDefinitionBase from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IElementDefinitionBase): ElementDefinitionBase;
+    doModelValidation(): [string, string][];
 }
 /**
  * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
  */
-export declare class ElementDefinitionType extends fhir.FhirElement implements fhir.IElementDefinitionType {
-    /**
-     * See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
-     */
-    aggregation?: ElementDefinitionTypeAggregationEnum[] | undefined;
-    _aggregation?: fhir.FhirElement[] | undefined;
+export declare class ElementDefinitionType extends fhir.FhirElement implements IElementDefinitionType {
     /**
      * If the element is a reference to another resource, this element contains "Reference", and the targetProfile element defines what resources can be referenced. The targetProfile may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient).
      */
     code: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.code
+     */
     _code?: fhir.FhirElement | undefined;
     /**
      * It is possible to profile  backbone element (e.g. part of a resource), using the [profile-element](extension-elementdefinition-profile-element.html) extension.
      */
     profile?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.profile
+     */
     _profile?: fhir.FhirElement[] | undefined;
     /**
      * Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.
      */
     targetProfile?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.targetProfile
+     */
     _targetProfile?: fhir.FhirElement[] | undefined;
+    /**
+     * See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
+     */
+    aggregation?: ResourceAggregationModeValueSetEnum[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.aggregation
+     */
+    _aggregation?: fhir.FhirElement[] | undefined;
     /**
      * The base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.
      */
-    versioning?: ElementDefinitionTypeVersioningEnum | undefined;
+    versioning?: ReferenceVersionRulesValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.type.versioning
+     */
     _versioning?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ElementDefinitionType - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IElementDefinitionType>);
+    constructor(source?: Partial<IElementDefinitionType>);
     /**
-     * Check if the current ElementDefinitionType contains all required elements.
+     * Extensible-bound Value Set for code
      */
-    checkRequiredElements(): string[];
+    codeExtensibleValueSet(): DefinedTypesValueSetType;
     /**
-     * Factory function to create a ElementDefinitionType from an object that MUST contain all required elements.
+     * Required-bound Value Set for aggregation
      */
-    static fromStrict(source: fhir.IElementDefinitionType): ElementDefinitionType;
+    aggregationRequiredValueSet(): ResourceAggregationModeValueSetType;
+    /**
+     * Required-bound Value Set for versioning
+     */
+    versioningRequiredValueSet(): ReferenceVersionRulesValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
  */
-export declare class ElementDefinitionExample extends fhir.FhirElement implements fhir.IElementDefinitionExample {
+export declare class ElementDefinitionExample extends fhir.FhirElement implements IElementDefinitionExample {
     /**
      * Describes the purpose of this example amoung the set of examples.
      */
     label: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.label
+     */
     _label?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueBase64Binary?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueBoolean?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueCanonical?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueCode?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueDate?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueDateTime?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueDecimal?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueId?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueInstant?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueInteger?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueMarkdown?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueOid?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valuePositiveInt?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueString?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueTime?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueUri?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueUrl?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
      */
     valueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.example.value[x]
+     */
     _valueUuid?: fhir.FhirElement | undefined;
     /**
      * The actual value for the element, which must be one of the types allowed for this element.
@@ -1707,290 +2242,465 @@ export declare class ElementDefinitionExample extends fhir.FhirElement implement
     /**
      * Default constructor for ElementDefinitionExample - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IElementDefinitionExample>);
+    constructor(source?: Partial<IElementDefinitionExample>);
     /**
-     * Check if the current ElementDefinitionExample contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ElementDefinitionExample from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IElementDefinitionExample): ElementDefinitionExample;
+    doModelValidation(): [string, string][];
 }
 /**
  * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
  */
-export declare class ElementDefinitionConstraint extends fhir.FhirElement implements fhir.IElementDefinitionConstraint {
-    /**
-     * In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.
-     */
-    expression?: string | undefined;
-    _expression?: fhir.FhirElement | undefined;
-    /**
-     * Should be expressed in business terms as much as possible.
-     */
-    human: string | null;
-    _human?: fhir.FhirElement | undefined;
+export declare class ElementDefinitionConstraint extends fhir.FhirElement implements IElementDefinitionConstraint {
     /**
      * Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
      */
     key: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.key
+     */
     _key?: fhir.FhirElement | undefined;
     /**
      * To be used if the reason for the constraint might not be intuitive to all implementers.
      */
     requirements?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.requirements
+     */
     _requirements?: fhir.FhirElement | undefined;
     /**
      * This allows constraints to be asserted as "shall" (error) and "should" (warning).
      */
-    severity: ElementDefinitionConstraintSeverityEnum | null;
+    severity: ConstraintSeverityValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.severity
+     */
     _severity?: fhir.FhirElement | undefined;
     /**
-     * This is used when, e.g. rendering, where it is not useful to present inherited constraints when rendering the snapshot.
+     * Should be expressed in business terms as much as possible.
      */
-    source?: string | undefined;
-    _source?: fhir.FhirElement | undefined;
+    human: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.human
+     */
+    _human?: fhir.FhirElement | undefined;
+    /**
+     * In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.
+     */
+    expression?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.expression
+     */
+    _expression?: fhir.FhirElement | undefined;
     /**
      * Elements SHALL use "f" as the namespace prefix for the FHIR namespace, and "x" for the xhtml namespace, and SHALL NOT use any other prefixes.     Note: XPath is generally considered not useful because it does not apply to JSON and other formats and because of XSLT implementation issues, and may be removed in the future.
      */
     xpath?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.xpath
+     */
     _xpath?: fhir.FhirElement | undefined;
+    /**
+     * This is used when, e.g. rendering, where it is not useful to present inherited constraints when rendering the snapshot.
+     */
+    source?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.constraint.source
+     */
+    _source?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ElementDefinitionConstraint - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IElementDefinitionConstraint>);
+    constructor(source?: Partial<IElementDefinitionConstraint>);
     /**
-     * Check if the current ElementDefinitionConstraint contains all required elements.
+     * Required-bound Value Set for severity
      */
-    checkRequiredElements(): string[];
+    severityRequiredValueSet(): ConstraintSeverityValueSetType;
     /**
-     * Factory function to create a ElementDefinitionConstraint from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IElementDefinitionConstraint): ElementDefinitionConstraint;
+    doModelValidation(): [string, string][];
 }
 /**
  * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
  */
-export declare class ElementDefinitionBinding extends fhir.FhirElement implements fhir.IElementDefinitionBinding {
+export declare class ElementDefinitionBinding extends fhir.FhirElement implements IElementDefinitionBinding {
+    /**
+     * For further discussion, see [Using Terminologies](terminologies.html).
+     */
+    strength: BindingStrengthValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.binding.strength
+     */
+    _strength?: fhir.FhirElement | undefined;
     /**
      * Describes the intended use of this particular set of codes.
      */
     description?: string | undefined;
-    _description?: fhir.FhirElement | undefined;
     /**
-     * For further discussion, see [Using Terminologies](terminologies.html).
+     * Extended properties for primitive element: ElementDefinition.binding.description
      */
-    strength: ElementDefinitionBindingStrengthEnum | null;
-    _strength?: fhir.FhirElement | undefined;
+    _description?: fhir.FhirElement | undefined;
     /**
      * The reference may be version-specific or not (e.g. have a |[version] at the end of the canonical URL).
      */
     valueSet?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.binding.valueSet
+     */
     _valueSet?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ElementDefinitionBinding - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IElementDefinitionBinding>);
+    constructor(source?: Partial<IElementDefinitionBinding>);
     /**
-     * Check if the current ElementDefinitionBinding contains all required elements.
+     * Required-bound Value Set for strength
      */
-    checkRequiredElements(): string[];
+    strengthRequiredValueSet(): BindingStrengthValueSetType;
     /**
-     * Factory function to create a ElementDefinitionBinding from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IElementDefinitionBinding): ElementDefinitionBinding;
+    doModelValidation(): [string, string][];
 }
 /**
  * Mappings are not necessarily specific enough for safe translation.
  */
-export declare class ElementDefinitionMapping extends fhir.FhirElement implements fhir.IElementDefinitionMapping {
-    /**
-     * Comments that provide information about the mapping or its use.
-     */
-    comment?: string | undefined;
-    _comment?: fhir.FhirElement | undefined;
+export declare class ElementDefinitionMapping extends fhir.FhirElement implements IElementDefinitionMapping {
     /**
      * An internal reference to the definition of a mapping.
      */
     identity: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mapping.identity
+     */
     _identity?: fhir.FhirElement | undefined;
     /**
      * If omitted, then there can be no expectation of computational interpretation of the mapping.
      */
     language?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mapping.language
+     */
     _language?: fhir.FhirElement | undefined;
     /**
      * For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies.
      */
     map: string | null;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mapping.map
+     */
     _map?: fhir.FhirElement | undefined;
+    /**
+     * Comments that provide information about the mapping or its use.
+     */
+    comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mapping.comment
+     */
+    _comment?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ElementDefinitionMapping - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IElementDefinitionMapping>);
+    constructor(source?: Partial<IElementDefinitionMapping>);
     /**
-     * Check if the current ElementDefinitionMapping contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ElementDefinitionMapping from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IElementDefinitionMapping): ElementDefinitionMapping;
+    doModelValidation(): [string, string][];
 }
 /**
  * Captures constraints on each element within the resource, profile, or extension.
  */
-export declare class ElementDefinition extends fhir.BackboneElement implements fhir.IElementDefinition {
+export declare class ElementDefinition extends fhir.BackboneElement implements IElementDefinition {
     /**
-     * Identifies additional names by which this element might also be known.
+     * The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
      */
-    alias?: string[] | undefined;
-    _alias?: fhir.FhirElement[] | undefined;
+    path: string | null;
     /**
-     * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
+     * Extended properties for primitive element: ElementDefinition.path
      */
-    base?: fhir.ElementDefinitionBase | undefined;
+    _path?: fhir.FhirElement | undefined;
     /**
-     * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
+     * In resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.).
      */
-    binding?: fhir.ElementDefinitionBinding | undefined;
+    representation?: PropertyRepresentationValueSetEnum[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.representation
+     */
+    _representation?: fhir.FhirElement[] | undefined;
+    /**
+     * The name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.).
+     */
+    sliceName?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.sliceName
+     */
+    _sliceName?: fhir.FhirElement | undefined;
+    /**
+     * If set to true, an ancestor profile SHALL have a slicing definition with this name.  If set to false, no ancestor profile is permitted to have a slicing definition with this name.
+     */
+    sliceIsConstraining?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.sliceIsConstraining
+     */
+    _sliceIsConstraining?: fhir.FhirElement | undefined;
+    /**
+     * See also the extension (http://hl7.org/fhir/StructureDefinition/elementdefinition-question)[extension-elementdefinition-question.html].
+     */
+    label?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.label
+     */
+    _label?: fhir.FhirElement | undefined;
     /**
      * The concept SHALL be properly aligned with the data element definition and other constraints, as defined in the code system, including relationships, of any code listed here.  Where multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself. The mappings may be used to provide more or less granular or structured equivalences in the code system.
      */
     code?: fhir.Coding[] | undefined;
     /**
+     * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
+     */
+    slicing?: fhir.ElementDefinitionSlicing | undefined;
+    /**
+     * It is easy for a different short definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing short definitions in a profile.
+     */
+    short?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.short
+     */
+    _short?: fhir.FhirElement | undefined;
+    /**
+     * It is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions in a profile.
+     */
+    definition?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.definition
+     */
+    _definition?: fhir.FhirElement | undefined;
+    /**
      * If it is possible to capture usage rules using constraints, that mechanism should be used in preference to this element.
      */
     comment?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.comment
+     */
     _comment?: fhir.FhirElement | undefined;
     /**
-     * A reference to an invariant that may make additional statements about the cardinality or value in the instance.
+     * This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.
      */
-    condition?: string[] | undefined;
-    _condition?: fhir.FhirElement[] | undefined;
+    requirements?: string | undefined;
     /**
-     * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
+     * Extended properties for primitive element: ElementDefinition.requirements
      */
-    constraint?: fhir.ElementDefinitionConstraint[] | undefined;
+    _requirements?: fhir.FhirElement | undefined;
+    /**
+     * Identifies additional names by which this element might also be known.
+     */
+    alias?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.alias
+     */
+    _alias?: fhir.FhirElement[] | undefined;
+    /**
+     * The minimum number of times this element SHALL appear in the instance.
+     */
+    min?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.min
+     */
+    _min?: fhir.FhirElement | undefined;
+    /**
+     * The maximum number of times this element is permitted to appear in the instance.
+     */
+    max?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.max
+     */
+    _max?: fhir.FhirElement | undefined;
+    /**
+     * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
+     */
+    base?: fhir.ElementDefinitionBase | undefined;
     /**
      * ContentReferences can only be defined in specializations, not constrained types, and they cannot be changed and always reference the non-constrained definition.
      */
     contentReference?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.contentReference
+     */
     _contentReference?: fhir.FhirElement | undefined;
+    /**
+     * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
+     */
+    type?: fhir.ElementDefinitionType[] | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueBase64Binary?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueBoolean?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueCanonical?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueCode?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueDate?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueDateTime?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueDecimal?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueId?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueInstant?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueInteger?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueMarkdown?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueOid?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValuePositiveInt?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueString?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueTime?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueUri?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueUrl?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
      * No default values are ever defined in the FHIR specification, nor can they be defined in constraints ("profiles") on data types or resources. This element only exists so that default values may be defined in logical models.
      */
     defaultValueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.defaultValue[x]
+     */
     _defaultValueUuid?: fhir.FhirElement | undefined;
     /**
      * Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed, or changed in constraints on content models. Defining default values creates many difficulties in implementation (e.g. when is a value missing?). For these reasons, default values are (and should be) used extremely sparingly.
@@ -2148,108 +2858,172 @@ export declare class ElementDefinition extends fhir.BackboneElement implements f
      */
     defaultValueMeta?: fhir.Meta | undefined;
     /**
-     * It is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions in a profile.
+     * Implicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope.
      */
-    definition?: string | undefined;
-    _definition?: fhir.FhirElement | undefined;
+    meaningWhenMissing?: string | undefined;
     /**
-     * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
+     * Extended properties for primitive element: ElementDefinition.meaningWhenMissing
      */
-    example?: fhir.ElementDefinitionExample[] | undefined;
+    _meaningWhenMissing?: fhir.FhirElement | undefined;
+    /**
+     * This element can only be asserted on repeating elements and can only be introduced when defining resources or data types.  It can be further refined profiled elements but if absent in the base type, a profile cannot assert meaning.
+     */
+    orderMeaning?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.orderMeaning
+     */
+    _orderMeaning?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedBase64Binary?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedBoolean?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedCanonical?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedCode?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedDate?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedDateTime?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedDecimal?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedId?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedId?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedInstant?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedInteger?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedMarkdown?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedOid?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedPositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedPositiveInt?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedString?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedTime?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedUri?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedUrl?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
      */
     fixedUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.fixed[x]
+     */
     _fixedUuid?: fhir.FhirElement | undefined;
     /**
      * This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
@@ -2376,246 +3150,156 @@ export declare class ElementDefinition extends fhir.BackboneElement implements f
      */
     fixedMeta?: fhir.Meta | undefined;
     /**
-     * Only the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles. An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear.
-     */
-    isModifier?: boolean | undefined;
-    _isModifier?: fhir.FhirElement | undefined;
-    /**
-     * Explains how that element affects the interpretation of the resource or element that contains it.
-     */
-    isModifierReason?: string | undefined;
-    _isModifierReason?: fhir.FhirElement | undefined;
-    /**
-     * Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance, so servers might not support per-profile use of the isSummary flag. When a request is made with _summary=true, serailisers only include elements marked as 'isSummary = true'. Other than Attachment.data, all data type properties are included in the summary form. In resource and data type definitions, if an element is at the root or has a parent that is 'mustSupport' and the minimum cardinality is 1 or the element is a modifier, it must be marked as isSummary=true.
-     */
-    isSummary?: boolean | undefined;
-    _isSummary?: fhir.FhirElement | undefined;
-    /**
-     * See also the extension (http://hl7.org/fhir/StructureDefinition/elementdefinition-question)[extension-elementdefinition-question.html].
-     */
-    label?: string | undefined;
-    _label?: fhir.FhirElement | undefined;
-    /**
-     * Mappings are not necessarily specific enough for safe translation.
-     */
-    mapping?: fhir.ElementDefinitionMapping[] | undefined;
-    /**
-     * The maximum number of times this element is permitted to appear in the instance.
-     */
-    max?: string | undefined;
-    _max?: fhir.FhirElement | undefined;
-    /**
-     * Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.
-     */
-    maxLength?: number | undefined;
-    _maxLength?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueDate?: string | undefined;
-    _maxValueDate?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueDateTime?: string | undefined;
-    _maxValueDateTime?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueInstant?: string | undefined;
-    _maxValueInstant?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueTime?: string | undefined;
-    _maxValueTime?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueDecimal?: number | undefined;
-    _maxValueDecimal?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueInteger?: number | undefined;
-    _maxValueInteger?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValuePositiveInt?: number | undefined;
-    _maxValuePositiveInt?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueUnsignedInt?: number | undefined;
-    _maxValueUnsignedInt?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
-     */
-    maxValueQuantity?: fhir.Quantity | undefined;
-    /**
-     * Implicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope.
-     */
-    meaningWhenMissing?: string | undefined;
-    _meaningWhenMissing?: fhir.FhirElement | undefined;
-    /**
-     * The minimum number of times this element SHALL appear in the instance.
-     */
-    min?: number | undefined;
-    _min?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueDate?: string | undefined;
-    _minValueDate?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueDateTime?: string | undefined;
-    _minValueDateTime?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueInstant?: string | undefined;
-    _minValueInstant?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueTime?: string | undefined;
-    _minValueTime?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueDecimal?: number | undefined;
-    _minValueDecimal?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueInteger?: number | undefined;
-    _minValueInteger?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValuePositiveInt?: number | undefined;
-    _minValuePositiveInt?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueUnsignedInt?: number | undefined;
-    _minValueUnsignedInt?: fhir.FhirElement | undefined;
-    /**
-     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
-     */
-    minValueQuantity?: fhir.Quantity | undefined;
-    /**
-     * "Something useful" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make musSupport = true if it is false in the base type but cannot make mustSupport = false if it is true in the base type.   This is done in [Resource Profiles](profiling.html#mustsupport), where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
-     */
-    mustSupport?: boolean | undefined;
-    _mustSupport?: fhir.FhirElement | undefined;
-    /**
-     * This element can only be asserted on repeating elements and can only be introduced when defining resources or data types.  It can be further refined profiled elements but if absent in the base type, a profile cannot assert meaning.
-     */
-    orderMeaning?: string | undefined;
-    _orderMeaning?: fhir.FhirElement | undefined;
-    /**
-     * The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
-     */
-    path: string | null;
-    _path?: fhir.FhirElement | undefined;
-    /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternBase64Binary?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternBoolean?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternCanonical?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternCode?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternDate?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternDateTime?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternDecimal?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternId?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternId?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternInstant?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternInteger?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternMarkdown?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternOid?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternPositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternPositiveInt?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternString?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternString?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternTime?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternUri?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternUrl?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
      */
     patternUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.pattern[x]
+     */
     _patternUuid?: fhir.FhirElement | undefined;
     /**
      * Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].
@@ -2742,109 +3426,220 @@ export declare class ElementDefinition extends fhir.BackboneElement implements f
      */
     patternMeta?: fhir.Meta | undefined;
     /**
-     * In resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.).
+     * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
      */
-    representation?: ElementDefinitionRepresentationEnum[] | undefined;
-    _representation?: fhir.FhirElement[] | undefined;
+    example?: fhir.ElementDefinitionExample[] | undefined;
     /**
-     * This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
      */
-    requirements?: string | undefined;
-    _requirements?: fhir.FhirElement | undefined;
+    minValueDate?: string | undefined;
     /**
-     * It is easy for a different short definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing short definitions in a profile.
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
      */
-    short?: string | undefined;
-    _short?: fhir.FhirElement | undefined;
+    _minValueDate?: fhir.FhirElement | undefined;
     /**
-     * If set to true, an ancestor profile SHALL have a slicing definition with this name.  If set to false, no ancestor profile is permitted to have a slicing definition with this name.
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
      */
-    sliceIsConstraining?: boolean | undefined;
-    _sliceIsConstraining?: fhir.FhirElement | undefined;
+    minValueDateTime?: string | undefined;
     /**
-     * The name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.).
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
      */
-    sliceName?: string | undefined;
-    _sliceName?: fhir.FhirElement | undefined;
+    _minValueDateTime?: fhir.FhirElement | undefined;
     /**
-     * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
      */
-    slicing?: fhir.ElementDefinitionSlicing | undefined;
+    minValueInstant?: string | undefined;
     /**
-     * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
      */
-    type?: fhir.ElementDefinitionType[] | undefined;
+    _minValueInstant?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValueTime?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValueDecimal?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValueInteger?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValuePositiveInt?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.minValue[x]
+     */
+    _minValueUnsignedInt?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.
+     */
+    minValueQuantity?: fhir.Quantity | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueDate?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueDateTime?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueInstant?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueTime?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueDecimal?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueInteger?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValuePositiveInt?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxValue[x]
+     */
+    _maxValueUnsignedInt?: fhir.FhirElement | undefined;
+    /**
+     * Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.
+     */
+    maxValueQuantity?: fhir.Quantity | undefined;
+    /**
+     * Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.
+     */
+    maxLength?: number | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.maxLength
+     */
+    _maxLength?: fhir.FhirElement | undefined;
+    /**
+     * A reference to an invariant that may make additional statements about the cardinality or value in the instance.
+     */
+    condition?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.condition
+     */
+    _condition?: fhir.FhirElement[] | undefined;
+    /**
+     * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
+     */
+    constraint?: fhir.ElementDefinitionConstraint[] | undefined;
+    /**
+     * "Something useful" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make musSupport = true if it is false in the base type but cannot make mustSupport = false if it is true in the base type.   This is done in [Resource Profiles](profiling.html#mustsupport), where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
+     */
+    mustSupport?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.mustSupport
+     */
+    _mustSupport?: fhir.FhirElement | undefined;
+    /**
+     * Only the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set, it cannot be changed in derived profiles. An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear.
+     */
+    isModifier?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.isModifier
+     */
+    _isModifier?: fhir.FhirElement | undefined;
+    /**
+     * Explains how that element affects the interpretation of the resource or element that contains it.
+     */
+    isModifierReason?: string | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.isModifierReason
+     */
+    _isModifierReason?: fhir.FhirElement | undefined;
+    /**
+     * Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance, so servers might not support per-profile use of the isSummary flag. When a request is made with _summary=true, serailisers only include elements marked as 'isSummary = true'. Other than Attachment.data, all data type properties are included in the summary form. In resource and data type definitions, if an element is at the root or has a parent that is 'mustSupport' and the minimum cardinality is 1 or the element is a modifier, it must be marked as isSummary=true.
+     */
+    isSummary?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: ElementDefinition.isSummary
+     */
+    _isSummary?: fhir.FhirElement | undefined;
+    /**
+     * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
+     */
+    binding?: fhir.ElementDefinitionBinding | undefined;
+    /**
+     * Mappings are not necessarily specific enough for safe translation.
+     */
+    mapping?: fhir.ElementDefinitionMapping[] | undefined;
     /**
      * Default constructor for ElementDefinition - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IElementDefinition>);
+    constructor(source?: Partial<IElementDefinition>);
     /**
-     * Check if the current ElementDefinition contains all required elements.
+     * Required-bound Value Set for representation
      */
-    checkRequiredElements(): string[];
+    representationRequiredValueSet(): PropertyRepresentationValueSetType;
     /**
-     * Factory function to create a ElementDefinition from an object that MUST contain all required elements.
+     * Example-bound Value Set for code
      */
-    static fromStrict(source: fhir.IElementDefinition): ElementDefinition;
-}
-/**
- * Code Values for the ElementDefinition.slicing.discriminator.type field
- */
-export declare enum ElementDefinitionSlicingDiscriminatorTypeEnum {
-    VALUE = "value",
-    EXISTS = "exists",
-    PATTERN = "pattern",
-    TYPE = "type",
-    PROFILE = "profile"
-}
-/**
- * Code Values for the ElementDefinition.slicing.rules field
- */
-export declare enum ElementDefinitionSlicingRulesEnum {
-    CLOSED = "closed",
-    OPEN = "open",
-    OPENATEND = "openAtEnd"
-}
-/**
- * Code Values for the ElementDefinition.type.aggregation field
- */
-export declare enum ElementDefinitionTypeAggregationEnum {
-    CONTAINED = "contained",
-    REFERENCED = "referenced",
-    BUNDLED = "bundled"
-}
-/**
- * Code Values for the ElementDefinition.type.versioning field
- */
-export declare enum ElementDefinitionTypeVersioningEnum {
-    EITHER = "either",
-    INDEPENDENT = "independent",
-    SPECIFIC = "specific"
-}
-/**
- * Code Values for the ElementDefinition.constraint.severity field
- */
-export declare enum ElementDefinitionConstraintSeverityEnum {
-    ERROR = "error",
-    WARNING = "warning"
-}
-/**
- * Code Values for the ElementDefinition.binding.strength field
- */
-export declare enum ElementDefinitionBindingStrengthEnum {
-    REQUIRED = "required",
-    EXTENSIBLE = "extensible",
-    PREFERRED = "preferred",
-    EXAMPLE = "example"
-}
-/**
- * Code Values for the ElementDefinition.representation field
- */
-export declare enum ElementDefinitionRepresentationEnum {
-    XMLATTR = "xmlAttr",
-    XMLTEXT = "xmlText",
-    TYPEATTR = "typeAttr",
-    CDATEXT = "cdaText",
-    XHTML = "xhtml"
+    codeExampleValueSet(): ObservationCodesValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=ElementDefinition.d.ts.map

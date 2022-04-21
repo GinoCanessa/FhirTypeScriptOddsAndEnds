@@ -1,115 +1,232 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Kinds of mitigating actions and observations that can be associated with a detected issue or contraindication, such as 'added concurrent therapy', 'prior therapy documented', etc.
  */
 export declare const DetectedissueMitigationActionValueSet: {
     /**
-     * Codes dealing with the management of Detected Issue observations for the administrative and patient administrative acts domains.
+     * _ActAdministrativeDetectedIssueManagementCode: Codes dealing with the management of Detected Issue observations for the administrative and patient administrative acts domains.
      */
-    v3_ActCode_ActAdministrativeDetectedIssueManagementCode: Coding;
+    readonly ActAdministrativeDetectedIssueManagementCode: Coding;
     /**
-     * Codes dealing with the management of Detected Issue observations
+     * _ActDetectedIssueManagementCode: Codes dealing with the management of Detected Issue observations
      */
-    v3_ActCode_ActDetectedIssueManagementCode: Coding;
+    readonly ActDetectedIssueManagementCode: Coding;
     /**
-     * Authorization Issue Management Code
+     * _AuthorizationIssueManagementCode: Authorization Issue Management Code
      */
-    v3_ActCode_AuthorizationIssueManagementCode: Coding;
+    readonly AuthorizationIssueManagementCode: Coding;
     /**
-     * Confirmed drug therapy appropriate
+     * 1: Confirmed drug therapy appropriate
      */
-    v3_ActCode_TherapyAppropriate: Coding;
+    readonly TherapyAppropriate: Coding;
     /**
-     * Provided education or training to the patient on appropriate therapy use
+     * 10: Provided education or training to the patient on appropriate therapy use
      */
-    v3_ActCode_ProvidedPatientEducation: Coding;
+    readonly ProvidedPatientEducation: Coding;
     /**
-     * Instituted an additional therapy to mitigate potential negative effects
+     * 11: Instituted an additional therapy to mitigate potential negative effects
      */
-    v3_ActCode_AddedConcurrentTherapy: Coding;
+    readonly AddedConcurrentTherapy: Coding;
     /**
-     * Suspended existing therapy that triggered interaction for the duration of this therapy
+     * 12: Suspended existing therapy that triggered interaction for the duration of this therapy
      */
-    v3_ActCode_TemporarilySuspendedConcurrentTherapy: Coding;
+    readonly TemporarilySuspendedConcurrentTherapy: Coding;
     /**
-     * Aborted existing therapy that triggered interaction.
+     * 13: Aborted existing therapy that triggered interaction.
      */
-    v3_ActCode_StoppedConcurrentTherapy: Coding;
+    readonly StoppedConcurrentTherapy: Coding;
     /**
-     * Confirmed supply action appropriate
+     * 14: Confirmed supply action appropriate
      */
-    v3_ActCode_SupplyAppropriate: Coding;
+    readonly SupplyAppropriate: Coding;
     /**
-     * Patient's existing supply was lost/wasted
+     * 15: Patient's existing supply was lost/wasted
      */
-    v3_ActCode_Replacement: Coding;
+    readonly Replacement: Coding;
     /**
-     * Supply date is due to patient vacation
+     * 16: Supply date is due to patient vacation
      */
-    v3_ActCode_VacationSupply: Coding;
+    readonly VacationSupply: Coding;
     /**
-     * Supply date is intended to carry patient over weekend
+     * 17: Supply date is intended to carry patient over weekend
      */
-    v3_ActCode_WeekendSupply: Coding;
+    readonly WeekendSupply: Coding;
     /**
-     * Supply is intended for use during a leave of absence from an institution.
+     * 18: Supply is intended for use during a leave of absence from an institution.
      */
-    v3_ActCode_LeaveOfAbsence: Coding;
+    readonly LeaveOfAbsence: Coding;
     /**
-     * Consulted other supplier/pharmacy, therapy confirmed
+     * 19: Consulted other supplier/pharmacy, therapy confirmed
      */
-    v3_ActCode_ConsultedSupplier: Coding;
+    readonly ConsultedSupplier: Coding;
     /**
-     * Assessed patient, therapy is appropriate
+     * 2: Assessed patient, therapy is appropriate
      */
-    v3_ActCode_AssessedPatient: Coding;
+    readonly AssessedPatient: Coding;
     /**
-     * Description: Supply is different than expected as an additional quantity has been supplied in a separate dispense.
+     * 20: Description: Supply is different than expected as an additional quantity has been supplied in a separate dispense.
      */
-    v3_ActCode_AdditionalQuantityOnSeparateDispense: Coding;
+    readonly AdditionalQuantityOnSeparateDispense: Coding;
     /**
-     * Description: Indicates that the permissions have been externally verified and the request should be processed.
+     * 21: Description: Indicates that the permissions have been externally verified and the request should be processed.
      */
-    v3_ActCode_AuthorizationConfirmed: Coding;
+    readonly AuthorizationConfirmed: Coding;
     /**
-     * Description: The patient has the appropriate indication or diagnosis for the action to be taken.
+     * 22: Description: The patient has the appropriate indication or diagnosis for the action to be taken.
      */
-    v3_ActCode_AppropriateIndicationOrDiagnosis: Coding;
+    readonly AppropriateIndicationOrDiagnosis: Coding;
     /**
-     * Description: It has been confirmed that the appropriate pre-requisite therapy has been tried.
+     * 23: Description: It has been confirmed that the appropriate pre-requisite therapy has been tried.
      */
-    v3_ActCode_PriorTherapyDocumented: Coding;
+    readonly PriorTherapyDocumented: Coding;
     /**
-     * Patient gave adequate explanation
+     * 3: Patient gave adequate explanation
      */
-    v3_ActCode_PatientExplanation: Coding;
+    readonly PatientExplanation: Coding;
     /**
-     * Consulted other supply source, therapy still appropriate
+     * 4: Consulted other supply source, therapy still appropriate
      */
-    v3_ActCode_ConsultedOtherSource: Coding;
+    readonly ConsultedOtherSource: Coding;
     /**
-     * Consulted prescriber, therapy confirmed
+     * 5: Consulted prescriber, therapy confirmed
      */
-    v3_ActCode_ConsultedPrescriber: Coding;
+    readonly ConsultedPrescriber: Coding;
     /**
-     * Consulted prescriber and recommended change, prescriber declined
+     * 6: Consulted prescriber and recommended change, prescriber declined
      */
-    v3_ActCode_PrescriberDeclinedChange: Coding;
+    readonly PrescriberDeclinedChange: Coding;
     /**
-     * Concurrent therapy triggering alert is no longer on-going or planned
+     * 7: Concurrent therapy triggering alert is no longer on-going or planned
      */
-    v3_ActCode_InteractingTherapyNoLongerActivePlanned: Coding;
+    readonly InteractingTherapyNoLongerActivePlanned: Coding;
     /**
-     * Order is performed as issued, but other action taken to mitigate potential adverse effects
+     * 8: Order is performed as issued, but other action taken to mitigate potential adverse effects
      */
-    v3_ActCode_OtherActionTaken: Coding;
+    readonly OtherActionTaken: Coding;
     /**
-     * Arranged to monitor patient for adverse effects
+     * 9: Arranged to monitor patient for adverse effects
      */
-    v3_ActCode_InstitutedOngoingMonitoringProgram: Coding;
+    readonly InstitutedOngoingMonitoringProgram: Coding;
     /**
-     * Used to temporarily override normal authorization rules to gain access to data in a case of emergency. Use of this override code will typically be monitored, and a procedure to verify its proper use may be triggered when used.
+     * EMAUTH: Used to temporarily override normal authorization rules to gain access to data in a case of emergency. Use of this override code will typically be monitored, and a procedure to verify its proper use may be triggered when used.
      */
-    v3_ActCode_EmergencyAuthorizationOverride: Coding;
+    readonly EmergencyAuthorizationOverride: Coding;
 };
+/**
+ * Kinds of mitigating actions and observations that can be associated with a detected issue or contraindication, such as 'added concurrent therapy', 'prior therapy documented', etc.
+ */
+export declare type DetectedissueMitigationActionValueSetType = typeof DetectedissueMitigationActionValueSet;
+/**
+ * Kinds of mitigating actions and observations that can be associated with a detected issue or contraindication, such as 'added concurrent therapy', 'prior therapy documented', etc.
+ */
+export declare enum DetectedissueMitigationActionValueSetEnum {
+    /**
+     * _ActAdministrativeDetectedIssueManagementCode: Codes dealing with the management of Detected Issue observations for the administrative and patient administrative acts domains.
+     */
+    ActAdministrativeDetectedIssueManagementCode = "_ActAdministrativeDetectedIssueManagementCode",
+    /**
+     * _ActDetectedIssueManagementCode: Codes dealing with the management of Detected Issue observations
+     */
+    ActDetectedIssueManagementCode = "_ActDetectedIssueManagementCode",
+    /**
+     * _AuthorizationIssueManagementCode: Authorization Issue Management Code
+     */
+    AuthorizationIssueManagementCode = "_AuthorizationIssueManagementCode",
+    /**
+     * 1: Confirmed drug therapy appropriate
+     */
+    TherapyAppropriate = "1",
+    /**
+     * 10: Provided education or training to the patient on appropriate therapy use
+     */
+    ProvidedPatientEducation = "10",
+    /**
+     * 11: Instituted an additional therapy to mitigate potential negative effects
+     */
+    AddedConcurrentTherapy = "11",
+    /**
+     * 12: Suspended existing therapy that triggered interaction for the duration of this therapy
+     */
+    TemporarilySuspendedConcurrentTherapy = "12",
+    /**
+     * 13: Aborted existing therapy that triggered interaction.
+     */
+    StoppedConcurrentTherapy = "13",
+    /**
+     * 14: Confirmed supply action appropriate
+     */
+    SupplyAppropriate = "14",
+    /**
+     * 15: Patient's existing supply was lost/wasted
+     */
+    Replacement = "15",
+    /**
+     * 16: Supply date is due to patient vacation
+     */
+    VacationSupply = "16",
+    /**
+     * 17: Supply date is intended to carry patient over weekend
+     */
+    WeekendSupply = "17",
+    /**
+     * 18: Supply is intended for use during a leave of absence from an institution.
+     */
+    LeaveOfAbsence = "18",
+    /**
+     * 19: Consulted other supplier/pharmacy, therapy confirmed
+     */
+    ConsultedSupplier = "19",
+    /**
+     * 2: Assessed patient, therapy is appropriate
+     */
+    AssessedPatient = "2",
+    /**
+     * 20: Description: Supply is different than expected as an additional quantity has been supplied in a separate dispense.
+     */
+    AdditionalQuantityOnSeparateDispense = "20",
+    /**
+     * 21: Description: Indicates that the permissions have been externally verified and the request should be processed.
+     */
+    AuthorizationConfirmed = "21",
+    /**
+     * 22: Description: The patient has the appropriate indication or diagnosis for the action to be taken.
+     */
+    AppropriateIndicationOrDiagnosis = "22",
+    /**
+     * 23: Description: It has been confirmed that the appropriate pre-requisite therapy has been tried.
+     */
+    PriorTherapyDocumented = "23",
+    /**
+     * 3: Patient gave adequate explanation
+     */
+    PatientExplanation = "3",
+    /**
+     * 4: Consulted other supply source, therapy still appropriate
+     */
+    ConsultedOtherSource = "4",
+    /**
+     * 5: Consulted prescriber, therapy confirmed
+     */
+    ConsultedPrescriber = "5",
+    /**
+     * 6: Consulted prescriber and recommended change, prescriber declined
+     */
+    PrescriberDeclinedChange = "6",
+    /**
+     * 7: Concurrent therapy triggering alert is no longer on-going or planned
+     */
+    InteractingTherapyNoLongerActivePlanned = "7",
+    /**
+     * 8: Order is performed as issued, but other action taken to mitigate potential adverse effects
+     */
+    OtherActionTaken = "8",
+    /**
+     * 9: Arranged to monitor patient for adverse effects
+     */
+    InstitutedOngoingMonitoringProgram = "9",
+    /**
+     * EMAUTH: Used to temporarily override normal authorization rules to gain access to data in a case of emergency. Use of this override code will typically be monitored, and a procedure to verify its proper use may be triggered when used.
+     */
+    EmergencyAuthorizationOverride = "EMAUTH"
+}
 //# sourceMappingURL=DetectedissueMitigationActionValueSet.d.ts.map

@@ -1,4 +1,6 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { RiskProbabilityValueSetType } from '../fhirValueSets/RiskProbabilityValueSet.js';
+import { ObservationStatusValueSetType, ObservationStatusValueSetEnum } from '../fhirValueSets/ObservationStatusValueSet.js';
 /**
  * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
  */
@@ -11,6 +13,9 @@ export declare type IRiskAssessmentPrediction = fhir.IBackboneElement & {
      * If range is used, it represents the lower and upper bounds of certainty; e.g. 40-60%  Decimal values are expressed as percentages as well (max = 100).
      */
     probabilityDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.prediction.probability[x]
+     */
     _probabilityDecimal?: fhir.IFhirElement | undefined;
     /**
      * If range is used, it represents the lower and upper bounds of certainty; e.g. 40-60%  Decimal values are expressed as percentages as well (max = 100).
@@ -21,14 +26,12 @@ export declare type IRiskAssessmentPrediction = fhir.IBackboneElement & {
      */
     qualitativeRisk?: fhir.ICodeableConcept | undefined;
     /**
-     * Additional information explaining the basis for the prediction.
-     */
-    rationale?: string | undefined;
-    _rationale?: fhir.IFhirElement | undefined;
-    /**
      * Indicates the risk for this particular subject (with their specific characteristics) divided by the risk of the population in general.  (Numbers greater than 1 = higher risk than the population, numbers less than 1 = lower risk.).
      */
     relativeRisk?: number | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.prediction.relativeRisk
+     */
     _relativeRisk?: fhir.IFhirElement | undefined;
     /**
      * If not specified, the risk applies "over the subject's lifespan".
@@ -38,6 +41,14 @@ export declare type IRiskAssessmentPrediction = fhir.IBackboneElement & {
      * If not specified, the risk applies "over the subject's lifespan".
      */
     whenRange?: fhir.IRange | undefined;
+    /**
+     * Additional information explaining the basis for the prediction.
+     */
+    rationale?: string | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.prediction.rationale
+     */
+    _rationale?: fhir.IFhirElement | undefined;
 };
 /**
  * An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
@@ -48,63 +59,61 @@ export declare type IRiskAssessment = fhir.IDomainResource & {
      */
     resourceType: "RiskAssessment";
     /**
+     * Business identifier assigned to the risk assessment.
+     */
+    identifier?: fhir.IIdentifier[] | undefined;
+    /**
      * A reference to the request that is fulfilled by this risk assessment.
      */
     basedOn?: fhir.IReference | undefined;
     /**
-     * Indicates the source data considered as part of the assessment (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
+     * A reference to a resource that this risk assessment is part of, such as a Procedure.
      */
-    basis?: fhir.IReference[] | undefined;
+    parent?: fhir.IReference | undefined;
     /**
-     * The type of the risk assessment performed.
+     * The status of the RiskAssessment, using the same statuses as an Observation.
      */
-    code?: fhir.ICodeableConcept | undefined;
+    status: ObservationStatusValueSetEnum | null;
     /**
-     * For assessments or prognosis specific to a particular condition, indicates the condition being assessed.
+     * Extended properties for primitive element: RiskAssessment.status
      */
-    condition?: fhir.IReference | undefined;
-    /**
-     * The encounter where the assessment was performed.
-     */
-    encounter?: fhir.IReference | undefined;
-    /**
-     * Business identifier assigned to the risk assessment.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
+    _status?: fhir.IFhirElement | undefined;
     /**
      * The algorithm, process or mechanism used to evaluate the risk.
      */
     method?: fhir.ICodeableConcept | undefined;
     /**
-     * A description of the steps that might be taken to reduce the identified risk(s).
+     * The type of the risk assessment performed.
      */
-    mitigation?: string | undefined;
-    _mitigation?: fhir.IFhirElement | undefined;
+    code?: fhir.ICodeableConcept | undefined;
     /**
-     * Additional comments about the risk assessment.
+     * The patient or group the risk assessment applies to.
      */
-    note?: fhir.IAnnotation[] | undefined;
+    subject: fhir.IReference | null;
+    /**
+     * The encounter where the assessment was performed.
+     */
+    encounter?: fhir.IReference | undefined;
     /**
      * The date (and possibly time) the risk assessment was performed.
      */
     occurrenceDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.occurrence[x]
+     */
     _occurrenceDateTime?: fhir.IFhirElement | undefined;
     /**
      * The date (and possibly time) the risk assessment was performed.
      */
     occurrencePeriod?: fhir.IPeriod | undefined;
     /**
-     * A reference to a resource that this risk assessment is part of, such as a Procedure.
+     * For assessments or prognosis specific to a particular condition, indicates the condition being assessed.
      */
-    parent?: fhir.IReference | undefined;
+    condition?: fhir.IReference | undefined;
     /**
      * The provider or software application that performed the assessment.
      */
     performer?: fhir.IReference | undefined;
-    /**
-     * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
-     */
-    prediction?: fhir.IRiskAssessmentPrediction[] | undefined;
     /**
      * The reason the risk assessment was performed.
      */
@@ -114,19 +123,30 @@ export declare type IRiskAssessment = fhir.IDomainResource & {
      */
     reasonReference?: fhir.IReference[] | undefined;
     /**
-     * The status of the RiskAssessment, using the same statuses as an Observation.
+     * Indicates the source data considered as part of the assessment (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
      */
-    status: RiskAssessmentStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
+    basis?: fhir.IReference[] | undefined;
     /**
-     * The patient or group the risk assessment applies to.
+     * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
      */
-    subject: fhir.IReference | null;
+    prediction?: fhir.IRiskAssessmentPrediction[] | undefined;
+    /**
+     * A description of the steps that might be taken to reduce the identified risk(s).
+     */
+    mitigation?: string | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.mitigation
+     */
+    _mitigation?: fhir.IFhirElement | undefined;
+    /**
+     * Additional comments about the risk assessment.
+     */
+    note?: fhir.IAnnotation[] | undefined;
 };
 /**
  * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
  */
-export declare class RiskAssessmentPrediction extends fhir.BackboneElement implements fhir.IRiskAssessmentPrediction {
+export declare class RiskAssessmentPrediction extends fhir.BackboneElement implements IRiskAssessmentPrediction {
     /**
      * One of the potential outcomes for the patient (e.g. remission, death,  a particular condition).
      */
@@ -135,6 +155,9 @@ export declare class RiskAssessmentPrediction extends fhir.BackboneElement imple
      * If range is used, it represents the lower and upper bounds of certainty; e.g. 40-60%  Decimal values are expressed as percentages as well (max = 100).
      */
     probabilityDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.prediction.probability[x]
+     */
     _probabilityDecimal?: fhir.FhirElement | undefined;
     /**
      * If range is used, it represents the lower and upper bounds of certainty; e.g. 40-60%  Decimal values are expressed as percentages as well (max = 100).
@@ -145,14 +168,12 @@ export declare class RiskAssessmentPrediction extends fhir.BackboneElement imple
      */
     qualitativeRisk?: fhir.CodeableConcept | undefined;
     /**
-     * Additional information explaining the basis for the prediction.
-     */
-    rationale?: string | undefined;
-    _rationale?: fhir.FhirElement | undefined;
-    /**
      * Indicates the risk for this particular subject (with their specific characteristics) divided by the risk of the population in general.  (Numbers greater than 1 = higher risk than the population, numbers less than 1 = lower risk.).
      */
     relativeRisk?: number | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.prediction.relativeRisk
+     */
     _relativeRisk?: fhir.FhirElement | undefined;
     /**
      * If not specified, the risk applies "over the subject's lifespan".
@@ -163,84 +184,90 @@ export declare class RiskAssessmentPrediction extends fhir.BackboneElement imple
      */
     whenRange?: fhir.Range | undefined;
     /**
+     * Additional information explaining the basis for the prediction.
+     */
+    rationale?: string | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.prediction.rationale
+     */
+    _rationale?: fhir.FhirElement | undefined;
+    /**
      * Default constructor for RiskAssessmentPrediction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IRiskAssessmentPrediction>);
+    constructor(source?: Partial<IRiskAssessmentPrediction>);
     /**
-     * Check if the current RiskAssessmentPrediction contains all required elements.
+     * Example-bound Value Set for qualitativeRisk
      */
-    checkRequiredElements(): string[];
+    qualitativeRiskExampleValueSet(): RiskProbabilityValueSetType;
     /**
-     * Factory function to create a RiskAssessmentPrediction from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IRiskAssessmentPrediction): RiskAssessmentPrediction;
+    doModelValidation(): [string, string][];
 }
 /**
  * An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
  */
-export declare class RiskAssessment extends fhir.DomainResource implements fhir.IRiskAssessment {
+export declare class RiskAssessment extends fhir.DomainResource implements IRiskAssessment {
     /**
      * Resource Type Name
      */
     resourceType: "RiskAssessment";
     /**
+     * Business identifier assigned to the risk assessment.
+     */
+    identifier?: fhir.Identifier[] | undefined;
+    /**
      * A reference to the request that is fulfilled by this risk assessment.
      */
     basedOn?: fhir.Reference | undefined;
     /**
-     * Indicates the source data considered as part of the assessment (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
+     * A reference to a resource that this risk assessment is part of, such as a Procedure.
      */
-    basis?: fhir.Reference[] | undefined;
+    parent?: fhir.Reference | undefined;
     /**
-     * The type of the risk assessment performed.
+     * The status of the RiskAssessment, using the same statuses as an Observation.
      */
-    code?: fhir.CodeableConcept | undefined;
+    status: ObservationStatusValueSetEnum | null;
     /**
-     * For assessments or prognosis specific to a particular condition, indicates the condition being assessed.
+     * Extended properties for primitive element: RiskAssessment.status
      */
-    condition?: fhir.Reference | undefined;
-    /**
-     * The encounter where the assessment was performed.
-     */
-    encounter?: fhir.Reference | undefined;
-    /**
-     * Business identifier assigned to the risk assessment.
-     */
-    identifier?: fhir.Identifier[] | undefined;
+    _status?: fhir.FhirElement | undefined;
     /**
      * The algorithm, process or mechanism used to evaluate the risk.
      */
     method?: fhir.CodeableConcept | undefined;
     /**
-     * A description of the steps that might be taken to reduce the identified risk(s).
+     * The type of the risk assessment performed.
      */
-    mitigation?: string | undefined;
-    _mitigation?: fhir.FhirElement | undefined;
+    code?: fhir.CodeableConcept | undefined;
     /**
-     * Additional comments about the risk assessment.
+     * The patient or group the risk assessment applies to.
      */
-    note?: fhir.Annotation[] | undefined;
+    subject: fhir.Reference | null;
+    /**
+     * The encounter where the assessment was performed.
+     */
+    encounter?: fhir.Reference | undefined;
     /**
      * The date (and possibly time) the risk assessment was performed.
      */
     occurrenceDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.occurrence[x]
+     */
     _occurrenceDateTime?: fhir.FhirElement | undefined;
     /**
      * The date (and possibly time) the risk assessment was performed.
      */
     occurrencePeriod?: fhir.Period | undefined;
     /**
-     * A reference to a resource that this risk assessment is part of, such as a Procedure.
+     * For assessments or prognosis specific to a particular condition, indicates the condition being assessed.
      */
-    parent?: fhir.Reference | undefined;
+    condition?: fhir.Reference | undefined;
     /**
      * The provider or software application that performed the assessment.
      */
     performer?: fhir.Reference | undefined;
-    /**
-     * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
-     */
-    prediction?: fhir.RiskAssessmentPrediction[] | undefined;
     /**
      * The reason the risk assessment was performed.
      */
@@ -250,38 +277,36 @@ export declare class RiskAssessment extends fhir.DomainResource implements fhir.
      */
     reasonReference?: fhir.Reference[] | undefined;
     /**
-     * The status of the RiskAssessment, using the same statuses as an Observation.
+     * Indicates the source data considered as part of the assessment (for example, FamilyHistory, Observations, Procedures, Conditions, etc.).
      */
-    status: RiskAssessmentStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
+    basis?: fhir.Reference[] | undefined;
     /**
-     * The patient or group the risk assessment applies to.
+     * Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.
      */
-    subject: fhir.Reference | null;
+    prediction?: fhir.RiskAssessmentPrediction[] | undefined;
+    /**
+     * A description of the steps that might be taken to reduce the identified risk(s).
+     */
+    mitigation?: string | undefined;
+    /**
+     * Extended properties for primitive element: RiskAssessment.mitigation
+     */
+    _mitigation?: fhir.FhirElement | undefined;
+    /**
+     * Additional comments about the risk assessment.
+     */
+    note?: fhir.Annotation[] | undefined;
     /**
      * Default constructor for RiskAssessment - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IRiskAssessment>);
+    constructor(source?: Partial<IRiskAssessment>);
     /**
-     * Check if the current RiskAssessment contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): ObservationStatusValueSetType;
     /**
-     * Factory function to create a RiskAssessment from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IRiskAssessment): RiskAssessment;
-}
-/**
- * Code Values for the RiskAssessment.status field
- */
-export declare enum RiskAssessmentStatusEnum {
-    REGISTERED = "registered",
-    PRELIMINARY = "preliminary",
-    FINAL = "final",
-    AMENDED = "amended",
-    CORRECTED = "corrected",
-    CANCELLED = "cancelled",
-    ENTERED_IN_ERROR = "entered-in-error",
-    UNKNOWN = "unknown"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=RiskAssessment.d.ts.map

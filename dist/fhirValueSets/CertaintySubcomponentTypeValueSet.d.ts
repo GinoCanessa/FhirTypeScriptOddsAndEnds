@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The subcomponent classification of quality of evidence rating systems.
  */
 export declare const CertaintySubcomponentTypeValueSet: {
     /**
-     * higher certainty due to dose response relationship.
+     * DoseResponseGradient: higher certainty due to dose response relationship.
      */
-    certainty_subcomponent_type_DoseResponseGradient: Coding;
+    readonly DoseResponseGradient: Coding;
     /**
-     * High quality evidence.
+     * Imprecision: High quality evidence.
      */
-    certainty_subcomponent_type_Imprecision: Coding;
+    readonly Imprecision: Coding;
     /**
-     * concerns that findings are not similar enough to support certainty.
+     * Inconsistency: concerns that findings are not similar enough to support certainty.
      */
-    certainty_subcomponent_type_Inconsistency: Coding;
+    readonly Inconsistency: Coding;
     /**
-     * concerns reducing external validity.
+     * Indirectness: concerns reducing external validity.
      */
-    certainty_subcomponent_type_Indirectness: Coding;
+    readonly Indirectness: Coding;
     /**
-     * higher certainty due to large effect size.
+     * LargeEffect: higher certainty due to large effect size.
      */
-    certainty_subcomponent_type_LargeEffect: Coding;
+    readonly LargeEffect: Coding;
     /**
-     * higher certainty due to risk of bias in opposite direction.
+     * PlausibleConfounding: higher certainty due to risk of bias in opposite direction.
      */
-    certainty_subcomponent_type_PlausibleConfounding: Coding;
+    readonly PlausibleConfounding: Coding;
     /**
-     * likelihood that what is published misrepresents what is available to publish.
+     * PublicationBias: likelihood that what is published misrepresents what is available to publish.
      */
-    certainty_subcomponent_type_PublicationBias: Coding;
+    readonly PublicationBias: Coding;
     /**
-     * methodologic concerns reducing internal validity.
+     * RiskOfBias: methodologic concerns reducing internal validity.
      */
-    certainty_subcomponent_type_RiskOfBias: Coding;
+    readonly RiskOfBias: Coding;
 };
+/**
+ * The subcomponent classification of quality of evidence rating systems.
+ */
+export declare type CertaintySubcomponentTypeValueSetType = typeof CertaintySubcomponentTypeValueSet;
+/**
+ * The subcomponent classification of quality of evidence rating systems.
+ */
+export declare enum CertaintySubcomponentTypeValueSetEnum {
+    /**
+     * DoseResponseGradient: higher certainty due to dose response relationship.
+     */
+    DoseResponseGradient = "DoseResponseGradient",
+    /**
+     * Imprecision: High quality evidence.
+     */
+    Imprecision = "Imprecision",
+    /**
+     * Inconsistency: concerns that findings are not similar enough to support certainty.
+     */
+    Inconsistency = "Inconsistency",
+    /**
+     * Indirectness: concerns reducing external validity.
+     */
+    Indirectness = "Indirectness",
+    /**
+     * LargeEffect: higher certainty due to large effect size.
+     */
+    LargeEffect = "LargeEffect",
+    /**
+     * PlausibleConfounding: higher certainty due to risk of bias in opposite direction.
+     */
+    PlausibleConfounding = "PlausibleConfounding",
+    /**
+     * PublicationBias: likelihood that what is published misrepresents what is available to publish.
+     */
+    PublicationBias = "PublicationBias",
+    /**
+     * RiskOfBias: methodologic concerns reducing internal validity.
+     */
+    RiskOfBias = "RiskOfBias"
+}
 //# sourceMappingURL=CertaintySubcomponentTypeValueSet.d.ts.map

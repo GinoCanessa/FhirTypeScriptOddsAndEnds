@@ -1,4 +1,16 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { SecurityRoleTypeValueSetType } from '../fhirValueSets/SecurityRoleTypeValueSet.js';
+import { ConsentDataMeaningValueSetType, ConsentDataMeaningValueSetEnum } from '../fhirValueSets/ConsentDataMeaningValueSet.js';
+import { ConsentProvisionTypeValueSetType, ConsentProvisionTypeValueSetEnum } from '../fhirValueSets/ConsentProvisionTypeValueSet.js';
+import { ConsentActionValueSetType } from '../fhirValueSets/ConsentActionValueSet.js';
+import { SecurityLabelsValueSetType } from '../fhirValueSets/SecurityLabelsValueSet.js';
+import { V3PurposeOfUseValueSetType } from '../fhirValueSets/V3PurposeOfUseValueSet.js';
+import { ConsentContentClassValueSetType } from '../fhirValueSets/ConsentContentClassValueSet.js';
+import { ConsentContentCodeValueSetType } from '../fhirValueSets/ConsentContentCodeValueSet.js';
+import { ConsentStateCodesValueSetType, ConsentStateCodesValueSetEnum } from '../fhirValueSets/ConsentStateCodesValueSet.js';
+import { ConsentScopeValueSetType } from '../fhirValueSets/ConsentScopeValueSet.js';
+import { ConsentCategoryValueSetType } from '../fhirValueSets/ConsentCategoryValueSet.js';
+import { ConsentPolicyValueSetType } from '../fhirValueSets/ConsentPolicyValueSet.js';
 /**
  * The references to the policies that are included in this consent scope. Policies may be organizational, but are often defined jurisdictionally, or in law.
  */
@@ -7,11 +19,17 @@ export declare type IConsentPolicy = fhir.IBackboneElement & {
      * Entity or Organization having regulatory jurisdiction or accountability for  enforcing policies pertaining to Consent Directives.
      */
     authority?: string | undefined;
+    /**
+     * Extended properties for primitive element: Consent.policy.authority
+     */
     _authority?: fhir.IFhirElement | undefined;
     /**
      * This element is for discoverability / documentation and does not modify or qualify the policy rules.
      */
     uri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Consent.policy.uri
+     */
     _uri?: fhir.IFhirElement | undefined;
 };
 /**
@@ -19,32 +37,38 @@ export declare type IConsentPolicy = fhir.IBackboneElement & {
  */
 export declare type IConsentVerification = fhir.IBackboneElement & {
     /**
-     * Date verification was collected.
-     */
-    verificationDate?: string | undefined;
-    _verificationDate?: fhir.IFhirElement | undefined;
-    /**
      * Has the instruction been verified.
      */
     verified: boolean | null;
+    /**
+     * Extended properties for primitive element: Consent.verification.verified
+     */
     _verified?: fhir.IFhirElement | undefined;
     /**
      * Who verified the instruction (Patient, Relative or other Authorized Person).
      */
     verifiedWith?: fhir.IReference | undefined;
+    /**
+     * Date verification was collected.
+     */
+    verificationDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Consent.verification.verificationDate
+     */
+    _verificationDate?: fhir.IFhirElement | undefined;
 };
 /**
  * Who or what is controlled by this rule. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').
  */
 export declare type IConsentProvisionActor = fhir.IBackboneElement & {
     /**
-     * The resource that identifies the actor. To identify actors by type, use group to identify a set of actors by some property they share (e.g. 'admitting officers').
-     */
-    reference: fhir.IReference | null;
-    /**
      * How the individual is involved in the resources content that is described in the exception.
      */
     role: fhir.ICodeableConcept | null;
+    /**
+     * The resource that identifies the actor. To identify actors by type, use group to identify a set of actors by some property they share (e.g. 'admitting officers').
+     */
+    reference: fhir.IReference | null;
 };
 /**
  * The resources controlled by this rule if specific resources are referenced.
@@ -53,7 +77,10 @@ export declare type IConsentProvisionData = fhir.IBackboneElement & {
     /**
      * How the resource reference is interpreted when testing consent restrictions.
      */
-    meaning: ConsentProvisionDataMeaningEnum | null;
+    meaning: ConsentDataMeaningValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Consent.provision.data.meaning
+     */
     _meaning?: fhir.IFhirElement | undefined;
     /**
      * A reference to a specific resource that defines which resources are covered by this consent.
@@ -65,13 +92,33 @@ export declare type IConsentProvisionData = fhir.IBackboneElement & {
  */
 export declare type IConsentProvision = fhir.IBackboneElement & {
     /**
-     * Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is 'read'.
+     * Action  to take - permit or deny - when the rule conditions are met.  Not permitted in root rule, required in all nested rules.
      */
-    action?: fhir.ICodeableConcept[] | undefined;
+    type?: ConsentProvisionTypeValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: Consent.provision.type
+     */
+    _type?: fhir.IFhirElement | undefined;
+    /**
+     * The timeframe in this rule is valid.
+     */
+    period?: fhir.IPeriod | undefined;
     /**
      * Who or what is controlled by this rule. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').
      */
     actor?: fhir.IConsentProvisionActor[] | undefined;
+    /**
+     * Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is 'read'.
+     */
+    action?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * If the consent specifies a security label of "R" then it applies to all resources that are labeled "R" or lower. E.g. for Confidentiality, it's a high water mark. For other kinds of security labels, subsumption logic applies. When the purpose of use tag is on the data, access request purpose of use shall not conflict.
+     */
+    securityLabel?: fhir.ICoding[] | undefined;
+    /**
+     * When the purpose of use tag is on the data, access request purpose of use shall not conflict.
+     */
+    purpose?: fhir.ICoding[] | undefined;
     /**
      * Multiple types are or'ed together. The intention of the contentType element is that the codes refer to profiles or document types defined in a standard or an implementation guide somewhere.
      */
@@ -81,34 +128,17 @@ export declare type IConsentProvision = fhir.IBackboneElement & {
      */
     code?: fhir.ICodeableConcept[] | undefined;
     /**
-     * The resources controlled by this rule if specific resources are referenced.
-     */
-    data?: fhir.IConsentProvisionData[] | undefined;
-    /**
      * This has a different sense to the Consent.period - that is when the consent agreement holds. This is the time period of the data that is controlled by the agreement.
      */
     dataPeriod?: fhir.IPeriod | undefined;
     /**
-     * The timeframe in this rule is valid.
+     * The resources controlled by this rule if specific resources are referenced.
      */
-    period?: fhir.IPeriod | undefined;
+    data?: fhir.IConsentProvisionData[] | undefined;
     /**
      * Rules which provide exceptions to the base rule or subrules.
      */
     provision?: fhir.IConsentProvision[] | undefined;
-    /**
-     * When the purpose of use tag is on the data, access request purpose of use shall not conflict.
-     */
-    purpose?: fhir.ICoding[] | undefined;
-    /**
-     * If the consent specifies a security label of "R" then it applies to all resources that are labeled "R" or lower. E.g. for Confidentiality, it's a high water mark. For other kinds of security labels, subsumption logic applies. When the purpose of use tag is on the data, access request purpose of use shall not conflict.
-     */
-    securityLabel?: fhir.ICoding[] | undefined;
-    /**
-     * Action  to take - permit or deny - when the rule conditions are met.  Not permitted in root rule, required in all nested rules.
-     */
-    type?: ConsentProvisionTypeEnum | undefined;
-    _type?: fhir.IFhirElement | undefined;
 };
 /**
  * A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
@@ -119,46 +149,45 @@ export declare type IConsent = fhir.IDomainResource & {
      */
     resourceType: "Consent";
     /**
-     * A classification of the type of consents found in the statement. This element supports indexing and retrieval of consent statements.
-     */
-    category: fhir.ICodeableConcept[] | null;
-    /**
-     * This is not the time of the original consent, but the time that this statement was made or derived.
-     */
-    dateTime?: string | undefined;
-    _dateTime?: fhir.IFhirElement | undefined;
-    /**
      * This identifier identifies this copy of the consent. Where this identifier is also used elsewhere as the identifier for a consent record (e.g. a CDA consent document) then the consent details are expected to be the same.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * The organization that manages the consent, and the framework within which it is executed.
+     * This element is labeled as a modifier because the status contains the codes rejected and entered-in-error that mark the Consent as not currently valid.
      */
-    organization?: fhir.IReference[] | undefined;
+    status: ConsentStateCodesValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Consent.status
+     */
+    _status?: fhir.IFhirElement | undefined;
+    /**
+     * A selector of the type of consent being presented: ADR, Privacy, Treatment, Research.  This list is now extensible.
+     */
+    scope: fhir.ICodeableConcept | null;
+    /**
+     * A classification of the type of consents found in the statement. This element supports indexing and retrieval of consent statements.
+     */
+    category: fhir.ICodeableConcept[] | null;
     /**
      * Commonly, the patient the consent pertains to is the author, but for young and old people, it may be some other person.
      */
     patient?: fhir.IReference | undefined;
     /**
+     * This is not the time of the original consent, but the time that this statement was made or derived.
+     */
+    dateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Consent.dateTime
+     */
+    _dateTime?: fhir.IFhirElement | undefined;
+    /**
      * Commonly, the patient the consent pertains to is the consentor, but particularly for young and old people, it may be some other person - e.g. a legal guardian.
      */
     performer?: fhir.IReference[] | undefined;
     /**
-     * The references to the policies that are included in this consent scope. Policies may be organizational, but are often defined jurisdictionally, or in law.
+     * The organization that manages the consent, and the framework within which it is executed.
      */
-    policy?: fhir.IConsentPolicy[] | undefined;
-    /**
-     * If the policyRule is absent, computable consent would need to be constructed from the elements of the Consent resource.
-     */
-    policyRule?: fhir.ICodeableConcept | undefined;
-    /**
-     * An exception to the base policy of this consent. An exception can be an addition or removal of access permissions.
-     */
-    provision?: fhir.IConsentProvision | undefined;
-    /**
-     * A selector of the type of consent being presented: ADR, Privacy, Treatment, Research.  This list is now extensible.
-     */
-    scope: fhir.ICodeableConcept | null;
+    organization?: fhir.IReference[] | undefined;
     /**
      * The source can be contained inline (Attachment), referenced directly (Consent), referenced in a consent repository (DocumentReference), or simply by an identifier (Identifier), e.g. a CDA document id.
      */
@@ -168,106 +197,120 @@ export declare type IConsent = fhir.IDomainResource & {
      */
     sourceReference?: fhir.IReference | undefined;
     /**
-     * This element is labeled as a modifier because the status contains the codes rejected and entered-in-error that mark the Consent as not currently valid.
+     * The references to the policies that are included in this consent scope. Policies may be organizational, but are often defined jurisdictionally, or in law.
      */
-    status: ConsentStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
+    policy?: fhir.IConsentPolicy[] | undefined;
+    /**
+     * If the policyRule is absent, computable consent would need to be constructed from the elements of the Consent resource.
+     */
+    policyRule?: fhir.ICodeableConcept | undefined;
     /**
      * Whether a treatment instruction (e.g. artificial respiration yes or no) was verified with the patient, his/her family or another authorized person.
      */
     verification?: fhir.IConsentVerification[] | undefined;
+    /**
+     * An exception to the base policy of this consent. An exception can be an addition or removal of access permissions.
+     */
+    provision?: fhir.IConsentProvision | undefined;
 };
 /**
  * The references to the policies that are included in this consent scope. Policies may be organizational, but are often defined jurisdictionally, or in law.
  */
-export declare class ConsentPolicy extends fhir.BackboneElement implements fhir.IConsentPolicy {
+export declare class ConsentPolicy extends fhir.BackboneElement implements IConsentPolicy {
     /**
      * Entity or Organization having regulatory jurisdiction or accountability for  enforcing policies pertaining to Consent Directives.
      */
     authority?: string | undefined;
+    /**
+     * Extended properties for primitive element: Consent.policy.authority
+     */
     _authority?: fhir.FhirElement | undefined;
     /**
      * This element is for discoverability / documentation and does not modify or qualify the policy rules.
      */
     uri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Consent.policy.uri
+     */
     _uri?: fhir.FhirElement | undefined;
     /**
      * Default constructor for ConsentPolicy - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IConsentPolicy>);
+    constructor(source?: Partial<IConsentPolicy>);
     /**
-     * Check if the current ConsentPolicy contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ConsentPolicy from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IConsentPolicy): ConsentPolicy;
+    doModelValidation(): [string, string][];
 }
 /**
  * Whether a treatment instruction (e.g. artificial respiration yes or no) was verified with the patient, his/her family or another authorized person.
  */
-export declare class ConsentVerification extends fhir.BackboneElement implements fhir.IConsentVerification {
-    /**
-     * Date verification was collected.
-     */
-    verificationDate?: string | undefined;
-    _verificationDate?: fhir.FhirElement | undefined;
+export declare class ConsentVerification extends fhir.BackboneElement implements IConsentVerification {
     /**
      * Has the instruction been verified.
      */
     verified: boolean | null;
+    /**
+     * Extended properties for primitive element: Consent.verification.verified
+     */
     _verified?: fhir.FhirElement | undefined;
     /**
      * Who verified the instruction (Patient, Relative or other Authorized Person).
      */
     verifiedWith?: fhir.Reference | undefined;
     /**
+     * Date verification was collected.
+     */
+    verificationDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Consent.verification.verificationDate
+     */
+    _verificationDate?: fhir.FhirElement | undefined;
+    /**
      * Default constructor for ConsentVerification - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IConsentVerification>);
+    constructor(source?: Partial<IConsentVerification>);
     /**
-     * Check if the current ConsentVerification contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a ConsentVerification from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IConsentVerification): ConsentVerification;
+    doModelValidation(): [string, string][];
 }
 /**
  * Who or what is controlled by this rule. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').
  */
-export declare class ConsentProvisionActor extends fhir.BackboneElement implements fhir.IConsentProvisionActor {
-    /**
-     * The resource that identifies the actor. To identify actors by type, use group to identify a set of actors by some property they share (e.g. 'admitting officers').
-     */
-    reference: fhir.Reference | null;
+export declare class ConsentProvisionActor extends fhir.BackboneElement implements IConsentProvisionActor {
     /**
      * How the individual is involved in the resources content that is described in the exception.
      */
     role: fhir.CodeableConcept | null;
     /**
+     * The resource that identifies the actor. To identify actors by type, use group to identify a set of actors by some property they share (e.g. 'admitting officers').
+     */
+    reference: fhir.Reference | null;
+    /**
      * Default constructor for ConsentProvisionActor - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IConsentProvisionActor>);
+    constructor(source?: Partial<IConsentProvisionActor>);
     /**
-     * Check if the current ConsentProvisionActor contains all required elements.
+     * Extensible-bound Value Set for role
      */
-    checkRequiredElements(): string[];
+    roleExtensibleValueSet(): SecurityRoleTypeValueSetType;
     /**
-     * Factory function to create a ConsentProvisionActor from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IConsentProvisionActor): ConsentProvisionActor;
+    doModelValidation(): [string, string][];
 }
 /**
  * The resources controlled by this rule if specific resources are referenced.
  */
-export declare class ConsentProvisionData extends fhir.BackboneElement implements fhir.IConsentProvisionData {
+export declare class ConsentProvisionData extends fhir.BackboneElement implements IConsentProvisionData {
     /**
      * How the resource reference is interpreted when testing consent restrictions.
      */
-    meaning: ConsentProvisionDataMeaningEnum | null;
+    meaning: ConsentDataMeaningValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Consent.provision.data.meaning
+     */
     _meaning?: fhir.FhirElement | undefined;
     /**
      * A reference to a specific resource that defines which resources are covered by this consent.
@@ -276,28 +319,48 @@ export declare class ConsentProvisionData extends fhir.BackboneElement implement
     /**
      * Default constructor for ConsentProvisionData - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IConsentProvisionData>);
+    constructor(source?: Partial<IConsentProvisionData>);
     /**
-     * Check if the current ConsentProvisionData contains all required elements.
+     * Required-bound Value Set for meaning
      */
-    checkRequiredElements(): string[];
+    meaningRequiredValueSet(): ConsentDataMeaningValueSetType;
     /**
-     * Factory function to create a ConsentProvisionData from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IConsentProvisionData): ConsentProvisionData;
+    doModelValidation(): [string, string][];
 }
 /**
  * An exception to the base policy of this consent. An exception can be an addition or removal of access permissions.
  */
-export declare class ConsentProvision extends fhir.BackboneElement implements fhir.IConsentProvision {
+export declare class ConsentProvision extends fhir.BackboneElement implements IConsentProvision {
+    /**
+     * Action  to take - permit or deny - when the rule conditions are met.  Not permitted in root rule, required in all nested rules.
+     */
+    type?: ConsentProvisionTypeValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: Consent.provision.type
+     */
+    _type?: fhir.FhirElement | undefined;
+    /**
+     * The timeframe in this rule is valid.
+     */
+    period?: fhir.Period | undefined;
+    /**
+     * Who or what is controlled by this rule. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').
+     */
+    actor?: fhir.ConsentProvisionActor[] | undefined;
     /**
      * Note that this is the direct action (not the grounds for the action covered in the purpose element). At present, the only action in the understood and tested scope of this resource is 'read'.
      */
     action?: fhir.CodeableConcept[] | undefined;
     /**
-     * Who or what is controlled by this rule. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').
+     * If the consent specifies a security label of "R" then it applies to all resources that are labeled "R" or lower. E.g. for Confidentiality, it's a high water mark. For other kinds of security labels, subsumption logic applies. When the purpose of use tag is on the data, access request purpose of use shall not conflict.
      */
-    actor?: fhir.ConsentProvisionActor[] | undefined;
+    securityLabel?: fhir.Coding[] | undefined;
+    /**
+     * When the purpose of use tag is on the data, access request purpose of use shall not conflict.
+     */
+    purpose?: fhir.Coding[] | undefined;
     /**
      * Multiple types are or'ed together. The intention of the contentType element is that the codes refer to profiles or document types defined in a standard or an implementation guide somewhere.
      */
@@ -307,96 +370,98 @@ export declare class ConsentProvision extends fhir.BackboneElement implements fh
      */
     code?: fhir.CodeableConcept[] | undefined;
     /**
-     * The resources controlled by this rule if specific resources are referenced.
-     */
-    data?: fhir.ConsentProvisionData[] | undefined;
-    /**
      * This has a different sense to the Consent.period - that is when the consent agreement holds. This is the time period of the data that is controlled by the agreement.
      */
     dataPeriod?: fhir.Period | undefined;
     /**
-     * The timeframe in this rule is valid.
+     * The resources controlled by this rule if specific resources are referenced.
      */
-    period?: fhir.Period | undefined;
+    data?: fhir.ConsentProvisionData[] | undefined;
     /**
      * Rules which provide exceptions to the base rule or subrules.
      */
     provision?: fhir.ConsentProvision[] | undefined;
     /**
-     * When the purpose of use tag is on the data, access request purpose of use shall not conflict.
-     */
-    purpose?: fhir.Coding[] | undefined;
-    /**
-     * If the consent specifies a security label of "R" then it applies to all resources that are labeled "R" or lower. E.g. for Confidentiality, it's a high water mark. For other kinds of security labels, subsumption logic applies. When the purpose of use tag is on the data, access request purpose of use shall not conflict.
-     */
-    securityLabel?: fhir.Coding[] | undefined;
-    /**
-     * Action  to take - permit or deny - when the rule conditions are met.  Not permitted in root rule, required in all nested rules.
-     */
-    type?: ConsentProvisionTypeEnum | undefined;
-    _type?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for ConsentProvision - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IConsentProvision>);
+    constructor(source?: Partial<IConsentProvision>);
     /**
-     * Check if the current ConsentProvision contains all required elements.
+     * Required-bound Value Set for type
      */
-    checkRequiredElements(): string[];
+    typeRequiredValueSet(): ConsentProvisionTypeValueSetType;
     /**
-     * Factory function to create a ConsentProvision from an object that MUST contain all required elements.
+     * Example-bound Value Set for action
      */
-    static fromStrict(source: fhir.IConsentProvision): ConsentProvision;
+    actionExampleValueSet(): ConsentActionValueSetType;
+    /**
+     * Extensible-bound Value Set for securityLabel
+     */
+    securityLabelExtensibleValueSet(): SecurityLabelsValueSetType;
+    /**
+     * Extensible-bound Value Set for purpose
+     */
+    purposeExtensibleValueSet(): V3PurposeOfUseValueSetType;
+    /**
+     * Extensible-bound Value Set for class
+     */
+    classExtensibleValueSet(): ConsentContentClassValueSetType;
+    /**
+     * Example-bound Value Set for code
+     */
+    codeExampleValueSet(): ConsentContentCodeValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
  */
-export declare class Consent extends fhir.DomainResource implements fhir.IConsent {
+export declare class Consent extends fhir.DomainResource implements IConsent {
     /**
      * Resource Type Name
      */
     resourceType: "Consent";
     /**
-     * A classification of the type of consents found in the statement. This element supports indexing and retrieval of consent statements.
-     */
-    category: fhir.CodeableConcept[] | null;
-    /**
-     * This is not the time of the original consent, but the time that this statement was made or derived.
-     */
-    dateTime?: string | undefined;
-    _dateTime?: fhir.FhirElement | undefined;
-    /**
      * This identifier identifies this copy of the consent. Where this identifier is also used elsewhere as the identifier for a consent record (e.g. a CDA consent document) then the consent details are expected to be the same.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * The organization that manages the consent, and the framework within which it is executed.
+     * This element is labeled as a modifier because the status contains the codes rejected and entered-in-error that mark the Consent as not currently valid.
      */
-    organization?: fhir.Reference[] | undefined;
+    status: ConsentStateCodesValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Consent.status
+     */
+    _status?: fhir.FhirElement | undefined;
+    /**
+     * A selector of the type of consent being presented: ADR, Privacy, Treatment, Research.  This list is now extensible.
+     */
+    scope: fhir.CodeableConcept | null;
+    /**
+     * A classification of the type of consents found in the statement. This element supports indexing and retrieval of consent statements.
+     */
+    category: fhir.CodeableConcept[] | null;
     /**
      * Commonly, the patient the consent pertains to is the author, but for young and old people, it may be some other person.
      */
     patient?: fhir.Reference | undefined;
     /**
+     * This is not the time of the original consent, but the time that this statement was made or derived.
+     */
+    dateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Consent.dateTime
+     */
+    _dateTime?: fhir.FhirElement | undefined;
+    /**
      * Commonly, the patient the consent pertains to is the consentor, but particularly for young and old people, it may be some other person - e.g. a legal guardian.
      */
     performer?: fhir.Reference[] | undefined;
     /**
-     * The references to the policies that are included in this consent scope. Policies may be organizational, but are often defined jurisdictionally, or in law.
+     * The organization that manages the consent, and the framework within which it is executed.
      */
-    policy?: fhir.ConsentPolicy[] | undefined;
-    /**
-     * If the policyRule is absent, computable consent would need to be constructed from the elements of the Consent resource.
-     */
-    policyRule?: fhir.CodeableConcept | undefined;
-    /**
-     * An exception to the base policy of this consent. An exception can be an addition or removal of access permissions.
-     */
-    provision?: fhir.ConsentProvision | undefined;
-    /**
-     * A selector of the type of consent being presented: ADR, Privacy, Treatment, Research.  This list is now extensible.
-     */
-    scope: fhir.CodeableConcept | null;
+    organization?: fhir.Reference[] | undefined;
     /**
      * The source can be contained inline (Attachment), referenced directly (Consent), referenced in a consent repository (DocumentReference), or simply by an identifier (Identifier), e.g. a CDA document id.
      */
@@ -406,52 +471,44 @@ export declare class Consent extends fhir.DomainResource implements fhir.IConsen
      */
     sourceReference?: fhir.Reference | undefined;
     /**
-     * This element is labeled as a modifier because the status contains the codes rejected and entered-in-error that mark the Consent as not currently valid.
+     * The references to the policies that are included in this consent scope. Policies may be organizational, but are often defined jurisdictionally, or in law.
      */
-    status: ConsentStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
+    policy?: fhir.ConsentPolicy[] | undefined;
+    /**
+     * If the policyRule is absent, computable consent would need to be constructed from the elements of the Consent resource.
+     */
+    policyRule?: fhir.CodeableConcept | undefined;
     /**
      * Whether a treatment instruction (e.g. artificial respiration yes or no) was verified with the patient, his/her family or another authorized person.
      */
     verification?: fhir.ConsentVerification[] | undefined;
     /**
+     * An exception to the base policy of this consent. An exception can be an addition or removal of access permissions.
+     */
+    provision?: fhir.ConsentProvision | undefined;
+    /**
      * Default constructor for Consent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IConsent>);
+    constructor(source?: Partial<IConsent>);
     /**
-     * Check if the current Consent contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): ConsentStateCodesValueSetType;
     /**
-     * Factory function to create a Consent from an object that MUST contain all required elements.
+     * Extensible-bound Value Set for scope
      */
-    static fromStrict(source: fhir.IConsent): Consent;
-}
-/**
- * Code Values for the Consent.provision.data.meaning field
- */
-export declare enum ConsentProvisionDataMeaningEnum {
-    INSTANCE = "instance",
-    RELATED = "related",
-    DEPENDENTS = "dependents",
-    AUTHOREDBY = "authoredby"
-}
-/**
- * Code Values for the Consent.provision.type field
- */
-export declare enum ConsentProvisionTypeEnum {
-    DENY = "deny",
-    PERMIT = "permit"
-}
-/**
- * Code Values for the Consent.status field
- */
-export declare enum ConsentStatusEnum {
-    DRAFT = "draft",
-    PROPOSED = "proposed",
-    ACTIVE = "active",
-    REJECTED = "rejected",
-    INACTIVE = "inactive",
-    ENTERED_IN_ERROR = "entered-in-error"
+    scopeExtensibleValueSet(): ConsentScopeValueSetType;
+    /**
+     * Extensible-bound Value Set for category
+     */
+    categoryExtensibleValueSet(): ConsentCategoryValueSetType;
+    /**
+     * Extensible-bound Value Set for policyRule
+     */
+    policyRuleExtensibleValueSet(): ConsentPolicyValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Consent.d.ts.map

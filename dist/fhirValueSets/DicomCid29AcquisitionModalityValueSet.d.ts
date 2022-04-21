@@ -1,155 +1,312 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Transitive closure of CID 29 AcquisitionModality
  */
 export declare const DicomCid29AcquisitionModalityValueSet: {
     /**
-     * Autorefraction device
+     * AR: Autorefraction device
      */
-    dicom_dcim_Autorefraction: Coding;
+    readonly Autorefraction: Coding;
     /**
-     * Ultrasound Bone Densitometry (modality)
+     * BDUS: Ultrasound Bone Densitometry (modality)
      */
-    dicom_dcim_UltrasoundBoneDensitometry: Coding;
+    readonly UltrasoundBoneDensitometry: Coding;
     /**
-     * Bone Mineral Densitometry by X-Ray (modality), including dual-energy X-Ray absorptiometry (DXA) and morphometric X-Ray absorptiometry (MXA)
+     * BMD: Bone Mineral Densitometry by X-Ray (modality), including dual-energy X-Ray absorptiometry (DXA) and morphometric X-Ray absorptiometry (MXA)
      */
-    dicom_dcim_BoneMineralDensitometry: Coding;
+    readonly BoneMineralDensitometry: Coding;
     /**
-     * Computed Radiography device
+     * CR: Computed Radiography device
      */
-    dicom_dcim_ComputedRadiography: Coding;
+    readonly ComputedRadiography: Coding;
     /**
-     * Computed Tomography device
+     * CT: Computed Tomography device
      */
-    dicom_dcim_ComputedTomography: Coding;
+    readonly ComputedTomography: Coding;
     /**
-     * Digital Radiography device
+     * DX: Digital Radiography device
      */
-    dicom_dcim_DigitalRadiography: Coding;
+    readonly DigitalRadiography: Coding;
     /**
-     * Electrocardiography device
+     * ECG: Electrocardiography device
      */
-    dicom_dcim_Electrocardiography: Coding;
+    readonly Electrocardiography: Coding;
     /**
-     * Cardiac Electrophysiology device
+     * EPS: Cardiac Electrophysiology device
      */
-    dicom_dcim_CardiacElectrophysiology: Coding;
+    readonly CardiacElectrophysiology: Coding;
     /**
-     * Endoscopy device
+     * ES: Endoscopy device
      */
-    dicom_dcim_Endoscopy: Coding;
+    readonly Endoscopy: Coding;
     /**
-     * General Microscopy device
+     * GM: General Microscopy device
      */
-    dicom_dcim_GeneralMicroscopy: Coding;
+    readonly GeneralMicroscopy: Coding;
     /**
-     * Hemodynamic Waveform acquisition device
+     * HD: Hemodynamic Waveform acquisition device
      */
-    dicom_dcim_HemodynamicWaveform: Coding;
+    readonly HemodynamicWaveform: Coding;
     /**
-     * Intra-oral Radiography device
+     * IO: Intra-oral Radiography device
      */
-    dicom_dcim_IntraOralRadiography: Coding;
+    readonly IntraOralRadiography: Coding;
     /**
-     * An acquisition device, process or method that performs intravascular optical coherence tomography
+     * IVOCT: An acquisition device, process or method that performs intravascular optical coherence tomography
      */
-    dicom_dcim_IntravascularOpticalCoherenceTomography: Coding;
+    readonly IntravascularOpticalCoherenceTomography: Coding;
     /**
-     * Intravascular Ultrasound device
+     * IVUS: Intravascular Ultrasound device
      */
-    dicom_dcim_IntravascularUltrasound: Coding;
+    readonly IntravascularUltrasound: Coding;
     /**
-     * Keratometry device
+     * KER: Keratometry device
      */
-    dicom_dcim_Keratometry: Coding;
+    readonly Keratometry: Coding;
     /**
-     * Lensometry device
+     * LEN: Lensometry device
      */
-    dicom_dcim_Lensometry: Coding;
+    readonly Lensometry: Coding;
     /**
-     * Mammography device
+     * MG: Mammography device
      */
-    dicom_dcim_Mammography: Coding;
+    readonly Mammography: Coding;
     /**
-     * Magnetic Resonance device
+     * MR: Magnetic Resonance device
      */
-    dicom_dcim_MagneticResonance: Coding;
+    readonly MagneticResonance: Coding;
     /**
-     * Nuclear Medicine device
+     * NM: Nuclear Medicine device
      */
-    dicom_dcim_NuclearMedicine: Coding;
+    readonly NuclearMedicine: Coding;
     /**
-     * Measurements of the axial length of the eye, which are done by various devices
+     * OAM: Measurements of the axial length of the eye, which are done by various devices
      */
-    dicom_dcim_OphthalmicAxialMeasurements: Coding;
+    readonly OphthalmicAxialMeasurements: Coding;
     /**
-     * Modality device that uses an interferometric, non-invasive optical tomographic technique to image 2D slices and 3D volumes of tissue using visible and near visible frequencies
+     * OCT: Modality device that uses an interferometric, non-invasive optical tomographic technique to image 2D slices and 3D volumes of tissue using visible and near visible frequencies
      */
-    dicom_dcim_OpticalCoherenceTomography: Coding;
+    readonly OpticalCoherenceTomography: Coding;
     /**
-     * Ophthalmic photography modality
+     * OP: Ophthalmic photography modality
      */
-    dicom_dcim_OphthalmicPhotography: Coding;
+    readonly OphthalmicPhotography: Coding;
     /**
-     * Modality device that measures corneal topography, corneal or retinal thickness, and other similar parameters that are typically displayed as maps
+     * OPM: Modality device that measures corneal topography, corneal or retinal thickness, and other similar parameters that are typically displayed as maps
      */
-    dicom_dcim_OphthalmicMapping: Coding;
+    readonly OphthalmicMapping: Coding;
     /**
-     * Modality device that measures the refractive characteristics of the eye
+     * OPR: Modality device that measures the refractive characteristics of the eye
      */
-    dicom_dcim_OphthalmicRefraction: Coding;
+    readonly OphthalmicRefraction: Coding;
     /**
-     * Tomography of the eye acquired by a modality that is based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded
+     * OPT: Tomography of the eye acquired by a modality that is based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded
      */
-    dicom_dcim_OphthalmicTomography: Coding;
+    readonly OphthalmicTomography: Coding;
     /**
-     * Modality device that measures visual fields and perform visual perimetry
+     * OPV: Modality device that measures visual fields and perform visual perimetry
      */
-    dicom_dcim_OphthalmicVisualField: Coding;
+    readonly OphthalmicVisualField: Coding;
     /**
-     * An acquisition device, process or method that performs optical surface scanning
+     * OSS: An acquisition device, process or method that performs optical surface scanning
      */
-    dicom_dcim_OpticalSurvaceScanner: Coding;
+    readonly OpticalSurvaceScanner: Coding;
     /**
-     * Positron emission tomography (PET) device
+     * PT: Positron emission tomography (PET) device
      */
-    dicom_dcim_PositronEmissionTomography: Coding;
+    readonly PositronEmissionTomography: Coding;
     /**
-     * Panoramic X-Ray device
+     * PX: Panoramic X-Ray device
      */
-    dicom_dcim_PanoramicXRay: Coding;
+    readonly PanoramicXRay: Coding;
     /**
-     * Radiofluoroscopy device
+     * RF: Radiofluoroscopy device
      */
-    dicom_dcim_Radiofluoroscopy: Coding;
+    readonly Radiofluoroscopy: Coding;
     /**
-     * Radiographic imaging (conventional film/screen)
+     * RG: Radiographic imaging (conventional film/screen)
      */
-    dicom_dcim_RadiographicImaging: Coding;
+    readonly RadiographicImaging: Coding;
     /**
-     * Slide Microscopy
+     * SM: Slide Microscopy
      */
-    dicom_dcim_SlideMicroscopy: Coding;
+    readonly SlideMicroscopy: Coding;
     /**
-     * Subjective Refraction device
+     * SRF: Subjective Refraction device
      */
-    dicom_dcim_SubjectiveRefraction: Coding;
+    readonly SubjectiveRefraction: Coding;
     /**
-     * Ultrasound device
+     * US: Ultrasound device
      */
-    dicom_dcim_Ultrasound: Coding;
+    readonly Ultrasound: Coding;
     /**
-     * Visual Acuity device
+     * VA: Visual Acuity device
      */
-    dicom_dcim_VisualAcuity: Coding;
+    readonly VisualAcuity: Coding;
     /**
-     * X-Ray Angiography device
+     * XA: X-Ray Angiography device
      */
-    dicom_dcim_XRayAngiography: Coding;
+    readonly XRayAngiography: Coding;
     /**
-     * External-camera Photography device
+     * XC: External-camera Photography device
      */
-    dicom_dcim_ExternalCameraPhotography: Coding;
+    readonly ExternalCameraPhotography: Coding;
 };
+/**
+ * Transitive closure of CID 29 AcquisitionModality
+ */
+export declare type DicomCid29AcquisitionModalityValueSetType = typeof DicomCid29AcquisitionModalityValueSet;
+/**
+ * Transitive closure of CID 29 AcquisitionModality
+ */
+export declare enum DicomCid29AcquisitionModalityValueSetEnum {
+    /**
+     * AR: Autorefraction device
+     */
+    Autorefraction = "AR",
+    /**
+     * BDUS: Ultrasound Bone Densitometry (modality)
+     */
+    UltrasoundBoneDensitometry = "BDUS",
+    /**
+     * BMD: Bone Mineral Densitometry by X-Ray (modality), including dual-energy X-Ray absorptiometry (DXA) and morphometric X-Ray absorptiometry (MXA)
+     */
+    BoneMineralDensitometry = "BMD",
+    /**
+     * CR: Computed Radiography device
+     */
+    ComputedRadiography = "CR",
+    /**
+     * CT: Computed Tomography device
+     */
+    ComputedTomography = "CT",
+    /**
+     * DX: Digital Radiography device
+     */
+    DigitalRadiography = "DX",
+    /**
+     * ECG: Electrocardiography device
+     */
+    Electrocardiography = "ECG",
+    /**
+     * EPS: Cardiac Electrophysiology device
+     */
+    CardiacElectrophysiology = "EPS",
+    /**
+     * ES: Endoscopy device
+     */
+    Endoscopy = "ES",
+    /**
+     * GM: General Microscopy device
+     */
+    GeneralMicroscopy = "GM",
+    /**
+     * HD: Hemodynamic Waveform acquisition device
+     */
+    HemodynamicWaveform = "HD",
+    /**
+     * IO: Intra-oral Radiography device
+     */
+    IntraOralRadiography = "IO",
+    /**
+     * IVOCT: An acquisition device, process or method that performs intravascular optical coherence tomography
+     */
+    IntravascularOpticalCoherenceTomography = "IVOCT",
+    /**
+     * IVUS: Intravascular Ultrasound device
+     */
+    IntravascularUltrasound = "IVUS",
+    /**
+     * KER: Keratometry device
+     */
+    Keratometry = "KER",
+    /**
+     * LEN: Lensometry device
+     */
+    Lensometry = "LEN",
+    /**
+     * MG: Mammography device
+     */
+    Mammography = "MG",
+    /**
+     * MR: Magnetic Resonance device
+     */
+    MagneticResonance = "MR",
+    /**
+     * NM: Nuclear Medicine device
+     */
+    NuclearMedicine = "NM",
+    /**
+     * OAM: Measurements of the axial length of the eye, which are done by various devices
+     */
+    OphthalmicAxialMeasurements = "OAM",
+    /**
+     * OCT: Modality device that uses an interferometric, non-invasive optical tomographic technique to image 2D slices and 3D volumes of tissue using visible and near visible frequencies
+     */
+    OpticalCoherenceTomography = "OCT",
+    /**
+     * OP: Ophthalmic photography modality
+     */
+    OphthalmicPhotography = "OP",
+    /**
+     * OPM: Modality device that measures corneal topography, corneal or retinal thickness, and other similar parameters that are typically displayed as maps
+     */
+    OphthalmicMapping = "OPM",
+    /**
+     * OPR: Modality device that measures the refractive characteristics of the eye
+     */
+    OphthalmicRefraction = "OPR",
+    /**
+     * OPT: Tomography of the eye acquired by a modality that is based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded
+     */
+    OphthalmicTomography = "OPT",
+    /**
+     * OPV: Modality device that measures visual fields and perform visual perimetry
+     */
+    OphthalmicVisualField = "OPV",
+    /**
+     * OSS: An acquisition device, process or method that performs optical surface scanning
+     */
+    OpticalSurvaceScanner = "OSS",
+    /**
+     * PT: Positron emission tomography (PET) device
+     */
+    PositronEmissionTomography = "PT",
+    /**
+     * PX: Panoramic X-Ray device
+     */
+    PanoramicXRay = "PX",
+    /**
+     * RF: Radiofluoroscopy device
+     */
+    Radiofluoroscopy = "RF",
+    /**
+     * RG: Radiographic imaging (conventional film/screen)
+     */
+    RadiographicImaging = "RG",
+    /**
+     * SM: Slide Microscopy
+     */
+    SlideMicroscopy = "SM",
+    /**
+     * SRF: Subjective Refraction device
+     */
+    SubjectiveRefraction = "SRF",
+    /**
+     * US: Ultrasound device
+     */
+    Ultrasound = "US",
+    /**
+     * VA: Visual Acuity device
+     */
+    VisualAcuity = "VA",
+    /**
+     * XA: X-Ray Angiography device
+     */
+    XRayAngiography = "XA",
+    /**
+     * XC: External-camera Photography device
+     */
+    ExternalCameraPhotography = "XC"
+}
 //# sourceMappingURL=DicomCid29AcquisitionModalityValueSet.d.ts.map

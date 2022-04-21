@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of participant.
  */
 export declare const ReportParticipantTypeValueSet: {
     /**
-     * A FHIR Client.
+     * client: A FHIR Client.
      */
-    report_participant_type_Client: Coding;
+    readonly Client: Coding;
     /**
-     * A FHIR Server.
+     * server: A FHIR Server.
      */
-    report_participant_type_Server: Coding;
+    readonly Server: Coding;
     /**
-     * The test execution engine.
+     * test-engine: The test execution engine.
      */
-    report_participant_type_TestEngine: Coding;
+    readonly TestEngine: Coding;
 };
+/**
+ * The type of participant.
+ */
+export declare type ReportParticipantTypeValueSetType = typeof ReportParticipantTypeValueSet;
+/**
+ * The type of participant.
+ */
+export declare enum ReportParticipantTypeValueSetEnum {
+    /**
+     * client: A FHIR Client.
+     */
+    Client = "client",
+    /**
+     * server: A FHIR Server.
+     */
+    Server = "server",
+    /**
+     * test-engine: The test execution engine.
+     */
+    TestEngine = "test-engine"
+}
 //# sourceMappingURL=ReportParticipantTypeValueSet.d.ts.map

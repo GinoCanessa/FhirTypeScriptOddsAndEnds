@@ -1,4 +1,11 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { EventStatusValueSetType, EventStatusValueSetEnum } from '../fhirValueSets/EventStatusValueSet.js';
+import { CommunicationNotDoneReasonValueSetType } from '../fhirValueSets/CommunicationNotDoneReasonValueSet.js';
+import { CommunicationCategoryValueSetType } from '../fhirValueSets/CommunicationCategoryValueSet.js';
+import { RequestPriorityValueSetType, RequestPriorityValueSetEnum } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { V3ParticipationModeValueSetType } from '../fhirValueSets/V3ParticipationModeValueSet.js';
+import { CommunicationTopicValueSetType } from '../fhirValueSets/CommunicationTopicValueSet.js';
+import { ClinicalFindingsValueSetType } from '../fhirValueSets/ClinicalFindingsValueSet.js';
 /**
  * Text, attachment(s), or resource(s) that was communicated to the recipient.
  */
@@ -7,6 +14,9 @@ export declare type ICommunicationPayload = fhir.IBackboneElement & {
      * A communicated content (or for multi-part communications, one portion of the communication).
      */
     contentString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Communication.payload.content[x]
+     */
     _contentString?: fhir.IFhirElement | undefined;
     /**
      * A communicated content (or for multi-part communications, one portion of the communication).
@@ -26,72 +36,96 @@ export declare type ICommunication = fhir.IDomainResource & {
      */
     resourceType: "Communication";
     /**
-     * Don't use Communication.about element when a more specific element exists, such as basedOn or reasonReference.
-     */
-    about?: fhir.IReference[] | undefined;
-    /**
-     * This must point to some sort of a 'Request' resource, such as CarePlan, CommunicationRequest, ServiceRequest, MedicationRequest, etc.
-     */
-    basedOn?: fhir.IReference[] | undefined;
-    /**
-     * There may be multiple axes of categorization and one communication may serve multiple purposes.
-     */
-    category?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
-     */
-    encounter?: fhir.IReference | undefined;
-    /**
      * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * Prior communication that this communication is in response to.
-     */
-    inResponseTo?: fhir.IReference[] | undefined;
-    /**
      * The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Communication.
      */
     instantiatesCanonical?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: Communication.instantiatesCanonical
+     */
     _instantiatesCanonical?: fhir.IFhirElement[] | undefined;
     /**
      * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
      */
     instantiatesUri?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: Communication.instantiatesUri
+     */
     _instantiatesUri?: fhir.IFhirElement[] | undefined;
     /**
-     * A channel that was used for this communication (e.g. email, fax).
+     * This must point to some sort of a 'Request' resource, such as CarePlan, CommunicationRequest, ServiceRequest, MedicationRequest, etc.
      */
-    medium?: fhir.ICodeableConcept[] | undefined;
-    /**
-     * Additional notes or commentary about the communication by the sender, receiver or other interested parties.
-     */
-    note?: fhir.IAnnotation[] | undefined;
+    basedOn?: fhir.IReference[] | undefined;
     /**
      * Part of this action.
      */
     partOf?: fhir.IReference[] | undefined;
     /**
-     * Text, attachment(s), or resource(s) that was communicated to the recipient.
+     * Prior communication that this communication is in response to.
      */
-    payload?: fhir.ICommunicationPayload[] | undefined;
+    inResponseTo?: fhir.IReference[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains the codes aborted and entered-in-error that mark the communication as not currently valid.
+     */
+    status: EventStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Communication.status
+     */
+    _status?: fhir.IFhirElement | undefined;
+    /**
+     * This is generally only used for "exception" statuses such as "not-done", "suspended" or "aborted". The reason for performing the event at all is captured in reasonCode, not here.
+     */
+    statusReason?: fhir.ICodeableConcept | undefined;
+    /**
+     * There may be multiple axes of categorization and one communication may serve multiple purposes.
+     */
+    category?: fhir.ICodeableConcept[] | undefined;
     /**
      * Used to prioritize workflow (such as which communication to read first) when the communication is planned or in progress.
      */
-    priority?: CommunicationPriorityEnum | undefined;
+    priority?: RequestPriorityValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: Communication.priority
+     */
     _priority?: fhir.IFhirElement | undefined;
     /**
-     * Textual reasons can be captured using reasonCode.text.
+     * A channel that was used for this communication (e.g. email, fax).
      */
-    reasonCode?: fhir.ICodeableConcept[] | undefined;
+    medium?: fhir.ICodeableConcept[] | undefined;
     /**
-     * Indicates another resource whose existence justifies this communication.
+     * The patient or group that was the focus of this communication.
      */
-    reasonReference?: fhir.IReference[] | undefined;
+    subject?: fhir.IReference | undefined;
+    /**
+     * Communication.topic.text can be used without any codings.
+     */
+    topic?: fhir.ICodeableConcept | undefined;
+    /**
+     * Don't use Communication.about element when a more specific element exists, such as basedOn or reasonReference.
+     */
+    about?: fhir.IReference[] | undefined;
+    /**
+     * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
+     */
+    encounter?: fhir.IReference | undefined;
+    /**
+     * The time when this communication was sent.
+     */
+    sent?: string | undefined;
+    /**
+     * Extended properties for primitive element: Communication.sent
+     */
+    _sent?: fhir.IFhirElement | undefined;
     /**
      * The time when this communication arrived at the destination.
      */
     received?: string | undefined;
+    /**
+     * Extended properties for primitive element: Communication.received
+     */
     _received?: fhir.IFhirElement | undefined;
     /**
      * The entity (e.g. person, organization, clinical information system, care team or device) which was the target of the communication. If receipts need to be tracked by an individual, a separate resource instance will need to be created for each recipient.  Multiple recipient communications are intended where either receipts are not tracked (e.g. a mass mail-out) or a receipt is captured in aggregate (all emails confirmed received by a particular time).
@@ -102,36 +136,33 @@ export declare type ICommunication = fhir.IDomainResource & {
      */
     sender?: fhir.IReference | undefined;
     /**
-     * The time when this communication was sent.
+     * Textual reasons can be captured using reasonCode.text.
      */
-    sent?: string | undefined;
-    _sent?: fhir.IFhirElement | undefined;
+    reasonCode?: fhir.ICodeableConcept[] | undefined;
     /**
-     * This element is labeled as a modifier because the status contains the codes aborted and entered-in-error that mark the communication as not currently valid.
+     * Indicates another resource whose existence justifies this communication.
      */
-    status: CommunicationStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
+    reasonReference?: fhir.IReference[] | undefined;
     /**
-     * This is generally only used for "exception" statuses such as "not-done", "suspended" or "aborted". The reason for performing the event at all is captured in reasonCode, not here.
+     * Text, attachment(s), or resource(s) that was communicated to the recipient.
      */
-    statusReason?: fhir.ICodeableConcept | undefined;
+    payload?: fhir.ICommunicationPayload[] | undefined;
     /**
-     * The patient or group that was the focus of this communication.
+     * Additional notes or commentary about the communication by the sender, receiver or other interested parties.
      */
-    subject?: fhir.IReference | undefined;
-    /**
-     * Communication.topic.text can be used without any codings.
-     */
-    topic?: fhir.ICodeableConcept | undefined;
+    note?: fhir.IAnnotation[] | undefined;
 };
 /**
  * Text, attachment(s), or resource(s) that was communicated to the recipient.
  */
-export declare class CommunicationPayload extends fhir.BackboneElement implements fhir.ICommunicationPayload {
+export declare class CommunicationPayload extends fhir.BackboneElement implements ICommunicationPayload {
     /**
      * A communicated content (or for multi-part communications, one portion of the communication).
      */
     contentString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Communication.payload.content[x]
+     */
     _contentString?: fhir.FhirElement | undefined;
     /**
      * A communicated content (or for multi-part communications, one portion of the communication).
@@ -144,91 +175,111 @@ export declare class CommunicationPayload extends fhir.BackboneElement implement
     /**
      * Default constructor for CommunicationPayload - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ICommunicationPayload>);
+    constructor(source?: Partial<ICommunicationPayload>);
     /**
-     * Check if the current CommunicationPayload contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a CommunicationPayload from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ICommunicationPayload): CommunicationPayload;
+    doModelValidation(): [string, string][];
 }
 /**
  * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.
  */
-export declare class Communication extends fhir.DomainResource implements fhir.ICommunication {
+export declare class Communication extends fhir.DomainResource implements ICommunication {
     /**
      * Resource Type Name
      */
     resourceType: "Communication";
     /**
-     * Don't use Communication.about element when a more specific element exists, such as basedOn or reasonReference.
-     */
-    about?: fhir.Reference[] | undefined;
-    /**
-     * This must point to some sort of a 'Request' resource, such as CarePlan, CommunicationRequest, ServiceRequest, MedicationRequest, etc.
-     */
-    basedOn?: fhir.Reference[] | undefined;
-    /**
-     * There may be multiple axes of categorization and one communication may serve multiple purposes.
-     */
-    category?: fhir.CodeableConcept[] | undefined;
-    /**
-     * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
-     */
-    encounter?: fhir.Reference | undefined;
-    /**
      * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * Prior communication that this communication is in response to.
-     */
-    inResponseTo?: fhir.Reference[] | undefined;
-    /**
      * The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Communication.
      */
     instantiatesCanonical?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: Communication.instantiatesCanonical
+     */
     _instantiatesCanonical?: fhir.FhirElement[] | undefined;
     /**
      * This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.
      */
     instantiatesUri?: string[] | undefined;
+    /**
+     * Extended properties for primitive element: Communication.instantiatesUri
+     */
     _instantiatesUri?: fhir.FhirElement[] | undefined;
     /**
-     * A channel that was used for this communication (e.g. email, fax).
+     * This must point to some sort of a 'Request' resource, such as CarePlan, CommunicationRequest, ServiceRequest, MedicationRequest, etc.
      */
-    medium?: fhir.CodeableConcept[] | undefined;
-    /**
-     * Additional notes or commentary about the communication by the sender, receiver or other interested parties.
-     */
-    note?: fhir.Annotation[] | undefined;
+    basedOn?: fhir.Reference[] | undefined;
     /**
      * Part of this action.
      */
     partOf?: fhir.Reference[] | undefined;
     /**
-     * Text, attachment(s), or resource(s) that was communicated to the recipient.
+     * Prior communication that this communication is in response to.
      */
-    payload?: fhir.CommunicationPayload[] | undefined;
+    inResponseTo?: fhir.Reference[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains the codes aborted and entered-in-error that mark the communication as not currently valid.
+     */
+    status: EventStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Communication.status
+     */
+    _status?: fhir.FhirElement | undefined;
+    /**
+     * This is generally only used for "exception" statuses such as "not-done", "suspended" or "aborted". The reason for performing the event at all is captured in reasonCode, not here.
+     */
+    statusReason?: fhir.CodeableConcept | undefined;
+    /**
+     * There may be multiple axes of categorization and one communication may serve multiple purposes.
+     */
+    category?: fhir.CodeableConcept[] | undefined;
     /**
      * Used to prioritize workflow (such as which communication to read first) when the communication is planned or in progress.
      */
-    priority?: CommunicationPriorityEnum | undefined;
+    priority?: RequestPriorityValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: Communication.priority
+     */
     _priority?: fhir.FhirElement | undefined;
     /**
-     * Textual reasons can be captured using reasonCode.text.
+     * A channel that was used for this communication (e.g. email, fax).
      */
-    reasonCode?: fhir.CodeableConcept[] | undefined;
+    medium?: fhir.CodeableConcept[] | undefined;
     /**
-     * Indicates another resource whose existence justifies this communication.
+     * The patient or group that was the focus of this communication.
      */
-    reasonReference?: fhir.Reference[] | undefined;
+    subject?: fhir.Reference | undefined;
+    /**
+     * Communication.topic.text can be used without any codings.
+     */
+    topic?: fhir.CodeableConcept | undefined;
+    /**
+     * Don't use Communication.about element when a more specific element exists, such as basedOn or reasonReference.
+     */
+    about?: fhir.Reference[] | undefined;
+    /**
+     * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.
+     */
+    encounter?: fhir.Reference | undefined;
+    /**
+     * The time when this communication was sent.
+     */
+    sent?: string | undefined;
+    /**
+     * Extended properties for primitive element: Communication.sent
+     */
+    _sent?: fhir.FhirElement | undefined;
     /**
      * The time when this communication arrived at the destination.
      */
     received?: string | undefined;
+    /**
+     * Extended properties for primitive element: Communication.received
+     */
     _received?: fhir.FhirElement | undefined;
     /**
      * The entity (e.g. person, organization, clinical information system, care team or device) which was the target of the communication. If receipts need to be tracked by an individual, a separate resource instance will need to be created for each recipient.  Multiple recipient communications are intended where either receipts are not tracked (e.g. a mass mail-out) or a receipt is captured in aggregate (all emails confirmed received by a particular time).
@@ -239,60 +290,56 @@ export declare class Communication extends fhir.DomainResource implements fhir.I
      */
     sender?: fhir.Reference | undefined;
     /**
-     * The time when this communication was sent.
+     * Textual reasons can be captured using reasonCode.text.
      */
-    sent?: string | undefined;
-    _sent?: fhir.FhirElement | undefined;
+    reasonCode?: fhir.CodeableConcept[] | undefined;
     /**
-     * This element is labeled as a modifier because the status contains the codes aborted and entered-in-error that mark the communication as not currently valid.
+     * Indicates another resource whose existence justifies this communication.
      */
-    status: CommunicationStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
+    reasonReference?: fhir.Reference[] | undefined;
     /**
-     * This is generally only used for "exception" statuses such as "not-done", "suspended" or "aborted". The reason for performing the event at all is captured in reasonCode, not here.
+     * Text, attachment(s), or resource(s) that was communicated to the recipient.
      */
-    statusReason?: fhir.CodeableConcept | undefined;
+    payload?: fhir.CommunicationPayload[] | undefined;
     /**
-     * The patient or group that was the focus of this communication.
+     * Additional notes or commentary about the communication by the sender, receiver or other interested parties.
      */
-    subject?: fhir.Reference | undefined;
-    /**
-     * Communication.topic.text can be used without any codings.
-     */
-    topic?: fhir.CodeableConcept | undefined;
+    note?: fhir.Annotation[] | undefined;
     /**
      * Default constructor for Communication - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ICommunication>);
+    constructor(source?: Partial<ICommunication>);
     /**
-     * Check if the current Communication contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): EventStatusValueSetType;
     /**
-     * Factory function to create a Communication from an object that MUST contain all required elements.
+     * Example-bound Value Set for statusReason
      */
-    static fromStrict(source: fhir.ICommunication): Communication;
-}
-/**
- * Code Values for the Communication.priority field
- */
-export declare enum CommunicationPriorityEnum {
-    ROUTINE = "routine",
-    URGENT = "urgent",
-    ASAP = "asap",
-    STAT = "stat"
-}
-/**
- * Code Values for the Communication.status field
- */
-export declare enum CommunicationStatusEnum {
-    PREPARATION = "preparation",
-    IN_PROGRESS = "in-progress",
-    NOT_DONE = "not-done",
-    ON_HOLD = "on-hold",
-    STOPPED = "stopped",
-    COMPLETED = "completed",
-    ENTERED_IN_ERROR = "entered-in-error",
-    UNKNOWN = "unknown"
+    statusReasonExampleValueSet(): CommunicationNotDoneReasonValueSetType;
+    /**
+     * Example-bound Value Set for category
+     */
+    categoryExampleValueSet(): CommunicationCategoryValueSetType;
+    /**
+     * Required-bound Value Set for priority
+     */
+    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    /**
+     * Example-bound Value Set for medium
+     */
+    mediumExampleValueSet(): V3ParticipationModeValueSetType;
+    /**
+     * Example-bound Value Set for topic
+     */
+    topicExampleValueSet(): CommunicationTopicValueSetType;
+    /**
+     * Example-bound Value Set for reasonCode
+     */
+    reasonCodeExampleValueSet(): ClinicalFindingsValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Communication.d.ts.map

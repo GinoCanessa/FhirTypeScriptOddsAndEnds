@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Describes the state of a metric calibration.
  */
 export declare const MetricCalibrationStateValueSet: {
     /**
-     * The metric has been calibrated.
+     * calibrated: The metric has been calibrated.
      */
-    metric_calibration_state_Calibrated: Coding;
+    readonly Calibrated: Coding;
     /**
-     * The metric needs to be calibrated.
+     * calibration-required: The metric needs to be calibrated.
      */
-    metric_calibration_state_CalibrationRequired: Coding;
+    readonly CalibrationRequired: Coding;
     /**
-     * The metric has not been calibrated.
+     * not-calibrated: The metric has not been calibrated.
      */
-    metric_calibration_state_NotCalibrated: Coding;
+    readonly NotCalibrated: Coding;
     /**
-     * The state of calibration of this metric is unspecified.
+     * unspecified: The state of calibration of this metric is unspecified.
      */
-    metric_calibration_state_Unspecified: Coding;
+    readonly Unspecified: Coding;
 };
+/**
+ * Describes the state of a metric calibration.
+ */
+export declare type MetricCalibrationStateValueSetType = typeof MetricCalibrationStateValueSet;
+/**
+ * Describes the state of a metric calibration.
+ */
+export declare enum MetricCalibrationStateValueSetEnum {
+    /**
+     * calibrated: The metric has been calibrated.
+     */
+    Calibrated = "calibrated",
+    /**
+     * calibration-required: The metric needs to be calibrated.
+     */
+    CalibrationRequired = "calibration-required",
+    /**
+     * not-calibrated: The metric has not been calibrated.
+     */
+    NotCalibrated = "not-calibrated",
+    /**
+     * unspecified: The state of calibration of this metric is unspecified.
+     */
+    Unspecified = "unspecified"
+}
 //# sourceMappingURL=MetricCalibrationStateValueSet.d.ts.map

@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Current state of the encounter.
  */
 export declare const EncounterStatusValueSet: {
     /**
-     * The Patient is present for the encounter, however is not currently meeting with a practitioner.
+     * arrived: The Patient is present for the encounter, however is not currently meeting with a practitioner.
      */
-    encounter_status_Arrived: Coding;
+    readonly Arrived: Coding;
     /**
-     * The Encounter has ended before it has begun.
+     * cancelled: The Encounter has ended before it has begun.
      */
-    encounter_status_Cancelled: Coding;
+    readonly Cancelled: Coding;
     /**
-     * This instance should not have been part of this patient's medical record.
+     * entered-in-error: This instance should not have been part of this patient's medical record.
      */
-    encounter_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The Encounter has ended.
+     * finished: The Encounter has ended.
      */
-    encounter_status_Finished: Coding;
+    readonly Finished: Coding;
     /**
-     * The Encounter has begun and the patient is present / the practitioner and the patient are meeting.
+     * in-progress: The Encounter has begun and the patient is present / the practitioner and the patient are meeting.
      */
-    encounter_status_InProgress: Coding;
+    readonly InProgress: Coding;
     /**
-     * The Encounter has begun, but the patient is temporarily on leave.
+     * onleave: The Encounter has begun, but the patient is temporarily on leave.
      */
-    encounter_status_OnLeave: Coding;
+    readonly OnLeave: Coding;
     /**
-     * The Encounter has not yet started.
+     * planned: The Encounter has not yet started.
      */
-    encounter_status_Planned: Coding;
+    readonly Planned: Coding;
     /**
-     * The patient has been assessed for the priority of their treatment based on the severity of their condition.
+     * triaged: The patient has been assessed for the priority of their treatment based on the severity of their condition.
      */
-    encounter_status_Triaged: Coding;
+    readonly Triaged: Coding;
     /**
-     * The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
+     * unknown: The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
      */
-    encounter_status_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * Current state of the encounter.
+ */
+export declare type EncounterStatusValueSetType = typeof EncounterStatusValueSet;
+/**
+ * Current state of the encounter.
+ */
+export declare enum EncounterStatusValueSetEnum {
+    /**
+     * arrived: The Patient is present for the encounter, however is not currently meeting with a practitioner.
+     */
+    Arrived = "arrived",
+    /**
+     * cancelled: The Encounter has ended before it has begun.
+     */
+    Cancelled = "cancelled",
+    /**
+     * entered-in-error: This instance should not have been part of this patient's medical record.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * finished: The Encounter has ended.
+     */
+    Finished = "finished",
+    /**
+     * in-progress: The Encounter has begun and the patient is present / the practitioner and the patient are meeting.
+     */
+    InProgress = "in-progress",
+    /**
+     * onleave: The Encounter has begun, but the patient is temporarily on leave.
+     */
+    OnLeave = "onleave",
+    /**
+     * planned: The Encounter has not yet started.
+     */
+    Planned = "planned",
+    /**
+     * triaged: The patient has been assessed for the priority of their treatment based on the severity of their condition.
+     */
+    Triaged = "triaged",
+    /**
+     * unknown: The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=EncounterStatusValueSet.d.ts.map

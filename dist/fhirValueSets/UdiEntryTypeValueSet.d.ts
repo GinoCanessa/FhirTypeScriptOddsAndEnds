@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes to identify how UDI data was entered.
  */
 export declare const UdiEntryTypeValueSet: {
     /**
-     * a barcodescanner captured the data from the device label.
+     * barcode: a barcodescanner captured the data from the device label.
      */
-    udi_entry_type_Barcode: Coding;
+    readonly Barcode: Coding;
     /**
-     * The data originated from a patient's implant card and was read by an operator.
+     * card: The data originated from a patient's implant card and was read by an operator.
      */
-    udi_entry_type_Card: Coding;
+    readonly Card: Coding;
     /**
-     * The data was read from the label by a person and manually entered. (e.g.  via a keyboard).
+     * manual: The data was read from the label by a person and manually entered. (e.g.  via a keyboard).
      */
-    udi_entry_type_Manual: Coding;
+    readonly Manual: Coding;
     /**
-     * An RFID chip reader captured the data from the device label.
+     * rfid: An RFID chip reader captured the data from the device label.
      */
-    udi_entry_type_RFID: Coding;
+    readonly RFID: Coding;
     /**
-     * The data originated from a patient source and was not directly scanned or read from a label or card.
+     * self-reported: The data originated from a patient source and was not directly scanned or read from a label or card.
      */
-    udi_entry_type_SelfReported: Coding;
+    readonly SelfReported: Coding;
     /**
-     * The method of data capture has not been determined.
+     * unknown: The method of data capture has not been determined.
      */
-    udi_entry_type_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * Codes to identify how UDI data was entered.
+ */
+export declare type UdiEntryTypeValueSetType = typeof UdiEntryTypeValueSet;
+/**
+ * Codes to identify how UDI data was entered.
+ */
+export declare enum UdiEntryTypeValueSetEnum {
+    /**
+     * barcode: a barcodescanner captured the data from the device label.
+     */
+    Barcode = "barcode",
+    /**
+     * card: The data originated from a patient's implant card and was read by an operator.
+     */
+    Card = "card",
+    /**
+     * manual: The data was read from the label by a person and manually entered. (e.g.  via a keyboard).
+     */
+    Manual = "manual",
+    /**
+     * rfid: An RFID chip reader captured the data from the device label.
+     */
+    RFID = "rfid",
+    /**
+     * self-reported: The data originated from a patient source and was not directly scanned or read from a label or card.
+     */
+    SelfReported = "self-reported",
+    /**
+     * unknown: The method of data capture has not been determined.
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=UdiEntryTypeValueSet.d.ts.map

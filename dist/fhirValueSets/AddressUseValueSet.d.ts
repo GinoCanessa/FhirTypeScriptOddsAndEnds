@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The use of an address.
  */
 export declare const AddressUseValueSet: {
     /**
-     * An address to be used to send bills, invoices, receipts etc.
+     * billing: An address to be used to send bills, invoices, receipts etc.
      */
-    address_use_Billing: Coding;
+    readonly Billing: Coding;
     /**
-     * A communication address at a home.
+     * home: A communication address at a home.
      */
-    address_use_Home: Coding;
+    readonly Home: Coding;
     /**
-     * This address is no longer in use (or was never correct but retained for records).
+     * old: This address is no longer in use (or was never correct but retained for records).
      */
-    address_use_OldIncorrect: Coding;
+    readonly OldIncorrect: Coding;
     /**
-     * A temporary address. The period can provide more detailed information.
+     * temp: A temporary address. The period can provide more detailed information.
      */
-    address_use_Temporary: Coding;
+    readonly Temporary: Coding;
     /**
-     * An office address. First choice for business related contacts during business hours.
+     * work: An office address. First choice for business related contacts during business hours.
      */
-    address_use_Work: Coding;
+    readonly Work: Coding;
 };
+/**
+ * The use of an address.
+ */
+export declare type AddressUseValueSetType = typeof AddressUseValueSet;
+/**
+ * The use of an address.
+ */
+export declare enum AddressUseValueSetEnum {
+    /**
+     * billing: An address to be used to send bills, invoices, receipts etc.
+     */
+    Billing = "billing",
+    /**
+     * home: A communication address at a home.
+     */
+    Home = "home",
+    /**
+     * old: This address is no longer in use (or was never correct but retained for records).
+     */
+    OldIncorrect = "old",
+    /**
+     * temp: A temporary address. The period can provide more detailed information.
+     */
+    Temporary = "temp",
+    /**
+     * work: An office address. First choice for business related contacts during business hours.
+     */
+    Work = "work"
+}
 //# sourceMappingURL=AddressUseValueSet.d.ts.map

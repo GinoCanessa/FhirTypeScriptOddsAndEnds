@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The presentation types of notes.
  */
 export declare const NoteTypeValueSet: {
     /**
-     * Display the note.
+     * display: Display the note.
      */
-    note_type_Display: Coding;
+    readonly Display: Coding;
     /**
-     * Print the note on the form.
+     * print: Print the note on the form.
      */
-    note_type_PrintForm: Coding;
+    readonly PrintForm: Coding;
     /**
-     * Print the note for the operator.
+     * printoper: Print the note for the operator.
      */
-    note_type_PrintOperator: Coding;
+    readonly PrintOperator: Coding;
 };
+/**
+ * The presentation types of notes.
+ */
+export declare type NoteTypeValueSetType = typeof NoteTypeValueSet;
+/**
+ * The presentation types of notes.
+ */
+export declare enum NoteTypeValueSetEnum {
+    /**
+     * display: Display the note.
+     */
+    Display = "display",
+    /**
+     * print: Print the note on the form.
+     */
+    PrintForm = "print",
+    /**
+     * printoper: Print the note for the operator.
+     */
+    PrintOperator = "printoper"
+}
 //# sourceMappingURL=NoteTypeValueSet.d.ts.map

@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The code(s) that detail the conditions under which the healthcare service is available/offered.
  */
 export declare const ServiceProvisionConditionsValueSet: {
     /**
-     * Fees apply for this service.
+     * cost: Fees apply for this service.
      */
-    service_provision_conditions_FeesApply: Coding;
+    readonly FeesApply: Coding;
     /**
-     * There are discounts available on this service for qualifying patients.
+     * disc: There are discounts available on this service for qualifying patients.
      */
-    service_provision_conditions_DiscountsAvailable: Coding;
+    readonly DiscountsAvailable: Coding;
     /**
-     * This service is available for no patient cost.
+     * free: This service is available for no patient cost.
      */
-    service_provision_conditions_Free: Coding;
+    readonly Free: Coding;
 };
+/**
+ * The code(s) that detail the conditions under which the healthcare service is available/offered.
+ */
+export declare type ServiceProvisionConditionsValueSetType = typeof ServiceProvisionConditionsValueSet;
+/**
+ * The code(s) that detail the conditions under which the healthcare service is available/offered.
+ */
+export declare enum ServiceProvisionConditionsValueSetEnum {
+    /**
+     * cost: Fees apply for this service.
+     */
+    FeesApply = "cost",
+    /**
+     * disc: There are discounts available on this service for qualifying patients.
+     */
+    DiscountsAvailable = "disc",
+    /**
+     * free: This service is available for no patient cost.
+     */
+    Free = "free"
+}
 //# sourceMappingURL=ServiceProvisionConditionsValueSet.d.ts.map

@@ -1,4 +1,7 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { LanguagesValueSetType } from '../fhirValueSets/LanguagesValueSet.js';
+import { RelatedpersonRelationshiptypeValueSetType } from '../fhirValueSets/RelatedpersonRelationshiptypeValueSet.js';
+import { AdministrativeGenderValueSetType, AdministrativeGenderValueSetEnum } from '../fhirValueSets/AdministrativeGenderValueSet.js';
 /**
  * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple RelatedPerson.Communication associations.   If the RelatedPerson does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
  */
@@ -11,6 +14,9 @@ export declare type IRelatedPersonCommunication = fhir.IBackboneElement & {
      * This language is specifically identified for communicating healthcare information.
      */
     preferred?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: RelatedPerson.communication.preferred
+     */
     _preferred?: fhir.IFhirElement | undefined;
 };
 /**
@@ -22,61 +28,70 @@ export declare type IRelatedPerson = fhir.IDomainResource & {
      */
     resourceType: "RelatedPerson";
     /**
-     * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
-     */
-    active?: boolean | undefined;
-    _active?: fhir.IFhirElement | undefined;
-    /**
-     * Address where the related person can be contacted or visited.
-     */
-    address?: fhir.IAddress[] | undefined;
-    /**
-     * The date on which the related person was born.
-     */
-    birthDate?: string | undefined;
-    _birthDate?: fhir.IFhirElement | undefined;
-    /**
-     * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple RelatedPerson.Communication associations.   If the RelatedPerson does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
-     */
-    communication?: fhir.IRelatedPersonCommunication[] | undefined;
-    /**
-     * Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.
-     */
-    gender?: RelatedPersonGenderEnum | undefined;
-    _gender?: fhir.IFhirElement | undefined;
-    /**
      * Identifier for a person within a particular scope.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * A name associated with the person.
+     * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
      */
-    name?: fhir.IHumanName[] | undefined;
+    active?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: RelatedPerson.active
+     */
+    _active?: fhir.IFhirElement | undefined;
     /**
      * The patient this person is related to.
      */
     patient: fhir.IReference | null;
     /**
-     * The period of time during which this relationship is or was active. If there are no dates defined, then the interval is unknown.
+     * The nature of the relationship between a patient and the related person.
      */
-    period?: fhir.IPeriod | undefined;
+    relationship?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * A name associated with the person.
+     */
+    name?: fhir.IHumanName[] | undefined;
+    /**
+     * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.
+     */
+    telecom?: fhir.IContactPoint[] | undefined;
+    /**
+     * Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.
+     */
+    gender?: AdministrativeGenderValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: RelatedPerson.gender
+     */
+    _gender?: fhir.IFhirElement | undefined;
+    /**
+     * The date on which the related person was born.
+     */
+    birthDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedPerson.birthDate
+     */
+    _birthDate?: fhir.IFhirElement | undefined;
+    /**
+     * Address where the related person can be contacted or visited.
+     */
+    address?: fhir.IAddress[] | undefined;
     /**
      * Image of the person.
      */
     photo?: fhir.IAttachment[] | undefined;
     /**
-     * The nature of the relationship between a patient and the related person.
+     * The period of time during which this relationship is or was active. If there are no dates defined, then the interval is unknown.
      */
-    relationship?: fhir.ICodeableConcept[] | undefined;
+    period?: fhir.IPeriod | undefined;
     /**
-     * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.
+     * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple RelatedPerson.Communication associations.   If the RelatedPerson does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
      */
-    telecom?: fhir.IContactPoint[] | undefined;
+    communication?: fhir.IRelatedPersonCommunication[] | undefined;
 };
 /**
  * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple RelatedPerson.Communication associations.   If the RelatedPerson does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
  */
-export declare class RelatedPersonCommunication extends fhir.BackboneElement implements fhir.IRelatedPersonCommunication {
+export declare class RelatedPersonCommunication extends fhir.BackboneElement implements IRelatedPersonCommunication {
     /**
      * The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.
      */
@@ -85,99 +100,106 @@ export declare class RelatedPersonCommunication extends fhir.BackboneElement imp
      * This language is specifically identified for communicating healthcare information.
      */
     preferred?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: RelatedPerson.communication.preferred
+     */
     _preferred?: fhir.FhirElement | undefined;
     /**
      * Default constructor for RelatedPersonCommunication - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IRelatedPersonCommunication>);
+    constructor(source?: Partial<IRelatedPersonCommunication>);
     /**
-     * Check if the current RelatedPersonCommunication contains all required elements.
+     * Preferred-bound Value Set for language
      */
-    checkRequiredElements(): string[];
+    languagePreferredValueSet(): LanguagesValueSetType;
     /**
-     * Factory function to create a RelatedPersonCommunication from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IRelatedPersonCommunication): RelatedPersonCommunication;
+    doModelValidation(): [string, string][];
 }
 /**
  * Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
  */
-export declare class RelatedPerson extends fhir.DomainResource implements fhir.IRelatedPerson {
+export declare class RelatedPerson extends fhir.DomainResource implements IRelatedPerson {
     /**
      * Resource Type Name
      */
     resourceType: "RelatedPerson";
     /**
-     * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
-     */
-    active?: boolean | undefined;
-    _active?: fhir.FhirElement | undefined;
-    /**
-     * Address where the related person can be contacted or visited.
-     */
-    address?: fhir.Address[] | undefined;
-    /**
-     * The date on which the related person was born.
-     */
-    birthDate?: string | undefined;
-    _birthDate?: fhir.FhirElement | undefined;
-    /**
-     * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple RelatedPerson.Communication associations.   If the RelatedPerson does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
-     */
-    communication?: fhir.RelatedPersonCommunication[] | undefined;
-    /**
-     * Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.
-     */
-    gender?: RelatedPersonGenderEnum | undefined;
-    _gender?: fhir.FhirElement | undefined;
-    /**
      * Identifier for a person within a particular scope.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * A name associated with the person.
+     * This element is labeled as a modifier because it may be used to mark that the resource was created in error.
      */
-    name?: fhir.HumanName[] | undefined;
+    active?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: RelatedPerson.active
+     */
+    _active?: fhir.FhirElement | undefined;
     /**
      * The patient this person is related to.
      */
     patient: fhir.Reference | null;
     /**
-     * The period of time during which this relationship is or was active. If there are no dates defined, then the interval is unknown.
-     */
-    period?: fhir.Period | undefined;
-    /**
-     * Image of the person.
-     */
-    photo?: fhir.Attachment[] | undefined;
-    /**
      * The nature of the relationship between a patient and the related person.
      */
     relationship?: fhir.CodeableConcept[] | undefined;
+    /**
+     * A name associated with the person.
+     */
+    name?: fhir.HumanName[] | undefined;
     /**
      * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.
      */
     telecom?: fhir.ContactPoint[] | undefined;
     /**
+     * Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.
+     */
+    gender?: AdministrativeGenderValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: RelatedPerson.gender
+     */
+    _gender?: fhir.FhirElement | undefined;
+    /**
+     * The date on which the related person was born.
+     */
+    birthDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: RelatedPerson.birthDate
+     */
+    _birthDate?: fhir.FhirElement | undefined;
+    /**
+     * Address where the related person can be contacted or visited.
+     */
+    address?: fhir.Address[] | undefined;
+    /**
+     * Image of the person.
+     */
+    photo?: fhir.Attachment[] | undefined;
+    /**
+     * The period of time during which this relationship is or was active. If there are no dates defined, then the interval is unknown.
+     */
+    period?: fhir.Period | undefined;
+    /**
+     * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple RelatedPerson.Communication associations.   If the RelatedPerson does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
+     */
+    communication?: fhir.RelatedPersonCommunication[] | undefined;
+    /**
      * Default constructor for RelatedPerson - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IRelatedPerson>);
+    constructor(source?: Partial<IRelatedPerson>);
     /**
-     * Check if the current RelatedPerson contains all required elements.
+     * Preferred-bound Value Set for relationship
      */
-    checkRequiredElements(): string[];
+    relationshipPreferredValueSet(): RelatedpersonRelationshiptypeValueSetType;
     /**
-     * Factory function to create a RelatedPerson from an object that MUST contain all required elements.
+     * Required-bound Value Set for gender
      */
-    static fromStrict(source: fhir.IRelatedPerson): RelatedPerson;
-}
-/**
- * Code Values for the RelatedPerson.gender field
- */
-export declare enum RelatedPersonGenderEnum {
-    MALE = "male",
-    FEMALE = "female",
-    OTHER = "other",
-    UNKNOWN = "unknown"
+    genderRequiredValueSet(): AdministrativeGenderValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=RelatedPerson.d.ts.map

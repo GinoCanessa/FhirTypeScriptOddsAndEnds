@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of Network type codes.
  */
 export declare const BenefitNetworkValueSet: {
     /**
-     * Services rendered by a Network provider
+     * in: Services rendered by a Network provider
      */
-    benefit_network_InNetwork: Coding;
+    readonly InNetwork: Coding;
     /**
-     * Services rendered by a provider who is not in the Network
+     * out: Services rendered by a provider who is not in the Network
      */
-    benefit_network_OutOfNetwork: Coding;
+    readonly OutOfNetwork: Coding;
 };
+/**
+ * This value set includes a smattering of Network type codes.
+ */
+export declare type BenefitNetworkValueSetType = typeof BenefitNetworkValueSet;
+/**
+ * This value set includes a smattering of Network type codes.
+ */
+export declare enum BenefitNetworkValueSetEnum {
+    /**
+     * in: Services rendered by a Network provider
+     */
+    InNetwork = "in",
+    /**
+     * out: Services rendered by a provider who is not in the Network
+     */
+    OutOfNetwork = "out"
+}
 //# sourceMappingURL=BenefitNetworkValueSet.d.ts.map

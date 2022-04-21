@@ -1,51 +1,104 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes Coverage Class codes.
  */
 export declare const CoverageClassValueSet: {
     /**
-     * A class of benefits.
+     * class: A class of benefits.
      */
-    coverage_class_Class: Coding;
+    readonly Class: Coding;
     /**
-     * An employee group
+     * group: An employee group
      */
-    coverage_class_Group: Coding;
+    readonly Group: Coding;
     /**
-     * A specific suite of benefits.
+     * plan: A specific suite of benefits.
      */
-    coverage_class_Plan: Coding;
+    readonly Plan: Coding;
     /**
-     * Pharmacy benefit manager's Business Identification Number.
+     * rxbin: Pharmacy benefit manager's Business Identification Number.
      */
-    coverage_class_RXBIN: Coding;
+    readonly RXBIN: Coding;
     /**
-     * A Pharmacy Benefit Manager specified Group number.
+     * rxgroup: A Pharmacy Benefit Manager specified Group number.
      */
-    coverage_class_RXGroup: Coding;
+    readonly RXGroup: Coding;
     /**
-     * A Pharmacy Benefit Manager specified Member ID.
+     * rxid: A Pharmacy Benefit Manager specified Member ID.
      */
-    coverage_class_RXId: Coding;
+    readonly RXId: Coding;
     /**
-     * A Pharmacy Benefit Manager specified Processor Control Number.
+     * rxpcn: A Pharmacy Benefit Manager specified Processor Control Number.
      */
-    coverage_class_RXPCN: Coding;
+    readonly RXPCN: Coding;
     /**
-     * A sequence number associated with a short-term continuance of the coverage.
+     * sequence: A sequence number associated with a short-term continuance of the coverage.
      */
-    coverage_class_Sequence: Coding;
+    readonly Sequence: Coding;
     /**
-     * A subset of a class of benefits.
+     * subclass: A subset of a class of benefits.
      */
-    coverage_class_SubClass: Coding;
+    readonly SubClass: Coding;
     /**
-     * A sub-group of an employee group
+     * subgroup: A sub-group of an employee group
      */
-    coverage_class_SubGroup: Coding;
+    readonly SubGroup: Coding;
     /**
-     * A subset of a specific suite of benefits.
+     * subplan: A subset of a specific suite of benefits.
      */
-    coverage_class_SubPlan: Coding;
+    readonly SubPlan: Coding;
 };
+/**
+ * This value set includes Coverage Class codes.
+ */
+export declare type CoverageClassValueSetType = typeof CoverageClassValueSet;
+/**
+ * This value set includes Coverage Class codes.
+ */
+export declare enum CoverageClassValueSetEnum {
+    /**
+     * class: A class of benefits.
+     */
+    Class = "class",
+    /**
+     * group: An employee group
+     */
+    Group = "group",
+    /**
+     * plan: A specific suite of benefits.
+     */
+    Plan = "plan",
+    /**
+     * rxbin: Pharmacy benefit manager's Business Identification Number.
+     */
+    RXBIN = "rxbin",
+    /**
+     * rxgroup: A Pharmacy Benefit Manager specified Group number.
+     */
+    RXGroup = "rxgroup",
+    /**
+     * rxid: A Pharmacy Benefit Manager specified Member ID.
+     */
+    RXId = "rxid",
+    /**
+     * rxpcn: A Pharmacy Benefit Manager specified Processor Control Number.
+     */
+    RXPCN = "rxpcn",
+    /**
+     * sequence: A sequence number associated with a short-term continuance of the coverage.
+     */
+    Sequence = "sequence",
+    /**
+     * subclass: A subset of a class of benefits.
+     */
+    SubClass = "subclass",
+    /**
+     * subgroup: A sub-group of an employee group
+     */
+    SubGroup = "subgroup",
+    /**
+     * subplan: A subset of a specific suite of benefits.
+     */
+    SubPlan = "subplan"
+}
 //# sourceMappingURL=CoverageClassValueSet.d.ts.map

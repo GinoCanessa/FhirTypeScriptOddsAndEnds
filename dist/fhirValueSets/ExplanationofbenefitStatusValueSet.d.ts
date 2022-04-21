@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A code specifying the state of the resource instance.
  */
 export declare const ExplanationofbenefitStatusValueSet: {
     /**
-     * The resource instance is currently in-force.
+     * active: The resource instance is currently in-force.
      */
-    explanationofbenefit_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The resource instance is withdrawn, rescinded or reversed.
+     * cancelled: The resource instance is withdrawn, rescinded or reversed.
      */
-    explanationofbenefit_status_Cancelled: Coding;
+    readonly Cancelled: Coding;
     /**
-     * A new resource instance the contents of which is not complete.
+     * draft: A new resource instance the contents of which is not complete.
      */
-    explanationofbenefit_status_Draft: Coding;
+    readonly Draft: Coding;
     /**
-     * The resource instance was entered in error.
+     * entered-in-error: The resource instance was entered in error.
      */
-    explanationofbenefit_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
 };
+/**
+ * A code specifying the state of the resource instance.
+ */
+export declare type ExplanationofbenefitStatusValueSetType = typeof ExplanationofbenefitStatusValueSet;
+/**
+ * A code specifying the state of the resource instance.
+ */
+export declare enum ExplanationofbenefitStatusValueSetEnum {
+    /**
+     * active: The resource instance is currently in-force.
+     */
+    Active = "active",
+    /**
+     * cancelled: The resource instance is withdrawn, rescinded or reversed.
+     */
+    Cancelled = "cancelled",
+    /**
+     * draft: A new resource instance the contents of which is not complete.
+     */
+    Draft = "draft",
+    /**
+     * entered-in-error: The resource instance was entered in error.
+     */
+    EnteredInError = "entered-in-error"
+}
 //# sourceMappingURL=ExplanationofbenefitStatusValueSet.d.ts.map

@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.
  */
 export declare const ContactentityTypeValueSet: {
     /**
-     * Contact details for administrative enquiries.
+     * ADMIN: Contact details for administrative enquiries.
      */
-    contactentity_type_Administrative: Coding;
+    readonly Administrative: Coding;
     /**
-     * Contact details for information regarding to billing/general finance enquiries.
+     * BILL: Contact details for information regarding to billing/general finance enquiries.
      */
-    contactentity_type_Billing: Coding;
+    readonly Billing: Coding;
     /**
-     * Contact details for issues related to Human Resources, such as staff matters, OH&amp;S etc.
+     * HR: Contact details for issues related to Human Resources, such as staff matters, OH&amp;S etc.
      */
-    contactentity_type_HumanResource: Coding;
+    readonly HumanResource: Coding;
     /**
-     * Generic information contact for patients.
+     * PATINF: Generic information contact for patients.
      */
-    contactentity_type_Patient: Coding;
+    readonly Patient: Coding;
     /**
-     * Contact details for dealing with issues related to insurance claims/adjudication/payment.
+     * PAYOR: Contact details for dealing with issues related to insurance claims/adjudication/payment.
      */
-    contactentity_type_Payor: Coding;
+    readonly Payor: Coding;
     /**
-     * Dedicated contact point for matters relating to press enquiries.
+     * PRESS: Dedicated contact point for matters relating to press enquiries.
      */
-    contactentity_type_Press: Coding;
+    readonly Press: Coding;
 };
+/**
+ * This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.
+ */
+export declare type ContactentityTypeValueSetType = typeof ContactentityTypeValueSet;
+/**
+ * This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.
+ */
+export declare enum ContactentityTypeValueSetEnum {
+    /**
+     * ADMIN: Contact details for administrative enquiries.
+     */
+    Administrative = "ADMIN",
+    /**
+     * BILL: Contact details for information regarding to billing/general finance enquiries.
+     */
+    Billing = "BILL",
+    /**
+     * HR: Contact details for issues related to Human Resources, such as staff matters, OH&amp;S etc.
+     */
+    HumanResource = "HR",
+    /**
+     * PATINF: Generic information contact for patients.
+     */
+    Patient = "PATINF",
+    /**
+     * PAYOR: Contact details for dealing with issues related to insurance claims/adjudication/payment.
+     */
+    Payor = "PAYOR",
+    /**
+     * PRESS: Dedicated contact point for matters relating to press enquiries.
+     */
+    Press = "PRESS"
+}
 //# sourceMappingURL=ContactentityTypeValueSet.d.ts.map

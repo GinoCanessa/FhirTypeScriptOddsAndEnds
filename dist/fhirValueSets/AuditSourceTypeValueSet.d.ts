@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of process where the audit event originated from.
  */
 export declare const AuditSourceTypeValueSet: {
     /**
-     * End-user display device, diagnostic device.
+     * 1: End-user display device, diagnostic device.
      */
-    audit_source_type_UserDevice: Coding;
+    readonly UserDevice: Coding;
     /**
-     * Data acquisition device or instrument.
+     * 2: Data acquisition device or instrument.
      */
-    audit_source_type_DataInterface: Coding;
+    readonly DataInterface: Coding;
     /**
-     * Web Server process or thread.
+     * 3: Web Server process or thread.
      */
-    audit_source_type_WebServer: Coding;
+    readonly WebServer: Coding;
     /**
-     * Application Server process or thread.
+     * 4: Application Server process or thread.
      */
-    audit_source_type_ApplicationServer: Coding;
+    readonly ApplicationServer: Coding;
     /**
-     * Database Server process or thread.
+     * 5: Database Server process or thread.
      */
-    audit_source_type_DatabaseServer: Coding;
+    readonly DatabaseServer: Coding;
     /**
-     * Security server, e.g. a domain controller.
+     * 6: Security server, e.g. a domain controller.
      */
-    audit_source_type_SecurityServer: Coding;
+    readonly SecurityServer: Coding;
     /**
-     * ISO level 1-3 network component.
+     * 7: ISO level 1-3 network component.
      */
-    audit_source_type_NetworkDevice: Coding;
+    readonly NetworkDevice: Coding;
     /**
-     * ISO level 4-6 operating software.
+     * 8: ISO level 4-6 operating software.
      */
-    audit_source_type_NetworkRouter: Coding;
+    readonly NetworkRouter: Coding;
     /**
-     * Other kind of device (defined by DICOM, but some other code/system can be used).
+     * 9: Other kind of device (defined by DICOM, but some other code/system can be used).
      */
-    audit_source_type_Other: Coding;
+    readonly Other: Coding;
 };
+/**
+ * The type of process where the audit event originated from.
+ */
+export declare type AuditSourceTypeValueSetType = typeof AuditSourceTypeValueSet;
+/**
+ * The type of process where the audit event originated from.
+ */
+export declare enum AuditSourceTypeValueSetEnum {
+    /**
+     * 1: End-user display device, diagnostic device.
+     */
+    UserDevice = "1",
+    /**
+     * 2: Data acquisition device or instrument.
+     */
+    DataInterface = "2",
+    /**
+     * 3: Web Server process or thread.
+     */
+    WebServer = "3",
+    /**
+     * 4: Application Server process or thread.
+     */
+    ApplicationServer = "4",
+    /**
+     * 5: Database Server process or thread.
+     */
+    DatabaseServer = "5",
+    /**
+     * 6: Security server, e.g. a domain controller.
+     */
+    SecurityServer = "6",
+    /**
+     * 7: ISO level 1-3 network component.
+     */
+    NetworkDevice = "7",
+    /**
+     * 8: ISO level 4-6 operating software.
+     */
+    NetworkRouter = "8",
+    /**
+     * 9: Other kind of device (defined by DICOM, but some other code/system can be used).
+     */
+    Other = "9"
+}
 //# sourceMappingURL=AuditSourceTypeValueSet.d.ts.map

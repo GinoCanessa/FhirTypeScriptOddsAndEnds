@@ -1,48 +1,98 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The free/busy status of an appointment.
  */
 export declare const AppointmentstatusValueSet: {
     /**
-     * The patient/patients has/have arrived and is/are waiting to be seen.
+     * arrived: The patient/patients has/have arrived and is/are waiting to be seen.
      */
-    appointmentstatus_Arrived: Coding;
+    readonly Arrived: Coding;
     /**
-     * All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.
+     * booked: All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.
      */
-    appointmentstatus_Booked: Coding;
+    readonly Booked: Coding;
     /**
-     * The appointment has been cancelled.
+     * cancelled: The appointment has been cancelled.
      */
-    appointmentstatus_Cancelled: Coding;
+    readonly Cancelled: Coding;
     /**
-     * When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).
+     * checked-in: When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).
      */
-    appointmentstatus_CheckedIn: Coding;
+    readonly CheckedIn: Coding;
     /**
-     * This instance should not have been part of this patient's medical record.
+     * entered-in-error: This instance should not have been part of this patient's medical record.
      */
-    appointmentstatus_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.
+     * fulfilled: The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.
      */
-    appointmentstatus_Fulfilled: Coding;
+    readonly Fulfilled: Coding;
     /**
-     * Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).
+     * noshow: Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).
      */
-    appointmentstatus_NoShow: Coding;
+    readonly NoShow: Coding;
     /**
-     * Some or all of the participant(s) have not finalized their acceptance of the appointment request.
+     * pending: Some or all of the participant(s) have not finalized their acceptance of the appointment request.
      */
-    appointmentstatus_Pending: Coding;
+    readonly Pending: Coding;
     /**
-     * None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.
+     * proposed: None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.
      */
-    appointmentstatus_Proposed: Coding;
+    readonly Proposed: Coding;
     /**
-     * The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.
+     * waitlist: The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.
      * A specific time might or might not be pre-allocated.
      */
-    appointmentstatus_Waitlisted: Coding;
+    readonly Waitlisted: Coding;
 };
+/**
+ * The free/busy status of an appointment.
+ */
+export declare type AppointmentstatusValueSetType = typeof AppointmentstatusValueSet;
+/**
+ * The free/busy status of an appointment.
+ */
+export declare enum AppointmentstatusValueSetEnum {
+    /**
+     * arrived: The patient/patients has/have arrived and is/are waiting to be seen.
+     */
+    Arrived = "arrived",
+    /**
+     * booked: All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.
+     */
+    Booked = "booked",
+    /**
+     * cancelled: The appointment has been cancelled.
+     */
+    Cancelled = "cancelled",
+    /**
+     * checked-in: When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).
+     */
+    CheckedIn = "checked-in",
+    /**
+     * entered-in-error: This instance should not have been part of this patient's medical record.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * fulfilled: The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.
+     */
+    Fulfilled = "fulfilled",
+    /**
+     * noshow: Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).
+     */
+    NoShow = "noshow",
+    /**
+     * pending: Some or all of the participant(s) have not finalized their acceptance of the appointment request.
+     */
+    Pending = "pending",
+    /**
+     * proposed: None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.
+     */
+    Proposed = "proposed",
+    /**
+     * waitlist: The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.
+     * A specific time might or might not be pre-allocated.
+     */
+    Waitlisted = "waitlist"
+}
 //# sourceMappingURL=AppointmentstatusValueSet.d.ts.map

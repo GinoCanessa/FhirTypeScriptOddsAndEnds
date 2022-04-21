@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes smattering of Payment Adjustment Reason codes.
  */
 export declare const PaymentAdjustmentReasonValueSet: {
     /**
-     * Prior Payment Reversal
+     * a001: Prior Payment Reversal
      */
-    payment_adjustment_reason_PriorPaymentReversal: Coding;
+    readonly PriorPaymentReversal: Coding;
     /**
-     * Prior Overpayment
+     * a002: Prior Overpayment
      */
-    payment_adjustment_reason_PriorOverpayment: Coding;
+    readonly PriorOverpayment: Coding;
 };
+/**
+ * This value set includes smattering of Payment Adjustment Reason codes.
+ */
+export declare type PaymentAdjustmentReasonValueSetType = typeof PaymentAdjustmentReasonValueSet;
+/**
+ * This value set includes smattering of Payment Adjustment Reason codes.
+ */
+export declare enum PaymentAdjustmentReasonValueSetEnum {
+    /**
+     * a001: Prior Payment Reversal
+     */
+    PriorPaymentReversal = "a001",
+    /**
+     * a002: Prior Overpayment
+     */
+    PriorOverpayment = "a002"
+}
 //# sourceMappingURL=PaymentAdjustmentReasonValueSet.d.ts.map

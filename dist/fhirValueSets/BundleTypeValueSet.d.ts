@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Indicates the purpose of a bundle - how it is intended to be used.
  */
 export declare const BundleTypeValueSet: {
     /**
-     * The bundle is a set of actions - intended to be processed by a server as a group of independent actions.
+     * batch: The bundle is a set of actions - intended to be processed by a server as a group of independent actions.
      */
-    bundle_type_Batch: Coding;
+    readonly Batch: Coding;
     /**
-     * The bundle is a batch response. Note that as a batch, some responses may indicate failure and others success.
+     * batch-response: The bundle is a batch response. Note that as a batch, some responses may indicate failure and others success.
      */
-    bundle_type_BatchResponse: Coding;
+    readonly BatchResponse: Coding;
     /**
-     * The bundle is a set of resources collected into a single package for ease of distribution that imposes no processing obligations or behavioral rules beyond persistence.
+     * collection: The bundle is a set of resources collected into a single package for ease of distribution that imposes no processing obligations or behavioral rules beyond persistence.
      */
-    bundle_type_Collection: Coding;
+    readonly Collection: Coding;
     /**
-     * The bundle is a document. The first resource is a Composition.
+     * document: The bundle is a document. The first resource is a Composition.
      */
-    bundle_type_Document: Coding;
+    readonly Document: Coding;
     /**
-     * The bundle is a list of resources from a history interaction on a server.
+     * history: The bundle is a list of resources from a history interaction on a server.
      */
-    bundle_type_HistoryList: Coding;
+    readonly HistoryList: Coding;
     /**
-     * The bundle is a message. The first resource is a MessageHeader.
+     * message: The bundle is a message. The first resource is a MessageHeader.
      */
-    bundle_type_Message: Coding;
+    readonly Message: Coding;
     /**
-     * The bundle is a list of resources returned as a result of a search/query interaction, operation, or message.
+     * searchset: The bundle is a list of resources returned as a result of a search/query interaction, operation, or message.
      */
-    bundle_type_SearchResults: Coding;
+    readonly SearchResults: Coding;
     /**
-     * The bundle is a transaction - intended to be processed by a server as an atomic commit.
+     * transaction: The bundle is a transaction - intended to be processed by a server as an atomic commit.
      */
-    bundle_type_Transaction: Coding;
+    readonly Transaction: Coding;
     /**
-     * The bundle is a transaction response. Because the response is a transaction response, the transaction has succeeded, and all responses are error free.
+     * transaction-response: The bundle is a transaction response. Because the response is a transaction response, the transaction has succeeded, and all responses are error free.
      */
-    bundle_type_TransactionResponse: Coding;
+    readonly TransactionResponse: Coding;
 };
+/**
+ * Indicates the purpose of a bundle - how it is intended to be used.
+ */
+export declare type BundleTypeValueSetType = typeof BundleTypeValueSet;
+/**
+ * Indicates the purpose of a bundle - how it is intended to be used.
+ */
+export declare enum BundleTypeValueSetEnum {
+    /**
+     * batch: The bundle is a set of actions - intended to be processed by a server as a group of independent actions.
+     */
+    Batch = "batch",
+    /**
+     * batch-response: The bundle is a batch response. Note that as a batch, some responses may indicate failure and others success.
+     */
+    BatchResponse = "batch-response",
+    /**
+     * collection: The bundle is a set of resources collected into a single package for ease of distribution that imposes no processing obligations or behavioral rules beyond persistence.
+     */
+    Collection = "collection",
+    /**
+     * document: The bundle is a document. The first resource is a Composition.
+     */
+    Document = "document",
+    /**
+     * history: The bundle is a list of resources from a history interaction on a server.
+     */
+    HistoryList = "history",
+    /**
+     * message: The bundle is a message. The first resource is a MessageHeader.
+     */
+    Message = "message",
+    /**
+     * searchset: The bundle is a list of resources returned as a result of a search/query interaction, operation, or message.
+     */
+    SearchResults = "searchset",
+    /**
+     * transaction: The bundle is a transaction - intended to be processed by a server as an atomic commit.
+     */
+    Transaction = "transaction",
+    /**
+     * transaction-response: The bundle is a transaction response. Because the response is a transaction response, the transaction has succeeded, and all responses are error free.
+     */
+    TransactionResponse = "transaction-response"
+}
 //# sourceMappingURL=BundleTypeValueSet.d.ts.map

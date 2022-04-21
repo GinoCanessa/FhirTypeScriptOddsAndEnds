@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * MedicationAdministration Category Codes
  */
 export declare const MedicationAdminCategoryValueSet: {
     /**
-     * Includes administrations by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
+     * community: Includes administrations by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
      */
-    medication_admin_category_Community: Coding;
+    readonly Community: Coding;
     /**
-     * Includes administrations in an inpatient or acute care setting
+     * inpatient: Includes administrations in an inpatient or acute care setting
      */
-    medication_admin_category_Inpatient: Coding;
+    readonly Inpatient: Coding;
     /**
-     * Includes administrations in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+     * outpatient: Includes administrations in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
      */
-    medication_admin_category_Outpatient: Coding;
+    readonly Outpatient: Coding;
 };
+/**
+ * MedicationAdministration Category Codes
+ */
+export declare type MedicationAdminCategoryValueSetType = typeof MedicationAdminCategoryValueSet;
+/**
+ * MedicationAdministration Category Codes
+ */
+export declare enum MedicationAdminCategoryValueSetEnum {
+    /**
+     * community: Includes administrations by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
+     */
+    Community = "community",
+    /**
+     * inpatient: Includes administrations in an inpatient or acute care setting
+     */
+    Inpatient = "inpatient",
+    /**
+     * outpatient: Includes administrations in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
+     */
+    Outpatient = "outpatient"
+}
 //# sourceMappingURL=MedicationAdminCategoryValueSet.d.ts.map

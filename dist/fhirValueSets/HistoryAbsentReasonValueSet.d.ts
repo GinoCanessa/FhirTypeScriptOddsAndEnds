@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes describing the reason why a family member's history is not available.
  */
 export declare const HistoryAbsentReasonValueSet: {
     /**
-     * Patient does not have the information now, but can provide the information at a later date.
+     * deferred: Patient does not have the information now, but can provide the information at a later date.
      */
-    history_absent_reason_Deferred: Coding;
+    readonly Deferred: Coding;
     /**
-     * Patient does not know the subject, e.g. the biological parent of an adopted patient.
+     * subject-unknown: Patient does not know the subject, e.g. the biological parent of an adopted patient.
      */
-    history_absent_reason_SubjectUnknown: Coding;
+    readonly SubjectUnknown: Coding;
     /**
-     * Information cannot be obtained; e.g. unconscious patient.
+     * unable-to-obtain: Information cannot be obtained; e.g. unconscious patient.
      */
-    history_absent_reason_UnableToObtain: Coding;
+    readonly UnableToObtain: Coding;
     /**
-     * The patient withheld or refused to share the information.
+     * withheld: The patient withheld or refused to share the information.
      */
-    history_absent_reason_InformationWithheld: Coding;
+    readonly InformationWithheld: Coding;
 };
+/**
+ * Codes describing the reason why a family member's history is not available.
+ */
+export declare type HistoryAbsentReasonValueSetType = typeof HistoryAbsentReasonValueSet;
+/**
+ * Codes describing the reason why a family member's history is not available.
+ */
+export declare enum HistoryAbsentReasonValueSetEnum {
+    /**
+     * deferred: Patient does not have the information now, but can provide the information at a later date.
+     */
+    Deferred = "deferred",
+    /**
+     * subject-unknown: Patient does not know the subject, e.g. the biological parent of an adopted patient.
+     */
+    SubjectUnknown = "subject-unknown",
+    /**
+     * unable-to-obtain: Information cannot be obtained; e.g. unconscious patient.
+     */
+    UnableToObtain = "unable-to-obtain",
+    /**
+     * withheld: The patient withheld or refused to share the information.
+     */
+    InformationWithheld = "withheld"
+}
 //# sourceMappingURL=HistoryAbsentReasonValueSet.d.ts.map

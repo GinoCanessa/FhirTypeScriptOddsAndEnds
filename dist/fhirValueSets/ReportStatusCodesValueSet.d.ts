@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The current status of the test report.
  */
 export declare const ReportStatusCodesValueSet: {
     /**
-     * All test operations have completed.
+     * completed: All test operations have completed.
      */
-    report_status_codes_Completed: Coding;
+    readonly Completed: Coding;
     /**
-     * This test report was entered or created in error.
+     * entered-in-error: This test report was entered or created in error.
      */
-    report_status_codes_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * A test operations is currently executing.
+     * in-progress: A test operations is currently executing.
      */
-    report_status_codes_InProgress: Coding;
+    readonly InProgress: Coding;
     /**
-     * The test script execution was manually stopped.
+     * stopped: The test script execution was manually stopped.
      */
-    report_status_codes_Stopped: Coding;
+    readonly Stopped: Coding;
     /**
-     * A test operation is waiting for an external client request.
+     * waiting: A test operation is waiting for an external client request.
      */
-    report_status_codes_Waiting: Coding;
+    readonly Waiting: Coding;
 };
+/**
+ * The current status of the test report.
+ */
+export declare type ReportStatusCodesValueSetType = typeof ReportStatusCodesValueSet;
+/**
+ * The current status of the test report.
+ */
+export declare enum ReportStatusCodesValueSetEnum {
+    /**
+     * completed: All test operations have completed.
+     */
+    Completed = "completed",
+    /**
+     * entered-in-error: This test report was entered or created in error.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * in-progress: A test operations is currently executing.
+     */
+    InProgress = "in-progress",
+    /**
+     * stopped: The test script execution was manually stopped.
+     */
+    Stopped = "stopped",
+    /**
+     * waiting: A test operation is waiting for an external client request.
+     */
+    Waiting = "waiting"
+}
 //# sourceMappingURL=ReportStatusCodesValueSet.d.ts.map

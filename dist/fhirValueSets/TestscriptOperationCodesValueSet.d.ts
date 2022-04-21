@@ -1,187 +1,376 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set defines a set of codes that are used to indicate the supported operations of a testing engine or tool.
  */
 export declare const TestscriptOperationCodesValueSet: {
     /**
-     * Realizes an ActivityDefinition in a specific context
+     * apply: Realizes an ActivityDefinition in a specific context
      */
-    testscript_operation_codes_Apply: Coding;
+    readonly Apply: Coding;
     /**
-     * Update, create or delete a set of resources as independent actions.
+     * batch: Update, create or delete a set of resources as independent actions.
      */
-    testscript_operation_codes_Batch: Coding;
+    readonly Batch: Coding;
     /**
-     * Get a capability statement for the system.
+     * capabilities: Get a capability statement for the system.
      */
-    testscript_operation_codes_Capabilities: Coding;
+    readonly Capabilities: Coding;
     /**
-     * Closure Table Maintenance
+     * closure: Closure Table Maintenance
      */
-    testscript_operation_codes_Closure: Coding;
+    readonly Closure: Coding;
     /**
-     * Compare two systems CapabilityStatements
+     * conforms: Compare two systems CapabilityStatements
      */
-    testscript_operation_codes_Conforms: Coding;
+    readonly Conforms: Coding;
     /**
-     * Create a new resource with a server assigned id.
+     * create: Create a new resource with a server assigned id.
      */
-    testscript_operation_codes_Create: Coding;
+    readonly Create: Coding;
     /**
-     * Aggregates and returns the parameters and data requirements for a resource and all its dependencies as a single module definition
+     * data-requirements: Aggregates and returns the parameters and data requirements for a resource and all its dependencies as a single module definition
      */
-    testscript_operation_codes_DataRequirements: Coding;
+    readonly DataRequirements: Coding;
     /**
-     * Delete a resource.
+     * delete: Delete a resource.
      */
-    testscript_operation_codes_Delete: Coding;
+    readonly Delete: Coding;
     /**
-     * Conditionally delete one or more resources based on search parameters.
+     * deleteCondMultiple: Conditionally delete one or more resources based on search parameters.
      */
-    testscript_operation_codes_DeleteCondMultiple: Coding;
+    readonly DeleteCondMultiple: Coding;
     /**
-     * Conditionally delete a single resource based on search parameters.
+     * deleteCondSingle: Conditionally delete a single resource based on search parameters.
      */
-    testscript_operation_codes_DeleteCondSingle: Coding;
+    readonly DeleteCondSingle: Coding;
     /**
-     * Generate a Document
+     * document: Generate a Document
      */
-    testscript_operation_codes_Document: Coding;
+    readonly Document: Coding;
     /**
-     * Request clinical decision support guidance based on a specific decision support module
+     * evaluate: Request clinical decision support guidance based on a specific decision support module
      */
-    testscript_operation_codes_Evaluate: Coding;
+    readonly Evaluate: Coding;
     /**
-     * Invoke an eMeasure and obtain the results
+     * evaluate-measure: Invoke an eMeasure and obtain the results
      */
-    testscript_operation_codes_EvaluateMeasure: Coding;
+    readonly EvaluateMeasure: Coding;
     /**
-     * Return all the related information as described in the Encounter or Patient
+     * everything: Return all the related information as described in the Encounter or Patient
      */
-    testscript_operation_codes_Everything: Coding;
+    readonly Everything: Coding;
     /**
-     * Value Set Expansion
+     * expand: Value Set Expansion
      */
-    testscript_operation_codes_Expand: Coding;
+    readonly Expand: Coding;
     /**
-     * Find a functional list
+     * find: Find a functional list
      */
-    testscript_operation_codes_Find: Coding;
+    readonly Find: Coding;
     /**
-     * Finding Codes based on supplied properties
+     * find-matches: Finding Codes based on supplied properties
      */
-    testscript_operation_codes_FindMatches: Coding;
+    readonly FindMatches: Coding;
     /**
-     * Invoke a GraphQL query
+     * graphql: Invoke a GraphQL query
      */
-    testscript_operation_codes_Graphql: Coding;
+    readonly Graphql: Coding;
     /**
-     * Retrieve the change history for a particular resource or resource type.
+     * history: Retrieve the change history for a particular resource or resource type.
      */
-    testscript_operation_codes_History: Coding;
+    readonly History: Coding;
     /**
-     * Test if a server implements a client's required operations
+     * implements: Test if a server implements a client's required operations
      */
-    testscript_operation_codes_Implements: Coding;
+    readonly Implements: Coding;
     /**
-     * Last N Observations Query
+     * lastn: Last N Observations Query
      */
-    testscript_operation_codes_Lastn: Coding;
+    readonly Lastn: Coding;
     /**
-     * Concept Look Up and Decomposition
+     * lookup: Concept Look Up and Decomposition
      */
-    testscript_operation_codes_Lookup: Coding;
+    readonly Lookup: Coding;
     /**
-     * Find patient matches using MPI based logic
+     * match: Find patient matches using MPI based logic
      */
-    testscript_operation_codes_Match: Coding;
+    readonly Match: Coding;
     /**
-     * Access a list of profiles, tags, and security labels
+     * meta: Access a list of profiles, tags, and security labels
      */
-    testscript_operation_codes_Meta: Coding;
+    readonly Meta: Coding;
     /**
-     * Add profiles, tags, and security labels to a resource
+     * meta-add: Add profiles, tags, and security labels to a resource
      */
-    testscript_operation_codes_MetaAdd: Coding;
+    readonly MetaAdd: Coding;
     /**
-     * Delete profiles, tags, and security labels for a resource
+     * meta-delete: Delete profiles, tags, and security labels for a resource
      */
-    testscript_operation_codes_MetaDelete: Coding;
+    readonly MetaDelete: Coding;
     /**
-     * Patch an existing resource by its id.
+     * patch: Patch an existing resource by its id.
      */
-    testscript_operation_codes_Patch: Coding;
+    readonly Patch: Coding;
     /**
-     * Populate Questionnaire
+     * populate: Populate Questionnaire
      */
-    testscript_operation_codes_Populate: Coding;
+    readonly Populate: Coding;
     /**
-     * Generate HTML for Questionnaire
+     * populatehtml: Generate HTML for Questionnaire
      */
-    testscript_operation_codes_Populatehtml: Coding;
+    readonly Populatehtml: Coding;
     /**
-     * Generate a link to a Questionnaire completion webpage
+     * populatelink: Generate a link to a Questionnaire completion webpage
      */
-    testscript_operation_codes_Populatelink: Coding;
+    readonly Populatelink: Coding;
     /**
-     * Process a message according to the defined event
+     * process-message: Process a message according to the defined event
      */
-    testscript_operation_codes_ProcessMessage: Coding;
+    readonly ProcessMessage: Coding;
     /**
-     * Build Questionnaire
+     * questionnaire: Build Questionnaire
      */
-    testscript_operation_codes_Questionnaire: Coding;
+    readonly Questionnaire: Coding;
     /**
-     * Read the current state of the resource.
+     * read: Read the current state of the resource.
      */
-    testscript_operation_codes_Read: Coding;
+    readonly Read: Coding;
     /**
-     * Search based on some filter criteria.
+     * search: Search based on some filter criteria.
      */
-    testscript_operation_codes_Search: Coding;
+    readonly Search: Coding;
     /**
-     * Observation Statistics
+     * stats: Observation Statistics
      */
-    testscript_operation_codes_Stats: Coding;
+    readonly Stats: Coding;
     /**
-     * Fetch a subset of the CapabilityStatement resource
+     * subset: Fetch a subset of the CapabilityStatement resource
      */
-    testscript_operation_codes_Subset: Coding;
+    readonly Subset: Coding;
     /**
-     * CodeSystem Subsumption Testing
+     * subsumes: CodeSystem Subsumption Testing
      */
-    testscript_operation_codes_Subsumes: Coding;
+    readonly Subsumes: Coding;
     /**
-     * Update, create or delete a set of resources as a single transaction.
+     * transaction: Update, create or delete a set of resources as a single transaction.
      */
-    testscript_operation_codes_Transaction: Coding;
+    readonly Transaction: Coding;
     /**
-     * Model Instance Transformation
+     * transform: Model Instance Transformation
      */
-    testscript_operation_codes_Transform: Coding;
+    readonly Transform: Coding;
     /**
-     * Concept Translation
+     * translate: Concept Translation
      */
-    testscript_operation_codes_Translate: Coding;
+    readonly Translate: Coding;
     /**
-     * Update an existing resource by its id.
+     * update: Update an existing resource by its id.
      */
-    testscript_operation_codes_Update: Coding;
+    readonly Update: Coding;
     /**
-     * Update an existing resource by its id (or create it if it is new).
+     * updateCreate: Update an existing resource by its id (or create it if it is new).
      */
-    testscript_operation_codes_UpdateCreate: Coding;
+    readonly UpdateCreate: Coding;
     /**
-     * Validate a resource
+     * validate: Validate a resource
      */
-    testscript_operation_codes_Validate: Coding;
+    readonly Validate: Coding;
     /**
-     * ValueSet based Validation
+     * validate-code: ValueSet based Validation
      */
-    testscript_operation_codes_ValidateCode: Coding;
+    readonly ValidateCode: Coding;
     /**
-     * Read the state of a specific version of the resource.
+     * vread: Read the state of a specific version of the resource.
      */
-    testscript_operation_codes_Vread: Coding;
+    readonly Vread: Coding;
 };
+/**
+ * This value set defines a set of codes that are used to indicate the supported operations of a testing engine or tool.
+ */
+export declare type TestscriptOperationCodesValueSetType = typeof TestscriptOperationCodesValueSet;
+/**
+ * This value set defines a set of codes that are used to indicate the supported operations of a testing engine or tool.
+ */
+export declare enum TestscriptOperationCodesValueSetEnum {
+    /**
+     * apply: Realizes an ActivityDefinition in a specific context
+     */
+    Apply = "apply",
+    /**
+     * batch: Update, create or delete a set of resources as independent actions.
+     */
+    Batch = "batch",
+    /**
+     * capabilities: Get a capability statement for the system.
+     */
+    Capabilities = "capabilities",
+    /**
+     * closure: Closure Table Maintenance
+     */
+    Closure = "closure",
+    /**
+     * conforms: Compare two systems CapabilityStatements
+     */
+    Conforms = "conforms",
+    /**
+     * create: Create a new resource with a server assigned id.
+     */
+    Create = "create",
+    /**
+     * data-requirements: Aggregates and returns the parameters and data requirements for a resource and all its dependencies as a single module definition
+     */
+    DataRequirements = "data-requirements",
+    /**
+     * delete: Delete a resource.
+     */
+    Delete = "delete",
+    /**
+     * deleteCondMultiple: Conditionally delete one or more resources based on search parameters.
+     */
+    DeleteCondMultiple = "deleteCondMultiple",
+    /**
+     * deleteCondSingle: Conditionally delete a single resource based on search parameters.
+     */
+    DeleteCondSingle = "deleteCondSingle",
+    /**
+     * document: Generate a Document
+     */
+    Document = "document",
+    /**
+     * evaluate: Request clinical decision support guidance based on a specific decision support module
+     */
+    Evaluate = "evaluate",
+    /**
+     * evaluate-measure: Invoke an eMeasure and obtain the results
+     */
+    EvaluateMeasure = "evaluate-measure",
+    /**
+     * everything: Return all the related information as described in the Encounter or Patient
+     */
+    Everything = "everything",
+    /**
+     * expand: Value Set Expansion
+     */
+    Expand = "expand",
+    /**
+     * find: Find a functional list
+     */
+    Find = "find",
+    /**
+     * find-matches: Finding Codes based on supplied properties
+     */
+    FindMatches = "find-matches",
+    /**
+     * graphql: Invoke a GraphQL query
+     */
+    Graphql = "graphql",
+    /**
+     * history: Retrieve the change history for a particular resource or resource type.
+     */
+    History = "history",
+    /**
+     * implements: Test if a server implements a client's required operations
+     */
+    Implements = "implements",
+    /**
+     * lastn: Last N Observations Query
+     */
+    Lastn = "lastn",
+    /**
+     * lookup: Concept Look Up and Decomposition
+     */
+    Lookup = "lookup",
+    /**
+     * match: Find patient matches using MPI based logic
+     */
+    Match = "match",
+    /**
+     * meta: Access a list of profiles, tags, and security labels
+     */
+    Meta = "meta",
+    /**
+     * meta-add: Add profiles, tags, and security labels to a resource
+     */
+    MetaAdd = "meta-add",
+    /**
+     * meta-delete: Delete profiles, tags, and security labels for a resource
+     */
+    MetaDelete = "meta-delete",
+    /**
+     * patch: Patch an existing resource by its id.
+     */
+    Patch = "patch",
+    /**
+     * populate: Populate Questionnaire
+     */
+    Populate = "populate",
+    /**
+     * populatehtml: Generate HTML for Questionnaire
+     */
+    Populatehtml = "populatehtml",
+    /**
+     * populatelink: Generate a link to a Questionnaire completion webpage
+     */
+    Populatelink = "populatelink",
+    /**
+     * process-message: Process a message according to the defined event
+     */
+    ProcessMessage = "process-message",
+    /**
+     * questionnaire: Build Questionnaire
+     */
+    Questionnaire = "questionnaire",
+    /**
+     * read: Read the current state of the resource.
+     */
+    Read = "read",
+    /**
+     * search: Search based on some filter criteria.
+     */
+    Search = "search",
+    /**
+     * stats: Observation Statistics
+     */
+    Stats = "stats",
+    /**
+     * subset: Fetch a subset of the CapabilityStatement resource
+     */
+    Subset = "subset",
+    /**
+     * subsumes: CodeSystem Subsumption Testing
+     */
+    Subsumes = "subsumes",
+    /**
+     * transaction: Update, create or delete a set of resources as a single transaction.
+     */
+    Transaction = "transaction",
+    /**
+     * transform: Model Instance Transformation
+     */
+    Transform = "transform",
+    /**
+     * translate: Concept Translation
+     */
+    Translate = "translate",
+    /**
+     * update: Update an existing resource by its id.
+     */
+    Update = "update",
+    /**
+     * updateCreate: Update an existing resource by its id (or create it if it is new).
+     */
+    UpdateCreate = "updateCreate",
+    /**
+     * validate: Validate a resource
+     */
+    Validate = "validate",
+    /**
+     * validate-code: ValueSet based Validation
+     */
+    ValidateCode = "validate-code",
+    /**
+     * vread: Read the state of a specific version of the resource.
+     */
+    Vread = "vread"
+}
 //# sourceMappingURL=TestscriptOperationCodesValueSet.d.ts.map

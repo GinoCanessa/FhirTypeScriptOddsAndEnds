@@ -1,171 +1,344 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a smattering of FDI oral site codes.
  */
 export declare const ToothValueSet: {
     /**
-     * Oral cavity.
+     * 0: Oral cavity.
      */
-    tooth_OralCavity: Coding;
+    readonly OralCavity: Coding;
     /**
-     * Permanent teeth Maxillary right.
+     * 1: Permanent teeth Maxillary right.
      */
-    tooth_VAL1: Coding;
+    readonly VAL1: Coding;
     /**
-     * Upper Right Tooth 1 from the central axis, permanent dentition.
+     * 11: Upper Right Tooth 1 from the central axis, permanent dentition.
      */
-    tooth_VAL11: Coding;
+    readonly VAL11: Coding;
     /**
-     * Upper Right Tooth 2 from the central axis, permanent dentition.
+     * 12: Upper Right Tooth 2 from the central axis, permanent dentition.
      */
-    tooth_VAL12: Coding;
+    readonly VAL12: Coding;
     /**
-     * Upper Right Tooth 3 from the central axis, permanent dentition.
+     * 13: Upper Right Tooth 3 from the central axis, permanent dentition.
      */
-    tooth_VAL13: Coding;
+    readonly VAL13: Coding;
     /**
-     * Upper Right Tooth 4 from the central axis, permanent dentition.
+     * 14: Upper Right Tooth 4 from the central axis, permanent dentition.
      */
-    tooth_VAL14: Coding;
+    readonly VAL14: Coding;
     /**
-     * Upper Right Tooth 5 from the central axis, permanent dentition.
+     * 15: Upper Right Tooth 5 from the central axis, permanent dentition.
      */
-    tooth_VAL15: Coding;
+    readonly VAL15: Coding;
     /**
-     * Upper Right Tooth 6 from the central axis, permanent dentition.
+     * 16: Upper Right Tooth 6 from the central axis, permanent dentition.
      */
-    tooth_VAL16: Coding;
+    readonly VAL16: Coding;
     /**
-     * Upper Right Tooth 7 from the central axis, permanent dentition.
+     * 17: Upper Right Tooth 7 from the central axis, permanent dentition.
      */
-    tooth_VAL17: Coding;
+    readonly VAL17: Coding;
     /**
-     * Upper Right Tooth 8 from the central axis, permanent dentition.
+     * 18: Upper Right Tooth 8 from the central axis, permanent dentition.
      */
-    tooth_VAL18: Coding;
+    readonly VAL18: Coding;
     /**
-     * Permanent teeth Maxillary left.
+     * 2: Permanent teeth Maxillary left.
      */
-    tooth_VAL2: Coding;
+    readonly VAL2: Coding;
     /**
-     * Upper Left Tooth 1 from the central axis, permanent dentition.
+     * 21: Upper Left Tooth 1 from the central axis, permanent dentition.
      */
-    tooth_VAL21: Coding;
+    readonly VAL21: Coding;
     /**
-     * Upper Left Tooth 2 from the central axis, permanent dentition.
+     * 22: Upper Left Tooth 2 from the central axis, permanent dentition.
      */
-    tooth_VAL22: Coding;
+    readonly VAL22: Coding;
     /**
-     * Upper Left Tooth 3 from the central axis, permanent dentition.
+     * 23: Upper Left Tooth 3 from the central axis, permanent dentition.
      */
-    tooth_VAL23: Coding;
+    readonly VAL23: Coding;
     /**
-     * Upper Left Tooth 4 from the central axis, permanent dentition.
+     * 24: Upper Left Tooth 4 from the central axis, permanent dentition.
      */
-    tooth_VAL24: Coding;
+    readonly VAL24: Coding;
     /**
-     * Upper Left Tooth 5 from the central axis, permanent dentition.
+     * 25: Upper Left Tooth 5 from the central axis, permanent dentition.
      */
-    tooth_VAL25: Coding;
+    readonly VAL25: Coding;
     /**
-     * Upper Left Tooth 6 from the central axis, permanent dentition.
+     * 26: Upper Left Tooth 6 from the central axis, permanent dentition.
      */
-    tooth_VAL26: Coding;
+    readonly VAL26: Coding;
     /**
-     * Upper Left Tooth 7 from the central axis, permanent dentition.
+     * 27: Upper Left Tooth 7 from the central axis, permanent dentition.
      */
-    tooth_VAL27: Coding;
+    readonly VAL27: Coding;
     /**
-     * Upper Left Tooth 8 from the central axis, permanent dentition.
+     * 28: Upper Left Tooth 8 from the central axis, permanent dentition.
      */
-    tooth_VAL28: Coding;
+    readonly VAL28: Coding;
     /**
-     * Permanent teeth Mandibular right.
+     * 3: Permanent teeth Mandibular right.
      */
-    tooth_VAL3: Coding;
+    readonly VAL3: Coding;
     /**
-     * Lower Left Tooth 1 from the central axis, permanent dentition.
+     * 31: Lower Left Tooth 1 from the central axis, permanent dentition.
      */
-    tooth_VAL31: Coding;
+    readonly VAL31: Coding;
     /**
-     * Lower Left Tooth 2 from the central axis, permanent dentition.
+     * 32: Lower Left Tooth 2 from the central axis, permanent dentition.
      */
-    tooth_VAL32: Coding;
+    readonly VAL32: Coding;
     /**
-     * Lower Left Tooth 3 from the central axis, permanent dentition.
+     * 33: Lower Left Tooth 3 from the central axis, permanent dentition.
      */
-    tooth_VAL33: Coding;
+    readonly VAL33: Coding;
     /**
-     * Lower Left Tooth 4 from the central axis, permanent dentition.
+     * 34: Lower Left Tooth 4 from the central axis, permanent dentition.
      */
-    tooth_VAL34: Coding;
+    readonly VAL34: Coding;
     /**
-     * Lower Left Tooth 5 from the central axis, permanent dentition.
+     * 35: Lower Left Tooth 5 from the central axis, permanent dentition.
      */
-    tooth_VAL35: Coding;
+    readonly VAL35: Coding;
     /**
-     * Lower Left Tooth 6 from the central axis, permanent dentition.
+     * 36: Lower Left Tooth 6 from the central axis, permanent dentition.
      */
-    tooth_VAL36: Coding;
+    readonly VAL36: Coding;
     /**
-     * Lower Left Tooth 7 from the central axis, permanent dentition.
+     * 37: Lower Left Tooth 7 from the central axis, permanent dentition.
      */
-    tooth_VAL37: Coding;
+    readonly VAL37: Coding;
     /**
-     * Lower Left Tooth 8 from the central axis, permanent dentition.
+     * 38: Lower Left Tooth 8 from the central axis, permanent dentition.
      */
-    tooth_VAL38: Coding;
+    readonly VAL38: Coding;
     /**
-     * Permanent teeth Mandibular left.
+     * 4: Permanent teeth Mandibular left.
      */
-    tooth_VAL4: Coding;
+    readonly VAL4: Coding;
     /**
-     * Lower Right Tooth 1 from the central axis, permanent dentition.
+     * 41: Lower Right Tooth 1 from the central axis, permanent dentition.
      */
-    tooth_VAL41: Coding;
+    readonly VAL41: Coding;
     /**
-     * Lower Right Tooth 2 from the central axis, permanent dentition.
+     * 42: Lower Right Tooth 2 from the central axis, permanent dentition.
      */
-    tooth_VAL42: Coding;
+    readonly VAL42: Coding;
     /**
-     * Lower Right Tooth 3 from the central axis, permanent dentition.
+     * 43: Lower Right Tooth 3 from the central axis, permanent dentition.
      */
-    tooth_VAL43: Coding;
+    readonly VAL43: Coding;
     /**
-     * Lower Right Tooth 4 from the central axis, permanent dentition.
+     * 44: Lower Right Tooth 4 from the central axis, permanent dentition.
      */
-    tooth_VAL44: Coding;
+    readonly VAL44: Coding;
     /**
-     * Lower Right Tooth 5 from the central axis, permanent dentition.
+     * 45: Lower Right Tooth 5 from the central axis, permanent dentition.
      */
-    tooth_VAL45: Coding;
+    readonly VAL45: Coding;
     /**
-     * Lower Right Tooth 6 from the central axis, permanent dentition.
+     * 46: Lower Right Tooth 6 from the central axis, permanent dentition.
      */
-    tooth_VAL46: Coding;
+    readonly VAL46: Coding;
     /**
-     * Lower Right Tooth 7 from the central axis, permanent dentition.
+     * 47: Lower Right Tooth 7 from the central axis, permanent dentition.
      */
-    tooth_VAL47: Coding;
+    readonly VAL47: Coding;
     /**
-     * Lower Right Tooth 8 from the central axis, permanent dentition.
+     * 48: Lower Right Tooth 8 from the central axis, permanent dentition.
      */
-    tooth_VAL48: Coding;
+    readonly VAL48: Coding;
     /**
-     * Deciduous teeth Maxillary right.
+     * 5: Deciduous teeth Maxillary right.
      */
-    tooth_VAL5: Coding;
+    readonly VAL5: Coding;
     /**
-     * Deciduous teeth Maxillary left.
+     * 6: Deciduous teeth Maxillary left.
      */
-    tooth_VAL6: Coding;
+    readonly VAL6: Coding;
     /**
-     * Deciduous teeth Mandibular right.
+     * 7: Deciduous teeth Mandibular right.
      */
-    tooth_VAL7: Coding;
+    readonly VAL7: Coding;
     /**
-     * Deciduous teeth Mandibular left.
+     * 8: Deciduous teeth Mandibular left.
      */
-    tooth_VAL8: Coding;
+    readonly VAL8: Coding;
 };
+/**
+ * This value set includes a smattering of FDI oral site codes.
+ */
+export declare type ToothValueSetType = typeof ToothValueSet;
+/**
+ * This value set includes a smattering of FDI oral site codes.
+ */
+export declare enum ToothValueSetEnum {
+    /**
+     * 0: Oral cavity.
+     */
+    OralCavity = "0",
+    /**
+     * 1: Permanent teeth Maxillary right.
+     */
+    VAL1 = "1",
+    /**
+     * 11: Upper Right Tooth 1 from the central axis, permanent dentition.
+     */
+    VAL11 = "11",
+    /**
+     * 12: Upper Right Tooth 2 from the central axis, permanent dentition.
+     */
+    VAL12 = "12",
+    /**
+     * 13: Upper Right Tooth 3 from the central axis, permanent dentition.
+     */
+    VAL13 = "13",
+    /**
+     * 14: Upper Right Tooth 4 from the central axis, permanent dentition.
+     */
+    VAL14 = "14",
+    /**
+     * 15: Upper Right Tooth 5 from the central axis, permanent dentition.
+     */
+    VAL15 = "15",
+    /**
+     * 16: Upper Right Tooth 6 from the central axis, permanent dentition.
+     */
+    VAL16 = "16",
+    /**
+     * 17: Upper Right Tooth 7 from the central axis, permanent dentition.
+     */
+    VAL17 = "17",
+    /**
+     * 18: Upper Right Tooth 8 from the central axis, permanent dentition.
+     */
+    VAL18 = "18",
+    /**
+     * 2: Permanent teeth Maxillary left.
+     */
+    VAL2 = "2",
+    /**
+     * 21: Upper Left Tooth 1 from the central axis, permanent dentition.
+     */
+    VAL21 = "21",
+    /**
+     * 22: Upper Left Tooth 2 from the central axis, permanent dentition.
+     */
+    VAL22 = "22",
+    /**
+     * 23: Upper Left Tooth 3 from the central axis, permanent dentition.
+     */
+    VAL23 = "23",
+    /**
+     * 24: Upper Left Tooth 4 from the central axis, permanent dentition.
+     */
+    VAL24 = "24",
+    /**
+     * 25: Upper Left Tooth 5 from the central axis, permanent dentition.
+     */
+    VAL25 = "25",
+    /**
+     * 26: Upper Left Tooth 6 from the central axis, permanent dentition.
+     */
+    VAL26 = "26",
+    /**
+     * 27: Upper Left Tooth 7 from the central axis, permanent dentition.
+     */
+    VAL27 = "27",
+    /**
+     * 28: Upper Left Tooth 8 from the central axis, permanent dentition.
+     */
+    VAL28 = "28",
+    /**
+     * 3: Permanent teeth Mandibular right.
+     */
+    VAL3 = "3",
+    /**
+     * 31: Lower Left Tooth 1 from the central axis, permanent dentition.
+     */
+    VAL31 = "31",
+    /**
+     * 32: Lower Left Tooth 2 from the central axis, permanent dentition.
+     */
+    VAL32 = "32",
+    /**
+     * 33: Lower Left Tooth 3 from the central axis, permanent dentition.
+     */
+    VAL33 = "33",
+    /**
+     * 34: Lower Left Tooth 4 from the central axis, permanent dentition.
+     */
+    VAL34 = "34",
+    /**
+     * 35: Lower Left Tooth 5 from the central axis, permanent dentition.
+     */
+    VAL35 = "35",
+    /**
+     * 36: Lower Left Tooth 6 from the central axis, permanent dentition.
+     */
+    VAL36 = "36",
+    /**
+     * 37: Lower Left Tooth 7 from the central axis, permanent dentition.
+     */
+    VAL37 = "37",
+    /**
+     * 38: Lower Left Tooth 8 from the central axis, permanent dentition.
+     */
+    VAL38 = "38",
+    /**
+     * 4: Permanent teeth Mandibular left.
+     */
+    VAL4 = "4",
+    /**
+     * 41: Lower Right Tooth 1 from the central axis, permanent dentition.
+     */
+    VAL41 = "41",
+    /**
+     * 42: Lower Right Tooth 2 from the central axis, permanent dentition.
+     */
+    VAL42 = "42",
+    /**
+     * 43: Lower Right Tooth 3 from the central axis, permanent dentition.
+     */
+    VAL43 = "43",
+    /**
+     * 44: Lower Right Tooth 4 from the central axis, permanent dentition.
+     */
+    VAL44 = "44",
+    /**
+     * 45: Lower Right Tooth 5 from the central axis, permanent dentition.
+     */
+    VAL45 = "45",
+    /**
+     * 46: Lower Right Tooth 6 from the central axis, permanent dentition.
+     */
+    VAL46 = "46",
+    /**
+     * 47: Lower Right Tooth 7 from the central axis, permanent dentition.
+     */
+    VAL47 = "47",
+    /**
+     * 48: Lower Right Tooth 8 from the central axis, permanent dentition.
+     */
+    VAL48 = "48",
+    /**
+     * 5: Deciduous teeth Maxillary right.
+     */
+    VAL5 = "5",
+    /**
+     * 6: Deciduous teeth Maxillary left.
+     */
+    VAL6 = "6",
+    /**
+     * 7: Deciduous teeth Mandibular right.
+     */
+    VAL7 = "7",
+    /**
+     * 8: Deciduous teeth Mandibular left.
+     */
+    VAL8 = "8"
+}
 //# sourceMappingURL=ToothValueSet.d.ts.map

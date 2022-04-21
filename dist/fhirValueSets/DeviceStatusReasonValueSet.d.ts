@@ -1,39 +1,80 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The availability status reason of the device.
  */
 export declare const DeviceStatusReasonValueSet: {
     /**
-     * The device hardware is disconnected.
+     * hw-discon: The device hardware is disconnected.
      */
-    device_status_reason_HardwareDisconnected: Coding;
+    readonly HardwareDisconnected: Coding;
     /**
-     * The device is not ready.
+     * not-ready: The device is not ready.
      */
-    device_status_reason_NotReady: Coding;
+    readonly NotReady: Coding;
     /**
-     * The device is off.
+     * off: The device is off.
      */
-    device_status_reason_Off: Coding;
+    readonly Off: Coding;
     /**
-     * The device is offline.
+     * offline: The device is offline.
      */
-    device_status_reason_Offline: Coding;
+    readonly Offline: Coding;
     /**
-     * The device is off.
+     * online: The device is off.
      */
-    device_status_reason_Online: Coding;
+    readonly Online: Coding;
     /**
-     * The device is paused.
+     * paused: The device is paused.
      */
-    device_status_reason_Paused: Coding;
+    readonly Paused: Coding;
     /**
-     * The device is ready but not actively operating.
+     * standby: The device is ready but not actively operating.
      */
-    device_status_reason_Standby: Coding;
+    readonly Standby: Coding;
     /**
-     * The device transducer is disconnected.
+     * transduc-discon: The device transducer is disconnected.
      */
-    device_status_reason_TransducerDisconnected: Coding;
+    readonly TransducerDisconnected: Coding;
 };
+/**
+ * The availability status reason of the device.
+ */
+export declare type DeviceStatusReasonValueSetType = typeof DeviceStatusReasonValueSet;
+/**
+ * The availability status reason of the device.
+ */
+export declare enum DeviceStatusReasonValueSetEnum {
+    /**
+     * hw-discon: The device hardware is disconnected.
+     */
+    HardwareDisconnected = "hw-discon",
+    /**
+     * not-ready: The device is not ready.
+     */
+    NotReady = "not-ready",
+    /**
+     * off: The device is off.
+     */
+    Off = "off",
+    /**
+     * offline: The device is offline.
+     */
+    Offline = "offline",
+    /**
+     * online: The device is off.
+     */
+    Online = "online",
+    /**
+     * paused: The device is paused.
+     */
+    Paused = "paused",
+    /**
+     * standby: The device is ready but not actively operating.
+     */
+    Standby = "standby",
+    /**
+     * transduc-discon: The device transducer is disconnected.
+     */
+    TransducerDisconnected = "transduc-discon"
+}
 //# sourceMappingURL=DeviceStatusReasonValueSet.d.ts.map

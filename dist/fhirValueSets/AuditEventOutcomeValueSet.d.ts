@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Indicates whether the event succeeded or failed.
  */
 export declare const AuditEventOutcomeValueSet: {
     /**
-     * The operation completed successfully (whether with warnings or not).
+     * 0: The operation completed successfully (whether with warnings or not).
      */
-    audit_event_outcome_Success: Coding;
+    readonly Success: Coding;
     /**
-     * An error of such magnitude occurred that the system is no longer available for use (i.e. the system died).
+     * 12: An error of such magnitude occurred that the system is no longer available for use (i.e. the system died).
      */
-    audit_event_outcome_MajorFailure: Coding;
+    readonly MajorFailure: Coding;
     /**
-     * The action was not successful due to some kind of minor failure (often equivalent to an HTTP 400 response).
+     * 4: The action was not successful due to some kind of minor failure (often equivalent to an HTTP 400 response).
      */
-    audit_event_outcome_MinorFailure: Coding;
+    readonly MinorFailure: Coding;
     /**
-     * The action was not successful due to some kind of unexpected error (often equivalent to an HTTP 500 response).
+     * 8: The action was not successful due to some kind of unexpected error (often equivalent to an HTTP 500 response).
      */
-    audit_event_outcome_SeriousFailure: Coding;
+    readonly SeriousFailure: Coding;
 };
+/**
+ * Indicates whether the event succeeded or failed.
+ */
+export declare type AuditEventOutcomeValueSetType = typeof AuditEventOutcomeValueSet;
+/**
+ * Indicates whether the event succeeded or failed.
+ */
+export declare enum AuditEventOutcomeValueSetEnum {
+    /**
+     * 0: The operation completed successfully (whether with warnings or not).
+     */
+    Success = "0",
+    /**
+     * 12: An error of such magnitude occurred that the system is no longer available for use (i.e. the system died).
+     */
+    MajorFailure = "12",
+    /**
+     * 4: The action was not successful due to some kind of minor failure (often equivalent to an HTTP 400 response).
+     */
+    MinorFailure = "4",
+    /**
+     * 8: The action was not successful due to some kind of unexpected error (often equivalent to an HTTP 500 response).
+     */
+    SeriousFailure = "8"
+}
 //# sourceMappingURL=AuditEventOutcomeValueSet.d.ts.map

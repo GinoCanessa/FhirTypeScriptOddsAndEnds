@@ -1,10 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * What the target is validated against
  */
 export declare const VerificationresultValidationTypeValueSet: {
-    verificationresult_validation_type_MultipleSources: Coding;
-    verificationresult_validation_type_Nothing: Coding;
-    verificationresult_validation_type_PrimarySource: Coding;
+    /**
+     * Code: multiple
+     */
+    readonly MultipleSources: Coding;
+    /**
+     * Code: nothing
+     */
+    readonly Nothing: Coding;
+    /**
+     * Code: primary
+     */
+    readonly PrimarySource: Coding;
 };
+/**
+ * What the target is validated against
+ */
+export declare type VerificationresultValidationTypeValueSetType = typeof VerificationresultValidationTypeValueSet;
+/**
+ * What the target is validated against
+ */
+export declare enum VerificationresultValidationTypeValueSetEnum {
+    /**
+     * Code: multiple
+     */
+    MultipleSources = "multiple",
+    /**
+     * Code: nothing
+     */
+    Nothing = "nothing",
+    /**
+     * Code: primary
+     */
+    PrimarySource = "primary"
+}
 //# sourceMappingURL=VerificationresultValidationTypeValueSet.d.ts.map

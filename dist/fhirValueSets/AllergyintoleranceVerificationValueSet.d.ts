@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Preferred value set for AllergyIntolerance Verification Status.
  */
 export declare const AllergyintoleranceVerificationValueSet: {
     /**
-     * A high level of certainty about the propensity for a reaction to the identified substance, which may include clinical evidence by testing or rechallenge.
+     * confirmed: A high level of certainty about the propensity for a reaction to the identified substance, which may include clinical evidence by testing or rechallenge.
      */
-    allergyintolerance_verification_Confirmed: Coding;
+    readonly Confirmed: Coding;
     /**
-     * The statement was entered in error and is not valid.
+     * entered-in-error: The statement was entered in error and is not valid.
      */
-    allergyintolerance_verification_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * A propensity for a reaction to the identified substance has been disputed or disproven with a sufficient level of clinical certainty to justify invalidating the assertion. This might or might not include testing or rechallenge.
+     * refuted: A propensity for a reaction to the identified substance has been disputed or disproven with a sufficient level of clinical certainty to justify invalidating the assertion. This might or might not include testing or rechallenge.
      */
-    allergyintolerance_verification_Refuted: Coding;
+    readonly Refuted: Coding;
     /**
-     * A low level of certainty about the propensity for a reaction to the identified substance.
+     * unconfirmed: A low level of certainty about the propensity for a reaction to the identified substance.
      */
-    allergyintolerance_verification_Unconfirmed: Coding;
+    readonly Unconfirmed: Coding;
 };
+/**
+ * Preferred value set for AllergyIntolerance Verification Status.
+ */
+export declare type AllergyintoleranceVerificationValueSetType = typeof AllergyintoleranceVerificationValueSet;
+/**
+ * Preferred value set for AllergyIntolerance Verification Status.
+ */
+export declare enum AllergyintoleranceVerificationValueSetEnum {
+    /**
+     * confirmed: A high level of certainty about the propensity for a reaction to the identified substance, which may include clinical evidence by testing or rechallenge.
+     */
+    Confirmed = "confirmed",
+    /**
+     * entered-in-error: The statement was entered in error and is not valid.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * refuted: A propensity for a reaction to the identified substance has been disputed or disproven with a sufficient level of clinical certainty to justify invalidating the assertion. This might or might not include testing or rechallenge.
+     */
+    Refuted = "refuted",
+    /**
+     * unconfirmed: A low level of certainty about the propensity for a reaction to the identified substance.
+     */
+    Unconfirmed = "unconfirmed"
+}
 //# sourceMappingURL=AllergyintoleranceVerificationValueSet.d.ts.map

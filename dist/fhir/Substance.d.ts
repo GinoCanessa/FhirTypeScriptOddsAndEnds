@@ -1,17 +1,23 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { SubstanceCodeValueSetType } from '../fhirValueSets/SubstanceCodeValueSet.js';
+import { SubstanceStatusValueSetType, SubstanceStatusValueSetEnum } from '../fhirValueSets/SubstanceStatusValueSet.js';
+import { SubstanceCategoryValueSetType } from '../fhirValueSets/SubstanceCategoryValueSet.js';
 /**
  * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.
  */
 export declare type ISubstanceInstance = fhir.IBackboneElement & {
     /**
-     * When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry.
-     */
-    expiry?: string | undefined;
-    _expiry?: fhir.IFhirElement | undefined;
-    /**
      * Identifier associated with the package/container (usually a label affixed directly).
      */
     identifier?: fhir.IIdentifier | undefined;
+    /**
+     * When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry.
+     */
+    expiry?: string | undefined;
+    /**
+     * Extended properties for primitive element: Substance.instance.expiry
+     */
+    _expiry?: fhir.IFhirElement | undefined;
     /**
      * The amount of the substance.
      */
@@ -43,6 +49,18 @@ export declare type ISubstance = fhir.IDomainResource & {
      */
     resourceType: "Substance";
     /**
+     * This identifier is associated with the kind of substance in contrast to the  Substance.instance.identifier which is associated with the package/container.
+     */
+    identifier?: fhir.IIdentifier[] | undefined;
+    /**
+     * A code to indicate if the substance is actively used.
+     */
+    status?: SubstanceStatusValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: Substance.status
+     */
+    _status?: fhir.IFhirElement | undefined;
+    /**
      * The level of granularity is defined by the category concepts in the value set.   More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in Substance.code.
      */
     category?: fhir.ICodeableConcept[] | undefined;
@@ -54,38 +72,35 @@ export declare type ISubstance = fhir.IDomainResource & {
      * A description of the substance - its appearance, handling requirements, and other usage notes.
      */
     description?: string | undefined;
+    /**
+     * Extended properties for primitive element: Substance.description
+     */
     _description?: fhir.IFhirElement | undefined;
-    /**
-     * This identifier is associated with the kind of substance in contrast to the  Substance.instance.identifier which is associated with the package/container.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
-    /**
-     * A substance can be composed of other substances.
-     */
-    ingredient?: fhir.ISubstanceIngredient[] | undefined;
     /**
      * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.
      */
     instance?: fhir.ISubstanceInstance[] | undefined;
     /**
-     * A code to indicate if the substance is actively used.
+     * A substance can be composed of other substances.
      */
-    status?: SubstanceStatusEnum | undefined;
-    _status?: fhir.IFhirElement | undefined;
+    ingredient?: fhir.ISubstanceIngredient[] | undefined;
 };
 /**
  * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.
  */
-export declare class SubstanceInstance extends fhir.BackboneElement implements fhir.ISubstanceInstance {
-    /**
-     * When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry.
-     */
-    expiry?: string | undefined;
-    _expiry?: fhir.FhirElement | undefined;
+export declare class SubstanceInstance extends fhir.BackboneElement implements ISubstanceInstance {
     /**
      * Identifier associated with the package/container (usually a label affixed directly).
      */
     identifier?: fhir.Identifier | undefined;
+    /**
+     * When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry.
+     */
+    expiry?: string | undefined;
+    /**
+     * Extended properties for primitive element: Substance.instance.expiry
+     */
+    _expiry?: fhir.FhirElement | undefined;
     /**
      * The amount of the substance.
      */
@@ -93,20 +108,16 @@ export declare class SubstanceInstance extends fhir.BackboneElement implements f
     /**
      * Default constructor for SubstanceInstance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceInstance>);
+    constructor(source?: Partial<ISubstanceInstance>);
     /**
-     * Check if the current SubstanceInstance contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SubstanceInstance from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISubstanceInstance): SubstanceInstance;
+    doModelValidation(): [string, string][];
 }
 /**
  * A substance can be composed of other substances.
  */
-export declare class SubstanceIngredient extends fhir.BackboneElement implements fhir.ISubstanceIngredient {
+export declare class SubstanceIngredient extends fhir.BackboneElement implements ISubstanceIngredient {
     /**
      * The amount of the ingredient in the substance - a concentration ratio.
      */
@@ -122,24 +133,40 @@ export declare class SubstanceIngredient extends fhir.BackboneElement implements
     /**
      * Default constructor for SubstanceIngredient - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstanceIngredient>);
+    constructor(source?: Partial<ISubstanceIngredient>);
     /**
-     * Check if the current SubstanceIngredient contains all required elements.
+     * Example-bound Value Set for substanceCodeableConcept
      */
-    checkRequiredElements(): string[];
+    substanceCodeableConceptExampleValueSet(): SubstanceCodeValueSetType;
     /**
-     * Factory function to create a SubstanceIngredient from an object that MUST contain all required elements.
+     * Example-bound Value Set for substanceReference
      */
-    static fromStrict(source: fhir.ISubstanceIngredient): SubstanceIngredient;
+    substanceReferenceExampleValueSet(): SubstanceCodeValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * A homogeneous material with a definite composition.
  */
-export declare class Substance extends fhir.DomainResource implements fhir.ISubstance {
+export declare class Substance extends fhir.DomainResource implements ISubstance {
     /**
      * Resource Type Name
      */
     resourceType: "Substance";
+    /**
+     * This identifier is associated with the kind of substance in contrast to the  Substance.instance.identifier which is associated with the package/container.
+     */
+    identifier?: fhir.Identifier[] | undefined;
+    /**
+     * A code to indicate if the substance is actively used.
+     */
+    status?: SubstanceStatusValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: Substance.status
+     */
+    _status?: fhir.FhirElement | undefined;
     /**
      * The level of granularity is defined by the category concepts in the value set.   More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in Substance.code.
      */
@@ -152,43 +179,37 @@ export declare class Substance extends fhir.DomainResource implements fhir.ISubs
      * A description of the substance - its appearance, handling requirements, and other usage notes.
      */
     description?: string | undefined;
+    /**
+     * Extended properties for primitive element: Substance.description
+     */
     _description?: fhir.FhirElement | undefined;
-    /**
-     * This identifier is associated with the kind of substance in contrast to the  Substance.instance.identifier which is associated with the package/container.
-     */
-    identifier?: fhir.Identifier[] | undefined;
-    /**
-     * A substance can be composed of other substances.
-     */
-    ingredient?: fhir.SubstanceIngredient[] | undefined;
     /**
      * Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.
      */
     instance?: fhir.SubstanceInstance[] | undefined;
     /**
-     * A code to indicate if the substance is actively used.
+     * A substance can be composed of other substances.
      */
-    status?: SubstanceStatusEnum | undefined;
-    _status?: fhir.FhirElement | undefined;
+    ingredient?: fhir.SubstanceIngredient[] | undefined;
     /**
      * Default constructor for Substance - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISubstance>);
+    constructor(source?: Partial<ISubstance>);
     /**
-     * Check if the current Substance contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): SubstanceStatusValueSetType;
     /**
-     * Factory function to create a Substance from an object that MUST contain all required elements.
+     * Extensible-bound Value Set for category
      */
-    static fromStrict(source: fhir.ISubstance): Substance;
-}
-/**
- * Code Values for the Substance.status field
- */
-export declare enum SubstanceStatusEnum {
-    ACTIVE = "active",
-    INACTIVE = "inactive",
-    ENTERED_IN_ERROR = "entered-in-error"
+    categoryExtensibleValueSet(): SubstanceCategoryValueSetType;
+    /**
+     * Example-bound Value Set for code
+     */
+    codeExampleValueSet(): SubstanceCodeValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Substance.d.ts.map

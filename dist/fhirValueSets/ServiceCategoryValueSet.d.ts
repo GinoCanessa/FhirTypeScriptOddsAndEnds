@@ -1,159 +1,320 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set defines an example set of codes that can be used to classify groupings of service-types/specialties.
  */
 export declare const ServiceCategoryValueSet: {
     /**
-     * Adoption
+     * 1: Adoption
      */
-    service_category_Adoption: Coding;
+    readonly Adoption: Coding;
     /**
-     * Dental
+     * 10: Dental
      */
-    service_category_Dental: Coding;
+    readonly Dental: Coding;
     /**
-     * Disability Support
+     * 11: Disability Support
      */
-    service_category_DisabilitySupport: Coding;
+    readonly DisabilitySupport: Coding;
     /**
-     * Drug/Alcohol
+     * 12: Drug/Alcohol
      */
-    service_category_DrugAlcohol: Coding;
+    readonly DrugAlcohol: Coding;
     /**
-     * Education &amp; Learning
+     * 13: Education &amp; Learning
      */
-    service_category_EducationAndLearning: Coding;
+    readonly EducationAndLearning: Coding;
     /**
-     * Emergency Department
+     * 14: Emergency Department
      */
-    service_category_EmergencyDepartment: Coding;
+    readonly EmergencyDepartment: Coding;
     /**
-     * Employment
+     * 15: Employment
      */
-    service_category_Employment: Coding;
+    readonly Employment: Coding;
     /**
-     * Financial &amp; Material aid
+     * 16: Financial &amp; Material aid
      */
-    service_category_FinancialAndMaterialAid: Coding;
+    readonly FinancialAndMaterialAid: Coding;
     /**
-     * General Practice/GP (doctor)
+     * 17: General Practice/GP (doctor)
      */
-    service_category_GeneralPractice: Coding;
+    readonly GeneralPractice: Coding;
     /**
-     * Housing/Homelessness
+     * 18: Housing/Homelessness
      */
-    service_category_HousingHomelessness: Coding;
+    readonly HousingHomelessness: Coding;
     /**
-     * Interpreting
+     * 19: Interpreting
      */
-    service_category_Interpreting: Coding;
+    readonly Interpreting: Coding;
     /**
-     * Aged Care
+     * 2: Aged Care
      */
-    service_category_AgedCare: Coding;
+    readonly AgedCare: Coding;
     /**
-     * Justice
+     * 20: Justice
      */
-    service_category_Justice: Coding;
+    readonly Justice: Coding;
     /**
-     * Legal
+     * 21: Legal
      */
-    service_category_Legal: Coding;
+    readonly Legal: Coding;
     /**
-     * Mental Health
+     * 22: Mental Health
      */
-    service_category_MentalHealth: Coding;
+    readonly MentalHealth: Coding;
     /**
-     * Physical Activity &amp; Recreation
+     * 23: Physical Activity &amp; Recreation
      */
-    service_category_PhysicalActivityAndRecreation: Coding;
+    readonly PhysicalActivityAndRecreation: Coding;
     /**
-     * Regulation
+     * 24: Regulation
      */
-    service_category_Regulation: Coding;
+    readonly Regulation: Coding;
     /**
-     * Respite/Carer Support
+     * 25: Respite/Carer Support
      */
-    service_category_RespiteCarerSupport: Coding;
+    readonly RespiteCarerSupport: Coding;
     /**
-     * Specialist Clinical Pathology - requires referral
+     * 26: Specialist Clinical Pathology - requires referral
      */
-    service_category_SpecialistClinicalPathology: Coding;
+    readonly SpecialistClinicalPathology: Coding;
     /**
-     * Specialist Medical - requires referral
+     * 27: Specialist Medical - requires referral
      */
-    service_category_SpecialistMedical: Coding;
+    readonly SpecialistMedical: Coding;
     /**
-     * Specialist Obstetrics &amp; Gynecology - requires referral
+     * 28: Specialist Obstetrics &amp; Gynecology - requires referral
      */
-    service_category_SpecialistObstetricsAndGynecology: Coding;
+    readonly SpecialistObstetricsAndGynecology: Coding;
     /**
-     * Specialist Paediatric - requires referral
+     * 29: Specialist Paediatric - requires referral
      */
-    service_category_SpecialistPaediatric: Coding;
+    readonly SpecialistPaediatric: Coding;
     /**
-     * Alternative &amp; Complementary Therapies
+     * 3: Alternative &amp; Complementary Therapies
      */
-    service_category_AlternativeComplementaryTherapies: Coding;
+    readonly AlternativeComplementaryTherapies: Coding;
     /**
-     * Specialist Radiology/Imaging - requires referral
+     * 30: Specialist Radiology/Imaging - requires referral
      */
-    service_category_SpecialistRadiologyImaging: Coding;
+    readonly SpecialistRadiologyImaging: Coding;
     /**
-     * Specialist Surgical - requires referral
+     * 31: Specialist Surgical - requires referral
      */
-    service_category_SpecialistSurgical: Coding;
+    readonly SpecialistSurgical: Coding;
     /**
-     * Support group/s
+     * 32: Support group/s
      */
-    service_category_SupportGroupS: Coding;
+    readonly SupportGroupS: Coding;
     /**
-     * Transport
+     * 33: Transport
      */
-    service_category_Transport: Coding;
+    readonly Transport: Coding;
     /**
-     * Allied Health
+     * 34: Allied Health
      */
-    service_category_AlliedHealth: Coding;
+    readonly AlliedHealth: Coding;
     /**
-     * Hospital
+     * 35: Hospital
      */
-    service_category_Hospital: Coding;
+    readonly Hospital: Coding;
     /**
-     * Crisis Line (GPAH use only)
+     * 36: Crisis Line (GPAH use only)
      */
-    service_category_CrisisLineGPAHUseOnly: Coding;
+    readonly CrisisLineGPAHUseOnly: Coding;
     /**
-     * Test Message (HSD admin use only)
+     * 37: Test Message (HSD admin use only)
      */
-    service_category_TestMessageHSDAdmin: Coding;
+    readonly TestMessageHSDAdmin: Coding;
     /**
-     * NDIA
+     * 38: NDIA
      */
-    service_category_NDIA: Coding;
+    readonly NDIA: Coding;
     /**
-     * Child Care and/or Kindergarten
+     * 4: Child Care and/or Kindergarten
      */
-    service_category_ChildCareKindergarten: Coding;
+    readonly ChildCareKindergarten: Coding;
     /**
-     * Child Development
+     * 5: Child Development
      */
-    service_category_ChildDevelopment: Coding;
+    readonly ChildDevelopment: Coding;
     /**
-     * Child Protection &amp; Family Services
+     * 6: Child Protection &amp; Family Services
      */
-    service_category_ChildProtectionAndFamilyServices: Coding;
+    readonly ChildProtectionAndFamilyServices: Coding;
     /**
-     * Community Health Care
+     * 7: Community Health Care
      */
-    service_category_CommunityHealthCare: Coding;
+    readonly CommunityHealthCare: Coding;
     /**
-     * Counselling
+     * 8: Counselling
      */
-    service_category_Counselling: Coding;
+    readonly Counselling: Coding;
     /**
-     * Death Services
+     * 9: Death Services
      */
-    service_category_DeathServices: Coding;
+    readonly DeathServices: Coding;
 };
+/**
+ * This value set defines an example set of codes that can be used to classify groupings of service-types/specialties.
+ */
+export declare type ServiceCategoryValueSetType = typeof ServiceCategoryValueSet;
+/**
+ * This value set defines an example set of codes that can be used to classify groupings of service-types/specialties.
+ */
+export declare enum ServiceCategoryValueSetEnum {
+    /**
+     * 1: Adoption
+     */
+    Adoption = "1",
+    /**
+     * 10: Dental
+     */
+    Dental = "10",
+    /**
+     * 11: Disability Support
+     */
+    DisabilitySupport = "11",
+    /**
+     * 12: Drug/Alcohol
+     */
+    DrugAlcohol = "12",
+    /**
+     * 13: Education &amp; Learning
+     */
+    EducationAndLearning = "13",
+    /**
+     * 14: Emergency Department
+     */
+    EmergencyDepartment = "14",
+    /**
+     * 15: Employment
+     */
+    Employment = "15",
+    /**
+     * 16: Financial &amp; Material aid
+     */
+    FinancialAndMaterialAid = "16",
+    /**
+     * 17: General Practice/GP (doctor)
+     */
+    GeneralPractice = "17",
+    /**
+     * 18: Housing/Homelessness
+     */
+    HousingHomelessness = "18",
+    /**
+     * 19: Interpreting
+     */
+    Interpreting = "19",
+    /**
+     * 2: Aged Care
+     */
+    AgedCare = "2",
+    /**
+     * 20: Justice
+     */
+    Justice = "20",
+    /**
+     * 21: Legal
+     */
+    Legal = "21",
+    /**
+     * 22: Mental Health
+     */
+    MentalHealth = "22",
+    /**
+     * 23: Physical Activity &amp; Recreation
+     */
+    PhysicalActivityAndRecreation = "23",
+    /**
+     * 24: Regulation
+     */
+    Regulation = "24",
+    /**
+     * 25: Respite/Carer Support
+     */
+    RespiteCarerSupport = "25",
+    /**
+     * 26: Specialist Clinical Pathology - requires referral
+     */
+    SpecialistClinicalPathology = "26",
+    /**
+     * 27: Specialist Medical - requires referral
+     */
+    SpecialistMedical = "27",
+    /**
+     * 28: Specialist Obstetrics &amp; Gynecology - requires referral
+     */
+    SpecialistObstetricsAndGynecology = "28",
+    /**
+     * 29: Specialist Paediatric - requires referral
+     */
+    SpecialistPaediatric = "29",
+    /**
+     * 3: Alternative &amp; Complementary Therapies
+     */
+    AlternativeComplementaryTherapies = "3",
+    /**
+     * 30: Specialist Radiology/Imaging - requires referral
+     */
+    SpecialistRadiologyImaging = "30",
+    /**
+     * 31: Specialist Surgical - requires referral
+     */
+    SpecialistSurgical = "31",
+    /**
+     * 32: Support group/s
+     */
+    SupportGroupS = "32",
+    /**
+     * 33: Transport
+     */
+    Transport = "33",
+    /**
+     * 34: Allied Health
+     */
+    AlliedHealth = "34",
+    /**
+     * 35: Hospital
+     */
+    Hospital = "35",
+    /**
+     * 36: Crisis Line (GPAH use only)
+     */
+    CrisisLineGPAHUseOnly = "36",
+    /**
+     * 37: Test Message (HSD admin use only)
+     */
+    TestMessageHSDAdmin = "37",
+    /**
+     * 38: NDIA
+     */
+    NDIA = "38",
+    /**
+     * 4: Child Care and/or Kindergarten
+     */
+    ChildCareKindergarten = "4",
+    /**
+     * 5: Child Development
+     */
+    ChildDevelopment = "5",
+    /**
+     * 6: Child Protection &amp; Family Services
+     */
+    ChildProtectionAndFamilyServices = "6",
+    /**
+     * 7: Community Health Care
+     */
+    CommunityHealthCare = "7",
+    /**
+     * 8: Counselling
+     */
+    Counselling = "8",
+    /**
+     * 9: Death Services
+     */
+    DeathServices = "9"
+}
 //# sourceMappingURL=ServiceCategoryValueSet.d.ts.map

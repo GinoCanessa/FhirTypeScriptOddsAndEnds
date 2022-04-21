@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * SHALL applications comply with this constraint?
  */
 export declare const ConstraintSeverityValueSet: {
     /**
-     * If the constraint is violated, the resource is not conformant.
+     * error: If the constraint is violated, the resource is not conformant.
      */
-    constraint_severity_Error: Coding;
+    readonly Error: Coding;
     /**
-     * If the constraint is violated, the resource is conformant, but it is not necessarily following best practice.
+     * warning: If the constraint is violated, the resource is conformant, but it is not necessarily following best practice.
      */
-    constraint_severity_Warning: Coding;
+    readonly Warning: Coding;
 };
+/**
+ * SHALL applications comply with this constraint?
+ */
+export declare type ConstraintSeverityValueSetType = typeof ConstraintSeverityValueSet;
+/**
+ * SHALL applications comply with this constraint?
+ */
+export declare enum ConstraintSeverityValueSetEnum {
+    /**
+     * error: If the constraint is violated, the resource is not conformant.
+     */
+    Error = "error",
+    /**
+     * warning: If the constraint is violated, the resource is conformant, but it is not necessarily following best practice.
+     */
+    Warning = "warning"
+}
 //# sourceMappingURL=ConstraintSeverityValueSet.d.ts.map

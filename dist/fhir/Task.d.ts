@@ -1,8 +1,21 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { TaskStatusValueSetType, TaskStatusValueSetEnum } from '../fhirValueSets/TaskStatusValueSet.js';
+import { TaskIntentValueSetType, TaskIntentValueSetEnum } from '../fhirValueSets/TaskIntentValueSet.js';
+import { RequestPriorityValueSetType, RequestPriorityValueSetEnum } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { TaskCodeValueSetType } from '../fhirValueSets/TaskCodeValueSet.js';
+import { PerformerRoleValueSetType } from '../fhirValueSets/PerformerRoleValueSet.js';
 /**
  * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
  */
 export declare type ITaskRestriction = fhir.IBackboneElement & {
+    /**
+     * Indicates the number of times the requested action should occur.
+     */
+    repetitions?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.restriction.repetitions
+     */
+    _repetitions?: fhir.IFhirElement | undefined;
     /**
      * Note that period.high is the due date representing the time by which the task should be completed.
      */
@@ -11,11 +24,6 @@ export declare type ITaskRestriction = fhir.IBackboneElement & {
      * For requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?
      */
     recipient?: fhir.IReference[] | undefined;
-    /**
-     * Indicates the number of times the requested action should occur.
-     */
-    repetitions?: number | undefined;
-    _repetitions?: fhir.IFhirElement | undefined;
 };
 /**
  * Additional information that may be needed in the execution of the task.
@@ -29,96 +37,153 @@ export declare type ITaskInput = fhir.IBackboneElement & {
      * The value of the input parameter as a basic type.
      */
     valueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueBase64Binary?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueBoolean?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueCanonical?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueCode?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueDate?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueDateTime?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueDecimal?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueId?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueInstant?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueInteger?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueMarkdown?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueOid?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valuePositiveInt?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueString?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueTime?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueUri?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueUrl?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueUuid?: fhir.IFhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
@@ -257,96 +322,153 @@ export declare type ITaskOutput = fhir.IBackboneElement & {
      * The value of the Output parameter as a basic type.
      */
     valueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueBase64Binary?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueBoolean?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueCanonical?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueCode?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueDate?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueDateTime?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueDecimal?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueId?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueInstant?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueInteger?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueMarkdown?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueOid?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valuePositiveInt?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueString?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueTime?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueUnsignedInt?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueUri?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueUrl?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueUuid?: fhir.IFhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
@@ -482,18 +604,70 @@ export declare type ITask = fhir.IDomainResource & {
      */
     resourceType: "Task";
     /**
-     * The date and time this task was created.
+     * The business identifier for this task.
      */
-    authoredOn?: string | undefined;
-    _authoredOn?: fhir.IFhirElement | undefined;
+    identifier?: fhir.IIdentifier[] | undefined;
+    /**
+     * The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
+     */
+    instantiatesCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.instantiatesCanonical
+     */
+    _instantiatesCanonical?: fhir.IFhirElement | undefined;
+    /**
+     * The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
+     */
+    instantiatesUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.instantiatesUri
+     */
+    _instantiatesUri?: fhir.IFhirElement | undefined;
     /**
      * BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a "request" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the "request" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.
      */
     basedOn?: fhir.IReference[] | undefined;
     /**
+     * An identifier that links together multiple tasks and other requests that were created in the same context.
+     */
+    groupIdentifier?: fhir.IIdentifier | undefined;
+    /**
+     * This should usually be 0..1.
+     */
+    partOf?: fhir.IReference[] | undefined;
+    /**
+     * The current status of the task.
+     */
+    status: TaskStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Task.status
+     */
+    _status?: fhir.IFhirElement | undefined;
+    /**
+     * This applies to the current status.  Look at the history of the task to see reasons for past statuses.
+     */
+    statusReason?: fhir.ICodeableConcept | undefined;
+    /**
      * Contains business-specific nuances of the business state.
      */
     businessStatus?: fhir.ICodeableConcept | undefined;
+    /**
+     * This element is immutable.  Proposed tasks, planned tasks, etc. must be distinct instances.
+     * In most cases, Tasks will have an intent of "order".
+     */
+    intent: TaskIntentValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Task.intent
+     */
+    _intent?: fhir.IFhirElement | undefined;
+    /**
+     * Indicates how quickly the Task should be addressed with respect to other requests.
+     */
+    priority?: RequestPriorityValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: Task.priority
+     */
+    _priority?: fhir.IFhirElement | undefined;
     /**
      * The title (eg "My Tasks", "Outstanding Tasks for Patient X") should go into the code.
      */
@@ -502,15 +676,10 @@ export declare type ITask = fhir.IDomainResource & {
      * A free-text description of what is to be performed.
      */
     description?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.description
+     */
     _description?: fhir.IFhirElement | undefined;
-    /**
-     * The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.
-     */
-    encounter?: fhir.IReference | undefined;
-    /**
-     * Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).
-     */
-    executionPeriod?: fhir.IPeriod | undefined;
     /**
      * If multiple resources need to be manipulated, use sub-tasks.  (This ensures that status can be tracked independently for each referenced resource.).
      */
@@ -520,71 +689,45 @@ export declare type ITask = fhir.IDomainResource & {
      */
     for?: fhir.IReference | undefined;
     /**
-     * An identifier that links together multiple tasks and other requests that were created in the same context.
+     * The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.
      */
-    groupIdentifier?: fhir.IIdentifier | undefined;
+    encounter?: fhir.IReference | undefined;
     /**
-     * The business identifier for this task.
+     * Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).
      */
-    identifier?: fhir.IIdentifier[] | undefined;
+    executionPeriod?: fhir.IPeriod | undefined;
     /**
-     * Additional information that may be needed in the execution of the task.
+     * The date and time this task was created.
      */
-    input?: fhir.ITaskInput[] | undefined;
+    authoredOn?: string | undefined;
     /**
-     * The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
+     * Extended properties for primitive element: Task.authoredOn
      */
-    instantiatesCanonical?: string | undefined;
-    _instantiatesCanonical?: fhir.IFhirElement | undefined;
-    /**
-     * The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
-     */
-    instantiatesUri?: string | undefined;
-    _instantiatesUri?: fhir.IFhirElement | undefined;
-    /**
-     * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.
-     */
-    insurance?: fhir.IReference[] | undefined;
-    /**
-     * This element is immutable.  Proposed tasks, planned tasks, etc. must be distinct instances.
-     * In most cases, Tasks will have an intent of "order".
-     */
-    intent: TaskIntentEnum | null;
-    _intent?: fhir.IFhirElement | undefined;
+    _authoredOn?: fhir.IFhirElement | undefined;
     /**
      * The date and time of last modification to this task.
      */
     lastModified?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.lastModified
+     */
     _lastModified?: fhir.IFhirElement | undefined;
     /**
-     * Principal physical location where the this task is performed.
+     * The creator of the task.
      */
-    location?: fhir.IReference | undefined;
-    /**
-     * Free-text information captured about the task as it progresses.
-     */
-    note?: fhir.IAnnotation[] | undefined;
-    /**
-     * Outputs produced by the Task.
-     */
-    output?: fhir.ITaskOutput[] | undefined;
-    /**
-     * Tasks may be created with an owner not yet identified.
-     */
-    owner?: fhir.IReference | undefined;
-    /**
-     * This should usually be 0..1.
-     */
-    partOf?: fhir.IReference[] | undefined;
+    requester?: fhir.IReference | undefined;
     /**
      * The kind of participant that should perform the task.
      */
     performerType?: fhir.ICodeableConcept[] | undefined;
     /**
-     * Indicates how quickly the Task should be addressed with respect to other requests.
+     * Tasks may be created with an owner not yet identified.
      */
-    priority?: TaskPriorityEnum | undefined;
-    _priority?: fhir.IFhirElement | undefined;
+    owner?: fhir.IReference | undefined;
+    /**
+     * Principal physical location where the this task is performed.
+     */
+    location?: fhir.IReference | undefined;
     /**
      * This should only be included if there is no focus or if it differs from the reason indicated on the focus.
      */
@@ -594,31 +737,42 @@ export declare type ITask = fhir.IDomainResource & {
      */
     reasonReference?: fhir.IReference | undefined;
     /**
+     * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.
+     */
+    insurance?: fhir.IReference[] | undefined;
+    /**
+     * Free-text information captured about the task as it progresses.
+     */
+    note?: fhir.IAnnotation[] | undefined;
+    /**
      * This element does not point to the Provenance associated with the *current* version of the resource - as it would be created after this version existed.  The Provenance for the current version can be retrieved with a _revinclude.
      */
     relevantHistory?: fhir.IReference[] | undefined;
-    /**
-     * The creator of the task.
-     */
-    requester?: fhir.IReference | undefined;
     /**
      * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
      */
     restriction?: fhir.ITaskRestriction | undefined;
     /**
-     * The current status of the task.
+     * Additional information that may be needed in the execution of the task.
      */
-    status: TaskStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
+    input?: fhir.ITaskInput[] | undefined;
     /**
-     * This applies to the current status.  Look at the history of the task to see reasons for past statuses.
+     * Outputs produced by the Task.
      */
-    statusReason?: fhir.ICodeableConcept | undefined;
+    output?: fhir.ITaskOutput[] | undefined;
 };
 /**
  * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
  */
-export declare class TaskRestriction extends fhir.BackboneElement implements fhir.ITaskRestriction {
+export declare class TaskRestriction extends fhir.BackboneElement implements ITaskRestriction {
+    /**
+     * Indicates the number of times the requested action should occur.
+     */
+    repetitions?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.restriction.repetitions
+     */
+    _repetitions?: fhir.FhirElement | undefined;
     /**
      * Note that period.high is the due date representing the time by which the task should be completed.
      */
@@ -628,27 +782,18 @@ export declare class TaskRestriction extends fhir.BackboneElement implements fhi
      */
     recipient?: fhir.Reference[] | undefined;
     /**
-     * Indicates the number of times the requested action should occur.
-     */
-    repetitions?: number | undefined;
-    _repetitions?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for TaskRestriction - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ITaskRestriction>);
+    constructor(source?: Partial<ITaskRestriction>);
     /**
-     * Check if the current TaskRestriction contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a TaskRestriction from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ITaskRestriction): TaskRestriction;
+    doModelValidation(): [string, string][];
 }
 /**
  * Additional information that may be needed in the execution of the task.
  */
-export declare class TaskInput extends fhir.BackboneElement implements fhir.ITaskInput {
+export declare class TaskInput extends fhir.BackboneElement implements ITaskInput {
     /**
      * If referencing a BPMN workflow or Protocol, the "system" is the URL for the workflow definition and the code is the "name" of the required input.
      */
@@ -657,96 +802,153 @@ export declare class TaskInput extends fhir.BackboneElement implements fhir.ITas
      * The value of the input parameter as a basic type.
      */
     valueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueBase64Binary?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueBoolean?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueCanonical?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueCode?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueDate?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueDateTime?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueDecimal?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueId?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueInstant?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueInteger?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueMarkdown?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueOid?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valuePositiveInt?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueString?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueTime?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueUri?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueUrl?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
      */
     valueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.input.value[x]
+     */
     _valueUuid?: fhir.FhirElement | undefined;
     /**
      * The value of the input parameter as a basic type.
@@ -875,20 +1077,16 @@ export declare class TaskInput extends fhir.BackboneElement implements fhir.ITas
     /**
      * Default constructor for TaskInput - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ITaskInput>);
+    constructor(source?: Partial<ITaskInput>);
     /**
-     * Check if the current TaskInput contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a TaskInput from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ITaskInput): TaskInput;
+    doModelValidation(): [string, string][];
 }
 /**
  * Outputs produced by the Task.
  */
-export declare class TaskOutput extends fhir.BackboneElement implements fhir.ITaskOutput {
+export declare class TaskOutput extends fhir.BackboneElement implements ITaskOutput {
     /**
      * The name of the Output parameter.
      */
@@ -897,96 +1095,153 @@ export declare class TaskOutput extends fhir.BackboneElement implements fhir.ITa
      * The value of the Output parameter as a basic type.
      */
     valueBase64Binary?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueBase64Binary?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueBoolean?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueCanonical?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueCode?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueCode?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueDate?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueDateTime?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueDecimal?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueDecimal?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueId?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueId?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueInstant?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueInstant?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueInteger?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueInteger?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueMarkdown?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueMarkdown?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueOid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueOid?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valuePositiveInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valuePositiveInt?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueString?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueString?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueTime?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueUnsignedInt?: number | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueUnsignedInt?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueUri?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueUrl?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueUrl?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
      */
     valueUuid?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.output.value[x]
+     */
     _valueUuid?: fhir.FhirElement | undefined;
     /**
      * The value of the Output parameter as a basic type.
@@ -1115,37 +1370,85 @@ export declare class TaskOutput extends fhir.BackboneElement implements fhir.ITa
     /**
      * Default constructor for TaskOutput - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ITaskOutput>);
+    constructor(source?: Partial<ITaskOutput>);
     /**
-     * Check if the current TaskOutput contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a TaskOutput from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ITaskOutput): TaskOutput;
+    doModelValidation(): [string, string][];
 }
 /**
  * A task to be performed.
  */
-export declare class Task extends fhir.DomainResource implements fhir.ITask {
+export declare class Task extends fhir.DomainResource implements ITask {
     /**
      * Resource Type Name
      */
     resourceType: "Task";
     /**
-     * The date and time this task was created.
+     * The business identifier for this task.
      */
-    authoredOn?: string | undefined;
-    _authoredOn?: fhir.FhirElement | undefined;
+    identifier?: fhir.Identifier[] | undefined;
+    /**
+     * The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
+     */
+    instantiatesCanonical?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.instantiatesCanonical
+     */
+    _instantiatesCanonical?: fhir.FhirElement | undefined;
+    /**
+     * The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
+     */
+    instantiatesUri?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.instantiatesUri
+     */
+    _instantiatesUri?: fhir.FhirElement | undefined;
     /**
      * BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a "request" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the "request" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.
      */
     basedOn?: fhir.Reference[] | undefined;
     /**
+     * An identifier that links together multiple tasks and other requests that were created in the same context.
+     */
+    groupIdentifier?: fhir.Identifier | undefined;
+    /**
+     * This should usually be 0..1.
+     */
+    partOf?: fhir.Reference[] | undefined;
+    /**
+     * The current status of the task.
+     */
+    status: TaskStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Task.status
+     */
+    _status?: fhir.FhirElement | undefined;
+    /**
+     * This applies to the current status.  Look at the history of the task to see reasons for past statuses.
+     */
+    statusReason?: fhir.CodeableConcept | undefined;
+    /**
      * Contains business-specific nuances of the business state.
      */
     businessStatus?: fhir.CodeableConcept | undefined;
+    /**
+     * This element is immutable.  Proposed tasks, planned tasks, etc. must be distinct instances.
+     * In most cases, Tasks will have an intent of "order".
+     */
+    intent: TaskIntentValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Task.intent
+     */
+    _intent?: fhir.FhirElement | undefined;
+    /**
+     * Indicates how quickly the Task should be addressed with respect to other requests.
+     */
+    priority?: RequestPriorityValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: Task.priority
+     */
+    _priority?: fhir.FhirElement | undefined;
     /**
      * The title (eg "My Tasks", "Outstanding Tasks for Patient X") should go into the code.
      */
@@ -1154,15 +1457,10 @@ export declare class Task extends fhir.DomainResource implements fhir.ITask {
      * A free-text description of what is to be performed.
      */
     description?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.description
+     */
     _description?: fhir.FhirElement | undefined;
-    /**
-     * The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.
-     */
-    encounter?: fhir.Reference | undefined;
-    /**
-     * Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).
-     */
-    executionPeriod?: fhir.Period | undefined;
     /**
      * If multiple resources need to be manipulated, use sub-tasks.  (This ensures that status can be tracked independently for each referenced resource.).
      */
@@ -1172,71 +1470,45 @@ export declare class Task extends fhir.DomainResource implements fhir.ITask {
      */
     for?: fhir.Reference | undefined;
     /**
-     * An identifier that links together multiple tasks and other requests that were created in the same context.
+     * The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.
      */
-    groupIdentifier?: fhir.Identifier | undefined;
+    encounter?: fhir.Reference | undefined;
     /**
-     * The business identifier for this task.
+     * Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).
      */
-    identifier?: fhir.Identifier[] | undefined;
+    executionPeriod?: fhir.Period | undefined;
     /**
-     * Additional information that may be needed in the execution of the task.
+     * The date and time this task was created.
      */
-    input?: fhir.TaskInput[] | undefined;
+    authoredOn?: string | undefined;
     /**
-     * The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
+     * Extended properties for primitive element: Task.authoredOn
      */
-    instantiatesCanonical?: string | undefined;
-    _instantiatesCanonical?: fhir.FhirElement | undefined;
-    /**
-     * The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
-     */
-    instantiatesUri?: string | undefined;
-    _instantiatesUri?: fhir.FhirElement | undefined;
-    /**
-     * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.
-     */
-    insurance?: fhir.Reference[] | undefined;
-    /**
-     * This element is immutable.  Proposed tasks, planned tasks, etc. must be distinct instances.
-     * In most cases, Tasks will have an intent of "order".
-     */
-    intent: TaskIntentEnum | null;
-    _intent?: fhir.FhirElement | undefined;
+    _authoredOn?: fhir.FhirElement | undefined;
     /**
      * The date and time of last modification to this task.
      */
     lastModified?: string | undefined;
+    /**
+     * Extended properties for primitive element: Task.lastModified
+     */
     _lastModified?: fhir.FhirElement | undefined;
     /**
-     * Principal physical location where the this task is performed.
+     * The creator of the task.
      */
-    location?: fhir.Reference | undefined;
-    /**
-     * Free-text information captured about the task as it progresses.
-     */
-    note?: fhir.Annotation[] | undefined;
-    /**
-     * Outputs produced by the Task.
-     */
-    output?: fhir.TaskOutput[] | undefined;
-    /**
-     * Tasks may be created with an owner not yet identified.
-     */
-    owner?: fhir.Reference | undefined;
-    /**
-     * This should usually be 0..1.
-     */
-    partOf?: fhir.Reference[] | undefined;
+    requester?: fhir.Reference | undefined;
     /**
      * The kind of participant that should perform the task.
      */
     performerType?: fhir.CodeableConcept[] | undefined;
     /**
-     * Indicates how quickly the Task should be addressed with respect to other requests.
+     * Tasks may be created with an owner not yet identified.
      */
-    priority?: TaskPriorityEnum | undefined;
-    _priority?: fhir.FhirElement | undefined;
+    owner?: fhir.Reference | undefined;
+    /**
+     * Principal physical location where the this task is performed.
+     */
+    location?: fhir.Reference | undefined;
     /**
      * This should only be included if there is no focus or if it differs from the reason indicated on the focus.
      */
@@ -1246,77 +1518,56 @@ export declare class Task extends fhir.DomainResource implements fhir.ITask {
      */
     reasonReference?: fhir.Reference | undefined;
     /**
+     * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.
+     */
+    insurance?: fhir.Reference[] | undefined;
+    /**
+     * Free-text information captured about the task as it progresses.
+     */
+    note?: fhir.Annotation[] | undefined;
+    /**
      * This element does not point to the Provenance associated with the *current* version of the resource - as it would be created after this version existed.  The Provenance for the current version can be retrieved with a _revinclude.
      */
     relevantHistory?: fhir.Reference[] | undefined;
-    /**
-     * The creator of the task.
-     */
-    requester?: fhir.Reference | undefined;
     /**
      * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
      */
     restriction?: fhir.TaskRestriction | undefined;
     /**
-     * The current status of the task.
+     * Additional information that may be needed in the execution of the task.
      */
-    status: TaskStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
+    input?: fhir.TaskInput[] | undefined;
     /**
-     * This applies to the current status.  Look at the history of the task to see reasons for past statuses.
+     * Outputs produced by the Task.
      */
-    statusReason?: fhir.CodeableConcept | undefined;
+    output?: fhir.TaskOutput[] | undefined;
     /**
      * Default constructor for Task - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ITask>);
+    constructor(source?: Partial<ITask>);
     /**
-     * Check if the current Task contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): TaskStatusValueSetType;
     /**
-     * Factory function to create a Task from an object that MUST contain all required elements.
+     * Required-bound Value Set for intent
      */
-    static fromStrict(source: fhir.ITask): Task;
-}
-/**
- * Code Values for the Task.intent field
- */
-export declare enum TaskIntentEnum {
-    UNKNOWN = "unknown",
-    PROPOSAL = "proposal",
-    PLAN = "plan",
-    ORDER = "order",
-    ORIGINAL_ORDER = "original-order",
-    REFLEX_ORDER = "reflex-order",
-    FILLER_ORDER = "filler-order",
-    INSTANCE_ORDER = "instance-order",
-    OPTION = "option"
-}
-/**
- * Code Values for the Task.priority field
- */
-export declare enum TaskPriorityEnum {
-    ROUTINE = "routine",
-    URGENT = "urgent",
-    ASAP = "asap",
-    STAT = "stat"
-}
-/**
- * Code Values for the Task.status field
- */
-export declare enum TaskStatusEnum {
-    DRAFT = "draft",
-    REQUESTED = "requested",
-    RECEIVED = "received",
-    ACCEPTED = "accepted",
-    REJECTED = "rejected",
-    READY = "ready",
-    CANCELLED = "cancelled",
-    IN_PROGRESS = "in-progress",
-    ON_HOLD = "on-hold",
-    FAILED = "failed",
-    COMPLETED = "completed",
-    ENTERED_IN_ERROR = "entered-in-error"
+    intentRequiredValueSet(): TaskIntentValueSetType;
+    /**
+     * Required-bound Value Set for priority
+     */
+    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    /**
+     * Example-bound Value Set for code
+     */
+    codeExampleValueSet(): TaskCodeValueSetType;
+    /**
+     * Preferred-bound Value Set for performerType
+     */
+    performerTypePreferredValueSet(): PerformerRoleValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Task.d.ts.map

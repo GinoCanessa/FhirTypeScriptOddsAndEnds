@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Related Claim Relationship codes.
  */
 export declare const RelatedClaimRelationshipValueSet: {
     /**
-     * A claim for a different suite of services which is related the suite claimed here.
+     * associated: A claim for a different suite of services which is related the suite claimed here.
      */
-    related_claim_relationship_AssociatedClaim: Coding;
+    readonly AssociatedClaim: Coding;
     /**
-     * A prior claim instance for the same intended suite of services.
+     * prior: A prior claim instance for the same intended suite of services.
      */
-    related_claim_relationship_PriorClaim: Coding;
+    readonly PriorClaim: Coding;
 };
+/**
+ * This value set includes sample Related Claim Relationship codes.
+ */
+export declare type RelatedClaimRelationshipValueSetType = typeof RelatedClaimRelationshipValueSet;
+/**
+ * This value set includes sample Related Claim Relationship codes.
+ */
+export declare enum RelatedClaimRelationshipValueSetEnum {
+    /**
+     * associated: A claim for a different suite of services which is related the suite claimed here.
+     */
+    AssociatedClaim = "associated",
+    /**
+     * prior: A prior claim instance for the same intended suite of services.
+     */
+    PriorClaim = "prior"
+}
 //# sourceMappingURL=RelatedClaimRelationshipValueSet.d.ts.map

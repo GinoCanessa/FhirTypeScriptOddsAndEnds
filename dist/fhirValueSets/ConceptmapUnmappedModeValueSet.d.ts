@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Defines which action to take if there is no match in the group.
  */
 export declare const ConceptmapUnmappedModeValueSet: {
     /**
-     * Use the code explicitly provided in the group.unmapped.
+     * fixed: Use the code explicitly provided in the group.unmapped.
      */
-    conceptmap_unmapped_mode_FixedCode: Coding;
+    readonly FixedCode: Coding;
     /**
-     * Use the map identified by the canonical URL in the url element.
+     * other-map: Use the map identified by the canonical URL in the url element.
      */
-    conceptmap_unmapped_mode_OtherMap: Coding;
+    readonly OtherMap: Coding;
     /**
-     * Use the code as provided in the $translate request.
+     * provided: Use the code as provided in the $translate request.
      */
-    conceptmap_unmapped_mode_ProvidedCode: Coding;
+    readonly ProvidedCode: Coding;
 };
+/**
+ * Defines which action to take if there is no match in the group.
+ */
+export declare type ConceptmapUnmappedModeValueSetType = typeof ConceptmapUnmappedModeValueSet;
+/**
+ * Defines which action to take if there is no match in the group.
+ */
+export declare enum ConceptmapUnmappedModeValueSetEnum {
+    /**
+     * fixed: Use the code explicitly provided in the group.unmapped.
+     */
+    FixedCode = "fixed",
+    /**
+     * other-map: Use the map identified by the canonical URL in the url element.
+     */
+    OtherMap = "other-map",
+    /**
+     * provided: Use the code as provided in the $translate request.
+     */
+    ProvidedCode = "provided"
+}
 //# sourceMappingURL=ConceptmapUnmappedModeValueSet.d.ts.map

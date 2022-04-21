@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes Example Coverage Financial Exception Codes.
  */
 export declare const CoverageFinancialExceptionValueSet: {
     /**
-     * Children in the foster care have all copays and deductibles waived.
+     * foster: Children in the foster care have all copays and deductibles waived.
      */
-    coverage_financial_exception_FosterChild: Coding;
+    readonly FosterChild: Coding;
     /**
-     * Retired persons have all copays and deductibles reduced.
+     * retired: Retired persons have all copays and deductibles reduced.
      */
-    coverage_financial_exception_Retired: Coding;
+    readonly Retired: Coding;
 };
+/**
+ * This value set includes Example Coverage Financial Exception Codes.
+ */
+export declare type CoverageFinancialExceptionValueSetType = typeof CoverageFinancialExceptionValueSet;
+/**
+ * This value set includes Example Coverage Financial Exception Codes.
+ */
+export declare enum CoverageFinancialExceptionValueSetEnum {
+    /**
+     * foster: Children in the foster care have all copays and deductibles waived.
+     */
+    FosterChild = "foster",
+    /**
+     * retired: Retired persons have all copays and deductibles reduced.
+     */
+    Retired = "retired"
+}
 //# sourceMappingURL=CoverageFinancialExceptionValueSet.d.ts.map

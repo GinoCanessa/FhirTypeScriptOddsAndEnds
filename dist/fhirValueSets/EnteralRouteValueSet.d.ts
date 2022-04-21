@@ -1,43 +1,88 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * EnteralRouteOfAdministration: Codes specifying the route of administration of enteral formula.  This value set is composed of HL7 V3 codes and is provided as a suggestive example.
  */
 export declare const EnteralRouteValueSet: {
     /**
-     * Instillation, enteral feeding tube
+     * EFT: Instillation, enteral feeding tube
      */
-    v3_RouteOfAdministration_InstillationEnteralFeedingTube: Coding;
+    readonly InstillationEnteralFeedingTube: Coding;
     /**
-     * Instillation, enteral
+     * ENTINSTL: Instillation, enteral
      */
-    v3_RouteOfAdministration_InstillationEnteral: Coding;
+    readonly InstillationEnteral: Coding;
     /**
-     * Instillation, gastro-jejunostomy tube
+     * GJT: Instillation, gastro-jejunostomy tube
      */
-    v3_RouteOfAdministration_InstillationGastroJejunostomyTube: Coding;
+    readonly InstillationGastroJejunostomyTube: Coding;
     /**
-     * Instillation, gastrostomy tube
+     * GT: Instillation, gastrostomy tube
      */
-    v3_RouteOfAdministration_InstillationGastrostomyTube: Coding;
+    readonly InstillationGastrostomyTube: Coding;
     /**
-     * Instillation, jejunostomy tube
+     * JJTINSTL: Instillation, jejunostomy tube
      */
-    v3_RouteOfAdministration_InstillationJejunostomyTube: Coding;
+    readonly InstillationJejunostomyTube: Coding;
     /**
-     * Instillation, nasogastric tube
+     * NGT: Instillation, nasogastric tube
      */
-    v3_RouteOfAdministration_InstillationNasogastricTube: Coding;
+    readonly InstillationNasogastricTube: Coding;
     /**
-     * Instillation, orogastric tube
+     * OGT: Instillation, orogastric tube
      */
-    v3_RouteOfAdministration_InstillationOrogastricTube: Coding;
+    readonly InstillationOrogastricTube: Coding;
     /**
-     * Instillation, orojejunum tube
+     * OJJ: Instillation, orojejunum tube
      */
-    v3_RouteOfAdministration_InstillationOrojejunumTube: Coding;
+    readonly InstillationOrojejunumTube: Coding;
     /**
-     * Swallow, oral
+     * PO: Swallow, oral
      */
-    v3_RouteOfAdministration_SwallowOral: Coding;
+    readonly SwallowOral: Coding;
 };
+/**
+ * EnteralRouteOfAdministration: Codes specifying the route of administration of enteral formula.  This value set is composed of HL7 V3 codes and is provided as a suggestive example.
+ */
+export declare type EnteralRouteValueSetType = typeof EnteralRouteValueSet;
+/**
+ * EnteralRouteOfAdministration: Codes specifying the route of administration of enteral formula.  This value set is composed of HL7 V3 codes and is provided as a suggestive example.
+ */
+export declare enum EnteralRouteValueSetEnum {
+    /**
+     * EFT: Instillation, enteral feeding tube
+     */
+    InstillationEnteralFeedingTube = "EFT",
+    /**
+     * ENTINSTL: Instillation, enteral
+     */
+    InstillationEnteral = "ENTINSTL",
+    /**
+     * GJT: Instillation, gastro-jejunostomy tube
+     */
+    InstillationGastroJejunostomyTube = "GJT",
+    /**
+     * GT: Instillation, gastrostomy tube
+     */
+    InstillationGastrostomyTube = "GT",
+    /**
+     * JJTINSTL: Instillation, jejunostomy tube
+     */
+    InstillationJejunostomyTube = "JJTINSTL",
+    /**
+     * NGT: Instillation, nasogastric tube
+     */
+    InstillationNasogastricTube = "NGT",
+    /**
+     * OGT: Instillation, orogastric tube
+     */
+    InstillationOrogastricTube = "OGT",
+    /**
+     * OJJ: Instillation, orojejunum tube
+     */
+    InstillationOrojejunumTube = "OJJ",
+    /**
+     * PO: Swallow, oral
+     */
+    SwallowOral = "PO"
+}
 //# sourceMappingURL=EnteralRouteValueSet.d.ts.map

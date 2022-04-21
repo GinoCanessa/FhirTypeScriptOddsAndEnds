@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A coded concept indicating the current status of the Device Usage.
  */
 export declare const DeviceStatementStatusValueSet: {
     /**
-     * The device is still being used.
+     * active: The device is still being used.
      */
-    device_statement_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The device is no longer being used.
+     * completed: The device is no longer being used.
      */
-    device_statement_status_Completed: Coding;
+    readonly Completed: Coding;
     /**
-     * The statement was recorded incorrectly.
+     * entered-in-error: The statement was recorded incorrectly.
      */
-    device_statement_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The device may be used at some time in the future.
+     * intended: The device may be used at some time in the future.
      */
-    device_statement_status_Intended: Coding;
+    readonly Intended: Coding;
     /**
-     * Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called "suspended".
+     * on-hold: Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called "suspended".
      */
-    device_statement_status_OnHold: Coding;
+    readonly OnHold: Coding;
     /**
-     * Actions implied by the statement have been permanently halted, before all of them occurred.
+     * stopped: Actions implied by the statement have been permanently halted, before all of them occurred.
      */
-    device_statement_status_Stopped: Coding;
+    readonly Stopped: Coding;
 };
+/**
+ * A coded concept indicating the current status of the Device Usage.
+ */
+export declare type DeviceStatementStatusValueSetType = typeof DeviceStatementStatusValueSet;
+/**
+ * A coded concept indicating the current status of the Device Usage.
+ */
+export declare enum DeviceStatementStatusValueSetEnum {
+    /**
+     * active: The device is still being used.
+     */
+    Active = "active",
+    /**
+     * completed: The device is no longer being used.
+     */
+    Completed = "completed",
+    /**
+     * entered-in-error: The statement was recorded incorrectly.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * intended: The device may be used at some time in the future.
+     */
+    Intended = "intended",
+    /**
+     * on-hold: Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called "suspended".
+     */
+    OnHold = "on-hold",
+    /**
+     * stopped: Actions implied by the statement have been permanently halted, before all of them occurred.
+     */
+    Stopped = "stopped"
+}
 //# sourceMappingURL=DeviceStatementStatusValueSet.d.ts.map

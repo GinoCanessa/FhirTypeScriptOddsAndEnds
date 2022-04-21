@@ -1,4 +1,4 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * A  text note which also  contains information about who made the statement and when.
  */
@@ -11,22 +11,31 @@ export declare type IAnnotation = fhir.IFhirElement & {
      * Organization is used when there's no need for specific attribution as to who made the comment.
      */
     authorString?: string | undefined;
-    _authorString?: fhir.IFhirElement | undefined;
     /**
-     * The text of the annotation in markdown format.
+     * Extended properties for primitive element: Annotation.author[x]
      */
-    text: string | null;
-    _text?: fhir.IFhirElement | undefined;
+    _authorString?: fhir.IFhirElement | undefined;
     /**
      * Indicates when this particular annotation was made.
      */
     time?: string | undefined;
+    /**
+     * Extended properties for primitive element: Annotation.time
+     */
     _time?: fhir.IFhirElement | undefined;
+    /**
+     * The text of the annotation in markdown format.
+     */
+    text: string | null;
+    /**
+     * Extended properties for primitive element: Annotation.text
+     */
+    _text?: fhir.IFhirElement | undefined;
 };
 /**
  * A  text note which also  contains information about who made the statement and when.
  */
-export declare class Annotation extends fhir.FhirElement implements fhir.IAnnotation {
+export declare class Annotation extends fhir.FhirElement implements IAnnotation {
     /**
      * Organization is used when there's no need for specific attribution as to who made the comment.
      */
@@ -35,28 +44,33 @@ export declare class Annotation extends fhir.FhirElement implements fhir.IAnnota
      * Organization is used when there's no need for specific attribution as to who made the comment.
      */
     authorString?: string | undefined;
-    _authorString?: fhir.FhirElement | undefined;
     /**
-     * The text of the annotation in markdown format.
+     * Extended properties for primitive element: Annotation.author[x]
      */
-    text: string | null;
-    _text?: fhir.FhirElement | undefined;
+    _authorString?: fhir.FhirElement | undefined;
     /**
      * Indicates when this particular annotation was made.
      */
     time?: string | undefined;
+    /**
+     * Extended properties for primitive element: Annotation.time
+     */
     _time?: fhir.FhirElement | undefined;
+    /**
+     * The text of the annotation in markdown format.
+     */
+    text: string | null;
+    /**
+     * Extended properties for primitive element: Annotation.text
+     */
+    _text?: fhir.FhirElement | undefined;
     /**
      * Default constructor for Annotation - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IAnnotation>);
+    constructor(source?: Partial<IAnnotation>);
     /**
-     * Check if the current Annotation contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a Annotation from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IAnnotation): Annotation;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Annotation.d.ts.map

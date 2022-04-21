@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Indicates whether the account is available to be used.
  */
 export declare const AccountStatusValueSet: {
     /**
-     * This account is active and may be used.
+     * active: This account is active and may be used.
      */
-    account_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * This instance should not have been part of this patient's medical record.
+     * entered-in-error: This instance should not have been part of this patient's medical record.
      */
-    account_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * This account is inactive and should not be used to track financial information.
+     * inactive: This account is inactive and should not be used to track financial information.
      */
-    account_status_Inactive: Coding;
+    readonly Inactive: Coding;
     /**
-     * This account is on hold.
+     * on-hold: This account is on hold.
      */
-    account_status_OnHold: Coding;
+    readonly OnHold: Coding;
     /**
-     * The account status is unknown.
+     * unknown: The account status is unknown.
      */
-    account_status_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * Indicates whether the account is available to be used.
+ */
+export declare type AccountStatusValueSetType = typeof AccountStatusValueSet;
+/**
+ * Indicates whether the account is available to be used.
+ */
+export declare enum AccountStatusValueSetEnum {
+    /**
+     * active: This account is active and may be used.
+     */
+    Active = "active",
+    /**
+     * entered-in-error: This instance should not have been part of this patient's medical record.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * inactive: This account is inactive and should not be used to track financial information.
+     */
+    Inactive = "inactive",
+    /**
+     * on-hold: This account is on hold.
+     */
+    OnHold = "on-hold",
+    /**
+     * unknown: The account status is unknown.
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=AccountStatusValueSet.d.ts.map

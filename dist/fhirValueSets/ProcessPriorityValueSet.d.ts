@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes the financial processing priority codes.
  */
 export declare const ProcessPriorityValueSet: {
     /**
-     * Later, when possible.
+     * deferred: Later, when possible.
      */
-    process_priority_Deferred: Coding;
+    readonly Deferred: Coding;
     /**
-     * With best effort.
+     * normal: With best effort.
      */
-    process_priority_Normal: Coding;
+    readonly Normal: Coding;
     /**
-     * Immediately in real time.
+     * stat: Immediately in real time.
      */
-    process_priority_Immediate: Coding;
+    readonly Immediate: Coding;
 };
+/**
+ * This value set includes the financial processing priority codes.
+ */
+export declare type ProcessPriorityValueSetType = typeof ProcessPriorityValueSet;
+/**
+ * This value set includes the financial processing priority codes.
+ */
+export declare enum ProcessPriorityValueSetEnum {
+    /**
+     * deferred: Later, when possible.
+     */
+    Deferred = "deferred",
+    /**
+     * normal: With best effort.
+     */
+    Normal = "normal",
+    /**
+     * stat: Immediately in real time.
+     */
+    Immediate = "stat"
+}
 //# sourceMappingURL=ProcessPriorityValueSet.d.ts.map

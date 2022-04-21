@@ -1,10 +1,10 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * No Description Provided
  */
 export declare const V3ActSubstanceAdminSubstitutionCodeValueSet: {
     /**
-     * Description:
+     * BC: Description:
      *
      *
      *                         Substitution occurred or is permitted between equivalent Brands but not Generics
@@ -17,13 +17,13 @@ export declare const V3ActSubstanceAdminSubstitutionCodeValueSet: {
      *                            Zestril  for Prinivil
      *                            Coumadin for Jantoven
      */
-    v3_substanceAdminSubstitution_BrandComposition: Coding;
+    readonly BrandComposition: Coding;
     /**
-     * Description: Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product.
+     * E: Description: Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product.
      */
-    v3_substanceAdminSubstitution_Equivalent: Coding;
+    readonly Equivalent: Coding;
     /**
-     * Description:
+     * EC: Description:
      *
      *
      *                         Substitution occurred or is permitted with another product that is a:
@@ -42,13 +42,13 @@ export declare const V3ActSubstanceAdminSubstitutionCodeValueSet: {
      *
      *                               Pharmaceutical equivalent: Lisonpril for Zestril
      */
-    v3_substanceAdminSubstitution_EquivalentComposition: Coding;
+    readonly EquivalentComposition: Coding;
     /**
-     * Description: This substitution was performed or is permitted based on formulary guidelines.
+     * F: Description: This substitution was performed or is permitted based on formulary guidelines.
      */
-    v3_substanceAdminSubstitution_Formulary: Coding;
+    readonly Formulary: Coding;
     /**
-     * Description: Substitution occurred or is permitted between equivalent Generics but not Brands
+     * G: Description: Substitution occurred or is permitted between equivalent Generics but not Brands
      *
      *
      *                            Examples:
@@ -57,13 +57,13 @@ export declare const V3ActSubstanceAdminSubstitutionCodeValueSet: {
      *
      *                            Lisnopril (Lupin Corp) for Lisnopril (Wockhardt Corp)
      */
-    v3_substanceAdminSubstitution_GenericComposition: Coding;
+    readonly GenericComposition: Coding;
     /**
-     * No substitution occurred or is permitted.
+     * N: No substitution occurred or is permitted.
      */
-    v3_substanceAdminSubstitution_None: Coding;
+    readonly None: Coding;
     /**
-     * Description: Substitution occurred or is permitted between therapeutically equivalent Brands but not Generics
+     * TB: Description: Substitution occurred or is permitted between therapeutically equivalent Brands but not Generics
      * &gt;
      *                            Examples:
      *
@@ -71,9 +71,9 @@ export declare const V3ActSubstanceAdminSubstitutionCodeValueSet: {
      *
      *                            Zantac for Tagamet
      */
-    v3_substanceAdminSubstitution_TherapeuticBrand: Coding;
+    readonly TherapeuticBrand: Coding;
     /**
-     * Description: Substitution occurred or is permitted with another product having the same therapeutic objective and safety profile.
+     * TE: Description: Substitution occurred or is permitted with another product having the same therapeutic objective and safety profile.
      *
      *
      *                            Examples:
@@ -82,9 +82,9 @@ export declare const V3ActSubstanceAdminSubstitutionCodeValueSet: {
      *
      *                            ranitidine for Tagamet
      */
-    v3_substanceAdminSubstitution_TherapeuticAlternative: Coding;
+    readonly TherapeuticAlternative: Coding;
     /**
-     * Description: Substitution occurred or is permitted between therapeutically equivalent Generics but not Brands
+     * TG: Description: Substitution occurred or is permitted between therapeutically equivalent Generics but not Brands
      * &gt;
      *                            Examples:
      *
@@ -92,6 +92,105 @@ export declare const V3ActSubstanceAdminSubstitutionCodeValueSet: {
      *
      *                            Ranitidine  for cimetidine
      */
-    v3_substanceAdminSubstitution_TherapeuticGeneric: Coding;
+    readonly TherapeuticGeneric: Coding;
 };
+/**
+ * No Description Provided
+ */
+export declare type V3ActSubstanceAdminSubstitutionCodeValueSetType = typeof V3ActSubstanceAdminSubstitutionCodeValueSet;
+/**
+ * No Description Provided
+ */
+export declare enum V3ActSubstanceAdminSubstitutionCodeValueSetEnum {
+    /**
+     * BC: Description:
+     *
+     *
+     *                         Substitution occurred or is permitted between equivalent Brands but not Generics
+     *
+     *
+     *                            Examples:
+     *
+     *
+     *
+     *                            Zestril  for Prinivil
+     *                            Coumadin for Jantoven
+     */
+    BrandComposition = "BC",
+    /**
+     * E: Description: Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product.
+     */
+    Equivalent = "E",
+    /**
+     * EC: Description:
+     *
+     *
+     *                         Substitution occurred or is permitted with another product that is a:
+     *
+     *
+     *                            pharmaceutical alternative containing the same active ingredient but is formulated with different salt, ester
+     *                            pharmaceutical equivalent that has the same active ingredient, strength, dosage form and route of administration
+     *
+     *
+     *                            Examples:
+     *
+     *
+     *
+     *
+     *                               Pharmaceutical alternative: Erythromycin Ethylsuccinate for Erythromycin Stearate
+     *
+     *                               Pharmaceutical equivalent: Lisonpril for Zestril
+     */
+    EquivalentComposition = "EC",
+    /**
+     * F: Description: This substitution was performed or is permitted based on formulary guidelines.
+     */
+    Formulary = "F",
+    /**
+     * G: Description: Substitution occurred or is permitted between equivalent Generics but not Brands
+     *
+     *
+     *                            Examples:
+     *
+     *
+     *
+     *                            Lisnopril (Lupin Corp) for Lisnopril (Wockhardt Corp)
+     */
+    GenericComposition = "G",
+    /**
+     * N: No substitution occurred or is permitted.
+     */
+    None = "N",
+    /**
+     * TB: Description: Substitution occurred or is permitted between therapeutically equivalent Brands but not Generics
+     * &gt;
+     *                            Examples:
+     *
+     *
+     *
+     *                            Zantac for Tagamet
+     */
+    TherapeuticBrand = "TB",
+    /**
+     * TE: Description: Substitution occurred or is permitted with another product having the same therapeutic objective and safety profile.
+     *
+     *
+     *                            Examples:
+     *
+     *
+     *
+     *                            ranitidine for Tagamet
+     */
+    TherapeuticAlternative = "TE",
+    /**
+     * TG: Description: Substitution occurred or is permitted between therapeutically equivalent Generics but not Brands
+     * &gt;
+     *                            Examples:
+     *
+     *
+     *
+     *                            Ranitidine  for cimetidine
+     */
+    TherapeuticGeneric = "TG"
+}
 //# sourceMappingURL=V3ActSubstanceAdminSubstitutionCodeValueSet.d.ts.map

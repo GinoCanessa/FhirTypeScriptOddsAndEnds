@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A coded concept listing the base codes.
  */
 export declare const VisionBaseCodesValueSet: {
     /**
-     * bottom.
+     * down: bottom.
      */
-    vision_base_codes_Down: Coding;
+    readonly Down: Coding;
     /**
-     * inner edge.
+     * in: inner edge.
      */
-    vision_base_codes_In: Coding;
+    readonly In: Coding;
     /**
-     * outer edge.
+     * out: outer edge.
      */
-    vision_base_codes_Out: Coding;
+    readonly Out: Coding;
     /**
-     * top.
+     * up: top.
      */
-    vision_base_codes_Up: Coding;
+    readonly Up: Coding;
 };
+/**
+ * A coded concept listing the base codes.
+ */
+export declare type VisionBaseCodesValueSetType = typeof VisionBaseCodesValueSet;
+/**
+ * A coded concept listing the base codes.
+ */
+export declare enum VisionBaseCodesValueSetEnum {
+    /**
+     * down: bottom.
+     */
+    Down = "down",
+    /**
+     * in: inner edge.
+     */
+    In = "in",
+    /**
+     * out: outer edge.
+     */
+    Out = "out",
+    /**
+     * up: top.
+     */
+    Up = "up"
+}
 //# sourceMappingURL=VisionBaseCodesValueSet.d.ts.map

@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How a type relates to its baseDefinition.
  */
 export declare const TypeDerivationRuleValueSet: {
     /**
-     * This definition adds additional rules to an existing concrete type.
+     * constraint: This definition adds additional rules to an existing concrete type.
      */
-    type_derivation_rule_Constraint: Coding;
+    readonly Constraint: Coding;
     /**
-     * This definition defines a new type that adds additional elements to the base type.
+     * specialization: This definition defines a new type that adds additional elements to the base type.
      */
-    type_derivation_rule_Specialization: Coding;
+    readonly Specialization: Coding;
 };
+/**
+ * How a type relates to its baseDefinition.
+ */
+export declare type TypeDerivationRuleValueSetType = typeof TypeDerivationRuleValueSet;
+/**
+ * How a type relates to its baseDefinition.
+ */
+export declare enum TypeDerivationRuleValueSetEnum {
+    /**
+     * constraint: This definition adds additional rules to an existing concrete type.
+     */
+    Constraint = "constraint",
+    /**
+     * specialization: This definition defines a new type that adds additional elements to the base type.
+     */
+    Specialization = "specialization"
+}
 //# sourceMappingURL=TypeDerivationRuleValueSet.d.ts.map

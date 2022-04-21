@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample ICD-10 Procedure codes.
  */
 export declare const Icd10ProceduresValueSet: {
     /**
-     * Procedure 1
+     * 123001: Procedure 1
      */
-    icd_10_procedures_PROC1: Coding;
+    readonly PROC1: Coding;
     /**
-     * Procedure 2
+     * 123002: Procedure 2
      */
-    icd_10_procedures_PROC2: Coding;
+    readonly PROC2: Coding;
     /**
-     * Procedure 3
+     * 123003: Procedure 3
      */
-    icd_10_procedures_PROC3: Coding;
+    readonly PROC3: Coding;
 };
+/**
+ * This value set includes sample ICD-10 Procedure codes.
+ */
+export declare type Icd10ProceduresValueSetType = typeof Icd10ProceduresValueSet;
+/**
+ * This value set includes sample ICD-10 Procedure codes.
+ */
+export declare enum Icd10ProceduresValueSetEnum {
+    /**
+     * 123001: Procedure 1
+     */
+    PROC1 = "123001",
+    /**
+     * 123002: Procedure 2
+     */
+    PROC2 = "123002",
+    /**
+     * 123003: Procedure 3
+     */
+    PROC3 = "123003"
+}
 //# sourceMappingURL=Icd10ProceduresValueSet.d.ts.map

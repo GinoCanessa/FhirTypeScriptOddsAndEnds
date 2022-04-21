@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Codes that reflect the current state of a clinical impression within its overall lifecycle.
  */
 export declare const ClinicalimpressionStatusValueSet: {
     /**
-     * The event has now concluded.
+     * completed: The event has now concluded.
      */
-    event_status_Completed: Coding;
+    readonly Completed: Coding;
     /**
-     * This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be "stopped" rather than "entered-in-error".).
+     * entered-in-error: This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be "stopped" rather than "entered-in-error".).
      */
-    event_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The event is currently occurring.
+     * in-progress: The event is currently occurring.
      */
-    event_status_InProgress: Coding;
+    readonly InProgress: Coding;
 };
+/**
+ * Codes that reflect the current state of a clinical impression within its overall lifecycle.
+ */
+export declare type ClinicalimpressionStatusValueSetType = typeof ClinicalimpressionStatusValueSet;
+/**
+ * Codes that reflect the current state of a clinical impression within its overall lifecycle.
+ */
+export declare enum ClinicalimpressionStatusValueSetEnum {
+    /**
+     * completed: The event has now concluded.
+     */
+    Completed = "completed",
+    /**
+     * entered-in-error: This electronic record should never have existed, though it is possible that real-world decisions were based on it.  (If real-world activity has occurred, the status should be "stopped" rather than "entered-in-error".).
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * in-progress: The event is currently occurring.
+     */
+    InProgress = "in-progress"
+}
 //# sourceMappingURL=ClinicalimpressionStatusValueSet.d.ts.map

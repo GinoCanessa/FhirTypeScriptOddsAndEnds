@@ -1,55 +1,112 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of response code to use for assertion.
  */
 export declare const AssertResponseCodeTypesValueSet: {
     /**
-     * Response code is 400.
+     * bad: Response code is 400.
      */
-    assert_response_code_types_Bad: Coding;
+    readonly Bad: Coding;
     /**
-     * Response code is 409.
+     * conflict: Response code is 409.
      */
-    assert_response_code_types_Conflict: Coding;
+    readonly Conflict: Coding;
     /**
-     * Response code is 201.
+     * created: Response code is 201.
      */
-    assert_response_code_types_Created: Coding;
+    readonly Created: Coding;
     /**
-     * Response code is 403.
+     * forbidden: Response code is 403.
      */
-    assert_response_code_types_Forbidden: Coding;
+    readonly Forbidden: Coding;
     /**
-     * Response code is 410.
+     * gone: Response code is 410.
      */
-    assert_response_code_types_Gone: Coding;
+    readonly Gone: Coding;
     /**
-     * Response code is 405.
+     * methodNotAllowed: Response code is 405.
      */
-    assert_response_code_types_MethodNotAllowed: Coding;
+    readonly MethodNotAllowed: Coding;
     /**
-     * Response code is 204.
+     * noContent: Response code is 204.
      */
-    assert_response_code_types_NoContent: Coding;
+    readonly NoContent: Coding;
     /**
-     * Response code is 404.
+     * notFound: Response code is 404.
      */
-    assert_response_code_types_NotFound: Coding;
+    readonly NotFound: Coding;
     /**
-     * Response code is 304.
+     * notModified: Response code is 304.
      */
-    assert_response_code_types_NotModified: Coding;
+    readonly NotModified: Coding;
     /**
-     * Response code is 200.
+     * okay: Response code is 200.
      */
-    assert_response_code_types_Okay: Coding;
+    readonly Okay: Coding;
     /**
-     * Response code is 412.
+     * preconditionFailed: Response code is 412.
      */
-    assert_response_code_types_PreconditionFailed: Coding;
+    readonly PreconditionFailed: Coding;
     /**
-     * Response code is 422.
+     * unprocessable: Response code is 422.
      */
-    assert_response_code_types_Unprocessable: Coding;
+    readonly Unprocessable: Coding;
 };
+/**
+ * The type of response code to use for assertion.
+ */
+export declare type AssertResponseCodeTypesValueSetType = typeof AssertResponseCodeTypesValueSet;
+/**
+ * The type of response code to use for assertion.
+ */
+export declare enum AssertResponseCodeTypesValueSetEnum {
+    /**
+     * bad: Response code is 400.
+     */
+    Bad = "bad",
+    /**
+     * conflict: Response code is 409.
+     */
+    Conflict = "conflict",
+    /**
+     * created: Response code is 201.
+     */
+    Created = "created",
+    /**
+     * forbidden: Response code is 403.
+     */
+    Forbidden = "forbidden",
+    /**
+     * gone: Response code is 410.
+     */
+    Gone = "gone",
+    /**
+     * methodNotAllowed: Response code is 405.
+     */
+    MethodNotAllowed = "methodNotAllowed",
+    /**
+     * noContent: Response code is 204.
+     */
+    NoContent = "noContent",
+    /**
+     * notFound: Response code is 404.
+     */
+    NotFound = "notFound",
+    /**
+     * notModified: Response code is 304.
+     */
+    NotModified = "notModified",
+    /**
+     * okay: Response code is 200.
+     */
+    Okay = "okay",
+    /**
+     * preconditionFailed: Response code is 412.
+     */
+    PreconditionFailed = "preconditionFailed",
+    /**
+     * unprocessable: Response code is 422.
+     */
+    Unprocessable = "unprocessable"
+}
 //# sourceMappingURL=AssertResponseCodeTypesValueSet.d.ts.map

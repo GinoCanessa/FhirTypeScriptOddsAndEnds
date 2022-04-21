@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of participant for the action.
  */
 export declare const ActionParticipantTypeValueSet: {
     /**
-     * The participant is a system or device used in the care of the patient.
+     * device: The participant is a system or device used in the care of the patient.
      */
-    action_participant_type_Device: Coding;
+    readonly Device: Coding;
     /**
-     * The participant is the patient under evaluation.
+     * patient: The participant is the patient under evaluation.
      */
-    action_participant_type_Patient: Coding;
+    readonly Patient: Coding;
     /**
-     * The participant is a practitioner involved in the patient's care.
+     * practitioner: The participant is a practitioner involved in the patient's care.
      */
-    action_participant_type_Practitioner: Coding;
+    readonly Practitioner: Coding;
     /**
-     * The participant is a person related to the patient.
+     * related-person: The participant is a person related to the patient.
      */
-    action_participant_type_RelatedPerson: Coding;
+    readonly RelatedPerson: Coding;
 };
+/**
+ * The type of participant for the action.
+ */
+export declare type ActionParticipantTypeValueSetType = typeof ActionParticipantTypeValueSet;
+/**
+ * The type of participant for the action.
+ */
+export declare enum ActionParticipantTypeValueSetEnum {
+    /**
+     * device: The participant is a system or device used in the care of the patient.
+     */
+    Device = "device",
+    /**
+     * patient: The participant is the patient under evaluation.
+     */
+    Patient = "patient",
+    /**
+     * practitioner: The participant is a practitioner involved in the patient's care.
+     */
+    Practitioner = "practitioner",
+    /**
+     * related-person: The participant is a person related to the patient.
+     */
+    RelatedPerson = "related-person"
+}
 //# sourceMappingURL=ActionParticipantTypeValueSet.d.ts.map

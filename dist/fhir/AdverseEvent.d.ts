@@ -1,4 +1,12 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { AdverseEventCausalityAssessValueSetType } from '../fhirValueSets/AdverseEventCausalityAssessValueSet.js';
+import { AdverseEventCausalityMethodValueSetType } from '../fhirValueSets/AdverseEventCausalityMethodValueSet.js';
+import { AdverseEventActualityValueSetType, AdverseEventActualityValueSetEnum } from '../fhirValueSets/AdverseEventActualityValueSet.js';
+import { AdverseEventCategoryValueSetType } from '../fhirValueSets/AdverseEventCategoryValueSet.js';
+import { AdverseEventTypeValueSetType } from '../fhirValueSets/AdverseEventTypeValueSet.js';
+import { AdverseEventSeriousnessValueSetType } from '../fhirValueSets/AdverseEventSeriousnessValueSet.js';
+import { AdverseEventSeverityValueSetType } from '../fhirValueSets/AdverseEventSeverityValueSet.js';
+import { AdverseEventOutcomeValueSetType } from '../fhirValueSets/AdverseEventOutcomeValueSet.js';
 /**
  * Information on the possible cause of the event.
  */
@@ -8,6 +16,14 @@ export declare type IAdverseEventSuspectEntityCausality = fhir.IBackboneElement 
      */
     assessment?: fhir.ICodeableConcept | undefined;
     /**
+     * AdverseEvent.suspectEntity.causalityProductRelatedness.
+     */
+    productRelatedness?: string | undefined;
+    /**
+     * Extended properties for primitive element: AdverseEvent.suspectEntity.causality.productRelatedness
+     */
+    _productRelatedness?: fhir.IFhirElement | undefined;
+    /**
      * AdverseEvent.suspectEntity.causalityAuthor.
      */
     author?: fhir.IReference | undefined;
@@ -15,24 +31,19 @@ export declare type IAdverseEventSuspectEntityCausality = fhir.IBackboneElement 
      * ProbabilityScale | Bayesian | Checklist.
      */
     method?: fhir.ICodeableConcept | undefined;
-    /**
-     * AdverseEvent.suspectEntity.causalityProductRelatedness.
-     */
-    productRelatedness?: string | undefined;
-    _productRelatedness?: fhir.IFhirElement | undefined;
 };
 /**
  * Describes the entity that is suspected to have caused the adverse event.
  */
 export declare type IAdverseEventSuspectEntity = fhir.IBackboneElement & {
     /**
-     * Information on the possible cause of the event.
-     */
-    causality?: fhir.IAdverseEventSuspectEntityCausality[] | undefined;
-    /**
      * Identifies the actual instance of what caused the adverse event.  May be a substance, medication, medication administration, medication statement or a device.
      */
     instance: fhir.IReference | null;
+    /**
+     * Information on the possible cause of the event.
+     */
+    causality?: fhir.IAdverseEventSuspectEntityCausality[] | undefined;
 };
 /**
  * Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
@@ -43,65 +54,65 @@ export declare type IAdverseEvent = fhir.IDomainResource & {
      */
     resourceType: "AdverseEvent";
     /**
+     * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+     */
+    identifier?: fhir.IIdentifier | undefined;
+    /**
      * Whether the event actually happened, or just had the potential to. Note that this is independent of whether anyone was affected or harmed or how severely.
      */
-    actuality: AdverseEventActualityEnum | null;
+    actuality: AdverseEventActualityValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: AdverseEvent.actuality
+     */
     _actuality?: fhir.IFhirElement | undefined;
     /**
      * The overall type of event, intended for search and filtering purposes.
      */
     category?: fhir.ICodeableConcept[] | undefined;
     /**
-     * Parties that may or should contribute or have contributed information to the adverse event, which can consist of one or more activities.  Such information includes information leading to the decision to perform the activity and how to perform the activity (e.g. consultant), information that the activity itself seeks to reveal (e.g. informant of clinical history), or information about what activity was performed (e.g. informant witness).
+     * This element defines the specific type of event that occurred or that was prevented from occurring.
      */
-    contributor?: fhir.IReference[] | undefined;
+    event?: fhir.ICodeableConcept | undefined;
     /**
-     * The date (and perhaps time) when the adverse event occurred.
+     * If AdverseEvent.resultingCondition differs among members of the group, then use Patient as the subject.
      */
-    date?: string | undefined;
-    _date?: fhir.IFhirElement | undefined;
-    /**
-     * Estimated or actual date the AdverseEvent began, in the opinion of the reporter.
-     */
-    detected?: string | undefined;
-    _detected?: fhir.IFhirElement | undefined;
+    subject: fhir.IReference | null;
     /**
      * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.  For example, if a medication administration was considered an adverse event because it resulted in a rash, then the encounter when the medication administration was given is the context.  If the patient reports the AdverseEvent during a second encounter, that second encounter is not the context.
      */
     encounter?: fhir.IReference | undefined;
     /**
-     * This element defines the specific type of event that occurred or that was prevented from occurring.
+     * The date (and perhaps time) when the adverse event occurred.
      */
-    event?: fhir.ICodeableConcept | undefined;
+    date?: string | undefined;
     /**
-     * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+     * Extended properties for primitive element: AdverseEvent.date
      */
-    identifier?: fhir.IIdentifier | undefined;
+    _date?: fhir.IFhirElement | undefined;
     /**
-     * The information about where the adverse event occurred.
+     * Estimated or actual date the AdverseEvent began, in the opinion of the reporter.
      */
-    location?: fhir.IReference | undefined;
+    detected?: string | undefined;
     /**
-     * Describes the type of outcome from the adverse event.
+     * Extended properties for primitive element: AdverseEvent.detected
      */
-    outcome?: fhir.ICodeableConcept | undefined;
+    _detected?: fhir.IFhirElement | undefined;
     /**
      * The recordedDate represents the date when this particular AdverseEvent record was created in the system, not the date of the most recent update.  The date of the last record modification can be retrieved from the resource metadata.
      */
     recordedDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: AdverseEvent.recordedDate
+     */
     _recordedDate?: fhir.IFhirElement | undefined;
-    /**
-     * Information on who recorded the adverse event.  May be the patient or a practitioner.
-     */
-    recorder?: fhir.IReference | undefined;
-    /**
-     * AdverseEvent.referenceDocument.
-     */
-    referenceDocument?: fhir.IReference[] | undefined;
     /**
      * Includes information about the reaction that occurred as a result of exposure to a substance (for example, a drug or a chemical).
      */
     resultingCondition?: fhir.IReference[] | undefined;
+    /**
+     * The information about where the adverse event occurred.
+     */
+    location?: fhir.IReference | undefined;
     /**
      * Assessment whether this event was of real importance.
      */
@@ -111,30 +122,50 @@ export declare type IAdverseEvent = fhir.IDomainResource & {
      */
     severity?: fhir.ICodeableConcept | undefined;
     /**
-     * AdverseEvent.study.
+     * Describes the type of outcome from the adverse event.
      */
-    study?: fhir.IReference[] | undefined;
+    outcome?: fhir.ICodeableConcept | undefined;
     /**
-     * If AdverseEvent.resultingCondition differs among members of the group, then use Patient as the subject.
+     * Information on who recorded the adverse event.  May be the patient or a practitioner.
      */
-    subject: fhir.IReference | null;
+    recorder?: fhir.IReference | undefined;
+    /**
+     * Parties that may or should contribute or have contributed information to the adverse event, which can consist of one or more activities.  Such information includes information leading to the decision to perform the activity and how to perform the activity (e.g. consultant), information that the activity itself seeks to reveal (e.g. informant of clinical history), or information about what activity was performed (e.g. informant witness).
+     */
+    contributor?: fhir.IReference[] | undefined;
+    /**
+     * Describes the entity that is suspected to have caused the adverse event.
+     */
+    suspectEntity?: fhir.IAdverseEventSuspectEntity[] | undefined;
     /**
      * AdverseEvent.subjectMedicalHistory.
      */
     subjectMedicalHistory?: fhir.IReference[] | undefined;
     /**
-     * Describes the entity that is suspected to have caused the adverse event.
+     * AdverseEvent.referenceDocument.
      */
-    suspectEntity?: fhir.IAdverseEventSuspectEntity[] | undefined;
+    referenceDocument?: fhir.IReference[] | undefined;
+    /**
+     * AdverseEvent.study.
+     */
+    study?: fhir.IReference[] | undefined;
 };
 /**
  * Information on the possible cause of the event.
  */
-export declare class AdverseEventSuspectEntityCausality extends fhir.BackboneElement implements fhir.IAdverseEventSuspectEntityCausality {
+export declare class AdverseEventSuspectEntityCausality extends fhir.BackboneElement implements IAdverseEventSuspectEntityCausality {
     /**
      * Assessment of if the entity caused the event.
      */
     assessment?: fhir.CodeableConcept | undefined;
+    /**
+     * AdverseEvent.suspectEntity.causalityProductRelatedness.
+     */
+    productRelatedness?: string | undefined;
+    /**
+     * Extended properties for primitive element: AdverseEvent.suspectEntity.causality.productRelatedness
+     */
+    _productRelatedness?: fhir.FhirElement | undefined;
     /**
      * AdverseEvent.suspectEntity.causalityAuthor.
      */
@@ -144,116 +175,111 @@ export declare class AdverseEventSuspectEntityCausality extends fhir.BackboneEle
      */
     method?: fhir.CodeableConcept | undefined;
     /**
-     * AdverseEvent.suspectEntity.causalityProductRelatedness.
-     */
-    productRelatedness?: string | undefined;
-    _productRelatedness?: fhir.FhirElement | undefined;
-    /**
      * Default constructor for AdverseEventSuspectEntityCausality - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IAdverseEventSuspectEntityCausality>);
+    constructor(source?: Partial<IAdverseEventSuspectEntityCausality>);
     /**
-     * Check if the current AdverseEventSuspectEntityCausality contains all required elements.
+     * Example-bound Value Set for assessment
      */
-    checkRequiredElements(): string[];
+    assessmentExampleValueSet(): AdverseEventCausalityAssessValueSetType;
     /**
-     * Factory function to create a AdverseEventSuspectEntityCausality from an object that MUST contain all required elements.
+     * Example-bound Value Set for method
      */
-    static fromStrict(source: fhir.IAdverseEventSuspectEntityCausality): AdverseEventSuspectEntityCausality;
+    methodExampleValueSet(): AdverseEventCausalityMethodValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 /**
  * Describes the entity that is suspected to have caused the adverse event.
  */
-export declare class AdverseEventSuspectEntity extends fhir.BackboneElement implements fhir.IAdverseEventSuspectEntity {
-    /**
-     * Information on the possible cause of the event.
-     */
-    causality?: fhir.AdverseEventSuspectEntityCausality[] | undefined;
+export declare class AdverseEventSuspectEntity extends fhir.BackboneElement implements IAdverseEventSuspectEntity {
     /**
      * Identifies the actual instance of what caused the adverse event.  May be a substance, medication, medication administration, medication statement or a device.
      */
     instance: fhir.Reference | null;
     /**
+     * Information on the possible cause of the event.
+     */
+    causality?: fhir.AdverseEventSuspectEntityCausality[] | undefined;
+    /**
      * Default constructor for AdverseEventSuspectEntity - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IAdverseEventSuspectEntity>);
+    constructor(source?: Partial<IAdverseEventSuspectEntity>);
     /**
-     * Check if the current AdverseEventSuspectEntity contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a AdverseEventSuspectEntity from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IAdverseEventSuspectEntity): AdverseEventSuspectEntity;
+    doModelValidation(): [string, string][];
 }
 /**
  * Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
  */
-export declare class AdverseEvent extends fhir.DomainResource implements fhir.IAdverseEvent {
+export declare class AdverseEvent extends fhir.DomainResource implements IAdverseEvent {
     /**
      * Resource Type Name
      */
     resourceType: "AdverseEvent";
     /**
+     * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+     */
+    identifier?: fhir.Identifier | undefined;
+    /**
      * Whether the event actually happened, or just had the potential to. Note that this is independent of whether anyone was affected or harmed or how severely.
      */
-    actuality: AdverseEventActualityEnum | null;
+    actuality: AdverseEventActualityValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: AdverseEvent.actuality
+     */
     _actuality?: fhir.FhirElement | undefined;
     /**
      * The overall type of event, intended for search and filtering purposes.
      */
     category?: fhir.CodeableConcept[] | undefined;
     /**
-     * Parties that may or should contribute or have contributed information to the adverse event, which can consist of one or more activities.  Such information includes information leading to the decision to perform the activity and how to perform the activity (e.g. consultant), information that the activity itself seeks to reveal (e.g. informant of clinical history), or information about what activity was performed (e.g. informant witness).
+     * This element defines the specific type of event that occurred or that was prevented from occurring.
      */
-    contributor?: fhir.Reference[] | undefined;
+    event?: fhir.CodeableConcept | undefined;
     /**
-     * The date (and perhaps time) when the adverse event occurred.
+     * If AdverseEvent.resultingCondition differs among members of the group, then use Patient as the subject.
      */
-    date?: string | undefined;
-    _date?: fhir.FhirElement | undefined;
-    /**
-     * Estimated or actual date the AdverseEvent began, in the opinion of the reporter.
-     */
-    detected?: string | undefined;
-    _detected?: fhir.FhirElement | undefined;
+    subject: fhir.Reference | null;
     /**
      * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.  For example, if a medication administration was considered an adverse event because it resulted in a rash, then the encounter when the medication administration was given is the context.  If the patient reports the AdverseEvent during a second encounter, that second encounter is not the context.
      */
     encounter?: fhir.Reference | undefined;
     /**
-     * This element defines the specific type of event that occurred or that was prevented from occurring.
+     * The date (and perhaps time) when the adverse event occurred.
      */
-    event?: fhir.CodeableConcept | undefined;
+    date?: string | undefined;
     /**
-     * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
+     * Extended properties for primitive element: AdverseEvent.date
      */
-    identifier?: fhir.Identifier | undefined;
+    _date?: fhir.FhirElement | undefined;
     /**
-     * The information about where the adverse event occurred.
+     * Estimated or actual date the AdverseEvent began, in the opinion of the reporter.
      */
-    location?: fhir.Reference | undefined;
+    detected?: string | undefined;
     /**
-     * Describes the type of outcome from the adverse event.
+     * Extended properties for primitive element: AdverseEvent.detected
      */
-    outcome?: fhir.CodeableConcept | undefined;
+    _detected?: fhir.FhirElement | undefined;
     /**
      * The recordedDate represents the date when this particular AdverseEvent record was created in the system, not the date of the most recent update.  The date of the last record modification can be retrieved from the resource metadata.
      */
     recordedDate?: string | undefined;
+    /**
+     * Extended properties for primitive element: AdverseEvent.recordedDate
+     */
     _recordedDate?: fhir.FhirElement | undefined;
-    /**
-     * Information on who recorded the adverse event.  May be the patient or a practitioner.
-     */
-    recorder?: fhir.Reference | undefined;
-    /**
-     * AdverseEvent.referenceDocument.
-     */
-    referenceDocument?: fhir.Reference[] | undefined;
     /**
      * Includes information about the reaction that occurred as a result of exposure to a substance (for example, a drug or a chemical).
      */
     resultingCondition?: fhir.Reference[] | undefined;
+    /**
+     * The information about where the adverse event occurred.
+     */
+    location?: fhir.Reference | undefined;
     /**
      * Assessment whether this event was of real importance.
      */
@@ -263,39 +289,64 @@ export declare class AdverseEvent extends fhir.DomainResource implements fhir.IA
      */
     severity?: fhir.CodeableConcept | undefined;
     /**
-     * AdverseEvent.study.
+     * Describes the type of outcome from the adverse event.
      */
-    study?: fhir.Reference[] | undefined;
+    outcome?: fhir.CodeableConcept | undefined;
     /**
-     * If AdverseEvent.resultingCondition differs among members of the group, then use Patient as the subject.
+     * Information on who recorded the adverse event.  May be the patient or a practitioner.
      */
-    subject: fhir.Reference | null;
+    recorder?: fhir.Reference | undefined;
     /**
-     * AdverseEvent.subjectMedicalHistory.
+     * Parties that may or should contribute or have contributed information to the adverse event, which can consist of one or more activities.  Such information includes information leading to the decision to perform the activity and how to perform the activity (e.g. consultant), information that the activity itself seeks to reveal (e.g. informant of clinical history), or information about what activity was performed (e.g. informant witness).
      */
-    subjectMedicalHistory?: fhir.Reference[] | undefined;
+    contributor?: fhir.Reference[] | undefined;
     /**
      * Describes the entity that is suspected to have caused the adverse event.
      */
     suspectEntity?: fhir.AdverseEventSuspectEntity[] | undefined;
     /**
+     * AdverseEvent.subjectMedicalHistory.
+     */
+    subjectMedicalHistory?: fhir.Reference[] | undefined;
+    /**
+     * AdverseEvent.referenceDocument.
+     */
+    referenceDocument?: fhir.Reference[] | undefined;
+    /**
+     * AdverseEvent.study.
+     */
+    study?: fhir.Reference[] | undefined;
+    /**
      * Default constructor for AdverseEvent - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IAdverseEvent>);
+    constructor(source?: Partial<IAdverseEvent>);
     /**
-     * Check if the current AdverseEvent contains all required elements.
+     * Required-bound Value Set for actuality
      */
-    checkRequiredElements(): string[];
+    actualityRequiredValueSet(): AdverseEventActualityValueSetType;
     /**
-     * Factory function to create a AdverseEvent from an object that MUST contain all required elements.
+     * Extensible-bound Value Set for category
      */
-    static fromStrict(source: fhir.IAdverseEvent): AdverseEvent;
-}
-/**
- * Code Values for the AdverseEvent.actuality field
- */
-export declare enum AdverseEventActualityEnum {
-    ACTUAL = "actual",
-    POTENTIAL = "potential"
+    categoryExtensibleValueSet(): AdverseEventCategoryValueSetType;
+    /**
+     * Example-bound Value Set for event
+     */
+    eventExampleValueSet(): AdverseEventTypeValueSetType;
+    /**
+     * Example-bound Value Set for seriousness
+     */
+    seriousnessExampleValueSet(): AdverseEventSeriousnessValueSetType;
+    /**
+     * Required-bound Value Set for severity
+     */
+    severityRequiredValueSet(): AdverseEventSeverityValueSetType;
+    /**
+     * Required-bound Value Set for outcome
+     */
+    outcomeRequiredValueSet(): AdverseEventOutcomeValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=AdverseEvent.d.ts.map

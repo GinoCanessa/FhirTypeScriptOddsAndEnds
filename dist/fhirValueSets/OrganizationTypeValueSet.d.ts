@@ -1,55 +1,112 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This example value set defines a set of codes that can be used to indicate a type of organization.
  */
 export declare const OrganizationTypeValueSet: {
     /**
-     * An organization that is a registered business or corporation but not identified by other types.
+     * bus: An organization that is a registered business or corporation but not identified by other types.
      */
-    organization_type_NonHealthcareBusinessOrCorporation: Coding;
+    readonly NonHealthcareBusinessOrCorporation: Coding;
     /**
-     * An un-incorporated community group.
+     * cg: An un-incorporated community group.
      */
-    organization_type_CommunityGroup: Coding;
+    readonly CommunityGroup: Coding;
     /**
-     * An organization that is identified as a Pharmaceutical/Clinical Research Sponsor.
+     * crs: An organization that is identified as a Pharmaceutical/Clinical Research Sponsor.
      */
-    organization_type_ClinicalResearchSponsor: Coding;
+    readonly ClinicalResearchSponsor: Coding;
     /**
-     * A department or ward within a hospital (Generally is not applicable to top level organizations)
+     * dept: A department or ward within a hospital (Generally is not applicable to top level organizations)
      */
-    organization_type_HospitalDepartment: Coding;
+    readonly HospitalDepartment: Coding;
     /**
-     * An educational institution that provides education or research facilities.
+     * edu: An educational institution that provides education or research facilities.
      */
-    organization_type_EducationalInstitute: Coding;
+    readonly EducationalInstitute: Coding;
     /**
-     * A political body, often used when including organization records for government bodies such as a Federal Government, State or Local Government.
+     * govt: A political body, often used when including organization records for government bodies such as a Federal Government, State or Local Government.
      */
-    organization_type_Government: Coding;
+    readonly Government: Coding;
     /**
-     * A company that provides insurance to its subscribers that may include healthcare related policies.
+     * ins: A company that provides insurance to its subscribers that may include healthcare related policies.
      */
-    organization_type_InsuranceCompany: Coding;
+    readonly InsuranceCompany: Coding;
     /**
-     * Other type of organization not already specified.
+     * other: Other type of organization not already specified.
      */
-    organization_type_Other: Coding;
+    readonly Other: Coding;
     /**
-     * A company, charity, or governmental organization, which processes claims and/or issues payments to providers on behalf of patients or groups of patients.
+     * pay: A company, charity, or governmental organization, which processes claims and/or issues payments to providers on behalf of patients or groups of patients.
      */
-    organization_type_Payer: Coding;
+    readonly Payer: Coding;
     /**
-     * An organization that provides healthcare services.
+     * prov: An organization that provides healthcare services.
      */
-    organization_type_HealthcareProvider: Coding;
+    readonly HealthcareProvider: Coding;
     /**
-     * An organization that is identified as a part of a religious institution.
+     * reli: An organization that is identified as a part of a religious institution.
      */
-    organization_type_ReligiousInstitution: Coding;
+    readonly ReligiousInstitution: Coding;
     /**
-     * An organizational team is usually a grouping of practitioners that perform a specific function within an organization (which could be a top level organization, or a department).
+     * team: An organizational team is usually a grouping of practitioners that perform a specific function within an organization (which could be a top level organization, or a department).
      */
-    organization_type_OrganizationalTeam: Coding;
+    readonly OrganizationalTeam: Coding;
 };
+/**
+ * This example value set defines a set of codes that can be used to indicate a type of organization.
+ */
+export declare type OrganizationTypeValueSetType = typeof OrganizationTypeValueSet;
+/**
+ * This example value set defines a set of codes that can be used to indicate a type of organization.
+ */
+export declare enum OrganizationTypeValueSetEnum {
+    /**
+     * bus: An organization that is a registered business or corporation but not identified by other types.
+     */
+    NonHealthcareBusinessOrCorporation = "bus",
+    /**
+     * cg: An un-incorporated community group.
+     */
+    CommunityGroup = "cg",
+    /**
+     * crs: An organization that is identified as a Pharmaceutical/Clinical Research Sponsor.
+     */
+    ClinicalResearchSponsor = "crs",
+    /**
+     * dept: A department or ward within a hospital (Generally is not applicable to top level organizations)
+     */
+    HospitalDepartment = "dept",
+    /**
+     * edu: An educational institution that provides education or research facilities.
+     */
+    EducationalInstitute = "edu",
+    /**
+     * govt: A political body, often used when including organization records for government bodies such as a Federal Government, State or Local Government.
+     */
+    Government = "govt",
+    /**
+     * ins: A company that provides insurance to its subscribers that may include healthcare related policies.
+     */
+    InsuranceCompany = "ins",
+    /**
+     * other: Other type of organization not already specified.
+     */
+    Other = "other",
+    /**
+     * pay: A company, charity, or governmental organization, which processes claims and/or issues payments to providers on behalf of patients or groups of patients.
+     */
+    Payer = "pay",
+    /**
+     * prov: An organization that provides healthcare services.
+     */
+    HealthcareProvider = "prov",
+    /**
+     * reli: An organization that is identified as a part of a religious institution.
+     */
+    ReligiousInstitution = "reli",
+    /**
+     * team: An organizational team is usually a grouping of practitioners that perform a specific function within an organization (which could be a top level organization, or a department).
+     */
+    OrganizationalTeam = "team"
+}
 //# sourceMappingURL=OrganizationTypeValueSet.d.ts.map

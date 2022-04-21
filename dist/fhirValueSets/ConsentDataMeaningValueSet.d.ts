@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How a resource reference is interpreted when testing consent restrictions.
  */
 export declare const ConsentDataMeaningValueSet: {
     /**
-     * The consent applies to instances of resources that are authored by.
+     * authoredby: The consent applies to instances of resources that are authored by.
      */
-    consent_data_meaning_AuthoredBy: Coding;
+    readonly AuthoredBy: Coding;
     /**
-     * The consent applies directly to the instance of the resource and instances that refer to it.
+     * dependents: The consent applies directly to the instance of the resource and instances that refer to it.
      */
-    consent_data_meaning_Dependents: Coding;
+    readonly Dependents: Coding;
     /**
-     * The consent applies directly to the instance of the resource.
+     * instance: The consent applies directly to the instance of the resource.
      */
-    consent_data_meaning_Instance: Coding;
+    readonly Instance: Coding;
     /**
-     * The consent applies directly to the instance of the resource and instances it refers to.
+     * related: The consent applies directly to the instance of the resource and instances it refers to.
      */
-    consent_data_meaning_Related: Coding;
+    readonly Related: Coding;
 };
+/**
+ * How a resource reference is interpreted when testing consent restrictions.
+ */
+export declare type ConsentDataMeaningValueSetType = typeof ConsentDataMeaningValueSet;
+/**
+ * How a resource reference is interpreted when testing consent restrictions.
+ */
+export declare enum ConsentDataMeaningValueSetEnum {
+    /**
+     * authoredby: The consent applies to instances of resources that are authored by.
+     */
+    AuthoredBy = "authoredby",
+    /**
+     * dependents: The consent applies directly to the instance of the resource and instances that refer to it.
+     */
+    Dependents = "dependents",
+    /**
+     * instance: The consent applies directly to the instance of the resource.
+     */
+    Instance = "instance",
+    /**
+     * related: The consent applies directly to the instance of the resource and instances it refers to.
+     */
+    Related = "related"
+}
 //# sourceMappingURL=ConsentDataMeaningValueSet.d.ts.map

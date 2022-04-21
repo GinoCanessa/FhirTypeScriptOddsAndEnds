@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Consent Action codes.
  */
 export declare const ConsentActionValueSet: {
     /**
-     * Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)
+     * access: Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)
      */
-    consent_action_Access: Coding;
+    readonly Access: Coding;
     /**
-     * Gather retrieved information for storage
+     * collect: Gather retrieved information for storage
      */
-    consent_action_Collect: Coding;
+    readonly Collect: Coding;
     /**
-     * Allow retrieval of a patient's information for the purpose of update or rectify
+     * correct: Allow retrieval of a patient's information for the purpose of update or rectify
      */
-    consent_action_AccessAndCorrect: Coding;
+    readonly AccessAndCorrect: Coding;
     /**
-     * Transfer retrieved information
+     * disclose: Transfer retrieved information
      */
-    consent_action_Disclose: Coding;
+    readonly Disclose: Coding;
     /**
-     * Utilize the retrieved information
+     * use: Utilize the retrieved information
      */
-    consent_action_Use: Coding;
+    readonly Use: Coding;
 };
+/**
+ * This value set includes sample Consent Action codes.
+ */
+export declare type ConsentActionValueSetType = typeof ConsentActionValueSet;
+/**
+ * This value set includes sample Consent Action codes.
+ */
+export declare enum ConsentActionValueSetEnum {
+    /**
+     * access: Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)
+     */
+    Access = "access",
+    /**
+     * collect: Gather retrieved information for storage
+     */
+    Collect = "collect",
+    /**
+     * correct: Allow retrieval of a patient's information for the purpose of update or rectify
+     */
+    AccessAndCorrect = "correct",
+    /**
+     * disclose: Transfer retrieved information
+     */
+    Disclose = "disclose",
+    /**
+     * use: Utilize the retrieved information
+     */
+    Use = "use"
+}
 //# sourceMappingURL=ConsentActionValueSet.d.ts.map

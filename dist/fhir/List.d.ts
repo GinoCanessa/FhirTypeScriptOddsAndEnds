@@ -1,22 +1,34 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { ListItemFlagValueSetType } from '../fhirValueSets/ListItemFlagValueSet.js';
+import { ListStatusValueSetType, ListStatusValueSetEnum } from '../fhirValueSets/ListStatusValueSet.js';
+import { ListModeValueSetType, ListModeValueSetEnum } from '../fhirValueSets/ListModeValueSet.js';
+import { ListExampleCodesValueSetType } from '../fhirValueSets/ListExampleCodesValueSet.js';
+import { ListOrderValueSetType } from '../fhirValueSets/ListOrderValueSet.js';
+import { ListEmptyReasonValueSetType } from '../fhirValueSets/ListEmptyReasonValueSet.js';
 /**
  * If there are no entries in the list, an emptyReason SHOULD be provided.
  */
 export declare type IListEntry = fhir.IBackboneElement & {
     /**
-     * When this item was added to the list.
+     * The flag can only be understood in the context of the List.code. If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Deleted can only be used if the List.mode is "changes".
      */
-    date?: string | undefined;
-    _date?: fhir.IFhirElement | undefined;
+    flag?: fhir.ICodeableConcept | undefined;
     /**
      * If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Both flag and deleted can only be used if the List.mode is "changes". A deleted entry should be displayed in narrative as deleted.  This element is labeled as a modifier because it indicates that an item is (to be) no longer in the list.
      */
     deleted?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: List.entry.deleted
+     */
     _deleted?: fhir.IFhirElement | undefined;
     /**
-     * The flag can only be understood in the context of the List.code. If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Deleted can only be used if the List.mode is "changes".
+     * When this item was added to the list.
      */
-    flag?: fhir.ICodeableConcept | undefined;
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: List.entry.date
+     */
+    _date?: fhir.IFhirElement | undefined;
     /**
      * A reference to the actual resource from which data was derived.
      */
@@ -31,80 +43,98 @@ export declare type IList = fhir.IDomainResource & {
      */
     resourceType: "List";
     /**
-     * If there is no code, the purpose of the list is implied where it is used, such as in a document section using Document.section.code.
-     */
-    code?: fhir.ICodeableConcept | undefined;
-    /**
-     * The actual important date is the date of currency of the resources that were summarized, but it is usually assumed that these are current when the preparation occurs.
-     */
-    date?: string | undefined;
-    _date?: fhir.IFhirElement | undefined;
-    /**
-     * The various reasons for an empty list make a significant interpretation to its interpretation. Note that this code is for use when the entire list has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
-     */
-    emptyReason?: fhir.ICodeableConcept | undefined;
-    /**
-     * The encounter that is the context in which this list was created.
-     */
-    encounter?: fhir.IReference | undefined;
-    /**
-     * If there are no entries in the list, an emptyReason SHOULD be provided.
-     */
-    entry?: fhir.IListEntry[] | undefined;
-    /**
      * Identifier for the List assigned for business purposes outside the context of FHIR.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * This element is labeled as a modifier because a change list must not be misunderstood as a complete list.
-     */
-    mode: ListModeEnum | null;
-    _mode?: fhir.IFhirElement | undefined;
-    /**
-     * Comments that apply to the overall list.
-     */
-    note?: fhir.IAnnotation[] | undefined;
-    /**
-     * Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order.
-     */
-    orderedBy?: fhir.ICodeableConcept | undefined;
-    /**
-     * The primary source is the entity that made the decisions what items are in the list. This may be software or user.
-     */
-    source?: fhir.IReference | undefined;
-    /**
      * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    status: ListStatusEnum | null;
+    status: ListStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: List.status
+     */
     _status?: fhir.IFhirElement | undefined;
+    /**
+     * This element is labeled as a modifier because a change list must not be misunderstood as a complete list.
+     */
+    mode: ListModeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: List.mode
+     */
+    _mode?: fhir.IFhirElement | undefined;
+    /**
+     * A label for the list assigned by the author.
+     */
+    title?: string | undefined;
+    /**
+     * Extended properties for primitive element: List.title
+     */
+    _title?: fhir.IFhirElement | undefined;
+    /**
+     * If there is no code, the purpose of the list is implied where it is used, such as in a document section using Document.section.code.
+     */
+    code?: fhir.ICodeableConcept | undefined;
     /**
      * Some purely arbitrary lists do not have a common subject, so this is optional.
      */
     subject?: fhir.IReference | undefined;
     /**
-     * A label for the list assigned by the author.
+     * The encounter that is the context in which this list was created.
      */
-    title?: string | undefined;
-    _title?: fhir.IFhirElement | undefined;
+    encounter?: fhir.IReference | undefined;
+    /**
+     * The actual important date is the date of currency of the resources that were summarized, but it is usually assumed that these are current when the preparation occurs.
+     */
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: List.date
+     */
+    _date?: fhir.IFhirElement | undefined;
+    /**
+     * The primary source is the entity that made the decisions what items are in the list. This may be software or user.
+     */
+    source?: fhir.IReference | undefined;
+    /**
+     * Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order.
+     */
+    orderedBy?: fhir.ICodeableConcept | undefined;
+    /**
+     * Comments that apply to the overall list.
+     */
+    note?: fhir.IAnnotation[] | undefined;
+    /**
+     * If there are no entries in the list, an emptyReason SHOULD be provided.
+     */
+    entry?: fhir.IListEntry[] | undefined;
+    /**
+     * The various reasons for an empty list make a significant interpretation to its interpretation. Note that this code is for use when the entire list has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
+     */
+    emptyReason?: fhir.ICodeableConcept | undefined;
 };
 /**
  * If there are no entries in the list, an emptyReason SHOULD be provided.
  */
-export declare class ListEntry extends fhir.BackboneElement implements fhir.IListEntry {
-    /**
-     * When this item was added to the list.
-     */
-    date?: string | undefined;
-    _date?: fhir.FhirElement | undefined;
-    /**
-     * If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Both flag and deleted can only be used if the List.mode is "changes". A deleted entry should be displayed in narrative as deleted.  This element is labeled as a modifier because it indicates that an item is (to be) no longer in the list.
-     */
-    deleted?: boolean | undefined;
-    _deleted?: fhir.FhirElement | undefined;
+export declare class ListEntry extends fhir.BackboneElement implements IListEntry {
     /**
      * The flag can only be understood in the context of the List.code. If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Deleted can only be used if the List.mode is "changes".
      */
     flag?: fhir.CodeableConcept | undefined;
+    /**
+     * If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Both flag and deleted can only be used if the List.mode is "changes". A deleted entry should be displayed in narrative as deleted.  This element is labeled as a modifier because it indicates that an item is (to be) no longer in the list.
+     */
+    deleted?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: List.entry.deleted
+     */
+    _deleted?: fhir.FhirElement | undefined;
+    /**
+     * When this item was added to the list.
+     */
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: List.entry.date
+     */
+    _date?: fhir.FhirElement | undefined;
     /**
      * A reference to the actual resource from which data was derived.
      */
@@ -112,107 +142,119 @@ export declare class ListEntry extends fhir.BackboneElement implements fhir.ILis
     /**
      * Default constructor for ListEntry - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IListEntry>);
+    constructor(source?: Partial<IListEntry>);
     /**
-     * Check if the current ListEntry contains all required elements.
+     * Example-bound Value Set for flag
      */
-    checkRequiredElements(): string[];
+    flagExampleValueSet(): ListItemFlagValueSetType;
     /**
-     * Factory function to create a ListEntry from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IListEntry): ListEntry;
+    doModelValidation(): [string, string][];
 }
 /**
  * A list is a curated collection of resources.
  */
-export declare class List extends fhir.DomainResource implements fhir.IList {
+export declare class List extends fhir.DomainResource implements IList {
     /**
      * Resource Type Name
      */
     resourceType: "List";
     /**
-     * If there is no code, the purpose of the list is implied where it is used, such as in a document section using Document.section.code.
-     */
-    code?: fhir.CodeableConcept | undefined;
-    /**
-     * The actual important date is the date of currency of the resources that were summarized, but it is usually assumed that these are current when the preparation occurs.
-     */
-    date?: string | undefined;
-    _date?: fhir.FhirElement | undefined;
-    /**
-     * The various reasons for an empty list make a significant interpretation to its interpretation. Note that this code is for use when the entire list has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
-     */
-    emptyReason?: fhir.CodeableConcept | undefined;
-    /**
-     * The encounter that is the context in which this list was created.
-     */
-    encounter?: fhir.Reference | undefined;
-    /**
-     * If there are no entries in the list, an emptyReason SHOULD be provided.
-     */
-    entry?: fhir.ListEntry[] | undefined;
-    /**
      * Identifier for the List assigned for business purposes outside the context of FHIR.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * This element is labeled as a modifier because a change list must not be misunderstood as a complete list.
-     */
-    mode: ListModeEnum | null;
-    _mode?: fhir.FhirElement | undefined;
-    /**
-     * Comments that apply to the overall list.
-     */
-    note?: fhir.Annotation[] | undefined;
-    /**
-     * Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order.
-     */
-    orderedBy?: fhir.CodeableConcept | undefined;
-    /**
-     * The primary source is the entity that made the decisions what items are in the list. This may be software or user.
-     */
-    source?: fhir.Reference | undefined;
-    /**
      * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
      */
-    status: ListStatusEnum | null;
+    status: ListStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: List.status
+     */
     _status?: fhir.FhirElement | undefined;
+    /**
+     * This element is labeled as a modifier because a change list must not be misunderstood as a complete list.
+     */
+    mode: ListModeValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: List.mode
+     */
+    _mode?: fhir.FhirElement | undefined;
+    /**
+     * A label for the list assigned by the author.
+     */
+    title?: string | undefined;
+    /**
+     * Extended properties for primitive element: List.title
+     */
+    _title?: fhir.FhirElement | undefined;
+    /**
+     * If there is no code, the purpose of the list is implied where it is used, such as in a document section using Document.section.code.
+     */
+    code?: fhir.CodeableConcept | undefined;
     /**
      * Some purely arbitrary lists do not have a common subject, so this is optional.
      */
     subject?: fhir.Reference | undefined;
     /**
-     * A label for the list assigned by the author.
+     * The encounter that is the context in which this list was created.
      */
-    title?: string | undefined;
-    _title?: fhir.FhirElement | undefined;
+    encounter?: fhir.Reference | undefined;
+    /**
+     * The actual important date is the date of currency of the resources that were summarized, but it is usually assumed that these are current when the preparation occurs.
+     */
+    date?: string | undefined;
+    /**
+     * Extended properties for primitive element: List.date
+     */
+    _date?: fhir.FhirElement | undefined;
+    /**
+     * The primary source is the entity that made the decisions what items are in the list. This may be software or user.
+     */
+    source?: fhir.Reference | undefined;
+    /**
+     * Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. If there is no order specified, the order is unknown, though there may still be some order.
+     */
+    orderedBy?: fhir.CodeableConcept | undefined;
+    /**
+     * Comments that apply to the overall list.
+     */
+    note?: fhir.Annotation[] | undefined;
+    /**
+     * If there are no entries in the list, an emptyReason SHOULD be provided.
+     */
+    entry?: fhir.ListEntry[] | undefined;
+    /**
+     * The various reasons for an empty list make a significant interpretation to its interpretation. Note that this code is for use when the entire list has been suppressed, and not for when individual items are omitted - implementers may consider using a text note or a flag on an entry in these cases.
+     */
+    emptyReason?: fhir.CodeableConcept | undefined;
     /**
      * Default constructor for List - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IList>);
+    constructor(source?: Partial<IList>);
     /**
-     * Check if the current List contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): ListStatusValueSetType;
     /**
-     * Factory function to create a List from an object that MUST contain all required elements.
+     * Required-bound Value Set for mode
      */
-    static fromStrict(source: fhir.IList): List;
-}
-/**
- * Code Values for the List.mode field
- */
-export declare enum ListModeEnum {
-    WORKING = "working",
-    SNAPSHOT = "snapshot",
-    CHANGES = "changes"
-}
-/**
- * Code Values for the List.status field
- */
-export declare enum ListStatusEnum {
-    CURRENT = "current",
-    RETIRED = "retired",
-    ENTERED_IN_ERROR = "entered-in-error"
+    modeRequiredValueSet(): ListModeValueSetType;
+    /**
+     * Example-bound Value Set for code
+     */
+    codeExampleValueSet(): ListExampleCodesValueSetType;
+    /**
+     * Preferred-bound Value Set for orderedBy
+     */
+    orderedByPreferredValueSet(): ListOrderValueSetType;
+    /**
+     * Preferred-bound Value Set for emptyReason
+     */
+    emptyReasonPreferredValueSet(): ListEmptyReasonValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=List.d.ts.map

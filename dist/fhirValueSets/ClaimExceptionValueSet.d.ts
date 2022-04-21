@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Exception codes.
  */
 export declare const ClaimExceptionValueSet: {
     /**
-     * Disabled
+     * disabled: Disabled
      */
-    claim_exception_Disabled: Coding;
+    readonly Disabled: Coding;
     /**
-     * Fulltime Student
+     * student: Fulltime Student
      */
-    claim_exception_StudentFulltime: Coding;
+    readonly StudentFulltime: Coding;
 };
+/**
+ * This value set includes sample Exception codes.
+ */
+export declare type ClaimExceptionValueSetType = typeof ClaimExceptionValueSet;
+/**
+ * This value set includes sample Exception codes.
+ */
+export declare enum ClaimExceptionValueSetEnum {
+    /**
+     * disabled: Disabled
+     */
+    Disabled = "disabled",
+    /**
+     * student: Fulltime Student
+     */
+    StudentFulltime = "student"
+}
 //# sourceMappingURL=ClaimExceptionValueSet.d.ts.map

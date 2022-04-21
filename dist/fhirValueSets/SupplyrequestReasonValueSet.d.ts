@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The reason why the supply item was requested.
  */
 export declare const SupplyrequestReasonValueSet: {
     /**
-     * The supply has been requested for use in direct patient care.
+     * patient-care: The supply has been requested for use in direct patient care.
      */
-    supplyrequest_reason_PatientCare: Coding;
+    readonly PatientCare: Coding;
     /**
-     * The supply has been requested for creating or replenishing ward stock.
+     * ward-stock: The supply has been requested for creating or replenishing ward stock.
      */
-    supplyrequest_reason_WardStock: Coding;
+    readonly WardStock: Coding;
 };
+/**
+ * The reason why the supply item was requested.
+ */
+export declare type SupplyrequestReasonValueSetType = typeof SupplyrequestReasonValueSet;
+/**
+ * The reason why the supply item was requested.
+ */
+export declare enum SupplyrequestReasonValueSetEnum {
+    /**
+     * patient-care: The supply has been requested for use in direct patient care.
+     */
+    PatientCare = "patient-care",
+    /**
+     * ward-stock: The supply has been requested for creating or replenishing ward stock.
+     */
+    WardStock = "ward-stock"
+}
 //# sourceMappingURL=SupplyrequestReasonValueSet.d.ts.map

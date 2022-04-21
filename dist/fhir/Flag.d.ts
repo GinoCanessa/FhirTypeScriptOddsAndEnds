@@ -1,4 +1,7 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { FlagStatusValueSetType, FlagStatusValueSetEnum } from '../fhirValueSets/FlagStatusValueSet.js';
+import { FlagCategoryValueSetType } from '../fhirValueSets/FlagCategoryValueSet.js';
+import { FlagCodeValueSetType } from '../fhirValueSets/FlagCodeValueSet.js';
 /**
  * Prospective warnings of potential issues when providing care to the patient.
  */
@@ -8,9 +11,17 @@ export declare type IFlag = fhir.IDomainResource & {
      */
     resourceType: "Flag";
     /**
-     * The person, organization or device that created the flag.
+     * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
      */
-    author?: fhir.IReference | undefined;
+    identifier?: fhir.IIdentifier[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     */
+    status: FlagStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Flag.status
+     */
+    _status?: fhir.IFhirElement | undefined;
     /**
      * The value set will often need to be adjusted based on local business rules and usage context.
      */
@@ -20,39 +31,42 @@ export declare type IFlag = fhir.IDomainResource & {
      */
     code: fhir.ICodeableConcept | null;
     /**
-     * If both Flag.encounter and Flag.period are valued, then Flag.period.start shall not be before Encounter.period.start and Flag.period.end shall not be after Encounter.period.end.
+     * The patient, location, group, organization, or practitioner etc. this is about record this flag is associated with.
      */
-    encounter?: fhir.IReference | undefined;
-    /**
-     * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
+    subject: fhir.IReference | null;
     /**
      * The period of time from the activation of the flag to inactivation of the flag. If the flag is active, the end of the period should be unspecified.
      */
     period?: fhir.IPeriod | undefined;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     * If both Flag.encounter and Flag.period are valued, then Flag.period.start shall not be before Encounter.period.start and Flag.period.end shall not be after Encounter.period.end.
      */
-    status: FlagStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
+    encounter?: fhir.IReference | undefined;
     /**
-     * The patient, location, group, organization, or practitioner etc. this is about record this flag is associated with.
+     * The person, organization or device that created the flag.
      */
-    subject: fhir.IReference | null;
+    author?: fhir.IReference | undefined;
 };
 /**
  * Prospective warnings of potential issues when providing care to the patient.
  */
-export declare class Flag extends fhir.DomainResource implements fhir.IFlag {
+export declare class Flag extends fhir.DomainResource implements IFlag {
     /**
      * Resource Type Name
      */
     resourceType: "Flag";
     /**
-     * The person, organization or device that created the flag.
+     * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
      */
-    author?: fhir.Reference | undefined;
+    identifier?: fhir.Identifier[] | undefined;
+    /**
+     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     */
+    status: FlagStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: Flag.status
+     */
+    _status?: fhir.FhirElement | undefined;
     /**
      * The value set will often need to be adjusted based on local business rules and usage context.
      */
@@ -62,45 +76,40 @@ export declare class Flag extends fhir.DomainResource implements fhir.IFlag {
      */
     code: fhir.CodeableConcept | null;
     /**
-     * If both Flag.encounter and Flag.period are valued, then Flag.period.start shall not be before Encounter.period.start and Flag.period.end shall not be after Encounter.period.end.
+     * The patient, location, group, organization, or practitioner etc. this is about record this flag is associated with.
      */
-    encounter?: fhir.Reference | undefined;
-    /**
-     * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
-     */
-    identifier?: fhir.Identifier[] | undefined;
+    subject: fhir.Reference | null;
     /**
      * The period of time from the activation of the flag to inactivation of the flag. If the flag is active, the end of the period should be unspecified.
      */
     period?: fhir.Period | undefined;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
+     * If both Flag.encounter and Flag.period are valued, then Flag.period.start shall not be before Encounter.period.start and Flag.period.end shall not be after Encounter.period.end.
      */
-    status: FlagStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
+    encounter?: fhir.Reference | undefined;
     /**
-     * The patient, location, group, organization, or practitioner etc. this is about record this flag is associated with.
+     * The person, organization or device that created the flag.
      */
-    subject: fhir.Reference | null;
+    author?: fhir.Reference | undefined;
     /**
      * Default constructor for Flag - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IFlag>);
+    constructor(source?: Partial<IFlag>);
     /**
-     * Check if the current Flag contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): FlagStatusValueSetType;
     /**
-     * Factory function to create a Flag from an object that MUST contain all required elements.
+     * Example-bound Value Set for category
      */
-    static fromStrict(source: fhir.IFlag): Flag;
-}
-/**
- * Code Values for the Flag.status field
- */
-export declare enum FlagStatusEnum {
-    ACTIVE = "active",
-    INACTIVE = "inactive",
-    ENTERED_IN_ERROR = "entered-in-error"
+    categoryExampleValueSet(): FlagCategoryValueSetType;
+    /**
+     * Example-bound Value Set for code
+     */
+    codeExampleValueSet(): FlagCodeValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=Flag.d.ts.map

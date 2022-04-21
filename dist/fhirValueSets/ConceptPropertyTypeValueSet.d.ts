@@ -1,35 +1,72 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of a property value.
  */
 export declare const ConceptPropertyTypeValueSet: {
     /**
-     * The property value is a boolean true | false.
+     * boolean: The property value is a boolean true | false.
      */
-    concept_property_type_Boolean: Coding;
+    readonly VALBoolean: Coding;
     /**
-     * The property value is a code that identifies a concept defined in the code system.
+     * code: The property value is a code that identifies a concept defined in the code system.
      */
-    concept_property_type_CodeInternalReference: Coding;
+    readonly CodeInternalReference: Coding;
     /**
-     * The property  value is a code defined in an external code system. This may be used for translations, but is not the intent.
+     * Coding: The property  value is a code defined in an external code system. This may be used for translations, but is not the intent.
      */
-    concept_property_type_CodingExternalReference: Coding;
+    readonly CodingExternalReference: Coding;
     /**
-     * The property is a date or a date + time.
+     * dateTime: The property is a date or a date + time.
      */
-    concept_property_type_DateTime: Coding;
+    readonly DateTime: Coding;
     /**
-     * The property value is a decimal number.
+     * decimal: The property value is a decimal number.
      */
-    concept_property_type_Decimal: Coding;
+    readonly Decimal: Coding;
     /**
-     * The property value is a string (often used to assign ranking values to concepts for supporting score assessments).
+     * integer: The property value is a string (often used to assign ranking values to concepts for supporting score assessments).
      */
-    concept_property_type_Integer: Coding;
+    readonly Integer: Coding;
     /**
-     * The property value is a string.
+     * string: The property value is a string.
      */
-    concept_property_type_String: Coding;
+    readonly VALString: Coding;
 };
+/**
+ * The type of a property value.
+ */
+export declare type ConceptPropertyTypeValueSetType = typeof ConceptPropertyTypeValueSet;
+/**
+ * The type of a property value.
+ */
+export declare enum ConceptPropertyTypeValueSetEnum {
+    /**
+     * boolean: The property value is a boolean true | false.
+     */
+    VALBoolean = "boolean",
+    /**
+     * code: The property value is a code that identifies a concept defined in the code system.
+     */
+    CodeInternalReference = "code",
+    /**
+     * Coding: The property  value is a code defined in an external code system. This may be used for translations, but is not the intent.
+     */
+    CodingExternalReference = "Coding",
+    /**
+     * dateTime: The property is a date or a date + time.
+     */
+    DateTime = "dateTime",
+    /**
+     * decimal: The property value is a decimal number.
+     */
+    Decimal = "decimal",
+    /**
+     * integer: The property value is a string (often used to assign ranking values to concepts for supporting score assessments).
+     */
+    Integer = "integer",
+    /**
+     * string: The property value is a string.
+     */
+    VALString = "string"
+}
 //# sourceMappingURL=ConceptPropertyTypeValueSet.d.ts.map

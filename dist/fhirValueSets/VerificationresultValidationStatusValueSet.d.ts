@@ -1,13 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Status of the validation of the target against the primary source
  */
 export declare const VerificationresultValidationStatusValueSet: {
-    verificationresult_validation_status_Failed: Coding;
-    verificationresult_validation_status_Successful: Coding;
     /**
-     * The validations status has not been determined yet
+     * Code: failed
      */
-    verificationresult_validation_status_Unknown: Coding;
+    readonly Failed: Coding;
+    /**
+     * Code: successful
+     */
+    readonly Successful: Coding;
+    /**
+     * unknown: The validations status has not been determined yet
+     */
+    readonly Unknown: Coding;
 };
+/**
+ * Status of the validation of the target against the primary source
+ */
+export declare type VerificationresultValidationStatusValueSetType = typeof VerificationresultValidationStatusValueSet;
+/**
+ * Status of the validation of the target against the primary source
+ */
+export declare enum VerificationresultValidationStatusValueSetEnum {
+    /**
+     * Code: failed
+     */
+    Failed = "failed",
+    /**
+     * Code: successful
+     */
+    Successful = "successful",
+    /**
+     * unknown: The validations status has not been determined yet
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=VerificationresultValidationStatusValueSet.d.ts.map

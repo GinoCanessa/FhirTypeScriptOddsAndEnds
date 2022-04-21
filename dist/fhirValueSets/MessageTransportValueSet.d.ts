@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The protocol used for message transport.
  */
 export declare const MessageTransportValueSet: {
     /**
-     * The application sends or receives messages using File Transfer Protocol.
+     * ftp: The application sends or receives messages using File Transfer Protocol.
      */
-    message_transport_FTP: Coding;
+    readonly FTP: Coding;
     /**
-     * The application sends or receives messages using HTTP POST (may be over http: or https:).
+     * http: The application sends or receives messages using HTTP POST (may be over http: or https:).
      */
-    message_transport_HTTP: Coding;
+    readonly HTTP: Coding;
     /**
-     * The application sends or receives messages using HL7's Minimal Lower Level Protocol.
+     * mllp: The application sends or receives messages using HL7's Minimal Lower Level Protocol.
      */
-    message_transport_MLLP: Coding;
+    readonly MLLP: Coding;
 };
+/**
+ * The protocol used for message transport.
+ */
+export declare type MessageTransportValueSetType = typeof MessageTransportValueSet;
+/**
+ * The protocol used for message transport.
+ */
+export declare enum MessageTransportValueSetEnum {
+    /**
+     * ftp: The application sends or receives messages using File Transfer Protocol.
+     */
+    FTP = "ftp",
+    /**
+     * http: The application sends or receives messages using HTTP POST (may be over http: or https:).
+     */
+    HTTP = "http",
+    /**
+     * mllp: The application sends or receives messages using HL7's Minimal Lower Level Protocol.
+     */
+    MLLP = "mllp"
+}
 //# sourceMappingURL=MessageTransportValueSet.d.ts.map

@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Indicates the state of the consent.
  */
 export declare const ConsentStateCodesValueSet: {
     /**
-     * The consent is to be followed and enforced.
+     * active: The consent is to be followed and enforced.
      */
-    consent_state_codes_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The consent is in development or awaiting use but is not yet intended to be acted upon.
+     * draft: The consent is in development or awaiting use but is not yet intended to be acted upon.
      */
-    consent_state_codes_Pending: Coding;
+    readonly Pending: Coding;
     /**
-     * The consent was created wrongly (e.g. wrong patient) and should be ignored.
+     * entered-in-error: The consent was created wrongly (e.g. wrong patient) and should be ignored.
      */
-    consent_state_codes_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The consent is terminated or replaced.
+     * inactive: The consent is terminated or replaced.
      */
-    consent_state_codes_Inactive: Coding;
+    readonly Inactive: Coding;
     /**
-     * The consent has been proposed but not yet agreed to by all parties. The negotiation stage.
+     * proposed: The consent has been proposed but not yet agreed to by all parties. The negotiation stage.
      */
-    consent_state_codes_Proposed: Coding;
+    readonly Proposed: Coding;
     /**
-     * The consent has been rejected by one or more of the parties.
+     * rejected: The consent has been rejected by one or more of the parties.
      */
-    consent_state_codes_Rejected: Coding;
+    readonly Rejected: Coding;
 };
+/**
+ * Indicates the state of the consent.
+ */
+export declare type ConsentStateCodesValueSetType = typeof ConsentStateCodesValueSet;
+/**
+ * Indicates the state of the consent.
+ */
+export declare enum ConsentStateCodesValueSetEnum {
+    /**
+     * active: The consent is to be followed and enforced.
+     */
+    Active = "active",
+    /**
+     * draft: The consent is in development or awaiting use but is not yet intended to be acted upon.
+     */
+    Pending = "draft",
+    /**
+     * entered-in-error: The consent was created wrongly (e.g. wrong patient) and should be ignored.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * inactive: The consent is terminated or replaced.
+     */
+    Inactive = "inactive",
+    /**
+     * proposed: The consent has been proposed but not yet agreed to by all parties. The negotiation stage.
+     */
+    Proposed = "proposed",
+    /**
+     * rejected: The consent has been rejected by one or more of the parties.
+     */
+    Rejected = "rejected"
+}
 //# sourceMappingURL=ConsentStateCodesValueSet.d.ts.map

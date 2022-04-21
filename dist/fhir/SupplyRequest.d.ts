@@ -1,4 +1,9 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { SupplyrequestStatusValueSetType, SupplyrequestStatusValueSetEnum } from '../fhirValueSets/SupplyrequestStatusValueSet.js';
+import { SupplyrequestKindValueSetType } from '../fhirValueSets/SupplyrequestKindValueSet.js';
+import { RequestPriorityValueSetType, RequestPriorityValueSetEnum } from '../fhirValueSets/RequestPriorityValueSet.js';
+import { SupplyItemValueSetType } from '../fhirValueSets/SupplyItemValueSet.js';
+import { SupplyrequestReasonValueSetType } from '../fhirValueSets/SupplyrequestReasonValueSet.js';
 /**
  * Specific parameters for the ordered item.  For example, the size of the indicated item.
  */
@@ -23,6 +28,9 @@ export declare type ISupplyRequestParameter = fhir.IBackboneElement & {
      * Range means device should have a value that falls somewhere within the specified range.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: SupplyRequest.parameter.value[x]
+     */
     _valueBoolean?: fhir.IFhirElement | undefined;
 };
 /**
@@ -34,26 +42,29 @@ export declare type ISupplyRequest = fhir.IDomainResource & {
      */
     resourceType: "SupplyRequest";
     /**
-     * When the request was made.
+     * The identifier.type element is used to distinguish between the identifiers assigned by the requester/placer and the performer/filler.
      */
-    authoredOn?: string | undefined;
-    _authoredOn?: fhir.IFhirElement | undefined;
+    identifier?: fhir.IIdentifier[] | undefined;
+    /**
+     * Status of the supply request.
+     */
+    status?: SupplyrequestStatusValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: SupplyRequest.status
+     */
+    _status?: fhir.IFhirElement | undefined;
     /**
      * Category of supply, e.g.  central, non-stock, etc. This is used to support work flows associated with the supply process.
      */
     category?: fhir.ICodeableConcept | undefined;
     /**
-     * Where the supply is expected to come from.
+     * Indicates how quickly this SupplyRequest should be addressed with respect to other requests.
      */
-    deliverFrom?: fhir.IReference | undefined;
+    priority?: RequestPriorityValueSetEnum | undefined;
     /**
-     * Where the supply is destined to go.
+     * Extended properties for primitive element: SupplyRequest.priority
      */
-    deliverTo?: fhir.IReference | undefined;
-    /**
-     * The identifier.type element is used to distinguish between the identifiers assigned by the requester/placer and the performer/filler.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
+    _priority?: fhir.IFhirElement | undefined;
     /**
      * Note that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.
      */
@@ -63,9 +74,20 @@ export declare type ISupplyRequest = fhir.IDomainResource & {
      */
     itemReference?: fhir.IReference | undefined;
     /**
+     * The amount that is being ordered of the indicated item.
+     */
+    quantity: fhir.IQuantity | null;
+    /**
+     * Specific parameters for the ordered item.  For example, the size of the indicated item.
+     */
+    parameter?: fhir.ISupplyRequestParameter[] | undefined;
+    /**
      * When the request should be fulfilled.
      */
     occurrenceDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: SupplyRequest.occurrence[x]
+     */
     _occurrenceDateTime?: fhir.IFhirElement | undefined;
     /**
      * When the request should be fulfilled.
@@ -76,18 +98,21 @@ export declare type ISupplyRequest = fhir.IDomainResource & {
      */
     occurrenceTiming?: fhir.ITiming | undefined;
     /**
-     * Specific parameters for the ordered item.  For example, the size of the indicated item.
+     * When the request was made.
      */
-    parameter?: fhir.ISupplyRequestParameter[] | undefined;
+    authoredOn?: string | undefined;
     /**
-     * Indicates how quickly this SupplyRequest should be addressed with respect to other requests.
+     * Extended properties for primitive element: SupplyRequest.authoredOn
      */
-    priority?: SupplyRequestPriorityEnum | undefined;
-    _priority?: fhir.IFhirElement | undefined;
+    _authoredOn?: fhir.IFhirElement | undefined;
     /**
-     * The amount that is being ordered of the indicated item.
+     * The device, practitioner, etc. who initiated the request.
      */
-    quantity: fhir.IQuantity | null;
+    requester?: fhir.IReference | undefined;
+    /**
+     * Who is intended to fulfill the request.
+     */
+    supplier?: fhir.IReference[] | undefined;
     /**
      * The reason why the supply item was requested.
      */
@@ -97,23 +122,18 @@ export declare type ISupplyRequest = fhir.IDomainResource & {
      */
     reasonReference?: fhir.IReference[] | undefined;
     /**
-     * The device, practitioner, etc. who initiated the request.
+     * Where the supply is expected to come from.
      */
-    requester?: fhir.IReference | undefined;
+    deliverFrom?: fhir.IReference | undefined;
     /**
-     * Status of the supply request.
+     * Where the supply is destined to go.
      */
-    status?: SupplyRequestStatusEnum | undefined;
-    _status?: fhir.IFhirElement | undefined;
-    /**
-     * Who is intended to fulfill the request.
-     */
-    supplier?: fhir.IReference[] | undefined;
+    deliverTo?: fhir.IReference | undefined;
 };
 /**
  * Specific parameters for the ordered item.  For example, the size of the indicated item.
  */
-export declare class SupplyRequestParameter extends fhir.BackboneElement implements fhir.ISupplyRequestParameter {
+export declare class SupplyRequestParameter extends fhir.BackboneElement implements ISupplyRequestParameter {
     /**
      * A code or string that identifies the device detail being asserted.
      */
@@ -134,49 +154,51 @@ export declare class SupplyRequestParameter extends fhir.BackboneElement impleme
      * Range means device should have a value that falls somewhere within the specified range.
      */
     valueBoolean?: boolean | undefined;
+    /**
+     * Extended properties for primitive element: SupplyRequest.parameter.value[x]
+     */
     _valueBoolean?: fhir.FhirElement | undefined;
     /**
      * Default constructor for SupplyRequestParameter - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISupplyRequestParameter>);
+    constructor(source?: Partial<ISupplyRequestParameter>);
     /**
-     * Check if the current SupplyRequestParameter contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a SupplyRequestParameter from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.ISupplyRequestParameter): SupplyRequestParameter;
+    doModelValidation(): [string, string][];
 }
 /**
  * A record of a request for a medication, substance or device used in the healthcare setting.
  */
-export declare class SupplyRequest extends fhir.DomainResource implements fhir.ISupplyRequest {
+export declare class SupplyRequest extends fhir.DomainResource implements ISupplyRequest {
     /**
      * Resource Type Name
      */
     resourceType: "SupplyRequest";
     /**
-     * When the request was made.
+     * The identifier.type element is used to distinguish between the identifiers assigned by the requester/placer and the performer/filler.
      */
-    authoredOn?: string | undefined;
-    _authoredOn?: fhir.FhirElement | undefined;
+    identifier?: fhir.Identifier[] | undefined;
+    /**
+     * Status of the supply request.
+     */
+    status?: SupplyrequestStatusValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: SupplyRequest.status
+     */
+    _status?: fhir.FhirElement | undefined;
     /**
      * Category of supply, e.g.  central, non-stock, etc. This is used to support work flows associated with the supply process.
      */
     category?: fhir.CodeableConcept | undefined;
     /**
-     * Where the supply is expected to come from.
+     * Indicates how quickly this SupplyRequest should be addressed with respect to other requests.
      */
-    deliverFrom?: fhir.Reference | undefined;
+    priority?: RequestPriorityValueSetEnum | undefined;
     /**
-     * Where the supply is destined to go.
+     * Extended properties for primitive element: SupplyRequest.priority
      */
-    deliverTo?: fhir.Reference | undefined;
-    /**
-     * The identifier.type element is used to distinguish between the identifiers assigned by the requester/placer and the performer/filler.
-     */
-    identifier?: fhir.Identifier[] | undefined;
+    _priority?: fhir.FhirElement | undefined;
     /**
      * Note that there's a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions.
      */
@@ -186,9 +208,20 @@ export declare class SupplyRequest extends fhir.DomainResource implements fhir.I
      */
     itemReference?: fhir.Reference | undefined;
     /**
+     * The amount that is being ordered of the indicated item.
+     */
+    quantity: fhir.Quantity | null;
+    /**
+     * Specific parameters for the ordered item.  For example, the size of the indicated item.
+     */
+    parameter?: fhir.SupplyRequestParameter[] | undefined;
+    /**
      * When the request should be fulfilled.
      */
     occurrenceDateTime?: string | undefined;
+    /**
+     * Extended properties for primitive element: SupplyRequest.occurrence[x]
+     */
     _occurrenceDateTime?: fhir.FhirElement | undefined;
     /**
      * When the request should be fulfilled.
@@ -199,18 +232,21 @@ export declare class SupplyRequest extends fhir.DomainResource implements fhir.I
      */
     occurrenceTiming?: fhir.Timing | undefined;
     /**
-     * Specific parameters for the ordered item.  For example, the size of the indicated item.
+     * When the request was made.
      */
-    parameter?: fhir.SupplyRequestParameter[] | undefined;
+    authoredOn?: string | undefined;
     /**
-     * Indicates how quickly this SupplyRequest should be addressed with respect to other requests.
+     * Extended properties for primitive element: SupplyRequest.authoredOn
      */
-    priority?: SupplyRequestPriorityEnum | undefined;
-    _priority?: fhir.FhirElement | undefined;
+    _authoredOn?: fhir.FhirElement | undefined;
     /**
-     * The amount that is being ordered of the indicated item.
+     * The device, practitioner, etc. who initiated the request.
      */
-    quantity: fhir.Quantity | null;
+    requester?: fhir.Reference | undefined;
+    /**
+     * Who is intended to fulfill the request.
+     */
+    supplier?: fhir.Reference[] | undefined;
     /**
      * The reason why the supply item was requested.
      */
@@ -220,50 +256,44 @@ export declare class SupplyRequest extends fhir.DomainResource implements fhir.I
      */
     reasonReference?: fhir.Reference[] | undefined;
     /**
-     * The device, practitioner, etc. who initiated the request.
+     * Where the supply is expected to come from.
      */
-    requester?: fhir.Reference | undefined;
+    deliverFrom?: fhir.Reference | undefined;
     /**
-     * Status of the supply request.
+     * Where the supply is destined to go.
      */
-    status?: SupplyRequestStatusEnum | undefined;
-    _status?: fhir.FhirElement | undefined;
-    /**
-     * Who is intended to fulfill the request.
-     */
-    supplier?: fhir.Reference[] | undefined;
+    deliverTo?: fhir.Reference | undefined;
     /**
      * Default constructor for SupplyRequest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.ISupplyRequest>);
+    constructor(source?: Partial<ISupplyRequest>);
     /**
-     * Check if the current SupplyRequest contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): SupplyrequestStatusValueSetType;
     /**
-     * Factory function to create a SupplyRequest from an object that MUST contain all required elements.
+     * Example-bound Value Set for category
      */
-    static fromStrict(source: fhir.ISupplyRequest): SupplyRequest;
-}
-/**
- * Code Values for the SupplyRequest.priority field
- */
-export declare enum SupplyRequestPriorityEnum {
-    ROUTINE = "routine",
-    URGENT = "urgent",
-    ASAP = "asap",
-    STAT = "stat"
-}
-/**
- * Code Values for the SupplyRequest.status field
- */
-export declare enum SupplyRequestStatusEnum {
-    DRAFT = "draft",
-    ACTIVE = "active",
-    SUSPENDED = "suspended",
-    CANCELLED = "cancelled",
-    COMPLETED = "completed",
-    ENTERED_IN_ERROR = "entered-in-error",
-    UNKNOWN = "unknown"
+    categoryExampleValueSet(): SupplyrequestKindValueSetType;
+    /**
+     * Required-bound Value Set for priority
+     */
+    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    /**
+     * Example-bound Value Set for itemCodeableConcept
+     */
+    itemCodeableConceptExampleValueSet(): SupplyItemValueSetType;
+    /**
+     * Example-bound Value Set for itemReference
+     */
+    itemReferenceExampleValueSet(): SupplyItemValueSetType;
+    /**
+     * Example-bound Value Set for reasonCode
+     */
+    reasonCodeExampleValueSet(): SupplyrequestReasonValueSetType;
+    /**
+     * Function to perform basic model validation (e.g., check if required elements are present).
+     */
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=SupplyRequest.d.ts.map

@@ -1,35 +1,72 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Whether the effect estimate is an absolute effect estimate (absolute difference) or a relative effect estimate (relative difference), and the specific type of effect estimate (eg relative risk or median difference).
  */
 export declare const EffectEstimateTypeValueSet: {
     /**
-     * absolute risk difference (a type of absolute effect estimate).
+     * absolute-ARD: absolute risk difference (a type of absolute effect estimate).
      */
-    effect_estimate_type_AbsoluteRiskDifference: Coding;
+    readonly AbsoluteRiskDifference: Coding;
     /**
-     * mean difference (a type of absolute effect estimate).
+     * absolute-MeanDiff: mean difference (a type of absolute effect estimate).
      */
-    effect_estimate_type_MeanDifference: Coding;
+    readonly MeanDifference: Coding;
     /**
-     * median difference (a type of absolute effect estimate).
+     * absolute-MedianDiff: median difference (a type of absolute effect estimate).
      */
-    effect_estimate_type_MedianDifference: Coding;
+    readonly MedianDifference: Coding;
     /**
-     * standardized mean difference (a type of absolute effect estimate).
+     * absolute-SMD: standardized mean difference (a type of absolute effect estimate).
      */
-    effect_estimate_type_StandardizedMeanDifference: Coding;
+    readonly StandardizedMeanDifference: Coding;
     /**
-     * hazard ratio (a type of relative effect estimate).
+     * relative-HR: hazard ratio (a type of relative effect estimate).
      */
-    effect_estimate_type_HazardRatio: Coding;
+    readonly HazardRatio: Coding;
     /**
-     * odds ratio (a type of relative effect estimate).
+     * relative-OR: odds ratio (a type of relative effect estimate).
      */
-    effect_estimate_type_OddsRatio: Coding;
+    readonly OddsRatio: Coding;
     /**
-     * relative risk (a type of relative effect estimate).
+     * relative-RR: relative risk (a type of relative effect estimate).
      */
-    effect_estimate_type_RelativeRisk: Coding;
+    readonly RelativeRisk: Coding;
 };
+/**
+ * Whether the effect estimate is an absolute effect estimate (absolute difference) or a relative effect estimate (relative difference), and the specific type of effect estimate (eg relative risk or median difference).
+ */
+export declare type EffectEstimateTypeValueSetType = typeof EffectEstimateTypeValueSet;
+/**
+ * Whether the effect estimate is an absolute effect estimate (absolute difference) or a relative effect estimate (relative difference), and the specific type of effect estimate (eg relative risk or median difference).
+ */
+export declare enum EffectEstimateTypeValueSetEnum {
+    /**
+     * absolute-ARD: absolute risk difference (a type of absolute effect estimate).
+     */
+    AbsoluteRiskDifference = "absolute-ARD",
+    /**
+     * absolute-MeanDiff: mean difference (a type of absolute effect estimate).
+     */
+    MeanDifference = "absolute-MeanDiff",
+    /**
+     * absolute-MedianDiff: median difference (a type of absolute effect estimate).
+     */
+    MedianDifference = "absolute-MedianDiff",
+    /**
+     * absolute-SMD: standardized mean difference (a type of absolute effect estimate).
+     */
+    StandardizedMeanDifference = "absolute-SMD",
+    /**
+     * relative-HR: hazard ratio (a type of relative effect estimate).
+     */
+    HazardRatio = "relative-HR",
+    /**
+     * relative-OR: odds ratio (a type of relative effect estimate).
+     */
+    OddsRatio = "relative-OR",
+    /**
+     * relative-RR: relative risk (a type of relative effect estimate).
+     */
+    RelativeRisk = "relative-RR"
+}
 //# sourceMappingURL=EffectEstimateTypeValueSet.d.ts.map

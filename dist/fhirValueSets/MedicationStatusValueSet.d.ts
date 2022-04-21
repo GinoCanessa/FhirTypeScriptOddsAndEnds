@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Medication Status Codes
  */
 export declare const MedicationStatusValueSet: {
     /**
-     * The medication is available for use.
+     * active: The medication is available for use.
      */
-    medication_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * The medication was entered in error.
+     * entered-in-error: The medication was entered in error.
      */
-    medication_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The medication is not available for use.
+     * inactive: The medication is not available for use.
      */
-    medication_status_Inactive: Coding;
+    readonly Inactive: Coding;
 };
+/**
+ * Medication Status Codes
+ */
+export declare type MedicationStatusValueSetType = typeof MedicationStatusValueSet;
+/**
+ * Medication Status Codes
+ */
+export declare enum MedicationStatusValueSetEnum {
+    /**
+     * active: The medication is available for use.
+     */
+    Active = "active",
+    /**
+     * entered-in-error: The medication was entered in error.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * inactive: The medication is not available for use.
+     */
+    Inactive = "inactive"
+}
 //# sourceMappingURL=MedicationStatusValueSet.d.ts.map

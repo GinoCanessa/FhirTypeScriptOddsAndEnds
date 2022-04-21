@@ -1,110 +1,110 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Real world event relating to the schedule.
  */
 export declare const EventTimingValueSet: {
     /**
-     * before meal (from lat. ante cibus)
+     * AC: before meal (from lat. ante cibus)
      */
-    v3_TimingEvent_AC: Coding;
+    readonly AC: Coding;
     /**
-     * before lunch (from lat. ante cibus diurnus)
+     * ACD: before lunch (from lat. ante cibus diurnus)
      */
-    v3_TimingEvent_ACD: Coding;
+    readonly ACD: Coding;
     /**
-     * before breakfast (from lat. ante cibus matutinus)
+     * ACM: before breakfast (from lat. ante cibus matutinus)
      */
-    v3_TimingEvent_ACM: Coding;
+    readonly ACM: Coding;
     /**
-     * before dinner (from lat. ante cibus vespertinus)
+     * ACV: before dinner (from lat. ante cibus vespertinus)
      */
-    v3_TimingEvent_ACV: Coding;
+    readonly ACV: Coding;
     /**
-     * Event occurs during the afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
+     * AFT: Event occurs during the afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_Afternoon: Coding;
+    readonly Afternoon: Coding;
     /**
-     * Event occurs during the early afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
+     * AFT.early: Event occurs during the early afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_EarlyAfternoon: Coding;
+    readonly EarlyAfternoon: Coding;
     /**
-     * Event occurs during the late afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
+     * AFT.late: Event occurs during the late afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_LateAfternoon: Coding;
+    readonly LateAfternoon: Coding;
     /**
-     * Description: meal (from lat. ante cibus)
+     * C: Description: meal (from lat. ante cibus)
      */
-    v3_TimingEvent_C: Coding;
+    readonly C: Coding;
     /**
-     * Description: lunch (from lat. cibus diurnus)
+     * CD: Description: lunch (from lat. cibus diurnus)
      */
-    v3_TimingEvent_CD: Coding;
+    readonly CD: Coding;
     /**
-     * Description: breakfast (from lat. cibus matutinus)
+     * CM: Description: breakfast (from lat. cibus matutinus)
      */
-    v3_TimingEvent_CM: Coding;
+    readonly CM: Coding;
     /**
-     * Description: dinner (from lat. cibus vespertinus)
+     * CV: Description: dinner (from lat. cibus vespertinus)
      */
-    v3_TimingEvent_CV: Coding;
+    readonly CV: Coding;
     /**
-     * Event occurs during the evening. The exact time is unspecified and established by institution convention or patient interpretation.
+     * EVE: Event occurs during the evening. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_Evening: Coding;
+    readonly Evening: Coding;
     /**
-     * Event occurs during the early evening. The exact time is unspecified and established by institution convention or patient interpretation.
+     * EVE.early: Event occurs during the early evening. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_EarlyEvening: Coding;
+    readonly EarlyEvening: Coding;
     /**
-     * Event occurs during the late evening. The exact time is unspecified and established by institution convention or patient interpretation.
+     * EVE.late: Event occurs during the late evening. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_LateEvening: Coding;
+    readonly LateEvening: Coding;
     /**
-     * Description: Prior to beginning a regular period of extended sleep (this would exclude naps).  Note that this might occur at different times of day depending on a person's regular sleep schedule.
+     * HS: Description: Prior to beginning a regular period of extended sleep (this would exclude naps).  Note that this might occur at different times of day depending on a person's regular sleep schedule.
      */
-    v3_TimingEvent_HS: Coding;
+    readonly HS: Coding;
     /**
-     * Event occurs during the morning. The exact time is unspecified and established by institution convention or patient interpretation.
+     * MORN: Event occurs during the morning. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_Morning: Coding;
+    readonly Morning: Coding;
     /**
-     * Event occurs during the early morning. The exact time is unspecified and established by institution convention or patient interpretation.
+     * MORN.early: Event occurs during the early morning. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_EarlyMorning: Coding;
+    readonly EarlyMorning: Coding;
     /**
-     * Event occurs during the late morning. The exact time is unspecified and established by institution convention or patient interpretation.
+     * MORN.late: Event occurs during the late morning. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_LateMorning: Coding;
+    readonly LateMorning: Coding;
     /**
-     * Event occurs during the night. The exact time is unspecified and established by institution convention or patient interpretation.
+     * NIGHT: Event occurs during the night. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_Night: Coding;
+    readonly Night: Coding;
     /**
-     * Event occurs around 12:00pm. The exact time is unspecified and established by institution convention or patient interpretation.
+     * NOON: Event occurs around 12:00pm. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_Noon: Coding;
+    readonly Noon: Coding;
     /**
-     * after meal (from lat. post cibus)
+     * PC: after meal (from lat. post cibus)
      */
-    v3_TimingEvent_PC: Coding;
+    readonly PC: Coding;
     /**
-     * after lunch (from lat. post cibus diurnus)
+     * PCD: after lunch (from lat. post cibus diurnus)
      */
-    v3_TimingEvent_PCD: Coding;
+    readonly PCD: Coding;
     /**
-     * after breakfast (from lat. post cibus matutinus)
+     * PCM: after breakfast (from lat. post cibus matutinus)
      */
-    v3_TimingEvent_PCM: Coding;
+    readonly PCM: Coding;
     /**
-     * after dinner (from lat. post cibus vespertinus)
+     * PCV: after dinner (from lat. post cibus vespertinus)
      */
-    v3_TimingEvent_PCV: Coding;
+    readonly PCV: Coding;
     /**
-     * Event occurs [offset] after subject goes to sleep. The exact time is unspecified and established by institution convention or patient interpretation.
+     * PHS: Event occurs [offset] after subject goes to sleep. The exact time is unspecified and established by institution convention or patient interpretation.
      */
-    event_timing_AfterSleep: Coding;
+    readonly AfterSleep: Coding;
     /**
-     * Description: Upon waking up from a regular period of sleep, in order to start regular activities (this would exclude waking up from a nap or temporarily waking up during a period of sleep)
+     * WAKE: Description: Upon waking up from a regular period of sleep, in order to start regular activities (this would exclude waking up from a nap or temporarily waking up during a period of sleep)
      *
      *
      *                            Usage Notes: e.g.
@@ -115,6 +115,128 @@ export declare const EventTimingValueSet: {
      *
      *                         Take basal body temperature on waking in establishing date of ovulation
      */
-    v3_TimingEvent_WAKE: Coding;
+    readonly WAKE: Coding;
 };
+/**
+ * Real world event relating to the schedule.
+ */
+export declare type EventTimingValueSetType = typeof EventTimingValueSet;
+/**
+ * Real world event relating to the schedule.
+ */
+export declare enum EventTimingValueSetEnum {
+    /**
+     * AC: before meal (from lat. ante cibus)
+     */
+    AC = "AC",
+    /**
+     * ACD: before lunch (from lat. ante cibus diurnus)
+     */
+    ACD = "ACD",
+    /**
+     * ACM: before breakfast (from lat. ante cibus matutinus)
+     */
+    ACM = "ACM",
+    /**
+     * ACV: before dinner (from lat. ante cibus vespertinus)
+     */
+    ACV = "ACV",
+    /**
+     * AFT: Event occurs during the afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    Afternoon = "AFT",
+    /**
+     * AFT.early: Event occurs during the early afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    EarlyAfternoon = "AFT.early",
+    /**
+     * AFT.late: Event occurs during the late afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    LateAfternoon = "AFT.late",
+    /**
+     * C: Description: meal (from lat. ante cibus)
+     */
+    C = "C",
+    /**
+     * CD: Description: lunch (from lat. cibus diurnus)
+     */
+    CD = "CD",
+    /**
+     * CM: Description: breakfast (from lat. cibus matutinus)
+     */
+    CM = "CM",
+    /**
+     * CV: Description: dinner (from lat. cibus vespertinus)
+     */
+    CV = "CV",
+    /**
+     * EVE: Event occurs during the evening. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    Evening = "EVE",
+    /**
+     * EVE.early: Event occurs during the early evening. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    EarlyEvening = "EVE.early",
+    /**
+     * EVE.late: Event occurs during the late evening. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    LateEvening = "EVE.late",
+    /**
+     * HS: Description: Prior to beginning a regular period of extended sleep (this would exclude naps).  Note that this might occur at different times of day depending on a person's regular sleep schedule.
+     */
+    HS = "HS",
+    /**
+     * MORN: Event occurs during the morning. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    Morning = "MORN",
+    /**
+     * MORN.early: Event occurs during the early morning. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    EarlyMorning = "MORN.early",
+    /**
+     * MORN.late: Event occurs during the late morning. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    LateMorning = "MORN.late",
+    /**
+     * NIGHT: Event occurs during the night. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    Night = "NIGHT",
+    /**
+     * NOON: Event occurs around 12:00pm. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    Noon = "NOON",
+    /**
+     * PC: after meal (from lat. post cibus)
+     */
+    PC = "PC",
+    /**
+     * PCD: after lunch (from lat. post cibus diurnus)
+     */
+    PCD = "PCD",
+    /**
+     * PCM: after breakfast (from lat. post cibus matutinus)
+     */
+    PCM = "PCM",
+    /**
+     * PCV: after dinner (from lat. post cibus vespertinus)
+     */
+    PCV = "PCV",
+    /**
+     * PHS: Event occurs [offset] after subject goes to sleep. The exact time is unspecified and established by institution convention or patient interpretation.
+     */
+    AfterSleep = "PHS",
+    /**
+     * WAKE: Description: Upon waking up from a regular period of sleep, in order to start regular activities (this would exclude waking up from a nap or temporarily waking up during a period of sleep)
+     *
+     *
+     *                            Usage Notes: e.g.
+     *
+     *                         Take pulse rate on waking in management of thyrotoxicosis.
+     *
+     *                         Take BP on waking in management of hypertension
+     *
+     *                         Take basal body temperature on waking in establishing date of ovulation
+     */
+    WAKE = "WAKE"
+}
 //# sourceMappingURL=EventTimingValueSet.d.ts.map

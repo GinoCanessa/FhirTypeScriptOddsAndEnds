@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The status of the measure report.
  */
 export declare const MeasureReportStatusValueSet: {
     /**
-     * The report is complete and ready for use.
+     * complete: The report is complete and ready for use.
      */
-    measure_report_status_Complete: Coding;
+    readonly Complete: Coding;
     /**
-     * An error occurred attempting to generate the report.
+     * error: An error occurred attempting to generate the report.
      */
-    measure_report_status_Error: Coding;
+    readonly Error: Coding;
     /**
-     * The report is currently being generated.
+     * pending: The report is currently being generated.
      */
-    measure_report_status_Pending: Coding;
+    readonly Pending: Coding;
 };
+/**
+ * The status of the measure report.
+ */
+export declare type MeasureReportStatusValueSetType = typeof MeasureReportStatusValueSet;
+/**
+ * The status of the measure report.
+ */
+export declare enum MeasureReportStatusValueSetEnum {
+    /**
+     * complete: The report is complete and ready for use.
+     */
+    Complete = "complete",
+    /**
+     * error: An error occurred attempting to generate the report.
+     */
+    Error = "error",
+    /**
+     * pending: The report is currently being generated.
+     */
+    Pending = "pending"
+}
 //# sourceMappingURL=MeasureReportStatusValueSet.d.ts.map

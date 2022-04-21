@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The status of a guidance response.
  */
 export declare const GuidanceResponseStatusValueSet: {
     /**
-     * The request was processed successfully, but more data may result in a more complete evaluation.
+     * data-requested: The request was processed successfully, but more data may result in a more complete evaluation.
      */
-    guidance_response_status_DataRequested: Coding;
+    readonly DataRequested: Coding;
     /**
-     * The request was processed, but more data is required to complete the evaluation.
+     * data-required: The request was processed, but more data is required to complete the evaluation.
      */
-    guidance_response_status_DataRequired: Coding;
+    readonly DataRequired: Coding;
     /**
-     * The response was entered in error.
+     * entered-in-error: The response was entered in error.
      */
-    guidance_response_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The request was not processed successfully.
+     * failure: The request was not processed successfully.
      */
-    guidance_response_status_Failure: Coding;
+    readonly Failure: Coding;
     /**
-     * The request is currently being processed.
+     * in-progress: The request is currently being processed.
      */
-    guidance_response_status_InProgress: Coding;
+    readonly InProgress: Coding;
     /**
-     * The request was processed successfully.
+     * success: The request was processed successfully.
      */
-    guidance_response_status_Success: Coding;
+    readonly Success: Coding;
 };
+/**
+ * The status of a guidance response.
+ */
+export declare type GuidanceResponseStatusValueSetType = typeof GuidanceResponseStatusValueSet;
+/**
+ * The status of a guidance response.
+ */
+export declare enum GuidanceResponseStatusValueSetEnum {
+    /**
+     * data-requested: The request was processed successfully, but more data may result in a more complete evaluation.
+     */
+    DataRequested = "data-requested",
+    /**
+     * data-required: The request was processed, but more data is required to complete the evaluation.
+     */
+    DataRequired = "data-required",
+    /**
+     * entered-in-error: The response was entered in error.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * failure: The request was not processed successfully.
+     */
+    Failure = "failure",
+    /**
+     * in-progress: The request is currently being processed.
+     */
+    InProgress = "in-progress",
+    /**
+     * success: The request was processed successfully.
+     */
+    Success = "success"
+}
 //# sourceMappingURL=GuidanceResponseStatusValueSet.d.ts.map

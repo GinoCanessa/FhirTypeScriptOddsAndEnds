@@ -1,4 +1,4 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * Characteristics e.g. a products onset of action.
  */
@@ -17,11 +17,6 @@ export declare type IMedicinalProductPharmaceuticalCharacteristics = fhir.IBackb
  */
 export declare type IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod = fhir.IBackboneElement & {
     /**
-     * Extra information about the withdrawal period.
-     */
-    supportingInformation?: string | undefined;
-    _supportingInformation?: fhir.IFhirElement | undefined;
-    /**
      * Coded expression for the type of tissue for which the withdrawal period applues, e.g. meat, milk.
      */
     tissue: fhir.ICodeableConcept | null;
@@ -29,6 +24,14 @@ export declare type IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSp
      * A value for the time.
      */
     value: fhir.IQuantity | null;
+    /**
+     * Extra information about the withdrawal period.
+     */
+    supportingInformation?: string | undefined;
+    /**
+     * Extended properties for primitive element: MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation
+     */
+    _supportingInformation?: fhir.IFhirElement | undefined;
 };
 /**
  * A species for which this route applies.
@@ -56,6 +59,10 @@ export declare type IMedicinalProductPharmaceuticalRouteOfAdministration = fhir.
      */
     firstDose?: fhir.IQuantity | undefined;
     /**
+     * The maximum single dose that can be administered as per the protocol of a clinical trial can be specified using a numerical value and its unit of measurement.
+     */
+    maxSingleDose?: fhir.IQuantity | undefined;
+    /**
      * The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered as per the protocol referenced in the clinical trial authorisation.
      */
     maxDosePerDay?: fhir.IQuantity | undefined;
@@ -63,10 +70,6 @@ export declare type IMedicinalProductPharmaceuticalRouteOfAdministration = fhir.
      * The maximum dose per treatment period that can be administered as per the protocol referenced in the clinical trial authorisation.
      */
     maxDosePerTreatmentPeriod?: fhir.IRatio | undefined;
-    /**
-     * The maximum single dose that can be administered as per the protocol of a clinical trial can be specified using a numerical value and its unit of measurement.
-     */
-    maxSingleDose?: fhir.IQuantity | undefined;
     /**
      * The maximum treatment period during which an Investigational Medicinal Product can be administered as per the protocol referenced in the clinical trial authorisation.
      */
@@ -85,38 +88,38 @@ export declare type IMedicinalProductPharmaceutical = fhir.IDomainResource & {
      */
     resourceType: "MedicinalProductPharmaceutical";
     /**
+     * An identifier for the pharmaceutical medicinal product.
+     */
+    identifier?: fhir.IIdentifier[] | undefined;
+    /**
      * The administrable dose form, after necessary reconstitution.
      */
     administrableDoseForm: fhir.ICodeableConcept | null;
     /**
-     * Characteristics e.g. a products onset of action.
+     * Todo.
      */
-    characteristics?: fhir.IMedicinalProductPharmaceuticalCharacteristics[] | undefined;
-    /**
-     * Accompanying device.
-     */
-    device?: fhir.IReference[] | undefined;
-    /**
-     * An identifier for the pharmaceutical medicinal product.
-     */
-    identifier?: fhir.IIdentifier[] | undefined;
+    unitOfPresentation?: fhir.ICodeableConcept | undefined;
     /**
      * Ingredient.
      */
     ingredient?: fhir.IReference[] | undefined;
     /**
+     * Accompanying device.
+     */
+    device?: fhir.IReference[] | undefined;
+    /**
+     * Characteristics e.g. a products onset of action.
+     */
+    characteristics?: fhir.IMedicinalProductPharmaceuticalCharacteristics[] | undefined;
+    /**
      * The path by which the pharmaceutical product is taken into or makes contact with the body.
      */
     routeOfAdministration: fhir.IMedicinalProductPharmaceuticalRouteOfAdministration[] | null;
-    /**
-     * Todo.
-     */
-    unitOfPresentation?: fhir.ICodeableConcept | undefined;
 };
 /**
  * Characteristics e.g. a products onset of action.
  */
-export declare class MedicinalProductPharmaceuticalCharacteristics extends fhir.BackboneElement implements fhir.IMedicinalProductPharmaceuticalCharacteristics {
+export declare class MedicinalProductPharmaceuticalCharacteristics extends fhir.BackboneElement implements IMedicinalProductPharmaceuticalCharacteristics {
     /**
      * A coded characteristic.
      */
@@ -128,25 +131,16 @@ export declare class MedicinalProductPharmaceuticalCharacteristics extends fhir.
     /**
      * Default constructor for MedicinalProductPharmaceuticalCharacteristics - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductPharmaceuticalCharacteristics>);
+    constructor(source?: Partial<IMedicinalProductPharmaceuticalCharacteristics>);
     /**
-     * Check if the current MedicinalProductPharmaceuticalCharacteristics contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductPharmaceuticalCharacteristics from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductPharmaceuticalCharacteristics): MedicinalProductPharmaceuticalCharacteristics;
+    doModelValidation(): [string, string][];
 }
 /**
  * A species specific time during which consumption of animal product is not appropriate.
  */
-export declare class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod extends fhir.BackboneElement implements fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod {
-    /**
-     * Extra information about the withdrawal period.
-     */
-    supportingInformation?: string | undefined;
-    _supportingInformation?: fhir.FhirElement | undefined;
+export declare class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod extends fhir.BackboneElement implements IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod {
     /**
      * Coded expression for the type of tissue for which the withdrawal period applues, e.g. meat, milk.
      */
@@ -156,22 +150,26 @@ export declare class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSp
      */
     value: fhir.Quantity | null;
     /**
+     * Extra information about the withdrawal period.
+     */
+    supportingInformation?: string | undefined;
+    /**
+     * Extended properties for primitive element: MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation
+     */
+    _supportingInformation?: fhir.FhirElement | undefined;
+    /**
      * Default constructor for MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod>);
+    constructor(source?: Partial<IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod>);
     /**
-     * Check if the current MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod): MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod;
+    doModelValidation(): [string, string][];
 }
 /**
  * A species for which this route applies.
  */
-export declare class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies extends fhir.BackboneElement implements fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies {
+export declare class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies extends fhir.BackboneElement implements IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies {
     /**
      * Coded expression for the species.
      */
@@ -183,20 +181,16 @@ export declare class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSp
     /**
      * Default constructor for MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies>);
+    constructor(source?: Partial<IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies>);
     /**
-     * Check if the current MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies): MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies;
+    doModelValidation(): [string, string][];
 }
 /**
  * The path by which the pharmaceutical product is taken into or makes contact with the body.
  */
-export declare class MedicinalProductPharmaceuticalRouteOfAdministration extends fhir.BackboneElement implements fhir.IMedicinalProductPharmaceuticalRouteOfAdministration {
+export declare class MedicinalProductPharmaceuticalRouteOfAdministration extends fhir.BackboneElement implements IMedicinalProductPharmaceuticalRouteOfAdministration {
     /**
      * Coded expression for the route.
      */
@@ -206,6 +200,10 @@ export declare class MedicinalProductPharmaceuticalRouteOfAdministration extends
      */
     firstDose?: fhir.Quantity | undefined;
     /**
+     * The maximum single dose that can be administered as per the protocol of a clinical trial can be specified using a numerical value and its unit of measurement.
+     */
+    maxSingleDose?: fhir.Quantity | undefined;
+    /**
      * The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered as per the protocol referenced in the clinical trial authorisation.
      */
     maxDosePerDay?: fhir.Quantity | undefined;
@@ -213,10 +211,6 @@ export declare class MedicinalProductPharmaceuticalRouteOfAdministration extends
      * The maximum dose per treatment period that can be administered as per the protocol referenced in the clinical trial authorisation.
      */
     maxDosePerTreatmentPeriod?: fhir.Ratio | undefined;
-    /**
-     * The maximum single dose that can be administered as per the protocol of a clinical trial can be specified using a numerical value and its unit of measurement.
-     */
-    maxSingleDose?: fhir.Quantity | undefined;
     /**
      * The maximum treatment period during which an Investigational Medicinal Product can be administered as per the protocol referenced in the clinical trial authorisation.
      */
@@ -228,63 +222,55 @@ export declare class MedicinalProductPharmaceuticalRouteOfAdministration extends
     /**
      * Default constructor for MedicinalProductPharmaceuticalRouteOfAdministration - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductPharmaceuticalRouteOfAdministration>);
+    constructor(source?: Partial<IMedicinalProductPharmaceuticalRouteOfAdministration>);
     /**
-     * Check if the current MedicinalProductPharmaceuticalRouteOfAdministration contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductPharmaceuticalRouteOfAdministration from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductPharmaceuticalRouteOfAdministration): MedicinalProductPharmaceuticalRouteOfAdministration;
+    doModelValidation(): [string, string][];
 }
 /**
  * A pharmaceutical product described in terms of its composition and dose form.
  */
-export declare class MedicinalProductPharmaceutical extends fhir.DomainResource implements fhir.IMedicinalProductPharmaceutical {
+export declare class MedicinalProductPharmaceutical extends fhir.DomainResource implements IMedicinalProductPharmaceutical {
     /**
      * Resource Type Name
      */
     resourceType: "MedicinalProductPharmaceutical";
     /**
-     * The administrable dose form, after necessary reconstitution.
-     */
-    administrableDoseForm: fhir.CodeableConcept | null;
-    /**
-     * Characteristics e.g. a products onset of action.
-     */
-    characteristics?: fhir.MedicinalProductPharmaceuticalCharacteristics[] | undefined;
-    /**
-     * Accompanying device.
-     */
-    device?: fhir.Reference[] | undefined;
-    /**
      * An identifier for the pharmaceutical medicinal product.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * Ingredient.
+     * The administrable dose form, after necessary reconstitution.
      */
-    ingredient?: fhir.Reference[] | undefined;
-    /**
-     * The path by which the pharmaceutical product is taken into or makes contact with the body.
-     */
-    routeOfAdministration: fhir.MedicinalProductPharmaceuticalRouteOfAdministration[] | null;
+    administrableDoseForm: fhir.CodeableConcept | null;
     /**
      * Todo.
      */
     unitOfPresentation?: fhir.CodeableConcept | undefined;
     /**
+     * Ingredient.
+     */
+    ingredient?: fhir.Reference[] | undefined;
+    /**
+     * Accompanying device.
+     */
+    device?: fhir.Reference[] | undefined;
+    /**
+     * Characteristics e.g. a products onset of action.
+     */
+    characteristics?: fhir.MedicinalProductPharmaceuticalCharacteristics[] | undefined;
+    /**
+     * The path by which the pharmaceutical product is taken into or makes contact with the body.
+     */
+    routeOfAdministration: fhir.MedicinalProductPharmaceuticalRouteOfAdministration[] | null;
+    /**
      * Default constructor for MedicinalProductPharmaceutical - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductPharmaceutical>);
+    constructor(source?: Partial<IMedicinalProductPharmaceutical>);
     /**
-     * Check if the current MedicinalProductPharmaceutical contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductPharmaceutical from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductPharmaceutical): MedicinalProductPharmaceutical;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=MedicinalProductPharmaceutical.d.ts.map

@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Mode for this instance of data.
  */
 export declare const MapInputModeValueSet: {
     /**
-     * Names an input instance used a source for mapping.
+     * source: Names an input instance used a source for mapping.
      */
-    map_input_mode_SourceInstance: Coding;
+    readonly SourceInstance: Coding;
     /**
-     * Names an instance that is being populated.
+     * target: Names an instance that is being populated.
      */
-    map_input_mode_TargetInstance: Coding;
+    readonly TargetInstance: Coding;
 };
+/**
+ * Mode for this instance of data.
+ */
+export declare type MapInputModeValueSetType = typeof MapInputModeValueSet;
+/**
+ * Mode for this instance of data.
+ */
+export declare enum MapInputModeValueSetEnum {
+    /**
+     * source: Names an input instance used a source for mapping.
+     */
+    SourceInstance = "source",
+    /**
+     * target: Names an instance that is being populated.
+     */
+    TargetInstance = "target"
+}
 //# sourceMappingURL=MapInputModeValueSet.d.ts.map

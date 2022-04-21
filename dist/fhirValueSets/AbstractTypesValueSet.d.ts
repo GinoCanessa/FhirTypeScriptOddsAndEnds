@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * A list of the base types defined by this version of the FHIR specification - types that are defined, but for which only specializations actually are created.
  */
 export declare const AbstractTypesValueSet: {
     /**
-     * A place holder that means any kind of resource
+     * Any: A place holder that means any kind of resource
      */
-    abstract_types_Any: Coding;
+    readonly Any: Coding;
     /**
-     * A place holder that means any kind of data type
+     * Type: A place holder that means any kind of data type
      */
-    abstract_types_Type: Coding;
+    readonly Type: Coding;
 };
+/**
+ * A list of the base types defined by this version of the FHIR specification - types that are defined, but for which only specializations actually are created.
+ */
+export declare type AbstractTypesValueSetType = typeof AbstractTypesValueSet;
+/**
+ * A list of the base types defined by this version of the FHIR specification - types that are defined, but for which only specializations actually are created.
+ */
+export declare enum AbstractTypesValueSetEnum {
+    /**
+     * Any: A place holder that means any kind of resource
+     */
+    Any = "Any",
+    /**
+     * Type: A place holder that means any kind of data type
+     */
+    Type = "Type"
+}
 //# sourceMappingURL=AbstractTypesValueSet.d.ts.map

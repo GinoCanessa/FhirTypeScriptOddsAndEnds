@@ -1,27 +1,56 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of network access point of this agent in the audit event.
  */
 export declare const NetworkTypeValueSet: {
     /**
-     * The machine name, including DNS name.
+     * 1: The machine name, including DNS name.
      */
-    network_type_MachineName: Coding;
+    readonly MachineName: Coding;
     /**
-     * The assigned Internet Protocol (IP) address.
+     * 2: The assigned Internet Protocol (IP) address.
      */
-    network_type_IPAddress: Coding;
+    readonly IPAddress: Coding;
     /**
-     * The assigned telephone number.
+     * 3: The assigned telephone number.
      */
-    network_type_TelephoneNumber: Coding;
+    readonly TelephoneNumber: Coding;
     /**
-     * The assigned email address.
+     * 4: The assigned email address.
      */
-    network_type_EmailAddress: Coding;
+    readonly EmailAddress: Coding;
     /**
-     * URI (User directory, HTTP-PUT, ftp, etc.).
+     * 5: URI (User directory, HTTP-PUT, ftp, etc.).
      */
-    network_type_URI: Coding;
+    readonly URI: Coding;
 };
+/**
+ * The type of network access point of this agent in the audit event.
+ */
+export declare type NetworkTypeValueSetType = typeof NetworkTypeValueSet;
+/**
+ * The type of network access point of this agent in the audit event.
+ */
+export declare enum NetworkTypeValueSetEnum {
+    /**
+     * 1: The machine name, including DNS name.
+     */
+    MachineName = "1",
+    /**
+     * 2: The assigned Internet Protocol (IP) address.
+     */
+    IPAddress = "2",
+    /**
+     * 3: The assigned telephone number.
+     */
+    TelephoneNumber = "3",
+    /**
+     * 4: The assigned email address.
+     */
+    EmailAddress = "4",
+    /**
+     * 5: URI (User directory, HTTP-PUT, ftp, etc.).
+     */
+    URI = "5"
+}
 //# sourceMappingURL=NetworkTypeValueSet.d.ts.map

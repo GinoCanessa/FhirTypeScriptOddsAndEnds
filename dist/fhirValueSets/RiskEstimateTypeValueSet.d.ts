@@ -1,31 +1,64 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Whether the risk estimate is dichotomous, continuous or qualitative and the specific type of risk estimate (eg proportion or median).
  */
 export declare const RiskEstimateTypeValueSet: {
     /**
-     * descriptive measure reported as total number of items.
+     * count: descriptive measure reported as total number of items.
      */
-    risk_estimate_type_Count: Coding;
+    readonly Count: Coding;
     /**
-     * A special use case where the proportion is derived from a formula rather than derived from summary evidence.
+     * derivedProportion: A special use case where the proportion is derived from a formula rather than derived from summary evidence.
      */
-    risk_estimate_type_DerivedProportion: Coding;
+    readonly DerivedProportion: Coding;
     /**
-     * descriptive measure reported as narrative.
+     * descriptive: descriptive measure reported as narrative.
      */
-    risk_estimate_type_Descriptive: Coding;
+    readonly Descriptive: Coding;
     /**
-     * continuous numerical measure reported as an average.
+     * mean: continuous numerical measure reported as an average.
      */
-    risk_estimate_type_Mean: Coding;
+    readonly Mean: Coding;
     /**
-     * continuous numerical measure reported as the middle of the range.
+     * median: continuous numerical measure reported as the middle of the range.
      */
-    risk_estimate_type_Median: Coding;
+    readonly Median: Coding;
     /**
-     * dichotomous measure (present or absent) reported as a ratio compared to the denominator of 1 (A percentage is a proportion with denominator of 100).
+     * proportion: dichotomous measure (present or absent) reported as a ratio compared to the denominator of 1 (A percentage is a proportion with denominator of 100).
      */
-    risk_estimate_type_Proportion: Coding;
+    readonly Proportion: Coding;
 };
+/**
+ * Whether the risk estimate is dichotomous, continuous or qualitative and the specific type of risk estimate (eg proportion or median).
+ */
+export declare type RiskEstimateTypeValueSetType = typeof RiskEstimateTypeValueSet;
+/**
+ * Whether the risk estimate is dichotomous, continuous or qualitative and the specific type of risk estimate (eg proportion or median).
+ */
+export declare enum RiskEstimateTypeValueSetEnum {
+    /**
+     * count: descriptive measure reported as total number of items.
+     */
+    Count = "count",
+    /**
+     * derivedProportion: A special use case where the proportion is derived from a formula rather than derived from summary evidence.
+     */
+    DerivedProportion = "derivedProportion",
+    /**
+     * descriptive: descriptive measure reported as narrative.
+     */
+    Descriptive = "descriptive",
+    /**
+     * mean: continuous numerical measure reported as an average.
+     */
+    Mean = "mean",
+    /**
+     * median: continuous numerical measure reported as the middle of the range.
+     */
+    Median = "median",
+    /**
+     * proportion: dichotomous measure (present or absent) reported as a ratio compared to the denominator of 1 (A percentage is a proportion with denominator of 100).
+     */
+    Proportion = "proportion"
+}
 //# sourceMappingURL=RiskEstimateTypeValueSet.d.ts.map

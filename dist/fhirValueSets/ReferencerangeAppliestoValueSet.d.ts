@@ -1,3693 +1,7408 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.
  */
 export declare const ReferencerangeAppliestoValueSet: {
     /**
-     * American Indian or Alaska Native
+     * 1002-5: American Indian or Alaska Native
      */
-    v3_Race_AmericanIndianOrAlaskaNative: Coding;
+    readonly AmericanIndianOrAlaskaNative: Coding;
     /**
-     * American Indian
+     * 1004-1: American Indian
      */
-    v3_Race_AmericanIndian: Coding;
+    readonly AmericanIndian: Coding;
     /**
-     * Abenaki
+     * 1006-6: Abenaki
      */
-    v3_Race_Abenaki: Coding;
+    readonly Abenaki: Coding;
     /**
-     * Algonquian
+     * 1008-2: Algonquian
      */
-    v3_Race_Algonquian: Coding;
+    readonly Algonquian: Coding;
     /**
-     * Apache
+     * 1010-8: Apache
      */
-    v3_Race_Apache: Coding;
+    readonly Apache: Coding;
     /**
-     * Chiricahua
+     * 1011-6: Chiricahua
      */
-    v3_Race_Chiricahua: Coding;
+    readonly Chiricahua: Coding;
     /**
-     * Fort Sill Apache
+     * 1012-4: Fort Sill Apache
      */
-    v3_Race_FortSillApache: Coding;
+    readonly FortSillApache: Coding;
     /**
-     * Jicarilla Apache
+     * 1013-2: Jicarilla Apache
      */
-    v3_Race_JicarillaApache: Coding;
+    readonly JicarillaApache: Coding;
     /**
-     * Lipan Apache
+     * 1014-0: Lipan Apache
      */
-    v3_Race_LipanApache: Coding;
+    readonly LipanApache: Coding;
     /**
-     * Mescalero Apache
+     * 1015-7: Mescalero Apache
      */
-    v3_Race_MescaleroApache: Coding;
+    readonly MescaleroApache: Coding;
     /**
-     * Oklahoma Apache
+     * 1016-5: Oklahoma Apache
      */
-    v3_Race_OklahomaApache: Coding;
+    readonly OklahomaApache: Coding;
     /**
-     * Payson Apache
+     * 1017-3: Payson Apache
      */
-    v3_Race_PaysonApache: Coding;
+    readonly PaysonApache: Coding;
     /**
-     * San Carlos Apache
+     * 1018-1: San Carlos Apache
      */
-    v3_Race_SanCarlosApache: Coding;
+    readonly SanCarlosApache: Coding;
     /**
-     * White Mountain Apache
+     * 1019-9: White Mountain Apache
      */
-    v3_Race_WhiteMountainApache: Coding;
+    readonly WhiteMountainApache: Coding;
     /**
-     * Arapaho
+     * 1021-5: Arapaho
      */
-    v3_Race_Arapaho: Coding;
+    readonly Arapaho: Coding;
     /**
-     * Northern Arapaho
+     * 1022-3: Northern Arapaho
      */
-    v3_Race_NorthernArapaho: Coding;
+    readonly NorthernArapaho: Coding;
     /**
-     * Southern Arapaho
+     * 1023-1: Southern Arapaho
      */
-    v3_Race_SouthernArapaho: Coding;
+    readonly SouthernArapaho: Coding;
     /**
-     * Wind River Arapaho
+     * 1024-9: Wind River Arapaho
      */
-    v3_Race_WindRiverArapaho: Coding;
+    readonly WindRiverArapaho: Coding;
     /**
-     * Arikara
+     * 1026-4: Arikara
      */
-    v3_Race_Arikara: Coding;
+    readonly Arikara: Coding;
     /**
-     * Assiniboine
+     * 1028-0: Assiniboine
      */
-    v3_Race_Assiniboine: Coding;
+    readonly Assiniboine: Coding;
     /**
-     * Assiniboine Sioux
+     * 1030-6: Assiniboine Sioux
      */
-    v3_Race_AssiniboineSioux: Coding;
+    readonly AssiniboineSioux: Coding;
     /**
-     * Fort Peck Assiniboine Sioux
+     * 1031-4: Fort Peck Assiniboine Sioux
      */
-    v3_Race_FortPeckAssiniboineSioux: Coding;
+    readonly FortPeckAssiniboineSioux: Coding;
     /**
-     * Bannock
+     * 1033-0: Bannock
      */
-    v3_Race_Bannock: Coding;
+    readonly Bannock: Coding;
     /**
-     * Blackfeet
+     * 1035-5: Blackfeet
      */
-    v3_Race_Blackfeet: Coding;
+    readonly Blackfeet: Coding;
     /**
-     * Brotherton
+     * 1037-1: Brotherton
      */
-    v3_Race_Brotherton: Coding;
+    readonly Brotherton: Coding;
     /**
-     * Burt Lake Band
+     * 1039-7: Burt Lake Band
      */
-    v3_Race_BurtLakeBand: Coding;
+    readonly BurtLakeBand: Coding;
     /**
-     * Caddo
+     * 1041-3: Caddo
      */
-    v3_Race_Caddo: Coding;
+    readonly Caddo: Coding;
     /**
-     * Oklahoma Cado
+     * 1042-1: Oklahoma Cado
      */
-    v3_Race_OklahomaCado: Coding;
+    readonly OklahomaCado: Coding;
     /**
-     * Cahuilla
+     * 1044-7: Cahuilla
      */
-    v3_Race_Cahuilla: Coding;
+    readonly Cahuilla: Coding;
     /**
-     * Agua Caliente Cahuilla
+     * 1045-4: Agua Caliente Cahuilla
      */
-    v3_Race_AguaCalienteCahuilla: Coding;
+    readonly AguaCalienteCahuilla: Coding;
     /**
-     * Augustine
+     * 1046-2: Augustine
      */
-    v3_Race_Augustine: Coding;
+    readonly Augustine: Coding;
     /**
-     * Cabazon
+     * 1047-0: Cabazon
      */
-    v3_Race_Cabazon: Coding;
+    readonly Cabazon: Coding;
     /**
-     * Los Coyotes
+     * 1048-8: Los Coyotes
      */
-    v3_Race_LosCoyotes: Coding;
+    readonly LosCoyotes: Coding;
     /**
-     * Morongo
+     * 1049-6: Morongo
      */
-    v3_Race_Morongo: Coding;
+    readonly Morongo: Coding;
     /**
-     * Santa Rosa Cahuilla
+     * 1050-4: Santa Rosa Cahuilla
      */
-    v3_Race_SantaRosaCahuilla: Coding;
+    readonly SantaRosaCahuilla: Coding;
     /**
-     * Torres-Martinez
+     * 1051-2: Torres-Martinez
      */
-    v3_Race_TorresMartinez: Coding;
+    readonly TorresMartinez: Coding;
     /**
-     * California Tribes
+     * 1053-8: California Tribes
      */
-    v3_Race_CaliforniaTribes: Coding;
+    readonly CaliforniaTribes: Coding;
     /**
-     * Cahto
+     * 1054-6: Cahto
      */
-    v3_Race_Cahto: Coding;
+    readonly Cahto: Coding;
     /**
-     * Chimariko
+     * 1055-3: Chimariko
      */
-    v3_Race_Chimariko: Coding;
+    readonly Chimariko: Coding;
     /**
-     * Coast Miwok
+     * 1056-1: Coast Miwok
      */
-    v3_Race_CoastMiwok: Coding;
+    readonly CoastMiwok: Coding;
     /**
-     * Digger
+     * 1057-9: Digger
      */
-    v3_Race_Digger: Coding;
+    readonly Digger: Coding;
     /**
-     * Kawaiisu
+     * 1058-7: Kawaiisu
      */
-    v3_Race_Kawaiisu: Coding;
+    readonly Kawaiisu: Coding;
     /**
-     * Kern River
+     * 1059-5: Kern River
      */
-    v3_Race_KernRiver: Coding;
+    readonly KernRiver: Coding;
     /**
-     * Mattole
+     * 1060-3: Mattole
      */
-    v3_Race_Mattole: Coding;
+    readonly Mattole: Coding;
     /**
-     * Red Wood
+     * 1061-1: Red Wood
      */
-    v3_Race_RedWood: Coding;
+    readonly RedWood: Coding;
     /**
-     * Santa Rosa
+     * 1062-9: Santa Rosa
      */
-    v3_Race_SantaRosa: Coding;
+    readonly SantaRosa: Coding;
     /**
-     * Takelma
+     * 1063-7: Takelma
      */
-    v3_Race_Takelma: Coding;
+    readonly Takelma: Coding;
     /**
-     * Wappo
+     * 1064-5: Wappo
      */
-    v3_Race_Wappo: Coding;
+    readonly Wappo: Coding;
     /**
-     * Yana
+     * 1065-2: Yana
      */
-    v3_Race_Yana: Coding;
+    readonly Yana: Coding;
     /**
-     * Yuki
+     * 1066-0: Yuki
      */
-    v3_Race_Yuki: Coding;
+    readonly Yuki: Coding;
     /**
-     * Canadian and Latin American Indian
+     * 1068-6: Canadian and Latin American Indian
      */
-    v3_Race_CanadianAndLatinAmericanIndian: Coding;
+    readonly CanadianAndLatinAmericanIndian: Coding;
     /**
-     * Canadian Indian
+     * 1069-4: Canadian Indian
      */
-    v3_Race_CanadianIndian: Coding;
+    readonly CanadianIndian: Coding;
     /**
-     * Central American Indian
+     * 1070-2: Central American Indian
      */
-    v3_Race_CentralAmericanIndian: Coding;
+    readonly CentralAmericanIndian: Coding;
     /**
-     * French American Indian
+     * 1071-0: French American Indian
      */
-    v3_Race_FrenchAmericanIndian: Coding;
+    readonly FrenchAmericanIndian: Coding;
     /**
-     * Mexican American Indian
+     * 1072-8: Mexican American Indian
      */
-    v3_Race_MexicanAmericanIndian: Coding;
+    readonly MexicanAmericanIndian: Coding;
     /**
-     * South American Indian
+     * 1073-6: South American Indian
      */
-    v3_Race_SouthAmericanIndian: Coding;
+    readonly SouthAmericanIndian: Coding;
     /**
-     * Spanish American Indian
+     * 1074-4: Spanish American Indian
      */
-    v3_Race_SpanishAmericanIndian: Coding;
+    readonly SpanishAmericanIndian: Coding;
     /**
-     * Catawba
+     * 1076-9: Catawba
      */
-    v3_Race_Catawba: Coding;
+    readonly Catawba: Coding;
     /**
-     * Cayuse
+     * 1078-5: Cayuse
      */
-    v3_Race_Cayuse: Coding;
+    readonly Cayuse: Coding;
     /**
-     * Chehalis
+     * 1080-1: Chehalis
      */
-    v3_Race_Chehalis: Coding;
+    readonly Chehalis: Coding;
     /**
-     * Chemakuan
+     * 1082-7: Chemakuan
      */
-    v3_Race_Chemakuan: Coding;
+    readonly Chemakuan: Coding;
     /**
-     * Hoh
+     * 1083-5: Hoh
      */
-    v3_Race_Hoh: Coding;
+    readonly Hoh: Coding;
     /**
-     * Quileute
+     * 1084-3: Quileute
      */
-    v3_Race_Quileute: Coding;
+    readonly Quileute: Coding;
     /**
-     * Chemehuevi
+     * 1086-8: Chemehuevi
      */
-    v3_Race_Chemehuevi: Coding;
+    readonly Chemehuevi: Coding;
     /**
-     * Cherokee
+     * 1088-4: Cherokee
      */
-    v3_Race_Cherokee: Coding;
+    readonly Cherokee: Coding;
     /**
-     * Cherokee Alabama
+     * 1089-2: Cherokee Alabama
      */
-    v3_Race_CherokeeAlabama: Coding;
+    readonly CherokeeAlabama: Coding;
     /**
-     * Cherokees of Northeast Alabama
+     * 1090-0: Cherokees of Northeast Alabama
      */
-    v3_Race_CherokeesOfNortheastAlabama: Coding;
+    readonly CherokeesOfNortheastAlabama: Coding;
     /**
-     * Cherokees of Southeast Alabama
+     * 1091-8: Cherokees of Southeast Alabama
      */
-    v3_Race_CherokeesOfSoutheastAlabama: Coding;
+    readonly CherokeesOfSoutheastAlabama: Coding;
     /**
-     * Eastern Cherokee
+     * 1092-6: Eastern Cherokee
      */
-    v3_Race_EasternCherokee: Coding;
+    readonly EasternCherokee: Coding;
     /**
-     * Echota Cherokee
+     * 1093-4: Echota Cherokee
      */
-    v3_Race_EchotaCherokee: Coding;
+    readonly EchotaCherokee: Coding;
     /**
-     * Etowah Cherokee
+     * 1094-2: Etowah Cherokee
      */
-    v3_Race_EtowahCherokee: Coding;
+    readonly EtowahCherokee: Coding;
     /**
-     * Northern Cherokee
+     * 1095-9: Northern Cherokee
      */
-    v3_Race_NorthernCherokee: Coding;
+    readonly NorthernCherokee: Coding;
     /**
-     * Tuscola
+     * 1096-7: Tuscola
      */
-    v3_Race_Tuscola: Coding;
+    readonly Tuscola: Coding;
     /**
-     * United Keetowah Band of Cherokee
+     * 1097-5: United Keetowah Band of Cherokee
      */
-    v3_Race_UnitedKeetowahBandOfCherokee: Coding;
+    readonly UnitedKeetowahBandOfCherokee: Coding;
     /**
-     * Western Cherokee
+     * 1098-3: Western Cherokee
      */
-    v3_Race_WesternCherokee: Coding;
+    readonly WesternCherokee: Coding;
     /**
-     * Cherokee Shawnee
+     * 1100-7: Cherokee Shawnee
      */
-    v3_Race_CherokeeShawnee: Coding;
+    readonly CherokeeShawnee: Coding;
     /**
-     * Cheyenne
+     * 1102-3: Cheyenne
      */
-    v3_Race_Cheyenne: Coding;
+    readonly Cheyenne: Coding;
     /**
-     * Northern Cheyenne
+     * 1103-1: Northern Cheyenne
      */
-    v3_Race_NorthernCheyenne: Coding;
+    readonly NorthernCheyenne: Coding;
     /**
-     * Southern Cheyenne
+     * 1104-9: Southern Cheyenne
      */
-    v3_Race_SouthernCheyenne: Coding;
+    readonly SouthernCheyenne: Coding;
     /**
-     * Cheyenne-Arapaho
+     * 1106-4: Cheyenne-Arapaho
      */
-    v3_Race_CheyenneArapaho: Coding;
+    readonly CheyenneArapaho: Coding;
     /**
-     * Chickahominy
+     * 1108-0: Chickahominy
      */
-    v3_Race_Chickahominy: Coding;
+    readonly Chickahominy: Coding;
     /**
-     * Eastern Chickahominy
+     * 1109-8: Eastern Chickahominy
      */
-    v3_Race_EasternChickahominy: Coding;
+    readonly EasternChickahominy: Coding;
     /**
-     * Western Chickahominy
+     * 1110-6: Western Chickahominy
      */
-    v3_Race_WesternChickahominy: Coding;
+    readonly WesternChickahominy: Coding;
     /**
-     * Chickasaw
+     * 1112-2: Chickasaw
      */
-    v3_Race_Chickasaw: Coding;
+    readonly Chickasaw: Coding;
     /**
-     * Chinook
+     * 1114-8: Chinook
      */
-    v3_Race_Chinook: Coding;
+    readonly Chinook: Coding;
     /**
-     * Clatsop
+     * 1115-5: Clatsop
      */
-    v3_Race_Clatsop: Coding;
+    readonly Clatsop: Coding;
     /**
-     * Columbia River Chinook
+     * 1116-3: Columbia River Chinook
      */
-    v3_Race_ColumbiaRiverChinook: Coding;
+    readonly ColumbiaRiverChinook: Coding;
     /**
-     * Kathlamet
+     * 1117-1: Kathlamet
      */
-    v3_Race_Kathlamet: Coding;
+    readonly Kathlamet: Coding;
     /**
-     * Upper Chinook
+     * 1118-9: Upper Chinook
      */
-    v3_Race_UpperChinook: Coding;
+    readonly UpperChinook: Coding;
     /**
-     * Wakiakum Chinook
+     * 1119-7: Wakiakum Chinook
      */
-    v3_Race_WakiakumChinook: Coding;
+    readonly WakiakumChinook: Coding;
     /**
-     * Willapa Chinook
+     * 1120-5: Willapa Chinook
      */
-    v3_Race_WillapaChinook: Coding;
+    readonly WillapaChinook: Coding;
     /**
-     * Wishram
+     * 1121-3: Wishram
      */
-    v3_Race_Wishram: Coding;
+    readonly Wishram: Coding;
     /**
-     * Chippewa
+     * 1123-9: Chippewa
      */
-    v3_Race_Chippewa: Coding;
+    readonly Chippewa: Coding;
     /**
-     * Bad River
+     * 1124-7: Bad River
      */
-    v3_Race_BadRiver: Coding;
+    readonly BadRiver: Coding;
     /**
-     * Bay Mills Chippewa
+     * 1125-4: Bay Mills Chippewa
      */
-    v3_Race_BayMillsChippewa: Coding;
+    readonly BayMillsChippewa: Coding;
     /**
-     * Bois Forte
+     * 1126-2: Bois Forte
      */
-    v3_Race_BoisForte: Coding;
+    readonly BoisForte: Coding;
     /**
-     * Burt Lake Chippewa
+     * 1127-0: Burt Lake Chippewa
      */
-    v3_Race_BurtLakeChippewa: Coding;
+    readonly BurtLakeChippewa: Coding;
     /**
-     * Fond du Lac
+     * 1128-8: Fond du Lac
      */
-    v3_Race_FondDuLac: Coding;
+    readonly FondDuLac: Coding;
     /**
-     * Grand Portage
+     * 1129-6: Grand Portage
      */
-    v3_Race_GrandPortage: Coding;
+    readonly GrandPortage: Coding;
     /**
-     * Grand Traverse Band of Ottawa-Chippewa
+     * 1130-4: Grand Traverse Band of Ottawa-Chippewa
      */
-    v3_Race_GrandTraverseBandOfOttawaChippewa: Coding;
+    readonly GrandTraverseBandOfOttawaChippewa: Coding;
     /**
-     * Keweenaw
+     * 1131-2: Keweenaw
      */
-    v3_Race_Keweenaw: Coding;
+    readonly Keweenaw: Coding;
     /**
-     * Lac Courte Oreilles
+     * 1132-0: Lac Courte Oreilles
      */
-    v3_Race_LacCourteOreilles: Coding;
+    readonly LacCourteOreilles: Coding;
     /**
-     * Lac du Flambeau
+     * 1133-8: Lac du Flambeau
      */
-    v3_Race_LacDuFlambeau: Coding;
+    readonly LacDuFlambeau: Coding;
     /**
-     * Lac Vieux Desert Chippewa
+     * 1134-6: Lac Vieux Desert Chippewa
      */
-    v3_Race_LacVieuxDesertChippewa: Coding;
+    readonly LacVieuxDesertChippewa: Coding;
     /**
-     * Lake Superior
+     * 1135-3: Lake Superior
      */
-    v3_Race_LakeSuperior: Coding;
+    readonly LakeSuperior: Coding;
     /**
-     * Leech Lake
+     * 1136-1: Leech Lake
      */
-    v3_Race_LeechLake: Coding;
+    readonly LeechLake: Coding;
     /**
-     * Little Shell Chippewa
+     * 1137-9: Little Shell Chippewa
      */
-    v3_Race_LittleShellChippewa: Coding;
+    readonly LittleShellChippewa: Coding;
     /**
-     * Mille Lacs
+     * 1138-7: Mille Lacs
      */
-    v3_Race_MilleLacs: Coding;
+    readonly MilleLacs: Coding;
     /**
-     * Minnesota Chippewa
+     * 1139-5: Minnesota Chippewa
      */
-    v3_Race_MinnesotaChippewa: Coding;
+    readonly MinnesotaChippewa: Coding;
     /**
-     * Ontonagon
+     * 1140-3: Ontonagon
      */
-    v3_Race_Ontonagon: Coding;
+    readonly Ontonagon: Coding;
     /**
-     * Red Cliff Chippewa
+     * 1141-1: Red Cliff Chippewa
      */
-    v3_Race_RedCliffChippewa: Coding;
+    readonly RedCliffChippewa: Coding;
     /**
-     * Red Lake Chippewa
+     * 1142-9: Red Lake Chippewa
      */
-    v3_Race_RedLakeChippewa: Coding;
+    readonly RedLakeChippewa: Coding;
     /**
-     * Saginaw Chippewa
+     * 1143-7: Saginaw Chippewa
      */
-    v3_Race_SaginawChippewa: Coding;
+    readonly SaginawChippewa: Coding;
     /**
-     * St. Croix Chippewa
+     * 1144-5: St. Croix Chippewa
      */
-    v3_Race_StCroixChippewa: Coding;
+    readonly StCroixChippewa: Coding;
     /**
-     * Sault Ste. Marie Chippewa
+     * 1145-2: Sault Ste. Marie Chippewa
      */
-    v3_Race_SaultSteMarieChippewa: Coding;
+    readonly SaultSteMarieChippewa: Coding;
     /**
-     * Sokoagon Chippewa
+     * 1146-0: Sokoagon Chippewa
      */
-    v3_Race_SokoagonChippewa: Coding;
+    readonly SokoagonChippewa: Coding;
     /**
-     * Turtle Mountain
+     * 1147-8: Turtle Mountain
      */
-    v3_Race_TurtleMountain: Coding;
+    readonly TurtleMountain: Coding;
     /**
-     * White Earth
+     * 1148-6: White Earth
      */
-    v3_Race_WhiteEarth: Coding;
+    readonly WhiteEarth: Coding;
     /**
-     * Chippewa Cree
+     * 1150-2: Chippewa Cree
      */
-    v3_Race_ChippewaCree: Coding;
+    readonly ChippewaCree: Coding;
     /**
-     * Rocky Boy's Chippewa Cree
+     * 1151-0: Rocky Boy's Chippewa Cree
      */
-    v3_Race_RockyBoyQuoteSChippewaCree: Coding;
+    readonly RockyBoyQuoteSChippewaCree: Coding;
     /**
-     * Chitimacha
+     * 1153-6: Chitimacha
      */
-    v3_Race_Chitimacha: Coding;
+    readonly Chitimacha: Coding;
     /**
-     * Choctaw
+     * 1155-1: Choctaw
      */
-    v3_Race_Choctaw: Coding;
+    readonly Choctaw: Coding;
     /**
-     * Clifton Choctaw
+     * 1156-9: Clifton Choctaw
      */
-    v3_Race_CliftonChoctaw: Coding;
+    readonly CliftonChoctaw: Coding;
     /**
-     * Jena Choctaw
+     * 1157-7: Jena Choctaw
      */
-    v3_Race_JenaChoctaw: Coding;
+    readonly JenaChoctaw: Coding;
     /**
-     * Mississippi Choctaw
+     * 1158-5: Mississippi Choctaw
      */
-    v3_Race_MississippiChoctaw: Coding;
+    readonly MississippiChoctaw: Coding;
     /**
-     * Mowa Band of Choctaw
+     * 1159-3: Mowa Band of Choctaw
      */
-    v3_Race_MowaBandOfChoctaw: Coding;
+    readonly MowaBandOfChoctaw: Coding;
     /**
-     * Oklahoma Choctaw
+     * 1160-1: Oklahoma Choctaw
      */
-    v3_Race_OklahomaChoctaw: Coding;
+    readonly OklahomaChoctaw: Coding;
     /**
-     * Chumash
+     * 1162-7: Chumash
      */
-    v3_Race_Chumash: Coding;
+    readonly Chumash: Coding;
     /**
-     * Santa Ynez
+     * 1163-5: Santa Ynez
      */
-    v3_Race_SantaYnez: Coding;
+    readonly SantaYnez: Coding;
     /**
-     * Clear Lake
+     * 1165-0: Clear Lake
      */
-    v3_Race_ClearLake: Coding;
+    readonly ClearLake: Coding;
     /**
-     * Coeur D'Alene
+     * 1167-6: Coeur D'Alene
      */
-    v3_Race_CoeurDQuoteAlene: Coding;
+    readonly CoeurDQuoteAlene: Coding;
     /**
-     * Coharie
+     * 1169-2: Coharie
      */
-    v3_Race_Coharie: Coding;
+    readonly Coharie: Coding;
     /**
-     * Colorado River
+     * 1171-8: Colorado River
      */
-    v3_Race_ColoradoRiver: Coding;
+    readonly ColoradoRiver: Coding;
     /**
-     * Colville
+     * 1173-4: Colville
      */
-    v3_Race_Colville: Coding;
+    readonly Colville: Coding;
     /**
-     * Comanche
+     * 1175-9: Comanche
      */
-    v3_Race_Comanche: Coding;
+    readonly Comanche: Coding;
     /**
-     * Oklahoma Comanche
+     * 1176-7: Oklahoma Comanche
      */
-    v3_Race_OklahomaComanche: Coding;
+    readonly OklahomaComanche: Coding;
     /**
-     * Coos, Lower Umpqua, Siuslaw
+     * 1178-3: Coos, Lower Umpqua, Siuslaw
      */
-    v3_Race_CoosLowerUmpquaSiuslaw: Coding;
+    readonly CoosLowerUmpquaSiuslaw: Coding;
     /**
-     * Coos
+     * 1180-9: Coos
      */
-    v3_Race_Coos: Coding;
+    readonly Coos: Coding;
     /**
-     * Coquilles
+     * 1182-5: Coquilles
      */
-    v3_Race_Coquilles: Coding;
+    readonly Coquilles: Coding;
     /**
-     * Costanoan
+     * 1184-1: Costanoan
      */
-    v3_Race_Costanoan: Coding;
+    readonly Costanoan: Coding;
     /**
-     * Coushatta
+     * 1186-6: Coushatta
      */
-    v3_Race_Coushatta: Coding;
+    readonly Coushatta: Coding;
     /**
-     * Alabama Coushatta
+     * 1187-4: Alabama Coushatta
      */
-    v3_Race_AlabamaCoushatta: Coding;
+    readonly AlabamaCoushatta: Coding;
     /**
-     * Cowlitz
+     * 1189-0: Cowlitz
      */
-    v3_Race_Cowlitz: Coding;
+    readonly Cowlitz: Coding;
     /**
-     * Cree
+     * 1191-6: Cree
      */
-    v3_Race_Cree: Coding;
+    readonly Cree: Coding;
     /**
-     * Creek
+     * 1193-2: Creek
      */
-    v3_Race_Creek: Coding;
+    readonly Creek: Coding;
     /**
-     * Alabama Creek
+     * 1194-0: Alabama Creek
      */
-    v3_Race_AlabamaCreek: Coding;
+    readonly AlabamaCreek: Coding;
     /**
-     * Alabama Quassarte
+     * 1195-7: Alabama Quassarte
      */
-    v3_Race_AlabamaQuassarte: Coding;
+    readonly AlabamaQuassarte: Coding;
     /**
-     * Eastern Creek
+     * 1196-5: Eastern Creek
      */
-    v3_Race_EasternCreek: Coding;
+    readonly EasternCreek: Coding;
     /**
-     * Eastern Muscogee
+     * 1197-3: Eastern Muscogee
      */
-    v3_Race_EasternMuscogee: Coding;
+    readonly EasternMuscogee: Coding;
     /**
-     * Kialegee
+     * 1198-1: Kialegee
      */
-    v3_Race_Kialegee: Coding;
+    readonly Kialegee: Coding;
     /**
-     * Lower Muscogee
+     * 1199-9: Lower Muscogee
      */
-    v3_Race_LowerMuscogee: Coding;
+    readonly LowerMuscogee: Coding;
     /**
-     * Machis Lower Creek Indian
+     * 1200-5: Machis Lower Creek Indian
      */
-    v3_Race_MachisLowerCreekIndian: Coding;
+    readonly MachisLowerCreekIndian: Coding;
     /**
-     * Poarch Band
+     * 1201-3: Poarch Band
      */
-    v3_Race_PoarchBand: Coding;
+    readonly PoarchBand: Coding;
     /**
-     * Principal Creek Indian Nation
+     * 1202-1: Principal Creek Indian Nation
      */
-    v3_Race_PrincipalCreekIndianNation: Coding;
+    readonly PrincipalCreekIndianNation: Coding;
     /**
-     * Star Clan of Muscogee Creeks
+     * 1203-9: Star Clan of Muscogee Creeks
      */
-    v3_Race_StarClanOfMuscogeeCreeks: Coding;
+    readonly StarClanOfMuscogeeCreeks: Coding;
     /**
-     * Thlopthlocco
+     * 1204-7: Thlopthlocco
      */
-    v3_Race_Thlopthlocco: Coding;
+    readonly Thlopthlocco: Coding;
     /**
-     * Tuckabachee
+     * 1205-4: Tuckabachee
      */
-    v3_Race_Tuckabachee: Coding;
+    readonly Tuckabachee: Coding;
     /**
-     * Croatan
+     * 1207-0: Croatan
      */
-    v3_Race_Croatan: Coding;
+    readonly Croatan: Coding;
     /**
-     * Crow
+     * 1209-6: Crow
      */
-    v3_Race_Crow: Coding;
+    readonly Crow: Coding;
     /**
-     * Cupeno
+     * 1211-2: Cupeno
      */
-    v3_Race_Cupeno: Coding;
+    readonly Cupeno: Coding;
     /**
-     * Agua Caliente
+     * 1212-0: Agua Caliente
      */
-    v3_Race_AguaCaliente: Coding;
+    readonly AguaCaliente: Coding;
     /**
-     * Delaware
+     * 1214-6: Delaware
      */
-    v3_Race_Delaware: Coding;
+    readonly Delaware: Coding;
     /**
-     * Eastern Delaware
+     * 1215-3: Eastern Delaware
      */
-    v3_Race_EasternDelaware: Coding;
+    readonly EasternDelaware: Coding;
     /**
-     * Lenni-Lenape
+     * 1216-1: Lenni-Lenape
      */
-    v3_Race_LenniLenape: Coding;
+    readonly LenniLenape: Coding;
     /**
-     * Munsee
+     * 1217-9: Munsee
      */
-    v3_Race_Munsee: Coding;
+    readonly Munsee: Coding;
     /**
-     * Oklahoma Delaware
+     * 1218-7: Oklahoma Delaware
      */
-    v3_Race_OklahomaDelaware: Coding;
+    readonly OklahomaDelaware: Coding;
     /**
-     * Rampough Mountain
+     * 1219-5: Rampough Mountain
      */
-    v3_Race_RampoughMountain: Coding;
+    readonly RampoughMountain: Coding;
     /**
-     * Sand Hill
+     * 1220-3: Sand Hill
      */
-    v3_Race_SandHill: Coding;
+    readonly SandHill: Coding;
     /**
-     * Diegueno
+     * 1222-9: Diegueno
      */
-    v3_Race_Diegueno: Coding;
+    readonly Diegueno: Coding;
     /**
-     * Campo
+     * 1223-7: Campo
      */
-    v3_Race_Campo: Coding;
+    readonly Campo: Coding;
     /**
-     * Capitan Grande
+     * 1224-5: Capitan Grande
      */
-    v3_Race_CapitanGrande: Coding;
+    readonly CapitanGrande: Coding;
     /**
-     * Cuyapaipe
+     * 1225-2: Cuyapaipe
      */
-    v3_Race_Cuyapaipe: Coding;
+    readonly Cuyapaipe: Coding;
     /**
-     * La Posta
+     * 1226-0: La Posta
      */
-    v3_Race_LaPosta: Coding;
+    readonly LaPosta: Coding;
     /**
-     * Manzanita
+     * 1227-8: Manzanita
      */
-    v3_Race_Manzanita: Coding;
+    readonly Manzanita: Coding;
     /**
-     * Mesa Grande
+     * 1228-6: Mesa Grande
      */
-    v3_Race_MesaGrande: Coding;
+    readonly MesaGrande: Coding;
     /**
-     * San Pasqual
+     * 1229-4: San Pasqual
      */
-    v3_Race_SanPasqual: Coding;
+    readonly SanPasqual: Coding;
     /**
-     * Santa Ysabel
+     * 1230-2: Santa Ysabel
      */
-    v3_Race_SantaYsabel: Coding;
+    readonly SantaYsabel: Coding;
     /**
-     * Sycuan
+     * 1231-0: Sycuan
      */
-    v3_Race_Sycuan: Coding;
+    readonly Sycuan: Coding;
     /**
-     * Eastern Tribes
+     * 1233-6: Eastern Tribes
      */
-    v3_Race_EasternTribes: Coding;
+    readonly EasternTribes: Coding;
     /**
-     * Attacapa
+     * 1234-4: Attacapa
      */
-    v3_Race_Attacapa: Coding;
+    readonly Attacapa: Coding;
     /**
-     * Biloxi
+     * 1235-1: Biloxi
      */
-    v3_Race_Biloxi: Coding;
+    readonly Biloxi: Coding;
     /**
-     * Georgetown
+     * 1236-9: Georgetown
      */
-    v3_Race_Georgetown: Coding;
+    readonly Georgetown: Coding;
     /**
-     * Moor
+     * 1237-7: Moor
      */
-    v3_Race_Moor: Coding;
+    readonly Moor: Coding;
     /**
-     * Nansemond
+     * 1238-5: Nansemond
      */
-    v3_Race_Nansemond: Coding;
+    readonly Nansemond: Coding;
     /**
-     * Natchez
+     * 1239-3: Natchez
      */
-    v3_Race_Natchez: Coding;
+    readonly Natchez: Coding;
     /**
-     * Nausu Waiwash
+     * 1240-1: Nausu Waiwash
      */
-    v3_Race_NausuWaiwash: Coding;
+    readonly NausuWaiwash: Coding;
     /**
-     * Nipmuc
+     * 1241-9: Nipmuc
      */
-    v3_Race_Nipmuc: Coding;
+    readonly Nipmuc: Coding;
     /**
-     * Paugussett
+     * 1242-7: Paugussett
      */
-    v3_Race_Paugussett: Coding;
+    readonly Paugussett: Coding;
     /**
-     * Pocomoke Acohonock
+     * 1243-5: Pocomoke Acohonock
      */
-    v3_Race_PocomokeAcohonock: Coding;
+    readonly PocomokeAcohonock: Coding;
     /**
-     * Southeastern Indians
+     * 1244-3: Southeastern Indians
      */
-    v3_Race_SoutheasternIndians: Coding;
+    readonly SoutheasternIndians: Coding;
     /**
-     * Susquehanock
+     * 1245-0: Susquehanock
      */
-    v3_Race_Susquehanock: Coding;
+    readonly Susquehanock: Coding;
     /**
-     * Tunica Biloxi
+     * 1246-8: Tunica Biloxi
      */
-    v3_Race_TunicaBiloxi: Coding;
+    readonly TunicaBiloxi: Coding;
     /**
-     * Waccamaw-Siousan
+     * 1247-6: Waccamaw-Siousan
      */
-    v3_Race_WaccamawSiousan: Coding;
+    readonly WaccamawSiousan: Coding;
     /**
-     * Wicomico
+     * 1248-4: Wicomico
      */
-    v3_Race_Wicomico: Coding;
+    readonly Wicomico: Coding;
     /**
-     * Esselen
+     * 1250-0: Esselen
      */
-    v3_Race_Esselen: Coding;
+    readonly Esselen: Coding;
     /**
-     * Fort Belknap
+     * 1252-6: Fort Belknap
      */
-    v3_Race_FortBelknap: Coding;
+    readonly FortBelknap: Coding;
     /**
-     * Fort Berthold
+     * 1254-2: Fort Berthold
      */
-    v3_Race_FortBerthold: Coding;
+    readonly FortBerthold: Coding;
     /**
-     * Fort Mcdowell
+     * 1256-7: Fort Mcdowell
      */
-    v3_Race_FortMcdowell: Coding;
+    readonly FortMcdowell: Coding;
     /**
-     * Fort Hall
+     * 1258-3: Fort Hall
      */
-    v3_Race_FortHall: Coding;
+    readonly FortHall: Coding;
     /**
-     * Gabrieleno
+     * 1260-9: Gabrieleno
      */
-    v3_Race_Gabrieleno: Coding;
+    readonly Gabrieleno: Coding;
     /**
-     * Grand Ronde
+     * 1262-5: Grand Ronde
      */
-    v3_Race_GrandRonde: Coding;
+    readonly GrandRonde: Coding;
     /**
-     * Gros Ventres
+     * 1264-1: Gros Ventres
      */
-    v3_Race_GrosVentres: Coding;
+    readonly GrosVentres: Coding;
     /**
-     * Atsina
+     * 1265-8: Atsina
      */
-    v3_Race_Atsina: Coding;
+    readonly Atsina: Coding;
     /**
-     * Haliwa
+     * 1267-4: Haliwa
      */
-    v3_Race_Haliwa: Coding;
+    readonly Haliwa: Coding;
     /**
-     * Hidatsa
+     * 1269-0: Hidatsa
      */
-    v3_Race_Hidatsa: Coding;
+    readonly Hidatsa: Coding;
     /**
-     * Hoopa
+     * 1271-6: Hoopa
      */
-    v3_Race_Hoopa: Coding;
+    readonly Hoopa: Coding;
     /**
-     * Trinity
+     * 1272-4: Trinity
      */
-    v3_Race_Trinity: Coding;
+    readonly Trinity: Coding;
     /**
-     * Whilkut
+     * 1273-2: Whilkut
      */
-    v3_Race_Whilkut: Coding;
+    readonly Whilkut: Coding;
     /**
-     * Hoopa Extension
+     * 1275-7: Hoopa Extension
      */
-    v3_Race_HoopaExtension: Coding;
+    readonly HoopaExtension: Coding;
     /**
-     * Houma
+     * 1277-3: Houma
      */
-    v3_Race_Houma: Coding;
+    readonly Houma: Coding;
     /**
-     * Inaja-Cosmit
+     * 1279-9: Inaja-Cosmit
      */
-    v3_Race_InajaCosmit: Coding;
+    readonly InajaCosmit: Coding;
     /**
-     * Iowa
+     * 1281-5: Iowa
      */
-    v3_Race_Iowa: Coding;
+    readonly Iowa: Coding;
     /**
-     * Iowa of Kansas-Nebraska
+     * 1282-3: Iowa of Kansas-Nebraska
      */
-    v3_Race_IowaOfKansasNebraska: Coding;
+    readonly IowaOfKansasNebraska: Coding;
     /**
-     * Iowa of Oklahoma
+     * 1283-1: Iowa of Oklahoma
      */
-    v3_Race_IowaOfOklahoma: Coding;
+    readonly IowaOfOklahoma: Coding;
     /**
-     * Iroquois
+     * 1285-6: Iroquois
      */
-    v3_Race_Iroquois: Coding;
+    readonly Iroquois: Coding;
     /**
-     * Cayuga
+     * 1286-4: Cayuga
      */
-    v3_Race_Cayuga: Coding;
+    readonly Cayuga: Coding;
     /**
-     * Mohawk
+     * 1287-2: Mohawk
      */
-    v3_Race_Mohawk: Coding;
+    readonly Mohawk: Coding;
     /**
-     * Oneida
+     * 1288-0: Oneida
      */
-    v3_Race_Oneida: Coding;
+    readonly Oneida: Coding;
     /**
-     * Onondaga
+     * 1289-8: Onondaga
      */
-    v3_Race_Onondaga: Coding;
+    readonly Onondaga: Coding;
     /**
-     * Seneca
+     * 1290-6: Seneca
      */
-    v3_Race_Seneca: Coding;
+    readonly Seneca: Coding;
     /**
-     * Seneca Nation
+     * 1291-4: Seneca Nation
      */
-    v3_Race_SenecaNation: Coding;
+    readonly SenecaNation: Coding;
     /**
-     * Seneca-Cayuga
+     * 1292-2: Seneca-Cayuga
      */
-    v3_Race_SenecaCayuga: Coding;
+    readonly SenecaCayuga: Coding;
     /**
-     * Tonawanda Seneca
+     * 1293-0: Tonawanda Seneca
      */
-    v3_Race_TonawandaSeneca: Coding;
+    readonly TonawandaSeneca: Coding;
     /**
-     * Tuscarora
+     * 1294-8: Tuscarora
      */
-    v3_Race_Tuscarora: Coding;
+    readonly Tuscarora: Coding;
     /**
-     * Wyandotte
+     * 1295-5: Wyandotte
      */
-    v3_Race_Wyandotte: Coding;
+    readonly Wyandotte: Coding;
     /**
-     * Juaneno
+     * 1297-1: Juaneno
      */
-    v3_Race_Juaneno: Coding;
+    readonly Juaneno: Coding;
     /**
-     * Kalispel
+     * 1299-7: Kalispel
      */
-    v3_Race_Kalispel: Coding;
+    readonly Kalispel: Coding;
     /**
-     * Karuk
+     * 1301-1: Karuk
      */
-    v3_Race_Karuk: Coding;
+    readonly Karuk: Coding;
     /**
-     * Kaw
+     * 1303-7: Kaw
      */
-    v3_Race_Kaw: Coding;
+    readonly Kaw: Coding;
     /**
-     * Kickapoo
+     * 1305-2: Kickapoo
      */
-    v3_Race_Kickapoo: Coding;
+    readonly Kickapoo: Coding;
     /**
-     * Oklahoma Kickapoo
+     * 1306-0: Oklahoma Kickapoo
      */
-    v3_Race_OklahomaKickapoo: Coding;
+    readonly OklahomaKickapoo: Coding;
     /**
-     * Texas Kickapoo
+     * 1307-8: Texas Kickapoo
      */
-    v3_Race_TexasKickapoo: Coding;
+    readonly TexasKickapoo: Coding;
     /**
-     * Kiowa
+     * 1309-4: Kiowa
      */
-    v3_Race_Kiowa: Coding;
+    readonly Kiowa: Coding;
     /**
-     * Oklahoma Kiowa
+     * 1310-2: Oklahoma Kiowa
      */
-    v3_Race_OklahomaKiowa: Coding;
+    readonly OklahomaKiowa: Coding;
     /**
-     * Klallam
+     * 1312-8: Klallam
      */
-    v3_Race_Klallam: Coding;
+    readonly Klallam: Coding;
     /**
-     * Jamestown
+     * 1313-6: Jamestown
      */
-    v3_Race_Jamestown: Coding;
+    readonly Jamestown: Coding;
     /**
-     * Lower Elwha
+     * 1314-4: Lower Elwha
      */
-    v3_Race_LowerElwha: Coding;
+    readonly LowerElwha: Coding;
     /**
-     * Port Gamble Klallam
+     * 1315-1: Port Gamble Klallam
      */
-    v3_Race_PortGambleKlallam: Coding;
+    readonly PortGambleKlallam: Coding;
     /**
-     * Klamath
+     * 1317-7: Klamath
      */
-    v3_Race_Klamath: Coding;
+    readonly Klamath: Coding;
     /**
-     * Konkow
+     * 1319-3: Konkow
      */
-    v3_Race_Konkow: Coding;
+    readonly Konkow: Coding;
     /**
-     * Kootenai
+     * 1321-9: Kootenai
      */
-    v3_Race_Kootenai: Coding;
+    readonly Kootenai: Coding;
     /**
-     * Lassik
+     * 1323-5: Lassik
      */
-    v3_Race_Lassik: Coding;
+    readonly Lassik: Coding;
     /**
-     * Long Island
+     * 1325-0: Long Island
      */
-    v3_Race_LongIsland: Coding;
+    readonly LongIsland: Coding;
     /**
-     * Matinecock
+     * 1326-8: Matinecock
      */
-    v3_Race_Matinecock: Coding;
+    readonly Matinecock: Coding;
     /**
-     * Montauk
+     * 1327-6: Montauk
      */
-    v3_Race_Montauk: Coding;
+    readonly Montauk: Coding;
     /**
-     * Poospatuck
+     * 1328-4: Poospatuck
      */
-    v3_Race_Poospatuck: Coding;
+    readonly Poospatuck: Coding;
     /**
-     * Setauket
+     * 1329-2: Setauket
      */
-    v3_Race_Setauket: Coding;
+    readonly Setauket: Coding;
     /**
-     * Luiseno
+     * 1331-8: Luiseno
      */
-    v3_Race_Luiseno: Coding;
+    readonly Luiseno: Coding;
     /**
-     * La Jolla
+     * 1332-6: La Jolla
      */
-    v3_Race_LaJolla: Coding;
+    readonly LaJolla: Coding;
     /**
-     * Pala
+     * 1333-4: Pala
      */
-    v3_Race_Pala: Coding;
+    readonly Pala: Coding;
     /**
-     * Pauma
+     * 1334-2: Pauma
      */
-    v3_Race_Pauma: Coding;
+    readonly Pauma: Coding;
     /**
-     * Pechanga
+     * 1335-9: Pechanga
      */
-    v3_Race_Pechanga: Coding;
+    readonly Pechanga: Coding;
     /**
-     * Soboba
+     * 1336-7: Soboba
      */
-    v3_Race_Soboba: Coding;
+    readonly Soboba: Coding;
     /**
-     * Twenty-Nine Palms
+     * 1337-5: Twenty-Nine Palms
      */
-    v3_Race_TwentyNinePalms: Coding;
+    readonly TwentyNinePalms: Coding;
     /**
-     * Temecula
+     * 1338-3: Temecula
      */
-    v3_Race_Temecula: Coding;
+    readonly Temecula: Coding;
     /**
-     * Lumbee
+     * 1340-9: Lumbee
      */
-    v3_Race_Lumbee: Coding;
+    readonly Lumbee: Coding;
     /**
-     * Lummi
+     * 1342-5: Lummi
      */
-    v3_Race_Lummi: Coding;
+    readonly Lummi: Coding;
     /**
-     * Maidu
+     * 1344-1: Maidu
      */
-    v3_Race_Maidu: Coding;
+    readonly Maidu: Coding;
     /**
-     * Mountain Maidu
+     * 1345-8: Mountain Maidu
      */
-    v3_Race_MountainMaidu: Coding;
+    readonly MountainMaidu: Coding;
     /**
-     * Nishinam
+     * 1346-6: Nishinam
      */
-    v3_Race_Nishinam: Coding;
+    readonly Nishinam: Coding;
     /**
-     * Makah
+     * 1348-2: Makah
      */
-    v3_Race_Makah: Coding;
+    readonly Makah: Coding;
     /**
-     * Maliseet
+     * 1350-8: Maliseet
      */
-    v3_Race_Maliseet: Coding;
+    readonly Maliseet: Coding;
     /**
-     * Mandan
+     * 1352-4: Mandan
      */
-    v3_Race_Mandan: Coding;
+    readonly Mandan: Coding;
     /**
-     * Mattaponi
+     * 1354-0: Mattaponi
      */
-    v3_Race_Mattaponi: Coding;
+    readonly Mattaponi: Coding;
     /**
-     * Menominee
+     * 1356-5: Menominee
      */
-    v3_Race_Menominee: Coding;
+    readonly Menominee: Coding;
     /**
-     * Miami
+     * 1358-1: Miami
      */
-    v3_Race_Miami: Coding;
+    readonly Miami: Coding;
     /**
-     * Illinois Miami
+     * 1359-9: Illinois Miami
      */
-    v3_Race_IllinoisMiami: Coding;
+    readonly IllinoisMiami: Coding;
     /**
-     * Indiana Miami
+     * 1360-7: Indiana Miami
      */
-    v3_Race_IndianaMiami: Coding;
+    readonly IndianaMiami: Coding;
     /**
-     * Oklahoma Miami
+     * 1361-5: Oklahoma Miami
      */
-    v3_Race_OklahomaMiami: Coding;
+    readonly OklahomaMiami: Coding;
     /**
-     * Miccosukee
+     * 1363-1: Miccosukee
      */
-    v3_Race_Miccosukee: Coding;
+    readonly Miccosukee: Coding;
     /**
-     * Micmac
+     * 1365-6: Micmac
      */
-    v3_Race_Micmac: Coding;
+    readonly Micmac: Coding;
     /**
-     * Aroostook
+     * 1366-4: Aroostook
      */
-    v3_Race_Aroostook: Coding;
+    readonly Aroostook: Coding;
     /**
-     * Mission Indians
+     * 1368-0: Mission Indians
      */
-    v3_Race_MissionIndians: Coding;
+    readonly MissionIndians: Coding;
     /**
-     * Miwok
+     * 1370-6: Miwok
      */
-    v3_Race_Miwok: Coding;
+    readonly Miwok: Coding;
     /**
-     * Modoc
+     * 1372-2: Modoc
      */
-    v3_Race_Modoc: Coding;
+    readonly Modoc: Coding;
     /**
-     * Mohegan
+     * 1374-8: Mohegan
      */
-    v3_Race_Mohegan: Coding;
+    readonly Mohegan: Coding;
     /**
-     * Mono
+     * 1376-3: Mono
      */
-    v3_Race_Mono: Coding;
+    readonly Mono: Coding;
     /**
-     * Nanticoke
+     * 1378-9: Nanticoke
      */
-    v3_Race_Nanticoke: Coding;
+    readonly Nanticoke: Coding;
     /**
-     * Narragansett
+     * 1380-5: Narragansett
      */
-    v3_Race_Narragansett: Coding;
+    readonly Narragansett: Coding;
     /**
-     * Navajo
+     * 1382-1: Navajo
      */
-    v3_Race_Navajo: Coding;
+    readonly Navajo: Coding;
     /**
-     * Alamo Navajo
+     * 1383-9: Alamo Navajo
      */
-    v3_Race_AlamoNavajo: Coding;
+    readonly AlamoNavajo: Coding;
     /**
-     * Canoncito Navajo
+     * 1384-7: Canoncito Navajo
      */
-    v3_Race_CanoncitoNavajo: Coding;
+    readonly CanoncitoNavajo: Coding;
     /**
-     * Ramah Navajo
+     * 1385-4: Ramah Navajo
      */
-    v3_Race_RamahNavajo: Coding;
+    readonly RamahNavajo: Coding;
     /**
-     * Nez Perce
+     * 1387-0: Nez Perce
      */
-    v3_Race_NezPerce: Coding;
+    readonly NezPerce: Coding;
     /**
-     * Nomalaki
+     * 1389-6: Nomalaki
      */
-    v3_Race_Nomalaki: Coding;
+    readonly Nomalaki: Coding;
     /**
-     * Northwest Tribes
+     * 1391-2: Northwest Tribes
      */
-    v3_Race_NorthwestTribes: Coding;
+    readonly NorthwestTribes: Coding;
     /**
-     * Alsea
+     * 1392-0: Alsea
      */
-    v3_Race_Alsea: Coding;
+    readonly Alsea: Coding;
     /**
-     * Celilo
+     * 1393-8: Celilo
      */
-    v3_Race_Celilo: Coding;
+    readonly Celilo: Coding;
     /**
-     * Columbia
+     * 1394-6: Columbia
      */
-    v3_Race_Columbia: Coding;
+    readonly Columbia: Coding;
     /**
-     * Kalapuya
+     * 1395-3: Kalapuya
      */
-    v3_Race_Kalapuya: Coding;
+    readonly Kalapuya: Coding;
     /**
-     * Molala
+     * 1396-1: Molala
      */
-    v3_Race_Molala: Coding;
+    readonly Molala: Coding;
     /**
-     * Talakamish
+     * 1397-9: Talakamish
      */
-    v3_Race_Talakamish: Coding;
+    readonly Talakamish: Coding;
     /**
-     * Tenino
+     * 1398-7: Tenino
      */
-    v3_Race_Tenino: Coding;
+    readonly Tenino: Coding;
     /**
-     * Tillamook
+     * 1399-5: Tillamook
      */
-    v3_Race_Tillamook: Coding;
+    readonly Tillamook: Coding;
     /**
-     * Wenatchee
+     * 1400-1: Wenatchee
      */
-    v3_Race_Wenatchee: Coding;
+    readonly Wenatchee: Coding;
     /**
-     * Yahooskin
+     * 1401-9: Yahooskin
      */
-    v3_Race_Yahooskin: Coding;
+    readonly Yahooskin: Coding;
     /**
-     * Omaha
+     * 1403-5: Omaha
      */
-    v3_Race_Omaha: Coding;
+    readonly Omaha: Coding;
     /**
-     * Oregon Athabaskan
+     * 1405-0: Oregon Athabaskan
      */
-    v3_Race_OregonAthabaskan: Coding;
+    readonly OregonAthabaskan: Coding;
     /**
-     * Osage
+     * 1407-6: Osage
      */
-    v3_Race_Osage: Coding;
+    readonly Osage: Coding;
     /**
-     * Otoe-Missouria
+     * 1409-2: Otoe-Missouria
      */
-    v3_Race_OtoeMissouria: Coding;
+    readonly OtoeMissouria: Coding;
     /**
-     * Ottawa
+     * 1411-8: Ottawa
      */
-    v3_Race_Ottawa: Coding;
+    readonly Ottawa: Coding;
     /**
-     * Burt Lake Ottawa
+     * 1412-6: Burt Lake Ottawa
      */
-    v3_Race_BurtLakeOttawa: Coding;
+    readonly BurtLakeOttawa: Coding;
     /**
-     * Michigan Ottawa
+     * 1413-4: Michigan Ottawa
      */
-    v3_Race_MichiganOttawa: Coding;
+    readonly MichiganOttawa: Coding;
     /**
-     * Oklahoma Ottawa
+     * 1414-2: Oklahoma Ottawa
      */
-    v3_Race_OklahomaOttawa: Coding;
+    readonly OklahomaOttawa: Coding;
     /**
-     * Paiute
+     * 1416-7: Paiute
      */
-    v3_Race_Paiute: Coding;
+    readonly Paiute: Coding;
     /**
-     * Bishop
+     * 1417-5: Bishop
      */
-    v3_Race_Bishop: Coding;
+    readonly Bishop: Coding;
     /**
-     * Bridgeport
+     * 1418-3: Bridgeport
      */
-    v3_Race_Bridgeport: Coding;
+    readonly Bridgeport: Coding;
     /**
-     * Burns Paiute
+     * 1419-1: Burns Paiute
      */
-    v3_Race_BurnsPaiute: Coding;
+    readonly BurnsPaiute: Coding;
     /**
-     * Cedarville
+     * 1420-9: Cedarville
      */
-    v3_Race_Cedarville: Coding;
+    readonly Cedarville: Coding;
     /**
-     * Fort Bidwell
+     * 1421-7: Fort Bidwell
      */
-    v3_Race_FortBidwell: Coding;
+    readonly FortBidwell: Coding;
     /**
-     * Fort Independence
+     * 1422-5: Fort Independence
      */
-    v3_Race_FortIndependence: Coding;
+    readonly FortIndependence: Coding;
     /**
-     * Kaibab
+     * 1423-3: Kaibab
      */
-    v3_Race_Kaibab: Coding;
+    readonly Kaibab: Coding;
     /**
-     * Las Vegas
+     * 1424-1: Las Vegas
      */
-    v3_Race_LasVegas: Coding;
+    readonly LasVegas: Coding;
     /**
-     * Lone Pine
+     * 1425-8: Lone Pine
      */
-    v3_Race_LonePine: Coding;
+    readonly LonePine: Coding;
     /**
-     * Lovelock
+     * 1426-6: Lovelock
      */
-    v3_Race_Lovelock: Coding;
+    readonly Lovelock: Coding;
     /**
-     * Malheur Paiute
+     * 1427-4: Malheur Paiute
      */
-    v3_Race_MalheurPaiute: Coding;
+    readonly MalheurPaiute: Coding;
     /**
-     * Moapa
+     * 1428-2: Moapa
      */
-    v3_Race_Moapa: Coding;
+    readonly Moapa: Coding;
     /**
-     * Northern Paiute
+     * 1429-0: Northern Paiute
      */
-    v3_Race_NorthernPaiute: Coding;
+    readonly NorthernPaiute: Coding;
     /**
-     * Owens Valley
+     * 1430-8: Owens Valley
      */
-    v3_Race_OwensValley: Coding;
+    readonly OwensValley: Coding;
     /**
-     * Pyramid Lake
+     * 1431-6: Pyramid Lake
      */
-    v3_Race_PyramidLake: Coding;
+    readonly PyramidLake: Coding;
     /**
-     * San Juan Southern Paiute
+     * 1432-4: San Juan Southern Paiute
      */
-    v3_Race_SanJuanSouthernPaiute: Coding;
+    readonly SanJuanSouthernPaiute: Coding;
     /**
-     * Southern Paiute
+     * 1433-2: Southern Paiute
      */
-    v3_Race_SouthernPaiute: Coding;
+    readonly SouthernPaiute: Coding;
     /**
-     * Summit Lake
+     * 1434-0: Summit Lake
      */
-    v3_Race_SummitLake: Coding;
+    readonly SummitLake: Coding;
     /**
-     * Utu Utu Gwaitu Paiute
+     * 1435-7: Utu Utu Gwaitu Paiute
      */
-    v3_Race_UtuUtuGwaituPaiute: Coding;
+    readonly UtuUtuGwaituPaiute: Coding;
     /**
-     * Walker River
+     * 1436-5: Walker River
      */
-    v3_Race_WalkerRiver: Coding;
+    readonly WalkerRiver: Coding;
     /**
-     * Yerington Paiute
+     * 1437-3: Yerington Paiute
      */
-    v3_Race_YeringtonPaiute: Coding;
+    readonly YeringtonPaiute: Coding;
     /**
-     * Pamunkey
+     * 1439-9: Pamunkey
      */
-    v3_Race_Pamunkey: Coding;
+    readonly Pamunkey: Coding;
     /**
-     * Passamaquoddy
+     * 1441-5: Passamaquoddy
      */
-    v3_Race_Passamaquoddy: Coding;
+    readonly Passamaquoddy: Coding;
     /**
-     * Indian Township
+     * 1442-3: Indian Township
      */
-    v3_Race_IndianTownship: Coding;
+    readonly IndianTownship: Coding;
     /**
-     * Pleasant Point Passamaquoddy
+     * 1443-1: Pleasant Point Passamaquoddy
      */
-    v3_Race_PleasantPointPassamaquoddy: Coding;
+    readonly PleasantPointPassamaquoddy: Coding;
     /**
-     * Pawnee
+     * 1445-6: Pawnee
      */
-    v3_Race_Pawnee: Coding;
+    readonly Pawnee: Coding;
     /**
-     * Oklahoma Pawnee
+     * 1446-4: Oklahoma Pawnee
      */
-    v3_Race_OklahomaPawnee: Coding;
+    readonly OklahomaPawnee: Coding;
     /**
-     * Penobscot
+     * 1448-0: Penobscot
      */
-    v3_Race_Penobscot: Coding;
+    readonly Penobscot: Coding;
     /**
-     * Peoria
+     * 1450-6: Peoria
      */
-    v3_Race_Peoria: Coding;
+    readonly Peoria: Coding;
     /**
-     * Oklahoma Peoria
+     * 1451-4: Oklahoma Peoria
      */
-    v3_Race_OklahomaPeoria: Coding;
+    readonly OklahomaPeoria: Coding;
     /**
-     * Pequot
+     * 1453-0: Pequot
      */
-    v3_Race_Pequot: Coding;
+    readonly Pequot: Coding;
     /**
-     * Marshantucket Pequot
+     * 1454-8: Marshantucket Pequot
      */
-    v3_Race_MarshantucketPequot: Coding;
+    readonly MarshantucketPequot: Coding;
     /**
-     * Pima
+     * 1456-3: Pima
      */
-    v3_Race_Pima: Coding;
+    readonly Pima: Coding;
     /**
-     * Gila River Pima-Maricopa
+     * 1457-1: Gila River Pima-Maricopa
      */
-    v3_Race_GilaRiverPimaMaricopa: Coding;
+    readonly GilaRiverPimaMaricopa: Coding;
     /**
-     * Salt River Pima-Maricopa
+     * 1458-9: Salt River Pima-Maricopa
      */
-    v3_Race_SaltRiverPimaMaricopa: Coding;
+    readonly SaltRiverPimaMaricopa: Coding;
     /**
-     * Piscataway
+     * 1460-5: Piscataway
      */
-    v3_Race_Piscataway: Coding;
+    readonly Piscataway: Coding;
     /**
-     * Pit River
+     * 1462-1: Pit River
      */
-    v3_Race_PitRiver: Coding;
+    readonly PitRiver: Coding;
     /**
-     * Pomo
+     * 1464-7: Pomo
      */
-    v3_Race_Pomo: Coding;
+    readonly Pomo: Coding;
     /**
-     * Central Pomo
+     * 1465-4: Central Pomo
      */
-    v3_Race_CentralPomo: Coding;
+    readonly CentralPomo: Coding;
     /**
-     * Dry Creek
+     * 1466-2: Dry Creek
      */
-    v3_Race_DryCreek: Coding;
+    readonly DryCreek: Coding;
     /**
-     * Eastern Pomo
+     * 1467-0: Eastern Pomo
      */
-    v3_Race_EasternPomo: Coding;
+    readonly EasternPomo: Coding;
     /**
-     * Kashia
+     * 1468-8: Kashia
      */
-    v3_Race_Kashia: Coding;
+    readonly Kashia: Coding;
     /**
-     * Northern Pomo
+     * 1469-6: Northern Pomo
      */
-    v3_Race_NorthernPomo: Coding;
+    readonly NorthernPomo: Coding;
     /**
-     * Scotts Valley
+     * 1470-4: Scotts Valley
      */
-    v3_Race_ScottsValley: Coding;
+    readonly ScottsValley: Coding;
     /**
-     * Stonyford
+     * 1471-2: Stonyford
      */
-    v3_Race_Stonyford: Coding;
+    readonly Stonyford: Coding;
     /**
-     * Sulphur Bank
+     * 1472-0: Sulphur Bank
      */
-    v3_Race_SulphurBank: Coding;
+    readonly SulphurBank: Coding;
     /**
-     * Ponca
+     * 1474-6: Ponca
      */
-    v3_Race_Ponca: Coding;
+    readonly Ponca: Coding;
     /**
-     * Nebraska Ponca
+     * 1475-3: Nebraska Ponca
      */
-    v3_Race_NebraskaPonca: Coding;
+    readonly NebraskaPonca: Coding;
     /**
-     * Oklahoma Ponca
+     * 1476-1: Oklahoma Ponca
      */
-    v3_Race_OklahomaPonca: Coding;
+    readonly OklahomaPonca: Coding;
     /**
-     * Potawatomi
+     * 1478-7: Potawatomi
      */
-    v3_Race_Potawatomi: Coding;
+    readonly Potawatomi: Coding;
     /**
-     * Citizen Band Potawatomi
+     * 1479-5: Citizen Band Potawatomi
      */
-    v3_Race_CitizenBandPotawatomi: Coding;
+    readonly CitizenBandPotawatomi: Coding;
     /**
-     * Forest County
+     * 1480-3: Forest County
      */
-    v3_Race_ForestCounty: Coding;
+    readonly ForestCounty: Coding;
     /**
-     * Hannahville
+     * 1481-1: Hannahville
      */
-    v3_Race_Hannahville: Coding;
+    readonly Hannahville: Coding;
     /**
-     * Huron Potawatomi
+     * 1482-9: Huron Potawatomi
      */
-    v3_Race_HuronPotawatomi: Coding;
+    readonly HuronPotawatomi: Coding;
     /**
-     * Pokagon Potawatomi
+     * 1483-7: Pokagon Potawatomi
      */
-    v3_Race_PokagonPotawatomi: Coding;
+    readonly PokagonPotawatomi: Coding;
     /**
-     * Prairie Band
+     * 1484-5: Prairie Band
      */
-    v3_Race_PrairieBand: Coding;
+    readonly PrairieBand: Coding;
     /**
-     * Wisconsin Potawatomi
+     * 1485-2: Wisconsin Potawatomi
      */
-    v3_Race_WisconsinPotawatomi: Coding;
+    readonly WisconsinPotawatomi: Coding;
     /**
-     * Powhatan
+     * 1487-8: Powhatan
      */
-    v3_Race_Powhatan: Coding;
+    readonly Powhatan: Coding;
     /**
-     * Pueblo
+     * 1489-4: Pueblo
      */
-    v3_Race_Pueblo: Coding;
+    readonly Pueblo: Coding;
     /**
-     * Acoma
+     * 1490-2: Acoma
      */
-    v3_Race_Acoma: Coding;
+    readonly Acoma: Coding;
     /**
-     * Arizona Tewa
+     * 1491-0: Arizona Tewa
      */
-    v3_Race_ArizonaTewa: Coding;
+    readonly ArizonaTewa: Coding;
     /**
-     * Cochiti
+     * 1492-8: Cochiti
      */
-    v3_Race_Cochiti: Coding;
+    readonly Cochiti: Coding;
     /**
-     * Hopi
+     * 1493-6: Hopi
      */
-    v3_Race_Hopi: Coding;
+    readonly Hopi: Coding;
     /**
-     * Isleta
+     * 1494-4: Isleta
      */
-    v3_Race_Isleta: Coding;
+    readonly Isleta: Coding;
     /**
-     * Jemez
+     * 1495-1: Jemez
      */
-    v3_Race_Jemez: Coding;
+    readonly Jemez: Coding;
     /**
-     * Keres
+     * 1496-9: Keres
      */
-    v3_Race_Keres: Coding;
+    readonly Keres: Coding;
     /**
-     * Laguna
+     * 1497-7: Laguna
      */
-    v3_Race_Laguna: Coding;
+    readonly Laguna: Coding;
     /**
-     * Nambe
+     * 1498-5: Nambe
      */
-    v3_Race_Nambe: Coding;
+    readonly Nambe: Coding;
     /**
-     * Picuris
+     * 1499-3: Picuris
      */
-    v3_Race_Picuris: Coding;
+    readonly Picuris: Coding;
     /**
-     * Piro
+     * 1500-8: Piro
      */
-    v3_Race_Piro: Coding;
+    readonly Piro: Coding;
     /**
-     * Pojoaque
+     * 1501-6: Pojoaque
      */
-    v3_Race_Pojoaque: Coding;
+    readonly Pojoaque: Coding;
     /**
-     * San Felipe
+     * 1502-4: San Felipe
      */
-    v3_Race_SanFelipe: Coding;
+    readonly SanFelipe: Coding;
     /**
-     * San Ildefonso
+     * 1503-2: San Ildefonso
      */
-    v3_Race_SanIldefonso: Coding;
+    readonly SanIldefonso: Coding;
     /**
-     * San Juan Pueblo
+     * 1504-0: San Juan Pueblo
      */
-    v3_Race_SanJuanPueblo: Coding;
+    readonly SanJuanPueblo: Coding;
     /**
-     * San Juan De
+     * 1505-7: San Juan De
      */
-    v3_Race_SanJuanDe: Coding;
+    readonly SanJuanDe: Coding;
     /**
-     * San Juan
+     * 1506-5: San Juan
      */
-    v3_Race_SanJuan: Coding;
+    readonly SanJuan: Coding;
     /**
-     * Sandia
+     * 1507-3: Sandia
      */
-    v3_Race_Sandia: Coding;
+    readonly Sandia: Coding;
     /**
-     * Santa Ana
+     * 1508-1: Santa Ana
      */
-    v3_Race_SantaAna: Coding;
+    readonly SantaAna: Coding;
     /**
-     * Santa Clara
+     * 1509-9: Santa Clara
      */
-    v3_Race_SantaClara: Coding;
+    readonly SantaClara: Coding;
     /**
-     * Santo Domingo
+     * 1510-7: Santo Domingo
      */
-    v3_Race_SantoDomingo: Coding;
+    readonly SantoDomingo: Coding;
     /**
-     * Taos
+     * 1511-5: Taos
      */
-    v3_Race_Taos: Coding;
+    readonly Taos: Coding;
     /**
-     * Tesuque
+     * 1512-3: Tesuque
      */
-    v3_Race_Tesuque: Coding;
+    readonly Tesuque: Coding;
     /**
-     * Tewa
+     * 1513-1: Tewa
      */
-    v3_Race_Tewa: Coding;
+    readonly Tewa: Coding;
     /**
-     * Tigua
+     * 1514-9: Tigua
      */
-    v3_Race_Tigua: Coding;
+    readonly Tigua: Coding;
     /**
-     * Zia
+     * 1515-6: Zia
      */
-    v3_Race_Zia: Coding;
+    readonly Zia: Coding;
     /**
-     * Zuni
+     * 1516-4: Zuni
      */
-    v3_Race_Zuni: Coding;
+    readonly Zuni: Coding;
     /**
-     * Puget Sound Salish
+     * 1518-0: Puget Sound Salish
      */
-    v3_Race_PugetSoundSalish: Coding;
+    readonly PugetSoundSalish: Coding;
     /**
-     * Duwamish
+     * 1519-8: Duwamish
      */
-    v3_Race_Duwamish: Coding;
+    readonly Duwamish: Coding;
     /**
-     * Kikiallus
+     * 1520-6: Kikiallus
      */
-    v3_Race_Kikiallus: Coding;
+    readonly Kikiallus: Coding;
     /**
-     * Lower Skagit
+     * 1521-4: Lower Skagit
      */
-    v3_Race_LowerSkagit: Coding;
+    readonly LowerSkagit: Coding;
     /**
-     * Muckleshoot
+     * 1522-2: Muckleshoot
      */
-    v3_Race_Muckleshoot: Coding;
+    readonly Muckleshoot: Coding;
     /**
-     * Nisqually
+     * 1523-0: Nisqually
      */
-    v3_Race_Nisqually: Coding;
+    readonly Nisqually: Coding;
     /**
-     * Nooksack
+     * 1524-8: Nooksack
      */
-    v3_Race_Nooksack: Coding;
+    readonly Nooksack: Coding;
     /**
-     * Port Madison
+     * 1525-5: Port Madison
      */
-    v3_Race_PortMadison: Coding;
+    readonly PortMadison: Coding;
     /**
-     * Puyallup
+     * 1526-3: Puyallup
      */
-    v3_Race_Puyallup: Coding;
+    readonly Puyallup: Coding;
     /**
-     * Samish
+     * 1527-1: Samish
      */
-    v3_Race_Samish: Coding;
+    readonly Samish: Coding;
     /**
-     * Sauk-Suiattle
+     * 1528-9: Sauk-Suiattle
      */
-    v3_Race_SaukSuiattle: Coding;
+    readonly SaukSuiattle: Coding;
     /**
-     * Skokomish
+     * 1529-7: Skokomish
      */
-    v3_Race_Skokomish: Coding;
+    readonly Skokomish: Coding;
     /**
-     * Skykomish
+     * 1530-5: Skykomish
      */
-    v3_Race_Skykomish: Coding;
+    readonly Skykomish: Coding;
     /**
-     * Snohomish
+     * 1531-3: Snohomish
      */
-    v3_Race_Snohomish: Coding;
+    readonly Snohomish: Coding;
     /**
-     * Snoqualmie
+     * 1532-1: Snoqualmie
      */
-    v3_Race_Snoqualmie: Coding;
+    readonly Snoqualmie: Coding;
     /**
-     * Squaxin Island
+     * 1533-9: Squaxin Island
      */
-    v3_Race_SquaxinIsland: Coding;
+    readonly SquaxinIsland: Coding;
     /**
-     * Steilacoom
+     * 1534-7: Steilacoom
      */
-    v3_Race_Steilacoom: Coding;
+    readonly Steilacoom: Coding;
     /**
-     * Stillaguamish
+     * 1535-4: Stillaguamish
      */
-    v3_Race_Stillaguamish: Coding;
+    readonly Stillaguamish: Coding;
     /**
-     * Suquamish
+     * 1536-2: Suquamish
      */
-    v3_Race_Suquamish: Coding;
+    readonly Suquamish: Coding;
     /**
-     * Swinomish
+     * 1537-0: Swinomish
      */
-    v3_Race_Swinomish: Coding;
+    readonly Swinomish: Coding;
     /**
-     * Tulalip
+     * 1538-8: Tulalip
      */
-    v3_Race_Tulalip: Coding;
+    readonly Tulalip: Coding;
     /**
-     * Upper Skagit
+     * 1539-6: Upper Skagit
      */
-    v3_Race_UpperSkagit: Coding;
+    readonly UpperSkagit: Coding;
     /**
-     * Quapaw
+     * 1541-2: Quapaw
      */
-    v3_Race_Quapaw: Coding;
+    readonly Quapaw: Coding;
     /**
-     * Quinault
+     * 1543-8: Quinault
      */
-    v3_Race_Quinault: Coding;
+    readonly Quinault: Coding;
     /**
-     * Rappahannock
+     * 1545-3: Rappahannock
      */
-    v3_Race_Rappahannock: Coding;
+    readonly Rappahannock: Coding;
     /**
-     * Reno-Sparks
+     * 1547-9: Reno-Sparks
      */
-    v3_Race_RenoSparks: Coding;
+    readonly RenoSparks: Coding;
     /**
-     * Round Valley
+     * 1549-5: Round Valley
      */
-    v3_Race_RoundValley: Coding;
+    readonly RoundValley: Coding;
     /**
-     * Sac and Fox
+     * 1551-1: Sac and Fox
      */
-    v3_Race_SacAndFox: Coding;
+    readonly SacAndFox: Coding;
     /**
-     * Iowa Sac and Fox
+     * 1552-9: Iowa Sac and Fox
      */
-    v3_Race_IowaSacAndFox: Coding;
+    readonly IowaSacAndFox: Coding;
     /**
-     * Missouri Sac and Fox
+     * 1553-7: Missouri Sac and Fox
      */
-    v3_Race_MissouriSacAndFox: Coding;
+    readonly MissouriSacAndFox: Coding;
     /**
-     * Oklahoma Sac and Fox
+     * 1554-5: Oklahoma Sac and Fox
      */
-    v3_Race_OklahomaSacAndFox: Coding;
+    readonly OklahomaSacAndFox: Coding;
     /**
-     * Salinan
+     * 1556-0: Salinan
      */
-    v3_Race_Salinan: Coding;
+    readonly Salinan: Coding;
     /**
-     * Salish
+     * 1558-6: Salish
      */
-    v3_Race_Salish: Coding;
+    readonly Salish: Coding;
     /**
-     * Salish and Kootenai
+     * 1560-2: Salish and Kootenai
      */
-    v3_Race_SalishAndKootenai: Coding;
+    readonly SalishAndKootenai: Coding;
     /**
-     * Schaghticoke
+     * 1562-8: Schaghticoke
      */
-    v3_Race_Schaghticoke: Coding;
+    readonly Schaghticoke: Coding;
     /**
-     * Scott Valley
+     * 1564-4: Scott Valley
      */
-    v3_Race_ScottValley: Coding;
+    readonly ScottValley: Coding;
     /**
-     * Seminole
+     * 1566-9: Seminole
      */
-    v3_Race_Seminole: Coding;
+    readonly Seminole: Coding;
     /**
-     * Big Cypress
+     * 1567-7: Big Cypress
      */
-    v3_Race_BigCypress: Coding;
+    readonly BigCypress: Coding;
     /**
-     * Brighton
+     * 1568-5: Brighton
      */
-    v3_Race_Brighton: Coding;
+    readonly Brighton: Coding;
     /**
-     * Florida Seminole
+     * 1569-3: Florida Seminole
      */
-    v3_Race_FloridaSeminole: Coding;
+    readonly FloridaSeminole: Coding;
     /**
-     * Hollywood Seminole
+     * 1570-1: Hollywood Seminole
      */
-    v3_Race_HollywoodSeminole: Coding;
+    readonly HollywoodSeminole: Coding;
     /**
-     * Oklahoma Seminole
+     * 1571-9: Oklahoma Seminole
      */
-    v3_Race_OklahomaSeminole: Coding;
+    readonly OklahomaSeminole: Coding;
     /**
-     * Serrano
+     * 1573-5: Serrano
      */
-    v3_Race_Serrano: Coding;
+    readonly Serrano: Coding;
     /**
-     * San Manual
+     * 1574-3: San Manual
      */
-    v3_Race_SanManual: Coding;
+    readonly SanManual: Coding;
     /**
-     * Shasta
+     * 1576-8: Shasta
      */
-    v3_Race_Shasta: Coding;
+    readonly Shasta: Coding;
     /**
-     * Shawnee
+     * 1578-4: Shawnee
      */
-    v3_Race_Shawnee: Coding;
+    readonly Shawnee: Coding;
     /**
-     * Absentee Shawnee
+     * 1579-2: Absentee Shawnee
      */
-    v3_Race_AbsenteeShawnee: Coding;
+    readonly AbsenteeShawnee: Coding;
     /**
-     * Eastern Shawnee
+     * 1580-0: Eastern Shawnee
      */
-    v3_Race_EasternShawnee: Coding;
+    readonly EasternShawnee: Coding;
     /**
-     * Shinnecock
+     * 1582-6: Shinnecock
      */
-    v3_Race_Shinnecock: Coding;
+    readonly Shinnecock: Coding;
     /**
-     * Shoalwater Bay
+     * 1584-2: Shoalwater Bay
      */
-    v3_Race_ShoalwaterBay: Coding;
+    readonly ShoalwaterBay: Coding;
     /**
-     * Shoshone
+     * 1586-7: Shoshone
      */
-    v3_Race_Shoshone: Coding;
+    readonly Shoshone: Coding;
     /**
-     * Battle Mountain
+     * 1587-5: Battle Mountain
      */
-    v3_Race_BattleMountain: Coding;
+    readonly BattleMountain: Coding;
     /**
-     * Duckwater
+     * 1588-3: Duckwater
      */
-    v3_Race_Duckwater: Coding;
+    readonly Duckwater: Coding;
     /**
-     * Elko
+     * 1589-1: Elko
      */
-    v3_Race_Elko: Coding;
+    readonly Elko: Coding;
     /**
-     * Ely
+     * 1590-9: Ely
      */
-    v3_Race_Ely: Coding;
+    readonly Ely: Coding;
     /**
-     * Goshute
+     * 1591-7: Goshute
      */
-    v3_Race_Goshute: Coding;
+    readonly Goshute: Coding;
     /**
-     * Panamint
+     * 1592-5: Panamint
      */
-    v3_Race_Panamint: Coding;
+    readonly Panamint: Coding;
     /**
-     * Ruby Valley
+     * 1593-3: Ruby Valley
      */
-    v3_Race_RubyValley: Coding;
+    readonly RubyValley: Coding;
     /**
-     * Skull Valley
+     * 1594-1: Skull Valley
      */
-    v3_Race_SkullValley: Coding;
+    readonly SkullValley: Coding;
     /**
-     * South Fork Shoshone
+     * 1595-8: South Fork Shoshone
      */
-    v3_Race_SouthForkShoshone: Coding;
+    readonly SouthForkShoshone: Coding;
     /**
-     * Te-Moak Western Shoshone
+     * 1596-6: Te-Moak Western Shoshone
      */
-    v3_Race_TeMoakWesternShoshone: Coding;
+    readonly TeMoakWesternShoshone: Coding;
     /**
-     * Timbi-Sha Shoshone
+     * 1597-4: Timbi-Sha Shoshone
      */
-    v3_Race_TimbiShaShoshone: Coding;
+    readonly TimbiShaShoshone: Coding;
     /**
-     * Washakie
+     * 1598-2: Washakie
      */
-    v3_Race_Washakie: Coding;
+    readonly Washakie: Coding;
     /**
-     * Wind River Shoshone
+     * 1599-0: Wind River Shoshone
      */
-    v3_Race_WindRiverShoshone: Coding;
+    readonly WindRiverShoshone: Coding;
     /**
-     * Yomba
+     * 1600-6: Yomba
      */
-    v3_Race_Yomba: Coding;
+    readonly Yomba: Coding;
     /**
-     * Shoshone Paiute
+     * 1602-2: Shoshone Paiute
      */
-    v3_Race_ShoshonePaiute: Coding;
+    readonly ShoshonePaiute: Coding;
     /**
-     * Duck Valley
+     * 1603-0: Duck Valley
      */
-    v3_Race_DuckValley: Coding;
+    readonly DuckValley: Coding;
     /**
-     * Fallon
+     * 1604-8: Fallon
      */
-    v3_Race_Fallon: Coding;
+    readonly Fallon: Coding;
     /**
-     * Fort McDermitt
+     * 1605-5: Fort McDermitt
      */
-    v3_Race_FortMcDermitt: Coding;
+    readonly FortMcDermitt: Coding;
     /**
-     * Siletz
+     * 1607-1: Siletz
      */
-    v3_Race_Siletz: Coding;
+    readonly Siletz: Coding;
     /**
-     * Sioux
+     * 1609-7: Sioux
      */
-    v3_Race_Sioux: Coding;
+    readonly Sioux: Coding;
     /**
-     * Blackfoot Sioux
+     * 1610-5: Blackfoot Sioux
      */
-    v3_Race_BlackfootSioux: Coding;
+    readonly BlackfootSioux: Coding;
     /**
-     * Brule Sioux
+     * 1611-3: Brule Sioux
      */
-    v3_Race_BruleSioux: Coding;
+    readonly BruleSioux: Coding;
     /**
-     * Cheyenne River Sioux
+     * 1612-1: Cheyenne River Sioux
      */
-    v3_Race_CheyenneRiverSioux: Coding;
+    readonly CheyenneRiverSioux: Coding;
     /**
-     * Crow Creek Sioux
+     * 1613-9: Crow Creek Sioux
      */
-    v3_Race_CrowCreekSioux: Coding;
+    readonly CrowCreekSioux: Coding;
     /**
-     * Dakota Sioux
+     * 1614-7: Dakota Sioux
      */
-    v3_Race_DakotaSioux: Coding;
+    readonly DakotaSioux: Coding;
     /**
-     * Flandreau Santee
+     * 1615-4: Flandreau Santee
      */
-    v3_Race_FlandreauSantee: Coding;
+    readonly FlandreauSantee: Coding;
     /**
-     * Fort Peck
+     * 1616-2: Fort Peck
      */
-    v3_Race_FortPeck: Coding;
+    readonly FortPeck: Coding;
     /**
-     * Lake Traverse Sioux
+     * 1617-0: Lake Traverse Sioux
      */
-    v3_Race_LakeTraverseSioux: Coding;
+    readonly LakeTraverseSioux: Coding;
     /**
-     * Lower Brule Sioux
+     * 1618-8: Lower Brule Sioux
      */
-    v3_Race_LowerBruleSioux: Coding;
+    readonly LowerBruleSioux: Coding;
     /**
-     * Lower Sioux
+     * 1619-6: Lower Sioux
      */
-    v3_Race_LowerSioux: Coding;
+    readonly LowerSioux: Coding;
     /**
-     * Mdewakanton Sioux
+     * 1620-4: Mdewakanton Sioux
      */
-    v3_Race_MdewakantonSioux: Coding;
+    readonly MdewakantonSioux: Coding;
     /**
-     * Miniconjou
+     * 1621-2: Miniconjou
      */
-    v3_Race_Miniconjou: Coding;
+    readonly Miniconjou: Coding;
     /**
-     * Oglala Sioux
+     * 1622-0: Oglala Sioux
      */
-    v3_Race_OglalaSioux: Coding;
+    readonly OglalaSioux: Coding;
     /**
-     * Pine Ridge Sioux
+     * 1623-8: Pine Ridge Sioux
      */
-    v3_Race_PineRidgeSioux: Coding;
+    readonly PineRidgeSioux: Coding;
     /**
-     * Pipestone Sioux
+     * 1624-6: Pipestone Sioux
      */
-    v3_Race_PipestoneSioux: Coding;
+    readonly PipestoneSioux: Coding;
     /**
-     * Prairie Island Sioux
+     * 1625-3: Prairie Island Sioux
      */
-    v3_Race_PrairieIslandSioux: Coding;
+    readonly PrairieIslandSioux: Coding;
     /**
-     * Prior Lake Sioux
+     * 1626-1: Prior Lake Sioux
      */
-    v3_Race_PriorLakeSioux: Coding;
+    readonly PriorLakeSioux: Coding;
     /**
-     * Rosebud Sioux
+     * 1627-9: Rosebud Sioux
      */
-    v3_Race_RosebudSioux: Coding;
+    readonly RosebudSioux: Coding;
     /**
-     * Sans Arc Sioux
+     * 1628-7: Sans Arc Sioux
      */
-    v3_Race_SansArcSioux: Coding;
+    readonly SansArcSioux: Coding;
     /**
-     * Santee Sioux
+     * 1629-5: Santee Sioux
      */
-    v3_Race_SanteeSioux: Coding;
+    readonly SanteeSioux: Coding;
     /**
-     * Sisseton-Wahpeton
+     * 1630-3: Sisseton-Wahpeton
      */
-    v3_Race_SissetonWahpeton: Coding;
+    readonly SissetonWahpeton: Coding;
     /**
-     * Sisseton Sioux
+     * 1631-1: Sisseton Sioux
      */
-    v3_Race_SissetonSioux: Coding;
+    readonly SissetonSioux: Coding;
     /**
-     * Spirit Lake Sioux
+     * 1632-9: Spirit Lake Sioux
      */
-    v3_Race_SpiritLakeSioux: Coding;
+    readonly SpiritLakeSioux: Coding;
     /**
-     * Standing Rock Sioux
+     * 1633-7: Standing Rock Sioux
      */
-    v3_Race_StandingRockSioux: Coding;
+    readonly StandingRockSioux: Coding;
     /**
-     * Teton Sioux
+     * 1634-5: Teton Sioux
      */
-    v3_Race_TetonSioux: Coding;
+    readonly TetonSioux: Coding;
     /**
-     * Two Kettle Sioux
+     * 1635-2: Two Kettle Sioux
      */
-    v3_Race_TwoKettleSioux: Coding;
+    readonly TwoKettleSioux: Coding;
     /**
-     * Upper Sioux
+     * 1636-0: Upper Sioux
      */
-    v3_Race_UpperSioux: Coding;
+    readonly UpperSioux: Coding;
     /**
-     * Wahpekute Sioux
+     * 1637-8: Wahpekute Sioux
      */
-    v3_Race_WahpekuteSioux: Coding;
+    readonly WahpekuteSioux: Coding;
     /**
-     * Wahpeton Sioux
+     * 1638-6: Wahpeton Sioux
      */
-    v3_Race_WahpetonSioux: Coding;
+    readonly WahpetonSioux: Coding;
     /**
-     * Wazhaza Sioux
+     * 1639-4: Wazhaza Sioux
      */
-    v3_Race_WazhazaSioux: Coding;
+    readonly WazhazaSioux: Coding;
     /**
-     * Yankton Sioux
+     * 1640-2: Yankton Sioux
      */
-    v3_Race_YanktonSioux: Coding;
+    readonly YanktonSioux: Coding;
     /**
-     * Yanktonai Sioux
+     * 1641-0: Yanktonai Sioux
      */
-    v3_Race_YanktonaiSioux: Coding;
+    readonly YanktonaiSioux: Coding;
     /**
-     * Siuslaw
+     * 1643-6: Siuslaw
      */
-    v3_Race_Siuslaw: Coding;
+    readonly Siuslaw: Coding;
     /**
-     * Spokane
+     * 1645-1: Spokane
      */
-    v3_Race_Spokane: Coding;
+    readonly Spokane: Coding;
     /**
-     * Stewart
+     * 1647-7: Stewart
      */
-    v3_Race_Stewart: Coding;
+    readonly Stewart: Coding;
     /**
-     * Stockbridge
+     * 1649-3: Stockbridge
      */
-    v3_Race_Stockbridge: Coding;
+    readonly Stockbridge: Coding;
     /**
-     * Susanville
+     * 1651-9: Susanville
      */
-    v3_Race_Susanville: Coding;
+    readonly Susanville: Coding;
     /**
-     * Tohono O'Odham
+     * 1653-5: Tohono O'Odham
      */
-    v3_Race_TohonoOQuoteOdham: Coding;
+    readonly TohonoOQuoteOdham: Coding;
     /**
-     * Ak-Chin
+     * 1654-3: Ak-Chin
      */
-    v3_Race_AkChin: Coding;
+    readonly AkChin: Coding;
     /**
-     * Gila Bend
+     * 1655-0: Gila Bend
      */
-    v3_Race_GilaBend: Coding;
+    readonly GilaBend: Coding;
     /**
-     * San Xavier
+     * 1656-8: San Xavier
      */
-    v3_Race_SanXavier: Coding;
+    readonly SanXavier: Coding;
     /**
-     * Sells
+     * 1657-6: Sells
      */
-    v3_Race_Sells: Coding;
+    readonly Sells: Coding;
     /**
-     * Tolowa
+     * 1659-2: Tolowa
      */
-    v3_Race_Tolowa: Coding;
+    readonly Tolowa: Coding;
     /**
-     * Tonkawa
+     * 1661-8: Tonkawa
      */
-    v3_Race_Tonkawa: Coding;
+    readonly Tonkawa: Coding;
     /**
-     * Tygh
+     * 1663-4: Tygh
      */
-    v3_Race_Tygh: Coding;
+    readonly Tygh: Coding;
     /**
-     * Umatilla
+     * 1665-9: Umatilla
      */
-    v3_Race_Umatilla: Coding;
+    readonly Umatilla: Coding;
     /**
-     * Umpqua
+     * 1667-5: Umpqua
      */
-    v3_Race_Umpqua: Coding;
+    readonly Umpqua: Coding;
     /**
-     * Cow Creek Umpqua
+     * 1668-3: Cow Creek Umpqua
      */
-    v3_Race_CowCreekUmpqua: Coding;
+    readonly CowCreekUmpqua: Coding;
     /**
-     * Ute
+     * 1670-9: Ute
      */
-    v3_Race_Ute: Coding;
+    readonly Ute: Coding;
     /**
-     * Allen Canyon
+     * 1671-7: Allen Canyon
      */
-    v3_Race_AllenCanyon: Coding;
+    readonly AllenCanyon: Coding;
     /**
-     * Uintah Ute
+     * 1672-5: Uintah Ute
      */
-    v3_Race_UintahUte: Coding;
+    readonly UintahUte: Coding;
     /**
-     * Ute Mountain Ute
+     * 1673-3: Ute Mountain Ute
      */
-    v3_Race_UteMountainUte: Coding;
+    readonly UteMountainUte: Coding;
     /**
-     * Wailaki
+     * 1675-8: Wailaki
      */
-    v3_Race_Wailaki: Coding;
+    readonly Wailaki: Coding;
     /**
-     * Walla-Walla
+     * 1677-4: Walla-Walla
      */
-    v3_Race_WallaWalla: Coding;
+    readonly WallaWalla: Coding;
     /**
-     * Wampanoag
+     * 1679-0: Wampanoag
      */
-    v3_Race_Wampanoag: Coding;
+    readonly Wampanoag: Coding;
     /**
-     * Gay Head Wampanoag
+     * 1680-8: Gay Head Wampanoag
      */
-    v3_Race_GayHeadWampanoag: Coding;
+    readonly GayHeadWampanoag: Coding;
     /**
-     * Mashpee Wampanoag
+     * 1681-6: Mashpee Wampanoag
      */
-    v3_Race_MashpeeWampanoag: Coding;
+    readonly MashpeeWampanoag: Coding;
     /**
-     * Warm Springs
+     * 1683-2: Warm Springs
      */
-    v3_Race_WarmSprings: Coding;
+    readonly WarmSprings: Coding;
     /**
-     * Wascopum
+     * 1685-7: Wascopum
      */
-    v3_Race_Wascopum: Coding;
+    readonly Wascopum: Coding;
     /**
-     * Washoe
+     * 1687-3: Washoe
      */
-    v3_Race_Washoe: Coding;
+    readonly Washoe: Coding;
     /**
-     * Alpine
+     * 1688-1: Alpine
      */
-    v3_Race_Alpine: Coding;
+    readonly Alpine: Coding;
     /**
-     * Carson
+     * 1689-9: Carson
      */
-    v3_Race_Carson: Coding;
+    readonly Carson: Coding;
     /**
-     * Dresslerville
+     * 1690-7: Dresslerville
      */
-    v3_Race_Dresslerville: Coding;
+    readonly Dresslerville: Coding;
     /**
-     * Wichita
+     * 1692-3: Wichita
      */
-    v3_Race_Wichita: Coding;
+    readonly Wichita: Coding;
     /**
-     * Wind River
+     * 1694-9: Wind River
      */
-    v3_Race_WindRiver: Coding;
+    readonly WindRiver: Coding;
     /**
-     * Winnebago
+     * 1696-4: Winnebago
      */
-    v3_Race_Winnebago: Coding;
+    readonly Winnebago: Coding;
     /**
-     * Ho-chunk
+     * 1697-2: Ho-chunk
      */
-    v3_Race_HoChunk: Coding;
+    readonly HoChunk: Coding;
     /**
-     * Nebraska Winnebago
+     * 1698-0: Nebraska Winnebago
      */
-    v3_Race_NebraskaWinnebago: Coding;
+    readonly NebraskaWinnebago: Coding;
     /**
-     * Winnemucca
+     * 1700-4: Winnemucca
      */
-    v3_Race_Winnemucca: Coding;
+    readonly Winnemucca: Coding;
     /**
-     * Wintun
+     * 1702-0: Wintun
      */
-    v3_Race_Wintun: Coding;
+    readonly Wintun: Coding;
     /**
-     * Wiyot
+     * 1704-6: Wiyot
      */
-    v3_Race_Wiyot: Coding;
+    readonly Wiyot: Coding;
     /**
-     * Table Bluff
+     * 1705-3: Table Bluff
      */
-    v3_Race_TableBluff: Coding;
+    readonly TableBluff: Coding;
     /**
-     * Yakama
+     * 1707-9: Yakama
      */
-    v3_Race_Yakama: Coding;
+    readonly Yakama: Coding;
     /**
-     * Yakama Cowlitz
+     * 1709-5: Yakama Cowlitz
      */
-    v3_Race_YakamaCowlitz: Coding;
+    readonly YakamaCowlitz: Coding;
     /**
-     * Yaqui
+     * 1711-1: Yaqui
      */
-    v3_Race_Yaqui: Coding;
+    readonly Yaqui: Coding;
     /**
-     * Barrio Libre
+     * 1712-9: Barrio Libre
      */
-    v3_Race_BarrioLibre: Coding;
+    readonly BarrioLibre: Coding;
     /**
-     * Pascua Yaqui
+     * 1713-7: Pascua Yaqui
      */
-    v3_Race_PascuaYaqui: Coding;
+    readonly PascuaYaqui: Coding;
     /**
-     * Yavapai Apache
+     * 1715-2: Yavapai Apache
      */
-    v3_Race_YavapaiApache: Coding;
+    readonly YavapaiApache: Coding;
     /**
-     * Yokuts
+     * 1717-8: Yokuts
      */
-    v3_Race_Yokuts: Coding;
+    readonly Yokuts: Coding;
     /**
-     * Chukchansi
+     * 1718-6: Chukchansi
      */
-    v3_Race_Chukchansi: Coding;
+    readonly Chukchansi: Coding;
     /**
-     * Tachi
+     * 1719-4: Tachi
      */
-    v3_Race_Tachi: Coding;
+    readonly Tachi: Coding;
     /**
-     * Tule River
+     * 1720-2: Tule River
      */
-    v3_Race_TuleRiver: Coding;
+    readonly TuleRiver: Coding;
     /**
-     * Yuchi
+     * 1722-8: Yuchi
      */
-    v3_Race_Yuchi: Coding;
+    readonly Yuchi: Coding;
     /**
-     * Yuman
+     * 1724-4: Yuman
      */
-    v3_Race_Yuman: Coding;
+    readonly Yuman: Coding;
     /**
-     * Cocopah
+     * 1725-1: Cocopah
      */
-    v3_Race_Cocopah: Coding;
+    readonly Cocopah: Coding;
     /**
-     * Havasupai
+     * 1726-9: Havasupai
      */
-    v3_Race_Havasupai: Coding;
+    readonly Havasupai: Coding;
     /**
-     * Hualapai
+     * 1727-7: Hualapai
      */
-    v3_Race_Hualapai: Coding;
+    readonly Hualapai: Coding;
     /**
-     * Maricopa
+     * 1728-5: Maricopa
      */
-    v3_Race_Maricopa: Coding;
+    readonly Maricopa: Coding;
     /**
-     * Mohave
+     * 1729-3: Mohave
      */
-    v3_Race_Mohave: Coding;
+    readonly Mohave: Coding;
     /**
-     * Quechan
+     * 1730-1: Quechan
      */
-    v3_Race_Quechan: Coding;
+    readonly Quechan: Coding;
     /**
-     * Yavapai
+     * 1731-9: Yavapai
      */
-    v3_Race_Yavapai: Coding;
+    readonly Yavapai: Coding;
     /**
-     * Yurok
+     * 1732-7: Yurok
      */
-    v3_Race_Yurok: Coding;
+    readonly Yurok: Coding;
     /**
-     * Coast Yurok
+     * 1733-5: Coast Yurok
      */
-    v3_Race_CoastYurok: Coding;
+    readonly CoastYurok: Coding;
     /**
-     * Alaska Native
+     * 1735-0: Alaska Native
      */
-    v3_Race_AlaskaNative: Coding;
+    readonly AlaskaNative: Coding;
     /**
-     * Alaska Indian
+     * 1737-6: Alaska Indian
      */
-    v3_Race_AlaskaIndian: Coding;
+    readonly AlaskaIndian: Coding;
     /**
-     * Alaskan Athabascan
+     * 1739-2: Alaskan Athabascan
      */
-    v3_Race_AlaskanAthabascan: Coding;
+    readonly AlaskanAthabascan: Coding;
     /**
-     * Ahtna
+     * 1740-0: Ahtna
      */
-    v3_Race_Ahtna: Coding;
+    readonly Ahtna: Coding;
     /**
-     * Alatna
+     * 1741-8: Alatna
      */
-    v3_Race_Alatna: Coding;
+    readonly Alatna: Coding;
     /**
-     * Alexander
+     * 1742-6: Alexander
      */
-    v3_Race_Alexander: Coding;
+    readonly Alexander: Coding;
     /**
-     * Allakaket
+     * 1743-4: Allakaket
      */
-    v3_Race_Allakaket: Coding;
+    readonly Allakaket: Coding;
     /**
-     * Alanvik
+     * 1744-2: Alanvik
      */
-    v3_Race_Alanvik: Coding;
+    readonly Alanvik: Coding;
     /**
-     * Anvik
+     * 1745-9: Anvik
      */
-    v3_Race_Anvik: Coding;
+    readonly Anvik: Coding;
     /**
-     * Arctic
+     * 1746-7: Arctic
      */
-    v3_Race_Arctic: Coding;
+    readonly Arctic: Coding;
     /**
-     * Beaver
+     * 1747-5: Beaver
      */
-    v3_Race_Beaver: Coding;
+    readonly Beaver: Coding;
     /**
-     * Birch Creek
+     * 1748-3: Birch Creek
      */
-    v3_Race_BirchCreek: Coding;
+    readonly BirchCreek: Coding;
     /**
-     * Cantwell
+     * 1749-1: Cantwell
      */
-    v3_Race_Cantwell: Coding;
+    readonly Cantwell: Coding;
     /**
-     * Chalkyitsik
+     * 1750-9: Chalkyitsik
      */
-    v3_Race_Chalkyitsik: Coding;
+    readonly Chalkyitsik: Coding;
     /**
-     * Chickaloon
+     * 1751-7: Chickaloon
      */
-    v3_Race_Chickaloon: Coding;
+    readonly Chickaloon: Coding;
     /**
-     * Chistochina
+     * 1752-5: Chistochina
      */
-    v3_Race_Chistochina: Coding;
+    readonly Chistochina: Coding;
     /**
-     * Chitina
+     * 1753-3: Chitina
      */
-    v3_Race_Chitina: Coding;
+    readonly Chitina: Coding;
     /**
-     * Circle
+     * 1754-1: Circle
      */
-    v3_Race_Circle: Coding;
+    readonly Circle: Coding;
     /**
-     * Cook Inlet
+     * 1755-8: Cook Inlet
      */
-    v3_Race_CookInlet: Coding;
+    readonly CookInlet: Coding;
     /**
-     * Copper Center
+     * 1756-6: Copper Center
      */
-    v3_Race_CopperCenter: Coding;
+    readonly CopperCenter: Coding;
     /**
-     * Copper River
+     * 1757-4: Copper River
      */
-    v3_Race_CopperRiver: Coding;
+    readonly CopperRiver: Coding;
     /**
-     * Dot Lake
+     * 1758-2: Dot Lake
      */
-    v3_Race_DotLake: Coding;
+    readonly DotLake: Coding;
     /**
-     * Doyon
+     * 1759-0: Doyon
      */
-    v3_Race_Doyon: Coding;
+    readonly Doyon: Coding;
     /**
-     * Eagle
+     * 1760-8: Eagle
      */
-    v3_Race_Eagle: Coding;
+    readonly Eagle: Coding;
     /**
-     * Eklutna
+     * 1761-6: Eklutna
      */
-    v3_Race_Eklutna: Coding;
+    readonly Eklutna: Coding;
     /**
-     * Evansville
+     * 1762-4: Evansville
      */
-    v3_Race_Evansville: Coding;
+    readonly Evansville: Coding;
     /**
-     * Fort Yukon
+     * 1763-2: Fort Yukon
      */
-    v3_Race_FortYukon: Coding;
+    readonly FortYukon: Coding;
     /**
-     * Gakona
+     * 1764-0: Gakona
      */
-    v3_Race_Gakona: Coding;
+    readonly Gakona: Coding;
     /**
-     * Galena
+     * 1765-7: Galena
      */
-    v3_Race_Galena: Coding;
+    readonly Galena: Coding;
     /**
-     * Grayling
+     * 1766-5: Grayling
      */
-    v3_Race_Grayling: Coding;
+    readonly Grayling: Coding;
     /**
-     * Gulkana
+     * 1767-3: Gulkana
      */
-    v3_Race_Gulkana: Coding;
+    readonly Gulkana: Coding;
     /**
-     * Healy Lake
+     * 1768-1: Healy Lake
      */
-    v3_Race_HealyLake: Coding;
+    readonly HealyLake: Coding;
     /**
-     * Holy Cross
+     * 1769-9: Holy Cross
      */
-    v3_Race_HolyCross: Coding;
+    readonly HolyCross: Coding;
     /**
-     * Hughes
+     * 1770-7: Hughes
      */
-    v3_Race_Hughes: Coding;
+    readonly Hughes: Coding;
     /**
-     * Huslia
+     * 1771-5: Huslia
      */
-    v3_Race_Huslia: Coding;
+    readonly Huslia: Coding;
     /**
-     * Iliamna
+     * 1772-3: Iliamna
      */
-    v3_Race_Iliamna: Coding;
+    readonly Iliamna: Coding;
     /**
-     * Kaltag
+     * 1773-1: Kaltag
      */
-    v3_Race_Kaltag: Coding;
+    readonly Kaltag: Coding;
     /**
-     * Kluti Kaah
+     * 1774-9: Kluti Kaah
      */
-    v3_Race_KlutiKaah: Coding;
+    readonly KlutiKaah: Coding;
     /**
-     * Knik
+     * 1775-6: Knik
      */
-    v3_Race_Knik: Coding;
+    readonly Knik: Coding;
     /**
-     * Koyukuk
+     * 1776-4: Koyukuk
      */
-    v3_Race_Koyukuk: Coding;
+    readonly Koyukuk: Coding;
     /**
-     * Lake Minchumina
+     * 1777-2: Lake Minchumina
      */
-    v3_Race_LakeMinchumina: Coding;
+    readonly LakeMinchumina: Coding;
     /**
-     * Lime
+     * 1778-0: Lime
      */
-    v3_Race_Lime: Coding;
+    readonly Lime: Coding;
     /**
-     * Mcgrath
+     * 1779-8: Mcgrath
      */
-    v3_Race_Mcgrath: Coding;
+    readonly Mcgrath: Coding;
     /**
-     * Manley Hot Springs
+     * 1780-6: Manley Hot Springs
      */
-    v3_Race_ManleyHotSprings: Coding;
+    readonly ManleyHotSprings: Coding;
     /**
-     * Mentasta Lake
+     * 1781-4: Mentasta Lake
      */
-    v3_Race_MentastaLake: Coding;
+    readonly MentastaLake: Coding;
     /**
-     * Minto
+     * 1782-2: Minto
      */
-    v3_Race_Minto: Coding;
+    readonly Minto: Coding;
     /**
-     * Nenana
+     * 1783-0: Nenana
      */
-    v3_Race_Nenana: Coding;
+    readonly Nenana: Coding;
     /**
-     * Nikolai
+     * 1784-8: Nikolai
      */
-    v3_Race_Nikolai: Coding;
+    readonly Nikolai: Coding;
     /**
-     * Ninilchik
+     * 1785-5: Ninilchik
      */
-    v3_Race_Ninilchik: Coding;
+    readonly Ninilchik: Coding;
     /**
-     * Nondalton
+     * 1786-3: Nondalton
      */
-    v3_Race_Nondalton: Coding;
+    readonly Nondalton: Coding;
     /**
-     * Northway
+     * 1787-1: Northway
      */
-    v3_Race_Northway: Coding;
+    readonly Northway: Coding;
     /**
-     * Nulato
+     * 1788-9: Nulato
      */
-    v3_Race_Nulato: Coding;
+    readonly Nulato: Coding;
     /**
-     * Pedro Bay
+     * 1789-7: Pedro Bay
      */
-    v3_Race_PedroBay: Coding;
+    readonly PedroBay: Coding;
     /**
-     * Rampart
+     * 1790-5: Rampart
      */
-    v3_Race_Rampart: Coding;
+    readonly Rampart: Coding;
     /**
-     * Ruby
+     * 1791-3: Ruby
      */
-    v3_Race_Ruby: Coding;
+    readonly Ruby: Coding;
     /**
-     * Salamatof
+     * 1792-1: Salamatof
      */
-    v3_Race_Salamatof: Coding;
+    readonly Salamatof: Coding;
     /**
-     * Seldovia
+     * 1793-9: Seldovia
      */
-    v3_Race_Seldovia: Coding;
+    readonly Seldovia: Coding;
     /**
-     * Slana
+     * 1794-7: Slana
      */
-    v3_Race_Slana: Coding;
+    readonly Slana: Coding;
     /**
-     * Shageluk
+     * 1795-4: Shageluk
      */
-    v3_Race_Shageluk: Coding;
+    readonly Shageluk: Coding;
     /**
-     * Stevens
+     * 1796-2: Stevens
      */
-    v3_Race_Stevens: Coding;
+    readonly Stevens: Coding;
     /**
-     * Stony River
+     * 1797-0: Stony River
      */
-    v3_Race_StonyRiver: Coding;
+    readonly StonyRiver: Coding;
     /**
-     * Takotna
+     * 1798-8: Takotna
      */
-    v3_Race_Takotna: Coding;
+    readonly Takotna: Coding;
     /**
-     * Tanacross
+     * 1799-6: Tanacross
      */
-    v3_Race_Tanacross: Coding;
+    readonly Tanacross: Coding;
     /**
-     * Tanaina
+     * 1800-2: Tanaina
      */
-    v3_Race_Tanaina: Coding;
+    readonly Tanaina: Coding;
     /**
-     * Tanana
+     * 1801-0: Tanana
      */
-    v3_Race_Tanana: Coding;
+    readonly Tanana: Coding;
     /**
-     * Tanana Chiefs
+     * 1802-8: Tanana Chiefs
      */
-    v3_Race_TananaChiefs: Coding;
+    readonly TananaChiefs: Coding;
     /**
-     * Tazlina
+     * 1803-6: Tazlina
      */
-    v3_Race_Tazlina: Coding;
+    readonly Tazlina: Coding;
     /**
-     * Telida
+     * 1804-4: Telida
      */
-    v3_Race_Telida: Coding;
+    readonly Telida: Coding;
     /**
-     * Tetlin
+     * 1805-1: Tetlin
      */
-    v3_Race_Tetlin: Coding;
+    readonly Tetlin: Coding;
     /**
-     * Tok
+     * 1806-9: Tok
      */
-    v3_Race_Tok: Coding;
+    readonly Tok: Coding;
     /**
-     * Tyonek
+     * 1807-7: Tyonek
      */
-    v3_Race_Tyonek: Coding;
+    readonly Tyonek: Coding;
     /**
-     * Venetie
+     * 1808-5: Venetie
      */
-    v3_Race_Venetie: Coding;
+    readonly Venetie: Coding;
     /**
-     * Wiseman
+     * 1809-3: Wiseman
      */
-    v3_Race_Wiseman: Coding;
+    readonly Wiseman: Coding;
     /**
-     * Southeast Alaska
+     * 1811-9: Southeast Alaska
      */
-    v3_Race_SoutheastAlaska: Coding;
+    readonly SoutheastAlaska: Coding;
     /**
-     * Tlingit-Haida
+     * 1813-5: Tlingit-Haida
      */
-    v3_Race_TlingitHaida: Coding;
+    readonly TlingitHaida: Coding;
     /**
-     * Angoon
+     * 1814-3: Angoon
      */
-    v3_Race_Angoon: Coding;
+    readonly Angoon: Coding;
     /**
-     * Central Council of Tlingit and Haida Tribes
+     * 1815-0: Central Council of Tlingit and Haida Tribes
      */
-    v3_Race_CentralCouncilOfTlingitAndHaidaTribes: Coding;
+    readonly CentralCouncilOfTlingitAndHaidaTribes: Coding;
     /**
-     * Chilkat
+     * 1816-8: Chilkat
      */
-    v3_Race_Chilkat: Coding;
+    readonly Chilkat: Coding;
     /**
-     * Chilkoot
+     * 1817-6: Chilkoot
      */
-    v3_Race_Chilkoot: Coding;
+    readonly Chilkoot: Coding;
     /**
-     * Craig
+     * 1818-4: Craig
      */
-    v3_Race_Craig: Coding;
+    readonly Craig: Coding;
     /**
-     * Douglas
+     * 1819-2: Douglas
      */
-    v3_Race_Douglas: Coding;
+    readonly Douglas: Coding;
     /**
-     * Haida
+     * 1820-0: Haida
      */
-    v3_Race_Haida: Coding;
+    readonly Haida: Coding;
     /**
-     * Hoonah
+     * 1821-8: Hoonah
      */
-    v3_Race_Hoonah: Coding;
+    readonly Hoonah: Coding;
     /**
-     * Hydaburg
+     * 1822-6: Hydaburg
      */
-    v3_Race_Hydaburg: Coding;
+    readonly Hydaburg: Coding;
     /**
-     * Kake
+     * 1823-4: Kake
      */
-    v3_Race_Kake: Coding;
+    readonly Kake: Coding;
     /**
-     * Kasaan
+     * 1824-2: Kasaan
      */
-    v3_Race_Kasaan: Coding;
+    readonly Kasaan: Coding;
     /**
-     * Kenaitze
+     * 1825-9: Kenaitze
      */
-    v3_Race_Kenaitze: Coding;
+    readonly Kenaitze: Coding;
     /**
-     * Ketchikan
+     * 1826-7: Ketchikan
      */
-    v3_Race_Ketchikan: Coding;
+    readonly Ketchikan: Coding;
     /**
-     * Klawock
+     * 1827-5: Klawock
      */
-    v3_Race_Klawock: Coding;
+    readonly Klawock: Coding;
     /**
-     * Pelican
+     * 1828-3: Pelican
      */
-    v3_Race_Pelican: Coding;
+    readonly Pelican: Coding;
     /**
-     * Petersburg
+     * 1829-1: Petersburg
      */
-    v3_Race_Petersburg: Coding;
+    readonly Petersburg: Coding;
     /**
-     * Saxman
+     * 1830-9: Saxman
      */
-    v3_Race_Saxman: Coding;
+    readonly Saxman: Coding;
     /**
-     * Sitka
+     * 1831-7: Sitka
      */
-    v3_Race_Sitka: Coding;
+    readonly Sitka: Coding;
     /**
-     * Tenakee Springs
+     * 1832-5: Tenakee Springs
      */
-    v3_Race_TenakeeSprings: Coding;
+    readonly TenakeeSprings: Coding;
     /**
-     * Tlingit
+     * 1833-3: Tlingit
      */
-    v3_Race_Tlingit: Coding;
+    readonly Tlingit: Coding;
     /**
-     * Wrangell
+     * 1834-1: Wrangell
      */
-    v3_Race_Wrangell: Coding;
+    readonly Wrangell: Coding;
     /**
-     * Yakutat
+     * 1835-8: Yakutat
      */
-    v3_Race_Yakutat: Coding;
+    readonly Yakutat: Coding;
     /**
-     * Tsimshian
+     * 1837-4: Tsimshian
      */
-    v3_Race_Tsimshian: Coding;
+    readonly Tsimshian: Coding;
     /**
-     * Metlakatla
+     * 1838-2: Metlakatla
      */
-    v3_Race_Metlakatla: Coding;
+    readonly Metlakatla: Coding;
     /**
-     * Eskimo
+     * 1840-8: Eskimo
      */
-    v3_Race_Eskimo: Coding;
+    readonly Eskimo: Coding;
     /**
-     * Greenland Eskimo
+     * 1842-4: Greenland Eskimo
      */
-    v3_Race_GreenlandEskimo: Coding;
+    readonly GreenlandEskimo: Coding;
     /**
-     * Inupiat Eskimo
+     * 1844-0: Inupiat Eskimo
      */
-    v3_Race_InupiatEskimo: Coding;
+    readonly InupiatEskimo: Coding;
     /**
-     * Ambler
+     * 1845-7: Ambler
      */
-    v3_Race_Ambler: Coding;
+    readonly Ambler: Coding;
     /**
-     * Anaktuvuk
+     * 1846-5: Anaktuvuk
      */
-    v3_Race_Anaktuvuk: Coding;
+    readonly Anaktuvuk: Coding;
     /**
-     * Anaktuvuk Pass
+     * 1847-3: Anaktuvuk Pass
      */
-    v3_Race_AnaktuvukPass: Coding;
+    readonly AnaktuvukPass: Coding;
     /**
-     * Arctic Slope Inupiat
+     * 1848-1: Arctic Slope Inupiat
      */
-    v3_Race_ArcticSlopeInupiat: Coding;
+    readonly ArcticSlopeInupiat: Coding;
     /**
-     * Arctic Slope Corporation
+     * 1849-9: Arctic Slope Corporation
      */
-    v3_Race_ArcticSlopeCorporation: Coding;
+    readonly ArcticSlopeCorporation: Coding;
     /**
-     * Atqasuk
+     * 1850-7: Atqasuk
      */
-    v3_Race_Atqasuk: Coding;
+    readonly Atqasuk: Coding;
     /**
-     * Barrow
+     * 1851-5: Barrow
      */
-    v3_Race_Barrow: Coding;
+    readonly Barrow: Coding;
     /**
-     * Bering Straits Inupiat
+     * 1852-3: Bering Straits Inupiat
      */
-    v3_Race_BeringStraitsInupiat: Coding;
+    readonly BeringStraitsInupiat: Coding;
     /**
-     * Brevig Mission
+     * 1853-1: Brevig Mission
      */
-    v3_Race_BrevigMission: Coding;
+    readonly BrevigMission: Coding;
     /**
-     * Buckland
+     * 1854-9: Buckland
      */
-    v3_Race_Buckland: Coding;
+    readonly Buckland: Coding;
     /**
-     * Chinik
+     * 1855-6: Chinik
      */
-    v3_Race_Chinik: Coding;
+    readonly Chinik: Coding;
     /**
-     * Council
+     * 1856-4: Council
      */
-    v3_Race_Council: Coding;
+    readonly Council: Coding;
     /**
-     * Deering
+     * 1857-2: Deering
      */
-    v3_Race_Deering: Coding;
+    readonly Deering: Coding;
     /**
-     * Elim
+     * 1858-0: Elim
      */
-    v3_Race_Elim: Coding;
+    readonly Elim: Coding;
     /**
-     * Golovin
+     * 1859-8: Golovin
      */
-    v3_Race_Golovin: Coding;
+    readonly Golovin: Coding;
     /**
-     * Inalik Diomede
+     * 1860-6: Inalik Diomede
      */
-    v3_Race_InalikDiomede: Coding;
+    readonly InalikDiomede: Coding;
     /**
-     * Inupiaq
+     * 1861-4: Inupiaq
      */
-    v3_Race_Inupiaq: Coding;
+    readonly Inupiaq: Coding;
     /**
-     * Kaktovik
+     * 1862-2: Kaktovik
      */
-    v3_Race_Kaktovik: Coding;
+    readonly Kaktovik: Coding;
     /**
-     * Kawerak
+     * 1863-0: Kawerak
      */
-    v3_Race_Kawerak: Coding;
+    readonly Kawerak: Coding;
     /**
-     * Kiana
+     * 1864-8: Kiana
      */
-    v3_Race_Kiana: Coding;
+    readonly Kiana: Coding;
     /**
-     * Kivalina
+     * 1865-5: Kivalina
      */
-    v3_Race_Kivalina: Coding;
+    readonly Kivalina: Coding;
     /**
-     * Kobuk
+     * 1866-3: Kobuk
      */
-    v3_Race_Kobuk: Coding;
+    readonly Kobuk: Coding;
     /**
-     * Kotzebue
+     * 1867-1: Kotzebue
      */
-    v3_Race_Kotzebue: Coding;
+    readonly Kotzebue: Coding;
     /**
-     * Koyuk
+     * 1868-9: Koyuk
      */
-    v3_Race_Koyuk: Coding;
+    readonly Koyuk: Coding;
     /**
-     * Kwiguk
+     * 1869-7: Kwiguk
      */
-    v3_Race_Kwiguk: Coding;
+    readonly Kwiguk: Coding;
     /**
-     * Mauneluk Inupiat
+     * 1870-5: Mauneluk Inupiat
      */
-    v3_Race_MaunelukInupiat: Coding;
+    readonly MaunelukInupiat: Coding;
     /**
-     * Nana Inupiat
+     * 1871-3: Nana Inupiat
      */
-    v3_Race_NanaInupiat: Coding;
+    readonly NanaInupiat: Coding;
     /**
-     * Noatak
+     * 1872-1: Noatak
      */
-    v3_Race_Noatak: Coding;
+    readonly Noatak: Coding;
     /**
-     * Nome
+     * 1873-9: Nome
      */
-    v3_Race_Nome: Coding;
+    readonly Nome: Coding;
     /**
-     * Noorvik
+     * 1874-7: Noorvik
      */
-    v3_Race_Noorvik: Coding;
+    readonly Noorvik: Coding;
     /**
-     * Nuiqsut
+     * 1875-4: Nuiqsut
      */
-    v3_Race_Nuiqsut: Coding;
+    readonly Nuiqsut: Coding;
     /**
-     * Point Hope
+     * 1876-2: Point Hope
      */
-    v3_Race_PointHope: Coding;
+    readonly PointHope: Coding;
     /**
-     * Point Lay
+     * 1877-0: Point Lay
      */
-    v3_Race_PointLay: Coding;
+    readonly PointLay: Coding;
     /**
-     * Selawik
+     * 1878-8: Selawik
      */
-    v3_Race_Selawik: Coding;
+    readonly Selawik: Coding;
     /**
-     * Shaktoolik
+     * 1879-6: Shaktoolik
      */
-    v3_Race_Shaktoolik: Coding;
+    readonly Shaktoolik: Coding;
     /**
-     * Shishmaref
+     * 1880-4: Shishmaref
      */
-    v3_Race_Shishmaref: Coding;
+    readonly Shishmaref: Coding;
     /**
-     * Shungnak
+     * 1881-2: Shungnak
      */
-    v3_Race_Shungnak: Coding;
+    readonly Shungnak: Coding;
     /**
-     * Solomon
+     * 1882-0: Solomon
      */
-    v3_Race_Solomon: Coding;
+    readonly Solomon: Coding;
     /**
-     * Teller
+     * 1883-8: Teller
      */
-    v3_Race_Teller: Coding;
+    readonly Teller: Coding;
     /**
-     * Unalakleet
+     * 1884-6: Unalakleet
      */
-    v3_Race_Unalakleet: Coding;
+    readonly Unalakleet: Coding;
     /**
-     * Wainwright
+     * 1885-3: Wainwright
      */
-    v3_Race_Wainwright: Coding;
+    readonly Wainwright: Coding;
     /**
-     * Wales
+     * 1886-1: Wales
      */
-    v3_Race_Wales: Coding;
+    readonly Wales: Coding;
     /**
-     * White Mountain
+     * 1887-9: White Mountain
      */
-    v3_Race_WhiteMountain: Coding;
+    readonly WhiteMountain: Coding;
     /**
-     * White Mountain Inupiat
+     * 1888-7: White Mountain Inupiat
      */
-    v3_Race_WhiteMountainInupiat: Coding;
+    readonly WhiteMountainInupiat: Coding;
     /**
-     * Mary's Igloo
+     * 1889-5: Mary's Igloo
      */
-    v3_Race_MaryQuoteSIgloo: Coding;
+    readonly MaryQuoteSIgloo: Coding;
     /**
-     * Siberian Eskimo
+     * 1891-1: Siberian Eskimo
      */
-    v3_Race_SiberianEskimo: Coding;
+    readonly SiberianEskimo: Coding;
     /**
-     * Gambell
+     * 1892-9: Gambell
      */
-    v3_Race_Gambell: Coding;
+    readonly Gambell: Coding;
     /**
-     * Savoonga
+     * 1893-7: Savoonga
      */
-    v3_Race_Savoonga: Coding;
+    readonly Savoonga: Coding;
     /**
-     * Siberian Yupik
+     * 1894-5: Siberian Yupik
      */
-    v3_Race_SiberianYupik: Coding;
+    readonly SiberianYupik: Coding;
     /**
-     * Yupik Eskimo
+     * 1896-0: Yupik Eskimo
      */
-    v3_Race_YupikEskimo: Coding;
+    readonly YupikEskimo: Coding;
     /**
-     * Akiachak
+     * 1897-8: Akiachak
      */
-    v3_Race_Akiachak: Coding;
+    readonly Akiachak: Coding;
     /**
-     * Akiak
+     * 1898-6: Akiak
      */
-    v3_Race_Akiak: Coding;
+    readonly Akiak: Coding;
     /**
-     * Alakanuk
+     * 1899-4: Alakanuk
      */
-    v3_Race_Alakanuk: Coding;
+    readonly Alakanuk: Coding;
     /**
-     * Aleknagik
+     * 1900-0: Aleknagik
      */
-    v3_Race_Aleknagik: Coding;
+    readonly Aleknagik: Coding;
     /**
-     * Andreafsky
+     * 1901-8: Andreafsky
      */
-    v3_Race_Andreafsky: Coding;
+    readonly Andreafsky: Coding;
     /**
-     * Aniak
+     * 1902-6: Aniak
      */
-    v3_Race_Aniak: Coding;
+    readonly Aniak: Coding;
     /**
-     * Atmautluak
+     * 1903-4: Atmautluak
      */
-    v3_Race_Atmautluak: Coding;
+    readonly Atmautluak: Coding;
     /**
-     * Bethel
+     * 1904-2: Bethel
      */
-    v3_Race_Bethel: Coding;
+    readonly Bethel: Coding;
     /**
-     * Bill Moore's Slough
+     * 1905-9: Bill Moore's Slough
      */
-    v3_Race_BillMooreQuoteSSlough: Coding;
+    readonly BillMooreQuoteSSlough: Coding;
     /**
-     * Bristol Bay Yupik
+     * 1906-7: Bristol Bay Yupik
      */
-    v3_Race_BristolBayYupik: Coding;
+    readonly BristolBayYupik: Coding;
     /**
-     * Calista Yupik
+     * 1907-5: Calista Yupik
      */
-    v3_Race_CalistaYupik: Coding;
+    readonly CalistaYupik: Coding;
     /**
-     * Chefornak
+     * 1908-3: Chefornak
      */
-    v3_Race_Chefornak: Coding;
+    readonly Chefornak: Coding;
     /**
-     * Chevak
+     * 1909-1: Chevak
      */
-    v3_Race_Chevak: Coding;
+    readonly Chevak: Coding;
     /**
-     * Chuathbaluk
+     * 1910-9: Chuathbaluk
      */
-    v3_Race_Chuathbaluk: Coding;
+    readonly Chuathbaluk: Coding;
     /**
-     * Clark's Point
+     * 1911-7: Clark's Point
      */
-    v3_Race_ClarkQuoteSPoint: Coding;
+    readonly ClarkQuoteSPoint: Coding;
     /**
-     * Crooked Creek
+     * 1912-5: Crooked Creek
      */
-    v3_Race_CrookedCreek: Coding;
+    readonly CrookedCreek: Coding;
     /**
-     * Dillingham
+     * 1913-3: Dillingham
      */
-    v3_Race_Dillingham: Coding;
+    readonly Dillingham: Coding;
     /**
-     * Eek
+     * 1914-1: Eek
      */
-    v3_Race_Eek: Coding;
+    readonly Eek: Coding;
     /**
-     * Ekuk
+     * 1915-8: Ekuk
      */
-    v3_Race_Ekuk: Coding;
+    readonly Ekuk: Coding;
     /**
-     * Ekwok
+     * 1916-6: Ekwok
      */
-    v3_Race_Ekwok: Coding;
+    readonly Ekwok: Coding;
     /**
-     * Emmonak
+     * 1917-4: Emmonak
      */
-    v3_Race_Emmonak: Coding;
+    readonly Emmonak: Coding;
     /**
-     * Goodnews Bay
+     * 1918-2: Goodnews Bay
      */
-    v3_Race_GoodnewsBay: Coding;
+    readonly GoodnewsBay: Coding;
     /**
-     * Hooper Bay
+     * 1919-0: Hooper Bay
      */
-    v3_Race_HooperBay: Coding;
+    readonly HooperBay: Coding;
     /**
-     * Iqurmuit (Russian Mission)
+     * 1920-8: Iqurmuit (Russian Mission)
      */
-    v3_Race_IqurmuitRussianMission: Coding;
+    readonly IqurmuitRussianMission: Coding;
     /**
-     * Kalskag
+     * 1921-6: Kalskag
      */
-    v3_Race_Kalskag: Coding;
+    readonly Kalskag: Coding;
     /**
-     * Kasigluk
+     * 1922-4: Kasigluk
      */
-    v3_Race_Kasigluk: Coding;
+    readonly Kasigluk: Coding;
     /**
-     * Kipnuk
+     * 1923-2: Kipnuk
      */
-    v3_Race_Kipnuk: Coding;
+    readonly Kipnuk: Coding;
     /**
-     * Koliganek
+     * 1924-0: Koliganek
      */
-    v3_Race_Koliganek: Coding;
+    readonly Koliganek: Coding;
     /**
-     * Kongiganak
+     * 1925-7: Kongiganak
      */
-    v3_Race_Kongiganak: Coding;
+    readonly Kongiganak: Coding;
     /**
-     * Kotlik
+     * 1926-5: Kotlik
      */
-    v3_Race_Kotlik: Coding;
+    readonly Kotlik: Coding;
     /**
-     * Kwethluk
+     * 1927-3: Kwethluk
      */
-    v3_Race_Kwethluk: Coding;
+    readonly Kwethluk: Coding;
     /**
-     * Kwigillingok
+     * 1928-1: Kwigillingok
      */
-    v3_Race_Kwigillingok: Coding;
+    readonly Kwigillingok: Coding;
     /**
-     * Levelock
+     * 1929-9: Levelock
      */
-    v3_Race_Levelock: Coding;
+    readonly Levelock: Coding;
     /**
-     * Lower Kalskag
+     * 1930-7: Lower Kalskag
      */
-    v3_Race_LowerKalskag: Coding;
+    readonly LowerKalskag: Coding;
     /**
-     * Manokotak
+     * 1931-5: Manokotak
      */
-    v3_Race_Manokotak: Coding;
+    readonly Manokotak: Coding;
     /**
-     * Marshall
+     * 1932-3: Marshall
      */
-    v3_Race_Marshall: Coding;
+    readonly Marshall: Coding;
     /**
-     * Mekoryuk
+     * 1933-1: Mekoryuk
      */
-    v3_Race_Mekoryuk: Coding;
+    readonly Mekoryuk: Coding;
     /**
-     * Mountain Village
+     * 1934-9: Mountain Village
      */
-    v3_Race_MountainVillage: Coding;
+    readonly MountainVillage: Coding;
     /**
-     * Naknek
+     * 1935-6: Naknek
      */
-    v3_Race_Naknek: Coding;
+    readonly Naknek: Coding;
     /**
-     * Napaumute
+     * 1936-4: Napaumute
      */
-    v3_Race_Napaumute: Coding;
+    readonly Napaumute: Coding;
     /**
-     * Napakiak
+     * 1937-2: Napakiak
      */
-    v3_Race_Napakiak: Coding;
+    readonly Napakiak: Coding;
     /**
-     * Napaskiak
+     * 1938-0: Napaskiak
      */
-    v3_Race_Napaskiak: Coding;
+    readonly Napaskiak: Coding;
     /**
-     * Newhalen
+     * 1939-8: Newhalen
      */
-    v3_Race_Newhalen: Coding;
+    readonly Newhalen: Coding;
     /**
-     * New Stuyahok
+     * 1940-6: New Stuyahok
      */
-    v3_Race_NewStuyahok: Coding;
+    readonly NewStuyahok: Coding;
     /**
-     * Newtok
+     * 1941-4: Newtok
      */
-    v3_Race_Newtok: Coding;
+    readonly Newtok: Coding;
     /**
-     * Nightmute
+     * 1942-2: Nightmute
      */
-    v3_Race_Nightmute: Coding;
+    readonly Nightmute: Coding;
     /**
-     * Nunapitchukv
+     * 1943-0: Nunapitchukv
      */
-    v3_Race_Nunapitchukv: Coding;
+    readonly Nunapitchukv: Coding;
     /**
-     * Oscarville
+     * 1944-8: Oscarville
      */
-    v3_Race_Oscarville: Coding;
+    readonly Oscarville: Coding;
     /**
-     * Pilot Station
+     * 1945-5: Pilot Station
      */
-    v3_Race_PilotStation: Coding;
+    readonly PilotStation: Coding;
     /**
-     * Pitkas Point
+     * 1946-3: Pitkas Point
      */
-    v3_Race_PitkasPoint: Coding;
+    readonly PitkasPoint: Coding;
     /**
-     * Platinum
+     * 1947-1: Platinum
      */
-    v3_Race_Platinum: Coding;
+    readonly Platinum: Coding;
     /**
-     * Portage Creek
+     * 1948-9: Portage Creek
      */
-    v3_Race_PortageCreek: Coding;
+    readonly PortageCreek: Coding;
     /**
-     * Quinhagak
+     * 1949-7: Quinhagak
      */
-    v3_Race_Quinhagak: Coding;
+    readonly Quinhagak: Coding;
     /**
-     * Red Devil
+     * 1950-5: Red Devil
      */
-    v3_Race_RedDevil: Coding;
+    readonly RedDevil: Coding;
     /**
-     * St. Michael
+     * 1951-3: St. Michael
      */
-    v3_Race_StMichael: Coding;
+    readonly StMichael: Coding;
     /**
-     * Scammon Bay
+     * 1952-1: Scammon Bay
      */
-    v3_Race_ScammonBay: Coding;
+    readonly ScammonBay: Coding;
     /**
-     * Sheldon's Point
+     * 1953-9: Sheldon's Point
      */
-    v3_Race_SheldonQuoteSPoint: Coding;
+    readonly SheldonQuoteSPoint: Coding;
     /**
-     * Sleetmute
+     * 1954-7: Sleetmute
      */
-    v3_Race_Sleetmute: Coding;
+    readonly Sleetmute: Coding;
     /**
-     * Stebbins
+     * 1955-4: Stebbins
      */
-    v3_Race_Stebbins: Coding;
+    readonly Stebbins: Coding;
     /**
-     * Togiak
+     * 1956-2: Togiak
      */
-    v3_Race_Togiak: Coding;
+    readonly Togiak: Coding;
     /**
-     * Toksook
+     * 1957-0: Toksook
      */
-    v3_Race_Toksook: Coding;
+    readonly Toksook: Coding;
     /**
-     * Tulukskak
+     * 1958-8: Tulukskak
      */
-    v3_Race_Tulukskak: Coding;
+    readonly Tulukskak: Coding;
     /**
-     * Tuntutuliak
+     * 1959-6: Tuntutuliak
      */
-    v3_Race_Tuntutuliak: Coding;
+    readonly Tuntutuliak: Coding;
     /**
-     * Tununak
+     * 1960-4: Tununak
      */
-    v3_Race_Tununak: Coding;
+    readonly Tununak: Coding;
     /**
-     * Twin Hills
+     * 1961-2: Twin Hills
      */
-    v3_Race_TwinHills: Coding;
+    readonly TwinHills: Coding;
     /**
-     * Georgetown
+     * 1962-0: Georgetown
      */
-    v3_Race_Georgetown_2: Coding;
+    readonly Georgetown_19620: Coding;
     /**
-     * St. Mary's
+     * 1963-8: St. Mary's
      */
-    v3_Race_StMaryQuoteS: Coding;
+    readonly StMaryQuoteS: Coding;
     /**
-     * Umkumiate
+     * 1964-6: Umkumiate
      */
-    v3_Race_Umkumiate: Coding;
+    readonly Umkumiate: Coding;
     /**
-     * Aleut
+     * 1966-1: Aleut
      */
-    v3_Race_Aleut: Coding;
+    readonly Aleut: Coding;
     /**
-     * Alutiiq Aleut
+     * 1968-7: Alutiiq Aleut
      */
-    v3_Race_AlutiiqAleut: Coding;
+    readonly AlutiiqAleut: Coding;
     /**
-     * Tatitlek
+     * 1969-5: Tatitlek
      */
-    v3_Race_Tatitlek: Coding;
+    readonly Tatitlek: Coding;
     /**
-     * Ugashik
+     * 1970-3: Ugashik
      */
-    v3_Race_Ugashik: Coding;
+    readonly Ugashik: Coding;
     /**
-     * Bristol Bay Aleut
+     * 1972-9: Bristol Bay Aleut
      */
-    v3_Race_BristolBayAleut: Coding;
+    readonly BristolBayAleut: Coding;
     /**
-     * Chignik
+     * 1973-7: Chignik
      */
-    v3_Race_Chignik: Coding;
+    readonly Chignik: Coding;
     /**
-     * Chignik Lake
+     * 1974-5: Chignik Lake
      */
-    v3_Race_ChignikLake: Coding;
+    readonly ChignikLake: Coding;
     /**
-     * Egegik
+     * 1975-2: Egegik
      */
-    v3_Race_Egegik: Coding;
+    readonly Egegik: Coding;
     /**
-     * Igiugig
+     * 1976-0: Igiugig
      */
-    v3_Race_Igiugig: Coding;
+    readonly Igiugig: Coding;
     /**
-     * Ivanof Bay
+     * 1977-8: Ivanof Bay
      */
-    v3_Race_IvanofBay: Coding;
+    readonly IvanofBay: Coding;
     /**
-     * King Salmon
+     * 1978-6: King Salmon
      */
-    v3_Race_KingSalmon: Coding;
+    readonly KingSalmon: Coding;
     /**
-     * Kokhanok
+     * 1979-4: Kokhanok
      */
-    v3_Race_Kokhanok: Coding;
+    readonly Kokhanok: Coding;
     /**
-     * Perryville
+     * 1980-2: Perryville
      */
-    v3_Race_Perryville: Coding;
+    readonly Perryville: Coding;
     /**
-     * Pilot Point
+     * 1981-0: Pilot Point
      */
-    v3_Race_PilotPoint: Coding;
+    readonly PilotPoint: Coding;
     /**
-     * Port Heiden
+     * 1982-8: Port Heiden
      */
-    v3_Race_PortHeiden: Coding;
+    readonly PortHeiden: Coding;
     /**
-     * Chugach Aleut
+     * 1984-4: Chugach Aleut
      */
-    v3_Race_ChugachAleut: Coding;
+    readonly ChugachAleut: Coding;
     /**
-     * Chenega
+     * 1985-1: Chenega
      */
-    v3_Race_Chenega: Coding;
+    readonly Chenega: Coding;
     /**
-     * Chugach Corporation
+     * 1986-9: Chugach Corporation
      */
-    v3_Race_ChugachCorporation: Coding;
+    readonly ChugachCorporation: Coding;
     /**
-     * English Bay
+     * 1987-7: English Bay
      */
-    v3_Race_EnglishBay: Coding;
+    readonly EnglishBay: Coding;
     /**
-     * Port Graham
+     * 1988-5: Port Graham
      */
-    v3_Race_PortGraham: Coding;
+    readonly PortGraham: Coding;
     /**
-     * Eyak
+     * 1990-1: Eyak
      */
-    v3_Race_Eyak: Coding;
+    readonly Eyak: Coding;
     /**
-     * Koniag Aleut
+     * 1992-7: Koniag Aleut
      */
-    v3_Race_KoniagAleut: Coding;
+    readonly KoniagAleut: Coding;
     /**
-     * Akhiok
+     * 1993-5: Akhiok
      */
-    v3_Race_Akhiok: Coding;
+    readonly Akhiok: Coding;
     /**
-     * Agdaagux
+     * 1994-3: Agdaagux
      */
-    v3_Race_Agdaagux: Coding;
+    readonly Agdaagux: Coding;
     /**
-     * Karluk
+     * 1995-0: Karluk
      */
-    v3_Race_Karluk: Coding;
+    readonly Karluk: Coding;
     /**
-     * Kodiak
+     * 1996-8: Kodiak
      */
-    v3_Race_Kodiak: Coding;
+    readonly Kodiak: Coding;
     /**
-     * Larsen Bay
+     * 1997-6: Larsen Bay
      */
-    v3_Race_LarsenBay: Coding;
+    readonly LarsenBay: Coding;
     /**
-     * Old Harbor
+     * 1998-4: Old Harbor
      */
-    v3_Race_OldHarbor: Coding;
+    readonly OldHarbor: Coding;
     /**
-     * Ouzinkie
+     * 1999-2: Ouzinkie
      */
-    v3_Race_Ouzinkie: Coding;
+    readonly Ouzinkie: Coding;
     /**
-     * Port Lions
+     * 2000-8: Port Lions
      */
-    v3_Race_PortLions: Coding;
+    readonly PortLions: Coding;
     /**
-     * Sugpiaq
+     * 2002-4: Sugpiaq
      */
-    v3_Race_Sugpiaq: Coding;
+    readonly Sugpiaq: Coding;
     /**
-     * Suqpigaq
+     * 2004-0: Suqpigaq
      */
-    v3_Race_Suqpigaq: Coding;
+    readonly Suqpigaq: Coding;
     /**
-     * Unangan Aleut
+     * 2006-5: Unangan Aleut
      */
-    v3_Race_UnanganAleut: Coding;
+    readonly UnanganAleut: Coding;
     /**
-     * Akutan
+     * 2007-3: Akutan
      */
-    v3_Race_Akutan: Coding;
+    readonly Akutan: Coding;
     /**
-     * Aleut Corporation
+     * 2008-1: Aleut Corporation
      */
-    v3_Race_AleutCorporation: Coding;
+    readonly AleutCorporation: Coding;
     /**
-     * Aleutian
+     * 2009-9: Aleutian
      */
-    v3_Race_Aleutian: Coding;
+    readonly Aleutian: Coding;
     /**
-     * Aleutian Islander
+     * 2010-7: Aleutian Islander
      */
-    v3_Race_AleutianIslander: Coding;
+    readonly AleutianIslander: Coding;
     /**
-     * Atka
+     * 2011-5: Atka
      */
-    v3_Race_Atka: Coding;
+    readonly Atka: Coding;
     /**
-     * Belkofski
+     * 2012-3: Belkofski
      */
-    v3_Race_Belkofski: Coding;
+    readonly Belkofski: Coding;
     /**
-     * Chignik Lagoon
+     * 2013-1: Chignik Lagoon
      */
-    v3_Race_ChignikLagoon: Coding;
+    readonly ChignikLagoon: Coding;
     /**
-     * King Cove
+     * 2014-9: King Cove
      */
-    v3_Race_KingCove: Coding;
+    readonly KingCove: Coding;
     /**
-     * False Pass
+     * 2015-6: False Pass
      */
-    v3_Race_FalsePass: Coding;
+    readonly FalsePass: Coding;
     /**
-     * Nelson Lagoon
+     * 2016-4: Nelson Lagoon
      */
-    v3_Race_NelsonLagoon: Coding;
+    readonly NelsonLagoon: Coding;
     /**
-     * Nikolski
+     * 2017-2: Nikolski
      */
-    v3_Race_Nikolski: Coding;
+    readonly Nikolski: Coding;
     /**
-     * Pauloff Harbor
+     * 2018-0: Pauloff Harbor
      */
-    v3_Race_PauloffHarbor: Coding;
+    readonly PauloffHarbor: Coding;
     /**
-     * Qagan Toyagungin
+     * 2019-8: Qagan Toyagungin
      */
-    v3_Race_QaganToyagungin: Coding;
+    readonly QaganToyagungin: Coding;
     /**
-     * Qawalangin
+     * 2020-6: Qawalangin
      */
-    v3_Race_Qawalangin: Coding;
+    readonly Qawalangin: Coding;
     /**
-     * St. George
+     * 2021-4: St. George
      */
-    v3_Race_StGeorge: Coding;
+    readonly StGeorge: Coding;
     /**
-     * St. Paul
+     * 2022-2: St. Paul
      */
-    v3_Race_StPaul: Coding;
+    readonly StPaul: Coding;
     /**
-     * Sand Point
+     * 2023-0: Sand Point
      */
-    v3_Race_SandPoint: Coding;
+    readonly SandPoint: Coding;
     /**
-     * South Naknek
+     * 2024-8: South Naknek
      */
-    v3_Race_SouthNaknek: Coding;
+    readonly SouthNaknek: Coding;
     /**
-     * Unalaska
+     * 2025-5: Unalaska
      */
-    v3_Race_Unalaska: Coding;
+    readonly Unalaska: Coding;
     /**
-     * Unga
+     * 2026-3: Unga
      */
-    v3_Race_Unga: Coding;
+    readonly Unga: Coding;
     /**
-     * Asian
+     * 2028-9: Asian
      */
-    v3_Race_Asian: Coding;
+    readonly Asian: Coding;
     /**
-     * Asian Indian
+     * 2029-7: Asian Indian
      */
-    v3_Race_AsianIndian: Coding;
+    readonly AsianIndian: Coding;
     /**
-     * Bangladeshi
+     * 2030-5: Bangladeshi
      */
-    v3_Race_Bangladeshi: Coding;
+    readonly Bangladeshi: Coding;
     /**
-     * Bhutanese
+     * 2031-3: Bhutanese
      */
-    v3_Race_Bhutanese: Coding;
+    readonly Bhutanese: Coding;
     /**
-     * Burmese
+     * 2032-1: Burmese
      */
-    v3_Race_Burmese: Coding;
+    readonly Burmese: Coding;
     /**
-     * Cambodian
+     * 2033-9: Cambodian
      */
-    v3_Race_Cambodian: Coding;
+    readonly Cambodian: Coding;
     /**
-     * Chinese
+     * 2034-7: Chinese
      */
-    v3_Race_Chinese: Coding;
+    readonly Chinese: Coding;
     /**
-     * Taiwanese
+     * 2035-4: Taiwanese
      */
-    v3_Race_Taiwanese: Coding;
+    readonly Taiwanese: Coding;
     /**
-     * Filipino
+     * 2036-2: Filipino
      */
-    v3_Race_Filipino: Coding;
+    readonly Filipino: Coding;
     /**
-     * Hmong
+     * 2037-0: Hmong
      */
-    v3_Race_Hmong: Coding;
+    readonly Hmong: Coding;
     /**
-     * Indonesian
+     * 2038-8: Indonesian
      */
-    v3_Race_Indonesian: Coding;
+    readonly Indonesian: Coding;
     /**
-     * Japanese
+     * 2039-6: Japanese
      */
-    v3_Race_Japanese: Coding;
+    readonly Japanese: Coding;
     /**
-     * Korean
+     * 2040-4: Korean
      */
-    v3_Race_Korean: Coding;
+    readonly Korean: Coding;
     /**
-     * Laotian
+     * 2041-2: Laotian
      */
-    v3_Race_Laotian: Coding;
+    readonly Laotian: Coding;
     /**
-     * Malaysian
+     * 2042-0: Malaysian
      */
-    v3_Race_Malaysian: Coding;
+    readonly Malaysian: Coding;
     /**
-     * Okinawan
+     * 2043-8: Okinawan
      */
-    v3_Race_Okinawan: Coding;
+    readonly Okinawan: Coding;
     /**
-     * Pakistani
+     * 2044-6: Pakistani
      */
-    v3_Race_Pakistani: Coding;
+    readonly Pakistani: Coding;
     /**
-     * Sri Lankan
+     * 2045-3: Sri Lankan
      */
-    v3_Race_SriLankan: Coding;
+    readonly SriLankan: Coding;
     /**
-     * Thai
+     * 2046-1: Thai
      */
-    v3_Race_Thai: Coding;
+    readonly Thai: Coding;
     /**
-     * Vietnamese
+     * 2047-9: Vietnamese
      */
-    v3_Race_Vietnamese: Coding;
+    readonly Vietnamese: Coding;
     /**
-     * Iwo Jiman
+     * 2048-7: Iwo Jiman
      */
-    v3_Race_IwoJiman: Coding;
+    readonly IwoJiman: Coding;
     /**
-     * Maldivian
+     * 2049-5: Maldivian
      */
-    v3_Race_Maldivian: Coding;
+    readonly Maldivian: Coding;
     /**
-     * Nepalese
+     * 2050-3: Nepalese
      */
-    v3_Race_Nepalese: Coding;
+    readonly Nepalese: Coding;
     /**
-     * Singaporean
+     * 2051-1: Singaporean
      */
-    v3_Race_Singaporean: Coding;
+    readonly Singaporean: Coding;
     /**
-     * Madagascar
+     * 2052-9: Madagascar
      */
-    v3_Race_Madagascar: Coding;
+    readonly Madagascar: Coding;
     /**
-     * Black or African American
+     * 2054-5: Black or African American
      */
-    v3_Race_BlackOrAfricanAmerican: Coding;
+    readonly BlackOrAfricanAmerican: Coding;
     /**
-     * Black
+     * 2056-0: Black
      */
-    v3_Race_Black: Coding;
+    readonly Black: Coding;
     /**
-     * African American
+     * 2058-6: African American
      */
-    v3_Race_AfricanAmerican: Coding;
+    readonly AfricanAmerican: Coding;
     /**
-     * African
+     * 2060-2: African
      */
-    v3_Race_African: Coding;
+    readonly African: Coding;
     /**
-     * Botswanan
+     * 2061-0: Botswanan
      */
-    v3_Race_Botswanan: Coding;
+    readonly Botswanan: Coding;
     /**
-     * Ethiopian
+     * 2062-8: Ethiopian
      */
-    v3_Race_Ethiopian: Coding;
+    readonly Ethiopian: Coding;
     /**
-     * Liberian
+     * 2063-6: Liberian
      */
-    v3_Race_Liberian: Coding;
+    readonly Liberian: Coding;
     /**
-     * Namibian
+     * 2064-4: Namibian
      */
-    v3_Race_Namibian: Coding;
+    readonly Namibian: Coding;
     /**
-     * Nigerian
+     * 2065-1: Nigerian
      */
-    v3_Race_Nigerian: Coding;
+    readonly Nigerian: Coding;
     /**
-     * Zairean
+     * 2066-9: Zairean
      */
-    v3_Race_Zairean: Coding;
+    readonly Zairean: Coding;
     /**
-     * Bahamian
+     * 2067-7: Bahamian
      */
-    v3_Race_Bahamian: Coding;
+    readonly Bahamian: Coding;
     /**
-     * Barbadian
+     * 2068-5: Barbadian
      */
-    v3_Race_Barbadian: Coding;
+    readonly Barbadian: Coding;
     /**
-     * Dominican
+     * 2069-3: Dominican
      */
-    v3_Race_Dominican: Coding;
+    readonly Dominican: Coding;
     /**
-     * Dominica Islander
+     * 2070-1: Dominica Islander
      */
-    v3_Race_DominicaIslander: Coding;
+    readonly DominicaIslander: Coding;
     /**
-     * Haitian
+     * 2071-9: Haitian
      */
-    v3_Race_Haitian: Coding;
+    readonly Haitian: Coding;
     /**
-     * Jamaican
+     * 2072-7: Jamaican
      */
-    v3_Race_Jamaican: Coding;
+    readonly Jamaican: Coding;
     /**
-     * Tobagoan
+     * 2073-5: Tobagoan
      */
-    v3_Race_Tobagoan: Coding;
+    readonly Tobagoan: Coding;
     /**
-     * Trinidadian
+     * 2074-3: Trinidadian
      */
-    v3_Race_Trinidadian: Coding;
+    readonly Trinidadian: Coding;
     /**
-     * West Indian
+     * 2075-0: West Indian
      */
-    v3_Race_WestIndian: Coding;
+    readonly WestIndian: Coding;
     /**
-     * Native Hawaiian or Other Pacific Islander
+     * 2076-8: Native Hawaiian or Other Pacific Islander
      */
-    v3_Race_NativeHawaiianOrOtherPacificIslander: Coding;
+    readonly NativeHawaiianOrOtherPacificIslander: Coding;
     /**
-     * Polynesian
+     * 2078-4: Polynesian
      */
-    v3_Race_Polynesian: Coding;
+    readonly Polynesian: Coding;
     /**
-     * Native Hawaiian
+     * 2079-2: Native Hawaiian
      */
-    v3_Race_NativeHawaiian: Coding;
+    readonly NativeHawaiian: Coding;
     /**
-     * Samoan
+     * 2080-0: Samoan
      */
-    v3_Race_Samoan: Coding;
+    readonly Samoan: Coding;
     /**
-     * Tahitian
+     * 2081-8: Tahitian
      */
-    v3_Race_Tahitian: Coding;
+    readonly Tahitian: Coding;
     /**
-     * Tongan
+     * 2082-6: Tongan
      */
-    v3_Race_Tongan: Coding;
+    readonly Tongan: Coding;
     /**
-     * Tokelauan
+     * 2083-4: Tokelauan
      */
-    v3_Race_Tokelauan: Coding;
+    readonly Tokelauan: Coding;
     /**
-     * Micronesian
+     * 2085-9: Micronesian
      */
-    v3_Race_Micronesian: Coding;
+    readonly Micronesian: Coding;
     /**
-     * Guamanian or Chamorro
+     * 2086-7: Guamanian or Chamorro
      */
-    v3_Race_GuamanianOrChamorro: Coding;
+    readonly GuamanianOrChamorro: Coding;
     /**
-     * Guamanian
+     * 2087-5: Guamanian
      */
-    v3_Race_Guamanian: Coding;
+    readonly Guamanian: Coding;
     /**
-     * Chamorro
+     * 2088-3: Chamorro
      */
-    v3_Race_Chamorro: Coding;
+    readonly Chamorro: Coding;
     /**
-     * Mariana Islander
+     * 2089-1: Mariana Islander
      */
-    v3_Race_MarianaIslander: Coding;
+    readonly MarianaIslander: Coding;
     /**
-     * Marshallese
+     * 2090-9: Marshallese
      */
-    v3_Race_Marshallese: Coding;
+    readonly Marshallese: Coding;
     /**
-     * Palauan
+     * 2091-7: Palauan
      */
-    v3_Race_Palauan: Coding;
+    readonly Palauan: Coding;
     /**
-     * Carolinian
+     * 2092-5: Carolinian
      */
-    v3_Race_Carolinian: Coding;
+    readonly Carolinian: Coding;
     /**
-     * Kosraean
+     * 2093-3: Kosraean
      */
-    v3_Race_Kosraean: Coding;
+    readonly Kosraean: Coding;
     /**
-     * Pohnpeian
+     * 2094-1: Pohnpeian
      */
-    v3_Race_Pohnpeian: Coding;
+    readonly Pohnpeian: Coding;
     /**
-     * Saipanese
+     * 2095-8: Saipanese
      */
-    v3_Race_Saipanese: Coding;
+    readonly Saipanese: Coding;
     /**
-     * Kiribati
+     * 2096-6: Kiribati
      */
-    v3_Race_Kiribati: Coding;
+    readonly Kiribati: Coding;
     /**
-     * Chuukese
+     * 2097-4: Chuukese
      */
-    v3_Race_Chuukese: Coding;
+    readonly Chuukese: Coding;
     /**
-     * Yapese
+     * 2098-2: Yapese
      */
-    v3_Race_Yapese: Coding;
+    readonly Yapese: Coding;
     /**
-     * Melanesian
+     * 2100-6: Melanesian
      */
-    v3_Race_Melanesian: Coding;
+    readonly Melanesian: Coding;
     /**
-     * Fijian
+     * 2101-4: Fijian
      */
-    v3_Race_Fijian: Coding;
+    readonly Fijian: Coding;
     /**
-     * Papua New Guinean
+     * 2102-2: Papua New Guinean
      */
-    v3_Race_PapuaNewGuinean: Coding;
+    readonly PapuaNewGuinean: Coding;
     /**
-     * Solomon Islander
+     * 2103-0: Solomon Islander
      */
-    v3_Race_SolomonIslander: Coding;
+    readonly SolomonIslander: Coding;
     /**
-     * New Hebrides
+     * 2104-8: New Hebrides
      */
-    v3_Race_NewHebrides: Coding;
+    readonly NewHebrides: Coding;
     /**
-     * White
+     * 2106-3: White
      */
-    v3_Race_White: Coding;
+    readonly White: Coding;
     /**
-     * European
+     * 2108-9: European
      */
-    v3_Race_European: Coding;
+    readonly European: Coding;
     /**
-     * Armenian
+     * 2109-7: Armenian
      */
-    v3_Race_Armenian: Coding;
+    readonly Armenian: Coding;
     /**
-     * English
+     * 2110-5: English
      */
-    v3_Race_English: Coding;
+    readonly English: Coding;
     /**
-     * French
+     * 2111-3: French
      */
-    v3_Race_French: Coding;
+    readonly French: Coding;
     /**
-     * German
+     * 2112-1: German
      */
-    v3_Race_German: Coding;
+    readonly German: Coding;
     /**
-     * Irish
+     * 2113-9: Irish
      */
-    v3_Race_Irish: Coding;
+    readonly Irish: Coding;
     /**
-     * Italian
+     * 2114-7: Italian
      */
-    v3_Race_Italian: Coding;
+    readonly Italian: Coding;
     /**
-     * Polish
+     * 2115-4: Polish
      */
-    v3_Race_Polish: Coding;
+    readonly Polish: Coding;
     /**
-     * Scottish
+     * 2116-2: Scottish
      */
-    v3_Race_Scottish: Coding;
+    readonly Scottish: Coding;
     /**
-     * Middle Eastern or North African
+     * 2118-8: Middle Eastern or North African
      */
-    v3_Race_MiddleEasternOrNorthAfrican: Coding;
+    readonly MiddleEasternOrNorthAfrican: Coding;
     /**
-     * Assyrian
+     * 2119-6: Assyrian
      */
-    v3_Race_Assyrian: Coding;
+    readonly Assyrian: Coding;
     /**
-     * Egyptian
+     * 2120-4: Egyptian
      */
-    v3_Race_Egyptian: Coding;
+    readonly Egyptian: Coding;
     /**
-     * Iranian
+     * 2121-2: Iranian
      */
-    v3_Race_Iranian: Coding;
+    readonly Iranian: Coding;
     /**
-     * Iraqi
+     * 2122-0: Iraqi
      */
-    v3_Race_Iraqi: Coding;
+    readonly Iraqi: Coding;
     /**
-     * Lebanese
+     * 2123-8: Lebanese
      */
-    v3_Race_Lebanese: Coding;
+    readonly Lebanese: Coding;
     /**
-     * Palestinian
+     * 2124-6: Palestinian
      */
-    v3_Race_Palestinian: Coding;
+    readonly Palestinian: Coding;
     /**
-     * Syrian
+     * 2125-3: Syrian
      */
-    v3_Race_Syrian: Coding;
+    readonly Syrian: Coding;
     /**
-     * Afghanistani
+     * 2126-1: Afghanistani
      */
-    v3_Race_Afghanistani: Coding;
+    readonly Afghanistani: Coding;
     /**
-     * Israeili
+     * 2127-9: Israeili
      */
-    v3_Race_Israeili: Coding;
+    readonly Israeili: Coding;
     /**
-     * Arab
+     * 2129-5: Arab
      */
-    v3_Race_Arab: Coding;
+    readonly Arab: Coding;
     /**
-     * Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated.
+     * 2131-1: Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated.
      */
-    v3_Race_OtherRace: Coding;
-    ReferencerangeAppliestoValueSet_VAL248152002: Coding;
-    ReferencerangeAppliestoValueSet_VAL248153007: Coding;
+    readonly OtherRace: Coding;
     /**
-     * Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated.
+     * Code: 248152002
      */
-    v3_Race_OtherPacificIslander: Coding;
+    readonly VAL248152002: Coding;
+    /**
+     * Code: 248153007
+     */
+    readonly VAL248153007: Coding;
+    /**
+     * 2500-7: Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated.
+     */
+    readonly OtherPacificIslander: Coding;
+    /**
+     * Code: 77386006
+     */
+    readonly VAL77386006: Coding;
 };
+/**
+ * This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.
+ */
+export declare type ReferencerangeAppliestoValueSetType = typeof ReferencerangeAppliestoValueSet;
+/**
+ * This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.
+ */
+export declare enum ReferencerangeAppliestoValueSetEnum {
+    /**
+     * 1002-5: American Indian or Alaska Native
+     */
+    AmericanIndianOrAlaskaNative = "1002-5",
+    /**
+     * 1004-1: American Indian
+     */
+    AmericanIndian = "1004-1",
+    /**
+     * 1006-6: Abenaki
+     */
+    Abenaki = "1006-6",
+    /**
+     * 1008-2: Algonquian
+     */
+    Algonquian = "1008-2",
+    /**
+     * 1010-8: Apache
+     */
+    Apache = "1010-8",
+    /**
+     * 1011-6: Chiricahua
+     */
+    Chiricahua = "1011-6",
+    /**
+     * 1012-4: Fort Sill Apache
+     */
+    FortSillApache = "1012-4",
+    /**
+     * 1013-2: Jicarilla Apache
+     */
+    JicarillaApache = "1013-2",
+    /**
+     * 1014-0: Lipan Apache
+     */
+    LipanApache = "1014-0",
+    /**
+     * 1015-7: Mescalero Apache
+     */
+    MescaleroApache = "1015-7",
+    /**
+     * 1016-5: Oklahoma Apache
+     */
+    OklahomaApache = "1016-5",
+    /**
+     * 1017-3: Payson Apache
+     */
+    PaysonApache = "1017-3",
+    /**
+     * 1018-1: San Carlos Apache
+     */
+    SanCarlosApache = "1018-1",
+    /**
+     * 1019-9: White Mountain Apache
+     */
+    WhiteMountainApache = "1019-9",
+    /**
+     * 1021-5: Arapaho
+     */
+    Arapaho = "1021-5",
+    /**
+     * 1022-3: Northern Arapaho
+     */
+    NorthernArapaho = "1022-3",
+    /**
+     * 1023-1: Southern Arapaho
+     */
+    SouthernArapaho = "1023-1",
+    /**
+     * 1024-9: Wind River Arapaho
+     */
+    WindRiverArapaho = "1024-9",
+    /**
+     * 1026-4: Arikara
+     */
+    Arikara = "1026-4",
+    /**
+     * 1028-0: Assiniboine
+     */
+    Assiniboine = "1028-0",
+    /**
+     * 1030-6: Assiniboine Sioux
+     */
+    AssiniboineSioux = "1030-6",
+    /**
+     * 1031-4: Fort Peck Assiniboine Sioux
+     */
+    FortPeckAssiniboineSioux = "1031-4",
+    /**
+     * 1033-0: Bannock
+     */
+    Bannock = "1033-0",
+    /**
+     * 1035-5: Blackfeet
+     */
+    Blackfeet = "1035-5",
+    /**
+     * 1037-1: Brotherton
+     */
+    Brotherton = "1037-1",
+    /**
+     * 1039-7: Burt Lake Band
+     */
+    BurtLakeBand = "1039-7",
+    /**
+     * 1041-3: Caddo
+     */
+    Caddo = "1041-3",
+    /**
+     * 1042-1: Oklahoma Cado
+     */
+    OklahomaCado = "1042-1",
+    /**
+     * 1044-7: Cahuilla
+     */
+    Cahuilla = "1044-7",
+    /**
+     * 1045-4: Agua Caliente Cahuilla
+     */
+    AguaCalienteCahuilla = "1045-4",
+    /**
+     * 1046-2: Augustine
+     */
+    Augustine = "1046-2",
+    /**
+     * 1047-0: Cabazon
+     */
+    Cabazon = "1047-0",
+    /**
+     * 1048-8: Los Coyotes
+     */
+    LosCoyotes = "1048-8",
+    /**
+     * 1049-6: Morongo
+     */
+    Morongo = "1049-6",
+    /**
+     * 1050-4: Santa Rosa Cahuilla
+     */
+    SantaRosaCahuilla = "1050-4",
+    /**
+     * 1051-2: Torres-Martinez
+     */
+    TorresMartinez = "1051-2",
+    /**
+     * 1053-8: California Tribes
+     */
+    CaliforniaTribes = "1053-8",
+    /**
+     * 1054-6: Cahto
+     */
+    Cahto = "1054-6",
+    /**
+     * 1055-3: Chimariko
+     */
+    Chimariko = "1055-3",
+    /**
+     * 1056-1: Coast Miwok
+     */
+    CoastMiwok = "1056-1",
+    /**
+     * 1057-9: Digger
+     */
+    Digger = "1057-9",
+    /**
+     * 1058-7: Kawaiisu
+     */
+    Kawaiisu = "1058-7",
+    /**
+     * 1059-5: Kern River
+     */
+    KernRiver = "1059-5",
+    /**
+     * 1060-3: Mattole
+     */
+    Mattole = "1060-3",
+    /**
+     * 1061-1: Red Wood
+     */
+    RedWood = "1061-1",
+    /**
+     * 1062-9: Santa Rosa
+     */
+    SantaRosa = "1062-9",
+    /**
+     * 1063-7: Takelma
+     */
+    Takelma = "1063-7",
+    /**
+     * 1064-5: Wappo
+     */
+    Wappo = "1064-5",
+    /**
+     * 1065-2: Yana
+     */
+    Yana = "1065-2",
+    /**
+     * 1066-0: Yuki
+     */
+    Yuki = "1066-0",
+    /**
+     * 1068-6: Canadian and Latin American Indian
+     */
+    CanadianAndLatinAmericanIndian = "1068-6",
+    /**
+     * 1069-4: Canadian Indian
+     */
+    CanadianIndian = "1069-4",
+    /**
+     * 1070-2: Central American Indian
+     */
+    CentralAmericanIndian = "1070-2",
+    /**
+     * 1071-0: French American Indian
+     */
+    FrenchAmericanIndian = "1071-0",
+    /**
+     * 1072-8: Mexican American Indian
+     */
+    MexicanAmericanIndian = "1072-8",
+    /**
+     * 1073-6: South American Indian
+     */
+    SouthAmericanIndian = "1073-6",
+    /**
+     * 1074-4: Spanish American Indian
+     */
+    SpanishAmericanIndian = "1074-4",
+    /**
+     * 1076-9: Catawba
+     */
+    Catawba = "1076-9",
+    /**
+     * 1078-5: Cayuse
+     */
+    Cayuse = "1078-5",
+    /**
+     * 1080-1: Chehalis
+     */
+    Chehalis = "1080-1",
+    /**
+     * 1082-7: Chemakuan
+     */
+    Chemakuan = "1082-7",
+    /**
+     * 1083-5: Hoh
+     */
+    Hoh = "1083-5",
+    /**
+     * 1084-3: Quileute
+     */
+    Quileute = "1084-3",
+    /**
+     * 1086-8: Chemehuevi
+     */
+    Chemehuevi = "1086-8",
+    /**
+     * 1088-4: Cherokee
+     */
+    Cherokee = "1088-4",
+    /**
+     * 1089-2: Cherokee Alabama
+     */
+    CherokeeAlabama = "1089-2",
+    /**
+     * 1090-0: Cherokees of Northeast Alabama
+     */
+    CherokeesOfNortheastAlabama = "1090-0",
+    /**
+     * 1091-8: Cherokees of Southeast Alabama
+     */
+    CherokeesOfSoutheastAlabama = "1091-8",
+    /**
+     * 1092-6: Eastern Cherokee
+     */
+    EasternCherokee = "1092-6",
+    /**
+     * 1093-4: Echota Cherokee
+     */
+    EchotaCherokee = "1093-4",
+    /**
+     * 1094-2: Etowah Cherokee
+     */
+    EtowahCherokee = "1094-2",
+    /**
+     * 1095-9: Northern Cherokee
+     */
+    NorthernCherokee = "1095-9",
+    /**
+     * 1096-7: Tuscola
+     */
+    Tuscola = "1096-7",
+    /**
+     * 1097-5: United Keetowah Band of Cherokee
+     */
+    UnitedKeetowahBandOfCherokee = "1097-5",
+    /**
+     * 1098-3: Western Cherokee
+     */
+    WesternCherokee = "1098-3",
+    /**
+     * 1100-7: Cherokee Shawnee
+     */
+    CherokeeShawnee = "1100-7",
+    /**
+     * 1102-3: Cheyenne
+     */
+    Cheyenne = "1102-3",
+    /**
+     * 1103-1: Northern Cheyenne
+     */
+    NorthernCheyenne = "1103-1",
+    /**
+     * 1104-9: Southern Cheyenne
+     */
+    SouthernCheyenne = "1104-9",
+    /**
+     * 1106-4: Cheyenne-Arapaho
+     */
+    CheyenneArapaho = "1106-4",
+    /**
+     * 1108-0: Chickahominy
+     */
+    Chickahominy = "1108-0",
+    /**
+     * 1109-8: Eastern Chickahominy
+     */
+    EasternChickahominy = "1109-8",
+    /**
+     * 1110-6: Western Chickahominy
+     */
+    WesternChickahominy = "1110-6",
+    /**
+     * 1112-2: Chickasaw
+     */
+    Chickasaw = "1112-2",
+    /**
+     * 1114-8: Chinook
+     */
+    Chinook = "1114-8",
+    /**
+     * 1115-5: Clatsop
+     */
+    Clatsop = "1115-5",
+    /**
+     * 1116-3: Columbia River Chinook
+     */
+    ColumbiaRiverChinook = "1116-3",
+    /**
+     * 1117-1: Kathlamet
+     */
+    Kathlamet = "1117-1",
+    /**
+     * 1118-9: Upper Chinook
+     */
+    UpperChinook = "1118-9",
+    /**
+     * 1119-7: Wakiakum Chinook
+     */
+    WakiakumChinook = "1119-7",
+    /**
+     * 1120-5: Willapa Chinook
+     */
+    WillapaChinook = "1120-5",
+    /**
+     * 1121-3: Wishram
+     */
+    Wishram = "1121-3",
+    /**
+     * 1123-9: Chippewa
+     */
+    Chippewa = "1123-9",
+    /**
+     * 1124-7: Bad River
+     */
+    BadRiver = "1124-7",
+    /**
+     * 1125-4: Bay Mills Chippewa
+     */
+    BayMillsChippewa = "1125-4",
+    /**
+     * 1126-2: Bois Forte
+     */
+    BoisForte = "1126-2",
+    /**
+     * 1127-0: Burt Lake Chippewa
+     */
+    BurtLakeChippewa = "1127-0",
+    /**
+     * 1128-8: Fond du Lac
+     */
+    FondDuLac = "1128-8",
+    /**
+     * 1129-6: Grand Portage
+     */
+    GrandPortage = "1129-6",
+    /**
+     * 1130-4: Grand Traverse Band of Ottawa-Chippewa
+     */
+    GrandTraverseBandOfOttawaChippewa = "1130-4",
+    /**
+     * 1131-2: Keweenaw
+     */
+    Keweenaw = "1131-2",
+    /**
+     * 1132-0: Lac Courte Oreilles
+     */
+    LacCourteOreilles = "1132-0",
+    /**
+     * 1133-8: Lac du Flambeau
+     */
+    LacDuFlambeau = "1133-8",
+    /**
+     * 1134-6: Lac Vieux Desert Chippewa
+     */
+    LacVieuxDesertChippewa = "1134-6",
+    /**
+     * 1135-3: Lake Superior
+     */
+    LakeSuperior = "1135-3",
+    /**
+     * 1136-1: Leech Lake
+     */
+    LeechLake = "1136-1",
+    /**
+     * 1137-9: Little Shell Chippewa
+     */
+    LittleShellChippewa = "1137-9",
+    /**
+     * 1138-7: Mille Lacs
+     */
+    MilleLacs = "1138-7",
+    /**
+     * 1139-5: Minnesota Chippewa
+     */
+    MinnesotaChippewa = "1139-5",
+    /**
+     * 1140-3: Ontonagon
+     */
+    Ontonagon = "1140-3",
+    /**
+     * 1141-1: Red Cliff Chippewa
+     */
+    RedCliffChippewa = "1141-1",
+    /**
+     * 1142-9: Red Lake Chippewa
+     */
+    RedLakeChippewa = "1142-9",
+    /**
+     * 1143-7: Saginaw Chippewa
+     */
+    SaginawChippewa = "1143-7",
+    /**
+     * 1144-5: St. Croix Chippewa
+     */
+    StCroixChippewa = "1144-5",
+    /**
+     * 1145-2: Sault Ste. Marie Chippewa
+     */
+    SaultSteMarieChippewa = "1145-2",
+    /**
+     * 1146-0: Sokoagon Chippewa
+     */
+    SokoagonChippewa = "1146-0",
+    /**
+     * 1147-8: Turtle Mountain
+     */
+    TurtleMountain = "1147-8",
+    /**
+     * 1148-6: White Earth
+     */
+    WhiteEarth = "1148-6",
+    /**
+     * 1150-2: Chippewa Cree
+     */
+    ChippewaCree = "1150-2",
+    /**
+     * 1151-0: Rocky Boy's Chippewa Cree
+     */
+    RockyBoyQuoteSChippewaCree = "1151-0",
+    /**
+     * 1153-6: Chitimacha
+     */
+    Chitimacha = "1153-6",
+    /**
+     * 1155-1: Choctaw
+     */
+    Choctaw = "1155-1",
+    /**
+     * 1156-9: Clifton Choctaw
+     */
+    CliftonChoctaw = "1156-9",
+    /**
+     * 1157-7: Jena Choctaw
+     */
+    JenaChoctaw = "1157-7",
+    /**
+     * 1158-5: Mississippi Choctaw
+     */
+    MississippiChoctaw = "1158-5",
+    /**
+     * 1159-3: Mowa Band of Choctaw
+     */
+    MowaBandOfChoctaw = "1159-3",
+    /**
+     * 1160-1: Oklahoma Choctaw
+     */
+    OklahomaChoctaw = "1160-1",
+    /**
+     * 1162-7: Chumash
+     */
+    Chumash = "1162-7",
+    /**
+     * 1163-5: Santa Ynez
+     */
+    SantaYnez = "1163-5",
+    /**
+     * 1165-0: Clear Lake
+     */
+    ClearLake = "1165-0",
+    /**
+     * 1167-6: Coeur D'Alene
+     */
+    CoeurDQuoteAlene = "1167-6",
+    /**
+     * 1169-2: Coharie
+     */
+    Coharie = "1169-2",
+    /**
+     * 1171-8: Colorado River
+     */
+    ColoradoRiver = "1171-8",
+    /**
+     * 1173-4: Colville
+     */
+    Colville = "1173-4",
+    /**
+     * 1175-9: Comanche
+     */
+    Comanche = "1175-9",
+    /**
+     * 1176-7: Oklahoma Comanche
+     */
+    OklahomaComanche = "1176-7",
+    /**
+     * 1178-3: Coos, Lower Umpqua, Siuslaw
+     */
+    CoosLowerUmpquaSiuslaw = "1178-3",
+    /**
+     * 1180-9: Coos
+     */
+    Coos = "1180-9",
+    /**
+     * 1182-5: Coquilles
+     */
+    Coquilles = "1182-5",
+    /**
+     * 1184-1: Costanoan
+     */
+    Costanoan = "1184-1",
+    /**
+     * 1186-6: Coushatta
+     */
+    Coushatta = "1186-6",
+    /**
+     * 1187-4: Alabama Coushatta
+     */
+    AlabamaCoushatta = "1187-4",
+    /**
+     * 1189-0: Cowlitz
+     */
+    Cowlitz = "1189-0",
+    /**
+     * 1191-6: Cree
+     */
+    Cree = "1191-6",
+    /**
+     * 1193-2: Creek
+     */
+    Creek = "1193-2",
+    /**
+     * 1194-0: Alabama Creek
+     */
+    AlabamaCreek = "1194-0",
+    /**
+     * 1195-7: Alabama Quassarte
+     */
+    AlabamaQuassarte = "1195-7",
+    /**
+     * 1196-5: Eastern Creek
+     */
+    EasternCreek = "1196-5",
+    /**
+     * 1197-3: Eastern Muscogee
+     */
+    EasternMuscogee = "1197-3",
+    /**
+     * 1198-1: Kialegee
+     */
+    Kialegee = "1198-1",
+    /**
+     * 1199-9: Lower Muscogee
+     */
+    LowerMuscogee = "1199-9",
+    /**
+     * 1200-5: Machis Lower Creek Indian
+     */
+    MachisLowerCreekIndian = "1200-5",
+    /**
+     * 1201-3: Poarch Band
+     */
+    PoarchBand = "1201-3",
+    /**
+     * 1202-1: Principal Creek Indian Nation
+     */
+    PrincipalCreekIndianNation = "1202-1",
+    /**
+     * 1203-9: Star Clan of Muscogee Creeks
+     */
+    StarClanOfMuscogeeCreeks = "1203-9",
+    /**
+     * 1204-7: Thlopthlocco
+     */
+    Thlopthlocco = "1204-7",
+    /**
+     * 1205-4: Tuckabachee
+     */
+    Tuckabachee = "1205-4",
+    /**
+     * 1207-0: Croatan
+     */
+    Croatan = "1207-0",
+    /**
+     * 1209-6: Crow
+     */
+    Crow = "1209-6",
+    /**
+     * 1211-2: Cupeno
+     */
+    Cupeno = "1211-2",
+    /**
+     * 1212-0: Agua Caliente
+     */
+    AguaCaliente = "1212-0",
+    /**
+     * 1214-6: Delaware
+     */
+    Delaware = "1214-6",
+    /**
+     * 1215-3: Eastern Delaware
+     */
+    EasternDelaware = "1215-3",
+    /**
+     * 1216-1: Lenni-Lenape
+     */
+    LenniLenape = "1216-1",
+    /**
+     * 1217-9: Munsee
+     */
+    Munsee = "1217-9",
+    /**
+     * 1218-7: Oklahoma Delaware
+     */
+    OklahomaDelaware = "1218-7",
+    /**
+     * 1219-5: Rampough Mountain
+     */
+    RampoughMountain = "1219-5",
+    /**
+     * 1220-3: Sand Hill
+     */
+    SandHill = "1220-3",
+    /**
+     * 1222-9: Diegueno
+     */
+    Diegueno = "1222-9",
+    /**
+     * 1223-7: Campo
+     */
+    Campo = "1223-7",
+    /**
+     * 1224-5: Capitan Grande
+     */
+    CapitanGrande = "1224-5",
+    /**
+     * 1225-2: Cuyapaipe
+     */
+    Cuyapaipe = "1225-2",
+    /**
+     * 1226-0: La Posta
+     */
+    LaPosta = "1226-0",
+    /**
+     * 1227-8: Manzanita
+     */
+    Manzanita = "1227-8",
+    /**
+     * 1228-6: Mesa Grande
+     */
+    MesaGrande = "1228-6",
+    /**
+     * 1229-4: San Pasqual
+     */
+    SanPasqual = "1229-4",
+    /**
+     * 1230-2: Santa Ysabel
+     */
+    SantaYsabel = "1230-2",
+    /**
+     * 1231-0: Sycuan
+     */
+    Sycuan = "1231-0",
+    /**
+     * 1233-6: Eastern Tribes
+     */
+    EasternTribes = "1233-6",
+    /**
+     * 1234-4: Attacapa
+     */
+    Attacapa = "1234-4",
+    /**
+     * 1235-1: Biloxi
+     */
+    Biloxi = "1235-1",
+    /**
+     * 1236-9: Georgetown
+     */
+    Georgetown = "1236-9",
+    /**
+     * 1237-7: Moor
+     */
+    Moor = "1237-7",
+    /**
+     * 1238-5: Nansemond
+     */
+    Nansemond = "1238-5",
+    /**
+     * 1239-3: Natchez
+     */
+    Natchez = "1239-3",
+    /**
+     * 1240-1: Nausu Waiwash
+     */
+    NausuWaiwash = "1240-1",
+    /**
+     * 1241-9: Nipmuc
+     */
+    Nipmuc = "1241-9",
+    /**
+     * 1242-7: Paugussett
+     */
+    Paugussett = "1242-7",
+    /**
+     * 1243-5: Pocomoke Acohonock
+     */
+    PocomokeAcohonock = "1243-5",
+    /**
+     * 1244-3: Southeastern Indians
+     */
+    SoutheasternIndians = "1244-3",
+    /**
+     * 1245-0: Susquehanock
+     */
+    Susquehanock = "1245-0",
+    /**
+     * 1246-8: Tunica Biloxi
+     */
+    TunicaBiloxi = "1246-8",
+    /**
+     * 1247-6: Waccamaw-Siousan
+     */
+    WaccamawSiousan = "1247-6",
+    /**
+     * 1248-4: Wicomico
+     */
+    Wicomico = "1248-4",
+    /**
+     * 1250-0: Esselen
+     */
+    Esselen = "1250-0",
+    /**
+     * 1252-6: Fort Belknap
+     */
+    FortBelknap = "1252-6",
+    /**
+     * 1254-2: Fort Berthold
+     */
+    FortBerthold = "1254-2",
+    /**
+     * 1256-7: Fort Mcdowell
+     */
+    FortMcdowell = "1256-7",
+    /**
+     * 1258-3: Fort Hall
+     */
+    FortHall = "1258-3",
+    /**
+     * 1260-9: Gabrieleno
+     */
+    Gabrieleno = "1260-9",
+    /**
+     * 1262-5: Grand Ronde
+     */
+    GrandRonde = "1262-5",
+    /**
+     * 1264-1: Gros Ventres
+     */
+    GrosVentres = "1264-1",
+    /**
+     * 1265-8: Atsina
+     */
+    Atsina = "1265-8",
+    /**
+     * 1267-4: Haliwa
+     */
+    Haliwa = "1267-4",
+    /**
+     * 1269-0: Hidatsa
+     */
+    Hidatsa = "1269-0",
+    /**
+     * 1271-6: Hoopa
+     */
+    Hoopa = "1271-6",
+    /**
+     * 1272-4: Trinity
+     */
+    Trinity = "1272-4",
+    /**
+     * 1273-2: Whilkut
+     */
+    Whilkut = "1273-2",
+    /**
+     * 1275-7: Hoopa Extension
+     */
+    HoopaExtension = "1275-7",
+    /**
+     * 1277-3: Houma
+     */
+    Houma = "1277-3",
+    /**
+     * 1279-9: Inaja-Cosmit
+     */
+    InajaCosmit = "1279-9",
+    /**
+     * 1281-5: Iowa
+     */
+    Iowa = "1281-5",
+    /**
+     * 1282-3: Iowa of Kansas-Nebraska
+     */
+    IowaOfKansasNebraska = "1282-3",
+    /**
+     * 1283-1: Iowa of Oklahoma
+     */
+    IowaOfOklahoma = "1283-1",
+    /**
+     * 1285-6: Iroquois
+     */
+    Iroquois = "1285-6",
+    /**
+     * 1286-4: Cayuga
+     */
+    Cayuga = "1286-4",
+    /**
+     * 1287-2: Mohawk
+     */
+    Mohawk = "1287-2",
+    /**
+     * 1288-0: Oneida
+     */
+    Oneida = "1288-0",
+    /**
+     * 1289-8: Onondaga
+     */
+    Onondaga = "1289-8",
+    /**
+     * 1290-6: Seneca
+     */
+    Seneca = "1290-6",
+    /**
+     * 1291-4: Seneca Nation
+     */
+    SenecaNation = "1291-4",
+    /**
+     * 1292-2: Seneca-Cayuga
+     */
+    SenecaCayuga = "1292-2",
+    /**
+     * 1293-0: Tonawanda Seneca
+     */
+    TonawandaSeneca = "1293-0",
+    /**
+     * 1294-8: Tuscarora
+     */
+    Tuscarora = "1294-8",
+    /**
+     * 1295-5: Wyandotte
+     */
+    Wyandotte = "1295-5",
+    /**
+     * 1297-1: Juaneno
+     */
+    Juaneno = "1297-1",
+    /**
+     * 1299-7: Kalispel
+     */
+    Kalispel = "1299-7",
+    /**
+     * 1301-1: Karuk
+     */
+    Karuk = "1301-1",
+    /**
+     * 1303-7: Kaw
+     */
+    Kaw = "1303-7",
+    /**
+     * 1305-2: Kickapoo
+     */
+    Kickapoo = "1305-2",
+    /**
+     * 1306-0: Oklahoma Kickapoo
+     */
+    OklahomaKickapoo = "1306-0",
+    /**
+     * 1307-8: Texas Kickapoo
+     */
+    TexasKickapoo = "1307-8",
+    /**
+     * 1309-4: Kiowa
+     */
+    Kiowa = "1309-4",
+    /**
+     * 1310-2: Oklahoma Kiowa
+     */
+    OklahomaKiowa = "1310-2",
+    /**
+     * 1312-8: Klallam
+     */
+    Klallam = "1312-8",
+    /**
+     * 1313-6: Jamestown
+     */
+    Jamestown = "1313-6",
+    /**
+     * 1314-4: Lower Elwha
+     */
+    LowerElwha = "1314-4",
+    /**
+     * 1315-1: Port Gamble Klallam
+     */
+    PortGambleKlallam = "1315-1",
+    /**
+     * 1317-7: Klamath
+     */
+    Klamath = "1317-7",
+    /**
+     * 1319-3: Konkow
+     */
+    Konkow = "1319-3",
+    /**
+     * 1321-9: Kootenai
+     */
+    Kootenai = "1321-9",
+    /**
+     * 1323-5: Lassik
+     */
+    Lassik = "1323-5",
+    /**
+     * 1325-0: Long Island
+     */
+    LongIsland = "1325-0",
+    /**
+     * 1326-8: Matinecock
+     */
+    Matinecock = "1326-8",
+    /**
+     * 1327-6: Montauk
+     */
+    Montauk = "1327-6",
+    /**
+     * 1328-4: Poospatuck
+     */
+    Poospatuck = "1328-4",
+    /**
+     * 1329-2: Setauket
+     */
+    Setauket = "1329-2",
+    /**
+     * 1331-8: Luiseno
+     */
+    Luiseno = "1331-8",
+    /**
+     * 1332-6: La Jolla
+     */
+    LaJolla = "1332-6",
+    /**
+     * 1333-4: Pala
+     */
+    Pala = "1333-4",
+    /**
+     * 1334-2: Pauma
+     */
+    Pauma = "1334-2",
+    /**
+     * 1335-9: Pechanga
+     */
+    Pechanga = "1335-9",
+    /**
+     * 1336-7: Soboba
+     */
+    Soboba = "1336-7",
+    /**
+     * 1337-5: Twenty-Nine Palms
+     */
+    TwentyNinePalms = "1337-5",
+    /**
+     * 1338-3: Temecula
+     */
+    Temecula = "1338-3",
+    /**
+     * 1340-9: Lumbee
+     */
+    Lumbee = "1340-9",
+    /**
+     * 1342-5: Lummi
+     */
+    Lummi = "1342-5",
+    /**
+     * 1344-1: Maidu
+     */
+    Maidu = "1344-1",
+    /**
+     * 1345-8: Mountain Maidu
+     */
+    MountainMaidu = "1345-8",
+    /**
+     * 1346-6: Nishinam
+     */
+    Nishinam = "1346-6",
+    /**
+     * 1348-2: Makah
+     */
+    Makah = "1348-2",
+    /**
+     * 1350-8: Maliseet
+     */
+    Maliseet = "1350-8",
+    /**
+     * 1352-4: Mandan
+     */
+    Mandan = "1352-4",
+    /**
+     * 1354-0: Mattaponi
+     */
+    Mattaponi = "1354-0",
+    /**
+     * 1356-5: Menominee
+     */
+    Menominee = "1356-5",
+    /**
+     * 1358-1: Miami
+     */
+    Miami = "1358-1",
+    /**
+     * 1359-9: Illinois Miami
+     */
+    IllinoisMiami = "1359-9",
+    /**
+     * 1360-7: Indiana Miami
+     */
+    IndianaMiami = "1360-7",
+    /**
+     * 1361-5: Oklahoma Miami
+     */
+    OklahomaMiami = "1361-5",
+    /**
+     * 1363-1: Miccosukee
+     */
+    Miccosukee = "1363-1",
+    /**
+     * 1365-6: Micmac
+     */
+    Micmac = "1365-6",
+    /**
+     * 1366-4: Aroostook
+     */
+    Aroostook = "1366-4",
+    /**
+     * 1368-0: Mission Indians
+     */
+    MissionIndians = "1368-0",
+    /**
+     * 1370-6: Miwok
+     */
+    Miwok = "1370-6",
+    /**
+     * 1372-2: Modoc
+     */
+    Modoc = "1372-2",
+    /**
+     * 1374-8: Mohegan
+     */
+    Mohegan = "1374-8",
+    /**
+     * 1376-3: Mono
+     */
+    Mono = "1376-3",
+    /**
+     * 1378-9: Nanticoke
+     */
+    Nanticoke = "1378-9",
+    /**
+     * 1380-5: Narragansett
+     */
+    Narragansett = "1380-5",
+    /**
+     * 1382-1: Navajo
+     */
+    Navajo = "1382-1",
+    /**
+     * 1383-9: Alamo Navajo
+     */
+    AlamoNavajo = "1383-9",
+    /**
+     * 1384-7: Canoncito Navajo
+     */
+    CanoncitoNavajo = "1384-7",
+    /**
+     * 1385-4: Ramah Navajo
+     */
+    RamahNavajo = "1385-4",
+    /**
+     * 1387-0: Nez Perce
+     */
+    NezPerce = "1387-0",
+    /**
+     * 1389-6: Nomalaki
+     */
+    Nomalaki = "1389-6",
+    /**
+     * 1391-2: Northwest Tribes
+     */
+    NorthwestTribes = "1391-2",
+    /**
+     * 1392-0: Alsea
+     */
+    Alsea = "1392-0",
+    /**
+     * 1393-8: Celilo
+     */
+    Celilo = "1393-8",
+    /**
+     * 1394-6: Columbia
+     */
+    Columbia = "1394-6",
+    /**
+     * 1395-3: Kalapuya
+     */
+    Kalapuya = "1395-3",
+    /**
+     * 1396-1: Molala
+     */
+    Molala = "1396-1",
+    /**
+     * 1397-9: Talakamish
+     */
+    Talakamish = "1397-9",
+    /**
+     * 1398-7: Tenino
+     */
+    Tenino = "1398-7",
+    /**
+     * 1399-5: Tillamook
+     */
+    Tillamook = "1399-5",
+    /**
+     * 1400-1: Wenatchee
+     */
+    Wenatchee = "1400-1",
+    /**
+     * 1401-9: Yahooskin
+     */
+    Yahooskin = "1401-9",
+    /**
+     * 1403-5: Omaha
+     */
+    Omaha = "1403-5",
+    /**
+     * 1405-0: Oregon Athabaskan
+     */
+    OregonAthabaskan = "1405-0",
+    /**
+     * 1407-6: Osage
+     */
+    Osage = "1407-6",
+    /**
+     * 1409-2: Otoe-Missouria
+     */
+    OtoeMissouria = "1409-2",
+    /**
+     * 1411-8: Ottawa
+     */
+    Ottawa = "1411-8",
+    /**
+     * 1412-6: Burt Lake Ottawa
+     */
+    BurtLakeOttawa = "1412-6",
+    /**
+     * 1413-4: Michigan Ottawa
+     */
+    MichiganOttawa = "1413-4",
+    /**
+     * 1414-2: Oklahoma Ottawa
+     */
+    OklahomaOttawa = "1414-2",
+    /**
+     * 1416-7: Paiute
+     */
+    Paiute = "1416-7",
+    /**
+     * 1417-5: Bishop
+     */
+    Bishop = "1417-5",
+    /**
+     * 1418-3: Bridgeport
+     */
+    Bridgeport = "1418-3",
+    /**
+     * 1419-1: Burns Paiute
+     */
+    BurnsPaiute = "1419-1",
+    /**
+     * 1420-9: Cedarville
+     */
+    Cedarville = "1420-9",
+    /**
+     * 1421-7: Fort Bidwell
+     */
+    FortBidwell = "1421-7",
+    /**
+     * 1422-5: Fort Independence
+     */
+    FortIndependence = "1422-5",
+    /**
+     * 1423-3: Kaibab
+     */
+    Kaibab = "1423-3",
+    /**
+     * 1424-1: Las Vegas
+     */
+    LasVegas = "1424-1",
+    /**
+     * 1425-8: Lone Pine
+     */
+    LonePine = "1425-8",
+    /**
+     * 1426-6: Lovelock
+     */
+    Lovelock = "1426-6",
+    /**
+     * 1427-4: Malheur Paiute
+     */
+    MalheurPaiute = "1427-4",
+    /**
+     * 1428-2: Moapa
+     */
+    Moapa = "1428-2",
+    /**
+     * 1429-0: Northern Paiute
+     */
+    NorthernPaiute = "1429-0",
+    /**
+     * 1430-8: Owens Valley
+     */
+    OwensValley = "1430-8",
+    /**
+     * 1431-6: Pyramid Lake
+     */
+    PyramidLake = "1431-6",
+    /**
+     * 1432-4: San Juan Southern Paiute
+     */
+    SanJuanSouthernPaiute = "1432-4",
+    /**
+     * 1433-2: Southern Paiute
+     */
+    SouthernPaiute = "1433-2",
+    /**
+     * 1434-0: Summit Lake
+     */
+    SummitLake = "1434-0",
+    /**
+     * 1435-7: Utu Utu Gwaitu Paiute
+     */
+    UtuUtuGwaituPaiute = "1435-7",
+    /**
+     * 1436-5: Walker River
+     */
+    WalkerRiver = "1436-5",
+    /**
+     * 1437-3: Yerington Paiute
+     */
+    YeringtonPaiute = "1437-3",
+    /**
+     * 1439-9: Pamunkey
+     */
+    Pamunkey = "1439-9",
+    /**
+     * 1441-5: Passamaquoddy
+     */
+    Passamaquoddy = "1441-5",
+    /**
+     * 1442-3: Indian Township
+     */
+    IndianTownship = "1442-3",
+    /**
+     * 1443-1: Pleasant Point Passamaquoddy
+     */
+    PleasantPointPassamaquoddy = "1443-1",
+    /**
+     * 1445-6: Pawnee
+     */
+    Pawnee = "1445-6",
+    /**
+     * 1446-4: Oklahoma Pawnee
+     */
+    OklahomaPawnee = "1446-4",
+    /**
+     * 1448-0: Penobscot
+     */
+    Penobscot = "1448-0",
+    /**
+     * 1450-6: Peoria
+     */
+    Peoria = "1450-6",
+    /**
+     * 1451-4: Oklahoma Peoria
+     */
+    OklahomaPeoria = "1451-4",
+    /**
+     * 1453-0: Pequot
+     */
+    Pequot = "1453-0",
+    /**
+     * 1454-8: Marshantucket Pequot
+     */
+    MarshantucketPequot = "1454-8",
+    /**
+     * 1456-3: Pima
+     */
+    Pima = "1456-3",
+    /**
+     * 1457-1: Gila River Pima-Maricopa
+     */
+    GilaRiverPimaMaricopa = "1457-1",
+    /**
+     * 1458-9: Salt River Pima-Maricopa
+     */
+    SaltRiverPimaMaricopa = "1458-9",
+    /**
+     * 1460-5: Piscataway
+     */
+    Piscataway = "1460-5",
+    /**
+     * 1462-1: Pit River
+     */
+    PitRiver = "1462-1",
+    /**
+     * 1464-7: Pomo
+     */
+    Pomo = "1464-7",
+    /**
+     * 1465-4: Central Pomo
+     */
+    CentralPomo = "1465-4",
+    /**
+     * 1466-2: Dry Creek
+     */
+    DryCreek = "1466-2",
+    /**
+     * 1467-0: Eastern Pomo
+     */
+    EasternPomo = "1467-0",
+    /**
+     * 1468-8: Kashia
+     */
+    Kashia = "1468-8",
+    /**
+     * 1469-6: Northern Pomo
+     */
+    NorthernPomo = "1469-6",
+    /**
+     * 1470-4: Scotts Valley
+     */
+    ScottsValley = "1470-4",
+    /**
+     * 1471-2: Stonyford
+     */
+    Stonyford = "1471-2",
+    /**
+     * 1472-0: Sulphur Bank
+     */
+    SulphurBank = "1472-0",
+    /**
+     * 1474-6: Ponca
+     */
+    Ponca = "1474-6",
+    /**
+     * 1475-3: Nebraska Ponca
+     */
+    NebraskaPonca = "1475-3",
+    /**
+     * 1476-1: Oklahoma Ponca
+     */
+    OklahomaPonca = "1476-1",
+    /**
+     * 1478-7: Potawatomi
+     */
+    Potawatomi = "1478-7",
+    /**
+     * 1479-5: Citizen Band Potawatomi
+     */
+    CitizenBandPotawatomi = "1479-5",
+    /**
+     * 1480-3: Forest County
+     */
+    ForestCounty = "1480-3",
+    /**
+     * 1481-1: Hannahville
+     */
+    Hannahville = "1481-1",
+    /**
+     * 1482-9: Huron Potawatomi
+     */
+    HuronPotawatomi = "1482-9",
+    /**
+     * 1483-7: Pokagon Potawatomi
+     */
+    PokagonPotawatomi = "1483-7",
+    /**
+     * 1484-5: Prairie Band
+     */
+    PrairieBand = "1484-5",
+    /**
+     * 1485-2: Wisconsin Potawatomi
+     */
+    WisconsinPotawatomi = "1485-2",
+    /**
+     * 1487-8: Powhatan
+     */
+    Powhatan = "1487-8",
+    /**
+     * 1489-4: Pueblo
+     */
+    Pueblo = "1489-4",
+    /**
+     * 1490-2: Acoma
+     */
+    Acoma = "1490-2",
+    /**
+     * 1491-0: Arizona Tewa
+     */
+    ArizonaTewa = "1491-0",
+    /**
+     * 1492-8: Cochiti
+     */
+    Cochiti = "1492-8",
+    /**
+     * 1493-6: Hopi
+     */
+    Hopi = "1493-6",
+    /**
+     * 1494-4: Isleta
+     */
+    Isleta = "1494-4",
+    /**
+     * 1495-1: Jemez
+     */
+    Jemez = "1495-1",
+    /**
+     * 1496-9: Keres
+     */
+    Keres = "1496-9",
+    /**
+     * 1497-7: Laguna
+     */
+    Laguna = "1497-7",
+    /**
+     * 1498-5: Nambe
+     */
+    Nambe = "1498-5",
+    /**
+     * 1499-3: Picuris
+     */
+    Picuris = "1499-3",
+    /**
+     * 1500-8: Piro
+     */
+    Piro = "1500-8",
+    /**
+     * 1501-6: Pojoaque
+     */
+    Pojoaque = "1501-6",
+    /**
+     * 1502-4: San Felipe
+     */
+    SanFelipe = "1502-4",
+    /**
+     * 1503-2: San Ildefonso
+     */
+    SanIldefonso = "1503-2",
+    /**
+     * 1504-0: San Juan Pueblo
+     */
+    SanJuanPueblo = "1504-0",
+    /**
+     * 1505-7: San Juan De
+     */
+    SanJuanDe = "1505-7",
+    /**
+     * 1506-5: San Juan
+     */
+    SanJuan = "1506-5",
+    /**
+     * 1507-3: Sandia
+     */
+    Sandia = "1507-3",
+    /**
+     * 1508-1: Santa Ana
+     */
+    SantaAna = "1508-1",
+    /**
+     * 1509-9: Santa Clara
+     */
+    SantaClara = "1509-9",
+    /**
+     * 1510-7: Santo Domingo
+     */
+    SantoDomingo = "1510-7",
+    /**
+     * 1511-5: Taos
+     */
+    Taos = "1511-5",
+    /**
+     * 1512-3: Tesuque
+     */
+    Tesuque = "1512-3",
+    /**
+     * 1513-1: Tewa
+     */
+    Tewa = "1513-1",
+    /**
+     * 1514-9: Tigua
+     */
+    Tigua = "1514-9",
+    /**
+     * 1515-6: Zia
+     */
+    Zia = "1515-6",
+    /**
+     * 1516-4: Zuni
+     */
+    Zuni = "1516-4",
+    /**
+     * 1518-0: Puget Sound Salish
+     */
+    PugetSoundSalish = "1518-0",
+    /**
+     * 1519-8: Duwamish
+     */
+    Duwamish = "1519-8",
+    /**
+     * 1520-6: Kikiallus
+     */
+    Kikiallus = "1520-6",
+    /**
+     * 1521-4: Lower Skagit
+     */
+    LowerSkagit = "1521-4",
+    /**
+     * 1522-2: Muckleshoot
+     */
+    Muckleshoot = "1522-2",
+    /**
+     * 1523-0: Nisqually
+     */
+    Nisqually = "1523-0",
+    /**
+     * 1524-8: Nooksack
+     */
+    Nooksack = "1524-8",
+    /**
+     * 1525-5: Port Madison
+     */
+    PortMadison = "1525-5",
+    /**
+     * 1526-3: Puyallup
+     */
+    Puyallup = "1526-3",
+    /**
+     * 1527-1: Samish
+     */
+    Samish = "1527-1",
+    /**
+     * 1528-9: Sauk-Suiattle
+     */
+    SaukSuiattle = "1528-9",
+    /**
+     * 1529-7: Skokomish
+     */
+    Skokomish = "1529-7",
+    /**
+     * 1530-5: Skykomish
+     */
+    Skykomish = "1530-5",
+    /**
+     * 1531-3: Snohomish
+     */
+    Snohomish = "1531-3",
+    /**
+     * 1532-1: Snoqualmie
+     */
+    Snoqualmie = "1532-1",
+    /**
+     * 1533-9: Squaxin Island
+     */
+    SquaxinIsland = "1533-9",
+    /**
+     * 1534-7: Steilacoom
+     */
+    Steilacoom = "1534-7",
+    /**
+     * 1535-4: Stillaguamish
+     */
+    Stillaguamish = "1535-4",
+    /**
+     * 1536-2: Suquamish
+     */
+    Suquamish = "1536-2",
+    /**
+     * 1537-0: Swinomish
+     */
+    Swinomish = "1537-0",
+    /**
+     * 1538-8: Tulalip
+     */
+    Tulalip = "1538-8",
+    /**
+     * 1539-6: Upper Skagit
+     */
+    UpperSkagit = "1539-6",
+    /**
+     * 1541-2: Quapaw
+     */
+    Quapaw = "1541-2",
+    /**
+     * 1543-8: Quinault
+     */
+    Quinault = "1543-8",
+    /**
+     * 1545-3: Rappahannock
+     */
+    Rappahannock = "1545-3",
+    /**
+     * 1547-9: Reno-Sparks
+     */
+    RenoSparks = "1547-9",
+    /**
+     * 1549-5: Round Valley
+     */
+    RoundValley = "1549-5",
+    /**
+     * 1551-1: Sac and Fox
+     */
+    SacAndFox = "1551-1",
+    /**
+     * 1552-9: Iowa Sac and Fox
+     */
+    IowaSacAndFox = "1552-9",
+    /**
+     * 1553-7: Missouri Sac and Fox
+     */
+    MissouriSacAndFox = "1553-7",
+    /**
+     * 1554-5: Oklahoma Sac and Fox
+     */
+    OklahomaSacAndFox = "1554-5",
+    /**
+     * 1556-0: Salinan
+     */
+    Salinan = "1556-0",
+    /**
+     * 1558-6: Salish
+     */
+    Salish = "1558-6",
+    /**
+     * 1560-2: Salish and Kootenai
+     */
+    SalishAndKootenai = "1560-2",
+    /**
+     * 1562-8: Schaghticoke
+     */
+    Schaghticoke = "1562-8",
+    /**
+     * 1564-4: Scott Valley
+     */
+    ScottValley = "1564-4",
+    /**
+     * 1566-9: Seminole
+     */
+    Seminole = "1566-9",
+    /**
+     * 1567-7: Big Cypress
+     */
+    BigCypress = "1567-7",
+    /**
+     * 1568-5: Brighton
+     */
+    Brighton = "1568-5",
+    /**
+     * 1569-3: Florida Seminole
+     */
+    FloridaSeminole = "1569-3",
+    /**
+     * 1570-1: Hollywood Seminole
+     */
+    HollywoodSeminole = "1570-1",
+    /**
+     * 1571-9: Oklahoma Seminole
+     */
+    OklahomaSeminole = "1571-9",
+    /**
+     * 1573-5: Serrano
+     */
+    Serrano = "1573-5",
+    /**
+     * 1574-3: San Manual
+     */
+    SanManual = "1574-3",
+    /**
+     * 1576-8: Shasta
+     */
+    Shasta = "1576-8",
+    /**
+     * 1578-4: Shawnee
+     */
+    Shawnee = "1578-4",
+    /**
+     * 1579-2: Absentee Shawnee
+     */
+    AbsenteeShawnee = "1579-2",
+    /**
+     * 1580-0: Eastern Shawnee
+     */
+    EasternShawnee = "1580-0",
+    /**
+     * 1582-6: Shinnecock
+     */
+    Shinnecock = "1582-6",
+    /**
+     * 1584-2: Shoalwater Bay
+     */
+    ShoalwaterBay = "1584-2",
+    /**
+     * 1586-7: Shoshone
+     */
+    Shoshone = "1586-7",
+    /**
+     * 1587-5: Battle Mountain
+     */
+    BattleMountain = "1587-5",
+    /**
+     * 1588-3: Duckwater
+     */
+    Duckwater = "1588-3",
+    /**
+     * 1589-1: Elko
+     */
+    Elko = "1589-1",
+    /**
+     * 1590-9: Ely
+     */
+    Ely = "1590-9",
+    /**
+     * 1591-7: Goshute
+     */
+    Goshute = "1591-7",
+    /**
+     * 1592-5: Panamint
+     */
+    Panamint = "1592-5",
+    /**
+     * 1593-3: Ruby Valley
+     */
+    RubyValley = "1593-3",
+    /**
+     * 1594-1: Skull Valley
+     */
+    SkullValley = "1594-1",
+    /**
+     * 1595-8: South Fork Shoshone
+     */
+    SouthForkShoshone = "1595-8",
+    /**
+     * 1596-6: Te-Moak Western Shoshone
+     */
+    TeMoakWesternShoshone = "1596-6",
+    /**
+     * 1597-4: Timbi-Sha Shoshone
+     */
+    TimbiShaShoshone = "1597-4",
+    /**
+     * 1598-2: Washakie
+     */
+    Washakie = "1598-2",
+    /**
+     * 1599-0: Wind River Shoshone
+     */
+    WindRiverShoshone = "1599-0",
+    /**
+     * 1600-6: Yomba
+     */
+    Yomba = "1600-6",
+    /**
+     * 1602-2: Shoshone Paiute
+     */
+    ShoshonePaiute = "1602-2",
+    /**
+     * 1603-0: Duck Valley
+     */
+    DuckValley = "1603-0",
+    /**
+     * 1604-8: Fallon
+     */
+    Fallon = "1604-8",
+    /**
+     * 1605-5: Fort McDermitt
+     */
+    FortMcDermitt = "1605-5",
+    /**
+     * 1607-1: Siletz
+     */
+    Siletz = "1607-1",
+    /**
+     * 1609-7: Sioux
+     */
+    Sioux = "1609-7",
+    /**
+     * 1610-5: Blackfoot Sioux
+     */
+    BlackfootSioux = "1610-5",
+    /**
+     * 1611-3: Brule Sioux
+     */
+    BruleSioux = "1611-3",
+    /**
+     * 1612-1: Cheyenne River Sioux
+     */
+    CheyenneRiverSioux = "1612-1",
+    /**
+     * 1613-9: Crow Creek Sioux
+     */
+    CrowCreekSioux = "1613-9",
+    /**
+     * 1614-7: Dakota Sioux
+     */
+    DakotaSioux = "1614-7",
+    /**
+     * 1615-4: Flandreau Santee
+     */
+    FlandreauSantee = "1615-4",
+    /**
+     * 1616-2: Fort Peck
+     */
+    FortPeck = "1616-2",
+    /**
+     * 1617-0: Lake Traverse Sioux
+     */
+    LakeTraverseSioux = "1617-0",
+    /**
+     * 1618-8: Lower Brule Sioux
+     */
+    LowerBruleSioux = "1618-8",
+    /**
+     * 1619-6: Lower Sioux
+     */
+    LowerSioux = "1619-6",
+    /**
+     * 1620-4: Mdewakanton Sioux
+     */
+    MdewakantonSioux = "1620-4",
+    /**
+     * 1621-2: Miniconjou
+     */
+    Miniconjou = "1621-2",
+    /**
+     * 1622-0: Oglala Sioux
+     */
+    OglalaSioux = "1622-0",
+    /**
+     * 1623-8: Pine Ridge Sioux
+     */
+    PineRidgeSioux = "1623-8",
+    /**
+     * 1624-6: Pipestone Sioux
+     */
+    PipestoneSioux = "1624-6",
+    /**
+     * 1625-3: Prairie Island Sioux
+     */
+    PrairieIslandSioux = "1625-3",
+    /**
+     * 1626-1: Prior Lake Sioux
+     */
+    PriorLakeSioux = "1626-1",
+    /**
+     * 1627-9: Rosebud Sioux
+     */
+    RosebudSioux = "1627-9",
+    /**
+     * 1628-7: Sans Arc Sioux
+     */
+    SansArcSioux = "1628-7",
+    /**
+     * 1629-5: Santee Sioux
+     */
+    SanteeSioux = "1629-5",
+    /**
+     * 1630-3: Sisseton-Wahpeton
+     */
+    SissetonWahpeton = "1630-3",
+    /**
+     * 1631-1: Sisseton Sioux
+     */
+    SissetonSioux = "1631-1",
+    /**
+     * 1632-9: Spirit Lake Sioux
+     */
+    SpiritLakeSioux = "1632-9",
+    /**
+     * 1633-7: Standing Rock Sioux
+     */
+    StandingRockSioux = "1633-7",
+    /**
+     * 1634-5: Teton Sioux
+     */
+    TetonSioux = "1634-5",
+    /**
+     * 1635-2: Two Kettle Sioux
+     */
+    TwoKettleSioux = "1635-2",
+    /**
+     * 1636-0: Upper Sioux
+     */
+    UpperSioux = "1636-0",
+    /**
+     * 1637-8: Wahpekute Sioux
+     */
+    WahpekuteSioux = "1637-8",
+    /**
+     * 1638-6: Wahpeton Sioux
+     */
+    WahpetonSioux = "1638-6",
+    /**
+     * 1639-4: Wazhaza Sioux
+     */
+    WazhazaSioux = "1639-4",
+    /**
+     * 1640-2: Yankton Sioux
+     */
+    YanktonSioux = "1640-2",
+    /**
+     * 1641-0: Yanktonai Sioux
+     */
+    YanktonaiSioux = "1641-0",
+    /**
+     * 1643-6: Siuslaw
+     */
+    Siuslaw = "1643-6",
+    /**
+     * 1645-1: Spokane
+     */
+    Spokane = "1645-1",
+    /**
+     * 1647-7: Stewart
+     */
+    Stewart = "1647-7",
+    /**
+     * 1649-3: Stockbridge
+     */
+    Stockbridge = "1649-3",
+    /**
+     * 1651-9: Susanville
+     */
+    Susanville = "1651-9",
+    /**
+     * 1653-5: Tohono O'Odham
+     */
+    TohonoOQuoteOdham = "1653-5",
+    /**
+     * 1654-3: Ak-Chin
+     */
+    AkChin = "1654-3",
+    /**
+     * 1655-0: Gila Bend
+     */
+    GilaBend = "1655-0",
+    /**
+     * 1656-8: San Xavier
+     */
+    SanXavier = "1656-8",
+    /**
+     * 1657-6: Sells
+     */
+    Sells = "1657-6",
+    /**
+     * 1659-2: Tolowa
+     */
+    Tolowa = "1659-2",
+    /**
+     * 1661-8: Tonkawa
+     */
+    Tonkawa = "1661-8",
+    /**
+     * 1663-4: Tygh
+     */
+    Tygh = "1663-4",
+    /**
+     * 1665-9: Umatilla
+     */
+    Umatilla = "1665-9",
+    /**
+     * 1667-5: Umpqua
+     */
+    Umpqua = "1667-5",
+    /**
+     * 1668-3: Cow Creek Umpqua
+     */
+    CowCreekUmpqua = "1668-3",
+    /**
+     * 1670-9: Ute
+     */
+    Ute = "1670-9",
+    /**
+     * 1671-7: Allen Canyon
+     */
+    AllenCanyon = "1671-7",
+    /**
+     * 1672-5: Uintah Ute
+     */
+    UintahUte = "1672-5",
+    /**
+     * 1673-3: Ute Mountain Ute
+     */
+    UteMountainUte = "1673-3",
+    /**
+     * 1675-8: Wailaki
+     */
+    Wailaki = "1675-8",
+    /**
+     * 1677-4: Walla-Walla
+     */
+    WallaWalla = "1677-4",
+    /**
+     * 1679-0: Wampanoag
+     */
+    Wampanoag = "1679-0",
+    /**
+     * 1680-8: Gay Head Wampanoag
+     */
+    GayHeadWampanoag = "1680-8",
+    /**
+     * 1681-6: Mashpee Wampanoag
+     */
+    MashpeeWampanoag = "1681-6",
+    /**
+     * 1683-2: Warm Springs
+     */
+    WarmSprings = "1683-2",
+    /**
+     * 1685-7: Wascopum
+     */
+    Wascopum = "1685-7",
+    /**
+     * 1687-3: Washoe
+     */
+    Washoe = "1687-3",
+    /**
+     * 1688-1: Alpine
+     */
+    Alpine = "1688-1",
+    /**
+     * 1689-9: Carson
+     */
+    Carson = "1689-9",
+    /**
+     * 1690-7: Dresslerville
+     */
+    Dresslerville = "1690-7",
+    /**
+     * 1692-3: Wichita
+     */
+    Wichita = "1692-3",
+    /**
+     * 1694-9: Wind River
+     */
+    WindRiver = "1694-9",
+    /**
+     * 1696-4: Winnebago
+     */
+    Winnebago = "1696-4",
+    /**
+     * 1697-2: Ho-chunk
+     */
+    HoChunk = "1697-2",
+    /**
+     * 1698-0: Nebraska Winnebago
+     */
+    NebraskaWinnebago = "1698-0",
+    /**
+     * 1700-4: Winnemucca
+     */
+    Winnemucca = "1700-4",
+    /**
+     * 1702-0: Wintun
+     */
+    Wintun = "1702-0",
+    /**
+     * 1704-6: Wiyot
+     */
+    Wiyot = "1704-6",
+    /**
+     * 1705-3: Table Bluff
+     */
+    TableBluff = "1705-3",
+    /**
+     * 1707-9: Yakama
+     */
+    Yakama = "1707-9",
+    /**
+     * 1709-5: Yakama Cowlitz
+     */
+    YakamaCowlitz = "1709-5",
+    /**
+     * 1711-1: Yaqui
+     */
+    Yaqui = "1711-1",
+    /**
+     * 1712-9: Barrio Libre
+     */
+    BarrioLibre = "1712-9",
+    /**
+     * 1713-7: Pascua Yaqui
+     */
+    PascuaYaqui = "1713-7",
+    /**
+     * 1715-2: Yavapai Apache
+     */
+    YavapaiApache = "1715-2",
+    /**
+     * 1717-8: Yokuts
+     */
+    Yokuts = "1717-8",
+    /**
+     * 1718-6: Chukchansi
+     */
+    Chukchansi = "1718-6",
+    /**
+     * 1719-4: Tachi
+     */
+    Tachi = "1719-4",
+    /**
+     * 1720-2: Tule River
+     */
+    TuleRiver = "1720-2",
+    /**
+     * 1722-8: Yuchi
+     */
+    Yuchi = "1722-8",
+    /**
+     * 1724-4: Yuman
+     */
+    Yuman = "1724-4",
+    /**
+     * 1725-1: Cocopah
+     */
+    Cocopah = "1725-1",
+    /**
+     * 1726-9: Havasupai
+     */
+    Havasupai = "1726-9",
+    /**
+     * 1727-7: Hualapai
+     */
+    Hualapai = "1727-7",
+    /**
+     * 1728-5: Maricopa
+     */
+    Maricopa = "1728-5",
+    /**
+     * 1729-3: Mohave
+     */
+    Mohave = "1729-3",
+    /**
+     * 1730-1: Quechan
+     */
+    Quechan = "1730-1",
+    /**
+     * 1731-9: Yavapai
+     */
+    Yavapai = "1731-9",
+    /**
+     * 1732-7: Yurok
+     */
+    Yurok = "1732-7",
+    /**
+     * 1733-5: Coast Yurok
+     */
+    CoastYurok = "1733-5",
+    /**
+     * 1735-0: Alaska Native
+     */
+    AlaskaNative = "1735-0",
+    /**
+     * 1737-6: Alaska Indian
+     */
+    AlaskaIndian = "1737-6",
+    /**
+     * 1739-2: Alaskan Athabascan
+     */
+    AlaskanAthabascan = "1739-2",
+    /**
+     * 1740-0: Ahtna
+     */
+    Ahtna = "1740-0",
+    /**
+     * 1741-8: Alatna
+     */
+    Alatna = "1741-8",
+    /**
+     * 1742-6: Alexander
+     */
+    Alexander = "1742-6",
+    /**
+     * 1743-4: Allakaket
+     */
+    Allakaket = "1743-4",
+    /**
+     * 1744-2: Alanvik
+     */
+    Alanvik = "1744-2",
+    /**
+     * 1745-9: Anvik
+     */
+    Anvik = "1745-9",
+    /**
+     * 1746-7: Arctic
+     */
+    Arctic = "1746-7",
+    /**
+     * 1747-5: Beaver
+     */
+    Beaver = "1747-5",
+    /**
+     * 1748-3: Birch Creek
+     */
+    BirchCreek = "1748-3",
+    /**
+     * 1749-1: Cantwell
+     */
+    Cantwell = "1749-1",
+    /**
+     * 1750-9: Chalkyitsik
+     */
+    Chalkyitsik = "1750-9",
+    /**
+     * 1751-7: Chickaloon
+     */
+    Chickaloon = "1751-7",
+    /**
+     * 1752-5: Chistochina
+     */
+    Chistochina = "1752-5",
+    /**
+     * 1753-3: Chitina
+     */
+    Chitina = "1753-3",
+    /**
+     * 1754-1: Circle
+     */
+    Circle = "1754-1",
+    /**
+     * 1755-8: Cook Inlet
+     */
+    CookInlet = "1755-8",
+    /**
+     * 1756-6: Copper Center
+     */
+    CopperCenter = "1756-6",
+    /**
+     * 1757-4: Copper River
+     */
+    CopperRiver = "1757-4",
+    /**
+     * 1758-2: Dot Lake
+     */
+    DotLake = "1758-2",
+    /**
+     * 1759-0: Doyon
+     */
+    Doyon = "1759-0",
+    /**
+     * 1760-8: Eagle
+     */
+    Eagle = "1760-8",
+    /**
+     * 1761-6: Eklutna
+     */
+    Eklutna = "1761-6",
+    /**
+     * 1762-4: Evansville
+     */
+    Evansville = "1762-4",
+    /**
+     * 1763-2: Fort Yukon
+     */
+    FortYukon = "1763-2",
+    /**
+     * 1764-0: Gakona
+     */
+    Gakona = "1764-0",
+    /**
+     * 1765-7: Galena
+     */
+    Galena = "1765-7",
+    /**
+     * 1766-5: Grayling
+     */
+    Grayling = "1766-5",
+    /**
+     * 1767-3: Gulkana
+     */
+    Gulkana = "1767-3",
+    /**
+     * 1768-1: Healy Lake
+     */
+    HealyLake = "1768-1",
+    /**
+     * 1769-9: Holy Cross
+     */
+    HolyCross = "1769-9",
+    /**
+     * 1770-7: Hughes
+     */
+    Hughes = "1770-7",
+    /**
+     * 1771-5: Huslia
+     */
+    Huslia = "1771-5",
+    /**
+     * 1772-3: Iliamna
+     */
+    Iliamna = "1772-3",
+    /**
+     * 1773-1: Kaltag
+     */
+    Kaltag = "1773-1",
+    /**
+     * 1774-9: Kluti Kaah
+     */
+    KlutiKaah = "1774-9",
+    /**
+     * 1775-6: Knik
+     */
+    Knik = "1775-6",
+    /**
+     * 1776-4: Koyukuk
+     */
+    Koyukuk = "1776-4",
+    /**
+     * 1777-2: Lake Minchumina
+     */
+    LakeMinchumina = "1777-2",
+    /**
+     * 1778-0: Lime
+     */
+    Lime = "1778-0",
+    /**
+     * 1779-8: Mcgrath
+     */
+    Mcgrath = "1779-8",
+    /**
+     * 1780-6: Manley Hot Springs
+     */
+    ManleyHotSprings = "1780-6",
+    /**
+     * 1781-4: Mentasta Lake
+     */
+    MentastaLake = "1781-4",
+    /**
+     * 1782-2: Minto
+     */
+    Minto = "1782-2",
+    /**
+     * 1783-0: Nenana
+     */
+    Nenana = "1783-0",
+    /**
+     * 1784-8: Nikolai
+     */
+    Nikolai = "1784-8",
+    /**
+     * 1785-5: Ninilchik
+     */
+    Ninilchik = "1785-5",
+    /**
+     * 1786-3: Nondalton
+     */
+    Nondalton = "1786-3",
+    /**
+     * 1787-1: Northway
+     */
+    Northway = "1787-1",
+    /**
+     * 1788-9: Nulato
+     */
+    Nulato = "1788-9",
+    /**
+     * 1789-7: Pedro Bay
+     */
+    PedroBay = "1789-7",
+    /**
+     * 1790-5: Rampart
+     */
+    Rampart = "1790-5",
+    /**
+     * 1791-3: Ruby
+     */
+    Ruby = "1791-3",
+    /**
+     * 1792-1: Salamatof
+     */
+    Salamatof = "1792-1",
+    /**
+     * 1793-9: Seldovia
+     */
+    Seldovia = "1793-9",
+    /**
+     * 1794-7: Slana
+     */
+    Slana = "1794-7",
+    /**
+     * 1795-4: Shageluk
+     */
+    Shageluk = "1795-4",
+    /**
+     * 1796-2: Stevens
+     */
+    Stevens = "1796-2",
+    /**
+     * 1797-0: Stony River
+     */
+    StonyRiver = "1797-0",
+    /**
+     * 1798-8: Takotna
+     */
+    Takotna = "1798-8",
+    /**
+     * 1799-6: Tanacross
+     */
+    Tanacross = "1799-6",
+    /**
+     * 1800-2: Tanaina
+     */
+    Tanaina = "1800-2",
+    /**
+     * 1801-0: Tanana
+     */
+    Tanana = "1801-0",
+    /**
+     * 1802-8: Tanana Chiefs
+     */
+    TananaChiefs = "1802-8",
+    /**
+     * 1803-6: Tazlina
+     */
+    Tazlina = "1803-6",
+    /**
+     * 1804-4: Telida
+     */
+    Telida = "1804-4",
+    /**
+     * 1805-1: Tetlin
+     */
+    Tetlin = "1805-1",
+    /**
+     * 1806-9: Tok
+     */
+    Tok = "1806-9",
+    /**
+     * 1807-7: Tyonek
+     */
+    Tyonek = "1807-7",
+    /**
+     * 1808-5: Venetie
+     */
+    Venetie = "1808-5",
+    /**
+     * 1809-3: Wiseman
+     */
+    Wiseman = "1809-3",
+    /**
+     * 1811-9: Southeast Alaska
+     */
+    SoutheastAlaska = "1811-9",
+    /**
+     * 1813-5: Tlingit-Haida
+     */
+    TlingitHaida = "1813-5",
+    /**
+     * 1814-3: Angoon
+     */
+    Angoon = "1814-3",
+    /**
+     * 1815-0: Central Council of Tlingit and Haida Tribes
+     */
+    CentralCouncilOfTlingitAndHaidaTribes = "1815-0",
+    /**
+     * 1816-8: Chilkat
+     */
+    Chilkat = "1816-8",
+    /**
+     * 1817-6: Chilkoot
+     */
+    Chilkoot = "1817-6",
+    /**
+     * 1818-4: Craig
+     */
+    Craig = "1818-4",
+    /**
+     * 1819-2: Douglas
+     */
+    Douglas = "1819-2",
+    /**
+     * 1820-0: Haida
+     */
+    Haida = "1820-0",
+    /**
+     * 1821-8: Hoonah
+     */
+    Hoonah = "1821-8",
+    /**
+     * 1822-6: Hydaburg
+     */
+    Hydaburg = "1822-6",
+    /**
+     * 1823-4: Kake
+     */
+    Kake = "1823-4",
+    /**
+     * 1824-2: Kasaan
+     */
+    Kasaan = "1824-2",
+    /**
+     * 1825-9: Kenaitze
+     */
+    Kenaitze = "1825-9",
+    /**
+     * 1826-7: Ketchikan
+     */
+    Ketchikan = "1826-7",
+    /**
+     * 1827-5: Klawock
+     */
+    Klawock = "1827-5",
+    /**
+     * 1828-3: Pelican
+     */
+    Pelican = "1828-3",
+    /**
+     * 1829-1: Petersburg
+     */
+    Petersburg = "1829-1",
+    /**
+     * 1830-9: Saxman
+     */
+    Saxman = "1830-9",
+    /**
+     * 1831-7: Sitka
+     */
+    Sitka = "1831-7",
+    /**
+     * 1832-5: Tenakee Springs
+     */
+    TenakeeSprings = "1832-5",
+    /**
+     * 1833-3: Tlingit
+     */
+    Tlingit = "1833-3",
+    /**
+     * 1834-1: Wrangell
+     */
+    Wrangell = "1834-1",
+    /**
+     * 1835-8: Yakutat
+     */
+    Yakutat = "1835-8",
+    /**
+     * 1837-4: Tsimshian
+     */
+    Tsimshian = "1837-4",
+    /**
+     * 1838-2: Metlakatla
+     */
+    Metlakatla = "1838-2",
+    /**
+     * 1840-8: Eskimo
+     */
+    Eskimo = "1840-8",
+    /**
+     * 1842-4: Greenland Eskimo
+     */
+    GreenlandEskimo = "1842-4",
+    /**
+     * 1844-0: Inupiat Eskimo
+     */
+    InupiatEskimo = "1844-0",
+    /**
+     * 1845-7: Ambler
+     */
+    Ambler = "1845-7",
+    /**
+     * 1846-5: Anaktuvuk
+     */
+    Anaktuvuk = "1846-5",
+    /**
+     * 1847-3: Anaktuvuk Pass
+     */
+    AnaktuvukPass = "1847-3",
+    /**
+     * 1848-1: Arctic Slope Inupiat
+     */
+    ArcticSlopeInupiat = "1848-1",
+    /**
+     * 1849-9: Arctic Slope Corporation
+     */
+    ArcticSlopeCorporation = "1849-9",
+    /**
+     * 1850-7: Atqasuk
+     */
+    Atqasuk = "1850-7",
+    /**
+     * 1851-5: Barrow
+     */
+    Barrow = "1851-5",
+    /**
+     * 1852-3: Bering Straits Inupiat
+     */
+    BeringStraitsInupiat = "1852-3",
+    /**
+     * 1853-1: Brevig Mission
+     */
+    BrevigMission = "1853-1",
+    /**
+     * 1854-9: Buckland
+     */
+    Buckland = "1854-9",
+    /**
+     * 1855-6: Chinik
+     */
+    Chinik = "1855-6",
+    /**
+     * 1856-4: Council
+     */
+    Council = "1856-4",
+    /**
+     * 1857-2: Deering
+     */
+    Deering = "1857-2",
+    /**
+     * 1858-0: Elim
+     */
+    Elim = "1858-0",
+    /**
+     * 1859-8: Golovin
+     */
+    Golovin = "1859-8",
+    /**
+     * 1860-6: Inalik Diomede
+     */
+    InalikDiomede = "1860-6",
+    /**
+     * 1861-4: Inupiaq
+     */
+    Inupiaq = "1861-4",
+    /**
+     * 1862-2: Kaktovik
+     */
+    Kaktovik = "1862-2",
+    /**
+     * 1863-0: Kawerak
+     */
+    Kawerak = "1863-0",
+    /**
+     * 1864-8: Kiana
+     */
+    Kiana = "1864-8",
+    /**
+     * 1865-5: Kivalina
+     */
+    Kivalina = "1865-5",
+    /**
+     * 1866-3: Kobuk
+     */
+    Kobuk = "1866-3",
+    /**
+     * 1867-1: Kotzebue
+     */
+    Kotzebue = "1867-1",
+    /**
+     * 1868-9: Koyuk
+     */
+    Koyuk = "1868-9",
+    /**
+     * 1869-7: Kwiguk
+     */
+    Kwiguk = "1869-7",
+    /**
+     * 1870-5: Mauneluk Inupiat
+     */
+    MaunelukInupiat = "1870-5",
+    /**
+     * 1871-3: Nana Inupiat
+     */
+    NanaInupiat = "1871-3",
+    /**
+     * 1872-1: Noatak
+     */
+    Noatak = "1872-1",
+    /**
+     * 1873-9: Nome
+     */
+    Nome = "1873-9",
+    /**
+     * 1874-7: Noorvik
+     */
+    Noorvik = "1874-7",
+    /**
+     * 1875-4: Nuiqsut
+     */
+    Nuiqsut = "1875-4",
+    /**
+     * 1876-2: Point Hope
+     */
+    PointHope = "1876-2",
+    /**
+     * 1877-0: Point Lay
+     */
+    PointLay = "1877-0",
+    /**
+     * 1878-8: Selawik
+     */
+    Selawik = "1878-8",
+    /**
+     * 1879-6: Shaktoolik
+     */
+    Shaktoolik = "1879-6",
+    /**
+     * 1880-4: Shishmaref
+     */
+    Shishmaref = "1880-4",
+    /**
+     * 1881-2: Shungnak
+     */
+    Shungnak = "1881-2",
+    /**
+     * 1882-0: Solomon
+     */
+    Solomon = "1882-0",
+    /**
+     * 1883-8: Teller
+     */
+    Teller = "1883-8",
+    /**
+     * 1884-6: Unalakleet
+     */
+    Unalakleet = "1884-6",
+    /**
+     * 1885-3: Wainwright
+     */
+    Wainwright = "1885-3",
+    /**
+     * 1886-1: Wales
+     */
+    Wales = "1886-1",
+    /**
+     * 1887-9: White Mountain
+     */
+    WhiteMountain = "1887-9",
+    /**
+     * 1888-7: White Mountain Inupiat
+     */
+    WhiteMountainInupiat = "1888-7",
+    /**
+     * 1889-5: Mary's Igloo
+     */
+    MaryQuoteSIgloo = "1889-5",
+    /**
+     * 1891-1: Siberian Eskimo
+     */
+    SiberianEskimo = "1891-1",
+    /**
+     * 1892-9: Gambell
+     */
+    Gambell = "1892-9",
+    /**
+     * 1893-7: Savoonga
+     */
+    Savoonga = "1893-7",
+    /**
+     * 1894-5: Siberian Yupik
+     */
+    SiberianYupik = "1894-5",
+    /**
+     * 1896-0: Yupik Eskimo
+     */
+    YupikEskimo = "1896-0",
+    /**
+     * 1897-8: Akiachak
+     */
+    Akiachak = "1897-8",
+    /**
+     * 1898-6: Akiak
+     */
+    Akiak = "1898-6",
+    /**
+     * 1899-4: Alakanuk
+     */
+    Alakanuk = "1899-4",
+    /**
+     * 1900-0: Aleknagik
+     */
+    Aleknagik = "1900-0",
+    /**
+     * 1901-8: Andreafsky
+     */
+    Andreafsky = "1901-8",
+    /**
+     * 1902-6: Aniak
+     */
+    Aniak = "1902-6",
+    /**
+     * 1903-4: Atmautluak
+     */
+    Atmautluak = "1903-4",
+    /**
+     * 1904-2: Bethel
+     */
+    Bethel = "1904-2",
+    /**
+     * 1905-9: Bill Moore's Slough
+     */
+    BillMooreQuoteSSlough = "1905-9",
+    /**
+     * 1906-7: Bristol Bay Yupik
+     */
+    BristolBayYupik = "1906-7",
+    /**
+     * 1907-5: Calista Yupik
+     */
+    CalistaYupik = "1907-5",
+    /**
+     * 1908-3: Chefornak
+     */
+    Chefornak = "1908-3",
+    /**
+     * 1909-1: Chevak
+     */
+    Chevak = "1909-1",
+    /**
+     * 1910-9: Chuathbaluk
+     */
+    Chuathbaluk = "1910-9",
+    /**
+     * 1911-7: Clark's Point
+     */
+    ClarkQuoteSPoint = "1911-7",
+    /**
+     * 1912-5: Crooked Creek
+     */
+    CrookedCreek = "1912-5",
+    /**
+     * 1913-3: Dillingham
+     */
+    Dillingham = "1913-3",
+    /**
+     * 1914-1: Eek
+     */
+    Eek = "1914-1",
+    /**
+     * 1915-8: Ekuk
+     */
+    Ekuk = "1915-8",
+    /**
+     * 1916-6: Ekwok
+     */
+    Ekwok = "1916-6",
+    /**
+     * 1917-4: Emmonak
+     */
+    Emmonak = "1917-4",
+    /**
+     * 1918-2: Goodnews Bay
+     */
+    GoodnewsBay = "1918-2",
+    /**
+     * 1919-0: Hooper Bay
+     */
+    HooperBay = "1919-0",
+    /**
+     * 1920-8: Iqurmuit (Russian Mission)
+     */
+    IqurmuitRussianMission = "1920-8",
+    /**
+     * 1921-6: Kalskag
+     */
+    Kalskag = "1921-6",
+    /**
+     * 1922-4: Kasigluk
+     */
+    Kasigluk = "1922-4",
+    /**
+     * 1923-2: Kipnuk
+     */
+    Kipnuk = "1923-2",
+    /**
+     * 1924-0: Koliganek
+     */
+    Koliganek = "1924-0",
+    /**
+     * 1925-7: Kongiganak
+     */
+    Kongiganak = "1925-7",
+    /**
+     * 1926-5: Kotlik
+     */
+    Kotlik = "1926-5",
+    /**
+     * 1927-3: Kwethluk
+     */
+    Kwethluk = "1927-3",
+    /**
+     * 1928-1: Kwigillingok
+     */
+    Kwigillingok = "1928-1",
+    /**
+     * 1929-9: Levelock
+     */
+    Levelock = "1929-9",
+    /**
+     * 1930-7: Lower Kalskag
+     */
+    LowerKalskag = "1930-7",
+    /**
+     * 1931-5: Manokotak
+     */
+    Manokotak = "1931-5",
+    /**
+     * 1932-3: Marshall
+     */
+    Marshall = "1932-3",
+    /**
+     * 1933-1: Mekoryuk
+     */
+    Mekoryuk = "1933-1",
+    /**
+     * 1934-9: Mountain Village
+     */
+    MountainVillage = "1934-9",
+    /**
+     * 1935-6: Naknek
+     */
+    Naknek = "1935-6",
+    /**
+     * 1936-4: Napaumute
+     */
+    Napaumute = "1936-4",
+    /**
+     * 1937-2: Napakiak
+     */
+    Napakiak = "1937-2",
+    /**
+     * 1938-0: Napaskiak
+     */
+    Napaskiak = "1938-0",
+    /**
+     * 1939-8: Newhalen
+     */
+    Newhalen = "1939-8",
+    /**
+     * 1940-6: New Stuyahok
+     */
+    NewStuyahok = "1940-6",
+    /**
+     * 1941-4: Newtok
+     */
+    Newtok = "1941-4",
+    /**
+     * 1942-2: Nightmute
+     */
+    Nightmute = "1942-2",
+    /**
+     * 1943-0: Nunapitchukv
+     */
+    Nunapitchukv = "1943-0",
+    /**
+     * 1944-8: Oscarville
+     */
+    Oscarville = "1944-8",
+    /**
+     * 1945-5: Pilot Station
+     */
+    PilotStation = "1945-5",
+    /**
+     * 1946-3: Pitkas Point
+     */
+    PitkasPoint = "1946-3",
+    /**
+     * 1947-1: Platinum
+     */
+    Platinum = "1947-1",
+    /**
+     * 1948-9: Portage Creek
+     */
+    PortageCreek = "1948-9",
+    /**
+     * 1949-7: Quinhagak
+     */
+    Quinhagak = "1949-7",
+    /**
+     * 1950-5: Red Devil
+     */
+    RedDevil = "1950-5",
+    /**
+     * 1951-3: St. Michael
+     */
+    StMichael = "1951-3",
+    /**
+     * 1952-1: Scammon Bay
+     */
+    ScammonBay = "1952-1",
+    /**
+     * 1953-9: Sheldon's Point
+     */
+    SheldonQuoteSPoint = "1953-9",
+    /**
+     * 1954-7: Sleetmute
+     */
+    Sleetmute = "1954-7",
+    /**
+     * 1955-4: Stebbins
+     */
+    Stebbins = "1955-4",
+    /**
+     * 1956-2: Togiak
+     */
+    Togiak = "1956-2",
+    /**
+     * 1957-0: Toksook
+     */
+    Toksook = "1957-0",
+    /**
+     * 1958-8: Tulukskak
+     */
+    Tulukskak = "1958-8",
+    /**
+     * 1959-6: Tuntutuliak
+     */
+    Tuntutuliak = "1959-6",
+    /**
+     * 1960-4: Tununak
+     */
+    Tununak = "1960-4",
+    /**
+     * 1961-2: Twin Hills
+     */
+    TwinHills = "1961-2",
+    /**
+     * 1962-0: Georgetown
+     */
+    Georgetown_19620 = "1962-0",
+    /**
+     * 1963-8: St. Mary's
+     */
+    StMaryQuoteS = "1963-8",
+    /**
+     * 1964-6: Umkumiate
+     */
+    Umkumiate = "1964-6",
+    /**
+     * 1966-1: Aleut
+     */
+    Aleut = "1966-1",
+    /**
+     * 1968-7: Alutiiq Aleut
+     */
+    AlutiiqAleut = "1968-7",
+    /**
+     * 1969-5: Tatitlek
+     */
+    Tatitlek = "1969-5",
+    /**
+     * 1970-3: Ugashik
+     */
+    Ugashik = "1970-3",
+    /**
+     * 1972-9: Bristol Bay Aleut
+     */
+    BristolBayAleut = "1972-9",
+    /**
+     * 1973-7: Chignik
+     */
+    Chignik = "1973-7",
+    /**
+     * 1974-5: Chignik Lake
+     */
+    ChignikLake = "1974-5",
+    /**
+     * 1975-2: Egegik
+     */
+    Egegik = "1975-2",
+    /**
+     * 1976-0: Igiugig
+     */
+    Igiugig = "1976-0",
+    /**
+     * 1977-8: Ivanof Bay
+     */
+    IvanofBay = "1977-8",
+    /**
+     * 1978-6: King Salmon
+     */
+    KingSalmon = "1978-6",
+    /**
+     * 1979-4: Kokhanok
+     */
+    Kokhanok = "1979-4",
+    /**
+     * 1980-2: Perryville
+     */
+    Perryville = "1980-2",
+    /**
+     * 1981-0: Pilot Point
+     */
+    PilotPoint = "1981-0",
+    /**
+     * 1982-8: Port Heiden
+     */
+    PortHeiden = "1982-8",
+    /**
+     * 1984-4: Chugach Aleut
+     */
+    ChugachAleut = "1984-4",
+    /**
+     * 1985-1: Chenega
+     */
+    Chenega = "1985-1",
+    /**
+     * 1986-9: Chugach Corporation
+     */
+    ChugachCorporation = "1986-9",
+    /**
+     * 1987-7: English Bay
+     */
+    EnglishBay = "1987-7",
+    /**
+     * 1988-5: Port Graham
+     */
+    PortGraham = "1988-5",
+    /**
+     * 1990-1: Eyak
+     */
+    Eyak = "1990-1",
+    /**
+     * 1992-7: Koniag Aleut
+     */
+    KoniagAleut = "1992-7",
+    /**
+     * 1993-5: Akhiok
+     */
+    Akhiok = "1993-5",
+    /**
+     * 1994-3: Agdaagux
+     */
+    Agdaagux = "1994-3",
+    /**
+     * 1995-0: Karluk
+     */
+    Karluk = "1995-0",
+    /**
+     * 1996-8: Kodiak
+     */
+    Kodiak = "1996-8",
+    /**
+     * 1997-6: Larsen Bay
+     */
+    LarsenBay = "1997-6",
+    /**
+     * 1998-4: Old Harbor
+     */
+    OldHarbor = "1998-4",
+    /**
+     * 1999-2: Ouzinkie
+     */
+    Ouzinkie = "1999-2",
+    /**
+     * 2000-8: Port Lions
+     */
+    PortLions = "2000-8",
+    /**
+     * 2002-4: Sugpiaq
+     */
+    Sugpiaq = "2002-4",
+    /**
+     * 2004-0: Suqpigaq
+     */
+    Suqpigaq = "2004-0",
+    /**
+     * 2006-5: Unangan Aleut
+     */
+    UnanganAleut = "2006-5",
+    /**
+     * 2007-3: Akutan
+     */
+    Akutan = "2007-3",
+    /**
+     * 2008-1: Aleut Corporation
+     */
+    AleutCorporation = "2008-1",
+    /**
+     * 2009-9: Aleutian
+     */
+    Aleutian = "2009-9",
+    /**
+     * 2010-7: Aleutian Islander
+     */
+    AleutianIslander = "2010-7",
+    /**
+     * 2011-5: Atka
+     */
+    Atka = "2011-5",
+    /**
+     * 2012-3: Belkofski
+     */
+    Belkofski = "2012-3",
+    /**
+     * 2013-1: Chignik Lagoon
+     */
+    ChignikLagoon = "2013-1",
+    /**
+     * 2014-9: King Cove
+     */
+    KingCove = "2014-9",
+    /**
+     * 2015-6: False Pass
+     */
+    FalsePass = "2015-6",
+    /**
+     * 2016-4: Nelson Lagoon
+     */
+    NelsonLagoon = "2016-4",
+    /**
+     * 2017-2: Nikolski
+     */
+    Nikolski = "2017-2",
+    /**
+     * 2018-0: Pauloff Harbor
+     */
+    PauloffHarbor = "2018-0",
+    /**
+     * 2019-8: Qagan Toyagungin
+     */
+    QaganToyagungin = "2019-8",
+    /**
+     * 2020-6: Qawalangin
+     */
+    Qawalangin = "2020-6",
+    /**
+     * 2021-4: St. George
+     */
+    StGeorge = "2021-4",
+    /**
+     * 2022-2: St. Paul
+     */
+    StPaul = "2022-2",
+    /**
+     * 2023-0: Sand Point
+     */
+    SandPoint = "2023-0",
+    /**
+     * 2024-8: South Naknek
+     */
+    SouthNaknek = "2024-8",
+    /**
+     * 2025-5: Unalaska
+     */
+    Unalaska = "2025-5",
+    /**
+     * 2026-3: Unga
+     */
+    Unga = "2026-3",
+    /**
+     * 2028-9: Asian
+     */
+    Asian = "2028-9",
+    /**
+     * 2029-7: Asian Indian
+     */
+    AsianIndian = "2029-7",
+    /**
+     * 2030-5: Bangladeshi
+     */
+    Bangladeshi = "2030-5",
+    /**
+     * 2031-3: Bhutanese
+     */
+    Bhutanese = "2031-3",
+    /**
+     * 2032-1: Burmese
+     */
+    Burmese = "2032-1",
+    /**
+     * 2033-9: Cambodian
+     */
+    Cambodian = "2033-9",
+    /**
+     * 2034-7: Chinese
+     */
+    Chinese = "2034-7",
+    /**
+     * 2035-4: Taiwanese
+     */
+    Taiwanese = "2035-4",
+    /**
+     * 2036-2: Filipino
+     */
+    Filipino = "2036-2",
+    /**
+     * 2037-0: Hmong
+     */
+    Hmong = "2037-0",
+    /**
+     * 2038-8: Indonesian
+     */
+    Indonesian = "2038-8",
+    /**
+     * 2039-6: Japanese
+     */
+    Japanese = "2039-6",
+    /**
+     * 2040-4: Korean
+     */
+    Korean = "2040-4",
+    /**
+     * 2041-2: Laotian
+     */
+    Laotian = "2041-2",
+    /**
+     * 2042-0: Malaysian
+     */
+    Malaysian = "2042-0",
+    /**
+     * 2043-8: Okinawan
+     */
+    Okinawan = "2043-8",
+    /**
+     * 2044-6: Pakistani
+     */
+    Pakistani = "2044-6",
+    /**
+     * 2045-3: Sri Lankan
+     */
+    SriLankan = "2045-3",
+    /**
+     * 2046-1: Thai
+     */
+    Thai = "2046-1",
+    /**
+     * 2047-9: Vietnamese
+     */
+    Vietnamese = "2047-9",
+    /**
+     * 2048-7: Iwo Jiman
+     */
+    IwoJiman = "2048-7",
+    /**
+     * 2049-5: Maldivian
+     */
+    Maldivian = "2049-5",
+    /**
+     * 2050-3: Nepalese
+     */
+    Nepalese = "2050-3",
+    /**
+     * 2051-1: Singaporean
+     */
+    Singaporean = "2051-1",
+    /**
+     * 2052-9: Madagascar
+     */
+    Madagascar = "2052-9",
+    /**
+     * 2054-5: Black or African American
+     */
+    BlackOrAfricanAmerican = "2054-5",
+    /**
+     * 2056-0: Black
+     */
+    Black = "2056-0",
+    /**
+     * 2058-6: African American
+     */
+    AfricanAmerican = "2058-6",
+    /**
+     * 2060-2: African
+     */
+    African = "2060-2",
+    /**
+     * 2061-0: Botswanan
+     */
+    Botswanan = "2061-0",
+    /**
+     * 2062-8: Ethiopian
+     */
+    Ethiopian = "2062-8",
+    /**
+     * 2063-6: Liberian
+     */
+    Liberian = "2063-6",
+    /**
+     * 2064-4: Namibian
+     */
+    Namibian = "2064-4",
+    /**
+     * 2065-1: Nigerian
+     */
+    Nigerian = "2065-1",
+    /**
+     * 2066-9: Zairean
+     */
+    Zairean = "2066-9",
+    /**
+     * 2067-7: Bahamian
+     */
+    Bahamian = "2067-7",
+    /**
+     * 2068-5: Barbadian
+     */
+    Barbadian = "2068-5",
+    /**
+     * 2069-3: Dominican
+     */
+    Dominican = "2069-3",
+    /**
+     * 2070-1: Dominica Islander
+     */
+    DominicaIslander = "2070-1",
+    /**
+     * 2071-9: Haitian
+     */
+    Haitian = "2071-9",
+    /**
+     * 2072-7: Jamaican
+     */
+    Jamaican = "2072-7",
+    /**
+     * 2073-5: Tobagoan
+     */
+    Tobagoan = "2073-5",
+    /**
+     * 2074-3: Trinidadian
+     */
+    Trinidadian = "2074-3",
+    /**
+     * 2075-0: West Indian
+     */
+    WestIndian = "2075-0",
+    /**
+     * 2076-8: Native Hawaiian or Other Pacific Islander
+     */
+    NativeHawaiianOrOtherPacificIslander = "2076-8",
+    /**
+     * 2078-4: Polynesian
+     */
+    Polynesian = "2078-4",
+    /**
+     * 2079-2: Native Hawaiian
+     */
+    NativeHawaiian = "2079-2",
+    /**
+     * 2080-0: Samoan
+     */
+    Samoan = "2080-0",
+    /**
+     * 2081-8: Tahitian
+     */
+    Tahitian = "2081-8",
+    /**
+     * 2082-6: Tongan
+     */
+    Tongan = "2082-6",
+    /**
+     * 2083-4: Tokelauan
+     */
+    Tokelauan = "2083-4",
+    /**
+     * 2085-9: Micronesian
+     */
+    Micronesian = "2085-9",
+    /**
+     * 2086-7: Guamanian or Chamorro
+     */
+    GuamanianOrChamorro = "2086-7",
+    /**
+     * 2087-5: Guamanian
+     */
+    Guamanian = "2087-5",
+    /**
+     * 2088-3: Chamorro
+     */
+    Chamorro = "2088-3",
+    /**
+     * 2089-1: Mariana Islander
+     */
+    MarianaIslander = "2089-1",
+    /**
+     * 2090-9: Marshallese
+     */
+    Marshallese = "2090-9",
+    /**
+     * 2091-7: Palauan
+     */
+    Palauan = "2091-7",
+    /**
+     * 2092-5: Carolinian
+     */
+    Carolinian = "2092-5",
+    /**
+     * 2093-3: Kosraean
+     */
+    Kosraean = "2093-3",
+    /**
+     * 2094-1: Pohnpeian
+     */
+    Pohnpeian = "2094-1",
+    /**
+     * 2095-8: Saipanese
+     */
+    Saipanese = "2095-8",
+    /**
+     * 2096-6: Kiribati
+     */
+    Kiribati = "2096-6",
+    /**
+     * 2097-4: Chuukese
+     */
+    Chuukese = "2097-4",
+    /**
+     * 2098-2: Yapese
+     */
+    Yapese = "2098-2",
+    /**
+     * 2100-6: Melanesian
+     */
+    Melanesian = "2100-6",
+    /**
+     * 2101-4: Fijian
+     */
+    Fijian = "2101-4",
+    /**
+     * 2102-2: Papua New Guinean
+     */
+    PapuaNewGuinean = "2102-2",
+    /**
+     * 2103-0: Solomon Islander
+     */
+    SolomonIslander = "2103-0",
+    /**
+     * 2104-8: New Hebrides
+     */
+    NewHebrides = "2104-8",
+    /**
+     * 2106-3: White
+     */
+    White = "2106-3",
+    /**
+     * 2108-9: European
+     */
+    European = "2108-9",
+    /**
+     * 2109-7: Armenian
+     */
+    Armenian = "2109-7",
+    /**
+     * 2110-5: English
+     */
+    English = "2110-5",
+    /**
+     * 2111-3: French
+     */
+    French = "2111-3",
+    /**
+     * 2112-1: German
+     */
+    German = "2112-1",
+    /**
+     * 2113-9: Irish
+     */
+    Irish = "2113-9",
+    /**
+     * 2114-7: Italian
+     */
+    Italian = "2114-7",
+    /**
+     * 2115-4: Polish
+     */
+    Polish = "2115-4",
+    /**
+     * 2116-2: Scottish
+     */
+    Scottish = "2116-2",
+    /**
+     * 2118-8: Middle Eastern or North African
+     */
+    MiddleEasternOrNorthAfrican = "2118-8",
+    /**
+     * 2119-6: Assyrian
+     */
+    Assyrian = "2119-6",
+    /**
+     * 2120-4: Egyptian
+     */
+    Egyptian = "2120-4",
+    /**
+     * 2121-2: Iranian
+     */
+    Iranian = "2121-2",
+    /**
+     * 2122-0: Iraqi
+     */
+    Iraqi = "2122-0",
+    /**
+     * 2123-8: Lebanese
+     */
+    Lebanese = "2123-8",
+    /**
+     * 2124-6: Palestinian
+     */
+    Palestinian = "2124-6",
+    /**
+     * 2125-3: Syrian
+     */
+    Syrian = "2125-3",
+    /**
+     * 2126-1: Afghanistani
+     */
+    Afghanistani = "2126-1",
+    /**
+     * 2127-9: Israeili
+     */
+    Israeili = "2127-9",
+    /**
+     * 2129-5: Arab
+     */
+    Arab = "2129-5",
+    /**
+     * 2131-1: Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated.
+     */
+    OtherRace = "2131-1",
+    /**
+     * Code: 248152002
+     */
+    VAL248152002 = "248152002",
+    /**
+     * Code: 248153007
+     */
+    VAL248153007 = "248153007",
+    /**
+     * 2500-7: Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated.
+     */
+    OtherPacificIslander = "2500-7",
+    /**
+     * Code: 77386006
+     */
+    VAL77386006 = "77386006"
+}
 //# sourceMappingURL=ReferencerangeAppliestoValueSet.d.ts.map

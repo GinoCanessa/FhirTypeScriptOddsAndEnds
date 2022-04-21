@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The lifecycle status of an artifact.
  */
 export declare const PublicationStatusValueSet: {
     /**
-     * This resource is ready for normal use.
+     * active: This resource is ready for normal use.
      */
-    publication_status_Active: Coding;
+    readonly Active: Coding;
     /**
-     * This resource is still under development and is not yet considered to be ready for normal use.
+     * draft: This resource is still under development and is not yet considered to be ready for normal use.
      */
-    publication_status_Draft: Coding;
+    readonly Draft: Coding;
     /**
-     * This resource has been withdrawn or superseded and should no longer be used.
+     * retired: This resource has been withdrawn or superseded and should no longer be used.
      */
-    publication_status_Retired: Coding;
+    readonly Retired: Coding;
     /**
-     * The authoring system does not know which of the status values currently applies for this resource.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+     * unknown: The authoring system does not know which of the status values currently applies for this resource.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
      */
-    publication_status_Unknown: Coding;
+    readonly Unknown: Coding;
 };
+/**
+ * The lifecycle status of an artifact.
+ */
+export declare type PublicationStatusValueSetType = typeof PublicationStatusValueSet;
+/**
+ * The lifecycle status of an artifact.
+ */
+export declare enum PublicationStatusValueSetEnum {
+    /**
+     * active: This resource is ready for normal use.
+     */
+    Active = "active",
+    /**
+     * draft: This resource is still under development and is not yet considered to be ready for normal use.
+     */
+    Draft = "draft",
+    /**
+     * retired: This resource has been withdrawn or superseded and should no longer be used.
+     */
+    Retired = "retired",
+    /**
+     * unknown: The authoring system does not know which of the status values currently applies for this resource.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
+     */
+    Unknown = "unknown"
+}
 //# sourceMappingURL=PublicationStatusValueSet.d.ts.map

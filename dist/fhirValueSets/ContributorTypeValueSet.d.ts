@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of contributor.
  */
 export declare const ContributorTypeValueSet: {
     /**
-     * An author of the content of the module.
+     * author: An author of the content of the module.
      */
-    contributor_type_Author: Coding;
+    readonly Author: Coding;
     /**
-     * An editor of the content of the module.
+     * editor: An editor of the content of the module.
      */
-    contributor_type_Editor: Coding;
+    readonly Editor: Coding;
     /**
-     * An endorser of the content of the module.
+     * endorser: An endorser of the content of the module.
      */
-    contributor_type_Endorser: Coding;
+    readonly Endorser: Coding;
     /**
-     * A reviewer of the content of the module.
+     * reviewer: A reviewer of the content of the module.
      */
-    contributor_type_Reviewer: Coding;
+    readonly Reviewer: Coding;
 };
+/**
+ * The type of contributor.
+ */
+export declare type ContributorTypeValueSetType = typeof ContributorTypeValueSet;
+/**
+ * The type of contributor.
+ */
+export declare enum ContributorTypeValueSetEnum {
+    /**
+     * author: An author of the content of the module.
+     */
+    Author = "author",
+    /**
+     * editor: An editor of the content of the module.
+     */
+    Editor = "editor",
+    /**
+     * endorser: An endorser of the content of the module.
+     */
+    Endorser = "endorser",
+    /**
+     * reviewer: A reviewer of the content of the module.
+     */
+    Reviewer = "reviewer"
+}
 //# sourceMappingURL=ContributorTypeValueSet.d.ts.map

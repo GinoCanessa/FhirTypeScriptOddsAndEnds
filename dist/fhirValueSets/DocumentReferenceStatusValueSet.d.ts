@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The status of the document reference.
  */
 export declare const DocumentReferenceStatusValueSet: {
     /**
-     * This is the current reference for this document.
+     * current: This is the current reference for this document.
      */
-    document_reference_status_Current: Coding;
+    readonly Current: Coding;
     /**
-     * This reference was created in error.
+     * entered-in-error: This reference was created in error.
      */
-    document_reference_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * This reference has been superseded by another reference.
+     * superseded: This reference has been superseded by another reference.
      */
-    document_reference_status_Superseded: Coding;
+    readonly Superseded: Coding;
 };
+/**
+ * The status of the document reference.
+ */
+export declare type DocumentReferenceStatusValueSetType = typeof DocumentReferenceStatusValueSet;
+/**
+ * The status of the document reference.
+ */
+export declare enum DocumentReferenceStatusValueSetEnum {
+    /**
+     * current: This is the current reference for this document.
+     */
+    Current = "current",
+    /**
+     * entered-in-error: This reference was created in error.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * superseded: This reference has been superseded by another reference.
+     */
+    Superseded = "superseded"
+}
 //# sourceMappingURL=DocumentReferenceStatusValueSet.d.ts.map

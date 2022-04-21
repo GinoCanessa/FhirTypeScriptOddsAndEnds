@@ -1,8 +1,12 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
 /**
  * Information about the use of the medicinal product in relation to other therapies described as part of the indication.
  */
 export declare type IMedicinalProductContraindicationOtherTherapy = fhir.IBackboneElement & {
+    /**
+     * The type of relationship between the medicinal product indication or contraindication and another therapy.
+     */
+    therapyRelationshipType: fhir.ICodeableConcept | null;
     /**
      * Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication.
      */
@@ -11,10 +15,6 @@ export declare type IMedicinalProductContraindicationOtherTherapy = fhir.IBackbo
      * Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication.
      */
     medicationReference?: fhir.IReference | undefined;
-    /**
-     * The type of relationship between the medicinal product indication or contraindication and another therapy.
-     */
-    therapyRelationshipType: fhir.ICodeableConcept | null;
 };
 /**
  * The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.
@@ -25,9 +25,9 @@ export declare type IMedicinalProductContraindication = fhir.IDomainResource & {
      */
     resourceType: "MedicinalProductContraindication";
     /**
-     * A comorbidity (concurrent condition) or coinfection.
+     * The medication for which this is an indication.
      */
-    comorbidity?: fhir.ICodeableConcept[] | undefined;
+    subject?: fhir.IReference[] | undefined;
     /**
      * The disease, symptom or procedure for the contraindication.
      */
@@ -37,6 +37,14 @@ export declare type IMedicinalProductContraindication = fhir.IDomainResource & {
      */
     diseaseStatus?: fhir.ICodeableConcept | undefined;
     /**
+     * A comorbidity (concurrent condition) or coinfection.
+     */
+    comorbidity?: fhir.ICodeableConcept[] | undefined;
+    /**
+     * Information about the use of the medicinal product in relation to other therapies as part of the indication.
+     */
+    therapeuticIndication?: fhir.IReference[] | undefined;
+    /**
      * Information about the use of the medicinal product in relation to other therapies described as part of the indication.
      */
     otherTherapy?: fhir.IMedicinalProductContraindicationOtherTherapy[] | undefined;
@@ -44,19 +52,15 @@ export declare type IMedicinalProductContraindication = fhir.IDomainResource & {
      * The population group to which this applies.
      */
     population?: fhir.IPopulation[] | undefined;
-    /**
-     * The medication for which this is an indication.
-     */
-    subject?: fhir.IReference[] | undefined;
-    /**
-     * Information about the use of the medicinal product in relation to other therapies as part of the indication.
-     */
-    therapeuticIndication?: fhir.IReference[] | undefined;
 };
 /**
  * Information about the use of the medicinal product in relation to other therapies described as part of the indication.
  */
-export declare class MedicinalProductContraindicationOtherTherapy extends fhir.BackboneElement implements fhir.IMedicinalProductContraindicationOtherTherapy {
+export declare class MedicinalProductContraindicationOtherTherapy extends fhir.BackboneElement implements IMedicinalProductContraindicationOtherTherapy {
+    /**
+     * The type of relationship between the medicinal product indication or contraindication and another therapy.
+     */
+    therapyRelationshipType: fhir.CodeableConcept | null;
     /**
      * Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication.
      */
@@ -66,34 +70,26 @@ export declare class MedicinalProductContraindicationOtherTherapy extends fhir.B
      */
     medicationReference?: fhir.Reference | undefined;
     /**
-     * The type of relationship between the medicinal product indication or contraindication and another therapy.
-     */
-    therapyRelationshipType: fhir.CodeableConcept | null;
-    /**
      * Default constructor for MedicinalProductContraindicationOtherTherapy - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductContraindicationOtherTherapy>);
+    constructor(source?: Partial<IMedicinalProductContraindicationOtherTherapy>);
     /**
-     * Check if the current MedicinalProductContraindicationOtherTherapy contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductContraindicationOtherTherapy from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductContraindicationOtherTherapy): MedicinalProductContraindicationOtherTherapy;
+    doModelValidation(): [string, string][];
 }
 /**
  * The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.
  */
-export declare class MedicinalProductContraindication extends fhir.DomainResource implements fhir.IMedicinalProductContraindication {
+export declare class MedicinalProductContraindication extends fhir.DomainResource implements IMedicinalProductContraindication {
     /**
      * Resource Type Name
      */
     resourceType: "MedicinalProductContraindication";
     /**
-     * A comorbidity (concurrent condition) or coinfection.
+     * The medication for which this is an indication.
      */
-    comorbidity?: fhir.CodeableConcept[] | undefined;
+    subject?: fhir.Reference[] | undefined;
     /**
      * The disease, symptom or procedure for the contraindication.
      */
@@ -103,6 +99,14 @@ export declare class MedicinalProductContraindication extends fhir.DomainResourc
      */
     diseaseStatus?: fhir.CodeableConcept | undefined;
     /**
+     * A comorbidity (concurrent condition) or coinfection.
+     */
+    comorbidity?: fhir.CodeableConcept[] | undefined;
+    /**
+     * Information about the use of the medicinal product in relation to other therapies as part of the indication.
+     */
+    therapeuticIndication?: fhir.Reference[] | undefined;
+    /**
      * Information about the use of the medicinal product in relation to other therapies described as part of the indication.
      */
     otherTherapy?: fhir.MedicinalProductContraindicationOtherTherapy[] | undefined;
@@ -111,24 +115,12 @@ export declare class MedicinalProductContraindication extends fhir.DomainResourc
      */
     population?: fhir.Population[] | undefined;
     /**
-     * The medication for which this is an indication.
-     */
-    subject?: fhir.Reference[] | undefined;
-    /**
-     * Information about the use of the medicinal product in relation to other therapies as part of the indication.
-     */
-    therapeuticIndication?: fhir.Reference[] | undefined;
-    /**
      * Default constructor for MedicinalProductContraindication - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IMedicinalProductContraindication>);
+    constructor(source?: Partial<IMedicinalProductContraindication>);
     /**
-     * Check if the current MedicinalProductContraindication contains all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    checkRequiredElements(): string[];
-    /**
-     * Factory function to create a MedicinalProductContraindication from an object that MUST contain all required elements.
-     */
-    static fromStrict(source: fhir.IMedicinalProductContraindication): MedicinalProductContraindication;
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=MedicinalProductContraindication.d.ts.map

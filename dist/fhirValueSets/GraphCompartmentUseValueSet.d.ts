@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Defines how a compartment rule is used.
  */
 export declare const GraphCompartmentUseValueSet: {
     /**
-     * This compartment rule is a condition for whether the rule applies.
+     * condition: This compartment rule is a condition for whether the rule applies.
      */
-    graph_compartment_use_Condition: Coding;
+    readonly Condition: Coding;
     /**
-     * This compartment rule is enforced on any relationships that meet the conditions.
+     * requirement: This compartment rule is enforced on any relationships that meet the conditions.
      */
-    graph_compartment_use_Requirement: Coding;
+    readonly Requirement: Coding;
 };
+/**
+ * Defines how a compartment rule is used.
+ */
+export declare type GraphCompartmentUseValueSetType = typeof GraphCompartmentUseValueSet;
+/**
+ * Defines how a compartment rule is used.
+ */
+export declare enum GraphCompartmentUseValueSetEnum {
+    /**
+     * condition: This compartment rule is a condition for whether the rule applies.
+     */
+    Condition = "condition",
+    /**
+     * requirement: This compartment rule is enforced on any relationships that meet the conditions.
+     */
+    Requirement = "requirement"
+}
 //# sourceMappingURL=GraphCompartmentUseValueSet.d.ts.map

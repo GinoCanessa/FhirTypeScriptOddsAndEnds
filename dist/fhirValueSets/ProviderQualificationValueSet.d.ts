@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes sample Provider Qualification codes.
  */
 export declare const ProviderQualificationValueSet: {
     /**
-     * Dentist General Practitioner (DDS, DDM).
+     * 311405: Dentist General Practitioner (DDS, DDM).
      */
-    provider_qualification_Dentist: Coding;
+    readonly Dentist: Coding;
     /**
-     * Optometrist.
+     * 604210: Optometrist.
      */
-    provider_qualification_Optometrist: Coding;
+    readonly Optometrist: Coding;
     /**
-     * Ophthalmologist.
+     * 604215: Ophthalmologist.
      */
-    provider_qualification_Ophthalmologist: Coding;
+    readonly Ophthalmologist: Coding;
 };
+/**
+ * This value set includes sample Provider Qualification codes.
+ */
+export declare type ProviderQualificationValueSetType = typeof ProviderQualificationValueSet;
+/**
+ * This value set includes sample Provider Qualification codes.
+ */
+export declare enum ProviderQualificationValueSetEnum {
+    /**
+     * 311405: Dentist General Practitioner (DDS, DDM).
+     */
+    Dentist = "311405",
+    /**
+     * 604210: Optometrist.
+     */
+    Optometrist = "604210",
+    /**
+     * 604215: Ophthalmologist.
+     */
+    Ophthalmologist = "604215"
+}
 //# sourceMappingURL=ProviderQualificationValueSet.d.ts.map

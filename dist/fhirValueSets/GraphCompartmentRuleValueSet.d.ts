@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * How a compartment must be linked.
  */
 export declare const GraphCompartmentRuleValueSet: {
     /**
-     * The compartment rule is defined in the accompanying FHIRPath expression.
+     * custom: The compartment rule is defined in the accompanying FHIRPath expression.
      */
-    graph_compartment_rule_Custom: Coding;
+    readonly Custom: Coding;
     /**
-     * The compartment must be different.
+     * different: The compartment must be different.
      */
-    graph_compartment_rule_Different: Coding;
+    readonly Different: Coding;
     /**
-     * The compartment must be identical (the same literal reference).
+     * identical: The compartment must be identical (the same literal reference).
      */
-    graph_compartment_rule_Identical: Coding;
+    readonly Identical: Coding;
     /**
-     * The compartment must be the same - the record must be about the same patient, but the reference may be different.
+     * matching: The compartment must be the same - the record must be about the same patient, but the reference may be different.
      */
-    graph_compartment_rule_Matching: Coding;
+    readonly Matching: Coding;
 };
+/**
+ * How a compartment must be linked.
+ */
+export declare type GraphCompartmentRuleValueSetType = typeof GraphCompartmentRuleValueSet;
+/**
+ * How a compartment must be linked.
+ */
+export declare enum GraphCompartmentRuleValueSetEnum {
+    /**
+     * custom: The compartment rule is defined in the accompanying FHIRPath expression.
+     */
+    Custom = "custom",
+    /**
+     * different: The compartment must be different.
+     */
+    Different = "different",
+    /**
+     * identical: The compartment must be identical (the same literal reference).
+     */
+    Identical = "identical",
+    /**
+     * matching: The compartment must be the same - the record must be about the same patient, but the reference may be different.
+     */
+    Matching = "matching"
+}
 //# sourceMappingURL=GraphCompartmentRuleValueSet.d.ts.map

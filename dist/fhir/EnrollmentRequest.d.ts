@@ -1,4 +1,5 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { FmStatusValueSetType, FmStatusValueSetEnum } from '../fhirValueSets/FmStatusValueSet.js';
 /**
  * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
  */
@@ -8,22 +9,25 @@ export declare type IEnrollmentRequest = fhir.IDomainResource & {
      */
     resourceType: "EnrollmentRequest";
     /**
-     * Patient Resource.
+     * The Response business identifier.
      */
-    candidate?: fhir.IReference | undefined;
+    identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * Reference to the program or plan identification, underwriter or payor.
+     * This element is labeled as a modifier because the status contains codes that mark the request as not currently valid.
      */
-    coverage?: fhir.IReference | undefined;
+    status?: FmStatusValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: EnrollmentRequest.status
+     */
+    _status?: fhir.IFhirElement | undefined;
     /**
      * The date when this resource was created.
      */
     created?: string | undefined;
-    _created?: fhir.IFhirElement | undefined;
     /**
-     * The Response business identifier.
+     * Extended properties for primitive element: EnrollmentRequest.created
      */
-    identifier?: fhir.IIdentifier[] | undefined;
+    _created?: fhir.IFhirElement | undefined;
     /**
      * The Insurer who is target  of the request.
      */
@@ -33,36 +37,42 @@ export declare type IEnrollmentRequest = fhir.IDomainResource & {
      */
     provider?: fhir.IReference | undefined;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the request as not currently valid.
+     * Patient Resource.
      */
-    status?: EnrollmentRequestStatusEnum | undefined;
-    _status?: fhir.IFhirElement | undefined;
+    candidate?: fhir.IReference | undefined;
+    /**
+     * Reference to the program or plan identification, underwriter or payor.
+     */
+    coverage?: fhir.IReference | undefined;
 };
 /**
  * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
  */
-export declare class EnrollmentRequest extends fhir.DomainResource implements fhir.IEnrollmentRequest {
+export declare class EnrollmentRequest extends fhir.DomainResource implements IEnrollmentRequest {
     /**
      * Resource Type Name
      */
     resourceType: "EnrollmentRequest";
     /**
-     * Patient Resource.
+     * The Response business identifier.
      */
-    candidate?: fhir.Reference | undefined;
+    identifier?: fhir.Identifier[] | undefined;
     /**
-     * Reference to the program or plan identification, underwriter or payor.
+     * This element is labeled as a modifier because the status contains codes that mark the request as not currently valid.
      */
-    coverage?: fhir.Reference | undefined;
+    status?: FmStatusValueSetEnum | undefined;
+    /**
+     * Extended properties for primitive element: EnrollmentRequest.status
+     */
+    _status?: fhir.FhirElement | undefined;
     /**
      * The date when this resource was created.
      */
     created?: string | undefined;
-    _created?: fhir.FhirElement | undefined;
     /**
-     * The Response business identifier.
+     * Extended properties for primitive element: EnrollmentRequest.created
      */
-    identifier?: fhir.Identifier[] | undefined;
+    _created?: fhir.FhirElement | undefined;
     /**
      * The Insurer who is target  of the request.
      */
@@ -72,30 +82,24 @@ export declare class EnrollmentRequest extends fhir.DomainResource implements fh
      */
     provider?: fhir.Reference | undefined;
     /**
-     * This element is labeled as a modifier because the status contains codes that mark the request as not currently valid.
+     * Patient Resource.
      */
-    status?: EnrollmentRequestStatusEnum | undefined;
-    _status?: fhir.FhirElement | undefined;
+    candidate?: fhir.Reference | undefined;
+    /**
+     * Reference to the program or plan identification, underwriter or payor.
+     */
+    coverage?: fhir.Reference | undefined;
     /**
      * Default constructor for EnrollmentRequest - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IEnrollmentRequest>);
+    constructor(source?: Partial<IEnrollmentRequest>);
     /**
-     * Check if the current EnrollmentRequest contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): FmStatusValueSetType;
     /**
-     * Factory function to create a EnrollmentRequest from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IEnrollmentRequest): EnrollmentRequest;
-}
-/**
- * Code Values for the EnrollmentRequest.status field
- */
-export declare enum EnrollmentRequestStatusEnum {
-    ACTIVE = "active",
-    CANCELLED = "cancelled",
-    DRAFT = "draft",
-    ENTERED_IN_ERROR = "entered-in-error"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=EnrollmentRequest.d.ts.map

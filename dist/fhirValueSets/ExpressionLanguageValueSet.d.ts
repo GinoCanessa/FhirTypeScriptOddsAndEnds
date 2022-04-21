@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The media type of the expression language.
  */
 export declare const ExpressionLanguageValueSet: {
     /**
-     * FHIR's RESTful query syntax - typically independent of base URL.
+     * application/x-fhir-query: FHIR's RESTful query syntax - typically independent of base URL.
      */
-    expression_language_FHIRQuery: Coding;
+    readonly FHIRQuery: Coding;
     /**
-     * Clinical Quality Language.
+     * text/cql: Clinical Quality Language.
      */
-    expression_language_CQL: Coding;
+    readonly CQL: Coding;
     /**
-     * FHIRPath.
+     * text/fhirpath: FHIRPath.
      */
-    expression_language_FHIRPath: Coding;
+    readonly FHIRPath: Coding;
 };
+/**
+ * The media type of the expression language.
+ */
+export declare type ExpressionLanguageValueSetType = typeof ExpressionLanguageValueSet;
+/**
+ * The media type of the expression language.
+ */
+export declare enum ExpressionLanguageValueSetEnum {
+    /**
+     * application/x-fhir-query: FHIR's RESTful query syntax - typically independent of base URL.
+     */
+    FHIRQuery = "application/x-fhir-query",
+    /**
+     * text/cql: Clinical Quality Language.
+     */
+    CQL = "text/cql",
+    /**
+     * text/fhirpath: FHIRPath.
+     */
+    FHIRPath = "text/fhirpath"
+}
 //# sourceMappingURL=ExpressionLanguageValueSet.d.ts.map

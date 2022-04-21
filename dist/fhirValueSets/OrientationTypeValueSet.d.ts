@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Type for orientation.
  */
 export declare const OrientationTypeValueSet: {
     /**
-     * Antisense orientation of reference sequence.
+     * antisense: Antisense orientation of reference sequence.
      */
-    orientation_type_AntisenseOrientationOfReferenceSeq: Coding;
+    readonly AntisenseOrientationOfReferenceSeq: Coding;
     /**
-     * Sense orientation of reference sequence.
+     * sense: Sense orientation of reference sequence.
      */
-    orientation_type_SenseOrientationOfReferenceSeq: Coding;
+    readonly SenseOrientationOfReferenceSeq: Coding;
 };
+/**
+ * Type for orientation.
+ */
+export declare type OrientationTypeValueSetType = typeof OrientationTypeValueSet;
+/**
+ * Type for orientation.
+ */
+export declare enum OrientationTypeValueSetEnum {
+    /**
+     * antisense: Antisense orientation of reference sequence.
+     */
+    AntisenseOrientationOfReferenceSeq = "antisense",
+    /**
+     * sense: Sense orientation of reference sequence.
+     */
+    SenseOrientationOfReferenceSeq = "sense"
+}
 //# sourceMappingURL=OrientationTypeValueSet.d.ts.map

@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes a sample set of Forms codes.
  */
 export declare const FormsValueSet: {
     /**
-     * Example: The #1 form to be used when printing this information.
+     * 1: Example: The #1 form to be used when printing this information.
      */
-    forms_FormNumber1: Coding;
+    readonly FormNumber1: Coding;
     /**
-     * Example: The #2 form to be used when printing this information.
+     * 2: Example: The #2 form to be used when printing this information.
      */
-    forms_FormNumber1_2: Coding;
+    readonly FormNumber1_2: Coding;
 };
+/**
+ * This value set includes a sample set of Forms codes.
+ */
+export declare type FormsValueSetType = typeof FormsValueSet;
+/**
+ * This value set includes a sample set of Forms codes.
+ */
+export declare enum FormsValueSetEnum {
+    /**
+     * 1: Example: The #1 form to be used when printing this information.
+     */
+    FormNumber1 = "1",
+    /**
+     * 2: Example: The #2 form to be used when printing this information.
+     */
+    FormNumber1_2 = "2"
+}
 //# sourceMappingURL=FormsValueSet.d.ts.map

@@ -1,35 +1,72 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The days of the week.
  */
 export declare const DaysOfWeekValueSet: {
     /**
-     * Friday.
+     * fri: Friday.
      */
-    days_of_week_Friday: Coding;
+    readonly Friday: Coding;
     /**
-     * Monday.
+     * mon: Monday.
      */
-    days_of_week_Monday: Coding;
+    readonly Monday: Coding;
     /**
-     * Saturday.
+     * sat: Saturday.
      */
-    days_of_week_Saturday: Coding;
+    readonly Saturday: Coding;
     /**
-     * Sunday.
+     * sun: Sunday.
      */
-    days_of_week_Sunday: Coding;
+    readonly Sunday: Coding;
     /**
-     * Thursday.
+     * thu: Thursday.
      */
-    days_of_week_Thursday: Coding;
+    readonly Thursday: Coding;
     /**
-     * Tuesday.
+     * tue: Tuesday.
      */
-    days_of_week_Tuesday: Coding;
+    readonly Tuesday: Coding;
     /**
-     * Wednesday.
+     * wed: Wednesday.
      */
-    days_of_week_Wednesday: Coding;
+    readonly Wednesday: Coding;
 };
+/**
+ * The days of the week.
+ */
+export declare type DaysOfWeekValueSetType = typeof DaysOfWeekValueSet;
+/**
+ * The days of the week.
+ */
+export declare enum DaysOfWeekValueSetEnum {
+    /**
+     * fri: Friday.
+     */
+    Friday = "fri",
+    /**
+     * mon: Monday.
+     */
+    Monday = "mon",
+    /**
+     * sat: Saturday.
+     */
+    Saturday = "sat",
+    /**
+     * sun: Sunday.
+     */
+    Sunday = "sun",
+    /**
+     * thu: Thursday.
+     */
+    Thursday = "thu",
+    /**
+     * tue: Tuesday.
+     */
+    Tuesday = "tue",
+    /**
+     * wed: Wednesday.
+     */
+    Wednesday = "wed"
+}
 //# sourceMappingURL=DaysOfWeekValueSet.d.ts.map

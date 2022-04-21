@@ -1,1007 +1,8016 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.
  */
 export declare const ApproachSiteCodesValueSet: {
-    ApproachSiteCodesValueSet_LateralMeniscusOfKneeJoint: Coding;
-    ApproachSiteCodesValueSet_BaseOfLung: Coding;
-    ApproachSiteCodesValueSet_BaseOfPhalanxOfIndexFinger: Coding;
-    ApproachSiteCodesValueSet_VentralSpinocerebellarTractOfPons: Coding;
-    ApproachSiteCodesValueSet_NucleusPulposusOfIntervertebralDiscOfEighthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_IntervertebralForamenOfFifthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_TransplantedLung: Coding;
-    ApproachSiteCodesValueSet_EntireDiaphragmaticLymphNode: Coding;
-    ApproachSiteCodesValueSet_Male: Coding;
-    ApproachSiteCodesValueSet_OphthalmicNerve: Coding;
-    ApproachSiteCodesValueSet_LevatorLabiiSuperiorisMuscle: Coding;
-    ApproachSiteCodesValueSet_DeepVolarArchOfRadialArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfFibrousPortionOfPericardium: Coding;
-    ApproachSiteCodesValueSet_DeepDorsalSacrococcygealLigament: Coding;
-    ApproachSiteCodesValueSet_MedialSurfaceOfThirdToe: Coding;
-    ApproachSiteCodesValueSet_StructureOfPeritonsillarTissue: Coding;
-    ApproachSiteCodesValueSet_SebaceousGlandStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfVesicularBursaOfSternohyoidMuscle: Coding;
-    ApproachSiteCodesValueSet_PosteriorCarpalRegion: Coding;
-    ApproachSiteCodesValueSet_FrontozygomaticSutureOfSkull: Coding;
-    ApproachSiteCodesValueSet_FetalPartOfPlacenta: Coding;
-    ApproachSiteCodesValueSet_Promonocyte: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousPrepatellarBursa: Coding;
-    ApproachSiteCodesValueSet_CondylarEmissaryVein: Coding;
-    ApproachSiteCodesValueSet_Female: Coding;
-    ApproachSiteCodesValueSet_SternothyroidMuscle: Coding;
-    ApproachSiteCodesValueSet_SuperiorOccipitalGyrus: Coding;
-    ApproachSiteCodesValueSet_ThymicCortex: Coding;
-    ApproachSiteCodesValueSet_VisceralLayerOfBowmanQuoteSCapsule: Coding;
-    ApproachSiteCodesValueSet_CranialCavity: Coding;
-    ApproachSiteCodesValueSet_MajorCalyx: Coding;
-    ApproachSiteCodesValueSet_TarsalGland: Coding;
-    ApproachSiteCodesValueSet_ParathyroidGland: Coding;
-    ApproachSiteCodesValueSet_InferiorLongitudinalMuscleOfTongue: Coding;
-    ApproachSiteCodesValueSet_AortopulmonarySeptum: Coding;
-    ApproachSiteCodesValueSet_FrenulumLinguae: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfMedialSurfaceOfIndexFinger: Coding;
-    ApproachSiteCodesValueSet_OdontoidProcessOfAxis: Coding;
-    ApproachSiteCodesValueSet_MandibularNerve: Coding;
-    ApproachSiteCodesValueSet_ChromosomesGroupE: Coding;
-    ApproachSiteCodesValueSet_TeresMajorMuscle: Coding;
-    ApproachSiteCodesValueSet_Synostosis: Coding;
-    ApproachSiteCodesValueSet_CentralNervousSystemMeninges: Coding;
-    ApproachSiteCodesValueSet_DuodenalSerosa: Coding;
-    ApproachSiteCodesValueSet_CoronoidProcessOfMandible: Coding;
-    ApproachSiteCodesValueSet_InferiorArticularProcessOfSixthCervicalVertebra: Coding;
-    ApproachSiteCodesValueSet_DorsalDigitalNervesOfRadialNerve: Coding;
-    ApproachSiteCodesValueSet_DistinctiveArrangementOfMicrotubules: Coding;
-    ApproachSiteCodesValueSet_VertebralNerve: Coding;
-    ApproachSiteCodesValueSet_Glottis: Coding;
-    ApproachSiteCodesValueSet_TelogenHair: Coding;
-    ApproachSiteCodesValueSet_DeepFlexorTendonOfIndexFinger: Coding;
-    ApproachSiteCodesValueSet_GastricSerosa: Coding;
-    ApproachSiteCodesValueSet_VastusLateralisMuscle: Coding;
-    ApproachSiteCodesValueSet_PosteriorLimbOfStapes: Coding;
-    ApproachSiteCodesValueSet_ParavesicularLymphNode: Coding;
-    ApproachSiteCodesValueSet_LaryngealSaccule: Coding;
-    ApproachSiteCodesValueSet_YellowFibrocartilage: Coding;
-    ApproachSiteCodesValueSet_ParietalBranchOfSuperficialTemporalArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfMetatarsalRegionOfFoot: Coding;
-    ApproachSiteCodesValueSet_SoftTissuesOfTrunk: Coding;
-    ApproachSiteCodesValueSet_CentralPairOfMicrotubulesCiliumOrFlagellumNotBacterial: Coding;
-    ApproachSiteCodesValueSet_AnteriorCecalArtery: Coding;
-    ApproachSiteCodesValueSet_EjaculatoryDuct: Coding;
-    ApproachSiteCodesValueSet_FrontomentalDiameterOfHead: Coding;
-    ApproachSiteCodesValueSet_LaminaOfFourthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_IntervertebralDiscOfEleventhThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_CoccygealPlexus: Coding;
-    ApproachSiteCodesValueSet_DeepCircumflexArteryOfIlium: Coding;
-    ApproachSiteCodesValueSet_NucleusPulposusOfIntervertebralDiscOfThirdLumbarVertebra: Coding;
-    ApproachSiteCodesValueSet_NailOfThirdToe: Coding;
-    ApproachSiteCodesValueSet_NucleusVentralisLateralis: Coding;
-    ApproachSiteCodesValueSet_IlealArtery: Coding;
-    ApproachSiteCodesValueSet_Symphysis: Coding;
-    ApproachSiteCodesValueSet_SpleniusCapitisMuscle: Coding;
-    ApproachSiteCodesValueSet_Histioblast: Coding;
-    ApproachSiteCodesValueSet_Otoconia: Coding;
-    ApproachSiteCodesValueSet_ParamammaryLymphNode: Coding;
-    ApproachSiteCodesValueSet_IntrinsicLarynx: Coding;
-    ApproachSiteCodesValueSet_MetaphaseNucleus: Coding;
-    ApproachSiteCodesValueSet_ThirdThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_MedialCollateralLigamentOfKneeJoint: Coding;
-    ApproachSiteCodesValueSet_SupraorbitalVein: Coding;
-    ApproachSiteCodesValueSet_Foregut: Coding;
-    ApproachSiteCodesValueSet_HilumOfLeftLung: Coding;
-    ApproachSiteCodesValueSet_TransversePeduncularTractNucleus: Coding;
-    ApproachSiteCodesValueSet_NucleusMedialisDorsalis: Coding;
-    ApproachSiteCodesValueSet_SupraclavicularPartOfBrachialPlexus: Coding;
-    ApproachSiteCodesValueSet_LigamentumTeresOfLiver: Coding;
-    ApproachSiteCodesValueSet_ThymicLobule: Coding;
-    ApproachSiteCodesValueSet_VentralNuclearGroupOfThalamus: Coding;
-    ApproachSiteCodesValueSet_PeriorbitalRegion: Coding;
-    ApproachSiteCodesValueSet_CupulaAmpullaris: Coding;
-    ApproachSiteCodesValueSet_RightTonsil: Coding;
-    ApproachSiteCodesValueSet_CentralTegmentalTract: Coding;
-    ApproachSiteCodesValueSet_TDThoracicDuct: Coding;
-    ApproachSiteCodesValueSet_StructureOfLymphaticVesselOfThorax: Coding;
-    ApproachSiteCodesValueSet_Premelanosome: Coding;
-    ApproachSiteCodesValueSet_SacroiliacRegion: Coding;
-    ApproachSiteCodesValueSet_Naris: Coding;
-    ApproachSiteCodesValueSet_GreaterCirculusArteriosusOfIris: Coding;
-    ApproachSiteCodesValueSet_RootOfNose: Coding;
-    ApproachSiteCodesValueSet_ScleralConjunctiva: Coding;
-    ApproachSiteCodesValueSet_ArrectorPiliMuscle: Coding;
-    ApproachSiteCodesValueSet_PharyngealRecess: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuprahyoidMuscle: Coding;
-    ApproachSiteCodesValueSet_PromontoryLymphNode: Coding;
-    ApproachSiteCodesValueSet_JointOfUpperExtremity: Coding;
-    ApproachSiteCodesValueSet_MusculophrenicVein: Coding;
-    ApproachSiteCodesValueSet_SkinOfExternalEar: Coding;
-    ApproachSiteCodesValueSet_Ear: Coding;
-    ApproachSiteCodesValueSet_SuprarenalAorta: Coding;
-    ApproachSiteCodesValueSet_LeftElbow: Coding;
-    ApproachSiteCodesValueSet_PorusAcusticusInternus: Coding;
-    ApproachSiteCodesValueSet_CingulumDentis: Coding;
-    ApproachSiteCodesValueSet_ClavicularFacetOfScapula: Coding;
-    ApproachSiteCodesValueSet_SuperiorThoracicArtery: Coding;
-    ApproachSiteCodesValueSet_AnteriorDivisionOfRenalArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfAnteriorMedianFissureOfSpinalCord: Coding;
-    ApproachSiteCodesValueSet_RightFallopianTube: Coding;
-    ApproachSiteCodesValueSet_VaginalNerves: Coding;
-    ApproachSiteCodesValueSet_LingualTonsil: Coding;
-    ApproachSiteCodesValueSet_ChorionicVilli: Coding;
-    ApproachSiteCodesValueSet_LeftCommissureOfAorticValve: Coding;
-    ApproachSiteCodesValueSet_SkinOfEarLobule: Coding;
-    ApproachSiteCodesValueSet_GluteusMaximusMuscle: Coding;
-    ApproachSiteCodesValueSet_ReticularFormationOfSpinalCord: Coding;
-    ApproachSiteCodesValueSet_HeadOfPhalanxOfHand: Coding;
-    ApproachSiteCodesValueSet_NucleusAmbiguus: Coding;
-    ApproachSiteCodesValueSet_AccessorySinus: Coding;
-    ApproachSiteCodesValueSet_MammilloinfundibularNucleus: Coding;
-    ApproachSiteCodesValueSet_UrinaryTractTransitionalEpithelialCell: Coding;
-    ApproachSiteCodesValueSet_GlialCell: Coding;
-    ApproachSiteCodesValueSet_LigamentumArteriosum: Coding;
-    ApproachSiteCodesValueSet_PharyngealCavity: Coding;
-    ApproachSiteCodesValueSet_EndometrialZonaBasalis: Coding;
-    ApproachSiteCodesValueSet_ClavicularPartOfPectoralisMajorMuscle: Coding;
-    ApproachSiteCodesValueSet_LaminaOfFifthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_CerebralBasalSurface: Coding;
-    ApproachSiteCodesValueSet_ArticularSurfacePhalangesOfFourthMetacarpalBone: Coding;
-    ApproachSiteCodesValueSet_LesserOsseousPelvis: Coding;
-    ApproachSiteCodesValueSet_TypeIHairCell: Coding;
-    ApproachSiteCodesValueSet_Subserosa: Coding;
-    ApproachSiteCodesValueSet_CanalOfHering: Coding;
-    ApproachSiteCodesValueSet_StructureOfTorcularHerophili: Coding;
-    ApproachSiteCodesValueSet_StructureOfNasopharyngealGland: Coding;
-    ApproachSiteCodesValueSet_VeinOfTheKnee: Coding;
-    ApproachSiteCodesValueSet_StructureOfSpinousProcessOfCervicalVertebra: Coding;
-    ApproachSiteCodesValueSet_StructureOfBaseOfThirdMetacarpalBone: Coding;
-    ApproachSiteCodesValueSet_SalivarySeromucousGland: Coding;
-    ApproachSiteCodesValueSet_StructureOfSegmentalBronchialBranches: Coding;
-    ApproachSiteCodesValueSet_HepatocolicLigament: Coding;
-    ApproachSiteCodesValueSet_MetencephalonOfFoetus: Coding;
-    ApproachSiteCodesValueSet_RenalCalyx: Coding;
-    ApproachSiteCodesValueSet_StructureOfNasalSutureOfSkull: Coding;
-    ApproachSiteCodesValueSet_SuperiorLabialArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfMedialSurfaceOfToe: Coding;
-    ApproachSiteCodesValueSet_StructureOfPapillaryMusclesOfRightVentricle: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuperiorMarginOfAdrenalGland: Coding;
-    ApproachSiteCodesValueSet_StructureOfTransverseFacialArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfFirstMetatarsalFacetOfMedialCuneiformBone: Coding;
-    ApproachSiteCodesValueSet_UniversalDesignation21: Coding;
-    ApproachSiteCodesValueSet_StructureOfDorsumOfFoot: Coding;
-    ApproachSiteCodesValueSet_StructureOfSubmaxillaryGanglion: Coding;
-    ApproachSiteCodesValueSet_StructureOfDigitalTendonAndTendonSheathOfFoot: Coding;
-    ApproachSiteCodesValueSet_TunicaIntimaOfVein: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfPosteriorSurfaceOfForearm: Coding;
-    ApproachSiteCodesValueSet_StructureOfArticularSurfaceThirdMetacarpalOfSecondMetacarpalBone: Coding;
-    ApproachSiteCodesValueSet_LateralVestibularNucleus: Coding;
-    ApproachSiteCodesValueSet_Mesotympanum: Coding;
-    ApproachSiteCodesValueSet_SkinStructureOfFrenulumOfClitoris: Coding;
-    ApproachSiteCodesValueSet_StructureOfMedialCheckLigamentOfEye: Coding;
-    ApproachSiteCodesValueSet_EntireCisternaPontis: Coding;
-    ApproachSiteCodesValueSet_MembraneOfLysosome: Coding;
-    ApproachSiteCodesValueSet_StructureOfPancreaticPlexus: Coding;
-    ApproachSiteCodesValueSet_FemoralTriangleStructure: Coding;
-    ApproachSiteCodesValueSet_PectoralRegion: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuperiorRectalArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfCuboidArticularFacetOfFourthMetatarsalBone: Coding;
-    ApproachSiteCodesValueSet_BoneStructureOfPhalanxOfThumb: Coding;
-    ApproachSiteCodesValueSet_KupfferCell: Coding;
-    ApproachSiteCodesValueSet_StructureOfGracilisMuscle: Coding;
-    ApproachSiteCodesValueSet_Plasmablast: Coding;
-    ApproachSiteCodesValueSet_AllExtremities: Coding;
-    ApproachSiteCodesValueSet_StructureOfFlexorPollicisLongusMuscleTendon: Coding;
-    ApproachSiteCodesValueSet_IntervertebralDiscStructureOfThirdThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_ThoracicNerve: Coding;
-    ApproachSiteCodesValueSet_NeuroendocrineTissue: Coding;
-    ApproachSiteCodesValueSet_StructureOfPosteriorThalamicRadiationOfInternalCapsule: Coding;
-    ApproachSiteCodesValueSet_RightLowerLobeOfLung: Coding;
-    ApproachSiteCodesValueSet_StructureOfSemispinalisCapitisMuscle: Coding;
-    ApproachSiteCodesValueSet_StructureOfAnteriorCutaneousBranchOfLumbosacralPlexus: Coding;
-    ApproachSiteCodesValueSet_StructureOfAnteriorEthmoidalArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfDorsalNerveOfPenis: Coding;
-    ApproachSiteCodesValueSet_BladderMucosa: Coding;
-    ApproachSiteCodesValueSet_StructureOfMedialOlfactoryGyrus: Coding;
-    ApproachSiteCodesValueSet_StructureOfBowmanSpace: Coding;
-    ApproachSiteCodesValueSet_LeftMaxillarySinusStructure: Coding;
-    ApproachSiteCodesValueSet_EntireCalcarineArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfCapsuleOfAnkleJoint: Coding;
-    ApproachSiteCodesValueSet_StructureOfApicalForamenOfTooth: Coding;
-    ApproachSiteCodesValueSet_SuperiorArticularProcessOfLumbarVertebra: Coding;
-    ApproachSiteCodesValueSet_StructureOfFoldForStapes: Coding;
-    ApproachSiteCodesValueSet_LateralMyocardium: Coding;
-    ApproachSiteCodesValueSet_EntireVitellineVeinOfPlacenta: Coding;
-    ApproachSiteCodesValueSet_EndometrialStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfMedialOccipitotemporalGyrus: Coding;
-    ApproachSiteCodesValueSet_CircularLayerOfGastricMuscularis: Coding;
-    ApproachSiteCodesValueSet_SpinalCordStructure: Coding;
-    ApproachSiteCodesValueSet_EccrineGlandStructure: Coding;
-    ApproachSiteCodesValueSet_LaminaPropriaOfUreter: Coding;
-    ApproachSiteCodesValueSet_ApocrineGlandStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfParsTensaOfTympanicMembrane: Coding;
-    ApproachSiteCodesValueSet_StructureOfTendonSheathOfPopliteusMuscle: Coding;
-    ApproachSiteCodesValueSet_StructureOfCremastericFascia: Coding;
-    ApproachSiteCodesValueSet_StructureOfHeadOfFemur: Coding;
-    ApproachSiteCodesValueSet_StructureOfSpinousProcessOfFourthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_StructureOfLaminaOfFourthLumbarVertebra: Coding;
-    ApproachSiteCodesValueSet_StructureOfDorsalDigitalNervesOfLateralHalluxAndMedialSecondToe: Coding;
-    ApproachSiteCodesValueSet_CentralAxillaryLymphNode: Coding;
-    ApproachSiteCodesValueSet_StructureOfPerivesicularTissuesOfSeminalVesicles: Coding;
-    ApproachSiteCodesValueSet_FlexorTendonAndTendonSheathOfFourthToe: Coding;
-    ApproachSiteCodesValueSet_RenalArteryStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfRespiratoryEpithelium: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuperficialEpigastricArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfAccessoryCephalicVein: Coding;
-    ApproachSiteCodesValueSet_EntireGlandOrgan: Coding;
-    ApproachSiteCodesValueSet_MetacarpophalangealJointOfIndexFinger: Coding;
-    ApproachSiteCodesValueSet_StructureOfPosteriorEpiglottis: Coding;
-    ApproachSiteCodesValueSet_StructureOfAnteriorLigamentOfUterus: Coding;
-    ApproachSiteCodesValueSet_StructureOfPosteriorPortionOfDiaphragmaticAspectOfLiver: Coding;
-    ApproachSiteCodesValueSet_StructureOfFacialNerveMotorBranch: Coding;
-    ApproachSiteCodesValueSet_StructureOfPosteriorPapillaryMuscleOfLeftVentricle: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfSupraorbitalArea: Coding;
-    ApproachSiteCodesValueSet_SupernumeraryDeciduousTooth: Coding;
-    ApproachSiteCodesValueSet_AnatomicalSpaceStructure: Coding;
-    ApproachSiteCodesValueSet_BoneStructureOfMedialCuneiform: Coding;
-    ApproachSiteCodesValueSet_StructureOfTalarFacetOfNavicularBoneOfFoot: Coding;
-    ApproachSiteCodesValueSet_EntireRightMarginOfUterus: Coding;
-    ApproachSiteCodesValueSet_InternalCapsuleAnteriorLimbStructure: Coding;
-    ApproachSiteCodesValueSet_WhiteFibrocartilage: Coding;
-    ApproachSiteCodesValueSet_FifthMetatarsalBone: Coding;
-    ApproachSiteCodesValueSet_TransitionalEpithelialCell: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfThigh: Coding;
-    ApproachSiteCodesValueSet_StructureOfGlomerularUrinaryPole: Coding;
-    ApproachSiteCodesValueSet_StructureOfArticularSurfaceMetacarpalOfPhalanxOfThumb: Coding;
-    ApproachSiteCodesValueSet_StructureOfBoneMarrowOfVertebralBody: Coding;
-    ApproachSiteCodesValueSet_StructureOfAnteroventralNucleusOfThalamus: Coding;
-    ApproachSiteCodesValueSet_NerveStructure: Coding;
-    ApproachSiteCodesValueSet_PNSPeripheralNervousSystem: Coding;
-    ApproachSiteCodesValueSet_SpinalArachnoid: Coding;
-    ApproachSiteCodesValueSet_StructureOfSeminalVesicleLumen: Coding;
-    ApproachSiteCodesValueSet_MitochondrionInDivision: Coding;
-    ApproachSiteCodesValueSet_StructureOfTendinousArchOfPelvicFascia: Coding;
-    ApproachSiteCodesValueSet_ClinicalCrownOfTooth: Coding;
-    ApproachSiteCodesValueSet_PlantarSurfaceOfGreatToe: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuprachoroidalSpace: Coding;
-    ApproachSiteCodesValueSet_StructureOfDorsalSurfaceOfIndexFinger: Coding;
-    ApproachSiteCodesValueSet_StructureOfTrabeculaCarneaOfLeftVentricle: Coding;
-    ApproachSiteCodesValueSet_PleuralMembraneStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfHeadOfFourthMetatarsalBone: Coding;
-    ApproachSiteCodesValueSet_BoneTissue: Coding;
-    ApproachSiteCodesValueSet_SkinOfUmbilicus: Coding;
-    ApproachSiteCodesValueSet_StructureOfTractusOlivocochlearis: Coding;
-    ApproachSiteCodesValueSet_StructureOfObturatorArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfCostocervicalTrunk: Coding;
-    ApproachSiteCodesValueSet_SpinalNerveStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfRapheOfSoftPalate: Coding;
-    ApproachSiteCodesValueSet_CardiacImpressionOfLiver: Coding;
-    ApproachSiteCodesValueSet_EndocardiumOfRightAtrium: Coding;
-    ApproachSiteCodesValueSet_MonostomaticSublingualGland: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfNuchalRegion: Coding;
-    ApproachSiteCodesValueSet_AllLargeArteries: Coding;
-    ApproachSiteCodesValueSet_LeftCoronaryArteryMainStem: Coding;
-    ApproachSiteCodesValueSet_StructureOfPosteriorSegmentOfRightUpperLobeOfLung: Coding;
-    ApproachSiteCodesValueSet_StructureOfParametrialLymphNode: Coding;
-    ApproachSiteCodesValueSet_PapillaryArea: Coding;
-    ApproachSiteCodesValueSet_StructureOfRootCanalOfTooth: Coding;
-    ApproachSiteCodesValueSet_StructureOfPedicleOfThirdCervicalVertebra: Coding;
-    ApproachSiteCodesValueSet_StructureOfVentralAnteriorNucleusOfThalamus: Coding;
-    ApproachSiteCodesValueSet_TectopontineFibers: Coding;
-    ApproachSiteCodesValueSet_SplenicBranchOfSplenicArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfVestibulospinalTract: Coding;
-    ApproachSiteCodesValueSet_OccipitofrontalDiameterOfHead: Coding;
-    ApproachSiteCodesValueSet_HaversianCanal: Coding;
-    ApproachSiteCodesValueSet_RightLungStructure: Coding;
-    ApproachSiteCodesValueSet_EntireRightCommissureOfPulmonicValve: Coding;
-    ApproachSiteCodesValueSet_IntertragalIncisureStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfAnteriorPapillaryMuscleOfLeftVentricle: Coding;
-    ApproachSiteCodesValueSet_StructureOfSupportingTissueOfRectum: Coding;
-    ApproachSiteCodesValueSet_SecondarySpermatocyte: Coding;
-    ApproachSiteCodesValueSet_StructureOfAggerNasi: Coding;
-    ApproachSiteCodesValueSet_StructureOfRimaOris: Coding;
-    ApproachSiteCodesValueSet_NonsegmentedBasophil: Coding;
-    ApproachSiteCodesValueSet_SuboccipitobregmaticDiameterOfHead: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuperiorPalpebralArch: Coding;
-    ApproachSiteCodesValueSet_StructureOfMesogastrium: Coding;
-    ApproachSiteCodesValueSet_CellOfBone: Coding;
-    ApproachSiteCodesValueSet_StructureOfLateralMarginOfForearm: Coding;
-    ApproachSiteCodesValueSet_StructureOfRotatorMuscle: Coding;
-    ApproachSiteCodesValueSet_DeepLymphaticOfUpperExtremity: Coding;
-    ApproachSiteCodesValueSet_Ankle: Coding;
-    ApproachSiteCodesValueSet_ThalamostriateVein: Coding;
-    ApproachSiteCodesValueSet_PenetratedOocyte: Coding;
-    ApproachSiteCodesValueSet_PenetratingAtrioventricularBundle: Coding;
-    ApproachSiteCodesValueSet_StructureOfAnterodorsalNucleusOfThalamus: Coding;
-    ApproachSiteCodesValueSet_StructureOfCommissureOfTricuspidValve: Coding;
-    ApproachSiteCodesValueSet_PosteriorMidlineOfTrunk: Coding;
-    ApproachSiteCodesValueSet_StructureOfVastusMedialisMuscle: Coding;
-    ApproachSiteCodesValueSet_StructureOfEmbryonicTestis: Coding;
-    ApproachSiteCodesValueSet_AnnulateLamellaCisternalLumen: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfSuboccipitalRegion: Coding;
-    ApproachSiteCodesValueSet_StructureOfLateralWallOfMastoidAntrum: Coding;
-    ApproachSiteCodesValueSet_StructureOfCapsuleOfProximalTibiofibularJoint: Coding;
-    ApproachSiteCodesValueSet_StructureOfDorsalMetatarsalArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfThyroidCapsule: Coding;
-    ApproachSiteCodesValueSet_StructureOfDorsalNucleusOfTrapezoidBody: Coding;
-    ApproachSiteCodesValueSet_ReticularCorium: Coding;
-    ApproachSiteCodesValueSet_MuscularisOfUreter: Coding;
-    ApproachSiteCodesValueSet_VertebralBody: Coding;
-    ApproachSiteCodesValueSet_StructureOfBodyOfGallbladder: Coding;
-    ApproachSiteCodesValueSet_StructureOfGastrophrenicLigament: Coding;
-    ApproachSiteCodesValueSet_T10DorsalArch: Coding;
-    ApproachSiteCodesValueSet_StructureOfStraightPartOfLongusColliMuscle: Coding;
-    ApproachSiteCodesValueSet_IschiococcygeusMuscle: Coding;
-    ApproachSiteCodesValueSet_StructureOfOccipitalBranchOfPosteriorAuricularArtery: Coding;
-    ApproachSiteCodesValueSet_Lamellipodium: Coding;
-    ApproachSiteCodesValueSet_StructureOfTympanicOstiumOfEustachianTube: Coding;
-    ApproachSiteCodesValueSet_PelvicWallStructure: Coding;
-    ApproachSiteCodesValueSet_EntireSubpyloricLymphNode: Coding;
-    ApproachSiteCodesValueSet_GreatVessel: Coding;
-    ApproachSiteCodesValueSet_StructureOfLateralThoracicArtery: Coding;
-    ApproachSiteCodesValueSet_StructureOfNucleusPulposusOfIntervertebralDiscOfFirstThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfLowerExtremity: Coding;
-    ApproachSiteCodesValueSet_EntireDorsalMetacarpalLigament: Coding;
-    ApproachSiteCodesValueSet_StructureOfApicalSegmentOfRightLowerLobeOfLung: Coding;
-    ApproachSiteCodesValueSet_EnteroendocrineCell: Coding;
-    ApproachSiteCodesValueSet_SeptalCartilageStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfApexOfCoccyx: Coding;
-    ApproachSiteCodesValueSet_StructureOfTransplantedLiver: Coding;
-    ApproachSiteCodesValueSet_StructureOfInterscapularRegionOfBack: Coding;
-    ApproachSiteCodesValueSet_StructureOfDorsalSurfaceOfGreatToe: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfFemoralRegion: Coding;
-    ApproachSiteCodesValueSet_StructureOfCommonCarotidPlexus: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfLateralSurfaceOfFourthToe: Coding;
-    ApproachSiteCodesValueSet_StructureOfOccipitalLymphNode: Coding;
-    ApproachSiteCodesValueSet_StructureOfPericardiophrenicArtery: Coding;
-    ApproachSiteCodesValueSet_WallOfUrinaryBladder: Coding;
-    ApproachSiteCodesValueSet_OWOvalWindow: Coding;
-    ApproachSiteCodesValueSet_HeadOfTenthRibStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfEntorhinalCortex: Coding;
-    ApproachSiteCodesValueSet_LacrimalSacStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfFifthMetatarsalArticularFacetOfFourthMetatarsalBone: Coding;
-    ApproachSiteCodesValueSet_StructureOfRectusCapitisMuscle: Coding;
-    ApproachSiteCodesValueSet_OlfactoryTractStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfGyrusOfBrain: Coding;
-    ApproachSiteCodesValueSet_EntireParietalBranchOfAnteriorCerebralArtery: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfConcha: Coding;
-    ApproachSiteCodesValueSet_DeepVeinOfClitoris: Coding;
-    ApproachSiteCodesValueSet_StructureOfMedialGlobusPallidus: Coding;
-    ApproachSiteCodesValueSet_ChromosomesGroupA: Coding;
-    ApproachSiteCodesValueSet_PosteriorCommissureOfLabiumMajorum: Coding;
-    ApproachSiteCodesValueSet_DentalBranchesOfInferiorAlveolarArtery: Coding;
-    ApproachSiteCodesValueSet_EosinophilicProgranulocyte: Coding;
-    ApproachSiteCodesValueSet_PosteriorTemporalDiploicVein: Coding;
-    ApproachSiteCodesValueSet_LateralOrbitalWall: Coding;
-    ApproachSiteCodesValueSet_StructureOfCapsuleOfProximalInterphalangealJointOfIndexFinger: Coding;
-    ApproachSiteCodesValueSet_StructureOfFourthCoccygealVertebra: Coding;
-    ApproachSiteCodesValueSet_EntireDorsalLingualVein: Coding;
-    ApproachSiteCodesValueSet_StructureOfVagusNerveBronchialBranch: Coding;
-    ApproachSiteCodesValueSet_MaculaOfTheSaccule: Coding;
-    ApproachSiteCodesValueSet_LumbosacralSpinalCordCentralCanalStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuperiorFrontalSulcus: Coding;
-    ApproachSiteCodesValueSet_GastricFundus: Coding;
-    ApproachSiteCodesValueSet_StructureOfArteryOfExtremity: Coding;
-    ApproachSiteCodesValueSet_StructureOfPalmarSurfaceOfLittleFinger: Coding;
-    ApproachSiteCodesValueSet_CeliacNervousPlexusStructure: Coding;
-    ApproachSiteCodesValueSet_AbdominalAorticPlexusStructure: Coding;
-    ApproachSiteCodesValueSet_HyparterialBronchus: Coding;
-    ApproachSiteCodesValueSet_BothLowerExtremities: Coding;
-    ApproachSiteCodesValueSet_EntireExtensorTendonAndTendonSheathOfFifthToe: Coding;
-    ApproachSiteCodesValueSet_TurkCell: Coding;
-    ApproachSiteCodesValueSet_EpithelialCells: Coding;
-    ApproachSiteCodesValueSet_HeadOfSecondRibStructure: Coding;
-    ApproachSiteCodesValueSet_InferiorSurfaceOfTongue: Coding;
-    ApproachSiteCodesValueSet_BoneStructureOfFirstMetacarpal: Coding;
-    ApproachSiteCodesValueSet_PosteriorTibialVein: Coding;
-    ApproachSiteCodesValueSet_LateralSpinorubralTract: Coding;
-    ApproachSiteCodesValueSet_StructureOfInferiorArticularProcessOfSeventhCervicalVertebra: Coding;
-    ApproachSiteCodesValueSet_StructureOfMiddlePortionOfIleum: Coding;
-    ApproachSiteCodesValueSet_StructureOfParacorticalAreaOfLymphNode: Coding;
-    ApproachSiteCodesValueSet_CartilageCanal: Coding;
-    ApproachSiteCodesValueSet_AnteriorMidlineOfAbdomen: Coding;
-    ApproachSiteCodesValueSet_StructureOfSpinalisMuscle: Coding;
-    ApproachSiteCodesValueSet_ProtoplasmicAstrocyte: Coding;
-    ApproachSiteCodesValueSet_UpperJawRegion: Coding;
-    ApproachSiteCodesValueSet_StructureOfSubchorionicSpace: Coding;
-    ApproachSiteCodesValueSet_StructureOfLateralSurfaceOfLittleFinger: Coding;
-    ApproachSiteCodesValueSet_StratumSpinosumStructure: Coding;
-    ApproachSiteCodesValueSet_SmallIntestineMucousMembraneStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfFourthMetatarsalFacetOfLateralCuneiformBone: Coding;
-    ApproachSiteCodesValueSet_StructureOfIncisureOfCartilaginousPortionOfAuditoryCanal: Coding;
-    ApproachSiteCodesValueSet_StructureOfParafascicularNucleusOfThalamus: Coding;
-    ApproachSiteCodesValueSet_ScalaVestibuliStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfAnteriorArticularSurfaceForTalus: Coding;
-    ApproachSiteCodesValueSet_TrachealSubmucosa: Coding;
-    ApproachSiteCodesValueSet_CellularStructures: Coding;
-    ApproachSiteCodesValueSet_StructureOfClivusOssisSphenoidalis: Coding;
-    ApproachSiteCodesValueSet_StructureOfDuctusArteriosus: Coding;
-    ApproachSiteCodesValueSet_DentalArchStructure: Coding;
-    ApproachSiteCodesValueSet_TrochantericBursa: Coding;
-    ApproachSiteCodesValueSet_StructureOfAccessorySinusGland: Coding;
-    ApproachSiteCodesValueSet_StructureOfSubclavianPlexus: Coding;
-    ApproachSiteCodesValueSet_JointStructureOfLowerExtremity: Coding;
-    ApproachSiteCodesValueSet_StructureOfInternalMedullaryLaminaOfThalamus: Coding;
-    ApproachSiteCodesValueSet_LamellatedGranuleAsInSurfactantSecretingCell: Coding;
-    ApproachSiteCodesValueSet_EntireVagusNerveParasympatheticFibersToLiverGallbladderBileDuctsAndPancreas: Coding;
-    ApproachSiteCodesValueSet_StructureOfTentoriumCerebelli: Coding;
-    ApproachSiteCodesValueSet_CollateralLigament: Coding;
-    ApproachSiteCodesValueSet_Desmosome: Coding;
-    ApproachSiteCodesValueSet_SkinStructureOfPosteriorSurfaceOfThigh: Coding;
-    ApproachSiteCodesValueSet_StructureOfSpleniusMuscleOfTrunk: Coding;
-    ApproachSiteCodesValueSet_StructureOfMiddleTrunkOfBrachialPlexus: Coding;
-    ApproachSiteCodesValueSet_LarynxStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfBaseOfPhalanxOfFoot: Coding;
-    ApproachSiteCodesValueSet_TubercleOfEighthRibStructure: Coding;
-    ApproachSiteCodesValueSet_LateralCorticospinalTract: Coding;
-    ApproachSiteCodesValueSet_StructureOfLesserTuberosityOfHumerus: Coding;
-    ApproachSiteCodesValueSet_StructureOfLymphaticCord: Coding;
-    ApproachSiteCodesValueSet_BasophilicNormoblast: Coding;
-    ApproachSiteCodesValueSet_LipidDropletHomogeneous: Coding;
-    ApproachSiteCodesValueSet_AscendingFrontalGyrus: Coding;
-    ApproachSiteCodesValueSet_StructureOfTunicaAlbugineaOfCorpusSpongiosum: Coding;
-    ApproachSiteCodesValueSet_SkinStructureOfNuchalRegion: Coding;
-    ApproachSiteCodesValueSet_BasalLaminaInclusionInSubepithelialLocation: Coding;
-    ApproachSiteCodesValueSet_CardinalVeinStructure: Coding;
-    ApproachSiteCodesValueSet_FlexorHallucisLongusInLeg: Coding;
-    ApproachSiteCodesValueSet_NeutrophilicMyelocyte: Coding;
-    ApproachSiteCodesValueSet_EntireVenousPlexusOfTheForamenOvaleBasisCranii: Coding;
-    ApproachSiteCodesValueSet_StructureOfVentralSacrococcygealLigament: Coding;
-    ApproachSiteCodesValueSet_StructureOfMedialSurfaceOfGreatToe: Coding;
-    ApproachSiteCodesValueSet_StructureOfGemellusMuscle: Coding;
-    ApproachSiteCodesValueSet_StructureOfSupracardinalVein: Coding;
-    ApproachSiteCodesValueSet_StructureOfPerinealNerve: Coding;
-    ApproachSiteCodesValueSet_StructureOfPhrenicNervePericardialBranch: Coding;
-    ApproachSiteCodesValueSet_StructureOfVentralPosteriorInferiorNucleus: Coding;
-    ApproachSiteCodesValueSet_DeiterCell: Coding;
-    ApproachSiteCodesValueSet_CardiopulmonaryCirculatorySystem: Coding;
-    ApproachSiteCodesValueSet_StructureOfUterineVenousPlexus: Coding;
-    ApproachSiteCodesValueSet_AnteriorTibialCompartmentStructure: Coding;
-    ApproachSiteCodesValueSet_FemoralCanalStructure: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfRingFinger: Coding;
-    ApproachSiteCodesValueSet_AmpullaOfSemicircularDuct: Coding;
-    ApproachSiteCodesValueSet_TCTransverseColon: Coding;
-    ApproachSiteCodesValueSet_StructureOfTuberculumImpar: Coding;
-    ApproachSiteCodesValueSet_ConstrictorMuscleOfPharynxStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfDorsalTegmentalNucleiOfMidbrain: Coding;
-    ApproachSiteCodesValueSet_LaminaOfModiolusOfCochlea: Coding;
-    ApproachSiteCodesValueSet_EntireSublingualVein: Coding;
-    ApproachSiteCodesValueSet_EntireInterlobularVeinOfKidney: Coding;
-    ApproachSiteCodesValueSet_CellMembraneProkaryotic: Coding;
-    ApproachSiteCodesValueSet_StructureOfUterovaginalPlexus: Coding;
-    ApproachSiteCodesValueSet_MastoidAntrumStructure: Coding;
-    ApproachSiteCodesValueSet_CerebellarGracileLobule: Coding;
-    ApproachSiteCodesValueSet_LowerLimbLymphNodeStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfRadialNotchOfUlna: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfBack: Coding;
-    ApproachSiteCodesValueSet_AmygdaloidStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuperiorTemporalSulcus: Coding;
-    ApproachSiteCodesValueSet_StructureOfYellowBoneMarrow: Coding;
-    ApproachSiteCodesValueSet_StructureOfPosteriorSurfaceOfProstate: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuperficialDorsalVeinsOfClitoris: Coding;
-    ApproachSiteCodesValueSet_StructureOfObturatorInternusMuscleIschialBursa: Coding;
-    ApproachSiteCodesValueSet_StructureOfRugalColumn: Coding;
-    ApproachSiteCodesValueSet_StructureOfInfrasternalAngle: Coding;
-    ApproachSiteCodesValueSet_StructureOfPosteriorAuricularVein: Coding;
-    ApproachSiteCodesValueSet_EntireAngleOfFirstRib: Coding;
-    ApproachSiteCodesValueSet_LensZonules: Coding;
-    ApproachSiteCodesValueSet_PermanentUpperRight6Tooth: Coding;
-    ApproachSiteCodesValueSet_StructureOfIntervertebralForamenOfTwelfthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_StructureOfEpitheliumOfLens: Coding;
-    ApproachSiteCodesValueSet_StructureOfRightExternalCarotidArtery: Coding;
-    ApproachSiteCodesValueSet_SuperiorIleocecalRecess: Coding;
-    ApproachSiteCodesValueSet_FrontalVein: Coding;
-    ApproachSiteCodesValueSet_StructureOfUterineOstiumOfFallopianTube: Coding;
-    ApproachSiteCodesValueSet_RightCerebralHemisphereStructure: Coding;
-    ApproachSiteCodesValueSet_StructureOfMucosaOfGallbladder: Coding;
-    ApproachSiteCodesValueSet_StructureOfThoracicIntervertebralDisc: Coding;
-    ApproachSiteCodesValueSet_SkinStructureOfLateralPortionOfNeck: Coding;
-    ApproachSiteCodesValueSet_StructureOfForamenSingulare: Coding;
-    ApproachSiteCodesValueSet_CostalSurfaceOfLung: Coding;
-    ApproachSiteCodesValueSet_StructureOfAnteriorMediastinalLymphNode: Coding;
-    ApproachSiteCodesValueSet_StructureOfSuperiorPoleOfKidney: Coding;
-    ApproachSiteCodesValueSet_BoneStructureOfC4: Coding;
-    ApproachSiteCodesValueSet_StructureOfInferiorFrontalGyrus: Coding;
-    ApproachSiteCodesValueSet_SynapticSpecializationCytoplasmic: Coding;
-    ApproachSiteCodesValueSet_StructureOfMedianArcuateLigamentOfDiaphragm: Coding;
-    ApproachSiteCodesValueSet_HippocampalStructure: Coding;
-    ApproachSiteCodesValueSet_SmallIntestineMuscularisPropria: Coding;
-    ApproachSiteCodesValueSet_SuperiorFasciaOfPerineum: Coding;
-    ApproachSiteCodesValueSet_UterineParacervicalLymphNode: Coding;
-    ApproachSiteCodesValueSet_NormalFatPad: Coding;
-    ApproachSiteCodesValueSet_ArticularProcessOfThirdLumbarVertebra: Coding;
-    ApproachSiteCodesValueSet_SexChromosomeY: Coding;
-    ApproachSiteCodesValueSet_ApocrineIntraepidermalDuct: Coding;
-    ApproachSiteCodesValueSet_DeepArteryOfClitoris: Coding;
-    ApproachSiteCodesValueSet_CardiacIncisureOfStomach: Coding;
-    ApproachSiteCodesValueSet_LacrimalPartOfOrbicularisOculiMuscle: Coding;
-    ApproachSiteCodesValueSet_MetacarpophalangealJointOfLittleFinger: Coding;
-    ApproachSiteCodesValueSet_SuperiorAberrantDuctuleOfEpididymis: Coding;
-    ApproachSiteCodesValueSet_HyaloidArtery: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfChin: Coding;
-    ApproachSiteCodesValueSet_VagusNerveParasympatheticFibersToCardiacPlexus: Coding;
-    ApproachSiteCodesValueSet_TegmentalPortionOfPons: Coding;
-    ApproachSiteCodesValueSet_CristaMarginalisOfTooth: Coding;
-    ApproachSiteCodesValueSet_LongitudinalLayerOfDuodenalMuscularisPropria: Coding;
-    ApproachSiteCodesValueSet_AlveolarRidgeMucousMembrane: Coding;
-    ApproachSiteCodesValueSet_Singlet: Coding;
-    ApproachSiteCodesValueSet_SeventhCostalCartilage: Coding;
-    ApproachSiteCodesValueSet_TendonOfSupraspinatusMuscle: Coding;
-    ApproachSiteCodesValueSet_RetinaOfRightEye: Coding;
-    ApproachSiteCodesValueSet_AnulusFibrosusOfIntervertebralDiscOfFifthCervicalVertebra: Coding;
-    ApproachSiteCodesValueSet_NavicularFacetOfIntermediateCuneiformBone: Coding;
-    ApproachSiteCodesValueSet_RightVisceralPleura: Coding;
-    ApproachSiteCodesValueSet_MuscularPortionOfInterventricularSeptum: Coding;
-    ApproachSiteCodesValueSet_CanalOfStomach: Coding;
-    ApproachSiteCodesValueSet_FracturedMembranePFace: Coding;
-    ApproachSiteCodesValueSet_IntervertebralDiscSpaceOfFifthLumbarVertebra: Coding;
-    ApproachSiteCodesValueSet_InnerSurfaceOfSeventhRib: Coding;
-    ApproachSiteCodesValueSet_Retina: Coding;
-    ApproachSiteCodesValueSet_LowerDigestiveTract: Coding;
-    ApproachSiteCodesValueSet_LenticularFasciculus: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfUpperExtremity: Coding;
-    ApproachSiteCodesValueSet_ArticularPartOfTubercleOfNinthRib: Coding;
-    ApproachSiteCodesValueSet_SkinOfLateralSurfaceOfFinger: Coding;
-    ApproachSiteCodesValueSet_MultifidusMuscles: Coding;
-    ApproachSiteCodesValueSet_SubmandibularTriangle: Coding;
-    ApproachSiteCodesValueSet_TemporalFossa: Coding;
-    ApproachSiteCodesValueSet_TendonAndTendonSheathOfLegAndAnkle: Coding;
-    ApproachSiteCodesValueSet_AnteriorCervicalLymphNode: Coding;
-    ApproachSiteCodesValueSet_SkinOfForearm: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfAnteriorPortionOfNeck: Coding;
-    ApproachSiteCodesValueSet_EndocervicalEpithelium: Coding;
-    ApproachSiteCodesValueSet_Paradidymis: Coding;
-    ApproachSiteCodesValueSet_Diaphragm: Coding;
-    ApproachSiteCodesValueSet_MediumSizedNeuron: Coding;
-    ApproachSiteCodesValueSet_AngleOfSeventhRib: Coding;
-    ApproachSiteCodesValueSet_SuperiorRectusMuscle: Coding;
-    ApproachSiteCodesValueSet_DuodenalFold: Coding;
-    ApproachSiteCodesValueSet_HeadOfPhalanxOfGreatToe: Coding;
-    ApproachSiteCodesValueSet_SubstantiaPropriaOfSclera: Coding;
-    ApproachSiteCodesValueSet_PosteriorCordOfBrachialPlexus: Coding;
-    ApproachSiteCodesValueSet_SuperiorArticularProcessOfSeventhCervicalVertebra: Coding;
-    ApproachSiteCodesValueSet_OrbitalPlateOfEthmoidBone: Coding;
-    ApproachSiteCodesValueSet_SerosaOfUrinaryBladder: Coding;
-    ApproachSiteCodesValueSet_CapsuleOfProximalInterphalangealJointOfThirdToe: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfLateralBorderOfSoleOfFoot: Coding;
-    ApproachSiteCodesValueSet_TuberosityOfDistalPhalanxOfHand: Coding;
-    ApproachSiteCodesValueSet_EndothelialSievePlate: Coding;
-    ApproachSiteCodesValueSet_ArticularSurfaceThirdMetacarpalOfFourthMetacarpalBone: Coding;
-    ApproachSiteCodesValueSet_PosteriorCellsOfEthmoidSinus: Coding;
-    ApproachSiteCodesValueSet_InterventricularSeptum: Coding;
-    ApproachSiteCodesValueSet_SuperiorRecessOfTympanicMembrane: Coding;
-    ApproachSiteCodesValueSet_Myotome: Coding;
-    ApproachSiteCodesValueSet_ArticularProcessOfTwelfthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_BronchialLumen: Coding;
-    ApproachSiteCodesValueSet_GreatCardiacVein: Coding;
-    ApproachSiteCodesValueSet_TensorTympaniMuscle: Coding;
-    ApproachSiteCodesValueSet_VestibularVein: Coding;
-    ApproachSiteCodesValueSet_PosteriorPalatineArch: Coding;
-    ApproachSiteCodesValueSet_CapsuleOfDistalInterphalangealJointOfThirdToe: Coding;
-    ApproachSiteCodesValueSet_PalpebralFissure: Coding;
-    ApproachSiteCodesValueSet_LeftWrist: Coding;
-    ApproachSiteCodesValueSet_EighthRib: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfEyelid: Coding;
-    ApproachSiteCodesValueSet_EpiscleralArtery: Coding;
-    ApproachSiteCodesValueSet_ChromosomesGroupD: Coding;
-    ApproachSiteCodesValueSet_QuadratusLumborumMuscle: Coding;
-    ApproachSiteCodesValueSet_IntervertebralDiscOfSecondThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_CircularLayerOfDuodenalMuscularisPropria: Coding;
-    ApproachSiteCodesValueSet_MesenteryOfAscendingColon: Coding;
-    ApproachSiteCodesValueSet_ReticuloendothelialSystem: Coding;
-    ApproachSiteCodesValueSet_PenicilliaryArteries: Coding;
-    ApproachSiteCodesValueSet_Heterolysosome: Coding;
-    ApproachSiteCodesValueSet_ColumnarEpithelialCell: Coding;
-    ApproachSiteCodesValueSet_OuterSurfaceOfThirdRib: Coding;
-    ApproachSiteCodesValueSet_LacrimalVein: Coding;
-    ApproachSiteCodesValueSet_MetacarpophalangealJointOfMiddleFinger: Coding;
-    ApproachSiteCodesValueSet_DeciduousMandibularRightCanineTooth: Coding;
-    ApproachSiteCodesValueSet_LigamentOfLeftSuperiorVenaCava: Coding;
-    ApproachSiteCodesValueSet_CapsuleOfTemporomandibularJoint: Coding;
-    ApproachSiteCodesValueSet_GastrointestinalSubserosa: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfPhiltrum: Coding;
-    ApproachSiteCodesValueSet_SubclavianNerve: Coding;
-    ApproachSiteCodesValueSet_BodyOfFifthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_FacialNerveParasympatheticFibers: Coding;
-    ApproachSiteCodesValueSet_NailOfFourthToe: Coding;
-    ApproachSiteCodesValueSet_MultivesicularBodyInternalVesicles: Coding;
-    ApproachSiteCodesValueSet_PostcapillaryVenule: Coding;
-    ApproachSiteCodesValueSet_PiriformRecess: Coding;
-    ApproachSiteCodesValueSet_OsLacrimale: Coding;
-    ApproachSiteCodesValueSet_SulcusTerminalisCordis: Coding;
-    ApproachSiteCodesValueSet_AccessoryPhrenicNerves: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfScalp: Coding;
-    ApproachSiteCodesValueSet_SkinOfDorsalSurfaceOfFinger: Coding;
-    ApproachSiteCodesValueSet_PosteriorBasalBranchOfLeftPulmonaryArtery: Coding;
-    ApproachSiteCodesValueSet_AryepiglotticMuscle: Coding;
-    ApproachSiteCodesValueSet_FetalAtloidArticulation: Coding;
-    ApproachSiteCodesValueSet_LymphoidFollicleOfStomach: Coding;
-    ApproachSiteCodesValueSet_TuberosityOfDistalPhalanxOfLittleToe: Coding;
-    ApproachSiteCodesValueSet_HairMedulla: Coding;
-    ApproachSiteCodesValueSet_LymphaticsOfThyroidGland: Coding;
-    ApproachSiteCodesValueSet_CavernousPortionOfUrethra: Coding;
-    ApproachSiteCodesValueSet_CoccygealNerve: Coding;
-    ApproachSiteCodesValueSet_LigamentumNuchae: Coding;
-    ApproachSiteCodesValueSet_PresymphysialLymphNode: Coding;
-    ApproachSiteCodesValueSet_MedialMalleolus: Coding;
-    ApproachSiteCodesValueSet_SupraspinatusMuscle: Coding;
-    ApproachSiteCodesValueSet_StructureOfRadiatingPortionOfCorticalLobuleOfKidney: Coding;
-    ApproachSiteCodesValueSet_MastCell: Coding;
-    ApproachSiteCodesValueSet_PosteriorVagalTrunk: Coding;
-    ApproachSiteCodesValueSet_Cytotrophoblast: Coding;
-    ApproachSiteCodesValueSet_MedialAspectOfOvary: Coding;
-    ApproachSiteCodesValueSet_SuperiorArticularProcessOfSeventhThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_GlansClitoridis: Coding;
-    ApproachSiteCodesValueSet_DistalPortionOfCircumflexBranchOfLeftCoronaryArtery: Coding;
-    ApproachSiteCodesValueSet_CardiacValveLeaflet: Coding;
-    ApproachSiteCodesValueSet_ColonicHaustra: Coding;
-    ApproachSiteCodesValueSet_ThyrocervicalTrunk: Coding;
-    ApproachSiteCodesValueSet_AnteriorCommissureOfMitralValve: Coding;
-    ApproachSiteCodesValueSet_GastrohepaticLigament: Coding;
-    ApproachSiteCodesValueSet_AngularIncisureOfStomach: Coding;
-    ApproachSiteCodesValueSet_PollicisArtery: Coding;
-    ApproachSiteCodesValueSet_InferiorNasalTurbinate: Coding;
-    ApproachSiteCodesValueSet_MedialBorderOfSole: Coding;
-    ApproachSiteCodesValueSet_CerebellarHemisphere: Coding;
-    ApproachSiteCodesValueSet_BaseOfPhalanxOfMiddleFinger: Coding;
-    ApproachSiteCodesValueSet_LingualNerve: Coding;
-    ApproachSiteCodesValueSet_TrachealMucousMembrane: Coding;
-    ApproachSiteCodesValueSet_StructureOfDorsalIntercuneiformLigaments: Coding;
-    ApproachSiteCodesValueSet_SphenoparietalSinus: Coding;
-    ApproachSiteCodesValueSet_JawRegion: Coding;
-    ApproachSiteCodesValueSet_CuticleOfNail: Coding;
-    ApproachSiteCodesValueSet_SternalMuscle: Coding;
-    ApproachSiteCodesValueSet_RightPosteriorCerebralArtery: Coding;
-    ApproachSiteCodesValueSet_RightAnteriorCerebralArtery: Coding;
-    ApproachSiteCodesValueSet_AnteriorFossaOfCranialCavity: Coding;
-    ApproachSiteCodesValueSet_UterineSubserosa: Coding;
-    ApproachSiteCodesValueSet_CentralLobuleOfCerebellum: Coding;
-    ApproachSiteCodesValueSet_EmbryologicalStructure: Coding;
-    ApproachSiteCodesValueSet_ArticularFacetOfHeadOfFibula: Coding;
-    ApproachSiteCodesValueSet_RightAnkle: Coding;
-    ApproachSiteCodesValueSet_ArchOfSecondLumbarVertebra: Coding;
-    ApproachSiteCodesValueSet_FemoralNerveLateralMuscularBranches: Coding;
-    ApproachSiteCodesValueSet_PleuralRecess: Coding;
-    ApproachSiteCodesValueSet_ChordaTympani: Coding;
-    ApproachSiteCodesValueSet_CallosomarginalBranchOfAnteriorCerebralArtery: Coding;
-    ApproachSiteCodesValueSet_MitochondrialInclusion: Coding;
-    ApproachSiteCodesValueSet_RightKnee: Coding;
-    ApproachSiteCodesValueSet_TendonAndTendonSheathOfHand: Coding;
-    ApproachSiteCodesValueSet_Spermatozoa: Coding;
-    ApproachSiteCodesValueSet_MaculaOfUtricle: Coding;
-    ApproachSiteCodesValueSet_InterstitialTissueOfSpleen: Coding;
-    ApproachSiteCodesValueSet_ObturatorNerveAnteriorBranch: Coding;
-    ApproachSiteCodesValueSet_LigamentOfLumbosacralJoint: Coding;
-    ApproachSiteCodesValueSet_ParsCiliarisOfRetina: Coding;
-    ApproachSiteCodesValueSet_AxialSkeleton: Coding;
-    ApproachSiteCodesValueSet_CorticomedullaryJunctionOfKidney: Coding;
-    ApproachSiteCodesValueSet_SporeCrystal: Coding;
-    ApproachSiteCodesValueSet_SecondaryFootProcess: Coding;
-    ApproachSiteCodesValueSet_LeafOfEpiglottis: Coding;
-    ApproachSiteCodesValueSet_HabenularCommissure: Coding;
-    ApproachSiteCodesValueSet_VisceralPericardium: Coding;
-    ApproachSiteCodesValueSet_FetalHyaloidArtery: Coding;
-    ApproachSiteCodesValueSet_MedialSurfaceOfArm: Coding;
-    ApproachSiteCodesValueSet_PoplitealRegion: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfMedialSurfaceOfThirdToe: Coding;
-    ApproachSiteCodesValueSet_SmallIntestineSubmucosa: Coding;
-    ApproachSiteCodesValueSet_LowerAlveolarRidgeMucosa: Coding;
-    ApproachSiteCodesValueSet_PerivascularSpace: Coding;
-    ApproachSiteCodesValueSet_BodyOfIschium: Coding;
-    ApproachSiteCodesValueSet_RightUpperExtremity: Coding;
-    ApproachSiteCodesValueSet_JugularArch: Coding;
-    ApproachSiteCodesValueSet_AnteriorLabialVeins: Coding;
-    ApproachSiteCodesValueSet_LymphocyticTissue: Coding;
-    ApproachSiteCodesValueSet_AnteriorMyocardium: Coding;
-    ApproachSiteCodesValueSet_PosteriorHypothalamicNucleus: Coding;
-    ApproachSiteCodesValueSet_CollateralSulcus: Coding;
-    ApproachSiteCodesValueSet_ThoracolumbarRegionOfBack: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfJaw: Coding;
-    ApproachSiteCodesValueSet_BileDuctMucousMembrane: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfExternalGenitalia: Coding;
-    ApproachSiteCodesValueSet_RightColicArtery: Coding;
-    ApproachSiteCodesValueSet_InterstitialTissueOfMyocardium: Coding;
-    ApproachSiteCodesValueSet_MiddlePhalanxOfIndexFinger: Coding;
-    ApproachSiteCodesValueSet_SupraaorticBranches: Coding;
-    ApproachSiteCodesValueSet_VentralPosterolateralNucleusOfThalamus: Coding;
-    ApproachSiteCodesValueSet_AttachmentPlaqueOfDesmosomeOrHemidesmosome: Coding;
-    ApproachSiteCodesValueSet_FetalImplantationSite: Coding;
-    ApproachSiteCodesValueSet_MaxillaryRightSecondMolarTooth: Coding;
-    ApproachSiteCodesValueSet_AnulusFibrosusOfIntervertebralDiscOfThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_FalseRib: Coding;
-    ApproachSiteCodesValueSet_TrigeminalGanglionSensoryRoot: Coding;
-    ApproachSiteCodesValueSet_BaseOfMetacarpalBone: Coding;
-    ApproachSiteCodesValueSet_ParaduodenalRecess: Coding;
-    ApproachSiteCodesValueSet_CaudaEquina: Coding;
-    ApproachSiteCodesValueSet_GustatoryPore: Coding;
-    ApproachSiteCodesValueSet_IsthmusTympaniPosticus: Coding;
-    ApproachSiteCodesValueSet_HypoglossalNerveIntrinsicTongueMuscleBranch: Coding;
-    ApproachSiteCodesValueSet_DenseIntermediateFilamentBundles: Coding;
-    ApproachSiteCodesValueSet_InferiorChoroidVein: Coding;
-    ApproachSiteCodesValueSet_AppendicealMuscularisPropria: Coding;
-    ApproachSiteCodesValueSet_LymphaticsOfAppendixAndLargeIntestine: Coding;
-    ApproachSiteCodesValueSet_MuscleOfPerineum: Coding;
-    ApproachSiteCodesValueSet_DeepInguinalRing: Coding;
-    ApproachSiteCodesValueSet_AnteriorSurfaceOfArm: Coding;
-    ApproachSiteCodesValueSet_LingualGyrus: Coding;
-    ApproachSiteCodesValueSet_CiliaryProcesses: Coding;
-    ApproachSiteCodesValueSet_InfratendinousOlecranonBursa: Coding;
-    ApproachSiteCodesValueSet_LymphaticOfHead: Coding;
-    ApproachSiteCodesValueSet_LeftMarginOfUterus: Coding;
-    ApproachSiteCodesValueSet_ParaventricularNucleusOfThalamus: Coding;
-    ApproachSiteCodesValueSet_PlantarCalcaneocuboidalLigament: Coding;
-    ApproachSiteCodesValueSet_AnteriorSemicircularDuct: Coding;
-    ApproachSiteCodesValueSet_OvarianLigament: Coding;
-    ApproachSiteCodesValueSet_LateralSurfaceOfSublingualGland: Coding;
-    ApproachSiteCodesValueSet_LipidCrystalline: Coding;
-    ApproachSiteCodesValueSet_IliotibialTract: Coding;
-    ApproachSiteCodesValueSet_CerebellarLenticularNucleus: Coding;
-    ApproachSiteCodesValueSet_PlantarTarsalLigaments: Coding;
-    ApproachSiteCodesValueSet_AnteriorLigamentOfHeadOfFibula: Coding;
-    ApproachSiteCodesValueSet_VasaVasorum: Coding;
-    ApproachSiteCodesValueSet_VagusNerveParasympatheticFibers: Coding;
-    ApproachSiteCodesValueSet_DeepHeadOfFlexorPollicisBrevisMuscle: Coding;
-    ApproachSiteCodesValueSet_MitoticCellInAnaphase: Coding;
-    ApproachSiteCodesValueSet_Finger: Coding;
-    ApproachSiteCodesValueSet_IntervertebralDiscSpaceOfEleventhThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfVertex: Coding;
-    ApproachSiteCodesValueSet_Connexon: Coding;
-    ApproachSiteCodesValueSet_TenthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_ThalamoolivaryTract: Coding;
-    ApproachSiteCodesValueSet_IntervenousTubercleOfRightAtrium: Coding;
-    ApproachSiteCodesValueSet_FrenulumLabii: Coding;
-    ApproachSiteCodesValueSet_FemoralArtery: Coding;
-    ApproachSiteCodesValueSet_SubtendinousBursaOfTricepsBrachiiMuscle: Coding;
-    ApproachSiteCodesValueSet_PontinePortionOfMedialLongitudinalFasciculus: Coding;
-    ApproachSiteCodesValueSet_SubduralSpaceOfSpinalRegion: Coding;
-    ApproachSiteCodesValueSet_SkinOfMedialSurfaceOfFifthToe: Coding;
-    ApproachSiteCodesValueSet_PosteriorChoroidalArtery: Coding;
-    ApproachSiteCodesValueSet_HeadAndNeck: Coding;
-    ApproachSiteCodesValueSet_PalatineDuct: Coding;
-    ApproachSiteCodesValueSet_SkinAppendage: Coding;
-    ApproachSiteCodesValueSet_MesovarianMarginOfOvary: Coding;
-    ApproachSiteCodesValueSet_LaminaOfThirdThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_StriateArtery: Coding;
-    ApproachSiteCodesValueSet_RightFoot: Coding;
-    ApproachSiteCodesValueSet_SympatheticTrunkSpinalNerveBranch: Coding;
-    ApproachSiteCodesValueSet_LateralPosteriorNucleusOfThalamus: Coding;
-    ApproachSiteCodesValueSet_AnteriorSurfaceOfManubrium: Coding;
-    ApproachSiteCodesValueSet_AbdominalAorta: Coding;
-    ApproachSiteCodesValueSet_PosteriorMarginOfNasalSeptum: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfSubmentalArea: Coding;
-    ApproachSiteCodesValueSet_MacrocyticNormochromicErythrocyte: Coding;
-    ApproachSiteCodesValueSet_SternoclavicularJoint: Coding;
-    ApproachSiteCodesValueSet_IntracranialSubduralSpace: Coding;
-    ApproachSiteCodesValueSet_MandibularCanal: Coding;
-    ApproachSiteCodesValueSet_MyocardiumOfVentricle: Coding;
-    ApproachSiteCodesValueSet_ScapularRegionOfBack: Coding;
-    ApproachSiteCodesValueSet_RhopheocytoticVesicle: Coding;
-    ApproachSiteCodesValueSet_CornealCorpuscle: Coding;
-    ApproachSiteCodesValueSet_RotatorCuffIncludingMusclesAndTendons: Coding;
-    ApproachSiteCodesValueSet_SubmucosaOfAnalCanal: Coding;
-    ApproachSiteCodesValueSet_OccipitalAngleOfParietalBone: Coding;
-    ApproachSiteCodesValueSet_VisceralSurfaceOfLiver: Coding;
-    ApproachSiteCodesValueSet_OlivocerebellarFibers: Coding;
-    ApproachSiteCodesValueSet_ProximalPhalanxOfThirdToe: Coding;
-    ApproachSiteCodesValueSet_LigamentOfDiaphragm: Coding;
-    ApproachSiteCodesValueSet_HelperCell: Coding;
-    ApproachSiteCodesValueSet_LaminaPropriaOfEthmoidSinus: Coding;
-    ApproachSiteCodesValueSet_FirstLeftAorticArch: Coding;
-    ApproachSiteCodesValueSet_DeepTemporalVeins: Coding;
-    ApproachSiteCodesValueSet_AbdominopelvicPortionOfSympatheticNervousSystem: Coding;
-    ApproachSiteCodesValueSet_SkinOfGlansPenis: Coding;
-    ApproachSiteCodesValueSet_ArticulationsOfAuditoryOssicles: Coding;
-    ApproachSiteCodesValueSet_MucousMembraneOfTongue: Coding;
-    ApproachSiteCodesValueSet_AnteriorCommunicatingArtery: Coding;
-    ApproachSiteCodesValueSet_InflowTractOfRightVentricle: Coding;
-    ApproachSiteCodesValueSet_LimitansNucleus: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousAcromialBursa: Coding;
-    ApproachSiteCodesValueSet_SuperficialFlexorTendonOfLittleFinger: Coding;
-    ApproachSiteCodesValueSet_MembraneCoatingGranuleAmorphous: Coding;
-    ApproachSiteCodesValueSet_LateralNucleiOfGlobusPallidus: Coding;
-    ApproachSiteCodesValueSet_PancreaticVeins: Coding;
-    ApproachSiteCodesValueSet_SuperficialCircumflexIliacVein: Coding;
-    ApproachSiteCodesValueSet_StratumLemnisciOfCorporaQuadrigemina: Coding;
-    ApproachSiteCodesValueSet_RadialNerve: Coding;
-    ApproachSiteCodesValueSet_PosteriorIntercostalArtery: Coding;
-    ApproachSiteCodesValueSet_FetalChondrocranium: Coding;
-    ApproachSiteCodesValueSet_IntervertebralDiscSpaceOfTwelfthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_InfundibulumOfFallopianTube: Coding;
-    ApproachSiteCodesValueSet_IntranuclearCrystal: Coding;
-    ApproachSiteCodesValueSet_Hindgut: Coding;
-    ApproachSiteCodesValueSet_DelphianLymphNode: Coding;
-    ApproachSiteCodesValueSet_SupraaorticValveArea: Coding;
-    ApproachSiteCodesValueSet_SuperiorAnastomoticVein: Coding;
-    ApproachSiteCodesValueSet_VeinOfHead: Coding;
-    ApproachSiteCodesValueSet_InterlobarDuctOfPancreas: Coding;
-    ApproachSiteCodesValueSet_SuperiorColliculusOfCorporaQuadrigemina: Coding;
-    ApproachSiteCodesValueSet_LateralStriateArteries: Coding;
-    ApproachSiteCodesValueSet_InfraorbitalNerve: Coding;
-    ApproachSiteCodesValueSet_SuperiorArticularProcessOfFifthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_Wrist: Coding;
-    ApproachSiteCodesValueSet_AccessoryAtrioventricularBundle: Coding;
-    ApproachSiteCodesValueSet_PosteriorCervicalSpinalCordNerveRoot: Coding;
-    ApproachSiteCodesValueSet_ApicalBranchOfRightPulmonaryArtery: Coding;
-    ApproachSiteCodesValueSet_OsseousPortionOfEustachianTube: Coding;
-    ApproachSiteCodesValueSet_TunicaInternaOfEyeball: Coding;
-    ApproachSiteCodesValueSet_ArticularSurfaceMetacarpalOfPhalanxOfHand: Coding;
-    ApproachSiteCodesValueSet_SmallIntestineSerosa: Coding;
-    ApproachSiteCodesValueSet_PelvicViscus: Coding;
-    ApproachSiteCodesValueSet_BelowKneeRegion: Coding;
-    ApproachSiteCodesValueSet_InterlobularArteriesOfLiver: Coding;
-    ApproachSiteCodesValueSet_SpinousProcessOfFifthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_MastoidFontanelOfSkull: Coding;
-    ApproachSiteCodesValueSet_LumbarLymphNode: Coding;
-    ApproachSiteCodesValueSet_ColicLymphNode: Coding;
-    ApproachSiteCodesValueSet_OralRegionOfFace: Coding;
-    ApproachSiteCodesValueSet_TunicaIntima: Coding;
-    ApproachSiteCodesValueSet_SphincterPupillaeMuscle: Coding;
-    ApproachSiteCodesValueSet_JugumOfSphenoidBone: Coding;
-    ApproachSiteCodesValueSet_LaminaOfEighthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_BirthCanal: Coding;
-    ApproachSiteCodesValueSet_IliacFossa: Coding;
-    ApproachSiteCodesValueSet_RenalSurfaceOfAdrenalGland: Coding;
-    ApproachSiteCodesValueSet_JointOfLumbarVertebra: Coding;
-    ApproachSiteCodesValueSet_LigamentOfSacroiliacJointAndPubicSymphysis: Coding;
-    ApproachSiteCodesValueSet_SinoatrialNodeBranchOfRightCoronaryArtery: Coding;
-    ApproachSiteCodesValueSet_MesialSurfaceOfTooth: Coding;
-    ApproachSiteCodesValueSet_ObliquusCapitisMuscle: Coding;
-    ApproachSiteCodesValueSet_InferiorArticularProcessOfTwelfthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_PosteriorIntercavernousSinus: Coding;
-    ApproachSiteCodesValueSet_LipidDroplet: Coding;
-    ApproachSiteCodesValueSet_JuxtaintestinalLymphNode: Coding;
-    ApproachSiteCodesValueSet_InterclavicularLigament: Coding;
-    ApproachSiteCodesValueSet_AbdominalLymphNodes: Coding;
-    ApproachSiteCodesValueSet_BothFeet: Coding;
-    ApproachSiteCodesValueSet_MeissnerQuoteSPlexus: Coding;
-    ApproachSiteCodesValueSet_AcousticNerve: Coding;
-    ApproachSiteCodesValueSet_CricoidCartilage: Coding;
-    ApproachSiteCodesValueSet_AdductorHallucisMuscle: Coding;
-    ApproachSiteCodesValueSet_MedullaOblongataFasciculusCuneatus: Coding;
-    ApproachSiteCodesValueSet_RightMarginOfHeart: Coding;
-    ApproachSiteCodesValueSet_ZygomaticRegionOfFace: Coding;
-    ApproachSiteCodesValueSet_TransplantedUreter: Coding;
-    ApproachSiteCodesValueSet_SuperiorRightPulmonaryVein: Coding;
-    ApproachSiteCodesValueSet_ChoroidalBranchesOfPosteriorSpinalArtery: Coding;
-    ApproachSiteCodesValueSet_GlycogenVacuole: Coding;
-    ApproachSiteCodesValueSet_AllToes: Coding;
-    ApproachSiteCodesValueSet_BodyOfRightAtrium: Coding;
-    ApproachSiteCodesValueSet_LateralOlfactoryGyrus: Coding;
-    ApproachSiteCodesValueSet_IntervertebralForamenOfSecondLumbarVertebra: Coding;
-    ApproachSiteCodesValueSet_MinorSublingualDucts: Coding;
-    ApproachSiteCodesValueSet_PeriodontalTissues: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfInterdigitalSpaceOfHand: Coding;
-    ApproachSiteCodesValueSet_CavernousPortionOfInternalCarotidArtery: Coding;
-    ApproachSiteCodesValueSet_NailOfSecondToe: Coding;
-    ApproachSiteCodesValueSet_TendinousArch: Coding;
-    ApproachSiteCodesValueSet_IntranuclearBodyGranularWithFilamentousCapsule: Coding;
-    ApproachSiteCodesValueSet_CorticomedullaryJunctionOfAdrenalGland: Coding;
-    ApproachSiteCodesValueSet_IliacTuberosity: Coding;
-    ApproachSiteCodesValueSet_ThenarAndHypothenarSpaces: Coding;
-    ApproachSiteCodesValueSet_PedicleOfEleventhThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_PeronealArtery: Coding;
-    ApproachSiteCodesValueSet_ShaftOfPhalanxOfMiddleFinger: Coding;
-    ApproachSiteCodesValueSet_AgranularEndoplasmicReticulumConnectionWithOtherOrganelle: Coding;
-    ApproachSiteCodesValueSet_SubtendinousPrepatellarBursa: Coding;
-    ApproachSiteCodesValueSet_LaminaMuscularisOfColonicMucousMembrane: Coding;
-    ApproachSiteCodesValueSet_ProperFasciculus: Coding;
-    ApproachSiteCodesValueSet_CristaGalli: Coding;
-    ApproachSiteCodesValueSet_PalmarSurfaceOfMiddleFinger: Coding;
-    ApproachSiteCodesValueSet_MandibularRightSecondPremolarTooth: Coding;
-    ApproachSiteCodesValueSet_BrachiocephalicVein: Coding;
-    ApproachSiteCodesValueSet_DiaphragmaticSurfaceOfLung: Coding;
-    ApproachSiteCodesValueSet_GastricCardiacGland: Coding;
-    ApproachSiteCodesValueSet_LateralGlossoepiglotticFold: Coding;
-    ApproachSiteCodesValueSet_LeftUlnarArtery: Coding;
-    ApproachSiteCodesValueSet_InferiorTransverseScapularLigament: Coding;
-    ApproachSiteCodesValueSet_EndocardiumOfRightVentricle: Coding;
-    ApproachSiteCodesValueSet_InguinalLymphNode: Coding;
-    ApproachSiteCodesValueSet_CoracoidProcessOfScapula: Coding;
-    ApproachSiteCodesValueSet_CerebralMeninges: Coding;
-    ApproachSiteCodesValueSet_TrapezoidLigament: Coding;
-    ApproachSiteCodesValueSet_AnteriorCruciateLigamentOfKneeJoint: Coding;
-    ApproachSiteCodesValueSet_StratumZonaleOfCorporaQuadrigemina: Coding;
-    ApproachSiteCodesValueSet_LeftEye: Coding;
-    ApproachSiteCodesValueSet_JointStructureOfVertebralColumn: Coding;
-    ApproachSiteCodesValueSet_MarginalPartOfOrbicularisOrisMuscle: Coding;
-    ApproachSiteCodesValueSet_HepaticVein: Coding;
-    ApproachSiteCodesValueSet_CerebellarPeduncle: Coding;
-    ApproachSiteCodesValueSet_LeftParietalLobe: Coding;
-    ApproachSiteCodesValueSet_MiddleColicVein: Coding;
-    ApproachSiteCodesValueSet_AscendingColon: Coding;
-    ApproachSiteCodesValueSet_BothForearms: Coding;
-    ApproachSiteCodesValueSet_WhiteMatterOfInsula: Coding;
-    ApproachSiteCodesValueSet_SplenicSinusoids: Coding;
-    ApproachSiteCodesValueSet_SuperiorLaryngealVein: Coding;
-    ApproachSiteCodesValueSet_ArchOfFoot: Coding;
-    ApproachSiteCodesValueSet_VeinOfTheScalaTympani: Coding;
-    ApproachSiteCodesValueSet_TransverseFoldsOfPalate: Coding;
-    ApproachSiteCodesValueSet_EmbryoStage1: Coding;
-    ApproachSiteCodesValueSet_SuperiorLaryngealAperture: Coding;
-    ApproachSiteCodesValueSet_AccessoryCarpalBone: Coding;
-    ApproachSiteCodesValueSet_CapsuleOfMetatarsophalangealJointOfFifthToe: Coding;
-    ApproachSiteCodesValueSet_FilamentsOfContractileApparatus: Coding;
-    ApproachSiteCodesValueSet_IntervertebralDiscOfEighthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_Centriole: Coding;
-    ApproachSiteCodesValueSet_ThyrohyoidBranchOfAnsaCervicalis: Coding;
-    ApproachSiteCodesValueSet_ShaftOfFifthMetatarsalBone: Coding;
-    ApproachSiteCodesValueSet_RotatoresLumborumMuscles: Coding;
-    ApproachSiteCodesValueSet_ExternalPudendalVeins: Coding;
-    ApproachSiteCodesValueSet_NiemannPickCell: Coding;
-    ApproachSiteCodesValueSet_PosteriorSegmentOfRightLobeOfLiver: Coding;
-    ApproachSiteCodesValueSet_GravidUterus: Coding;
-    ApproachSiteCodesValueSet_TendonAndTendonSheathOfSecondToe: Coding;
-    ApproachSiteCodesValueSet_FasciaOfPelvis: Coding;
-    ApproachSiteCodesValueSet_CorpusCavernosumOfPenis: Coding;
-    ApproachSiteCodesValueSet_PosteriorIntraoccipitalSynchondrosis: Coding;
-    ApproachSiteCodesValueSet_LabialVeins: Coding;
-    ApproachSiteCodesValueSet_MerkelQuoteSTactileDisc: Coding;
-    ApproachSiteCodesValueSet_SubtendinousIliacBursa: Coding;
-    ApproachSiteCodesValueSet_TailOfEpididymis: Coding;
-    ApproachSiteCodesValueSet_InterdentalPapillaOfGingiva: Coding;
-    ApproachSiteCodesValueSet_LateralLigamentOfTemporomandibularJoint: Coding;
-    ApproachSiteCodesValueSet_SkinOfMedialSurfaceOfMiddleFinger: Coding;
-    ApproachSiteCodesValueSet_PermanentTeeth: Coding;
-    ApproachSiteCodesValueSet_PectenAni: Coding;
-    ApproachSiteCodesValueSet_LumbarVein: Coding;
-    ApproachSiteCodesValueSet_LymphaticsOfStomach: Coding;
-    ApproachSiteCodesValueSet_PlantarSurfaceOfFourthToe: Coding;
-    ApproachSiteCodesValueSet_StructureOfDeepCervicalLymphaticVessel: Coding;
-    ApproachSiteCodesValueSet_SubclavianVein: Coding;
-    ApproachSiteCodesValueSet_MedialCartilaginousLaminaOfEustachianTube: Coding;
-    ApproachSiteCodesValueSet_CrusOfDiaphragm: Coding;
-    ApproachSiteCodesValueSet_AmacrineCellsOfRetina: Coding;
-    ApproachSiteCodesValueSet_AfferentGlomerularArteriole: Coding;
-    ApproachSiteCodesValueSet_PulmonaryLigament: Coding;
-    ApproachSiteCodesValueSet_HeadOfMetacarpalBone: Coding;
-    ApproachSiteCodesValueSet_CoronalDepressionOfTooth: Coding;
-    ApproachSiteCodesValueSet_CalcaneocuboidalLigament: Coding;
-    ApproachSiteCodesValueSet_PyramidOfMedullaOblongata: Coding;
-    ApproachSiteCodesValueSet_Bronchus: Coding;
-    ApproachSiteCodesValueSet_FacetForFifthCostalCartilageOfSternum: Coding;
-    ApproachSiteCodesValueSet_DuodenalLumen: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfAreola: Coding;
-    ApproachSiteCodesValueSet_DeepBranchOfUlnarNerve: Coding;
-    ApproachSiteCodesValueSet_PosteriorProcessOfNasalSeptalCartilage: Coding;
-    ApproachSiteCodesValueSet_LanugoHair: Coding;
-    ApproachSiteCodesValueSet_LeftSuperiorVenaCava: Coding;
-    ApproachSiteCodesValueSet_SuperiorTransverseScapularLigament: Coding;
-    ApproachSiteCodesValueSet_GastricMucousGland: Coding;
-    ApproachSiteCodesValueSet_InfraclavicularLymphNodes: Coding;
-    ApproachSiteCodesValueSet_SubcutaneousTissueOfLowerMarginOfNasalSeptum: Coding;
-    ApproachSiteCodesValueSet_CiliaryMuscle: Coding;
-    ApproachSiteCodesValueSet_HeadOfSecondMetatarsalBone: Coding;
-    ApproachSiteCodesValueSet_Melanocyte: Coding;
-    ApproachSiteCodesValueSet_PosteriorScrotalBranchesOfInternalPudendalArtery: Coding;
-    ApproachSiteCodesValueSet_IliacFascia: Coding;
-    ApproachSiteCodesValueSet_MedialSupraclavicularNerves: Coding;
-    ApproachSiteCodesValueSet_RightWrist: Coding;
-    ApproachSiteCodesValueSet_TendonOfIndexFinger: Coding;
-    ApproachSiteCodesValueSet_SubmucosaOfTonsil: Coding;
-    ApproachSiteCodesValueSet_OvarianVein: Coding;
-    ApproachSiteCodesValueSet_GenitalTubercle: Coding;
-    ApproachSiteCodesValueSet_LeftCarotidSinus: Coding;
-    ApproachSiteCodesValueSet_DistinctiveShapeOfMitochondrialCristae: Coding;
-    ApproachSiteCodesValueSet_SuperficialLymphaticsOfThorax: Coding;
-    ApproachSiteCodesValueSet_DeepVenousSystemOfLowerExtremity: Coding;
-    ApproachSiteCodesValueSet_SkeletalMuscleFiberTypeIIb: Coding;
-    ApproachSiteCodesValueSet_FasciaOfUpperExtremity: Coding;
-    ApproachSiteCodesValueSet_ProximalPhalanxOfLittleToe: Coding;
-    ApproachSiteCodesValueSet_PerforatingBranchesOfInternalThoracicArtery: Coding;
-    ApproachSiteCodesValueSet_BiparietalDiameterOfHead: Coding;
-    ApproachSiteCodesValueSet_InterspinalisThoracisMuscles: Coding;
-    ApproachSiteCodesValueSet_RightKidney: Coding;
-    ApproachSiteCodesValueSet_HilumOfAdrenalGland: Coding;
-    ApproachSiteCodesValueSet_FornixOfLacrimalSac: Coding;
-    ApproachSiteCodesValueSet_CarunculaeHymenales: Coding;
-    ApproachSiteCodesValueSet_Thymus: Coding;
-    ApproachSiteCodesValueSet_AppendicularVein: Coding;
-    ApproachSiteCodesValueSet_ThyroidTubercle: Coding;
-    ApproachSiteCodesValueSet_PeripheralNerveMyelinatedNerveFiber: Coding;
-    ApproachSiteCodesValueSet_TransverseArytenoidMuscle: Coding;
-    ApproachSiteCodesValueSet_ParacentralLobule: Coding;
-    ApproachSiteCodesValueSet_PosteriorEthmoidalNerve: Coding;
-    ApproachSiteCodesValueSet_MeningealBranchOfOccipitalArtery: Coding;
-    ApproachSiteCodesValueSet_PrimaryFootProcess: Coding;
-    ApproachSiteCodesValueSet_IleocecalOstium: Coding;
-    ApproachSiteCodesValueSet_RhomboideusCervicisMuscle: Coding;
-    ApproachSiteCodesValueSet_SuperiorArticularProcessOfSixthThoracicVertebra: Coding;
-    ApproachSiteCodesValueSet_DuodenalAmpulla: Coding;
+    /**
+     * Code: 10013000
+     */
+    readonly LateralMeniscusOfKneeJoint: Coding;
+    /**
+     * Code: 10024003
+     */
+    readonly BaseOfLung: Coding;
+    /**
+     * Code: 10025002
+     */
+    readonly BaseOfPhalanxOfIndexFinger: Coding;
+    /**
+     * Code: 10026001
+     */
+    readonly VentralSpinocerebellarTractOfPons: Coding;
+    /**
+     * Code: 10036009
+     */
+    readonly NucleusPulposusOfIntervertebralDiscOfEighthThoracicVertebra: Coding;
+    /**
+     * Code: 10042008
+     */
+    readonly IntervertebralForamenOfFifthThoracicVertebra: Coding;
+    /**
+     * Code: 10047002
+     */
+    readonly TransplantedLung: Coding;
+    /**
+     * Code: 1005009
+     */
+    readonly EntireDiaphragmaticLymphNode: Coding;
+    /**
+     * Code: 10052007
+     */
+    readonly Male: Coding;
+    /**
+     * Code: 10056005
+     */
+    readonly OphthalmicNerve: Coding;
+    /**
+     * Code: 10062000
+     */
+    readonly LevatorLabiiSuperiorisMuscle: Coding;
+    /**
+     * Code: 10119003
+     */
+    readonly DeepVolarArchOfRadialArtery: Coding;
+    /**
+     * Code: 1012000
+     */
+    readonly StructureOfFibrousPortionOfPericardium: Coding;
+    /**
+     * Code: 10124000
+     */
+    readonly DeepDorsalSacrococcygealLigament: Coding;
+    /**
+     * Code: 10134009
+     */
+    readonly MedialSurfaceOfThirdToe: Coding;
+    /**
+     * Code: 1015003
+     */
+    readonly StructureOfPeritonsillarTissue: Coding;
+    /**
+     * Code: 1028005
+     */
+    readonly SebaceousGlandStructure: Coding;
+    /**
+     * Code: 1030007
+     */
+    readonly StructureOfVesicularBursaOfSternohyoidMuscle: Coding;
+    /**
+     * Code: 106004
+     */
+    readonly PosteriorCarpalRegion: Coding;
+    /**
+     * Code: 1063000
+     */
+    readonly FrontozygomaticSutureOfSkull: Coding;
+    /**
+     * Code: 107008
+     */
+    readonly FetalPartOfPlacenta: Coding;
+    /**
+     * Code: 1075005
+     */
+    readonly Promonocyte: Coding;
+    /**
+     * Code: 1076006
+     */
+    readonly SubcutaneousPrepatellarBursa: Coding;
+    /**
+     * Code: 108003
+     */
+    readonly CondylarEmissaryVein: Coding;
+    /**
+     * Code: 1086007
+     */
+    readonly Female: Coding;
+    /**
+     * Code: 1087003
+     */
+    readonly SternothyroidMuscle: Coding;
+    /**
+     * Code: 1092001
+     */
+    readonly SuperiorOccipitalGyrus: Coding;
+    /**
+     * Code: 1099005
+     */
+    readonly ThymicCortex: Coding;
+    /**
+     * Code: 110001
+     */
+    readonly VisceralLayerOfBowmanQuoteSCapsule: Coding;
+    /**
+     * Code: 1101003
+     */
+    readonly CranialCavity: Coding;
+    /**
+     * Code: 1106008
+     */
+    readonly MajorCalyx: Coding;
+    /**
+     * Code: 1110006
+     */
+    readonly TarsalGland: Coding;
+    /**
+     * Code: 111002
+     */
+    readonly ParathyroidGland: Coding;
+    /**
+     * Code: 1122009
+     */
+    readonly InferiorLongitudinalMuscleOfTongue: Coding;
+    /**
+     * Code: 1136004
+     */
+    readonly AortopulmonarySeptum: Coding;
+    /**
+     * Code: 1159005
+     */
+    readonly FrenulumLinguae: Coding;
+    /**
+     * Code: 116007
+     */
+    readonly SubcutaneousTissueOfMedialSurfaceOfIndexFinger: Coding;
+    /**
+     * Code: 1172006
+     */
+    readonly OdontoidProcessOfAxis: Coding;
+    /**
+     * Code: 1173001
+     */
+    readonly MandibularNerve: Coding;
+    /**
+     * Code: 1174007
+     */
+    readonly ChromosomesGroupE: Coding;
+    /**
+     * Code: 1193009
+     */
+    readonly TeresMajorMuscle: Coding;
+    /**
+     * Code: 1216008
+     */
+    readonly Synostosis: Coding;
+    /**
+     * Code: 1231004
+     */
+    readonly CentralNervousSystemMeninges: Coding;
+    /**
+     * Code: 1236009
+     */
+    readonly DuodenalSerosa: Coding;
+    /**
+     * Code: 124002
+     */
+    readonly CoronoidProcessOfMandible: Coding;
+    /**
+     * Code: 1243003
+     */
+    readonly InferiorArticularProcessOfSixthCervicalVertebra: Coding;
+    /**
+     * Code: 1246006
+     */
+    readonly DorsalDigitalNervesOfRadialNerve: Coding;
+    /**
+     * Code: 1263005
+     */
+    readonly DistinctiveArrangementOfMicrotubules: Coding;
+    /**
+     * Code: 1277008
+     */
+    readonly VertebralNerve: Coding;
+    /**
+     * Code: 1307006
+     */
+    readonly Glottis: Coding;
+    /**
+     * Code: 1311000
+     */
+    readonly TelogenHair: Coding;
+    /**
+     * Code: 1350001
+     */
+    readonly DeepFlexorTendonOfIndexFinger: Coding;
+    /**
+     * Code: 1353004
+     */
+    readonly GastricSerosa: Coding;
+    /**
+     * Code: 1403006
+     */
+    readonly VastusLateralisMuscle: Coding;
+    /**
+     * Code: 1425000
+     */
+    readonly PosteriorLimbOfStapes: Coding;
+    /**
+     * Code: 1439000
+     */
+    readonly ParavesicularLymphNode: Coding;
+    /**
+     * Code: 1441004
+     */
+    readonly LaryngealSaccule: Coding;
+    /**
+     * Code: 1456008
+     */
+    readonly YellowFibrocartilage: Coding;
+    /**
+     * Code: 1467009
+     */
+    readonly ParietalBranchOfSuperficialTemporalArtery: Coding;
+    /**
+     * Code: 1484003
+     */
+    readonly StructureOfMetatarsalRegionOfFoot: Coding;
+    /**
+     * Code: 1490004
+     */
+    readonly SoftTissuesOfTrunk: Coding;
+    /**
+     * Code: 149003
+     */
+    readonly CentralPairOfMicrotubulesCiliumOrFlagellumNotBacterial: Coding;
+    /**
+     * Code: 1502004
+     */
+    readonly AnteriorCecalArtery: Coding;
+    /**
+     * Code: 1511004
+     */
+    readonly EjaculatoryDuct: Coding;
+    /**
+     * Code: 1516009
+     */
+    readonly FrontomentalDiameterOfHead: Coding;
+    /**
+     * Code: 1527006
+     */
+    readonly LaminaOfFourthThoracicVertebra: Coding;
+    /**
+     * Code: 1537001
+     */
+    readonly IntervertebralDiscOfEleventhThoracicVertebra: Coding;
+    /**
+     * Code: 1541002
+     */
+    readonly CoccygealPlexus: Coding;
+    /**
+     * Code: 155008
+     */
+    readonly DeepCircumflexArteryOfIlium: Coding;
+    /**
+     * Code: 1562001
+     */
+    readonly NucleusPulposusOfIntervertebralDiscOfThirdLumbarVertebra: Coding;
+    /**
+     * Code: 1569005
+     */
+    readonly NailOfThirdToe: Coding;
+    /**
+     * Code: 1580005
+     */
+    readonly NucleusVentralisLateralis: Coding;
+    /**
+     * Code: 1581009
+     */
+    readonly IlealArtery: Coding;
+    /**
+     * Code: 1584001
+     */
+    readonly Symphysis: Coding;
+    /**
+     * Code: 1600003
+     */
+    readonly SpleniusCapitisMuscle: Coding;
+    /**
+     * Code: 1605008
+     */
+    readonly Histioblast: Coding;
+    /**
+     * Code: 1610007
+     */
+    readonly Otoconia: Coding;
+    /**
+     * Code: 1611006
+     */
+    readonly ParamammaryLymphNode: Coding;
+    /**
+     * Code: 1617005
+     */
+    readonly IntrinsicLarynx: Coding;
+    /**
+     * Code: 1620002
+     */
+    readonly MetaphaseNucleus: Coding;
+    /**
+     * Code: 1626008
+     */
+    readonly ThirdThoracicVertebra: Coding;
+    /**
+     * Code: 1627004
+     */
+    readonly MedialCollateralLigamentOfKneeJoint: Coding;
+    /**
+     * Code: 1630006
+     */
+    readonly SupraorbitalVein: Coding;
+    /**
+     * Code: 1631005
+     */
+    readonly Foregut: Coding;
+    /**
+     * Code: 1650005
+     */
+    readonly HilumOfLeftLung: Coding;
+    /**
+     * Code: 1655000
+     */
+    readonly TransversePeduncularTractNucleus: Coding;
+    /**
+     * Code: 1659006
+     */
+    readonly NucleusMedialisDorsalis: Coding;
+    /**
+     * Code: 167005
+     */
+    readonly SupraclavicularPartOfBrachialPlexus: Coding;
+    /**
+     * Code: 1684009
+     */
+    readonly LigamentumTeresOfLiver: Coding;
+    /**
+     * Code: 1706004
+     */
+    readonly ThymicLobule: Coding;
+    /**
+     * Code: 1707008
+     */
+    readonly VentralNuclearGroupOfThalamus: Coding;
+    /**
+     * Code: 1711002
+     */
+    readonly PeriorbitalRegion: Coding;
+    /**
+     * Code: 1716007
+     */
+    readonly CupulaAmpullaris: Coding;
+    /**
+     * Code: 1721005
+     */
+    readonly RightTonsil: Coding;
+    /**
+     * Code: 1729007
+     */
+    readonly CentralTegmentalTract: Coding;
+    /**
+     * Code: 1732005
+     */
+    readonly TDThoracicDuct: Coding;
+    /**
+     * Code: 1765002
+     */
+    readonly StructureOfLymphaticVesselOfThorax: Coding;
+    /**
+     * Code: 1780008
+     */
+    readonly Premelanosome: Coding;
+    /**
+     * Code: 1781007
+     */
+    readonly SacroiliacRegion: Coding;
+    /**
+     * Code: 1797002
+     */
+    readonly Naris: Coding;
+    /**
+     * Code: 1818002
+     */
+    readonly GreaterCirculusArteriosusOfIris: Coding;
+    /**
+     * Code: 1825009
+     */
+    readonly RootOfNose: Coding;
+    /**
+     * Code: 1832000
+     */
+    readonly ScleralConjunctiva: Coding;
+    /**
+     * Code: 1840006
+     */
+    readonly ArrectorPiliMuscle: Coding;
+    /**
+     * Code: 1849007
+     */
+    readonly PharyngealRecess: Coding;
+    /**
+     * Code: 1853009
+     */
+    readonly StructureOfSuprahyoidMuscle: Coding;
+    /**
+     * Code: 1874005
+     */
+    readonly PromontoryLymphNode: Coding;
+    /**
+     * Code: 1893007
+     */
+    readonly JointOfUpperExtremity: Coding;
+    /**
+     * Code: 1895000
+     */
+    readonly MusculophrenicVein: Coding;
+    /**
+     * Code: 1902009
+     */
+    readonly SkinOfExternalEar: Coding;
+    /**
+     * Code: 1910005
+     */
+    readonly Ear: Coding;
+    /**
+     * Code: 1918003
+     */
+    readonly SuprarenalAorta: Coding;
+    /**
+     * Code: 1927002
+     */
+    readonly LeftElbow: Coding;
+    /**
+     * Code: 1992003
+     */
+    readonly PorusAcusticusInternus: Coding;
+    /**
+     * Code: 1997009
+     */
+    readonly CingulumDentis: Coding;
+    /**
+     * Code: 2010005
+     */
+    readonly ClavicularFacetOfScapula: Coding;
+    /**
+     * Code: 2020000
+     */
+    readonly SuperiorThoracicArtery: Coding;
+    /**
+     * Code: 202009
+     */
+    readonly AnteriorDivisionOfRenalArtery: Coding;
+    /**
+     * Code: 2031008
+     */
+    readonly StructureOfAnteriorMedianFissureOfSpinalCord: Coding;
+    /**
+     * Code: 2033006
+     */
+    readonly RightFallopianTube: Coding;
+    /**
+     * Code: 2044003
+     */
+    readonly VaginalNerves: Coding;
+    /**
+     * Code: 2048000
+     */
+    readonly LingualTonsil: Coding;
+    /**
+     * Code: 2049008
+     */
+    readonly ChorionicVilli: Coding;
+    /**
+     * Code: 205006
+     */
+    readonly LeftCommissureOfAorticValve: Coding;
+    /**
+     * Code: 2059009
+     */
+    readonly SkinOfEarLobule: Coding;
+    /**
+     * Code: 206007
+     */
+    readonly GluteusMaximusMuscle: Coding;
+    /**
+     * Code: 2071003
+     */
+    readonly ReticularFormationOfSpinalCord: Coding;
+    /**
+     * Code: 2076008
+     */
+    readonly HeadOfPhalanxOfHand: Coding;
+    /**
+     * Code: 2083001
+     */
+    readonly NucleusAmbiguus: Coding;
+    /**
+     * Code: 2095001
+     */
+    readonly AccessorySinus: Coding;
+    /**
+     * Code: 2123001
+     */
+    readonly MammilloinfundibularNucleus: Coding;
+    /**
+     * Code: 2150006
+     */
+    readonly UrinaryTractTransitionalEpithelialCell: Coding;
+    /**
+     * Code: 2156000
+     */
+    readonly GlialCell: Coding;
+    /**
+     * Code: 2160002
+     */
+    readonly LigamentumArteriosum: Coding;
+    /**
+     * Code: 2175005
+     */
+    readonly PharyngealCavity: Coding;
+    /**
+     * Code: 2182009
+     */
+    readonly EndometrialZonaBasalis: Coding;
+    /**
+     * Code: 2192001
+     */
+    readonly ClavicularPartOfPectoralisMajorMuscle: Coding;
+    /**
+     * Code: 2205003
+     */
+    readonly LaminaOfFifthThoracicVertebra: Coding;
+    /**
+     * Code: 2209009
+     */
+    readonly CerebralBasalSurface: Coding;
+    /**
+     * Code: 221001
+     */
+    readonly ArticularSurfacePhalangesOfFourthMetacarpalBone: Coding;
+    /**
+     * Code: 2236006
+     */
+    readonly LesserOsseousPelvis: Coding;
+    /**
+     * Code: 2246008
+     */
+    readonly TypeIHairCell: Coding;
+    /**
+     * Code: 2255006
+     */
+    readonly Subserosa: Coding;
+    /**
+     * Code: 227002
+     */
+    readonly CanalOfHering: Coding;
+    /**
+     * Code: 2285001
+     */
+    readonly StructureOfTorcularHerophili: Coding;
+    /**
+     * Code: 2292006
+     */
+    readonly StructureOfNasopharyngealGland: Coding;
+    /**
+     * Code: 2302002
+     */
+    readonly VeinOfTheKnee: Coding;
+    /**
+     * Code: 2305000
+     */
+    readonly StructureOfSpinousProcessOfCervicalVertebra: Coding;
+    /**
+     * Code: 2306004
+     */
+    readonly StructureOfBaseOfThirdMetacarpalBone: Coding;
+    /**
+     * Code: 2327009
+     */
+    readonly SalivarySeromucousGland: Coding;
+    /**
+     * Code: 2330002
+     */
+    readonly StructureOfSegmentalBronchialBranches: Coding;
+    /**
+     * Code: 233006
+     */
+    readonly HepatocolicLigament: Coding;
+    /**
+     * Code: 2332005
+     */
+    readonly MetencephalonOfFoetus: Coding;
+    /**
+     * Code: 2334006
+     */
+    readonly RenalCalyx: Coding;
+    /**
+     * Code: 2349003
+     */
+    readonly StructureOfNasalSutureOfSkull: Coding;
+    /**
+     * Code: 235004
+     */
+    readonly SuperiorLabialArtery: Coding;
+    /**
+     * Code: 2372001
+     */
+    readonly StructureOfMedialSurfaceOfToe: Coding;
+    /**
+     * Code: 2383005
+     */
+    readonly StructureOfPapillaryMusclesOfRightVentricle: Coding;
+    /**
+     * Code: 2389009
+     */
+    readonly StructureOfSuperiorMarginOfAdrenalGland: Coding;
+    /**
+     * Code: 2395005
+     */
+    readonly StructureOfTransverseFacialArtery: Coding;
+    /**
+     * Code: 2397002
+     */
+    readonly StructureOfFirstMetatarsalFacetOfMedialCuneiformBone: Coding;
+    /**
+     * Code: 2400006
+     */
+    readonly UniversalDesignation21: Coding;
+    /**
+     * Code: 2402003
+     */
+    readonly StructureOfDorsumOfFoot: Coding;
+    /**
+     * Code: 2421006
+     */
+    readonly StructureOfSubmaxillaryGanglion: Coding;
+    /**
+     * Code: 2433001
+     */
+    readonly StructureOfDigitalTendonAndTendonSheathOfFoot: Coding;
+    /**
+     * Code: 2436009
+     */
+    readonly TunicaIntimaOfVein: Coding;
+    /**
+     * Code: 2453002
+     */
+    readonly SubcutaneousTissueStructureOfPosteriorSurfaceOfForearm: Coding;
+    /**
+     * Code: 2454008
+     */
+    readonly StructureOfArticularSurfaceThirdMetacarpalOfSecondMetacarpalBone: Coding;
+    /**
+     * Code: 246001
+     */
+    readonly LateralVestibularNucleus: Coding;
+    /**
+     * Code: 247005
+     */
+    readonly Mesotympanum: Coding;
+    /**
+     * Code: 2484000
+     */
+    readonly SkinStructureOfFrenulumOfClitoris: Coding;
+    /**
+     * Code: 2489005
+     */
+    readonly StructureOfMedialCheckLigamentOfEye: Coding;
+    /**
+     * Code: 2499000
+     */
+    readonly EntireCisternaPontis: Coding;
+    /**
+     * Code: 2502001
+     */
+    readonly MembraneOfLysosome: Coding;
+    /**
+     * Code: 2504000
+     */
+    readonly StructureOfPancreaticPlexus: Coding;
+    /**
+     * Code: 2510000
+     */
+    readonly FemoralTriangleStructure: Coding;
+    /**
+     * Code: 251007
+     */
+    readonly PectoralRegion: Coding;
+    /**
+     * Code: 2539000
+     */
+    readonly StructureOfSuperiorRectalArtery: Coding;
+    /**
+     * Code: 2543001
+     */
+    readonly StructureOfCuboidArticularFacetOfFourthMetatarsalBone: Coding;
+    /**
+     * Code: 2550002
+     */
+    readonly BoneStructureOfPhalanxOfThumb: Coding;
+    /**
+     * Code: 256002
+     */
+    readonly KupfferCell: Coding;
+    /**
+     * Code: 2577006
+     */
+    readonly StructureOfGracilisMuscle: Coding;
+    /**
+     * Code: 2579009
+     */
+    readonly Plasmablast: Coding;
+    /**
+     * Code: 2592007
+     */
+    readonly AllExtremities: Coding;
+    /**
+     * Code: 2600000
+     */
+    readonly StructureOfFlexorPollicisLongusMuscleTendon: Coding;
+    /**
+     * Code: 2620004
+     */
+    readonly IntervertebralDiscStructureOfThirdThoracicVertebra: Coding;
+    /**
+     * Code: 263002
+     */
+    readonly ThoracicNerve: Coding;
+    /**
+     * Code: 2639009
+     */
+    readonly NeuroendocrineTissue: Coding;
+    /**
+     * Code: 2653009
+     */
+    readonly StructureOfPosteriorThalamicRadiationOfInternalCapsule: Coding;
+    /**
+     * Code: 266005
+     */
+    readonly RightLowerLobeOfLung: Coding;
+    /**
+     * Code: 2666009
+     */
+    readonly StructureOfSemispinalisCapitisMuscle: Coding;
+    /**
+     * Code: 2672009
+     */
+    readonly StructureOfAnteriorCutaneousBranchOfLumbosacralPlexus: Coding;
+    /**
+     * Code: 2675006
+     */
+    readonly StructureOfAnteriorEthmoidalArtery: Coding;
+    /**
+     * Code: 2681003
+     */
+    readonly StructureOfDorsalNerveOfPenis: Coding;
+    /**
+     * Code: 2682005
+     */
+    readonly BladderMucosa: Coding;
+    /**
+     * Code: 2686008
+     */
+    readonly StructureOfMedialOlfactoryGyrus: Coding;
+    /**
+     * Code: 2687004
+     */
+    readonly StructureOfBowmanSpace: Coding;
+    /**
+     * Code: 2695000
+     */
+    readonly LeftMaxillarySinusStructure: Coding;
+    /**
+     * Code: 2703009
+     */
+    readonly EntireCalcarineArtery: Coding;
+    /**
+     * Code: 2712006
+     */
+    readonly StructureOfCapsuleOfAnkleJoint: Coding;
+    /**
+     * Code: 2718005
+     */
+    readonly StructureOfApicalForamenOfTooth: Coding;
+    /**
+     * Code: 272005
+     */
+    readonly SuperiorArticularProcessOfLumbarVertebra: Coding;
+    /**
+     * Code: 2726002
+     */
+    readonly StructureOfFoldForStapes: Coding;
+    /**
+     * Code: 273000
+     */
+    readonly LateralMyocardium: Coding;
+    /**
+     * Code: 2730004
+     */
+    readonly EntireVitellineVeinOfPlacenta: Coding;
+    /**
+     * Code: 2739003
+     */
+    readonly EndometrialStructure: Coding;
+    /**
+     * Code: 2741002
+     */
+    readonly StructureOfMedialOccipitotemporalGyrus: Coding;
+    /**
+     * Code: 2746007
+     */
+    readonly CircularLayerOfGastricMuscularis: Coding;
+    /**
+     * Code: 2748008
+     */
+    readonly SpinalCordStructure: Coding;
+    /**
+     * Code: 2759004
+     */
+    readonly EccrineGlandStructure: Coding;
+    /**
+     * Code: 2771005
+     */
+    readonly LaminaPropriaOfUreter: Coding;
+    /**
+     * Code: 2789006
+     */
+    readonly ApocrineGlandStructure: Coding;
+    /**
+     * Code: 2792005
+     */
+    readonly StructureOfParsTensaOfTympanicMembrane: Coding;
+    /**
+     * Code: 2803000
+     */
+    readonly StructureOfTendonSheathOfPopliteusMuscle: Coding;
+    /**
+     * Code: 2810006
+     */
+    readonly StructureOfCremastericFascia: Coding;
+    /**
+     * Code: 2812003
+     */
+    readonly StructureOfHeadOfFemur: Coding;
+    /**
+     * Code: 2824005
+     */
+    readonly StructureOfSpinousProcessOfFourthThoracicVertebra: Coding;
+    /**
+     * Code: 2826007
+     */
+    readonly StructureOfLaminaOfFourthLumbarVertebra: Coding;
+    /**
+     * Code: 2830005
+     */
+    readonly StructureOfDorsalDigitalNervesOfLateralHalluxAndMedialSecondToe: Coding;
+    /**
+     * Code: 283001
+     */
+    readonly CentralAxillaryLymphNode: Coding;
+    /**
+     * Code: 2839006
+     */
+    readonly StructureOfPerivesicularTissuesOfSeminalVesicles: Coding;
+    /**
+     * Code: 284007
+     */
+    readonly FlexorTendonAndTendonSheathOfFourthToe: Coding;
+    /**
+     * Code: 2841007
+     */
+    readonly RenalArteryStructure: Coding;
+    /**
+     * Code: 2845003
+     */
+    readonly StructureOfRespiratoryEpithelium: Coding;
+    /**
+     * Code: 2848001
+     */
+    readonly StructureOfSuperficialEpigastricArtery: Coding;
+    /**
+     * Code: 2855004
+     */
+    readonly StructureOfAccessoryCephalicVein: Coding;
+    /**
+     * Code: 2861001
+     */
+    readonly EntireGlandOrgan: Coding;
+    /**
+     * Code: 289002
+     */
+    readonly MetacarpophalangealJointOfIndexFinger: Coding;
+    /**
+     * Code: 2894003
+     */
+    readonly StructureOfPosteriorEpiglottis: Coding;
+    /**
+     * Code: 2905008
+     */
+    readonly StructureOfAnteriorLigamentOfUterus: Coding;
+    /**
+     * Code: 2909002
+     */
+    readonly StructureOfPosteriorPortionOfDiaphragmaticAspectOfLiver: Coding;
+    /**
+     * Code: 2920002
+     */
+    readonly StructureOfFacialNerveMotorBranch: Coding;
+    /**
+     * Code: 2922005
+     */
+    readonly StructureOfPosteriorPapillaryMuscleOfLeftVentricle: Coding;
+    /**
+     * Code: 2923000
+     */
+    readonly SubcutaneousTissueStructureOfSupraorbitalArea: Coding;
+    /**
+     * Code: 2954001
+     */
+    readonly SupernumeraryDeciduousTooth: Coding;
+    /**
+     * Code: 2969000
+     */
+    readonly AnatomicalSpaceStructure: Coding;
+    /**
+     * Code: 2979003
+     */
+    readonly BoneStructureOfMedialCuneiform: Coding;
+    /**
+     * Code: 2986006
+     */
+    readonly StructureOfTalarFacetOfNavicularBoneOfFoot: Coding;
+    /**
+     * Code: 2998001
+     */
+    readonly EntireRightMarginOfUterus: Coding;
+    /**
+     * Code: 3003007
+     */
+    readonly InternalCapsuleAnteriorLimbStructure: Coding;
+    /**
+     * Code: 3008003
+     */
+    readonly WhiteFibrocartilage: Coding;
+    /**
+     * Code: 301000
+     */
+    readonly FifthMetatarsalBone: Coding;
+    /**
+     * Code: 3028004
+     */
+    readonly TransitionalEpithelialCell: Coding;
+    /**
+     * Code: 3039001
+     */
+    readonly SubcutaneousTissueStructureOfThigh: Coding;
+    /**
+     * Code: 3042007
+     */
+    readonly StructureOfGlomerularUrinaryPole: Coding;
+    /**
+     * Code: 3054007
+     */
+    readonly StructureOfArticularSurfaceMetacarpalOfPhalanxOfThumb: Coding;
+    /**
+     * Code: 3055008
+     */
+    readonly StructureOfBoneMarrowOfVertebralBody: Coding;
+    /**
+     * Code: 3056009
+     */
+    readonly StructureOfAnteroventralNucleusOfThalamus: Coding;
+    /**
+     * Code: 3057000
+     */
+    readonly NerveStructure: Coding;
+    /**
+     * Code: 3058005
+     */
+    readonly PNSPeripheralNervousSystem: Coding;
+    /**
+     * Code: 3062004
+     */
+    readonly SpinalArachnoid: Coding;
+    /**
+     * Code: 3068000
+     */
+    readonly StructureOfSeminalVesicleLumen: Coding;
+    /**
+     * Code: 3081007
+     */
+    readonly MitochondrionInDivision: Coding;
+    /**
+     * Code: 3093003
+     */
+    readonly StructureOfTendinousArchOfPelvicFascia: Coding;
+    /**
+     * Code: 3100007
+     */
+    readonly ClinicalCrownOfTooth: Coding;
+    /**
+     * Code: 311007
+     */
+    readonly PlantarSurfaceOfGreatToe: Coding;
+    /**
+     * Code: 3113001
+     */
+    readonly StructureOfSuprachoroidalSpace: Coding;
+    /**
+     * Code: 3117000
+     */
+    readonly StructureOfDorsalSurfaceOfIndexFinger: Coding;
+    /**
+     * Code: 3118005
+     */
+    readonly StructureOfTrabeculaCarneaOfLeftVentricle: Coding;
+    /**
+     * Code: 3120008
+     */
+    readonly PleuralMembraneStructure: Coding;
+    /**
+     * Code: 3134008
+     */
+    readonly StructureOfHeadOfFourthMetatarsalBone: Coding;
+    /**
+     * Code: 3138006
+     */
+    readonly BoneTissue: Coding;
+    /**
+     * Code: 315003
+     */
+    readonly SkinOfUmbilicus: Coding;
+    /**
+     * Code: 3153003
+     */
+    readonly StructureOfTractusOlivocochlearis: Coding;
+    /**
+     * Code: 3156006
+     */
+    readonly StructureOfObturatorArtery: Coding;
+    /**
+     * Code: 3159004
+     */
+    readonly StructureOfCostocervicalTrunk: Coding;
+    /**
+     * Code: 3169005
+     */
+    readonly SpinalNerveStructure: Coding;
+    /**
+     * Code: 3178004
+     */
+    readonly StructureOfRapheOfSoftPalate: Coding;
+    /**
+     * Code: 318001
+     */
+    readonly CardiacImpressionOfLiver: Coding;
+    /**
+     * Code: 3194006
+     */
+    readonly EndocardiumOfRightAtrium: Coding;
+    /**
+     * Code: 3198009
+     */
+    readonly MonostomaticSublingualGland: Coding;
+    /**
+     * Code: 3215002
+     */
+    readonly SubcutaneousTissueStructureOfNuchalRegion: Coding;
+    /**
+     * Code: 3222005
+     */
+    readonly AllLargeArteries: Coding;
+    /**
+     * Code: 3227004
+     */
+    readonly LeftCoronaryArteryMainStem: Coding;
+    /**
+     * Code: 3236000
+     */
+    readonly StructureOfPosteriorSegmentOfRightUpperLobeOfLung: Coding;
+    /**
+     * Code: 3243006
+     */
+    readonly StructureOfParametrialLymphNode: Coding;
+    /**
+     * Code: 3255000
+     */
+    readonly PapillaryArea: Coding;
+    /**
+     * Code: 3262009
+     */
+    readonly StructureOfRootCanalOfTooth: Coding;
+    /**
+     * Code: 3279003
+     */
+    readonly StructureOfPedicleOfThirdCervicalVertebra: Coding;
+    /**
+     * Code: 3295003
+     */
+    readonly StructureOfVentralAnteriorNucleusOfThalamus: Coding;
+    /**
+     * Code: 3301002
+     */
+    readonly TectopontineFibers: Coding;
+    /**
+     * Code: 3302009
+     */
+    readonly SplenicBranchOfSplenicArtery: Coding;
+    /**
+     * Code: 3315000
+     */
+    readonly StructureOfVestibulospinalTract: Coding;
+    /**
+     * Code: 3332001
+     */
+    readonly OccipitofrontalDiameterOfHead: Coding;
+    /**
+     * Code: 3336003
+     */
+    readonly HaversianCanal: Coding;
+    /**
+     * Code: 3341006
+     */
+    readonly RightLungStructure: Coding;
+    /**
+     * Code: 3350008
+     */
+    readonly EntireRightCommissureOfPulmonicValve: Coding;
+    /**
+     * Code: 3362007
+     */
+    readonly IntertragalIncisureStructure: Coding;
+    /**
+     * Code: 3366005
+     */
+    readonly StructureOfAnteriorPapillaryMuscleOfLeftVentricle: Coding;
+    /**
+     * Code: 3370002
+     */
+    readonly StructureOfSupportingTissueOfRectum: Coding;
+    /**
+     * Code: 3374006
+     */
+    readonly SecondarySpermatocyte: Coding;
+    /**
+     * Code: 3377004
+     */
+    readonly StructureOfAggerNasi: Coding;
+    /**
+     * Code: 3382006
+     */
+    readonly StructureOfRimaOris: Coding;
+    /**
+     * Code: 3383001
+     */
+    readonly NonsegmentedBasophil: Coding;
+    /**
+     * Code: 3394002
+     */
+    readonly SuboccipitobregmaticDiameterOfHead: Coding;
+    /**
+     * Code: 3395001
+     */
+    readonly StructureOfSuperiorPalpebralArch: Coding;
+    /**
+     * Code: 3396000
+     */
+    readonly StructureOfMesogastrium: Coding;
+    /**
+     * Code: 3400000
+     */
+    readonly CellOfBone: Coding;
+    /**
+     * Code: 3409004
+     */
+    readonly StructureOfLateralMarginOfForearm: Coding;
+    /**
+     * Code: 3417007
+     */
+    readonly StructureOfRotatorMuscle: Coding;
+    /**
+     * Code: 3438001
+     */
+    readonly DeepLymphaticOfUpperExtremity: Coding;
+    /**
+     * Code: 344001
+     */
+    readonly Ankle: Coding;
+    /**
+     * Code: 3444002
+     */
+    readonly ThalamostriateVein: Coding;
+    /**
+     * Code: 3447009
+     */
+    readonly PenetratedOocyte: Coding;
+    /**
+     * Code: 345000
+     */
+    readonly PenetratingAtrioventricularBundle: Coding;
+    /**
+     * Code: 3460003
+     */
+    readonly StructureOfAnterodorsalNucleusOfThalamus: Coding;
+    /**
+     * Code: 3462006
+     */
+    readonly StructureOfCommissureOfTricuspidValve: Coding;
+    /**
+     * Code: 3471002
+     */
+    readonly PosteriorMidlineOfTrunk: Coding;
+    /**
+     * Code: 3478008
+     */
+    readonly StructureOfVastusMedialisMuscle: Coding;
+    /**
+     * Code: 3481003
+     */
+    readonly StructureOfEmbryonicTestis: Coding;
+    /**
+     * Code: 3488009
+     */
+    readonly AnnulateLamellaCisternalLumen: Coding;
+    /**
+     * Code: 3490005
+     */
+    readonly SubcutaneousTissueStructureOfSuboccipitalRegion: Coding;
+    /**
+     * Code: 3524005
+     */
+    readonly StructureOfLateralWallOfMastoidAntrum: Coding;
+    /**
+     * Code: 3538003
+     */
+    readonly StructureOfCapsuleOfProximalTibiofibularJoint: Coding;
+    /**
+     * Code: 3541007
+     */
+    readonly StructureOfDorsalMetatarsalArtery: Coding;
+    /**
+     * Code: 3553006
+     */
+    readonly StructureOfThyroidCapsule: Coding;
+    /**
+     * Code: 3556003
+     */
+    readonly StructureOfDorsalNucleusOfTrapezoidBody: Coding;
+    /**
+     * Code: 356000
+     */
+    readonly ReticularCorium: Coding;
+    /**
+     * Code: 3563003
+     */
+    readonly MuscularisOfUreter: Coding;
+    /**
+     * Code: 3572006
+     */
+    readonly VertebralBody: Coding;
+    /**
+     * Code: 3578005
+     */
+    readonly StructureOfBodyOfGallbladder: Coding;
+    /**
+     * Code: 3582007
+     */
+    readonly StructureOfGastrophrenicLigament: Coding;
+    /**
+     * Code: 3584008
+     */
+    readonly T10DorsalArch: Coding;
+    /**
+     * Code: 3594003
+     */
+    readonly StructureOfStraightPartOfLongusColliMuscle: Coding;
+    /**
+     * Code: 3608004
+     */
+    readonly IschiococcygeusMuscle: Coding;
+    /**
+     * Code: 3609007
+     */
+    readonly StructureOfOccipitalBranchOfPosteriorAuricularArtery: Coding;
+    /**
+     * Code: 3646006
+     */
+    readonly Lamellipodium: Coding;
+    /**
+     * Code: 3663005
+     */
+    readonly StructureOfTympanicOstiumOfEustachianTube: Coding;
+    /**
+     * Code: 3665003
+     */
+    readonly PelvicWallStructure: Coding;
+    /**
+     * Code: 3670005
+     */
+    readonly EntireSubpyloricLymphNode: Coding;
+    /**
+     * Code: 3711007
+     */
+    readonly GreatVessel: Coding;
+    /**
+     * Code: 3743007
+     */
+    readonly StructureOfLateralThoracicArtery: Coding;
+    /**
+     * Code: 3761003
+     */
+    readonly StructureOfNucleusPulposusOfIntervertebralDiscOfFirstThoracicVertebra: Coding;
+    /**
+     * Code: 3766008
+     */
+    readonly SubcutaneousTissueStructureOfLowerExtremity: Coding;
+    /**
+     * Code: 3785006
+     */
+    readonly EntireDorsalMetacarpalLigament: Coding;
+    /**
+     * Code: 3788008
+     */
+    readonly StructureOfApicalSegmentOfRightLowerLobeOfLung: Coding;
+    /**
+     * Code: 3789000
+     */
+    readonly EnteroendocrineCell: Coding;
+    /**
+     * Code: 3810000
+     */
+    readonly SeptalCartilageStructure: Coding;
+    /**
+     * Code: 3838008
+     */
+    readonly StructureOfApexOfCoccyx: Coding;
+    /**
+     * Code: 3860006
+     */
+    readonly StructureOfTransplantedLiver: Coding;
+    /**
+     * Code: 3865001
+     */
+    readonly StructureOfInterscapularRegionOfBack: Coding;
+    /**
+     * Code: 3867009
+     */
+    readonly StructureOfDorsalSurfaceOfGreatToe: Coding;
+    /**
+     * Code: 3876002
+     */
+    readonly SubcutaneousTissueStructureOfFemoralRegion: Coding;
+    /**
+     * Code: 3877006
+     */
+    readonly StructureOfCommonCarotidPlexus: Coding;
+    /**
+     * Code: 3910004
+     */
+    readonly SubcutaneousTissueStructureOfLateralSurfaceOfFourthToe: Coding;
+    /**
+     * Code: 3916005
+     */
+    readonly StructureOfOccipitalLymphNode: Coding;
+    /**
+     * Code: 3924000
+     */
+    readonly StructureOfPericardiophrenicArtery: Coding;
+    /**
+     * Code: 393006
+     */
+    readonly WallOfUrinaryBladder: Coding;
+    /**
+     * Code: 3931001
+     */
+    readonly OWOvalWindow: Coding;
+    /**
+     * Code: 3935005
+     */
+    readonly HeadOfTenthRibStructure: Coding;
+    /**
+     * Code: 3937002
+     */
+    readonly StructureOfEntorhinalCortex: Coding;
+    /**
+     * Code: 3954005
+     */
+    readonly LacrimalSacStructure: Coding;
+    /**
+     * Code: 3956007
+     */
+    readonly StructureOfFifthMetatarsalArticularFacetOfFourthMetatarsalBone: Coding;
+    /**
+     * Code: 3959000
+     */
+    readonly StructureOfRectusCapitisMuscle: Coding;
+    /**
+     * Code: 3960005
+     */
+    readonly OlfactoryTractStructure: Coding;
+    /**
+     * Code: 3964001
+     */
+    readonly StructureOfGyrusOfBrain: Coding;
+    /**
+     * Code: 3966004
+     */
+    readonly EntireParietalBranchOfAnteriorCerebralArtery: Coding;
+    /**
+     * Code: 3977005
+     */
+    readonly SubcutaneousTissueStructureOfConcha: Coding;
+    /**
+     * Code: 3984002
+     */
+    readonly DeepVeinOfClitoris: Coding;
+    /**
+     * Code: 3989007
+     */
+    readonly StructureOfMedialGlobusPallidus: Coding;
+    /**
+     * Code: 4015004
+     */
+    readonly ChromosomesGroupA: Coding;
+    /**
+     * Code: 4019005
+     */
+    readonly PosteriorCommissureOfLabiumMajorum: Coding;
+    /**
+     * Code: 402006
+     */
+    readonly DentalBranchesOfInferiorAlveolarArtery: Coding;
+    /**
+     * Code: 4029003
+     */
+    readonly EosinophilicProgranulocyte: Coding;
+    /**
+     * Code: 405008
+     */
+    readonly PosteriorTemporalDiploicVein: Coding;
+    /**
+     * Code: 4061004
+     */
+    readonly LateralOrbitalWall: Coding;
+    /**
+     * Code: 4066009
+     */
+    readonly StructureOfCapsuleOfProximalInterphalangealJointOfIndexFinger: Coding;
+    /**
+     * Code: 4072009
+     */
+    readonly StructureOfFourthCoccygealVertebra: Coding;
+    /**
+     * Code: 4081003
+     */
+    readonly EntireDorsalLingualVein: Coding;
+    /**
+     * Code: 4093007
+     */
+    readonly StructureOfVagusNerveBronchialBranch: Coding;
+    /**
+     * Code: 4111006
+     */
+    readonly MaculaOfTheSaccule: Coding;
+    /**
+     * Code: 4117005
+     */
+    readonly LumbosacralSpinalCordCentralCanalStructure: Coding;
+    /**
+     * Code: 4121003
+     */
+    readonly StructureOfSuperiorFrontalSulcus: Coding;
+    /**
+     * Code: 414003
+     */
+    readonly GastricFundus: Coding;
+    /**
+     * Code: 4146003
+     */
+    readonly StructureOfArteryOfExtremity: Coding;
+    /**
+     * Code: 4148002
+     */
+    readonly StructureOfPalmarSurfaceOfLittleFinger: Coding;
+    /**
+     * Code: 4150005
+     */
+    readonly CeliacNervousPlexusStructure: Coding;
+    /**
+     * Code: 4158003
+     */
+    readonly AbdominalAorticPlexusStructure: Coding;
+    /**
+     * Code: 4159006
+     */
+    readonly HyparterialBronchus: Coding;
+    /**
+     * Code: 4180000
+     */
+    readonly BothLowerExtremities: Coding;
+    /**
+     * Code: 4193005
+     */
+    readonly EntireExtensorTendonAndTendonSheathOfFifthToe: Coding;
+    /**
+     * Code: 4205002
+     */
+    readonly TurkCell: Coding;
+    /**
+     * Code: 4212006
+     */
+    readonly EpithelialCells: Coding;
+    /**
+     * Code: 4215008
+     */
+    readonly HeadOfSecondRibStructure: Coding;
+    /**
+     * Code: 422005
+     */
+    readonly InferiorSurfaceOfTongue: Coding;
+    /**
+     * Code: 4247003
+     */
+    readonly BoneStructureOfFirstMetacarpal: Coding;
+    /**
+     * Code: 4258007
+     */
+    readonly PosteriorTibialVein: Coding;
+    /**
+     * Code: 4268002
+     */
+    readonly LateralSpinorubralTract: Coding;
+    /**
+     * Code: 4276000
+     */
+    readonly StructureOfInferiorArticularProcessOfSeventhCervicalVertebra: Coding;
+    /**
+     * Code: 4281009
+     */
+    readonly StructureOfMiddlePortionOfIleum: Coding;
+    /**
+     * Code: 4295007
+     */
+    readonly StructureOfParacorticalAreaOfLymphNode: Coding;
+    /**
+     * Code: 4303006
+     */
+    readonly CartilageCanal: Coding;
+    /**
+     * Code: 4312008
+     */
+    readonly AnteriorMidlineOfAbdomen: Coding;
+    /**
+     * Code: 4317002
+     */
+    readonly StructureOfSpinalisMuscle: Coding;
+    /**
+     * Code: 4328003
+     */
+    readonly ProtoplasmicAstrocyte: Coding;
+    /**
+     * Code: 4335006
+     */
+    readonly UpperJawRegion: Coding;
+    /**
+     * Code: 4352005
+     */
+    readonly StructureOfSubchorionicSpace: Coding;
+    /**
+     * Code: 4358009
+     */
+    readonly StructureOfLateralSurfaceOfLittleFinger: Coding;
+    /**
+     * Code: 4360006
+     */
+    readonly StratumSpinosumStructure: Coding;
+    /**
+     * Code: 4369007
+     */
+    readonly SmallIntestineMucousMembraneStructure: Coding;
+    /**
+     * Code: 4371007
+     */
+    readonly StructureOfFourthMetatarsalFacetOfLateralCuneiformBone: Coding;
+    /**
+     * Code: 4375003
+     */
+    readonly StructureOfIncisureOfCartilaginousPortionOfAuditoryCanal: Coding;
+    /**
+     * Code: 4377006
+     */
+    readonly StructureOfParafascicularNucleusOfThalamus: Coding;
+    /**
+     * Code: 4394008
+     */
+    readonly ScalaVestibuliStructure: Coding;
+    /**
+     * Code: 4402002
+     */
+    readonly StructureOfAnteriorArticularSurfaceForTalus: Coding;
+    /**
+     * Code: 4419000
+     */
+    readonly TrachealSubmucosa: Coding;
+    /**
+     * Code: 4421005
+     */
+    readonly CellularStructures: Coding;
+    /**
+     * Code: 4430002
+     */
+    readonly StructureOfClivusOssisSphenoidalis: Coding;
+    /**
+     * Code: 4432005
+     */
+    readonly StructureOfDuctusArteriosus: Coding;
+    /**
+     * Code: 4442007
+     */
+    readonly DentalArchStructure: Coding;
+    /**
+     * Code: 446003
+     */
+    readonly TrochantericBursa: Coding;
+    /**
+     * Code: 4486002
+     */
+    readonly StructureOfAccessorySinusGland: Coding;
+    /**
+     * Code: 4524000
+     */
+    readonly StructureOfSubclavianPlexus: Coding;
+    /**
+     * Code: 4527007
+     */
+    readonly JointStructureOfLowerExtremity: Coding;
+    /**
+     * Code: 4537002
+     */
+    readonly StructureOfInternalMedullaryLaminaOfThalamus: Coding;
+    /**
+     * Code: 4548009
+     */
+    readonly LamellatedGranuleAsInSurfactantSecretingCell: Coding;
+    /**
+     * Code: 4549001
+     */
+    readonly EntireVagusNerveParasympatheticFibersToLiverGallbladderBileDuctsAndPancreas: Coding;
+    /**
+     * Code: 4566004
+     */
+    readonly StructureOfTentoriumCerebelli: Coding;
+    /**
+     * Code: 457008
+     */
+    readonly CollateralLigament: Coding;
+    /**
+     * Code: 4573009
+     */
+    readonly Desmosome: Coding;
+    /**
+     * Code: 4578000
+     */
+    readonly SkinStructureOfPosteriorSurfaceOfThigh: Coding;
+    /**
+     * Code: 4583008
+     */
+    readonly StructureOfSpleniusMuscleOfTrunk: Coding;
+    /**
+     * Code: 4588004
+     */
+    readonly StructureOfMiddleTrunkOfBrachialPlexus: Coding;
+    /**
+     * Code: 4596009
+     */
+    readonly LarynxStructure: Coding;
+    /**
+     * Code: 4603002
+     */
+    readonly StructureOfBaseOfPhalanxOfFoot: Coding;
+    /**
+     * Code: 4606005
+     */
+    readonly TubercleOfEighthRibStructure: Coding;
+    /**
+     * Code: 461002
+     */
+    readonly LateralCorticospinalTract: Coding;
+    /**
+     * Code: 4621004
+     */
+    readonly StructureOfLesserTuberosityOfHumerus: Coding;
+    /**
+     * Code: 4624007
+     */
+    readonly StructureOfLymphaticCord: Coding;
+    /**
+     * Code: 464005
+     */
+    readonly BasophilicNormoblast: Coding;
+    /**
+     * Code: 4647008
+     */
+    readonly LipidDropletHomogeneous: Coding;
+    /**
+     * Code: 465006
+     */
+    readonly AscendingFrontalGyrus: Coding;
+    /**
+     * Code: 4651005
+     */
+    readonly StructureOfTunicaAlbugineaOfCorpusSpongiosum: Coding;
+    /**
+     * Code: 4658004
+     */
+    readonly SkinStructureOfNuchalRegion: Coding;
+    /**
+     * Code: 4677002
+     */
+    readonly BasalLaminaInclusionInSubepithelialLocation: Coding;
+    /**
+     * Code: 4703008
+     */
+    readonly CardinalVeinStructure: Coding;
+    /**
+     * Code: 471000
+     */
+    readonly FlexorHallucisLongusInLeg: Coding;
+    /**
+     * Code: 4717004
+     */
+    readonly NeutrophilicMyelocyte: Coding;
+    /**
+     * Code: 4718009
+     */
+    readonly EntireVenousPlexusOfTheForamenOvaleBasisCranii: Coding;
+    /**
+     * Code: 4743003
+     */
+    readonly StructureOfVentralSacrococcygealLigament: Coding;
+    /**
+     * Code: 4755009
+     */
+    readonly StructureOfMedialSurfaceOfGreatToe: Coding;
+    /**
+     * Code: 4759003
+     */
+    readonly StructureOfGemellusMuscle: Coding;
+    /**
+     * Code: 4766002
+     */
+    readonly StructureOfSupracardinalVein: Coding;
+    /**
+     * Code: 4768001
+     */
+    readonly StructureOfPerinealNerve: Coding;
+    /**
+     * Code: 4774001
+     */
+    readonly StructureOfPhrenicNervePericardialBranch: Coding;
+    /**
+     * Code: 4775000
+     */
+    readonly StructureOfVentralPosteriorInferiorNucleus: Coding;
+    /**
+     * Code: 4799000
+     */
+    readonly DeiterCell: Coding;
+    /**
+     * Code: 480000
+     */
+    readonly CardiopulmonaryCirculatorySystem: Coding;
+    /**
+     * Code: 4810005
+     */
+    readonly StructureOfUterineVenousPlexus: Coding;
+    /**
+     * Code: 4812002
+     */
+    readonly AnteriorTibialCompartmentStructure: Coding;
+    /**
+     * Code: 4828007
+     */
+    readonly FemoralCanalStructure: Coding;
+    /**
+     * Code: 4840007
+     */
+    readonly SubcutaneousTissueStructureOfRingFinger: Coding;
+    /**
+     * Code: 4843009
+     */
+    readonly AmpullaOfSemicircularDuct: Coding;
+    /**
+     * Code: 485005
+     */
+    readonly TCTransverseColon: Coding;
+    /**
+     * Code: 4861000
+     */
+    readonly StructureOfTuberculumImpar: Coding;
+    /**
+     * Code: 4866005
+     */
+    readonly ConstrictorMuscleOfPharynxStructure: Coding;
+    /**
+     * Code: 4870002
+     */
+    readonly StructureOfDorsalTegmentalNucleiOfMidbrain: Coding;
+    /**
+     * Code: 4871003
+     */
+    readonly LaminaOfModiolusOfCochlea: Coding;
+    /**
+     * Code: 4881004
+     */
+    readonly EntireSublingualVein: Coding;
+    /**
+     * Code: 4888005
+     */
+    readonly EntireInterlobularVeinOfKidney: Coding;
+    /**
+     * Code: 4897009
+     */
+    readonly CellMembraneProkaryotic: Coding;
+    /**
+     * Code: 4905007
+     */
+    readonly StructureOfUterovaginalPlexus: Coding;
+    /**
+     * Code: 4906008
+     */
+    readonly MastoidAntrumStructure: Coding;
+    /**
+     * Code: 4924005
+     */
+    readonly CerebellarGracileLobule: Coding;
+    /**
+     * Code: 4942000
+     */
+    readonly LowerLimbLymphNodeStructure: Coding;
+    /**
+     * Code: 4954000
+     */
+    readonly StructureOfRadialNotchOfUlna: Coding;
+    /**
+     * Code: 4956003
+     */
+    readonly SubcutaneousTissueStructureOfBack: Coding;
+    /**
+     * Code: 4958002
+     */
+    readonly AmygdaloidStructure: Coding;
+    /**
+     * Code: 5001007
+     */
+    readonly StructureOfSuperiorTemporalSulcus: Coding;
+    /**
+     * Code: 5023006
+     */
+    readonly StructureOfYellowBoneMarrow: Coding;
+    /**
+     * Code: 5026003
+     */
+    readonly StructureOfPosteriorSurfaceOfProstate: Coding;
+    /**
+     * Code: 5046008
+     */
+    readonly StructureOfSuperficialDorsalVeinsOfClitoris: Coding;
+    /**
+     * Code: 5068003
+     */
+    readonly StructureOfObturatorInternusMuscleIschialBursa: Coding;
+    /**
+     * Code: 5069006
+     */
+    readonly StructureOfRugalColumn: Coding;
+    /**
+     * Code: 5076001
+     */
+    readonly StructureOfInfrasternalAngle: Coding;
+    /**
+     * Code: 5115006
+     */
+    readonly StructureOfPosteriorAuricularVein: Coding;
+    /**
+     * Code: 5122003
+     */
+    readonly EntireAngleOfFirstRib: Coding;
+    /**
+     * Code: 5128004
+     */
+    readonly LensZonules: Coding;
+    /**
+     * Code: 5140004
+     */
+    readonly PermanentUpperRight6Tooth: Coding;
+    /**
+     * Code: 5192008
+     */
+    readonly StructureOfIntervertebralForamenOfTwelfthThoracicVertebra: Coding;
+    /**
+     * Code: 5194009
+     */
+    readonly StructureOfEpitheliumOfLens: Coding;
+    /**
+     * Code: 5195005
+     */
+    readonly StructureOfRightExternalCarotidArtery: Coding;
+    /**
+     * Code: 5204005
+     */
+    readonly SuperiorIleocecalRecess: Coding;
+    /**
+     * Code: 5213007
+     */
+    readonly FrontalVein: Coding;
+    /**
+     * Code: 5225005
+     */
+    readonly StructureOfUterineOstiumOfFallopianTube: Coding;
+    /**
+     * Code: 5228007
+     */
+    readonly RightCerebralHemisphereStructure: Coding;
+    /**
+     * Code: 5229004
+     */
+    readonly StructureOfMucosaOfGallbladder: Coding;
+    /**
+     * Code: 5261000
+     */
+    readonly StructureOfThoracicIntervertebralDisc: Coding;
+    /**
+     * Code: 5272005
+     */
+    readonly SkinStructureOfLateralPortionOfNeck: Coding;
+    /**
+     * Code: 5279001
+     */
+    readonly StructureOfForamenSingulare: Coding;
+    /**
+     * Code: 528006
+     */
+    readonly CostalSurfaceOfLung: Coding;
+    /**
+     * Code: 5296000
+     */
+    readonly StructureOfAnteriorMediastinalLymphNode: Coding;
+    /**
+     * Code: 5324007
+     */
+    readonly StructureOfSuperiorPoleOfKidney: Coding;
+    /**
+     * Code: 5329002
+     */
+    readonly BoneStructureOfC4: Coding;
+    /**
+     * Code: 5336001
+     */
+    readonly StructureOfInferiorFrontalGyrus: Coding;
+    /**
+     * Code: 5347008
+     */
+    readonly SynapticSpecializationCytoplasmic: Coding;
+    /**
+     * Code: 5362005
+     */
+    readonly StructureOfMedianArcuateLigamentOfDiaphragm: Coding;
+    /**
+     * Code: 5366008
+     */
+    readonly HippocampalStructure: Coding;
+    /**
+     * Code: 5379004
+     */
+    readonly SmallIntestineMuscularisPropria: Coding;
+    /**
+     * Code: 5382009
+     */
+    readonly SuperiorFasciaOfPerineum: Coding;
+    /**
+     * Code: 5394000
+     */
+    readonly UterineParacervicalLymphNode: Coding;
+    /**
+     * Code: 5398002
+     */
+    readonly NormalFatPad: Coding;
+    /**
+     * Code: 5403001
+     */
+    readonly ArticularProcessOfThirdLumbarVertebra: Coding;
+    /**
+     * Code: 5421003
+     */
+    readonly SexChromosomeY: Coding;
+    /**
+     * Code: 5427004
+     */
+    readonly ApocrineIntraepidermalDuct: Coding;
+    /**
+     * Code: 5458003
+     */
+    readonly DeepArteryOfClitoris: Coding;
+    /**
+     * Code: 5459006
+     */
+    readonly CardiacIncisureOfStomach: Coding;
+    /**
+     * Code: 5491007
+     */
+    readonly LacrimalPartOfOrbicularisOculiMuscle: Coding;
+    /**
+     * Code: 5493005
+     */
+    readonly MetacarpophalangealJointOfLittleFinger: Coding;
+    /**
+     * Code: 5498001
+     */
+    readonly SuperiorAberrantDuctuleOfEpididymis: Coding;
+    /**
+     * Code: 5501001
+     */
+    readonly HyaloidArtery: Coding;
+    /**
+     * Code: 5520004
+     */
+    readonly SubcutaneousTissueOfChin: Coding;
+    /**
+     * Code: 552004
+     */
+    readonly VagusNerveParasympatheticFibersToCardiacPlexus: Coding;
+    /**
+     * Code: 5538001
+     */
+    readonly TegmentalPortionOfPons: Coding;
+    /**
+     * Code: 5542003
+     */
+    readonly CristaMarginalisOfTooth: Coding;
+    /**
+     * Code: 5544002
+     */
+    readonly LongitudinalLayerOfDuodenalMuscularisPropria: Coding;
+    /**
+     * Code: 5560003
+     */
+    readonly AlveolarRidgeMucousMembrane: Coding;
+    /**
+     * Code: 5564007
+     */
+    readonly Singlet: Coding;
+    /**
+     * Code: 5574005
+     */
+    readonly SeventhCostalCartilage: Coding;
+    /**
+     * Code: 5580002
+     */
+    readonly TendonOfSupraspinatusMuscle: Coding;
+    /**
+     * Code: 5597008
+     */
+    readonly RetinaOfRightEye: Coding;
+    /**
+     * Code: 5611001
+     */
+    readonly AnulusFibrosusOfIntervertebralDiscOfFifthCervicalVertebra: Coding;
+    /**
+     * Code: 5625000
+     */
+    readonly NavicularFacetOfIntermediateCuneiformBone: Coding;
+    /**
+     * Code: 5627008
+     */
+    readonly RightVisceralPleura: Coding;
+    /**
+     * Code: 5633004
+     */
+    readonly MuscularPortionOfInterventricularSeptum: Coding;
+    /**
+     * Code: 5643001
+     */
+    readonly CanalOfStomach: Coding;
+    /**
+     * Code: 5644007
+     */
+    readonly FracturedMembranePFace: Coding;
+    /**
+     * Code: 565008
+     */
+    readonly IntervertebralDiscSpaceOfFifthLumbarVertebra: Coding;
+    /**
+     * Code: 5653000
+     */
+    readonly InnerSurfaceOfSeventhRib: Coding;
+    /**
+     * Code: 5665001
+     */
+    readonly Retina: Coding;
+    /**
+     * Code: 5668004
+     */
+    readonly LowerDigestiveTract: Coding;
+    /**
+     * Code: 5677006
+     */
+    readonly LenticularFasciculus: Coding;
+    /**
+     * Code: 5682004
+     */
+    readonly SubcutaneousTissueOfUpperExtremity: Coding;
+    /**
+     * Code: 5696005
+     */
+    readonly ArticularPartOfTubercleOfNinthRib: Coding;
+    /**
+     * Code: 5697001
+     */
+    readonly SkinOfLateralSurfaceOfFinger: Coding;
+    /**
+     * Code: 5709001
+     */
+    readonly MultifidusMuscles: Coding;
+    /**
+     * Code: 5713008
+     */
+    readonly SubmandibularTriangle: Coding;
+    /**
+     * Code: 5717009
+     */
+    readonly TemporalFossa: Coding;
+    /**
+     * Code: 5718004
+     */
+    readonly TendonAndTendonSheathOfLegAndAnkle: Coding;
+    /**
+     * Code: 5727003
+     */
+    readonly AnteriorCervicalLymphNode: Coding;
+    /**
+     * Code: 5742000
+     */
+    readonly SkinOfForearm: Coding;
+    /**
+     * Code: 5751008
+     */
+    readonly SubcutaneousTissueOfAnteriorPortionOfNeck: Coding;
+    /**
+     * Code: 5769004
+     */
+    readonly EndocervicalEpithelium: Coding;
+    /**
+     * Code: 5780004
+     */
+    readonly Paradidymis: Coding;
+    /**
+     * Code: 5798000
+     */
+    readonly Diaphragm: Coding;
+    /**
+     * Code: 5802004
+     */
+    readonly MediumSizedNeuron: Coding;
+    /**
+     * Code: 5814007
+     */
+    readonly AngleOfSeventhRib: Coding;
+    /**
+     * Code: 5815008
+     */
+    readonly SuperiorRectusMuscle: Coding;
+    /**
+     * Code: 5816009
+     */
+    readonly DuodenalFold: Coding;
+    /**
+     * Code: 582005
+     */
+    readonly HeadOfPhalanxOfGreatToe: Coding;
+    /**
+     * Code: 5825003
+     */
+    readonly SubstantiaPropriaOfSclera: Coding;
+    /**
+     * Code: 5828001
+     */
+    readonly PosteriorCordOfBrachialPlexus: Coding;
+    /**
+     * Code: 5847003
+     */
+    readonly SuperiorArticularProcessOfSeventhCervicalVertebra: Coding;
+    /**
+     * Code: 5854009
+     */
+    readonly OrbitalPlateOfEthmoidBone: Coding;
+    /**
+     * Code: 5868002
+     */
+    readonly SerosaOfUrinaryBladder: Coding;
+    /**
+     * Code: 587004
+     */
+    readonly CapsuleOfProximalInterphalangealJointOfThirdToe: Coding;
+    /**
+     * Code: 5872003
+     */
+    readonly SubcutaneousTissueOfLateralBorderOfSoleOfFoot: Coding;
+    /**
+     * Code: 5881009
+     */
+    readonly TuberosityOfDistalPhalanxOfHand: Coding;
+    /**
+     * Code: 5882002
+     */
+    readonly EndothelialSievePlate: Coding;
+    /**
+     * Code: 5889006
+     */
+    readonly ArticularSurfaceThirdMetacarpalOfFourthMetacarpalBone: Coding;
+    /**
+     * Code: 5890002
+     */
+    readonly PosteriorCellsOfEthmoidSinus: Coding;
+    /**
+     * Code: 589001
+     */
+    readonly InterventricularSeptum: Coding;
+    /**
+     * Code: 5893000
+     */
+    readonly SuperiorRecessOfTympanicMembrane: Coding;
+    /**
+     * Code: 5898009
+     */
+    readonly Myotome: Coding;
+    /**
+     * Code: 5923009
+     */
+    readonly ArticularProcessOfTwelfthThoracicVertebra: Coding;
+    /**
+     * Code: 5926001
+     */
+    readonly BronchialLumen: Coding;
+    /**
+     * Code: 5928000
+     */
+    readonly GreatCardiacVein: Coding;
+    /**
+     * Code: 5942008
+     */
+    readonly TensorTympaniMuscle: Coding;
+    /**
+     * Code: 5943003
+     */
+    readonly VestibularVein: Coding;
+    /**
+     * Code: 5944009
+     */
+    readonly PosteriorPalatineArch: Coding;
+    /**
+     * Code: 5948007
+     */
+    readonly CapsuleOfDistalInterphalangealJointOfThirdToe: Coding;
+    /**
+     * Code: 595000
+     */
+    readonly PalpebralFissure: Coding;
+    /**
+     * Code: 5951000
+     */
+    readonly LeftWrist: Coding;
+    /**
+     * Code: 5953002
+     */
+    readonly EighthRib: Coding;
+    /**
+     * Code: 5976004
+     */
+    readonly SubcutaneousTissueOfEyelid: Coding;
+    /**
+     * Code: 5979006
+     */
+    readonly EpiscleralArtery: Coding;
+    /**
+     * Code: 5996007
+     */
+    readonly ChromosomesGroupD: Coding;
+    /**
+     * Code: 6001004
+     */
+    readonly QuadratusLumborumMuscle: Coding;
+    /**
+     * Code: 6004007
+     */
+    readonly IntervertebralDiscOfSecondThoracicVertebra: Coding;
+    /**
+     * Code: 6006009
+     */
+    readonly CircularLayerOfDuodenalMuscularisPropria: Coding;
+    /**
+     * Code: 6009002
+     */
+    readonly MesenteryOfAscendingColon: Coding;
+    /**
+     * Code: 6013009
+     */
+    readonly ReticuloendothelialSystem: Coding;
+    /**
+     * Code: 6014003
+     */
+    readonly PenicilliaryArteries: Coding;
+    /**
+     * Code: 6023000
+     */
+    readonly Heterolysosome: Coding;
+    /**
+     * Code: 6032003
+     */
+    readonly ColumnarEpithelialCell: Coding;
+    /**
+     * Code: 6046003
+     */
+    readonly OuterSurfaceOfThirdRib: Coding;
+    /**
+     * Code: 6050005
+     */
+    readonly LacrimalVein: Coding;
+    /**
+     * Code: 6059006
+     */
+    readonly MetacarpophalangealJointOfMiddleFinger: Coding;
+    /**
+     * Code: 6062009
+     */
+    readonly DeciduousMandibularRightCanineTooth: Coding;
+    /**
+     * Code: 6073002
+     */
+    readonly LigamentOfLeftSuperiorVenaCava: Coding;
+    /**
+     * Code: 6074008
+     */
+    readonly CapsuleOfTemporomandibularJoint: Coding;
+    /**
+     * Code: 6076005
+     */
+    readonly GastrointestinalSubserosa: Coding;
+    /**
+     * Code: 608002
+     */
+    readonly SubcutaneousTissueOfPhiltrum: Coding;
+    /**
+     * Code: 6104005
+     */
+    readonly SubclavianNerve: Coding;
+    /**
+     * Code: 6105006
+     */
+    readonly BodyOfFifthThoracicVertebra: Coding;
+    /**
+     * Code: 6110005
+     */
+    readonly FacialNerveParasympatheticFibers: Coding;
+    /**
+     * Code: 6194002
+     */
+    readonly NailOfFourthToe: Coding;
+    /**
+     * Code: 621009
+     */
+    readonly MultivesicularBodyInternalVesicles: Coding;
+    /**
+     * Code: 6216007
+     */
+    readonly PostcapillaryVenule: Coding;
+    /**
+     * Code: 6217003
+     */
+    readonly PiriformRecess: Coding;
+    /**
+     * Code: 6229007
+     */
+    readonly OsLacrimale: Coding;
+    /**
+     * Code: 6253001
+     */
+    readonly SulcusTerminalisCordis: Coding;
+    /**
+     * Code: 6268000
+     */
+    readonly AccessoryPhrenicNerves: Coding;
+    /**
+     * Code: 6269008
+     */
+    readonly SubcutaneousTissueOfScalp: Coding;
+    /**
+     * Code: 6279005
+     */
+    readonly SkinOfDorsalSurfaceOfFinger: Coding;
+    /**
+     * Code: 6317000
+     */
+    readonly PosteriorBasalBranchOfLeftPulmonaryArtery: Coding;
+    /**
+     * Code: 6325003
+     */
+    readonly AryepiglotticMuscle: Coding;
+    /**
+     * Code: 6326002
+     */
+    readonly FetalAtloidArticulation: Coding;
+    /**
+     * Code: 6335009
+     */
+    readonly LymphoidFollicleOfStomach: Coding;
+    /**
+     * Code: 635006
+     */
+    readonly TuberosityOfDistalPhalanxOfLittleToe: Coding;
+    /**
+     * Code: 6359004
+     */
+    readonly HairMedulla: Coding;
+    /**
+     * Code: 6371005
+     */
+    readonly LymphaticsOfThyroidGland: Coding;
+    /**
+     * Code: 6375001
+     */
+    readonly CavernousPortionOfUrethra: Coding;
+    /**
+     * Code: 6392005
+     */
+    readonly CoccygealNerve: Coding;
+    /**
+     * Code: 6404004
+     */
+    readonly LigamentumNuchae: Coding;
+    /**
+     * Code: 6413002
+     */
+    readonly PresymphysialLymphNode: Coding;
+    /**
+     * Code: 6417001
+     */
+    readonly MedialMalleolus: Coding;
+    /**
+     * Code: 6423006
+     */
+    readonly SupraspinatusMuscle: Coding;
+    /**
+     * Code: 6424000
+     */
+    readonly StructureOfRadiatingPortionOfCorticalLobuleOfKidney: Coding;
+    /**
+     * Code: 6445007
+     */
+    readonly MastCell: Coding;
+    /**
+     * Code: 6448009
+     */
+    readonly PosteriorVagalTrunk: Coding;
+    /**
+     * Code: 6450001
+     */
+    readonly Cytotrophoblast: Coding;
+    /**
+     * Code: 6472004
+     */
+    readonly MedialAspectOfOvary: Coding;
+    /**
+     * Code: 650002
+     */
+    readonly SuperiorArticularProcessOfSeventhThoracicVertebra: Coding;
+    /**
+     * Code: 6504002
+     */
+    readonly GlansClitoridis: Coding;
+    /**
+     * Code: 6511003
+     */
+    readonly DistalPortionOfCircumflexBranchOfLeftCoronaryArtery: Coding;
+    /**
+     * Code: 6530003
+     */
+    readonly CardiacValveLeaflet: Coding;
+    /**
+     * Code: 6533001
+     */
+    readonly ColonicHaustra: Coding;
+    /**
+     * Code: 6538005
+     */
+    readonly ThyrocervicalTrunk: Coding;
+    /**
+     * Code: 6541001
+     */
+    readonly AnteriorCommissureOfMitralValve: Coding;
+    /**
+     * Code: 6544009
+     */
+    readonly GastrohepaticLigament: Coding;
+    /**
+     * Code: 6550004
+     */
+    readonly AngularIncisureOfStomach: Coding;
+    /**
+     * Code: 6551000
+     */
+    readonly PollicisArtery: Coding;
+    /**
+     * Code: 6553002
+     */
+    readonly InferiorNasalTurbinate: Coding;
+    /**
+     * Code: 6564004
+     */
+    readonly MedialBorderOfSole: Coding;
+    /**
+     * Code: 6566002
+     */
+    readonly CerebellarHemisphere: Coding;
+    /**
+     * Code: 6572002
+     */
+    readonly BaseOfPhalanxOfMiddleFinger: Coding;
+    /**
+     * Code: 6598008
+     */
+    readonly LingualNerve: Coding;
+    /**
+     * Code: 660006
+     */
+    readonly TrachealMucousMembrane: Coding;
+    /**
+     * Code: 6606008
+     */
+    readonly StructureOfDorsalIntercuneiformLigaments: Coding;
+    /**
+     * Code: 6608009
+     */
+    readonly SphenoparietalSinus: Coding;
+    /**
+     * Code: 661005
+     */
+    readonly JawRegion: Coding;
+    /**
+     * Code: 6620001
+     */
+    readonly CuticleOfNail: Coding;
+    /**
+     * Code: 6623004
+     */
+    readonly SternalMuscle: Coding;
+    /**
+     * Code: 6633007
+     */
+    readonly RightPosteriorCerebralArtery: Coding;
+    /**
+     * Code: 6643005
+     */
+    readonly RightAnteriorCerebralArtery: Coding;
+    /**
+     * Code: 6646002
+     */
+    readonly AnteriorFossaOfCranialCavity: Coding;
+    /**
+     * Code: 6649009
+     */
+    readonly UterineSubserosa: Coding;
+    /**
+     * Code: 6651008
+     */
+    readonly CentralLobuleOfCerebellum: Coding;
+    /**
+     * Code: 667009
+     */
+    readonly EmbryologicalStructure: Coding;
+    /**
+     * Code: 6684008
+     */
+    readonly ArticularFacetOfHeadOfFibula: Coding;
+    /**
+     * Code: 6685009
+     */
+    readonly RightAnkle: Coding;
+    /**
+     * Code: 6711001
+     */
+    readonly ArchOfSecondLumbarVertebra: Coding;
+    /**
+     * Code: 6720005
+     */
+    readonly FemoralNerveLateralMuscularBranches: Coding;
+    /**
+     * Code: 6731002
+     */
+    readonly PleuralRecess: Coding;
+    /**
+     * Code: 6739000
+     */
+    readonly ChordaTympani: Coding;
+    /**
+     * Code: 6742006
+     */
+    readonly CallosomarginalBranchOfAnteriorCerebralArtery: Coding;
+    /**
+     * Code: 6750002
+     */
+    readonly MitochondrialInclusion: Coding;
+    /**
+     * Code: 6757004
+     */
+    readonly RightKnee: Coding;
+    /**
+     * Code: 6787005
+     */
+    readonly TendonAndTendonSheathOfHand: Coding;
+    /**
+     * Code: 6789008
+     */
+    readonly Spermatozoa: Coding;
+    /**
+     * Code: 6799003
+     */
+    readonly MaculaOfUtricle: Coding;
+    /**
+     * Code: 6805009
+     */
+    readonly InterstitialTissueOfSpleen: Coding;
+    /**
+     * Code: 6820003
+     */
+    readonly ObturatorNerveAnteriorBranch: Coding;
+    /**
+     * Code: 6828005
+     */
+    readonly LigamentOfLumbosacralJoint: Coding;
+    /**
+     * Code: 6829002
+     */
+    readonly ParsCiliarisOfRetina: Coding;
+    /**
+     * Code: 6834003
+     */
+    readonly AxialSkeleton: Coding;
+    /**
+     * Code: 6841009
+     */
+    readonly CorticomedullaryJunctionOfKidney: Coding;
+    /**
+     * Code: 6844001
+     */
+    readonly SporeCrystal: Coding;
+    /**
+     * Code: 6850006
+     */
+    readonly SecondaryFootProcess: Coding;
+    /**
+     * Code: 6864006
+     */
+    readonly LeafOfEpiglottis: Coding;
+    /**
+     * Code: 6866008
+     */
+    readonly HabenularCommissure: Coding;
+    /**
+     * Code: 6871001
+     */
+    readonly VisceralPericardium: Coding;
+    /**
+     * Code: 688000
+     */
+    readonly FetalHyaloidArtery: Coding;
+    /**
+     * Code: 6894000
+     */
+    readonly MedialSurfaceOfArm: Coding;
+    /**
+     * Code: 6902008
+     */
+    readonly PoplitealRegion: Coding;
+    /**
+     * Code: 6905005
+     */
+    readonly SubcutaneousTissueOfMedialSurfaceOfThirdToe: Coding;
+    /**
+     * Code: 691000
+     */
+    readonly SmallIntestineSubmucosa: Coding;
+    /**
+     * Code: 6912001
+     */
+    readonly LowerAlveolarRidgeMucosa: Coding;
+    /**
+     * Code: 6914000
+     */
+    readonly PerivascularSpace: Coding;
+    /**
+     * Code: 692007
+     */
+    readonly BodyOfIschium: Coding;
+    /**
+     * Code: 6921000
+     */
+    readonly RightUpperExtremity: Coding;
+    /**
+     * Code: 6930008
+     */
+    readonly JugularArch: Coding;
+    /**
+     * Code: 6944002
+     */
+    readonly AnteriorLabialVeins: Coding;
+    /**
+     * Code: 6969002
+     */
+    readonly LymphocyticTissue: Coding;
+    /**
+     * Code: 6975006
+     */
+    readonly AnteriorMyocardium: Coding;
+    /**
+     * Code: 6981003
+     */
+    readonly PosteriorHypothalamicNucleus: Coding;
+    /**
+     * Code: 6987004
+     */
+    readonly CollateralSulcus: Coding;
+    /**
+     * Code: 6989001
+     */
+    readonly ThoracolumbarRegionOfBack: Coding;
+    /**
+     * Code: 6991009
+     */
+    readonly SubcutaneousTissueOfJaw: Coding;
+    /**
+     * Code: 7035006
+     */
+    readonly BileDuctMucousMembrane: Coding;
+    /**
+     * Code: 7050002
+     */
+    readonly SubcutaneousTissueOfExternalGenitalia: Coding;
+    /**
+     * Code: 7067009
+     */
+    readonly RightColicArtery: Coding;
+    /**
+     * Code: 7076002
+     */
+    readonly InterstitialTissueOfMyocardium: Coding;
+    /**
+     * Code: 7083009
+     */
+    readonly MiddlePhalanxOfIndexFinger: Coding;
+    /**
+     * Code: 7090004
+     */
+    readonly SupraaorticBranches: Coding;
+    /**
+     * Code: 7091000
+     */
+    readonly VentralPosterolateralNucleusOfThalamus: Coding;
+    /**
+     * Code: 7099003
+     */
+    readonly AttachmentPlaqueOfDesmosomeOrHemidesmosome: Coding;
+    /**
+     * Code: 7117004
+     */
+    readonly FetalImplantationSite: Coding;
+    /**
+     * Code: 7121006
+     */
+    readonly MaxillaryRightSecondMolarTooth: Coding;
+    /**
+     * Code: 7148007
+     */
+    readonly AnulusFibrosusOfIntervertebralDiscOfThoracicVertebra: Coding;
+    /**
+     * Code: 7149004
+     */
+    readonly FalseRib: Coding;
+    /**
+     * Code: 7154008
+     */
+    readonly TrigeminalGanglionSensoryRoot: Coding;
+    /**
+     * Code: 7160008
+     */
+    readonly BaseOfMetacarpalBone: Coding;
+    /**
+     * Code: 7167006
+     */
+    readonly ParaduodenalRecess: Coding;
+    /**
+     * Code: 7173007
+     */
+    readonly CaudaEquina: Coding;
+    /**
+     * Code: 7188002
+     */
+    readonly GustatoryPore: Coding;
+    /**
+     * Code: 7192009
+     */
+    readonly IsthmusTympaniPosticus: Coding;
+    /**
+     * Code: 7227003
+     */
+    readonly HypoglossalNerveIntrinsicTongueMuscleBranch: Coding;
+    /**
+     * Code: 723004
+     */
+    readonly DenseIntermediateFilamentBundles: Coding;
+    /**
+     * Code: 7234001
+     */
+    readonly InferiorChoroidVein: Coding;
+    /**
+     * Code: 7242000
+     */
+    readonly AppendicealMuscularisPropria: Coding;
+    /**
+     * Code: 7275008
+     */
+    readonly LymphaticsOfAppendixAndLargeIntestine: Coding;
+    /**
+     * Code: 7295002
+     */
+    readonly MuscleOfPerineum: Coding;
+    /**
+     * Code: 7296001
+     */
+    readonly DeepInguinalRing: Coding;
+    /**
+     * Code: 7311008
+     */
+    readonly AnteriorSurfaceOfArm: Coding;
+    /**
+     * Code: 7344002
+     */
+    readonly LingualGyrus: Coding;
+    /**
+     * Code: 7345001
+     */
+    readonly CiliaryProcesses: Coding;
+    /**
+     * Code: 7347009
+     */
+    readonly InfratendinousOlecranonBursa: Coding;
+    /**
+     * Code: 7362006
+     */
+    readonly LymphaticOfHead: Coding;
+    /**
+     * Code: 7376007
+     */
+    readonly LeftMarginOfUterus: Coding;
+    /**
+     * Code: 7378008
+     */
+    readonly ParaventricularNucleusOfThalamus: Coding;
+    /**
+     * Code: 7384006
+     */
+    readonly PlantarCalcaneocuboidalLigament: Coding;
+    /**
+     * Code: 7404008
+     */
+    readonly AnteriorSemicircularDuct: Coding;
+    /**
+     * Code: 7435002
+     */
+    readonly OvarianLigament: Coding;
+    /**
+     * Code: 7471001
+     */
+    readonly LateralSurfaceOfSublingualGland: Coding;
+    /**
+     * Code: 7477002
+     */
+    readonly LipidCrystalline: Coding;
+    /**
+     * Code: 7480001
+     */
+    readonly IliotibialTract: Coding;
+    /**
+     * Code: 7494000
+     */
+    readonly CerebellarLenticularNucleus: Coding;
+    /**
+     * Code: 7498002
+     */
+    readonly PlantarTarsalLigaments: Coding;
+    /**
+     * Code: 7507003
+     */
+    readonly AnteriorLigamentOfHeadOfFibula: Coding;
+    /**
+     * Code: 7524009
+     */
+    readonly VasaVasorum: Coding;
+    /**
+     * Code: 7532001
+     */
+    readonly VagusNerveParasympatheticFibers: Coding;
+    /**
+     * Code: 7554004
+     */
+    readonly DeepHeadOfFlexorPollicisBrevisMuscle: Coding;
+    /**
+     * Code: 7566005
+     */
+    readonly MitoticCellInAnaphase: Coding;
+    /**
+     * Code: 7569003
+     */
+    readonly Finger: Coding;
+    /**
+     * Code: 7591005
+     */
+    readonly IntervertebralDiscSpaceOfEleventhThoracicVertebra: Coding;
+    /**
+     * Code: 7597009
+     */
+    readonly SubcutaneousTissueOfVertex: Coding;
+    /**
+     * Code: 7605000
+     */
+    readonly Connexon: Coding;
+    /**
+     * Code: 7610001
+     */
+    readonly TenthThoracicVertebra: Coding;
+    /**
+     * Code: 7629007
+     */
+    readonly ThalamoolivaryTract: Coding;
+    /**
+     * Code: 7651004
+     */
+    readonly IntervenousTubercleOfRightAtrium: Coding;
+    /**
+     * Code: 7652006
+     */
+    readonly FrenulumLabii: Coding;
+    /**
+     * Code: 7657000
+     */
+    readonly FemoralArtery: Coding;
+    /**
+     * Code: 7658005
+     */
+    readonly SubtendinousBursaOfTricepsBrachiiMuscle: Coding;
+    /**
+     * Code: 7697002
+     */
+    readonly PontinePortionOfMedialLongitudinalFasciculus: Coding;
+    /**
+     * Code: 7712004
+     */
+    readonly SubduralSpaceOfSpinalRegion: Coding;
+    /**
+     * Code: 7726008
+     */
+    readonly SkinOfMedialSurfaceOfFifthToe: Coding;
+    /**
+     * Code: 7736000
+     */
+    readonly PosteriorChoroidalArtery: Coding;
+    /**
+     * Code: 774007
+     */
+    readonly HeadAndNeck: Coding;
+    /**
+     * Code: 7742001
+     */
+    readonly PalatineDuct: Coding;
+    /**
+     * Code: 7748002
+     */
+    readonly SkinAppendage: Coding;
+    /**
+     * Code: 7755000
+     */
+    readonly MesovarianMarginOfOvary: Coding;
+    /**
+     * Code: 7756004
+     */
+    readonly LaminaOfThirdThoracicVertebra: Coding;
+    /**
+     * Code: 7764005
+     */
+    readonly StriateArtery: Coding;
+    /**
+     * Code: 7769000
+     */
+    readonly RightFoot: Coding;
+    /**
+     * Code: 7783003
+     */
+    readonly SympatheticTrunkSpinalNerveBranch: Coding;
+    /**
+     * Code: 7820009
+     */
+    readonly LateralPosteriorNucleusOfThalamus: Coding;
+    /**
+     * Code: 7829005
+     */
+    readonly AnteriorSurfaceOfManubrium: Coding;
+    /**
+     * Code: 7832008
+     */
+    readonly AbdominalAorta: Coding;
+    /**
+     * Code: 7835005
+     */
+    readonly PosteriorMarginOfNasalSeptum: Coding;
+    /**
+     * Code: 7840002
+     */
+    readonly SubcutaneousTissueOfSubmentalArea: Coding;
+    /**
+     * Code: 7841003
+     */
+    readonly MacrocyticNormochromicErythrocyte: Coding;
+    /**
+     * Code: 7844006
+     */
+    readonly SternoclavicularJoint: Coding;
+    /**
+     * Code: 7851002
+     */
+    readonly IntracranialSubduralSpace: Coding;
+    /**
+     * Code: 7854005
+     */
+    readonly MandibularCanal: Coding;
+    /**
+     * Code: 7872004
+     */
+    readonly MyocardiumOfVentricle: Coding;
+    /**
+     * Code: 7874003
+     */
+    readonly ScapularRegionOfBack: Coding;
+    /**
+     * Code: 7880006
+     */
+    readonly RhopheocytoticVesicle: Coding;
+    /**
+     * Code: 7884002
+     */
+    readonly CornealCorpuscle: Coding;
+    /**
+     * Code: 7885001
+     */
+    readonly RotatorCuffIncludingMusclesAndTendons: Coding;
+    /**
+     * Code: 7892006
+     */
+    readonly SubmucosaOfAnalCanal: Coding;
+    /**
+     * Code: 7896009
+     */
+    readonly OccipitalAngleOfParietalBone: Coding;
+    /**
+     * Code: 790007
+     */
+    readonly VisceralSurfaceOfLiver: Coding;
+    /**
+     * Code: 7911004
+     */
+    readonly OlivocerebellarFibers: Coding;
+    /**
+     * Code: 7925003
+     */
+    readonly ProximalPhalanxOfThirdToe: Coding;
+    /**
+     * Code: 7936005
+     */
+    readonly LigamentOfDiaphragm: Coding;
+    /**
+     * Code: 7944005
+     */
+    readonly HelperCell: Coding;
+    /**
+     * Code: 7954009
+     */
+    readonly LaminaPropriaOfEthmoidSinus: Coding;
+    /**
+     * Code: 7967007
+     */
+    readonly FirstLeftAorticArch: Coding;
+    /**
+     * Code: 798000
+     */
+    readonly DeepTemporalVeins: Coding;
+    /**
+     * Code: 7986004
+     */
+    readonly AbdominopelvicPortionOfSympatheticNervousSystem: Coding;
+    /**
+     * Code: 7991003
+     */
+    readonly SkinOfGlansPenis: Coding;
+    /**
+     * Code: 7999001
+     */
+    readonly ArticulationsOfAuditoryOssicles: Coding;
+    /**
+     * Code: 8001006
+     */
+    readonly MucousMembraneOfTongue: Coding;
+    /**
+     * Code: 8012006
+     */
+    readonly AnteriorCommunicatingArtery: Coding;
+    /**
+     * Code: 8017000
+     */
+    readonly InflowTractOfRightVentricle: Coding;
+    /**
+     * Code: 8024004
+     */
+    readonly LimitansNucleus: Coding;
+    /**
+     * Code: 8039003
+     */
+    readonly SubcutaneousAcromialBursa: Coding;
+    /**
+     * Code: 8040001
+     */
+    readonly SuperficialFlexorTendonOfLittleFinger: Coding;
+    /**
+     * Code: 8045006
+     */
+    readonly MembraneCoatingGranuleAmorphous: Coding;
+    /**
+     * Code: 8057002
+     */
+    readonly LateralNucleiOfGlobusPallidus: Coding;
+    /**
+     * Code: 8059004
+     */
+    readonly PancreaticVeins: Coding;
+    /**
+     * Code: 8067007
+     */
+    readonly SuperficialCircumflexIliacVein: Coding;
+    /**
+     * Code: 8068002
+     */
+    readonly StratumLemnisciOfCorporaQuadrigemina: Coding;
+    /**
+     * Code: 8079007
+     */
+    readonly RadialNerve: Coding;
+    /**
+     * Code: 808000
+     */
+    readonly PosteriorIntercostalArtery: Coding;
+    /**
+     * Code: 809008
+     */
+    readonly FetalChondrocranium: Coding;
+    /**
+     * Code: 8091003
+     */
+    readonly IntervertebralDiscSpaceOfTwelfthThoracicVertebra: Coding;
+    /**
+     * Code: 8100009
+     */
+    readonly InfundibulumOfFallopianTube: Coding;
+    /**
+     * Code: 8111001
+     */
+    readonly IntranuclearCrystal: Coding;
+    /**
+     * Code: 8112008
+     */
+    readonly Hindgut: Coding;
+    /**
+     * Code: 8119004
+     */
+    readonly DelphianLymphNode: Coding;
+    /**
+     * Code: 8128003
+     */
+    readonly SupraaorticValveArea: Coding;
+    /**
+     * Code: 8133004
+     */
+    readonly SuperiorAnastomoticVein: Coding;
+    /**
+     * Code: 8157004
+     */
+    readonly VeinOfHead: Coding;
+    /**
+     * Code: 8158009
+     */
+    readonly InterlobarDuctOfPancreas: Coding;
+    /**
+     * Code: 8159001
+     */
+    readonly SuperiorColliculusOfCorporaQuadrigemina: Coding;
+    /**
+     * Code: 8160006
+     */
+    readonly LateralStriateArteries: Coding;
+    /**
+     * Code: 8161005
+     */
+    readonly InfraorbitalNerve: Coding;
+    /**
+     * Code: 8165001
+     */
+    readonly SuperiorArticularProcessOfFifthThoracicVertebra: Coding;
+    /**
+     * Code: 8205005
+     */
+    readonly Wrist: Coding;
+    /**
+     * Code: 8225009
+     */
+    readonly AccessoryAtrioventricularBundle: Coding;
+    /**
+     * Code: 823005
+     */
+    readonly PosteriorCervicalSpinalCordNerveRoot: Coding;
+    /**
+     * Code: 8242003
+     */
+    readonly ApicalBranchOfRightPulmonaryArtery: Coding;
+    /**
+     * Code: 8251006
+     */
+    readonly OsseousPortionOfEustachianTube: Coding;
+    /**
+     * Code: 8264007
+     */
+    readonly TunicaInternaOfEyeball: Coding;
+    /**
+     * Code: 8265008
+     */
+    readonly ArticularSurfaceMetacarpalOfPhalanxOfHand: Coding;
+    /**
+     * Code: 8266009
+     */
+    readonly SmallIntestineSerosa: Coding;
+    /**
+     * Code: 8279000
+     */
+    readonly PelvicViscus: Coding;
+    /**
+     * Code: 8289001
+     */
+    readonly BelowKneeRegion: Coding;
+    /**
+     * Code: 8292002
+     */
+    readonly InterlobularArteriesOfLiver: Coding;
+    /**
+     * Code: 830004
+     */
+    readonly SpinousProcessOfFifthThoracicVertebra: Coding;
+    /**
+     * Code: 8314003
+     */
+    readonly MastoidFontanelOfSkull: Coding;
+    /**
+     * Code: 8334002
+     */
+    readonly LumbarLymphNode: Coding;
+    /**
+     * Code: 8356004
+     */
+    readonly ColicLymphNode: Coding;
+    /**
+     * Code: 836005
+     */
+    readonly OralRegionOfFace: Coding;
+    /**
+     * Code: 8361002
+     */
+    readonly TunicaIntima: Coding;
+    /**
+     * Code: 8369000
+     */
+    readonly SphincterPupillaeMuscle: Coding;
+    /**
+     * Code: 8373002
+     */
+    readonly JugumOfSphenoidBone: Coding;
+    /**
+     * Code: 8387002
+     */
+    readonly LaminaOfEighthThoracicVertebra: Coding;
+    /**
+     * Code: 8389004
+     */
+    readonly BirthCanal: Coding;
+    /**
+     * Code: 8412003
+     */
+    readonly IliacFossa: Coding;
+    /**
+     * Code: 8415001
+     */
+    readonly RenalSurfaceOfAdrenalGland: Coding;
+    /**
+     * Code: 8454000
+     */
+    readonly JointOfLumbarVertebra: Coding;
+    /**
+     * Code: 8464009
+     */
+    readonly LigamentOfSacroiliacJointAndPubicSymphysis: Coding;
+    /**
+     * Code: 8482007
+     */
+    readonly SinoatrialNodeBranchOfRightCoronaryArtery: Coding;
+    /**
+     * Code: 8483002
+     */
+    readonly MesialSurfaceOfTooth: Coding;
+    /**
+     * Code: 8496001
+     */
+    readonly ObliquusCapitisMuscle: Coding;
+    /**
+     * Code: 8523001
+     */
+    readonly InferiorArticularProcessOfTwelfthThoracicVertebra: Coding;
+    /**
+     * Code: 8546004
+     */
+    readonly PosteriorIntercavernousSinus: Coding;
+    /**
+     * Code: 8556000
+     */
+    readonly LipidDroplet: Coding;
+    /**
+     * Code: 8559007
+     */
+    readonly JuxtaintestinalLymphNode: Coding;
+    /**
+     * Code: 8560002
+     */
+    readonly InterclavicularLigament: Coding;
+    /**
+     * Code: 8568009
+     */
+    readonly AbdominalLymphNodes: Coding;
+    /**
+     * Code: 8580001
+     */
+    readonly BothFeet: Coding;
+    /**
+     * Code: 8595004
+     */
+    readonly MeissnerQuoteSPlexus: Coding;
+    /**
+     * Code: 8598002
+     */
+    readonly AcousticNerve: Coding;
+    /**
+     * Code: 8600008
+     */
+    readonly CricoidCartilage: Coding;
+    /**
+     * Code: 8603005
+     */
+    readonly AdductorHallucisMuscle: Coding;
+    /**
+     * Code: 8604004
+     */
+    readonly MedullaOblongataFasciculusCuneatus: Coding;
+    /**
+     * Code: 8608001
+     */
+    readonly RightMarginOfHeart: Coding;
+    /**
+     * Code: 8617001
+     */
+    readonly ZygomaticRegionOfFace: Coding;
+    /**
+     * Code: 8623006
+     */
+    readonly TransplantedUreter: Coding;
+    /**
+     * Code: 8629005
+     */
+    readonly SuperiorRightPulmonaryVein: Coding;
+    /**
+     * Code: 8640002
+     */
+    readonly ChoroidalBranchesOfPosteriorSpinalArtery: Coding;
+    /**
+     * Code: 8668003
+     */
+    readonly GlycogenVacuole: Coding;
+    /**
+     * Code: 8671006
+     */
+    readonly AllToes: Coding;
+    /**
+     * Code: 8677005
+     */
+    readonly BodyOfRightAtrium: Coding;
+    /**
+     * Code: 8688004
+     */
+    readonly LateralOlfactoryGyrus: Coding;
+    /**
+     * Code: 8695008
+     */
+    readonly IntervertebralForamenOfSecondLumbarVertebra: Coding;
+    /**
+     * Code: 8710005
+     */
+    readonly MinorSublingualDucts: Coding;
+    /**
+     * Code: 8711009
+     */
+    readonly PeriodontalTissues: Coding;
+    /**
+     * Code: 8714001
+     */
+    readonly SubcutaneousTissueOfInterdigitalSpaceOfHand: Coding;
+    /**
+     * Code: 8752000
+     */
+    readonly CavernousPortionOfInternalCarotidArtery: Coding;
+    /**
+     * Code: 8770002
+     */
+    readonly NailOfSecondToe: Coding;
+    /**
+     * Code: 8775007
+     */
+    readonly TendinousArch: Coding;
+    /**
+     * Code: 8784007
+     */
+    readonly IntranuclearBodyGranularWithFilamentousCapsule: Coding;
+    /**
+     * Code: 8810002
+     */
+    readonly CorticomedullaryJunctionOfAdrenalGland: Coding;
+    /**
+     * Code: 8814006
+     */
+    readonly IliacTuberosity: Coding;
+    /**
+     * Code: 8815007
+     */
+    readonly ThenarAndHypothenarSpaces: Coding;
+    /**
+     * Code: 8820007
+     */
+    readonly PedicleOfEleventhThoracicVertebra: Coding;
+    /**
+     * Code: 8821006
+     */
+    readonly PeronealArtery: Coding;
+    /**
+     * Code: 8827005
+     */
+    readonly ShaftOfPhalanxOfMiddleFinger: Coding;
+    /**
+     * Code: 8839002
+     */
+    readonly AgranularEndoplasmicReticulumConnectionWithOtherOrganelle: Coding;
+    /**
+     * Code: 8845005
+     */
+    readonly SubtendinousPrepatellarBursa: Coding;
+    /**
+     * Code: 885000
+     */
+    readonly LaminaMuscularisOfColonicMucousMembrane: Coding;
+    /**
+     * Code: 8850004
+     */
+    readonly ProperFasciculus: Coding;
+    /**
+     * Code: 8854008
+     */
+    readonly CristaGalli: Coding;
+    /**
+     * Code: 8862000
+     */
+    readonly PalmarSurfaceOfMiddleFinger: Coding;
+    /**
+     * Code: 8873007
+     */
+    readonly MandibularRightSecondPremolarTooth: Coding;
+    /**
+     * Code: 8887007
+     */
+    readonly BrachiocephalicVein: Coding;
+    /**
+     * Code: 8892009
+     */
+    readonly DiaphragmaticSurfaceOfLung: Coding;
+    /**
+     * Code: 8894005
+     */
+    readonly GastricCardiacGland: Coding;
+    /**
+     * Code: 8897003
+     */
+    readonly LateralGlossoepiglotticFold: Coding;
+    /**
+     * Code: 8907008
+     */
+    readonly LeftUlnarArtery: Coding;
+    /**
+     * Code: 8910001
+     */
+    readonly InferiorTransverseScapularLigament: Coding;
+    /**
+     * Code: 8911002
+     */
+    readonly EndocardiumOfRightVentricle: Coding;
+    /**
+     * Code: 8928004
+     */
+    readonly InguinalLymphNode: Coding;
+    /**
+     * Code: 8931003
+     */
+    readonly CoracoidProcessOfScapula: Coding;
+    /**
+     * Code: 8935007
+     */
+    readonly CerebralMeninges: Coding;
+    /**
+     * Code: 8942007
+     */
+    readonly TrapezoidLigament: Coding;
+    /**
+     * Code: 895007
+     */
+    readonly AnteriorCruciateLigamentOfKneeJoint: Coding;
+    /**
+     * Code: 8965002
+     */
+    readonly StratumZonaleOfCorporaQuadrigemina: Coding;
+    /**
+     * Code: 8966001
+     */
+    readonly LeftEye: Coding;
+    /**
+     * Code: 8983005
+     */
+    readonly JointStructureOfVertebralColumn: Coding;
+    /**
+     * Code: 8988001
+     */
+    readonly MarginalPartOfOrbicularisOrisMuscle: Coding;
+    /**
+     * Code: 8993003
+     */
+    readonly HepaticVein: Coding;
+    /**
+     * Code: 9000002
+     */
+    readonly CerebellarPeduncle: Coding;
+    /**
+     * Code: 9003000
+     */
+    readonly LeftParietalLobe: Coding;
+    /**
+     * Code: 9018004
+     */
+    readonly MiddleColicVein: Coding;
+    /**
+     * Code: 9040008
+     */
+    readonly AscendingColon: Coding;
+    /**
+     * Code: 9055004
+     */
+    readonly BothForearms: Coding;
+    /**
+     * Code: 9073001
+     */
+    readonly WhiteMatterOfInsula: Coding;
+    /**
+     * Code: 9081000
+     */
+    readonly SplenicSinusoids: Coding;
+    /**
+     * Code: 9086005
+     */
+    readonly SuperiorLaryngealVein: Coding;
+    /**
+     * Code: 9089003
+     */
+    readonly ArchOfFoot: Coding;
+    /**
+     * Code: 9108007
+     */
+    readonly VeinOfTheScalaTympani: Coding;
+    /**
+     * Code: 9127001
+     */
+    readonly TransverseFoldsOfPalate: Coding;
+    /**
+     * Code: 9156001
+     */
+    readonly EmbryoStage1: Coding;
+    /**
+     * Code: 917004
+     */
+    readonly SuperiorLaryngealAperture: Coding;
+    /**
+     * Code: 9181003
+     */
+    readonly AccessoryCarpalBone: Coding;
+    /**
+     * Code: 9185007
+     */
+    readonly CapsuleOfMetatarsophalangealJointOfFifthToe: Coding;
+    /**
+     * Code: 9186008
+     */
+    readonly FilamentsOfContractileApparatus: Coding;
+    /**
+     * Code: 9188009
+     */
+    readonly IntervertebralDiscOfEighthThoracicVertebra: Coding;
+    /**
+     * Code: 9208002
+     */
+    readonly Centriole: Coding;
+    /**
+     * Code: 921006
+     */
+    readonly ThyrohyoidBranchOfAnsaCervicalis: Coding;
+    /**
+     * Code: 9212008
+     */
+    readonly ShaftOfFifthMetatarsalBone: Coding;
+    /**
+     * Code: 9229006
+     */
+    readonly RotatoresLumborumMuscles: Coding;
+    /**
+     * Code: 9231002
+     */
+    readonly ExternalPudendalVeins: Coding;
+    /**
+     * Code: 9240003
+     */
+    readonly NiemannPickCell: Coding;
+    /**
+     * Code: 9242006
+     */
+    readonly PosteriorSegmentOfRightLobeOfLiver: Coding;
+    /**
+     * Code: 9258009
+     */
+    readonly GravidUterus: Coding;
+    /**
+     * Code: 9261005
+     */
+    readonly TendonAndTendonSheathOfSecondToe: Coding;
+    /**
+     * Code: 9262003
+     */
+    readonly FasciaOfPelvis: Coding;
+    /**
+     * Code: 9284003
+     */
+    readonly CorpusCavernosumOfPenis: Coding;
+    /**
+     * Code: 9290004
+     */
+    readonly PosteriorIntraoccipitalSynchondrosis: Coding;
+    /**
+     * Code: 9305001
+     */
+    readonly LabialVeins: Coding;
+    /**
+     * Code: 9317004
+     */
+    readonly MerkelQuoteSTactileDisc: Coding;
+    /**
+     * Code: 9320007
+     */
+    readonly SubtendinousIliacBursa: Coding;
+    /**
+     * Code: 9321006
+     */
+    readonly TailOfEpididymis: Coding;
+    /**
+     * Code: 9325002
+     */
+    readonly InterdentalPapillaOfGingiva: Coding;
+    /**
+     * Code: 9332006
+     */
+    readonly LateralLigamentOfTemporomandibularJoint: Coding;
+    /**
+     * Code: 9348007
+     */
+    readonly SkinOfMedialSurfaceOfMiddleFinger: Coding;
+    /**
+     * Code: 9379006
+     */
+    readonly PermanentTeeth: Coding;
+    /**
+     * Code: 9380009
+     */
+    readonly PectenAni: Coding;
+    /**
+     * Code: 9384000
+     */
+    readonly LumbarVein: Coding;
+    /**
+     * Code: 9390001
+     */
+    readonly LymphaticsOfStomach: Coding;
+    /**
+     * Code: 9432007
+     */
+    readonly PlantarSurfaceOfFourthToe: Coding;
+    /**
+     * Code: 9438006
+     */
+    readonly StructureOfDeepCervicalLymphaticVessel: Coding;
+    /**
+     * Code: 9454009
+     */
+    readonly SubclavianVein: Coding;
+    /**
+     * Code: 9455005
+     */
+    readonly MedialCartilaginousLaminaOfEustachianTube: Coding;
+    /**
+     * Code: 947002
+     */
+    readonly CrusOfDiaphragm: Coding;
+    /**
+     * Code: 9475001
+     */
+    readonly AmacrineCellsOfRetina: Coding;
+    /**
+     * Code: 9481009
+     */
+    readonly AfferentGlomerularArteriole: Coding;
+    /**
+     * Code: 9490002
+     */
+    readonly PulmonaryLigament: Coding;
+    /**
+     * Code: 9498009
+     */
+    readonly HeadOfMetacarpalBone: Coding;
+    /**
+     * Code: 9502002
+     */
+    readonly CoronalDepressionOfTooth: Coding;
+    /**
+     * Code: 9512009
+     */
+    readonly CalcaneocuboidalLigament: Coding;
+    /**
+     * Code: 9535007
+     */
+    readonly PyramidOfMedullaOblongata: Coding;
+    /**
+     * Code: 955009
+     */
+    readonly Bronchus: Coding;
+    /**
+     * Code: 9558005
+     */
+    readonly FacetForFifthCostalCartilageOfSternum: Coding;
+    /**
+     * Code: 9566001
+     */
+    readonly DuodenalLumen: Coding;
+    /**
+     * Code: 9568000
+     */
+    readonly SubcutaneousTissueOfAreola: Coding;
+    /**
+     * Code: 9596006
+     */
+    readonly DeepBranchOfUlnarNerve: Coding;
+    /**
+     * Code: 9609000
+     */
+    readonly PosteriorProcessOfNasalSeptalCartilage: Coding;
+    /**
+     * Code: 9625005
+     */
+    readonly LanugoHair: Coding;
+    /**
+     * Code: 9642004
+     */
+    readonly LeftSuperiorVenaCava: Coding;
+    /**
+     * Code: 9646001
+     */
+    readonly SuperiorTransverseScapularLigament: Coding;
+    /**
+     * Code: 9654004
+     */
+    readonly GastricMucousGland: Coding;
+    /**
+     * Code: 9659009
+     */
+    readonly InfraclavicularLymphNodes: Coding;
+    /**
+     * Code: 9662007
+     */
+    readonly SubcutaneousTissueOfLowerMarginOfNasalSeptum: Coding;
+    /**
+     * Code: 9668006
+     */
+    readonly CiliaryMuscle: Coding;
+    /**
+     * Code: 9677004
+     */
+    readonly HeadOfSecondMetatarsalBone: Coding;
+    /**
+     * Code: 9683001
+     */
+    readonly Melanocyte: Coding;
+    /**
+     * Code: 9684007
+     */
+    readonly PosteriorScrotalBranchesOfInternalPudendalArtery: Coding;
+    /**
+     * Code: 9708001
+     */
+    readonly IliacFascia: Coding;
+    /**
+     * Code: 9732008
+     */
+    readonly MedialSupraclavicularNerves: Coding;
+    /**
+     * Code: 9736006
+     */
+    readonly RightWrist: Coding;
+    /**
+     * Code: 9743000
+     */
+    readonly TendonOfIndexFinger: Coding;
+    /**
+     * Code: 9758008
+     */
+    readonly SubmucosaOfTonsil: Coding;
+    /**
+     * Code: 976004
+     */
+    readonly OvarianVein: Coding;
+    /**
+     * Code: 9770007
+     */
+    readonly GenitalTubercle: Coding;
+    /**
+     * Code: 9775002
+     */
+    readonly LeftCarotidSinus: Coding;
+    /**
+     * Code: 9779008
+     */
+    readonly DistinctiveShapeOfMitochondrialCristae: Coding;
+    /**
+     * Code: 9783008
+     */
+    readonly SuperficialLymphaticsOfThorax: Coding;
+    /**
+     * Code: 9791004
+     */
+    readonly DeepVenousSystemOfLowerExtremity: Coding;
+    /**
+     * Code: 9796009
+     */
+    readonly SkeletalMuscleFiberTypeIIb: Coding;
+    /**
+     * Code: 9813009
+     */
+    readonly FasciaOfUpperExtremity: Coding;
+    /**
+     * Code: 9825007
+     */
+    readonly ProximalPhalanxOfLittleToe: Coding;
+    /**
+     * Code: 9837009
+     */
+    readonly PerforatingBranchesOfInternalThoracicArtery: Coding;
+    /**
+     * Code: 9840009
+     */
+    readonly BiparietalDiameterOfHead: Coding;
+    /**
+     * Code: 9841008
+     */
+    readonly InterspinalisThoracisMuscles: Coding;
+    /**
+     * Code: 9846003
+     */
+    readonly RightKidney: Coding;
+    /**
+     * Code: 9847007
+     */
+    readonly HilumOfAdrenalGland: Coding;
+    /**
+     * Code: 9849005
+     */
+    readonly FornixOfLacrimalSac: Coding;
+    /**
+     * Code: 9870004
+     */
+    readonly CarunculaeHymenales: Coding;
+    /**
+     * Code: 9875009
+     */
+    readonly Thymus: Coding;
+    /**
+     * Code: 9878006
+     */
+    readonly AppendicularVein: Coding;
+    /**
+     * Code: 9880000
+     */
+    readonly ThyroidTubercle: Coding;
+    /**
+     * Code: 9881001
+     */
+    readonly PeripheralNerveMyelinatedNerveFiber: Coding;
+    /**
+     * Code: 9891007
+     */
+    readonly TransverseArytenoidMuscle: Coding;
+    /**
+     * Code: 9898001
+     */
+    readonly ParacentralLobule: Coding;
+    /**
+     * Code: 9951005
+     */
+    readonly PosteriorEthmoidalNerve: Coding;
+    /**
+     * Code: 996007
+     */
+    readonly MeningealBranchOfOccipitalArtery: Coding;
+    /**
+     * Code: 9968009
+     */
+    readonly PrimaryFootProcess: Coding;
+    /**
+     * Code: 9970000
+     */
+    readonly IleocecalOstium: Coding;
+    /**
+     * Code: 9976006
+     */
+    readonly RhomboideusCervicisMuscle: Coding;
+    /**
+     * Code: 9994000
+     */
+    readonly SuperiorArticularProcessOfSixthThoracicVertebra: Coding;
+    /**
+     * Code: 9999005
+     */
+    readonly DuodenalAmpulla: Coding;
 };
+/**
+ * This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.
+ */
+export declare type ApproachSiteCodesValueSetType = typeof ApproachSiteCodesValueSet;
+/**
+ * This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.
+ */
+export declare enum ApproachSiteCodesValueSetEnum {
+    /**
+     * Code: 10013000
+     */
+    LateralMeniscusOfKneeJoint = "10013000",
+    /**
+     * Code: 10024003
+     */
+    BaseOfLung = "10024003",
+    /**
+     * Code: 10025002
+     */
+    BaseOfPhalanxOfIndexFinger = "10025002",
+    /**
+     * Code: 10026001
+     */
+    VentralSpinocerebellarTractOfPons = "10026001",
+    /**
+     * Code: 10036009
+     */
+    NucleusPulposusOfIntervertebralDiscOfEighthThoracicVertebra = "10036009",
+    /**
+     * Code: 10042008
+     */
+    IntervertebralForamenOfFifthThoracicVertebra = "10042008",
+    /**
+     * Code: 10047002
+     */
+    TransplantedLung = "10047002",
+    /**
+     * Code: 1005009
+     */
+    EntireDiaphragmaticLymphNode = "1005009",
+    /**
+     * Code: 10052007
+     */
+    Male = "10052007",
+    /**
+     * Code: 10056005
+     */
+    OphthalmicNerve = "10056005",
+    /**
+     * Code: 10062000
+     */
+    LevatorLabiiSuperiorisMuscle = "10062000",
+    /**
+     * Code: 10119003
+     */
+    DeepVolarArchOfRadialArtery = "10119003",
+    /**
+     * Code: 1012000
+     */
+    StructureOfFibrousPortionOfPericardium = "1012000",
+    /**
+     * Code: 10124000
+     */
+    DeepDorsalSacrococcygealLigament = "10124000",
+    /**
+     * Code: 10134009
+     */
+    MedialSurfaceOfThirdToe = "10134009",
+    /**
+     * Code: 1015003
+     */
+    StructureOfPeritonsillarTissue = "1015003",
+    /**
+     * Code: 1028005
+     */
+    SebaceousGlandStructure = "1028005",
+    /**
+     * Code: 1030007
+     */
+    StructureOfVesicularBursaOfSternohyoidMuscle = "1030007",
+    /**
+     * Code: 106004
+     */
+    PosteriorCarpalRegion = "106004",
+    /**
+     * Code: 1063000
+     */
+    FrontozygomaticSutureOfSkull = "1063000",
+    /**
+     * Code: 107008
+     */
+    FetalPartOfPlacenta = "107008",
+    /**
+     * Code: 1075005
+     */
+    Promonocyte = "1075005",
+    /**
+     * Code: 1076006
+     */
+    SubcutaneousPrepatellarBursa = "1076006",
+    /**
+     * Code: 108003
+     */
+    CondylarEmissaryVein = "108003",
+    /**
+     * Code: 1086007
+     */
+    Female = "1086007",
+    /**
+     * Code: 1087003
+     */
+    SternothyroidMuscle = "1087003",
+    /**
+     * Code: 1092001
+     */
+    SuperiorOccipitalGyrus = "1092001",
+    /**
+     * Code: 1099005
+     */
+    ThymicCortex = "1099005",
+    /**
+     * Code: 110001
+     */
+    VisceralLayerOfBowmanQuoteSCapsule = "110001",
+    /**
+     * Code: 1101003
+     */
+    CranialCavity = "1101003",
+    /**
+     * Code: 1106008
+     */
+    MajorCalyx = "1106008",
+    /**
+     * Code: 1110006
+     */
+    TarsalGland = "1110006",
+    /**
+     * Code: 111002
+     */
+    ParathyroidGland = "111002",
+    /**
+     * Code: 1122009
+     */
+    InferiorLongitudinalMuscleOfTongue = "1122009",
+    /**
+     * Code: 1136004
+     */
+    AortopulmonarySeptum = "1136004",
+    /**
+     * Code: 1159005
+     */
+    FrenulumLinguae = "1159005",
+    /**
+     * Code: 116007
+     */
+    SubcutaneousTissueOfMedialSurfaceOfIndexFinger = "116007",
+    /**
+     * Code: 1172006
+     */
+    OdontoidProcessOfAxis = "1172006",
+    /**
+     * Code: 1173001
+     */
+    MandibularNerve = "1173001",
+    /**
+     * Code: 1174007
+     */
+    ChromosomesGroupE = "1174007",
+    /**
+     * Code: 1193009
+     */
+    TeresMajorMuscle = "1193009",
+    /**
+     * Code: 1216008
+     */
+    Synostosis = "1216008",
+    /**
+     * Code: 1231004
+     */
+    CentralNervousSystemMeninges = "1231004",
+    /**
+     * Code: 1236009
+     */
+    DuodenalSerosa = "1236009",
+    /**
+     * Code: 124002
+     */
+    CoronoidProcessOfMandible = "124002",
+    /**
+     * Code: 1243003
+     */
+    InferiorArticularProcessOfSixthCervicalVertebra = "1243003",
+    /**
+     * Code: 1246006
+     */
+    DorsalDigitalNervesOfRadialNerve = "1246006",
+    /**
+     * Code: 1263005
+     */
+    DistinctiveArrangementOfMicrotubules = "1263005",
+    /**
+     * Code: 1277008
+     */
+    VertebralNerve = "1277008",
+    /**
+     * Code: 1307006
+     */
+    Glottis = "1307006",
+    /**
+     * Code: 1311000
+     */
+    TelogenHair = "1311000",
+    /**
+     * Code: 1350001
+     */
+    DeepFlexorTendonOfIndexFinger = "1350001",
+    /**
+     * Code: 1353004
+     */
+    GastricSerosa = "1353004",
+    /**
+     * Code: 1403006
+     */
+    VastusLateralisMuscle = "1403006",
+    /**
+     * Code: 1425000
+     */
+    PosteriorLimbOfStapes = "1425000",
+    /**
+     * Code: 1439000
+     */
+    ParavesicularLymphNode = "1439000",
+    /**
+     * Code: 1441004
+     */
+    LaryngealSaccule = "1441004",
+    /**
+     * Code: 1456008
+     */
+    YellowFibrocartilage = "1456008",
+    /**
+     * Code: 1467009
+     */
+    ParietalBranchOfSuperficialTemporalArtery = "1467009",
+    /**
+     * Code: 1484003
+     */
+    StructureOfMetatarsalRegionOfFoot = "1484003",
+    /**
+     * Code: 1490004
+     */
+    SoftTissuesOfTrunk = "1490004",
+    /**
+     * Code: 149003
+     */
+    CentralPairOfMicrotubulesCiliumOrFlagellumNotBacterial = "149003",
+    /**
+     * Code: 1502004
+     */
+    AnteriorCecalArtery = "1502004",
+    /**
+     * Code: 1511004
+     */
+    EjaculatoryDuct = "1511004",
+    /**
+     * Code: 1516009
+     */
+    FrontomentalDiameterOfHead = "1516009",
+    /**
+     * Code: 1527006
+     */
+    LaminaOfFourthThoracicVertebra = "1527006",
+    /**
+     * Code: 1537001
+     */
+    IntervertebralDiscOfEleventhThoracicVertebra = "1537001",
+    /**
+     * Code: 1541002
+     */
+    CoccygealPlexus = "1541002",
+    /**
+     * Code: 155008
+     */
+    DeepCircumflexArteryOfIlium = "155008",
+    /**
+     * Code: 1562001
+     */
+    NucleusPulposusOfIntervertebralDiscOfThirdLumbarVertebra = "1562001",
+    /**
+     * Code: 1569005
+     */
+    NailOfThirdToe = "1569005",
+    /**
+     * Code: 1580005
+     */
+    NucleusVentralisLateralis = "1580005",
+    /**
+     * Code: 1581009
+     */
+    IlealArtery = "1581009",
+    /**
+     * Code: 1584001
+     */
+    Symphysis = "1584001",
+    /**
+     * Code: 1600003
+     */
+    SpleniusCapitisMuscle = "1600003",
+    /**
+     * Code: 1605008
+     */
+    Histioblast = "1605008",
+    /**
+     * Code: 1610007
+     */
+    Otoconia = "1610007",
+    /**
+     * Code: 1611006
+     */
+    ParamammaryLymphNode = "1611006",
+    /**
+     * Code: 1617005
+     */
+    IntrinsicLarynx = "1617005",
+    /**
+     * Code: 1620002
+     */
+    MetaphaseNucleus = "1620002",
+    /**
+     * Code: 1626008
+     */
+    ThirdThoracicVertebra = "1626008",
+    /**
+     * Code: 1627004
+     */
+    MedialCollateralLigamentOfKneeJoint = "1627004",
+    /**
+     * Code: 1630006
+     */
+    SupraorbitalVein = "1630006",
+    /**
+     * Code: 1631005
+     */
+    Foregut = "1631005",
+    /**
+     * Code: 1650005
+     */
+    HilumOfLeftLung = "1650005",
+    /**
+     * Code: 1655000
+     */
+    TransversePeduncularTractNucleus = "1655000",
+    /**
+     * Code: 1659006
+     */
+    NucleusMedialisDorsalis = "1659006",
+    /**
+     * Code: 167005
+     */
+    SupraclavicularPartOfBrachialPlexus = "167005",
+    /**
+     * Code: 1684009
+     */
+    LigamentumTeresOfLiver = "1684009",
+    /**
+     * Code: 1706004
+     */
+    ThymicLobule = "1706004",
+    /**
+     * Code: 1707008
+     */
+    VentralNuclearGroupOfThalamus = "1707008",
+    /**
+     * Code: 1711002
+     */
+    PeriorbitalRegion = "1711002",
+    /**
+     * Code: 1716007
+     */
+    CupulaAmpullaris = "1716007",
+    /**
+     * Code: 1721005
+     */
+    RightTonsil = "1721005",
+    /**
+     * Code: 1729007
+     */
+    CentralTegmentalTract = "1729007",
+    /**
+     * Code: 1732005
+     */
+    TDThoracicDuct = "1732005",
+    /**
+     * Code: 1765002
+     */
+    StructureOfLymphaticVesselOfThorax = "1765002",
+    /**
+     * Code: 1780008
+     */
+    Premelanosome = "1780008",
+    /**
+     * Code: 1781007
+     */
+    SacroiliacRegion = "1781007",
+    /**
+     * Code: 1797002
+     */
+    Naris = "1797002",
+    /**
+     * Code: 1818002
+     */
+    GreaterCirculusArteriosusOfIris = "1818002",
+    /**
+     * Code: 1825009
+     */
+    RootOfNose = "1825009",
+    /**
+     * Code: 1832000
+     */
+    ScleralConjunctiva = "1832000",
+    /**
+     * Code: 1840006
+     */
+    ArrectorPiliMuscle = "1840006",
+    /**
+     * Code: 1849007
+     */
+    PharyngealRecess = "1849007",
+    /**
+     * Code: 1853009
+     */
+    StructureOfSuprahyoidMuscle = "1853009",
+    /**
+     * Code: 1874005
+     */
+    PromontoryLymphNode = "1874005",
+    /**
+     * Code: 1893007
+     */
+    JointOfUpperExtremity = "1893007",
+    /**
+     * Code: 1895000
+     */
+    MusculophrenicVein = "1895000",
+    /**
+     * Code: 1902009
+     */
+    SkinOfExternalEar = "1902009",
+    /**
+     * Code: 1910005
+     */
+    Ear = "1910005",
+    /**
+     * Code: 1918003
+     */
+    SuprarenalAorta = "1918003",
+    /**
+     * Code: 1927002
+     */
+    LeftElbow = "1927002",
+    /**
+     * Code: 1992003
+     */
+    PorusAcusticusInternus = "1992003",
+    /**
+     * Code: 1997009
+     */
+    CingulumDentis = "1997009",
+    /**
+     * Code: 2010005
+     */
+    ClavicularFacetOfScapula = "2010005",
+    /**
+     * Code: 2020000
+     */
+    SuperiorThoracicArtery = "2020000",
+    /**
+     * Code: 202009
+     */
+    AnteriorDivisionOfRenalArtery = "202009",
+    /**
+     * Code: 2031008
+     */
+    StructureOfAnteriorMedianFissureOfSpinalCord = "2031008",
+    /**
+     * Code: 2033006
+     */
+    RightFallopianTube = "2033006",
+    /**
+     * Code: 2044003
+     */
+    VaginalNerves = "2044003",
+    /**
+     * Code: 2048000
+     */
+    LingualTonsil = "2048000",
+    /**
+     * Code: 2049008
+     */
+    ChorionicVilli = "2049008",
+    /**
+     * Code: 205006
+     */
+    LeftCommissureOfAorticValve = "205006",
+    /**
+     * Code: 2059009
+     */
+    SkinOfEarLobule = "2059009",
+    /**
+     * Code: 206007
+     */
+    GluteusMaximusMuscle = "206007",
+    /**
+     * Code: 2071003
+     */
+    ReticularFormationOfSpinalCord = "2071003",
+    /**
+     * Code: 2076008
+     */
+    HeadOfPhalanxOfHand = "2076008",
+    /**
+     * Code: 2083001
+     */
+    NucleusAmbiguus = "2083001",
+    /**
+     * Code: 2095001
+     */
+    AccessorySinus = "2095001",
+    /**
+     * Code: 2123001
+     */
+    MammilloinfundibularNucleus = "2123001",
+    /**
+     * Code: 2150006
+     */
+    UrinaryTractTransitionalEpithelialCell = "2150006",
+    /**
+     * Code: 2156000
+     */
+    GlialCell = "2156000",
+    /**
+     * Code: 2160002
+     */
+    LigamentumArteriosum = "2160002",
+    /**
+     * Code: 2175005
+     */
+    PharyngealCavity = "2175005",
+    /**
+     * Code: 2182009
+     */
+    EndometrialZonaBasalis = "2182009",
+    /**
+     * Code: 2192001
+     */
+    ClavicularPartOfPectoralisMajorMuscle = "2192001",
+    /**
+     * Code: 2205003
+     */
+    LaminaOfFifthThoracicVertebra = "2205003",
+    /**
+     * Code: 2209009
+     */
+    CerebralBasalSurface = "2209009",
+    /**
+     * Code: 221001
+     */
+    ArticularSurfacePhalangesOfFourthMetacarpalBone = "221001",
+    /**
+     * Code: 2236006
+     */
+    LesserOsseousPelvis = "2236006",
+    /**
+     * Code: 2246008
+     */
+    TypeIHairCell = "2246008",
+    /**
+     * Code: 2255006
+     */
+    Subserosa = "2255006",
+    /**
+     * Code: 227002
+     */
+    CanalOfHering = "227002",
+    /**
+     * Code: 2285001
+     */
+    StructureOfTorcularHerophili = "2285001",
+    /**
+     * Code: 2292006
+     */
+    StructureOfNasopharyngealGland = "2292006",
+    /**
+     * Code: 2302002
+     */
+    VeinOfTheKnee = "2302002",
+    /**
+     * Code: 2305000
+     */
+    StructureOfSpinousProcessOfCervicalVertebra = "2305000",
+    /**
+     * Code: 2306004
+     */
+    StructureOfBaseOfThirdMetacarpalBone = "2306004",
+    /**
+     * Code: 2327009
+     */
+    SalivarySeromucousGland = "2327009",
+    /**
+     * Code: 2330002
+     */
+    StructureOfSegmentalBronchialBranches = "2330002",
+    /**
+     * Code: 233006
+     */
+    HepatocolicLigament = "233006",
+    /**
+     * Code: 2332005
+     */
+    MetencephalonOfFoetus = "2332005",
+    /**
+     * Code: 2334006
+     */
+    RenalCalyx = "2334006",
+    /**
+     * Code: 2349003
+     */
+    StructureOfNasalSutureOfSkull = "2349003",
+    /**
+     * Code: 235004
+     */
+    SuperiorLabialArtery = "235004",
+    /**
+     * Code: 2372001
+     */
+    StructureOfMedialSurfaceOfToe = "2372001",
+    /**
+     * Code: 2383005
+     */
+    StructureOfPapillaryMusclesOfRightVentricle = "2383005",
+    /**
+     * Code: 2389009
+     */
+    StructureOfSuperiorMarginOfAdrenalGland = "2389009",
+    /**
+     * Code: 2395005
+     */
+    StructureOfTransverseFacialArtery = "2395005",
+    /**
+     * Code: 2397002
+     */
+    StructureOfFirstMetatarsalFacetOfMedialCuneiformBone = "2397002",
+    /**
+     * Code: 2400006
+     */
+    UniversalDesignation21 = "2400006",
+    /**
+     * Code: 2402003
+     */
+    StructureOfDorsumOfFoot = "2402003",
+    /**
+     * Code: 2421006
+     */
+    StructureOfSubmaxillaryGanglion = "2421006",
+    /**
+     * Code: 2433001
+     */
+    StructureOfDigitalTendonAndTendonSheathOfFoot = "2433001",
+    /**
+     * Code: 2436009
+     */
+    TunicaIntimaOfVein = "2436009",
+    /**
+     * Code: 2453002
+     */
+    SubcutaneousTissueStructureOfPosteriorSurfaceOfForearm = "2453002",
+    /**
+     * Code: 2454008
+     */
+    StructureOfArticularSurfaceThirdMetacarpalOfSecondMetacarpalBone = "2454008",
+    /**
+     * Code: 246001
+     */
+    LateralVestibularNucleus = "246001",
+    /**
+     * Code: 247005
+     */
+    Mesotympanum = "247005",
+    /**
+     * Code: 2484000
+     */
+    SkinStructureOfFrenulumOfClitoris = "2484000",
+    /**
+     * Code: 2489005
+     */
+    StructureOfMedialCheckLigamentOfEye = "2489005",
+    /**
+     * Code: 2499000
+     */
+    EntireCisternaPontis = "2499000",
+    /**
+     * Code: 2502001
+     */
+    MembraneOfLysosome = "2502001",
+    /**
+     * Code: 2504000
+     */
+    StructureOfPancreaticPlexus = "2504000",
+    /**
+     * Code: 2510000
+     */
+    FemoralTriangleStructure = "2510000",
+    /**
+     * Code: 251007
+     */
+    PectoralRegion = "251007",
+    /**
+     * Code: 2539000
+     */
+    StructureOfSuperiorRectalArtery = "2539000",
+    /**
+     * Code: 2543001
+     */
+    StructureOfCuboidArticularFacetOfFourthMetatarsalBone = "2543001",
+    /**
+     * Code: 2550002
+     */
+    BoneStructureOfPhalanxOfThumb = "2550002",
+    /**
+     * Code: 256002
+     */
+    KupfferCell = "256002",
+    /**
+     * Code: 2577006
+     */
+    StructureOfGracilisMuscle = "2577006",
+    /**
+     * Code: 2579009
+     */
+    Plasmablast = "2579009",
+    /**
+     * Code: 2592007
+     */
+    AllExtremities = "2592007",
+    /**
+     * Code: 2600000
+     */
+    StructureOfFlexorPollicisLongusMuscleTendon = "2600000",
+    /**
+     * Code: 2620004
+     */
+    IntervertebralDiscStructureOfThirdThoracicVertebra = "2620004",
+    /**
+     * Code: 263002
+     */
+    ThoracicNerve = "263002",
+    /**
+     * Code: 2639009
+     */
+    NeuroendocrineTissue = "2639009",
+    /**
+     * Code: 2653009
+     */
+    StructureOfPosteriorThalamicRadiationOfInternalCapsule = "2653009",
+    /**
+     * Code: 266005
+     */
+    RightLowerLobeOfLung = "266005",
+    /**
+     * Code: 2666009
+     */
+    StructureOfSemispinalisCapitisMuscle = "2666009",
+    /**
+     * Code: 2672009
+     */
+    StructureOfAnteriorCutaneousBranchOfLumbosacralPlexus = "2672009",
+    /**
+     * Code: 2675006
+     */
+    StructureOfAnteriorEthmoidalArtery = "2675006",
+    /**
+     * Code: 2681003
+     */
+    StructureOfDorsalNerveOfPenis = "2681003",
+    /**
+     * Code: 2682005
+     */
+    BladderMucosa = "2682005",
+    /**
+     * Code: 2686008
+     */
+    StructureOfMedialOlfactoryGyrus = "2686008",
+    /**
+     * Code: 2687004
+     */
+    StructureOfBowmanSpace = "2687004",
+    /**
+     * Code: 2695000
+     */
+    LeftMaxillarySinusStructure = "2695000",
+    /**
+     * Code: 2703009
+     */
+    EntireCalcarineArtery = "2703009",
+    /**
+     * Code: 2712006
+     */
+    StructureOfCapsuleOfAnkleJoint = "2712006",
+    /**
+     * Code: 2718005
+     */
+    StructureOfApicalForamenOfTooth = "2718005",
+    /**
+     * Code: 272005
+     */
+    SuperiorArticularProcessOfLumbarVertebra = "272005",
+    /**
+     * Code: 2726002
+     */
+    StructureOfFoldForStapes = "2726002",
+    /**
+     * Code: 273000
+     */
+    LateralMyocardium = "273000",
+    /**
+     * Code: 2730004
+     */
+    EntireVitellineVeinOfPlacenta = "2730004",
+    /**
+     * Code: 2739003
+     */
+    EndometrialStructure = "2739003",
+    /**
+     * Code: 2741002
+     */
+    StructureOfMedialOccipitotemporalGyrus = "2741002",
+    /**
+     * Code: 2746007
+     */
+    CircularLayerOfGastricMuscularis = "2746007",
+    /**
+     * Code: 2748008
+     */
+    SpinalCordStructure = "2748008",
+    /**
+     * Code: 2759004
+     */
+    EccrineGlandStructure = "2759004",
+    /**
+     * Code: 2771005
+     */
+    LaminaPropriaOfUreter = "2771005",
+    /**
+     * Code: 2789006
+     */
+    ApocrineGlandStructure = "2789006",
+    /**
+     * Code: 2792005
+     */
+    StructureOfParsTensaOfTympanicMembrane = "2792005",
+    /**
+     * Code: 2803000
+     */
+    StructureOfTendonSheathOfPopliteusMuscle = "2803000",
+    /**
+     * Code: 2810006
+     */
+    StructureOfCremastericFascia = "2810006",
+    /**
+     * Code: 2812003
+     */
+    StructureOfHeadOfFemur = "2812003",
+    /**
+     * Code: 2824005
+     */
+    StructureOfSpinousProcessOfFourthThoracicVertebra = "2824005",
+    /**
+     * Code: 2826007
+     */
+    StructureOfLaminaOfFourthLumbarVertebra = "2826007",
+    /**
+     * Code: 2830005
+     */
+    StructureOfDorsalDigitalNervesOfLateralHalluxAndMedialSecondToe = "2830005",
+    /**
+     * Code: 283001
+     */
+    CentralAxillaryLymphNode = "283001",
+    /**
+     * Code: 2839006
+     */
+    StructureOfPerivesicularTissuesOfSeminalVesicles = "2839006",
+    /**
+     * Code: 284007
+     */
+    FlexorTendonAndTendonSheathOfFourthToe = "284007",
+    /**
+     * Code: 2841007
+     */
+    RenalArteryStructure = "2841007",
+    /**
+     * Code: 2845003
+     */
+    StructureOfRespiratoryEpithelium = "2845003",
+    /**
+     * Code: 2848001
+     */
+    StructureOfSuperficialEpigastricArtery = "2848001",
+    /**
+     * Code: 2855004
+     */
+    StructureOfAccessoryCephalicVein = "2855004",
+    /**
+     * Code: 2861001
+     */
+    EntireGlandOrgan = "2861001",
+    /**
+     * Code: 289002
+     */
+    MetacarpophalangealJointOfIndexFinger = "289002",
+    /**
+     * Code: 2894003
+     */
+    StructureOfPosteriorEpiglottis = "2894003",
+    /**
+     * Code: 2905008
+     */
+    StructureOfAnteriorLigamentOfUterus = "2905008",
+    /**
+     * Code: 2909002
+     */
+    StructureOfPosteriorPortionOfDiaphragmaticAspectOfLiver = "2909002",
+    /**
+     * Code: 2920002
+     */
+    StructureOfFacialNerveMotorBranch = "2920002",
+    /**
+     * Code: 2922005
+     */
+    StructureOfPosteriorPapillaryMuscleOfLeftVentricle = "2922005",
+    /**
+     * Code: 2923000
+     */
+    SubcutaneousTissueStructureOfSupraorbitalArea = "2923000",
+    /**
+     * Code: 2954001
+     */
+    SupernumeraryDeciduousTooth = "2954001",
+    /**
+     * Code: 2969000
+     */
+    AnatomicalSpaceStructure = "2969000",
+    /**
+     * Code: 2979003
+     */
+    BoneStructureOfMedialCuneiform = "2979003",
+    /**
+     * Code: 2986006
+     */
+    StructureOfTalarFacetOfNavicularBoneOfFoot = "2986006",
+    /**
+     * Code: 2998001
+     */
+    EntireRightMarginOfUterus = "2998001",
+    /**
+     * Code: 3003007
+     */
+    InternalCapsuleAnteriorLimbStructure = "3003007",
+    /**
+     * Code: 3008003
+     */
+    WhiteFibrocartilage = "3008003",
+    /**
+     * Code: 301000
+     */
+    FifthMetatarsalBone = "301000",
+    /**
+     * Code: 3028004
+     */
+    TransitionalEpithelialCell = "3028004",
+    /**
+     * Code: 3039001
+     */
+    SubcutaneousTissueStructureOfThigh = "3039001",
+    /**
+     * Code: 3042007
+     */
+    StructureOfGlomerularUrinaryPole = "3042007",
+    /**
+     * Code: 3054007
+     */
+    StructureOfArticularSurfaceMetacarpalOfPhalanxOfThumb = "3054007",
+    /**
+     * Code: 3055008
+     */
+    StructureOfBoneMarrowOfVertebralBody = "3055008",
+    /**
+     * Code: 3056009
+     */
+    StructureOfAnteroventralNucleusOfThalamus = "3056009",
+    /**
+     * Code: 3057000
+     */
+    NerveStructure = "3057000",
+    /**
+     * Code: 3058005
+     */
+    PNSPeripheralNervousSystem = "3058005",
+    /**
+     * Code: 3062004
+     */
+    SpinalArachnoid = "3062004",
+    /**
+     * Code: 3068000
+     */
+    StructureOfSeminalVesicleLumen = "3068000",
+    /**
+     * Code: 3081007
+     */
+    MitochondrionInDivision = "3081007",
+    /**
+     * Code: 3093003
+     */
+    StructureOfTendinousArchOfPelvicFascia = "3093003",
+    /**
+     * Code: 3100007
+     */
+    ClinicalCrownOfTooth = "3100007",
+    /**
+     * Code: 311007
+     */
+    PlantarSurfaceOfGreatToe = "311007",
+    /**
+     * Code: 3113001
+     */
+    StructureOfSuprachoroidalSpace = "3113001",
+    /**
+     * Code: 3117000
+     */
+    StructureOfDorsalSurfaceOfIndexFinger = "3117000",
+    /**
+     * Code: 3118005
+     */
+    StructureOfTrabeculaCarneaOfLeftVentricle = "3118005",
+    /**
+     * Code: 3120008
+     */
+    PleuralMembraneStructure = "3120008",
+    /**
+     * Code: 3134008
+     */
+    StructureOfHeadOfFourthMetatarsalBone = "3134008",
+    /**
+     * Code: 3138006
+     */
+    BoneTissue = "3138006",
+    /**
+     * Code: 315003
+     */
+    SkinOfUmbilicus = "315003",
+    /**
+     * Code: 3153003
+     */
+    StructureOfTractusOlivocochlearis = "3153003",
+    /**
+     * Code: 3156006
+     */
+    StructureOfObturatorArtery = "3156006",
+    /**
+     * Code: 3159004
+     */
+    StructureOfCostocervicalTrunk = "3159004",
+    /**
+     * Code: 3169005
+     */
+    SpinalNerveStructure = "3169005",
+    /**
+     * Code: 3178004
+     */
+    StructureOfRapheOfSoftPalate = "3178004",
+    /**
+     * Code: 318001
+     */
+    CardiacImpressionOfLiver = "318001",
+    /**
+     * Code: 3194006
+     */
+    EndocardiumOfRightAtrium = "3194006",
+    /**
+     * Code: 3198009
+     */
+    MonostomaticSublingualGland = "3198009",
+    /**
+     * Code: 3215002
+     */
+    SubcutaneousTissueStructureOfNuchalRegion = "3215002",
+    /**
+     * Code: 3222005
+     */
+    AllLargeArteries = "3222005",
+    /**
+     * Code: 3227004
+     */
+    LeftCoronaryArteryMainStem = "3227004",
+    /**
+     * Code: 3236000
+     */
+    StructureOfPosteriorSegmentOfRightUpperLobeOfLung = "3236000",
+    /**
+     * Code: 3243006
+     */
+    StructureOfParametrialLymphNode = "3243006",
+    /**
+     * Code: 3255000
+     */
+    PapillaryArea = "3255000",
+    /**
+     * Code: 3262009
+     */
+    StructureOfRootCanalOfTooth = "3262009",
+    /**
+     * Code: 3279003
+     */
+    StructureOfPedicleOfThirdCervicalVertebra = "3279003",
+    /**
+     * Code: 3295003
+     */
+    StructureOfVentralAnteriorNucleusOfThalamus = "3295003",
+    /**
+     * Code: 3301002
+     */
+    TectopontineFibers = "3301002",
+    /**
+     * Code: 3302009
+     */
+    SplenicBranchOfSplenicArtery = "3302009",
+    /**
+     * Code: 3315000
+     */
+    StructureOfVestibulospinalTract = "3315000",
+    /**
+     * Code: 3332001
+     */
+    OccipitofrontalDiameterOfHead = "3332001",
+    /**
+     * Code: 3336003
+     */
+    HaversianCanal = "3336003",
+    /**
+     * Code: 3341006
+     */
+    RightLungStructure = "3341006",
+    /**
+     * Code: 3350008
+     */
+    EntireRightCommissureOfPulmonicValve = "3350008",
+    /**
+     * Code: 3362007
+     */
+    IntertragalIncisureStructure = "3362007",
+    /**
+     * Code: 3366005
+     */
+    StructureOfAnteriorPapillaryMuscleOfLeftVentricle = "3366005",
+    /**
+     * Code: 3370002
+     */
+    StructureOfSupportingTissueOfRectum = "3370002",
+    /**
+     * Code: 3374006
+     */
+    SecondarySpermatocyte = "3374006",
+    /**
+     * Code: 3377004
+     */
+    StructureOfAggerNasi = "3377004",
+    /**
+     * Code: 3382006
+     */
+    StructureOfRimaOris = "3382006",
+    /**
+     * Code: 3383001
+     */
+    NonsegmentedBasophil = "3383001",
+    /**
+     * Code: 3394002
+     */
+    SuboccipitobregmaticDiameterOfHead = "3394002",
+    /**
+     * Code: 3395001
+     */
+    StructureOfSuperiorPalpebralArch = "3395001",
+    /**
+     * Code: 3396000
+     */
+    StructureOfMesogastrium = "3396000",
+    /**
+     * Code: 3400000
+     */
+    CellOfBone = "3400000",
+    /**
+     * Code: 3409004
+     */
+    StructureOfLateralMarginOfForearm = "3409004",
+    /**
+     * Code: 3417007
+     */
+    StructureOfRotatorMuscle = "3417007",
+    /**
+     * Code: 3438001
+     */
+    DeepLymphaticOfUpperExtremity = "3438001",
+    /**
+     * Code: 344001
+     */
+    Ankle = "344001",
+    /**
+     * Code: 3444002
+     */
+    ThalamostriateVein = "3444002",
+    /**
+     * Code: 3447009
+     */
+    PenetratedOocyte = "3447009",
+    /**
+     * Code: 345000
+     */
+    PenetratingAtrioventricularBundle = "345000",
+    /**
+     * Code: 3460003
+     */
+    StructureOfAnterodorsalNucleusOfThalamus = "3460003",
+    /**
+     * Code: 3462006
+     */
+    StructureOfCommissureOfTricuspidValve = "3462006",
+    /**
+     * Code: 3471002
+     */
+    PosteriorMidlineOfTrunk = "3471002",
+    /**
+     * Code: 3478008
+     */
+    StructureOfVastusMedialisMuscle = "3478008",
+    /**
+     * Code: 3481003
+     */
+    StructureOfEmbryonicTestis = "3481003",
+    /**
+     * Code: 3488009
+     */
+    AnnulateLamellaCisternalLumen = "3488009",
+    /**
+     * Code: 3490005
+     */
+    SubcutaneousTissueStructureOfSuboccipitalRegion = "3490005",
+    /**
+     * Code: 3524005
+     */
+    StructureOfLateralWallOfMastoidAntrum = "3524005",
+    /**
+     * Code: 3538003
+     */
+    StructureOfCapsuleOfProximalTibiofibularJoint = "3538003",
+    /**
+     * Code: 3541007
+     */
+    StructureOfDorsalMetatarsalArtery = "3541007",
+    /**
+     * Code: 3553006
+     */
+    StructureOfThyroidCapsule = "3553006",
+    /**
+     * Code: 3556003
+     */
+    StructureOfDorsalNucleusOfTrapezoidBody = "3556003",
+    /**
+     * Code: 356000
+     */
+    ReticularCorium = "356000",
+    /**
+     * Code: 3563003
+     */
+    MuscularisOfUreter = "3563003",
+    /**
+     * Code: 3572006
+     */
+    VertebralBody = "3572006",
+    /**
+     * Code: 3578005
+     */
+    StructureOfBodyOfGallbladder = "3578005",
+    /**
+     * Code: 3582007
+     */
+    StructureOfGastrophrenicLigament = "3582007",
+    /**
+     * Code: 3584008
+     */
+    T10DorsalArch = "3584008",
+    /**
+     * Code: 3594003
+     */
+    StructureOfStraightPartOfLongusColliMuscle = "3594003",
+    /**
+     * Code: 3608004
+     */
+    IschiococcygeusMuscle = "3608004",
+    /**
+     * Code: 3609007
+     */
+    StructureOfOccipitalBranchOfPosteriorAuricularArtery = "3609007",
+    /**
+     * Code: 3646006
+     */
+    Lamellipodium = "3646006",
+    /**
+     * Code: 3663005
+     */
+    StructureOfTympanicOstiumOfEustachianTube = "3663005",
+    /**
+     * Code: 3665003
+     */
+    PelvicWallStructure = "3665003",
+    /**
+     * Code: 3670005
+     */
+    EntireSubpyloricLymphNode = "3670005",
+    /**
+     * Code: 3711007
+     */
+    GreatVessel = "3711007",
+    /**
+     * Code: 3743007
+     */
+    StructureOfLateralThoracicArtery = "3743007",
+    /**
+     * Code: 3761003
+     */
+    StructureOfNucleusPulposusOfIntervertebralDiscOfFirstThoracicVertebra = "3761003",
+    /**
+     * Code: 3766008
+     */
+    SubcutaneousTissueStructureOfLowerExtremity = "3766008",
+    /**
+     * Code: 3785006
+     */
+    EntireDorsalMetacarpalLigament = "3785006",
+    /**
+     * Code: 3788008
+     */
+    StructureOfApicalSegmentOfRightLowerLobeOfLung = "3788008",
+    /**
+     * Code: 3789000
+     */
+    EnteroendocrineCell = "3789000",
+    /**
+     * Code: 3810000
+     */
+    SeptalCartilageStructure = "3810000",
+    /**
+     * Code: 3838008
+     */
+    StructureOfApexOfCoccyx = "3838008",
+    /**
+     * Code: 3860006
+     */
+    StructureOfTransplantedLiver = "3860006",
+    /**
+     * Code: 3865001
+     */
+    StructureOfInterscapularRegionOfBack = "3865001",
+    /**
+     * Code: 3867009
+     */
+    StructureOfDorsalSurfaceOfGreatToe = "3867009",
+    /**
+     * Code: 3876002
+     */
+    SubcutaneousTissueStructureOfFemoralRegion = "3876002",
+    /**
+     * Code: 3877006
+     */
+    StructureOfCommonCarotidPlexus = "3877006",
+    /**
+     * Code: 3910004
+     */
+    SubcutaneousTissueStructureOfLateralSurfaceOfFourthToe = "3910004",
+    /**
+     * Code: 3916005
+     */
+    StructureOfOccipitalLymphNode = "3916005",
+    /**
+     * Code: 3924000
+     */
+    StructureOfPericardiophrenicArtery = "3924000",
+    /**
+     * Code: 393006
+     */
+    WallOfUrinaryBladder = "393006",
+    /**
+     * Code: 3931001
+     */
+    OWOvalWindow = "3931001",
+    /**
+     * Code: 3935005
+     */
+    HeadOfTenthRibStructure = "3935005",
+    /**
+     * Code: 3937002
+     */
+    StructureOfEntorhinalCortex = "3937002",
+    /**
+     * Code: 3954005
+     */
+    LacrimalSacStructure = "3954005",
+    /**
+     * Code: 3956007
+     */
+    StructureOfFifthMetatarsalArticularFacetOfFourthMetatarsalBone = "3956007",
+    /**
+     * Code: 3959000
+     */
+    StructureOfRectusCapitisMuscle = "3959000",
+    /**
+     * Code: 3960005
+     */
+    OlfactoryTractStructure = "3960005",
+    /**
+     * Code: 3964001
+     */
+    StructureOfGyrusOfBrain = "3964001",
+    /**
+     * Code: 3966004
+     */
+    EntireParietalBranchOfAnteriorCerebralArtery = "3966004",
+    /**
+     * Code: 3977005
+     */
+    SubcutaneousTissueStructureOfConcha = "3977005",
+    /**
+     * Code: 3984002
+     */
+    DeepVeinOfClitoris = "3984002",
+    /**
+     * Code: 3989007
+     */
+    StructureOfMedialGlobusPallidus = "3989007",
+    /**
+     * Code: 4015004
+     */
+    ChromosomesGroupA = "4015004",
+    /**
+     * Code: 4019005
+     */
+    PosteriorCommissureOfLabiumMajorum = "4019005",
+    /**
+     * Code: 402006
+     */
+    DentalBranchesOfInferiorAlveolarArtery = "402006",
+    /**
+     * Code: 4029003
+     */
+    EosinophilicProgranulocyte = "4029003",
+    /**
+     * Code: 405008
+     */
+    PosteriorTemporalDiploicVein = "405008",
+    /**
+     * Code: 4061004
+     */
+    LateralOrbitalWall = "4061004",
+    /**
+     * Code: 4066009
+     */
+    StructureOfCapsuleOfProximalInterphalangealJointOfIndexFinger = "4066009",
+    /**
+     * Code: 4072009
+     */
+    StructureOfFourthCoccygealVertebra = "4072009",
+    /**
+     * Code: 4081003
+     */
+    EntireDorsalLingualVein = "4081003",
+    /**
+     * Code: 4093007
+     */
+    StructureOfVagusNerveBronchialBranch = "4093007",
+    /**
+     * Code: 4111006
+     */
+    MaculaOfTheSaccule = "4111006",
+    /**
+     * Code: 4117005
+     */
+    LumbosacralSpinalCordCentralCanalStructure = "4117005",
+    /**
+     * Code: 4121003
+     */
+    StructureOfSuperiorFrontalSulcus = "4121003",
+    /**
+     * Code: 414003
+     */
+    GastricFundus = "414003",
+    /**
+     * Code: 4146003
+     */
+    StructureOfArteryOfExtremity = "4146003",
+    /**
+     * Code: 4148002
+     */
+    StructureOfPalmarSurfaceOfLittleFinger = "4148002",
+    /**
+     * Code: 4150005
+     */
+    CeliacNervousPlexusStructure = "4150005",
+    /**
+     * Code: 4158003
+     */
+    AbdominalAorticPlexusStructure = "4158003",
+    /**
+     * Code: 4159006
+     */
+    HyparterialBronchus = "4159006",
+    /**
+     * Code: 4180000
+     */
+    BothLowerExtremities = "4180000",
+    /**
+     * Code: 4193005
+     */
+    EntireExtensorTendonAndTendonSheathOfFifthToe = "4193005",
+    /**
+     * Code: 4205002
+     */
+    TurkCell = "4205002",
+    /**
+     * Code: 4212006
+     */
+    EpithelialCells = "4212006",
+    /**
+     * Code: 4215008
+     */
+    HeadOfSecondRibStructure = "4215008",
+    /**
+     * Code: 422005
+     */
+    InferiorSurfaceOfTongue = "422005",
+    /**
+     * Code: 4247003
+     */
+    BoneStructureOfFirstMetacarpal = "4247003",
+    /**
+     * Code: 4258007
+     */
+    PosteriorTibialVein = "4258007",
+    /**
+     * Code: 4268002
+     */
+    LateralSpinorubralTract = "4268002",
+    /**
+     * Code: 4276000
+     */
+    StructureOfInferiorArticularProcessOfSeventhCervicalVertebra = "4276000",
+    /**
+     * Code: 4281009
+     */
+    StructureOfMiddlePortionOfIleum = "4281009",
+    /**
+     * Code: 4295007
+     */
+    StructureOfParacorticalAreaOfLymphNode = "4295007",
+    /**
+     * Code: 4303006
+     */
+    CartilageCanal = "4303006",
+    /**
+     * Code: 4312008
+     */
+    AnteriorMidlineOfAbdomen = "4312008",
+    /**
+     * Code: 4317002
+     */
+    StructureOfSpinalisMuscle = "4317002",
+    /**
+     * Code: 4328003
+     */
+    ProtoplasmicAstrocyte = "4328003",
+    /**
+     * Code: 4335006
+     */
+    UpperJawRegion = "4335006",
+    /**
+     * Code: 4352005
+     */
+    StructureOfSubchorionicSpace = "4352005",
+    /**
+     * Code: 4358009
+     */
+    StructureOfLateralSurfaceOfLittleFinger = "4358009",
+    /**
+     * Code: 4360006
+     */
+    StratumSpinosumStructure = "4360006",
+    /**
+     * Code: 4369007
+     */
+    SmallIntestineMucousMembraneStructure = "4369007",
+    /**
+     * Code: 4371007
+     */
+    StructureOfFourthMetatarsalFacetOfLateralCuneiformBone = "4371007",
+    /**
+     * Code: 4375003
+     */
+    StructureOfIncisureOfCartilaginousPortionOfAuditoryCanal = "4375003",
+    /**
+     * Code: 4377006
+     */
+    StructureOfParafascicularNucleusOfThalamus = "4377006",
+    /**
+     * Code: 4394008
+     */
+    ScalaVestibuliStructure = "4394008",
+    /**
+     * Code: 4402002
+     */
+    StructureOfAnteriorArticularSurfaceForTalus = "4402002",
+    /**
+     * Code: 4419000
+     */
+    TrachealSubmucosa = "4419000",
+    /**
+     * Code: 4421005
+     */
+    CellularStructures = "4421005",
+    /**
+     * Code: 4430002
+     */
+    StructureOfClivusOssisSphenoidalis = "4430002",
+    /**
+     * Code: 4432005
+     */
+    StructureOfDuctusArteriosus = "4432005",
+    /**
+     * Code: 4442007
+     */
+    DentalArchStructure = "4442007",
+    /**
+     * Code: 446003
+     */
+    TrochantericBursa = "446003",
+    /**
+     * Code: 4486002
+     */
+    StructureOfAccessorySinusGland = "4486002",
+    /**
+     * Code: 4524000
+     */
+    StructureOfSubclavianPlexus = "4524000",
+    /**
+     * Code: 4527007
+     */
+    JointStructureOfLowerExtremity = "4527007",
+    /**
+     * Code: 4537002
+     */
+    StructureOfInternalMedullaryLaminaOfThalamus = "4537002",
+    /**
+     * Code: 4548009
+     */
+    LamellatedGranuleAsInSurfactantSecretingCell = "4548009",
+    /**
+     * Code: 4549001
+     */
+    EntireVagusNerveParasympatheticFibersToLiverGallbladderBileDuctsAndPancreas = "4549001",
+    /**
+     * Code: 4566004
+     */
+    StructureOfTentoriumCerebelli = "4566004",
+    /**
+     * Code: 457008
+     */
+    CollateralLigament = "457008",
+    /**
+     * Code: 4573009
+     */
+    Desmosome = "4573009",
+    /**
+     * Code: 4578000
+     */
+    SkinStructureOfPosteriorSurfaceOfThigh = "4578000",
+    /**
+     * Code: 4583008
+     */
+    StructureOfSpleniusMuscleOfTrunk = "4583008",
+    /**
+     * Code: 4588004
+     */
+    StructureOfMiddleTrunkOfBrachialPlexus = "4588004",
+    /**
+     * Code: 4596009
+     */
+    LarynxStructure = "4596009",
+    /**
+     * Code: 4603002
+     */
+    StructureOfBaseOfPhalanxOfFoot = "4603002",
+    /**
+     * Code: 4606005
+     */
+    TubercleOfEighthRibStructure = "4606005",
+    /**
+     * Code: 461002
+     */
+    LateralCorticospinalTract = "461002",
+    /**
+     * Code: 4621004
+     */
+    StructureOfLesserTuberosityOfHumerus = "4621004",
+    /**
+     * Code: 4624007
+     */
+    StructureOfLymphaticCord = "4624007",
+    /**
+     * Code: 464005
+     */
+    BasophilicNormoblast = "464005",
+    /**
+     * Code: 4647008
+     */
+    LipidDropletHomogeneous = "4647008",
+    /**
+     * Code: 465006
+     */
+    AscendingFrontalGyrus = "465006",
+    /**
+     * Code: 4651005
+     */
+    StructureOfTunicaAlbugineaOfCorpusSpongiosum = "4651005",
+    /**
+     * Code: 4658004
+     */
+    SkinStructureOfNuchalRegion = "4658004",
+    /**
+     * Code: 4677002
+     */
+    BasalLaminaInclusionInSubepithelialLocation = "4677002",
+    /**
+     * Code: 4703008
+     */
+    CardinalVeinStructure = "4703008",
+    /**
+     * Code: 471000
+     */
+    FlexorHallucisLongusInLeg = "471000",
+    /**
+     * Code: 4717004
+     */
+    NeutrophilicMyelocyte = "4717004",
+    /**
+     * Code: 4718009
+     */
+    EntireVenousPlexusOfTheForamenOvaleBasisCranii = "4718009",
+    /**
+     * Code: 4743003
+     */
+    StructureOfVentralSacrococcygealLigament = "4743003",
+    /**
+     * Code: 4755009
+     */
+    StructureOfMedialSurfaceOfGreatToe = "4755009",
+    /**
+     * Code: 4759003
+     */
+    StructureOfGemellusMuscle = "4759003",
+    /**
+     * Code: 4766002
+     */
+    StructureOfSupracardinalVein = "4766002",
+    /**
+     * Code: 4768001
+     */
+    StructureOfPerinealNerve = "4768001",
+    /**
+     * Code: 4774001
+     */
+    StructureOfPhrenicNervePericardialBranch = "4774001",
+    /**
+     * Code: 4775000
+     */
+    StructureOfVentralPosteriorInferiorNucleus = "4775000",
+    /**
+     * Code: 4799000
+     */
+    DeiterCell = "4799000",
+    /**
+     * Code: 480000
+     */
+    CardiopulmonaryCirculatorySystem = "480000",
+    /**
+     * Code: 4810005
+     */
+    StructureOfUterineVenousPlexus = "4810005",
+    /**
+     * Code: 4812002
+     */
+    AnteriorTibialCompartmentStructure = "4812002",
+    /**
+     * Code: 4828007
+     */
+    FemoralCanalStructure = "4828007",
+    /**
+     * Code: 4840007
+     */
+    SubcutaneousTissueStructureOfRingFinger = "4840007",
+    /**
+     * Code: 4843009
+     */
+    AmpullaOfSemicircularDuct = "4843009",
+    /**
+     * Code: 485005
+     */
+    TCTransverseColon = "485005",
+    /**
+     * Code: 4861000
+     */
+    StructureOfTuberculumImpar = "4861000",
+    /**
+     * Code: 4866005
+     */
+    ConstrictorMuscleOfPharynxStructure = "4866005",
+    /**
+     * Code: 4870002
+     */
+    StructureOfDorsalTegmentalNucleiOfMidbrain = "4870002",
+    /**
+     * Code: 4871003
+     */
+    LaminaOfModiolusOfCochlea = "4871003",
+    /**
+     * Code: 4881004
+     */
+    EntireSublingualVein = "4881004",
+    /**
+     * Code: 4888005
+     */
+    EntireInterlobularVeinOfKidney = "4888005",
+    /**
+     * Code: 4897009
+     */
+    CellMembraneProkaryotic = "4897009",
+    /**
+     * Code: 4905007
+     */
+    StructureOfUterovaginalPlexus = "4905007",
+    /**
+     * Code: 4906008
+     */
+    MastoidAntrumStructure = "4906008",
+    /**
+     * Code: 4924005
+     */
+    CerebellarGracileLobule = "4924005",
+    /**
+     * Code: 4942000
+     */
+    LowerLimbLymphNodeStructure = "4942000",
+    /**
+     * Code: 4954000
+     */
+    StructureOfRadialNotchOfUlna = "4954000",
+    /**
+     * Code: 4956003
+     */
+    SubcutaneousTissueStructureOfBack = "4956003",
+    /**
+     * Code: 4958002
+     */
+    AmygdaloidStructure = "4958002",
+    /**
+     * Code: 5001007
+     */
+    StructureOfSuperiorTemporalSulcus = "5001007",
+    /**
+     * Code: 5023006
+     */
+    StructureOfYellowBoneMarrow = "5023006",
+    /**
+     * Code: 5026003
+     */
+    StructureOfPosteriorSurfaceOfProstate = "5026003",
+    /**
+     * Code: 5046008
+     */
+    StructureOfSuperficialDorsalVeinsOfClitoris = "5046008",
+    /**
+     * Code: 5068003
+     */
+    StructureOfObturatorInternusMuscleIschialBursa = "5068003",
+    /**
+     * Code: 5069006
+     */
+    StructureOfRugalColumn = "5069006",
+    /**
+     * Code: 5076001
+     */
+    StructureOfInfrasternalAngle = "5076001",
+    /**
+     * Code: 5115006
+     */
+    StructureOfPosteriorAuricularVein = "5115006",
+    /**
+     * Code: 5122003
+     */
+    EntireAngleOfFirstRib = "5122003",
+    /**
+     * Code: 5128004
+     */
+    LensZonules = "5128004",
+    /**
+     * Code: 5140004
+     */
+    PermanentUpperRight6Tooth = "5140004",
+    /**
+     * Code: 5192008
+     */
+    StructureOfIntervertebralForamenOfTwelfthThoracicVertebra = "5192008",
+    /**
+     * Code: 5194009
+     */
+    StructureOfEpitheliumOfLens = "5194009",
+    /**
+     * Code: 5195005
+     */
+    StructureOfRightExternalCarotidArtery = "5195005",
+    /**
+     * Code: 5204005
+     */
+    SuperiorIleocecalRecess = "5204005",
+    /**
+     * Code: 5213007
+     */
+    FrontalVein = "5213007",
+    /**
+     * Code: 5225005
+     */
+    StructureOfUterineOstiumOfFallopianTube = "5225005",
+    /**
+     * Code: 5228007
+     */
+    RightCerebralHemisphereStructure = "5228007",
+    /**
+     * Code: 5229004
+     */
+    StructureOfMucosaOfGallbladder = "5229004",
+    /**
+     * Code: 5261000
+     */
+    StructureOfThoracicIntervertebralDisc = "5261000",
+    /**
+     * Code: 5272005
+     */
+    SkinStructureOfLateralPortionOfNeck = "5272005",
+    /**
+     * Code: 5279001
+     */
+    StructureOfForamenSingulare = "5279001",
+    /**
+     * Code: 528006
+     */
+    CostalSurfaceOfLung = "528006",
+    /**
+     * Code: 5296000
+     */
+    StructureOfAnteriorMediastinalLymphNode = "5296000",
+    /**
+     * Code: 5324007
+     */
+    StructureOfSuperiorPoleOfKidney = "5324007",
+    /**
+     * Code: 5329002
+     */
+    BoneStructureOfC4 = "5329002",
+    /**
+     * Code: 5336001
+     */
+    StructureOfInferiorFrontalGyrus = "5336001",
+    /**
+     * Code: 5347008
+     */
+    SynapticSpecializationCytoplasmic = "5347008",
+    /**
+     * Code: 5362005
+     */
+    StructureOfMedianArcuateLigamentOfDiaphragm = "5362005",
+    /**
+     * Code: 5366008
+     */
+    HippocampalStructure = "5366008",
+    /**
+     * Code: 5379004
+     */
+    SmallIntestineMuscularisPropria = "5379004",
+    /**
+     * Code: 5382009
+     */
+    SuperiorFasciaOfPerineum = "5382009",
+    /**
+     * Code: 5394000
+     */
+    UterineParacervicalLymphNode = "5394000",
+    /**
+     * Code: 5398002
+     */
+    NormalFatPad = "5398002",
+    /**
+     * Code: 5403001
+     */
+    ArticularProcessOfThirdLumbarVertebra = "5403001",
+    /**
+     * Code: 5421003
+     */
+    SexChromosomeY = "5421003",
+    /**
+     * Code: 5427004
+     */
+    ApocrineIntraepidermalDuct = "5427004",
+    /**
+     * Code: 5458003
+     */
+    DeepArteryOfClitoris = "5458003",
+    /**
+     * Code: 5459006
+     */
+    CardiacIncisureOfStomach = "5459006",
+    /**
+     * Code: 5491007
+     */
+    LacrimalPartOfOrbicularisOculiMuscle = "5491007",
+    /**
+     * Code: 5493005
+     */
+    MetacarpophalangealJointOfLittleFinger = "5493005",
+    /**
+     * Code: 5498001
+     */
+    SuperiorAberrantDuctuleOfEpididymis = "5498001",
+    /**
+     * Code: 5501001
+     */
+    HyaloidArtery = "5501001",
+    /**
+     * Code: 5520004
+     */
+    SubcutaneousTissueOfChin = "5520004",
+    /**
+     * Code: 552004
+     */
+    VagusNerveParasympatheticFibersToCardiacPlexus = "552004",
+    /**
+     * Code: 5538001
+     */
+    TegmentalPortionOfPons = "5538001",
+    /**
+     * Code: 5542003
+     */
+    CristaMarginalisOfTooth = "5542003",
+    /**
+     * Code: 5544002
+     */
+    LongitudinalLayerOfDuodenalMuscularisPropria = "5544002",
+    /**
+     * Code: 5560003
+     */
+    AlveolarRidgeMucousMembrane = "5560003",
+    /**
+     * Code: 5564007
+     */
+    Singlet = "5564007",
+    /**
+     * Code: 5574005
+     */
+    SeventhCostalCartilage = "5574005",
+    /**
+     * Code: 5580002
+     */
+    TendonOfSupraspinatusMuscle = "5580002",
+    /**
+     * Code: 5597008
+     */
+    RetinaOfRightEye = "5597008",
+    /**
+     * Code: 5611001
+     */
+    AnulusFibrosusOfIntervertebralDiscOfFifthCervicalVertebra = "5611001",
+    /**
+     * Code: 5625000
+     */
+    NavicularFacetOfIntermediateCuneiformBone = "5625000",
+    /**
+     * Code: 5627008
+     */
+    RightVisceralPleura = "5627008",
+    /**
+     * Code: 5633004
+     */
+    MuscularPortionOfInterventricularSeptum = "5633004",
+    /**
+     * Code: 5643001
+     */
+    CanalOfStomach = "5643001",
+    /**
+     * Code: 5644007
+     */
+    FracturedMembranePFace = "5644007",
+    /**
+     * Code: 565008
+     */
+    IntervertebralDiscSpaceOfFifthLumbarVertebra = "565008",
+    /**
+     * Code: 5653000
+     */
+    InnerSurfaceOfSeventhRib = "5653000",
+    /**
+     * Code: 5665001
+     */
+    Retina = "5665001",
+    /**
+     * Code: 5668004
+     */
+    LowerDigestiveTract = "5668004",
+    /**
+     * Code: 5677006
+     */
+    LenticularFasciculus = "5677006",
+    /**
+     * Code: 5682004
+     */
+    SubcutaneousTissueOfUpperExtremity = "5682004",
+    /**
+     * Code: 5696005
+     */
+    ArticularPartOfTubercleOfNinthRib = "5696005",
+    /**
+     * Code: 5697001
+     */
+    SkinOfLateralSurfaceOfFinger = "5697001",
+    /**
+     * Code: 5709001
+     */
+    MultifidusMuscles = "5709001",
+    /**
+     * Code: 5713008
+     */
+    SubmandibularTriangle = "5713008",
+    /**
+     * Code: 5717009
+     */
+    TemporalFossa = "5717009",
+    /**
+     * Code: 5718004
+     */
+    TendonAndTendonSheathOfLegAndAnkle = "5718004",
+    /**
+     * Code: 5727003
+     */
+    AnteriorCervicalLymphNode = "5727003",
+    /**
+     * Code: 5742000
+     */
+    SkinOfForearm = "5742000",
+    /**
+     * Code: 5751008
+     */
+    SubcutaneousTissueOfAnteriorPortionOfNeck = "5751008",
+    /**
+     * Code: 5769004
+     */
+    EndocervicalEpithelium = "5769004",
+    /**
+     * Code: 5780004
+     */
+    Paradidymis = "5780004",
+    /**
+     * Code: 5798000
+     */
+    Diaphragm = "5798000",
+    /**
+     * Code: 5802004
+     */
+    MediumSizedNeuron = "5802004",
+    /**
+     * Code: 5814007
+     */
+    AngleOfSeventhRib = "5814007",
+    /**
+     * Code: 5815008
+     */
+    SuperiorRectusMuscle = "5815008",
+    /**
+     * Code: 5816009
+     */
+    DuodenalFold = "5816009",
+    /**
+     * Code: 582005
+     */
+    HeadOfPhalanxOfGreatToe = "582005",
+    /**
+     * Code: 5825003
+     */
+    SubstantiaPropriaOfSclera = "5825003",
+    /**
+     * Code: 5828001
+     */
+    PosteriorCordOfBrachialPlexus = "5828001",
+    /**
+     * Code: 5847003
+     */
+    SuperiorArticularProcessOfSeventhCervicalVertebra = "5847003",
+    /**
+     * Code: 5854009
+     */
+    OrbitalPlateOfEthmoidBone = "5854009",
+    /**
+     * Code: 5868002
+     */
+    SerosaOfUrinaryBladder = "5868002",
+    /**
+     * Code: 587004
+     */
+    CapsuleOfProximalInterphalangealJointOfThirdToe = "587004",
+    /**
+     * Code: 5872003
+     */
+    SubcutaneousTissueOfLateralBorderOfSoleOfFoot = "5872003",
+    /**
+     * Code: 5881009
+     */
+    TuberosityOfDistalPhalanxOfHand = "5881009",
+    /**
+     * Code: 5882002
+     */
+    EndothelialSievePlate = "5882002",
+    /**
+     * Code: 5889006
+     */
+    ArticularSurfaceThirdMetacarpalOfFourthMetacarpalBone = "5889006",
+    /**
+     * Code: 5890002
+     */
+    PosteriorCellsOfEthmoidSinus = "5890002",
+    /**
+     * Code: 589001
+     */
+    InterventricularSeptum = "589001",
+    /**
+     * Code: 5893000
+     */
+    SuperiorRecessOfTympanicMembrane = "5893000",
+    /**
+     * Code: 5898009
+     */
+    Myotome = "5898009",
+    /**
+     * Code: 5923009
+     */
+    ArticularProcessOfTwelfthThoracicVertebra = "5923009",
+    /**
+     * Code: 5926001
+     */
+    BronchialLumen = "5926001",
+    /**
+     * Code: 5928000
+     */
+    GreatCardiacVein = "5928000",
+    /**
+     * Code: 5942008
+     */
+    TensorTympaniMuscle = "5942008",
+    /**
+     * Code: 5943003
+     */
+    VestibularVein = "5943003",
+    /**
+     * Code: 5944009
+     */
+    PosteriorPalatineArch = "5944009",
+    /**
+     * Code: 5948007
+     */
+    CapsuleOfDistalInterphalangealJointOfThirdToe = "5948007",
+    /**
+     * Code: 595000
+     */
+    PalpebralFissure = "595000",
+    /**
+     * Code: 5951000
+     */
+    LeftWrist = "5951000",
+    /**
+     * Code: 5953002
+     */
+    EighthRib = "5953002",
+    /**
+     * Code: 5976004
+     */
+    SubcutaneousTissueOfEyelid = "5976004",
+    /**
+     * Code: 5979006
+     */
+    EpiscleralArtery = "5979006",
+    /**
+     * Code: 5996007
+     */
+    ChromosomesGroupD = "5996007",
+    /**
+     * Code: 6001004
+     */
+    QuadratusLumborumMuscle = "6001004",
+    /**
+     * Code: 6004007
+     */
+    IntervertebralDiscOfSecondThoracicVertebra = "6004007",
+    /**
+     * Code: 6006009
+     */
+    CircularLayerOfDuodenalMuscularisPropria = "6006009",
+    /**
+     * Code: 6009002
+     */
+    MesenteryOfAscendingColon = "6009002",
+    /**
+     * Code: 6013009
+     */
+    ReticuloendothelialSystem = "6013009",
+    /**
+     * Code: 6014003
+     */
+    PenicilliaryArteries = "6014003",
+    /**
+     * Code: 6023000
+     */
+    Heterolysosome = "6023000",
+    /**
+     * Code: 6032003
+     */
+    ColumnarEpithelialCell = "6032003",
+    /**
+     * Code: 6046003
+     */
+    OuterSurfaceOfThirdRib = "6046003",
+    /**
+     * Code: 6050005
+     */
+    LacrimalVein = "6050005",
+    /**
+     * Code: 6059006
+     */
+    MetacarpophalangealJointOfMiddleFinger = "6059006",
+    /**
+     * Code: 6062009
+     */
+    DeciduousMandibularRightCanineTooth = "6062009",
+    /**
+     * Code: 6073002
+     */
+    LigamentOfLeftSuperiorVenaCava = "6073002",
+    /**
+     * Code: 6074008
+     */
+    CapsuleOfTemporomandibularJoint = "6074008",
+    /**
+     * Code: 6076005
+     */
+    GastrointestinalSubserosa = "6076005",
+    /**
+     * Code: 608002
+     */
+    SubcutaneousTissueOfPhiltrum = "608002",
+    /**
+     * Code: 6104005
+     */
+    SubclavianNerve = "6104005",
+    /**
+     * Code: 6105006
+     */
+    BodyOfFifthThoracicVertebra = "6105006",
+    /**
+     * Code: 6110005
+     */
+    FacialNerveParasympatheticFibers = "6110005",
+    /**
+     * Code: 6194002
+     */
+    NailOfFourthToe = "6194002",
+    /**
+     * Code: 621009
+     */
+    MultivesicularBodyInternalVesicles = "621009",
+    /**
+     * Code: 6216007
+     */
+    PostcapillaryVenule = "6216007",
+    /**
+     * Code: 6217003
+     */
+    PiriformRecess = "6217003",
+    /**
+     * Code: 6229007
+     */
+    OsLacrimale = "6229007",
+    /**
+     * Code: 6253001
+     */
+    SulcusTerminalisCordis = "6253001",
+    /**
+     * Code: 6268000
+     */
+    AccessoryPhrenicNerves = "6268000",
+    /**
+     * Code: 6269008
+     */
+    SubcutaneousTissueOfScalp = "6269008",
+    /**
+     * Code: 6279005
+     */
+    SkinOfDorsalSurfaceOfFinger = "6279005",
+    /**
+     * Code: 6317000
+     */
+    PosteriorBasalBranchOfLeftPulmonaryArtery = "6317000",
+    /**
+     * Code: 6325003
+     */
+    AryepiglotticMuscle = "6325003",
+    /**
+     * Code: 6326002
+     */
+    FetalAtloidArticulation = "6326002",
+    /**
+     * Code: 6335009
+     */
+    LymphoidFollicleOfStomach = "6335009",
+    /**
+     * Code: 635006
+     */
+    TuberosityOfDistalPhalanxOfLittleToe = "635006",
+    /**
+     * Code: 6359004
+     */
+    HairMedulla = "6359004",
+    /**
+     * Code: 6371005
+     */
+    LymphaticsOfThyroidGland = "6371005",
+    /**
+     * Code: 6375001
+     */
+    CavernousPortionOfUrethra = "6375001",
+    /**
+     * Code: 6392005
+     */
+    CoccygealNerve = "6392005",
+    /**
+     * Code: 6404004
+     */
+    LigamentumNuchae = "6404004",
+    /**
+     * Code: 6413002
+     */
+    PresymphysialLymphNode = "6413002",
+    /**
+     * Code: 6417001
+     */
+    MedialMalleolus = "6417001",
+    /**
+     * Code: 6423006
+     */
+    SupraspinatusMuscle = "6423006",
+    /**
+     * Code: 6424000
+     */
+    StructureOfRadiatingPortionOfCorticalLobuleOfKidney = "6424000",
+    /**
+     * Code: 6445007
+     */
+    MastCell = "6445007",
+    /**
+     * Code: 6448009
+     */
+    PosteriorVagalTrunk = "6448009",
+    /**
+     * Code: 6450001
+     */
+    Cytotrophoblast = "6450001",
+    /**
+     * Code: 6472004
+     */
+    MedialAspectOfOvary = "6472004",
+    /**
+     * Code: 650002
+     */
+    SuperiorArticularProcessOfSeventhThoracicVertebra = "650002",
+    /**
+     * Code: 6504002
+     */
+    GlansClitoridis = "6504002",
+    /**
+     * Code: 6511003
+     */
+    DistalPortionOfCircumflexBranchOfLeftCoronaryArtery = "6511003",
+    /**
+     * Code: 6530003
+     */
+    CardiacValveLeaflet = "6530003",
+    /**
+     * Code: 6533001
+     */
+    ColonicHaustra = "6533001",
+    /**
+     * Code: 6538005
+     */
+    ThyrocervicalTrunk = "6538005",
+    /**
+     * Code: 6541001
+     */
+    AnteriorCommissureOfMitralValve = "6541001",
+    /**
+     * Code: 6544009
+     */
+    GastrohepaticLigament = "6544009",
+    /**
+     * Code: 6550004
+     */
+    AngularIncisureOfStomach = "6550004",
+    /**
+     * Code: 6551000
+     */
+    PollicisArtery = "6551000",
+    /**
+     * Code: 6553002
+     */
+    InferiorNasalTurbinate = "6553002",
+    /**
+     * Code: 6564004
+     */
+    MedialBorderOfSole = "6564004",
+    /**
+     * Code: 6566002
+     */
+    CerebellarHemisphere = "6566002",
+    /**
+     * Code: 6572002
+     */
+    BaseOfPhalanxOfMiddleFinger = "6572002",
+    /**
+     * Code: 6598008
+     */
+    LingualNerve = "6598008",
+    /**
+     * Code: 660006
+     */
+    TrachealMucousMembrane = "660006",
+    /**
+     * Code: 6606008
+     */
+    StructureOfDorsalIntercuneiformLigaments = "6606008",
+    /**
+     * Code: 6608009
+     */
+    SphenoparietalSinus = "6608009",
+    /**
+     * Code: 661005
+     */
+    JawRegion = "661005",
+    /**
+     * Code: 6620001
+     */
+    CuticleOfNail = "6620001",
+    /**
+     * Code: 6623004
+     */
+    SternalMuscle = "6623004",
+    /**
+     * Code: 6633007
+     */
+    RightPosteriorCerebralArtery = "6633007",
+    /**
+     * Code: 6643005
+     */
+    RightAnteriorCerebralArtery = "6643005",
+    /**
+     * Code: 6646002
+     */
+    AnteriorFossaOfCranialCavity = "6646002",
+    /**
+     * Code: 6649009
+     */
+    UterineSubserosa = "6649009",
+    /**
+     * Code: 6651008
+     */
+    CentralLobuleOfCerebellum = "6651008",
+    /**
+     * Code: 667009
+     */
+    EmbryologicalStructure = "667009",
+    /**
+     * Code: 6684008
+     */
+    ArticularFacetOfHeadOfFibula = "6684008",
+    /**
+     * Code: 6685009
+     */
+    RightAnkle = "6685009",
+    /**
+     * Code: 6711001
+     */
+    ArchOfSecondLumbarVertebra = "6711001",
+    /**
+     * Code: 6720005
+     */
+    FemoralNerveLateralMuscularBranches = "6720005",
+    /**
+     * Code: 6731002
+     */
+    PleuralRecess = "6731002",
+    /**
+     * Code: 6739000
+     */
+    ChordaTympani = "6739000",
+    /**
+     * Code: 6742006
+     */
+    CallosomarginalBranchOfAnteriorCerebralArtery = "6742006",
+    /**
+     * Code: 6750002
+     */
+    MitochondrialInclusion = "6750002",
+    /**
+     * Code: 6757004
+     */
+    RightKnee = "6757004",
+    /**
+     * Code: 6787005
+     */
+    TendonAndTendonSheathOfHand = "6787005",
+    /**
+     * Code: 6789008
+     */
+    Spermatozoa = "6789008",
+    /**
+     * Code: 6799003
+     */
+    MaculaOfUtricle = "6799003",
+    /**
+     * Code: 6805009
+     */
+    InterstitialTissueOfSpleen = "6805009",
+    /**
+     * Code: 6820003
+     */
+    ObturatorNerveAnteriorBranch = "6820003",
+    /**
+     * Code: 6828005
+     */
+    LigamentOfLumbosacralJoint = "6828005",
+    /**
+     * Code: 6829002
+     */
+    ParsCiliarisOfRetina = "6829002",
+    /**
+     * Code: 6834003
+     */
+    AxialSkeleton = "6834003",
+    /**
+     * Code: 6841009
+     */
+    CorticomedullaryJunctionOfKidney = "6841009",
+    /**
+     * Code: 6844001
+     */
+    SporeCrystal = "6844001",
+    /**
+     * Code: 6850006
+     */
+    SecondaryFootProcess = "6850006",
+    /**
+     * Code: 6864006
+     */
+    LeafOfEpiglottis = "6864006",
+    /**
+     * Code: 6866008
+     */
+    HabenularCommissure = "6866008",
+    /**
+     * Code: 6871001
+     */
+    VisceralPericardium = "6871001",
+    /**
+     * Code: 688000
+     */
+    FetalHyaloidArtery = "688000",
+    /**
+     * Code: 6894000
+     */
+    MedialSurfaceOfArm = "6894000",
+    /**
+     * Code: 6902008
+     */
+    PoplitealRegion = "6902008",
+    /**
+     * Code: 6905005
+     */
+    SubcutaneousTissueOfMedialSurfaceOfThirdToe = "6905005",
+    /**
+     * Code: 691000
+     */
+    SmallIntestineSubmucosa = "691000",
+    /**
+     * Code: 6912001
+     */
+    LowerAlveolarRidgeMucosa = "6912001",
+    /**
+     * Code: 6914000
+     */
+    PerivascularSpace = "6914000",
+    /**
+     * Code: 692007
+     */
+    BodyOfIschium = "692007",
+    /**
+     * Code: 6921000
+     */
+    RightUpperExtremity = "6921000",
+    /**
+     * Code: 6930008
+     */
+    JugularArch = "6930008",
+    /**
+     * Code: 6944002
+     */
+    AnteriorLabialVeins = "6944002",
+    /**
+     * Code: 6969002
+     */
+    LymphocyticTissue = "6969002",
+    /**
+     * Code: 6975006
+     */
+    AnteriorMyocardium = "6975006",
+    /**
+     * Code: 6981003
+     */
+    PosteriorHypothalamicNucleus = "6981003",
+    /**
+     * Code: 6987004
+     */
+    CollateralSulcus = "6987004",
+    /**
+     * Code: 6989001
+     */
+    ThoracolumbarRegionOfBack = "6989001",
+    /**
+     * Code: 6991009
+     */
+    SubcutaneousTissueOfJaw = "6991009",
+    /**
+     * Code: 7035006
+     */
+    BileDuctMucousMembrane = "7035006",
+    /**
+     * Code: 7050002
+     */
+    SubcutaneousTissueOfExternalGenitalia = "7050002",
+    /**
+     * Code: 7067009
+     */
+    RightColicArtery = "7067009",
+    /**
+     * Code: 7076002
+     */
+    InterstitialTissueOfMyocardium = "7076002",
+    /**
+     * Code: 7083009
+     */
+    MiddlePhalanxOfIndexFinger = "7083009",
+    /**
+     * Code: 7090004
+     */
+    SupraaorticBranches = "7090004",
+    /**
+     * Code: 7091000
+     */
+    VentralPosterolateralNucleusOfThalamus = "7091000",
+    /**
+     * Code: 7099003
+     */
+    AttachmentPlaqueOfDesmosomeOrHemidesmosome = "7099003",
+    /**
+     * Code: 7117004
+     */
+    FetalImplantationSite = "7117004",
+    /**
+     * Code: 7121006
+     */
+    MaxillaryRightSecondMolarTooth = "7121006",
+    /**
+     * Code: 7148007
+     */
+    AnulusFibrosusOfIntervertebralDiscOfThoracicVertebra = "7148007",
+    /**
+     * Code: 7149004
+     */
+    FalseRib = "7149004",
+    /**
+     * Code: 7154008
+     */
+    TrigeminalGanglionSensoryRoot = "7154008",
+    /**
+     * Code: 7160008
+     */
+    BaseOfMetacarpalBone = "7160008",
+    /**
+     * Code: 7167006
+     */
+    ParaduodenalRecess = "7167006",
+    /**
+     * Code: 7173007
+     */
+    CaudaEquina = "7173007",
+    /**
+     * Code: 7188002
+     */
+    GustatoryPore = "7188002",
+    /**
+     * Code: 7192009
+     */
+    IsthmusTympaniPosticus = "7192009",
+    /**
+     * Code: 7227003
+     */
+    HypoglossalNerveIntrinsicTongueMuscleBranch = "7227003",
+    /**
+     * Code: 723004
+     */
+    DenseIntermediateFilamentBundles = "723004",
+    /**
+     * Code: 7234001
+     */
+    InferiorChoroidVein = "7234001",
+    /**
+     * Code: 7242000
+     */
+    AppendicealMuscularisPropria = "7242000",
+    /**
+     * Code: 7275008
+     */
+    LymphaticsOfAppendixAndLargeIntestine = "7275008",
+    /**
+     * Code: 7295002
+     */
+    MuscleOfPerineum = "7295002",
+    /**
+     * Code: 7296001
+     */
+    DeepInguinalRing = "7296001",
+    /**
+     * Code: 7311008
+     */
+    AnteriorSurfaceOfArm = "7311008",
+    /**
+     * Code: 7344002
+     */
+    LingualGyrus = "7344002",
+    /**
+     * Code: 7345001
+     */
+    CiliaryProcesses = "7345001",
+    /**
+     * Code: 7347009
+     */
+    InfratendinousOlecranonBursa = "7347009",
+    /**
+     * Code: 7362006
+     */
+    LymphaticOfHead = "7362006",
+    /**
+     * Code: 7376007
+     */
+    LeftMarginOfUterus = "7376007",
+    /**
+     * Code: 7378008
+     */
+    ParaventricularNucleusOfThalamus = "7378008",
+    /**
+     * Code: 7384006
+     */
+    PlantarCalcaneocuboidalLigament = "7384006",
+    /**
+     * Code: 7404008
+     */
+    AnteriorSemicircularDuct = "7404008",
+    /**
+     * Code: 7435002
+     */
+    OvarianLigament = "7435002",
+    /**
+     * Code: 7471001
+     */
+    LateralSurfaceOfSublingualGland = "7471001",
+    /**
+     * Code: 7477002
+     */
+    LipidCrystalline = "7477002",
+    /**
+     * Code: 7480001
+     */
+    IliotibialTract = "7480001",
+    /**
+     * Code: 7494000
+     */
+    CerebellarLenticularNucleus = "7494000",
+    /**
+     * Code: 7498002
+     */
+    PlantarTarsalLigaments = "7498002",
+    /**
+     * Code: 7507003
+     */
+    AnteriorLigamentOfHeadOfFibula = "7507003",
+    /**
+     * Code: 7524009
+     */
+    VasaVasorum = "7524009",
+    /**
+     * Code: 7532001
+     */
+    VagusNerveParasympatheticFibers = "7532001",
+    /**
+     * Code: 7554004
+     */
+    DeepHeadOfFlexorPollicisBrevisMuscle = "7554004",
+    /**
+     * Code: 7566005
+     */
+    MitoticCellInAnaphase = "7566005",
+    /**
+     * Code: 7569003
+     */
+    Finger = "7569003",
+    /**
+     * Code: 7591005
+     */
+    IntervertebralDiscSpaceOfEleventhThoracicVertebra = "7591005",
+    /**
+     * Code: 7597009
+     */
+    SubcutaneousTissueOfVertex = "7597009",
+    /**
+     * Code: 7605000
+     */
+    Connexon = "7605000",
+    /**
+     * Code: 7610001
+     */
+    TenthThoracicVertebra = "7610001",
+    /**
+     * Code: 7629007
+     */
+    ThalamoolivaryTract = "7629007",
+    /**
+     * Code: 7651004
+     */
+    IntervenousTubercleOfRightAtrium = "7651004",
+    /**
+     * Code: 7652006
+     */
+    FrenulumLabii = "7652006",
+    /**
+     * Code: 7657000
+     */
+    FemoralArtery = "7657000",
+    /**
+     * Code: 7658005
+     */
+    SubtendinousBursaOfTricepsBrachiiMuscle = "7658005",
+    /**
+     * Code: 7697002
+     */
+    PontinePortionOfMedialLongitudinalFasciculus = "7697002",
+    /**
+     * Code: 7712004
+     */
+    SubduralSpaceOfSpinalRegion = "7712004",
+    /**
+     * Code: 7726008
+     */
+    SkinOfMedialSurfaceOfFifthToe = "7726008",
+    /**
+     * Code: 7736000
+     */
+    PosteriorChoroidalArtery = "7736000",
+    /**
+     * Code: 774007
+     */
+    HeadAndNeck = "774007",
+    /**
+     * Code: 7742001
+     */
+    PalatineDuct = "7742001",
+    /**
+     * Code: 7748002
+     */
+    SkinAppendage = "7748002",
+    /**
+     * Code: 7755000
+     */
+    MesovarianMarginOfOvary = "7755000",
+    /**
+     * Code: 7756004
+     */
+    LaminaOfThirdThoracicVertebra = "7756004",
+    /**
+     * Code: 7764005
+     */
+    StriateArtery = "7764005",
+    /**
+     * Code: 7769000
+     */
+    RightFoot = "7769000",
+    /**
+     * Code: 7783003
+     */
+    SympatheticTrunkSpinalNerveBranch = "7783003",
+    /**
+     * Code: 7820009
+     */
+    LateralPosteriorNucleusOfThalamus = "7820009",
+    /**
+     * Code: 7829005
+     */
+    AnteriorSurfaceOfManubrium = "7829005",
+    /**
+     * Code: 7832008
+     */
+    AbdominalAorta = "7832008",
+    /**
+     * Code: 7835005
+     */
+    PosteriorMarginOfNasalSeptum = "7835005",
+    /**
+     * Code: 7840002
+     */
+    SubcutaneousTissueOfSubmentalArea = "7840002",
+    /**
+     * Code: 7841003
+     */
+    MacrocyticNormochromicErythrocyte = "7841003",
+    /**
+     * Code: 7844006
+     */
+    SternoclavicularJoint = "7844006",
+    /**
+     * Code: 7851002
+     */
+    IntracranialSubduralSpace = "7851002",
+    /**
+     * Code: 7854005
+     */
+    MandibularCanal = "7854005",
+    /**
+     * Code: 7872004
+     */
+    MyocardiumOfVentricle = "7872004",
+    /**
+     * Code: 7874003
+     */
+    ScapularRegionOfBack = "7874003",
+    /**
+     * Code: 7880006
+     */
+    RhopheocytoticVesicle = "7880006",
+    /**
+     * Code: 7884002
+     */
+    CornealCorpuscle = "7884002",
+    /**
+     * Code: 7885001
+     */
+    RotatorCuffIncludingMusclesAndTendons = "7885001",
+    /**
+     * Code: 7892006
+     */
+    SubmucosaOfAnalCanal = "7892006",
+    /**
+     * Code: 7896009
+     */
+    OccipitalAngleOfParietalBone = "7896009",
+    /**
+     * Code: 790007
+     */
+    VisceralSurfaceOfLiver = "790007",
+    /**
+     * Code: 7911004
+     */
+    OlivocerebellarFibers = "7911004",
+    /**
+     * Code: 7925003
+     */
+    ProximalPhalanxOfThirdToe = "7925003",
+    /**
+     * Code: 7936005
+     */
+    LigamentOfDiaphragm = "7936005",
+    /**
+     * Code: 7944005
+     */
+    HelperCell = "7944005",
+    /**
+     * Code: 7954009
+     */
+    LaminaPropriaOfEthmoidSinus = "7954009",
+    /**
+     * Code: 7967007
+     */
+    FirstLeftAorticArch = "7967007",
+    /**
+     * Code: 798000
+     */
+    DeepTemporalVeins = "798000",
+    /**
+     * Code: 7986004
+     */
+    AbdominopelvicPortionOfSympatheticNervousSystem = "7986004",
+    /**
+     * Code: 7991003
+     */
+    SkinOfGlansPenis = "7991003",
+    /**
+     * Code: 7999001
+     */
+    ArticulationsOfAuditoryOssicles = "7999001",
+    /**
+     * Code: 8001006
+     */
+    MucousMembraneOfTongue = "8001006",
+    /**
+     * Code: 8012006
+     */
+    AnteriorCommunicatingArtery = "8012006",
+    /**
+     * Code: 8017000
+     */
+    InflowTractOfRightVentricle = "8017000",
+    /**
+     * Code: 8024004
+     */
+    LimitansNucleus = "8024004",
+    /**
+     * Code: 8039003
+     */
+    SubcutaneousAcromialBursa = "8039003",
+    /**
+     * Code: 8040001
+     */
+    SuperficialFlexorTendonOfLittleFinger = "8040001",
+    /**
+     * Code: 8045006
+     */
+    MembraneCoatingGranuleAmorphous = "8045006",
+    /**
+     * Code: 8057002
+     */
+    LateralNucleiOfGlobusPallidus = "8057002",
+    /**
+     * Code: 8059004
+     */
+    PancreaticVeins = "8059004",
+    /**
+     * Code: 8067007
+     */
+    SuperficialCircumflexIliacVein = "8067007",
+    /**
+     * Code: 8068002
+     */
+    StratumLemnisciOfCorporaQuadrigemina = "8068002",
+    /**
+     * Code: 8079007
+     */
+    RadialNerve = "8079007",
+    /**
+     * Code: 808000
+     */
+    PosteriorIntercostalArtery = "808000",
+    /**
+     * Code: 809008
+     */
+    FetalChondrocranium = "809008",
+    /**
+     * Code: 8091003
+     */
+    IntervertebralDiscSpaceOfTwelfthThoracicVertebra = "8091003",
+    /**
+     * Code: 8100009
+     */
+    InfundibulumOfFallopianTube = "8100009",
+    /**
+     * Code: 8111001
+     */
+    IntranuclearCrystal = "8111001",
+    /**
+     * Code: 8112008
+     */
+    Hindgut = "8112008",
+    /**
+     * Code: 8119004
+     */
+    DelphianLymphNode = "8119004",
+    /**
+     * Code: 8128003
+     */
+    SupraaorticValveArea = "8128003",
+    /**
+     * Code: 8133004
+     */
+    SuperiorAnastomoticVein = "8133004",
+    /**
+     * Code: 8157004
+     */
+    VeinOfHead = "8157004",
+    /**
+     * Code: 8158009
+     */
+    InterlobarDuctOfPancreas = "8158009",
+    /**
+     * Code: 8159001
+     */
+    SuperiorColliculusOfCorporaQuadrigemina = "8159001",
+    /**
+     * Code: 8160006
+     */
+    LateralStriateArteries = "8160006",
+    /**
+     * Code: 8161005
+     */
+    InfraorbitalNerve = "8161005",
+    /**
+     * Code: 8165001
+     */
+    SuperiorArticularProcessOfFifthThoracicVertebra = "8165001",
+    /**
+     * Code: 8205005
+     */
+    Wrist = "8205005",
+    /**
+     * Code: 8225009
+     */
+    AccessoryAtrioventricularBundle = "8225009",
+    /**
+     * Code: 823005
+     */
+    PosteriorCervicalSpinalCordNerveRoot = "823005",
+    /**
+     * Code: 8242003
+     */
+    ApicalBranchOfRightPulmonaryArtery = "8242003",
+    /**
+     * Code: 8251006
+     */
+    OsseousPortionOfEustachianTube = "8251006",
+    /**
+     * Code: 8264007
+     */
+    TunicaInternaOfEyeball = "8264007",
+    /**
+     * Code: 8265008
+     */
+    ArticularSurfaceMetacarpalOfPhalanxOfHand = "8265008",
+    /**
+     * Code: 8266009
+     */
+    SmallIntestineSerosa = "8266009",
+    /**
+     * Code: 8279000
+     */
+    PelvicViscus = "8279000",
+    /**
+     * Code: 8289001
+     */
+    BelowKneeRegion = "8289001",
+    /**
+     * Code: 8292002
+     */
+    InterlobularArteriesOfLiver = "8292002",
+    /**
+     * Code: 830004
+     */
+    SpinousProcessOfFifthThoracicVertebra = "830004",
+    /**
+     * Code: 8314003
+     */
+    MastoidFontanelOfSkull = "8314003",
+    /**
+     * Code: 8334002
+     */
+    LumbarLymphNode = "8334002",
+    /**
+     * Code: 8356004
+     */
+    ColicLymphNode = "8356004",
+    /**
+     * Code: 836005
+     */
+    OralRegionOfFace = "836005",
+    /**
+     * Code: 8361002
+     */
+    TunicaIntima = "8361002",
+    /**
+     * Code: 8369000
+     */
+    SphincterPupillaeMuscle = "8369000",
+    /**
+     * Code: 8373002
+     */
+    JugumOfSphenoidBone = "8373002",
+    /**
+     * Code: 8387002
+     */
+    LaminaOfEighthThoracicVertebra = "8387002",
+    /**
+     * Code: 8389004
+     */
+    BirthCanal = "8389004",
+    /**
+     * Code: 8412003
+     */
+    IliacFossa = "8412003",
+    /**
+     * Code: 8415001
+     */
+    RenalSurfaceOfAdrenalGland = "8415001",
+    /**
+     * Code: 8454000
+     */
+    JointOfLumbarVertebra = "8454000",
+    /**
+     * Code: 8464009
+     */
+    LigamentOfSacroiliacJointAndPubicSymphysis = "8464009",
+    /**
+     * Code: 8482007
+     */
+    SinoatrialNodeBranchOfRightCoronaryArtery = "8482007",
+    /**
+     * Code: 8483002
+     */
+    MesialSurfaceOfTooth = "8483002",
+    /**
+     * Code: 8496001
+     */
+    ObliquusCapitisMuscle = "8496001",
+    /**
+     * Code: 8523001
+     */
+    InferiorArticularProcessOfTwelfthThoracicVertebra = "8523001",
+    /**
+     * Code: 8546004
+     */
+    PosteriorIntercavernousSinus = "8546004",
+    /**
+     * Code: 8556000
+     */
+    LipidDroplet = "8556000",
+    /**
+     * Code: 8559007
+     */
+    JuxtaintestinalLymphNode = "8559007",
+    /**
+     * Code: 8560002
+     */
+    InterclavicularLigament = "8560002",
+    /**
+     * Code: 8568009
+     */
+    AbdominalLymphNodes = "8568009",
+    /**
+     * Code: 8580001
+     */
+    BothFeet = "8580001",
+    /**
+     * Code: 8595004
+     */
+    MeissnerQuoteSPlexus = "8595004",
+    /**
+     * Code: 8598002
+     */
+    AcousticNerve = "8598002",
+    /**
+     * Code: 8600008
+     */
+    CricoidCartilage = "8600008",
+    /**
+     * Code: 8603005
+     */
+    AdductorHallucisMuscle = "8603005",
+    /**
+     * Code: 8604004
+     */
+    MedullaOblongataFasciculusCuneatus = "8604004",
+    /**
+     * Code: 8608001
+     */
+    RightMarginOfHeart = "8608001",
+    /**
+     * Code: 8617001
+     */
+    ZygomaticRegionOfFace = "8617001",
+    /**
+     * Code: 8623006
+     */
+    TransplantedUreter = "8623006",
+    /**
+     * Code: 8629005
+     */
+    SuperiorRightPulmonaryVein = "8629005",
+    /**
+     * Code: 8640002
+     */
+    ChoroidalBranchesOfPosteriorSpinalArtery = "8640002",
+    /**
+     * Code: 8668003
+     */
+    GlycogenVacuole = "8668003",
+    /**
+     * Code: 8671006
+     */
+    AllToes = "8671006",
+    /**
+     * Code: 8677005
+     */
+    BodyOfRightAtrium = "8677005",
+    /**
+     * Code: 8688004
+     */
+    LateralOlfactoryGyrus = "8688004",
+    /**
+     * Code: 8695008
+     */
+    IntervertebralForamenOfSecondLumbarVertebra = "8695008",
+    /**
+     * Code: 8710005
+     */
+    MinorSublingualDucts = "8710005",
+    /**
+     * Code: 8711009
+     */
+    PeriodontalTissues = "8711009",
+    /**
+     * Code: 8714001
+     */
+    SubcutaneousTissueOfInterdigitalSpaceOfHand = "8714001",
+    /**
+     * Code: 8752000
+     */
+    CavernousPortionOfInternalCarotidArtery = "8752000",
+    /**
+     * Code: 8770002
+     */
+    NailOfSecondToe = "8770002",
+    /**
+     * Code: 8775007
+     */
+    TendinousArch = "8775007",
+    /**
+     * Code: 8784007
+     */
+    IntranuclearBodyGranularWithFilamentousCapsule = "8784007",
+    /**
+     * Code: 8810002
+     */
+    CorticomedullaryJunctionOfAdrenalGland = "8810002",
+    /**
+     * Code: 8814006
+     */
+    IliacTuberosity = "8814006",
+    /**
+     * Code: 8815007
+     */
+    ThenarAndHypothenarSpaces = "8815007",
+    /**
+     * Code: 8820007
+     */
+    PedicleOfEleventhThoracicVertebra = "8820007",
+    /**
+     * Code: 8821006
+     */
+    PeronealArtery = "8821006",
+    /**
+     * Code: 8827005
+     */
+    ShaftOfPhalanxOfMiddleFinger = "8827005",
+    /**
+     * Code: 8839002
+     */
+    AgranularEndoplasmicReticulumConnectionWithOtherOrganelle = "8839002",
+    /**
+     * Code: 8845005
+     */
+    SubtendinousPrepatellarBursa = "8845005",
+    /**
+     * Code: 885000
+     */
+    LaminaMuscularisOfColonicMucousMembrane = "885000",
+    /**
+     * Code: 8850004
+     */
+    ProperFasciculus = "8850004",
+    /**
+     * Code: 8854008
+     */
+    CristaGalli = "8854008",
+    /**
+     * Code: 8862000
+     */
+    PalmarSurfaceOfMiddleFinger = "8862000",
+    /**
+     * Code: 8873007
+     */
+    MandibularRightSecondPremolarTooth = "8873007",
+    /**
+     * Code: 8887007
+     */
+    BrachiocephalicVein = "8887007",
+    /**
+     * Code: 8892009
+     */
+    DiaphragmaticSurfaceOfLung = "8892009",
+    /**
+     * Code: 8894005
+     */
+    GastricCardiacGland = "8894005",
+    /**
+     * Code: 8897003
+     */
+    LateralGlossoepiglotticFold = "8897003",
+    /**
+     * Code: 8907008
+     */
+    LeftUlnarArtery = "8907008",
+    /**
+     * Code: 8910001
+     */
+    InferiorTransverseScapularLigament = "8910001",
+    /**
+     * Code: 8911002
+     */
+    EndocardiumOfRightVentricle = "8911002",
+    /**
+     * Code: 8928004
+     */
+    InguinalLymphNode = "8928004",
+    /**
+     * Code: 8931003
+     */
+    CoracoidProcessOfScapula = "8931003",
+    /**
+     * Code: 8935007
+     */
+    CerebralMeninges = "8935007",
+    /**
+     * Code: 8942007
+     */
+    TrapezoidLigament = "8942007",
+    /**
+     * Code: 895007
+     */
+    AnteriorCruciateLigamentOfKneeJoint = "895007",
+    /**
+     * Code: 8965002
+     */
+    StratumZonaleOfCorporaQuadrigemina = "8965002",
+    /**
+     * Code: 8966001
+     */
+    LeftEye = "8966001",
+    /**
+     * Code: 8983005
+     */
+    JointStructureOfVertebralColumn = "8983005",
+    /**
+     * Code: 8988001
+     */
+    MarginalPartOfOrbicularisOrisMuscle = "8988001",
+    /**
+     * Code: 8993003
+     */
+    HepaticVein = "8993003",
+    /**
+     * Code: 9000002
+     */
+    CerebellarPeduncle = "9000002",
+    /**
+     * Code: 9003000
+     */
+    LeftParietalLobe = "9003000",
+    /**
+     * Code: 9018004
+     */
+    MiddleColicVein = "9018004",
+    /**
+     * Code: 9040008
+     */
+    AscendingColon = "9040008",
+    /**
+     * Code: 9055004
+     */
+    BothForearms = "9055004",
+    /**
+     * Code: 9073001
+     */
+    WhiteMatterOfInsula = "9073001",
+    /**
+     * Code: 9081000
+     */
+    SplenicSinusoids = "9081000",
+    /**
+     * Code: 9086005
+     */
+    SuperiorLaryngealVein = "9086005",
+    /**
+     * Code: 9089003
+     */
+    ArchOfFoot = "9089003",
+    /**
+     * Code: 9108007
+     */
+    VeinOfTheScalaTympani = "9108007",
+    /**
+     * Code: 9127001
+     */
+    TransverseFoldsOfPalate = "9127001",
+    /**
+     * Code: 9156001
+     */
+    EmbryoStage1 = "9156001",
+    /**
+     * Code: 917004
+     */
+    SuperiorLaryngealAperture = "917004",
+    /**
+     * Code: 9181003
+     */
+    AccessoryCarpalBone = "9181003",
+    /**
+     * Code: 9185007
+     */
+    CapsuleOfMetatarsophalangealJointOfFifthToe = "9185007",
+    /**
+     * Code: 9186008
+     */
+    FilamentsOfContractileApparatus = "9186008",
+    /**
+     * Code: 9188009
+     */
+    IntervertebralDiscOfEighthThoracicVertebra = "9188009",
+    /**
+     * Code: 9208002
+     */
+    Centriole = "9208002",
+    /**
+     * Code: 921006
+     */
+    ThyrohyoidBranchOfAnsaCervicalis = "921006",
+    /**
+     * Code: 9212008
+     */
+    ShaftOfFifthMetatarsalBone = "9212008",
+    /**
+     * Code: 9229006
+     */
+    RotatoresLumborumMuscles = "9229006",
+    /**
+     * Code: 9231002
+     */
+    ExternalPudendalVeins = "9231002",
+    /**
+     * Code: 9240003
+     */
+    NiemannPickCell = "9240003",
+    /**
+     * Code: 9242006
+     */
+    PosteriorSegmentOfRightLobeOfLiver = "9242006",
+    /**
+     * Code: 9258009
+     */
+    GravidUterus = "9258009",
+    /**
+     * Code: 9261005
+     */
+    TendonAndTendonSheathOfSecondToe = "9261005",
+    /**
+     * Code: 9262003
+     */
+    FasciaOfPelvis = "9262003",
+    /**
+     * Code: 9284003
+     */
+    CorpusCavernosumOfPenis = "9284003",
+    /**
+     * Code: 9290004
+     */
+    PosteriorIntraoccipitalSynchondrosis = "9290004",
+    /**
+     * Code: 9305001
+     */
+    LabialVeins = "9305001",
+    /**
+     * Code: 9317004
+     */
+    MerkelQuoteSTactileDisc = "9317004",
+    /**
+     * Code: 9320007
+     */
+    SubtendinousIliacBursa = "9320007",
+    /**
+     * Code: 9321006
+     */
+    TailOfEpididymis = "9321006",
+    /**
+     * Code: 9325002
+     */
+    InterdentalPapillaOfGingiva = "9325002",
+    /**
+     * Code: 9332006
+     */
+    LateralLigamentOfTemporomandibularJoint = "9332006",
+    /**
+     * Code: 9348007
+     */
+    SkinOfMedialSurfaceOfMiddleFinger = "9348007",
+    /**
+     * Code: 9379006
+     */
+    PermanentTeeth = "9379006",
+    /**
+     * Code: 9380009
+     */
+    PectenAni = "9380009",
+    /**
+     * Code: 9384000
+     */
+    LumbarVein = "9384000",
+    /**
+     * Code: 9390001
+     */
+    LymphaticsOfStomach = "9390001",
+    /**
+     * Code: 9432007
+     */
+    PlantarSurfaceOfFourthToe = "9432007",
+    /**
+     * Code: 9438006
+     */
+    StructureOfDeepCervicalLymphaticVessel = "9438006",
+    /**
+     * Code: 9454009
+     */
+    SubclavianVein = "9454009",
+    /**
+     * Code: 9455005
+     */
+    MedialCartilaginousLaminaOfEustachianTube = "9455005",
+    /**
+     * Code: 947002
+     */
+    CrusOfDiaphragm = "947002",
+    /**
+     * Code: 9475001
+     */
+    AmacrineCellsOfRetina = "9475001",
+    /**
+     * Code: 9481009
+     */
+    AfferentGlomerularArteriole = "9481009",
+    /**
+     * Code: 9490002
+     */
+    PulmonaryLigament = "9490002",
+    /**
+     * Code: 9498009
+     */
+    HeadOfMetacarpalBone = "9498009",
+    /**
+     * Code: 9502002
+     */
+    CoronalDepressionOfTooth = "9502002",
+    /**
+     * Code: 9512009
+     */
+    CalcaneocuboidalLigament = "9512009",
+    /**
+     * Code: 9535007
+     */
+    PyramidOfMedullaOblongata = "9535007",
+    /**
+     * Code: 955009
+     */
+    Bronchus = "955009",
+    /**
+     * Code: 9558005
+     */
+    FacetForFifthCostalCartilageOfSternum = "9558005",
+    /**
+     * Code: 9566001
+     */
+    DuodenalLumen = "9566001",
+    /**
+     * Code: 9568000
+     */
+    SubcutaneousTissueOfAreola = "9568000",
+    /**
+     * Code: 9596006
+     */
+    DeepBranchOfUlnarNerve = "9596006",
+    /**
+     * Code: 9609000
+     */
+    PosteriorProcessOfNasalSeptalCartilage = "9609000",
+    /**
+     * Code: 9625005
+     */
+    LanugoHair = "9625005",
+    /**
+     * Code: 9642004
+     */
+    LeftSuperiorVenaCava = "9642004",
+    /**
+     * Code: 9646001
+     */
+    SuperiorTransverseScapularLigament = "9646001",
+    /**
+     * Code: 9654004
+     */
+    GastricMucousGland = "9654004",
+    /**
+     * Code: 9659009
+     */
+    InfraclavicularLymphNodes = "9659009",
+    /**
+     * Code: 9662007
+     */
+    SubcutaneousTissueOfLowerMarginOfNasalSeptum = "9662007",
+    /**
+     * Code: 9668006
+     */
+    CiliaryMuscle = "9668006",
+    /**
+     * Code: 9677004
+     */
+    HeadOfSecondMetatarsalBone = "9677004",
+    /**
+     * Code: 9683001
+     */
+    Melanocyte = "9683001",
+    /**
+     * Code: 9684007
+     */
+    PosteriorScrotalBranchesOfInternalPudendalArtery = "9684007",
+    /**
+     * Code: 9708001
+     */
+    IliacFascia = "9708001",
+    /**
+     * Code: 9732008
+     */
+    MedialSupraclavicularNerves = "9732008",
+    /**
+     * Code: 9736006
+     */
+    RightWrist = "9736006",
+    /**
+     * Code: 9743000
+     */
+    TendonOfIndexFinger = "9743000",
+    /**
+     * Code: 9758008
+     */
+    SubmucosaOfTonsil = "9758008",
+    /**
+     * Code: 976004
+     */
+    OvarianVein = "976004",
+    /**
+     * Code: 9770007
+     */
+    GenitalTubercle = "9770007",
+    /**
+     * Code: 9775002
+     */
+    LeftCarotidSinus = "9775002",
+    /**
+     * Code: 9779008
+     */
+    DistinctiveShapeOfMitochondrialCristae = "9779008",
+    /**
+     * Code: 9783008
+     */
+    SuperficialLymphaticsOfThorax = "9783008",
+    /**
+     * Code: 9791004
+     */
+    DeepVenousSystemOfLowerExtremity = "9791004",
+    /**
+     * Code: 9796009
+     */
+    SkeletalMuscleFiberTypeIIb = "9796009",
+    /**
+     * Code: 9813009
+     */
+    FasciaOfUpperExtremity = "9813009",
+    /**
+     * Code: 9825007
+     */
+    ProximalPhalanxOfLittleToe = "9825007",
+    /**
+     * Code: 9837009
+     */
+    PerforatingBranchesOfInternalThoracicArtery = "9837009",
+    /**
+     * Code: 9840009
+     */
+    BiparietalDiameterOfHead = "9840009",
+    /**
+     * Code: 9841008
+     */
+    InterspinalisThoracisMuscles = "9841008",
+    /**
+     * Code: 9846003
+     */
+    RightKidney = "9846003",
+    /**
+     * Code: 9847007
+     */
+    HilumOfAdrenalGland = "9847007",
+    /**
+     * Code: 9849005
+     */
+    FornixOfLacrimalSac = "9849005",
+    /**
+     * Code: 9870004
+     */
+    CarunculaeHymenales = "9870004",
+    /**
+     * Code: 9875009
+     */
+    Thymus = "9875009",
+    /**
+     * Code: 9878006
+     */
+    AppendicularVein = "9878006",
+    /**
+     * Code: 9880000
+     */
+    ThyroidTubercle = "9880000",
+    /**
+     * Code: 9881001
+     */
+    PeripheralNerveMyelinatedNerveFiber = "9881001",
+    /**
+     * Code: 9891007
+     */
+    TransverseArytenoidMuscle = "9891007",
+    /**
+     * Code: 9898001
+     */
+    ParacentralLobule = "9898001",
+    /**
+     * Code: 9951005
+     */
+    PosteriorEthmoidalNerve = "9951005",
+    /**
+     * Code: 996007
+     */
+    MeningealBranchOfOccipitalArtery = "996007",
+    /**
+     * Code: 9968009
+     */
+    PrimaryFootProcess = "9968009",
+    /**
+     * Code: 9970000
+     */
+    IleocecalOstium = "9970000",
+    /**
+     * Code: 9976006
+     */
+    RhomboideusCervicisMuscle = "9976006",
+    /**
+     * Code: 9994000
+     */
+    SuperiorArticularProcessOfSixthThoracicVertebra = "9994000",
+    /**
+     * Code: 9999005
+     */
+    DuodenalAmpulla = "9999005"
+}
 //# sourceMappingURL=ApproachSiteCodesValueSet.d.ts.map

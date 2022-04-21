@@ -1,4 +1,5 @@
-import * as fhir from '../fhir';
+import * as fhir from '../fhir.js';
+import { ResearchSubjectStatusValueSetType, ResearchSubjectStatusValueSetEnum } from '../fhirValueSets/ResearchSubjectStatusValueSet.js';
 /**
  * A physical entity which is the primary unit of operational and/or administrative interest in a study.
  */
@@ -8,113 +9,113 @@ export declare type IResearchSubject = fhir.IDomainResource & {
      */
     resourceType: "ResearchSubject";
     /**
-     * The name of the arm in the study the subject actually followed as part of this study.
-     */
-    actualArm?: string | undefined;
-    _actualArm?: fhir.IFhirElement | undefined;
-    /**
-     * The name of the arm in the study the subject is expected to follow as part of this study.
-     */
-    assignedArm?: string | undefined;
-    _assignedArm?: fhir.IFhirElement | undefined;
-    /**
-     * A record of the patient's informed agreement to participate in the study.
-     */
-    consent?: fhir.IReference | undefined;
-    /**
      * Identifiers assigned to this research subject for a study.
      */
     identifier?: fhir.IIdentifier[] | undefined;
     /**
-     * The record of the person or animal who is involved in the study.
+     * The current state of the subject.
      */
-    individual: fhir.IReference | null;
+    status: ResearchSubjectStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ResearchSubject.status
+     */
+    _status?: fhir.IFhirElement | undefined;
     /**
      * The dates the subject began and ended their participation in the study.
      */
     period?: fhir.IPeriod | undefined;
     /**
-     * The current state of the subject.
-     */
-    status: ResearchSubjectStatusEnum | null;
-    _status?: fhir.IFhirElement | undefined;
-    /**
      * Reference to the study the subject is participating in.
      */
     study: fhir.IReference | null;
+    /**
+     * The record of the person or animal who is involved in the study.
+     */
+    individual: fhir.IReference | null;
+    /**
+     * The name of the arm in the study the subject is expected to follow as part of this study.
+     */
+    assignedArm?: string | undefined;
+    /**
+     * Extended properties for primitive element: ResearchSubject.assignedArm
+     */
+    _assignedArm?: fhir.IFhirElement | undefined;
+    /**
+     * The name of the arm in the study the subject actually followed as part of this study.
+     */
+    actualArm?: string | undefined;
+    /**
+     * Extended properties for primitive element: ResearchSubject.actualArm
+     */
+    _actualArm?: fhir.IFhirElement | undefined;
+    /**
+     * A record of the patient's informed agreement to participate in the study.
+     */
+    consent?: fhir.IReference | undefined;
 };
 /**
  * A physical entity which is the primary unit of operational and/or administrative interest in a study.
  */
-export declare class ResearchSubject extends fhir.DomainResource implements fhir.IResearchSubject {
+export declare class ResearchSubject extends fhir.DomainResource implements IResearchSubject {
     /**
      * Resource Type Name
      */
     resourceType: "ResearchSubject";
     /**
-     * The name of the arm in the study the subject actually followed as part of this study.
-     */
-    actualArm?: string | undefined;
-    _actualArm?: fhir.FhirElement | undefined;
-    /**
-     * The name of the arm in the study the subject is expected to follow as part of this study.
-     */
-    assignedArm?: string | undefined;
-    _assignedArm?: fhir.FhirElement | undefined;
-    /**
-     * A record of the patient's informed agreement to participate in the study.
-     */
-    consent?: fhir.Reference | undefined;
-    /**
      * Identifiers assigned to this research subject for a study.
      */
     identifier?: fhir.Identifier[] | undefined;
     /**
-     * The record of the person or animal who is involved in the study.
+     * The current state of the subject.
      */
-    individual: fhir.Reference | null;
+    status: ResearchSubjectStatusValueSetEnum | null;
+    /**
+     * Extended properties for primitive element: ResearchSubject.status
+     */
+    _status?: fhir.FhirElement | undefined;
     /**
      * The dates the subject began and ended their participation in the study.
      */
     period?: fhir.Period | undefined;
     /**
-     * The current state of the subject.
-     */
-    status: ResearchSubjectStatusEnum | null;
-    _status?: fhir.FhirElement | undefined;
-    /**
      * Reference to the study the subject is participating in.
      */
     study: fhir.Reference | null;
     /**
+     * The record of the person or animal who is involved in the study.
+     */
+    individual: fhir.Reference | null;
+    /**
+     * The name of the arm in the study the subject is expected to follow as part of this study.
+     */
+    assignedArm?: string | undefined;
+    /**
+     * Extended properties for primitive element: ResearchSubject.assignedArm
+     */
+    _assignedArm?: fhir.FhirElement | undefined;
+    /**
+     * The name of the arm in the study the subject actually followed as part of this study.
+     */
+    actualArm?: string | undefined;
+    /**
+     * Extended properties for primitive element: ResearchSubject.actualArm
+     */
+    _actualArm?: fhir.FhirElement | undefined;
+    /**
+     * A record of the patient's informed agreement to participate in the study.
+     */
+    consent?: fhir.Reference | undefined;
+    /**
      * Default constructor for ResearchSubject - initializes any required elements to null if a value is not provided.
      */
-    constructor(source?: Partial<fhir.IResearchSubject>);
+    constructor(source?: Partial<IResearchSubject>);
     /**
-     * Check if the current ResearchSubject contains all required elements.
+     * Required-bound Value Set for status
      */
-    checkRequiredElements(): string[];
+    statusRequiredValueSet(): ResearchSubjectStatusValueSetType;
     /**
-     * Factory function to create a ResearchSubject from an object that MUST contain all required elements.
+     * Function to perform basic model validation (e.g., check if required elements are present).
      */
-    static fromStrict(source: fhir.IResearchSubject): ResearchSubject;
-}
-/**
- * Code Values for the ResearchSubject.status field
- */
-export declare enum ResearchSubjectStatusEnum {
-    CANDIDATE = "candidate",
-    ELIGIBLE = "eligible",
-    FOLLOW_UP = "follow-up",
-    INELIGIBLE = "ineligible",
-    NOT_REGISTERED = "not-registered",
-    OFF_STUDY = "off-study",
-    ON_STUDY = "on-study",
-    ON_STUDY_INTERVENTION = "on-study-intervention",
-    ON_STUDY_OBSERVATION = "on-study-observation",
-    PENDING_ON_STUDY = "pending-on-study",
-    POTENTIAL_CANDIDATE = "potential-candidate",
-    SCREENING = "screening",
-    WITHDRAWN = "withdrawn"
+    doModelValidation(): [string, string][];
 }
 //# sourceMappingURL=ResearchSubject.d.ts.map

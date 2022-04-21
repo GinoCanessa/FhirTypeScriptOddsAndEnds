@@ -1,19 +1,40 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The current state of the list.
  */
 export declare const ListStatusValueSet: {
     /**
-     * The list is considered to be an active part of the patient's record.
+     * current: The list is considered to be an active part of the patient's record.
      */
-    list_status_Current: Coding;
+    readonly Current: Coding;
     /**
-     * The list was never accurate.  It is retained for medico-legal purposes only.
+     * entered-in-error: The list was never accurate.  It is retained for medico-legal purposes only.
      */
-    list_status_EnteredInError: Coding;
+    readonly EnteredInError: Coding;
     /**
-     * The list is "old" and should no longer be considered accurate or relevant.
+     * retired: The list is "old" and should no longer be considered accurate or relevant.
      */
-    list_status_Retired: Coding;
+    readonly Retired: Coding;
 };
+/**
+ * The current state of the list.
+ */
+export declare type ListStatusValueSetType = typeof ListStatusValueSet;
+/**
+ * The current state of the list.
+ */
+export declare enum ListStatusValueSetEnum {
+    /**
+     * current: The list is considered to be an active part of the patient's record.
+     */
+    Current = "current",
+    /**
+     * entered-in-error: The list was never accurate.  It is retained for medico-legal purposes only.
+     */
+    EnteredInError = "entered-in-error",
+    /**
+     * retired: The list is "old" and should no longer be considered accurate or relevant.
+     */
+    Retired = "retired"
+}
 //# sourceMappingURL=ListStatusValueSet.d.ts.map

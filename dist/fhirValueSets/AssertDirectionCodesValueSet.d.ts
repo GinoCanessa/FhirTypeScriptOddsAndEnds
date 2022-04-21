@@ -1,15 +1,32 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * The type of direction to use for assertion.
  */
 export declare const AssertDirectionCodesValueSet: {
     /**
-     * The assertion is evaluated on the request.
+     * request: The assertion is evaluated on the request.
      */
-    assert_direction_codes_Request: Coding;
+    readonly Request: Coding;
     /**
-     * The assertion is evaluated on the response. This is the default value.
+     * response: The assertion is evaluated on the response. This is the default value.
      */
-    assert_direction_codes_Response: Coding;
+    readonly Response: Coding;
 };
+/**
+ * The type of direction to use for assertion.
+ */
+export declare type AssertDirectionCodesValueSetType = typeof AssertDirectionCodesValueSet;
+/**
+ * The type of direction to use for assertion.
+ */
+export declare enum AssertDirectionCodesValueSetEnum {
+    /**
+     * request: The assertion is evaluated on the request.
+     */
+    Request = "request",
+    /**
+     * response: The assertion is evaluated on the response. This is the default value.
+     */
+    Response = "response"
+}
 //# sourceMappingURL=AssertDirectionCodesValueSet.d.ts.map

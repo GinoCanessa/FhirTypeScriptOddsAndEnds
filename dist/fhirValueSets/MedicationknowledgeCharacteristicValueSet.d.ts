@@ -1,35 +1,72 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * MedicationKnowledge Characteristic Codes
  */
 export declare const MedicationknowledgeCharacteristicValueSet: {
     /**
-     * Description of the coating of the product
+     * coating: Description of the coating of the product
      */
-    medicationknowledge_characteristic_Coating: Coding;
+    readonly Coating: Coding;
     /**
-     * Description of the color of the product
+     * color: Description of the color of the product
      */
-    medicationknowledge_characteristic_Color: Coding;
+    readonly Color: Coding;
     /**
-     * Identyifying marks on product
+     * imprintcd: Identyifying marks on product
      */
-    medicationknowledge_characteristic_ImprintCode: Coding;
+    readonly ImprintCode: Coding;
     /**
-     * Description of the Logo of the product
+     * logo: Description of the Logo of the product
      */
-    medicationknowledge_characteristic_Logo: Coding;
+    readonly Logo: Coding;
     /**
-     * Description of the scoring of the product
+     * scoring: Description of the scoring of the product
      */
-    medicationknowledge_characteristic_Scoring: Coding;
+    readonly Scoring: Coding;
     /**
-     * Description of the shape of the product
+     * shape: Description of the shape of the product
      */
-    medicationknowledge_characteristic_Shape: Coding;
+    readonly Shape: Coding;
     /**
-     * Description of size of the product
+     * size: Description of size of the product
      */
-    medicationknowledge_characteristic_Size: Coding;
+    readonly Size: Coding;
 };
+/**
+ * MedicationKnowledge Characteristic Codes
+ */
+export declare type MedicationknowledgeCharacteristicValueSetType = typeof MedicationknowledgeCharacteristicValueSet;
+/**
+ * MedicationKnowledge Characteristic Codes
+ */
+export declare enum MedicationknowledgeCharacteristicValueSetEnum {
+    /**
+     * coating: Description of the coating of the product
+     */
+    Coating = "coating",
+    /**
+     * color: Description of the color of the product
+     */
+    Color = "color",
+    /**
+     * imprintcd: Identyifying marks on product
+     */
+    ImprintCode = "imprintcd",
+    /**
+     * logo: Description of the Logo of the product
+     */
+    Logo = "logo",
+    /**
+     * scoring: Description of the scoring of the product
+     */
+    Scoring = "scoring",
+    /**
+     * shape: Description of the shape of the product
+     */
+    Shape = "shape",
+    /**
+     * size: Description of size of the product
+     */
+    Size = "size"
+}
 //# sourceMappingURL=MedicationknowledgeCharacteristicValueSet.d.ts.map

@@ -1,47 +1,96 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * Example list of general categories for flagged issues. (Not complete or necessarily appropriate.)
  */
 export declare const FlagCategoryValueSet: {
     /**
-     * Flags related to administrative and financial processes.
+     * admin: Flags related to administrative and financial processes.
      */
-    flag_category_Administrative: Coding;
+    readonly Administrative: Coding;
     /**
-     * Flags related to subject's advance directives.
+     * advance-directive: Flags related to subject's advance directives.
      */
-    flag_category_AdvanceDirective: Coding;
+    readonly AdvanceDirective: Coding;
     /**
-     * Flags related to behavior.
+     * behavioral: Flags related to behavior.
      */
-    flag_category_Behavioral: Coding;
+    readonly Behavioral: Coding;
     /**
-     * Flags related to the subject's clinical data.
+     * clinical: Flags related to the subject's clinical data.
      */
-    flag_category_Clinical: Coding;
+    readonly Clinical: Coding;
     /**
-     * Flags related to coming into contact with the patient.
+     * contact: Flags related to coming into contact with the patient.
      */
-    flag_category_SubjectContact: Coding;
+    readonly SubjectContact: Coding;
     /**
-     * Flags related to the subject's dietary needs.
+     * diet: Flags related to the subject's dietary needs.
      */
-    flag_category_Diet: Coding;
+    readonly Diet: Coding;
     /**
-     * Flags related to the subject's medications.
+     * drug: Flags related to the subject's medications.
      */
-    flag_category_Drug: Coding;
+    readonly Drug: Coding;
     /**
-     * Flags related to performing laboratory tests and related processes (e.g. phlebotomy).
+     * lab: Flags related to performing laboratory tests and related processes (e.g. phlebotomy).
      */
-    flag_category_Lab: Coding;
+    readonly Lab: Coding;
     /**
-     * Flags related to research.
+     * research: Flags related to research.
      */
-    flag_category_Research: Coding;
+    readonly Research: Coding;
     /**
-     * Flags related to safety precautions.
+     * safety: Flags related to safety precautions.
      */
-    flag_category_Safety: Coding;
+    readonly Safety: Coding;
 };
+/**
+ * Example list of general categories for flagged issues. (Not complete or necessarily appropriate.)
+ */
+export declare type FlagCategoryValueSetType = typeof FlagCategoryValueSet;
+/**
+ * Example list of general categories for flagged issues. (Not complete or necessarily appropriate.)
+ */
+export declare enum FlagCategoryValueSetEnum {
+    /**
+     * admin: Flags related to administrative and financial processes.
+     */
+    Administrative = "admin",
+    /**
+     * advance-directive: Flags related to subject's advance directives.
+     */
+    AdvanceDirective = "advance-directive",
+    /**
+     * behavioral: Flags related to behavior.
+     */
+    Behavioral = "behavioral",
+    /**
+     * clinical: Flags related to the subject's clinical data.
+     */
+    Clinical = "clinical",
+    /**
+     * contact: Flags related to coming into contact with the patient.
+     */
+    SubjectContact = "contact",
+    /**
+     * diet: Flags related to the subject's dietary needs.
+     */
+    Diet = "diet",
+    /**
+     * drug: Flags related to the subject's medications.
+     */
+    Drug = "drug",
+    /**
+     * lab: Flags related to performing laboratory tests and related processes (e.g. phlebotomy).
+     */
+    Lab = "lab",
+    /**
+     * research: Flags related to research.
+     */
+    Research = "research",
+    /**
+     * safety: Flags related to safety precautions.
+     */
+    Safety = "safety"
+}
 //# sourceMappingURL=FlagCategoryValueSet.d.ts.map

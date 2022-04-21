@@ -1,11 +1,24 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set has asset availability codes.
  */
 export declare const AssetAvailabilityValueSet: {
     /**
-     * To be completed
+     * lease: To be completed
      */
-    asset_availability_Lease: Coding;
+    readonly Lease: Coding;
 };
+/**
+ * This value set has asset availability codes.
+ */
+export declare type AssetAvailabilityValueSetType = typeof AssetAvailabilityValueSet;
+/**
+ * This value set has asset availability codes.
+ */
+export declare enum AssetAvailabilityValueSetEnum {
+    /**
+     * lease: To be completed
+     */
+    Lease = "lease"
+}
 //# sourceMappingURL=AssetAvailabilityValueSet.d.ts.map

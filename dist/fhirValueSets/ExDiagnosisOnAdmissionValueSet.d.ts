@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes example Diagnosis on Admission codes.
  */
 export declare const ExDiagnosisOnAdmissionValueSet: {
     /**
-     * Diagnosis was not present at time of inpatient admission.
+     * n: Diagnosis was not present at time of inpatient admission.
      */
-    ex_diagnosis_on_admission_No: Coding;
+    readonly No: Coding;
     /**
-     * Documentation insufficient to determine if condition was present at the time of inpatient admission.
+     * u: Documentation insufficient to determine if condition was present at the time of inpatient admission.
      */
-    ex_diagnosis_on_admission_Unknown: Coding;
+    readonly Unknown: Coding;
     /**
-     * Clinically undetermined. Provider unable to clinically determine whether the condition was present at the time of inpatient admission.
+     * w: Clinically undetermined. Provider unable to clinically determine whether the condition was present at the time of inpatient admission.
      */
-    ex_diagnosis_on_admission_Undetermined: Coding;
+    readonly Undetermined: Coding;
     /**
-     * Diagnosis was present at time of inpatient admission.
+     * y: Diagnosis was present at time of inpatient admission.
      */
-    ex_diagnosis_on_admission_Yes: Coding;
+    readonly Yes: Coding;
 };
+/**
+ * This value set includes example Diagnosis on Admission codes.
+ */
+export declare type ExDiagnosisOnAdmissionValueSetType = typeof ExDiagnosisOnAdmissionValueSet;
+/**
+ * This value set includes example Diagnosis on Admission codes.
+ */
+export declare enum ExDiagnosisOnAdmissionValueSetEnum {
+    /**
+     * n: Diagnosis was not present at time of inpatient admission.
+     */
+    No = "n",
+    /**
+     * u: Documentation insufficient to determine if condition was present at the time of inpatient admission.
+     */
+    Unknown = "u",
+    /**
+     * w: Clinically undetermined. Provider unable to clinically determine whether the condition was present at the time of inpatient admission.
+     */
+    Undetermined = "w",
+    /**
+     * y: Diagnosis was present at time of inpatient admission.
+     */
+    Yes = "y"
+}
 //# sourceMappingURL=ExDiagnosisOnAdmissionValueSet.d.ts.map

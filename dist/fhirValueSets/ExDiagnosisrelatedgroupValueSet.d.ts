@@ -1,23 +1,48 @@
-import { Coding } from '../fhir';
+import { Coding } from '../fhir.js';
 /**
  * This value set includes example Diagnosis Related Group codes.
  */
 export declare const ExDiagnosisrelatedgroupValueSet: {
     /**
-     * Normal Vaginal Delivery.
+     * 100: Normal Vaginal Delivery.
      */
-    ex_diagnosisrelatedgroup_NormalVaginalDelivery: Coding;
+    readonly NormalVaginalDelivery: Coding;
     /**
-     * Appendectomy without rupture or other complications.
+     * 101: Appendectomy without rupture or other complications.
      */
-    ex_diagnosisrelatedgroup_AppendectomyUncomplicated: Coding;
+    readonly AppendectomyUncomplicated: Coding;
     /**
-     * Emergency department treatment of a tooth abscess.
+     * 300: Emergency department treatment of a tooth abscess.
      */
-    ex_diagnosisrelatedgroup_ToothAbscess: Coding;
+    readonly ToothAbscess: Coding;
     /**
-     * Head trauma - concussion.
+     * 400: Head trauma - concussion.
      */
-    ex_diagnosisrelatedgroup_HeadTraumaConcussion: Coding;
+    readonly HeadTraumaConcussion: Coding;
 };
+/**
+ * This value set includes example Diagnosis Related Group codes.
+ */
+export declare type ExDiagnosisrelatedgroupValueSetType = typeof ExDiagnosisrelatedgroupValueSet;
+/**
+ * This value set includes example Diagnosis Related Group codes.
+ */
+export declare enum ExDiagnosisrelatedgroupValueSetEnum {
+    /**
+     * 100: Normal Vaginal Delivery.
+     */
+    NormalVaginalDelivery = "100",
+    /**
+     * 101: Appendectomy without rupture or other complications.
+     */
+    AppendectomyUncomplicated = "101",
+    /**
+     * 300: Emergency department treatment of a tooth abscess.
+     */
+    ToothAbscess = "300",
+    /**
+     * 400: Head trauma - concussion.
+     */
+    HeadTraumaConcussion = "400"
+}
 //# sourceMappingURL=ExDiagnosisrelatedgroupValueSet.d.ts.map
