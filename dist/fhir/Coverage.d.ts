@@ -197,7 +197,7 @@ export declare class CoverageClass extends fhir.BackboneElement implements ICove
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): CoverageClassValueSetType;
+    static typeExtensibleValueSet(): CoverageClassValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -222,7 +222,7 @@ export declare class CoverageCostToBeneficiaryException extends fhir.BackboneEle
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): CoverageFinancialExceptionValueSetType;
+    static typeExampleValueSet(): CoverageFinancialExceptionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -255,7 +255,7 @@ export declare class CoverageCostToBeneficiary extends fhir.BackboneElement impl
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): CoverageCopayTypeValueSetType;
+    static typeExtensibleValueSet(): CoverageCopayTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -369,15 +369,15 @@ export declare class Coverage extends fhir.DomainResource implements ICoverage {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet(): CoverageTypeValueSetType;
+    static typePreferredValueSet(): CoverageTypeValueSetType;
     /**
      * Extensible-bound Value Set for relationship
      */
-    relationshipExtensibleValueSet(): SubscriberRelationshipValueSetType;
+    static relationshipExtensibleValueSet(): SubscriberRelationshipValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

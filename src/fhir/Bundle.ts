@@ -328,7 +328,7 @@ export class BundleEntrySearch extends fhir.BackboneElement implements IBundleEn
   /**
    * Required-bound Value Set for mode
    */
-  public modeRequiredValueSet():SearchEntryModeValueSetType {
+  public static modeRequiredValueSet():SearchEntryModeValueSetType {
     return SearchEntryModeValueSet;
   }
   /**
@@ -417,7 +417,7 @@ export class BundleEntryRequest extends fhir.BackboneElement implements IBundleE
   /**
    * Required-bound Value Set for method
    */
-  public methodRequiredValueSet():HttpVerbValueSetType {
+  public static methodRequiredValueSet():HttpVerbValueSetType {
     return HttpVerbValueSet;
   }
   /**
@@ -655,7 +655,7 @@ export class Bundle extends fhir.Resource implements IBundle {
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():BundleTypeValueSetType {
+  public static typeRequiredValueSet():BundleTypeValueSetType {
     return BundleTypeValueSet;
   }
   /**

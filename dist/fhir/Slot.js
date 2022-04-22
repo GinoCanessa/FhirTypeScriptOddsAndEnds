@@ -82,31 +82,31 @@ export class Slot extends fhir.DomainResource {
     /**
      * Example-bound Value Set for serviceCategory
      */
-    serviceCategoryExampleValueSet() {
+    static serviceCategoryExampleValueSet() {
         return ServiceCategoryValueSet;
     }
     /**
      * Example-bound Value Set for serviceType
      */
-    serviceTypeExampleValueSet() {
+    static serviceTypeExampleValueSet() {
         return ServiceTypeValueSet;
     }
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet() {
+    static specialtyPreferredValueSet() {
         return C80PracticeCodesValueSet;
     }
     /**
      * Preferred-bound Value Set for appointmentType
      */
-    appointmentTypePreferredValueSet() {
+    static appointmentTypePreferredValueSet() {
         return V20276ValueSet;
     }
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return SlotstatusValueSet;
     }
     /**

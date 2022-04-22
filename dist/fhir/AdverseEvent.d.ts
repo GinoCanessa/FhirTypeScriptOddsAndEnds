@@ -181,11 +181,11 @@ export declare class AdverseEventSuspectEntityCausality extends fhir.BackboneEle
     /**
      * Example-bound Value Set for assessment
      */
-    assessmentExampleValueSet(): AdverseEventCausalityAssessValueSetType;
+    static assessmentExampleValueSet(): AdverseEventCausalityAssessValueSetType;
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet(): AdverseEventCausalityMethodValueSetType;
+    static methodExampleValueSet(): AdverseEventCausalityMethodValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -323,27 +323,27 @@ export declare class AdverseEvent extends fhir.DomainResource implements IAdvers
     /**
      * Required-bound Value Set for actuality
      */
-    actualityRequiredValueSet(): AdverseEventActualityValueSetType;
+    static actualityRequiredValueSet(): AdverseEventActualityValueSetType;
     /**
      * Extensible-bound Value Set for category
      */
-    categoryExtensibleValueSet(): AdverseEventCategoryValueSetType;
+    static categoryExtensibleValueSet(): AdverseEventCategoryValueSetType;
     /**
      * Example-bound Value Set for event
      */
-    eventExampleValueSet(): AdverseEventTypeValueSetType;
+    static eventExampleValueSet(): AdverseEventTypeValueSetType;
     /**
      * Example-bound Value Set for seriousness
      */
-    seriousnessExampleValueSet(): AdverseEventSeriousnessValueSetType;
+    static seriousnessExampleValueSet(): AdverseEventSeriousnessValueSetType;
     /**
      * Required-bound Value Set for severity
      */
-    severityRequiredValueSet(): AdverseEventSeverityValueSetType;
+    static severityRequiredValueSet(): AdverseEventSeverityValueSetType;
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet(): AdverseEventOutcomeValueSetType;
+    static outcomeRequiredValueSet(): AdverseEventOutcomeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

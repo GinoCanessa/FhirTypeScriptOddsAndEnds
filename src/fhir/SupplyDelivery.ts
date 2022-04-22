@@ -126,13 +126,13 @@ export class SupplyDeliverySuppliedItem extends fhir.BackboneElement implements 
   /**
    * Example-bound Value Set for itemCodeableConcept
    */
-  public itemCodeableConceptExampleValueSet():SupplyItemValueSetType {
+  public static itemCodeableConceptExampleValueSet():SupplyItemValueSetType {
     return SupplyItemValueSet;
   }
   /**
    * Example-bound Value Set for itemReference
    */
-  public itemReferenceExampleValueSet():SupplyItemValueSetType {
+  public static itemReferenceExampleValueSet():SupplyItemValueSetType {
     return SupplyItemValueSet;
   }
   /**
@@ -241,13 +241,13 @@ export class SupplyDelivery extends fhir.DomainResource implements ISupplyDelive
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():SupplydeliveryStatusValueSetType {
+  public static statusRequiredValueSet():SupplydeliveryStatusValueSetType {
     return SupplydeliveryStatusValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():SupplydeliveryTypeValueSetType {
+  public static typeRequiredValueSet():SupplydeliveryTypeValueSetType {
     return SupplydeliveryTypeValueSet;
   }
   /**

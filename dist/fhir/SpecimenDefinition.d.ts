@@ -205,11 +205,11 @@ export declare class SpecimenDefinitionTypeTestedContainerAdditive extends fhir.
     /**
      * Example-bound Value Set for additiveCodeableConcept
      */
-    additiveCodeableConceptExampleValueSet(): V20371ValueSetType;
+    static additiveCodeableConceptExampleValueSet(): V20371ValueSetType;
     /**
      * Example-bound Value Set for additiveReference
      */
-    additiveReferenceExampleValueSet(): V20371ValueSetType;
+    static additiveReferenceExampleValueSet(): V20371ValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -274,15 +274,15 @@ export declare class SpecimenDefinitionTypeTestedContainer extends fhir.Backbone
     /**
      * Example-bound Value Set for material
      */
-    materialExampleValueSet(): ContainerMaterialValueSetType;
+    static materialExampleValueSet(): ContainerMaterialValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): SpecimenContainerTypeValueSetType;
+    static typeExampleValueSet(): SpecimenContainerTypeValueSetType;
     /**
      * Example-bound Value Set for cap
      */
-    capExampleValueSet(): ContainerCapValueSetType;
+    static capExampleValueSet(): ContainerCapValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -319,7 +319,7 @@ export declare class SpecimenDefinitionTypeTestedHandling extends fhir.BackboneE
     /**
      * Example-bound Value Set for temperatureQualifier
      */
-    temperatureQualifierExampleValueSet(): HandlingConditionValueSetType;
+    static temperatureQualifierExampleValueSet(): HandlingConditionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -380,15 +380,15 @@ export declare class SpecimenDefinitionTypeTested extends fhir.BackboneElement i
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): V20487ValueSetType;
+    static typeExampleValueSet(): V20487ValueSetType;
     /**
      * Required-bound Value Set for preference
      */
-    preferenceRequiredValueSet(): SpecimenContainedPreferenceValueSetType;
+    static preferenceRequiredValueSet(): SpecimenContainedPreferenceValueSetType;
     /**
      * Example-bound Value Set for rejectionCriterion
      */
-    rejectionCriterionExampleValueSet(): RejectionCriteriaValueSetType;
+    static rejectionCriterionExampleValueSet(): RejectionCriteriaValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -437,15 +437,15 @@ export declare class SpecimenDefinition extends fhir.DomainResource implements I
     /**
      * Example-bound Value Set for typeCollected
      */
-    typeCollectedExampleValueSet(): V20487ValueSetType;
+    static typeCollectedExampleValueSet(): V20487ValueSetType;
     /**
      * Example-bound Value Set for patientPreparation
      */
-    patientPreparationExampleValueSet(): PreparePatientPriorSpecimenCollectionValueSetType;
+    static patientPreparationExampleValueSet(): PreparePatientPriorSpecimenCollectionValueSetType;
     /**
      * Example-bound Value Set for collection
      */
-    collectionExampleValueSet(): SpecimenCollectionValueSetType;
+    static collectionExampleValueSet(): SpecimenCollectionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

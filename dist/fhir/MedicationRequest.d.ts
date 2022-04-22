@@ -353,15 +353,15 @@ export declare class MedicationRequestSubstitution extends fhir.BackboneElement 
     /**
      * Example-bound Value Set for allowedBoolean
      */
-    allowedBooleanExampleValueSet(): V3ActSubstanceAdminSubstitutionCodeValueSetType;
+    static allowedBooleanExampleValueSet(): V3ActSubstanceAdminSubstitutionCodeValueSetType;
     /**
      * Example-bound Value Set for allowedCodeableConcept
      */
-    allowedCodeableConceptExampleValueSet(): V3ActSubstanceAdminSubstitutionCodeValueSetType;
+    static allowedCodeableConceptExampleValueSet(): V3ActSubstanceAdminSubstitutionCodeValueSetType;
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet(): V3SubstanceAdminSubstitutionReasonValueSetType;
+    static reasonExampleValueSet(): V3SubstanceAdminSubstitutionReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -552,43 +552,43 @@ export declare class MedicationRequest extends fhir.DomainResource implements IM
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): MedicationrequestStatusValueSetType;
+    static statusRequiredValueSet(): MedicationrequestStatusValueSetType;
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet(): MedicationrequestStatusReasonValueSetType;
+    static statusReasonExampleValueSet(): MedicationrequestStatusReasonValueSetType;
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet(): MedicationrequestIntentValueSetType;
+    static intentRequiredValueSet(): MedicationrequestIntentValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): MedicationrequestCategoryValueSetType;
+    static categoryExampleValueSet(): MedicationrequestCategoryValueSetType;
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Example-bound Value Set for medicationCodeableConcept
      */
-    medicationCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
+    static medicationCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for medicationReference
      */
-    medicationReferenceExampleValueSet(): MedicationCodesValueSetType;
+    static medicationReferenceExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for performerType
      */
-    performerTypeExampleValueSet(): PerformerRoleValueSetType;
+    static performerTypeExampleValueSet(): PerformerRoleValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ConditionCodeValueSetType;
+    static reasonCodeExampleValueSet(): ConditionCodeValueSetType;
     /**
      * Example-bound Value Set for courseOfTherapyType
      */
-    courseOfTherapyTypeExampleValueSet(): MedicationrequestCourseOfTherapyValueSetType;
+    static courseOfTherapyTypeExampleValueSet(): MedicationrequestCourseOfTherapyValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

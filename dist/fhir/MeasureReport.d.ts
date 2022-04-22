@@ -209,7 +209,7 @@ export declare class MeasureReportGroupPopulation extends fhir.BackboneElement i
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet(): MeasurePopulationValueSetType;
+    static codeExtensibleValueSet(): MeasurePopulationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -263,7 +263,7 @@ export declare class MeasureReportGroupStratifierStratumPopulation extends fhir.
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet(): MeasurePopulationValueSetType;
+    static codeExtensibleValueSet(): MeasurePopulationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -423,15 +423,15 @@ export declare class MeasureReport extends fhir.DomainResource implements IMeasu
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): MeasureReportStatusValueSetType;
+    static statusRequiredValueSet(): MeasureReportStatusValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): MeasureReportTypeValueSetType;
+    static typeRequiredValueSet(): MeasureReportTypeValueSetType;
     /**
      * Required-bound Value Set for improvementNotation
      */
-    improvementNotationRequiredValueSet(): MeasureImprovementNotationValueSetType;
+    static improvementNotationRequiredValueSet(): MeasureImprovementNotationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

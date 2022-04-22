@@ -86,7 +86,7 @@ export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for procedure
      */
-    procedureExampleValueSet() {
+    static procedureExampleValueSet() {
         return ProcedureCodeValueSet;
     }
     /**
@@ -188,7 +188,7 @@ export class BiologicallyDerivedProductStorage extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for scale
      */
-    scaleRequiredValueSet() {
+    static scaleRequiredValueSet() {
         return ProductStorageScaleValueSet;
     }
     /**
@@ -268,13 +268,13 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource {
     /**
      * Required-bound Value Set for productCategory
      */
-    productCategoryRequiredValueSet() {
+    static productCategoryRequiredValueSet() {
         return ProductCategoryValueSet;
     }
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ProductStatusValueSet;
     }
     /**

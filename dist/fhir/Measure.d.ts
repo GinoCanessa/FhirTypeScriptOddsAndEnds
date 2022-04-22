@@ -423,7 +423,7 @@ export declare class MeasureGroupPopulation extends fhir.BackboneElement impleme
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet(): MeasurePopulationValueSetType;
+    static codeExtensibleValueSet(): MeasurePopulationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -555,7 +555,7 @@ export declare class MeasureSupplementalData extends fhir.BackboneElement implem
     /**
      * Extensible-bound Value Set for usage
      */
-    usageExtensibleValueSet(): MeasureDataUsageValueSetType;
+    static usageExtensibleValueSet(): MeasureDataUsageValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -838,35 +838,35 @@ export declare class Measure extends fhir.DomainResource implements IMeasure {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): DefinitionTopicValueSetType;
+    static topicExampleValueSet(): DefinitionTopicValueSetType;
     /**
      * Extensible-bound Value Set for scoring
      */
-    scoringExtensibleValueSet(): MeasureScoringValueSetType;
+    static scoringExtensibleValueSet(): MeasureScoringValueSetType;
     /**
      * Extensible-bound Value Set for compositeScoring
      */
-    compositeScoringExtensibleValueSet(): CompositeMeasureScoringValueSetType;
+    static compositeScoringExtensibleValueSet(): CompositeMeasureScoringValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): MeasureTypeValueSetType;
+    static typeExtensibleValueSet(): MeasureTypeValueSetType;
     /**
      * Required-bound Value Set for improvementNotation
      */
-    improvementNotationRequiredValueSet(): MeasureImprovementNotationValueSetType;
+    static improvementNotationRequiredValueSet(): MeasureImprovementNotationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

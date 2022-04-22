@@ -301,15 +301,15 @@ export declare class GraphDefinitionLinkTargetCompartment extends fhir.BackboneE
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): GraphCompartmentUseValueSetType;
+    static useRequiredValueSet(): GraphCompartmentUseValueSetType;
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): CompartmentTypeValueSetType;
+    static codeRequiredValueSet(): CompartmentTypeValueSetType;
     /**
      * Required-bound Value Set for rule
      */
-    ruleRequiredValueSet(): GraphCompartmentRuleValueSetType;
+    static ruleRequiredValueSet(): GraphCompartmentRuleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -358,7 +358,7 @@ export declare class GraphDefinitionLinkTarget extends fhir.BackboneElement impl
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ResourceTypesValueSetType;
+    static typeRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -542,11 +542,11 @@ export declare class GraphDefinition extends fhir.DomainResource implements IGra
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for start
      */
-    startRequiredValueSet(): ResourceTypesValueSetType;
+    static startRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -56,7 +56,7 @@ export class TriggerDefinition extends fhir.FhirElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return TriggerTypeValueSet;
     }
     /**

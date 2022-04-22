@@ -137,7 +137,7 @@ export class ResearchSubject extends fhir.DomainResource implements IResearchSub
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ResearchSubjectStatusValueSetType {
+  public static statusRequiredValueSet():ResearchSubjectStatusValueSetType {
     return ResearchSubjectStatusValueSet;
   }
   /**

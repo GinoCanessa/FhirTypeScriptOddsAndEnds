@@ -39,7 +39,7 @@ export class DosageDoseAndRate extends fhir.FhirElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return DoseRateTypeValueSet;
     }
     /**
@@ -135,31 +135,31 @@ export class Dosage extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for asNeededBoolean
      */
-    asNeededBooleanExampleValueSet() {
+    static asNeededBooleanExampleValueSet() {
         return MedicationAsNeededReasonValueSet;
     }
     /**
      * Example-bound Value Set for asNeededCodeableConcept
      */
-    asNeededCodeableConceptExampleValueSet() {
+    static asNeededCodeableConceptExampleValueSet() {
         return MedicationAsNeededReasonValueSet;
     }
     /**
      * Example-bound Value Set for site
      */
-    siteExampleValueSet() {
+    static siteExampleValueSet() {
         return ApproachSiteCodesValueSet;
     }
     /**
      * Example-bound Value Set for route
      */
-    routeExampleValueSet() {
+    static routeExampleValueSet() {
         return RouteCodesValueSet;
     }
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet() {
+    static methodExampleValueSet() {
         return AdministrationMethodCodesValueSet;
     }
     /**

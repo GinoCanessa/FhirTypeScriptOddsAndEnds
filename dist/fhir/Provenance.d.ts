@@ -138,11 +138,11 @@ export declare class ProvenanceAgent extends fhir.BackboneElement implements IPr
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): ProvenanceAgentTypeValueSetType;
+    static typeExtensibleValueSet(): ProvenanceAgentTypeValueSetType;
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet(): SecurityRoleTypeValueSetType;
+    static roleExampleValueSet(): SecurityRoleTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -175,7 +175,7 @@ export declare class ProvenanceEntity extends fhir.BackboneElement implements IP
     /**
      * Required-bound Value Set for role
      */
-    roleRequiredValueSet(): ProvenanceEntityRoleValueSetType;
+    static roleRequiredValueSet(): ProvenanceEntityRoleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -252,11 +252,11 @@ export declare class Provenance extends fhir.DomainResource implements IProvenan
     /**
      * Extensible-bound Value Set for reason
      */
-    reasonExtensibleValueSet(): V3PurposeOfUseValueSetType;
+    static reasonExtensibleValueSet(): V3PurposeOfUseValueSetType;
     /**
      * Extensible-bound Value Set for activity
      */
-    activityExtensibleValueSet(): ProvenanceActivityTypeValueSetType;
+    static activityExtensibleValueSet(): ProvenanceActivityTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

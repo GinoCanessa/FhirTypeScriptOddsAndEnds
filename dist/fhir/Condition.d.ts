@@ -191,11 +191,11 @@ export declare class ConditionStage extends fhir.BackboneElement implements ICon
     /**
      * Example-bound Value Set for summary
      */
-    summaryExampleValueSet(): ConditionStageValueSetType;
+    static summaryExampleValueSet(): ConditionStageValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ConditionStageTypeValueSetType;
+    static typeExampleValueSet(): ConditionStageTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -220,7 +220,7 @@ export declare class ConditionEvidence extends fhir.BackboneElement implements I
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ManifestationOrSymptomValueSetType;
+    static codeExampleValueSet(): ManifestationOrSymptomValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -362,27 +362,27 @@ export declare class Condition extends fhir.DomainResource implements ICondition
     /**
      * Required-bound Value Set for clinicalStatus
      */
-    clinicalStatusRequiredValueSet(): ConditionClinicalValueSetType;
+    static clinicalStatusRequiredValueSet(): ConditionClinicalValueSetType;
     /**
      * Required-bound Value Set for verificationStatus
      */
-    verificationStatusRequiredValueSet(): ConditionVerStatusValueSetType;
+    static verificationStatusRequiredValueSet(): ConditionVerStatusValueSetType;
     /**
      * Extensible-bound Value Set for category
      */
-    categoryExtensibleValueSet(): ConditionCategoryValueSetType;
+    static categoryExtensibleValueSet(): ConditionCategoryValueSetType;
     /**
      * Preferred-bound Value Set for severity
      */
-    severityPreferredValueSet(): ConditionSeverityValueSetType;
+    static severityPreferredValueSet(): ConditionSeverityValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ConditionCodeValueSetType;
+    static codeExampleValueSet(): ConditionCodeValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): BodySiteValueSetType;
+    static bodySiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

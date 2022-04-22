@@ -34,7 +34,7 @@ export class MedicationAdministrationPerformer extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for function
      */
-    functionExampleValueSet() {
+    static functionExampleValueSet() {
         return MedAdminPerformFunctionValueSet;
     }
     /**
@@ -91,19 +91,19 @@ export class MedicationAdministrationDosage extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for site
      */
-    siteExampleValueSet() {
+    static siteExampleValueSet() {
         return ApproachSiteCodesValueSet;
     }
     /**
      * Example-bound Value Set for route
      */
-    routeExampleValueSet() {
+    static routeExampleValueSet() {
         return RouteCodesValueSet;
     }
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet() {
+    static methodExampleValueSet() {
         return AdministrationMethodCodesValueSet;
     }
     /**
@@ -227,37 +227,37 @@ export class MedicationAdministration extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return MedicationAdminStatusValueSet;
     }
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet() {
+    static statusReasonExampleValueSet() {
         return ReasonMedicationNotGivenCodesValueSet;
     }
     /**
      * Preferred-bound Value Set for category
      */
-    categoryPreferredValueSet() {
+    static categoryPreferredValueSet() {
         return MedicationAdminCategoryValueSet;
     }
     /**
      * Example-bound Value Set for medicationCodeableConcept
      */
-    medicationCodeableConceptExampleValueSet() {
+    static medicationCodeableConceptExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for medicationReference
      */
-    medicationReferenceExampleValueSet() {
+    static medicationReferenceExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ReasonMedicationGivenCodesValueSet;
     }
     /**

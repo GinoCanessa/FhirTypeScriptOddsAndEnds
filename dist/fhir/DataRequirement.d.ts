@@ -264,7 +264,7 @@ export declare class DataRequirementSort extends fhir.FhirElement implements IDa
     /**
      * Required-bound Value Set for direction
      */
-    directionRequiredValueSet(): SortDirectionValueSetType;
+    static directionRequiredValueSet(): SortDirectionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -334,15 +334,15 @@ export declare class DataRequirement extends fhir.FhirElement implements IDataRe
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): AllTypesValueSetType;
+    static typeRequiredValueSet(): AllTypesValueSetType;
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -80,19 +80,19 @@ export class ContractContentDefinition extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ContractDefinitionTypeValueSet;
     }
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet() {
+    static subTypeExampleValueSet() {
         return ContractDefinitionSubtypeValueSet;
     }
     /**
      * Required-bound Value Set for publicationStatus
      */
-    publicationStatusRequiredValueSet() {
+    static publicationStatusRequiredValueSet() {
         return ContractPublicationstatusValueSet;
     }
     /**
@@ -158,19 +158,19 @@ export class ContractTermSecurityLabel extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for classification
      */
-    classificationExampleValueSet() {
+    static classificationExampleValueSet() {
         return ContractSecurityClassificationValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ContractSecurityCategoryValueSet;
     }
     /**
      * Example-bound Value Set for control
      */
-    controlExampleValueSet() {
+    static controlExampleValueSet() {
         return ContractSecurityControlValueSet;
     }
     /**
@@ -221,7 +221,7 @@ export class ContractTermOfferParty extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet() {
+    static roleExampleValueSet() {
         return ContractPartyRoleValueSet;
     }
     /**
@@ -410,19 +410,19 @@ export class ContractTermOffer extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ContractTermTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for decision
      */
-    decisionExtensibleValueSet() {
+    static decisionExtensibleValueSet() {
         return V3ActConsentDirectiveValueSet;
     }
     /**
      * Example-bound Value Set for decisionMode
      */
-    decisionModeExampleValueSet() {
+    static decisionModeExampleValueSet() {
         return ContractDecisionModeValueSet;
     }
     /**
@@ -488,7 +488,7 @@ export class ContractTermAssetContext extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ContractAssetcontextValueSet;
     }
     /**
@@ -707,31 +707,31 @@ export class ContractTermAsset extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for scope
      */
-    scopeExampleValueSet() {
+    static scopeExampleValueSet() {
         return ContractAssetscopeValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ContractAssettypeValueSet;
     }
     /**
      * Example-bound Value Set for subtype
      */
-    subtypeExampleValueSet() {
+    static subtypeExampleValueSet() {
         return ContractAssetsubtypeValueSet;
     }
     /**
      * Extensible-bound Value Set for relationship
      */
-    relationshipExtensibleValueSet() {
+    static relationshipExtensibleValueSet() {
         return ConsentContentClassValueSet;
     }
     /**
      * Example-bound Value Set for periodType
      */
-    periodTypeExampleValueSet() {
+    static periodTypeExampleValueSet() {
         return AssetAvailabilityValueSet;
     }
     /**
@@ -809,7 +809,7 @@ export class ContractTermActionSubject extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet() {
+    static roleExampleValueSet() {
         return ContractActorroleValueSet;
     }
     /**
@@ -948,37 +948,37 @@ export class ContractTermAction extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ContractActionValueSet;
     }
     /**
      * Example-bound Value Set for intent
      */
-    intentExampleValueSet() {
+    static intentExampleValueSet() {
         return V3PurposeOfUseValueSet;
     }
     /**
      * Example-bound Value Set for status
      */
-    statusExampleValueSet() {
+    static statusExampleValueSet() {
         return ContractActionstatusValueSet;
     }
     /**
      * Example-bound Value Set for performerType
      */
-    performerTypeExampleValueSet() {
+    static performerTypeExampleValueSet() {
         return ProvenanceAgentTypeValueSet;
     }
     /**
      * Example-bound Value Set for performerRole
      */
-    performerRoleExampleValueSet() {
+    static performerRoleExampleValueSet() {
         return ProvenanceAgentRoleValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return V3PurposeOfUseValueSet;
     }
     /**
@@ -1128,13 +1128,13 @@ export class ContractTerm extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ContractTermTypeValueSet;
     }
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet() {
+    static subTypeExampleValueSet() {
         return ContractTermSubtypeValueSet;
     }
     /**
@@ -1219,7 +1219,7 @@ export class ContractSigner extends fhir.BackboneElement {
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet() {
+    static typePreferredValueSet() {
         return ContractSignerTypeValueSet;
     }
     /**
@@ -1484,43 +1484,43 @@ export class Contract extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ContractStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for legalState
      */
-    legalStateExtensibleValueSet() {
+    static legalStateExtensibleValueSet() {
         return ContractLegalstateValueSet;
     }
     /**
      * Example-bound Value Set for contentDerivative
      */
-    contentDerivativeExampleValueSet() {
+    static contentDerivativeExampleValueSet() {
         return ContractContentDerivativeValueSet;
     }
     /**
      * Example-bound Value Set for expirationType
      */
-    expirationTypeExampleValueSet() {
+    static expirationTypeExampleValueSet() {
         return ContractExpirationTypeValueSet;
     }
     /**
      * Example-bound Value Set for scope
      */
-    scopeExampleValueSet() {
+    static scopeExampleValueSet() {
         return ContractScopeValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ContractTypeValueSet;
     }
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet() {
+    static subTypeExampleValueSet() {
         return ContractSubtypeValueSet;
     }
     /**

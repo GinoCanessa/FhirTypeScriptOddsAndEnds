@@ -521,19 +521,19 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
   /**
    * Required-bound Value Set for unitOfMeasure
    */
-  public unitOfMeasureRequiredValueSet():UcumUnitsValueSetType {
+  public static unitOfMeasureRequiredValueSet():UcumUnitsValueSetType {
     return UcumUnitsValueSet;
   }
   /**
    * Required-bound Value Set for studyEffectiveGroupMeasure
    */
-  public studyEffectiveGroupMeasureRequiredValueSet():GroupMeasureValueSetType {
+  public static studyEffectiveGroupMeasureRequiredValueSet():GroupMeasureValueSetType {
     return GroupMeasureValueSet;
   }
   /**
    * Required-bound Value Set for participantEffectiveGroupMeasure
    */
-  public participantEffectiveGroupMeasureRequiredValueSet():GroupMeasureValueSetType {
+  public static participantEffectiveGroupMeasureRequiredValueSet():GroupMeasureValueSetType {
     return GroupMeasureValueSet;
   }
   /**
@@ -859,37 +859,37 @@ export class ResearchElementDefinition extends fhir.DomainResource implements IR
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectCodeableConcept
    */
-  public subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectReference
    */
-  public subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Example-bound Value Set for topic
    */
-  public topicExampleValueSet():DefinitionTopicValueSetType {
+  public static topicExampleValueSet():DefinitionTopicValueSetType {
     return DefinitionTopicValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ResearchElementTypeValueSetType {
+  public static typeRequiredValueSet():ResearchElementTypeValueSetType {
     return ResearchElementTypeValueSet;
   }
   /**
    * Required-bound Value Set for variableType
    */
-  public variableTypeRequiredValueSet():VariableTypeValueSetType {
+  public static variableTypeRequiredValueSet():VariableTypeValueSetType {
     return VariableTypeValueSet;
   }
   /**

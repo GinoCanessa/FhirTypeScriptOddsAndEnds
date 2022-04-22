@@ -636,7 +636,7 @@ export class QuestionnaireItemEnableWhen extends fhir.BackboneElement implements
   /**
    * Required-bound Value Set for operator
    */
-  public operatorRequiredValueSet():QuestionnaireEnableOperatorValueSetType {
+  public static operatorRequiredValueSet():QuestionnaireEnableOperatorValueSetType {
     return QuestionnaireEnableOperatorValueSet;
   }
   /**
@@ -1031,19 +1031,19 @@ export class QuestionnaireItem extends fhir.BackboneElement implements IQuestion
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():QuestionnaireQuestionsValueSetType {
+  public static codeExampleValueSet():QuestionnaireQuestionsValueSetType {
     return QuestionnaireQuestionsValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ItemTypeValueSetType {
+  public static typeRequiredValueSet():ItemTypeValueSetType {
     return ItemTypeValueSet;
   }
   /**
    * Required-bound Value Set for enableBehavior
    */
-  public enableBehaviorRequiredValueSet():QuestionnaireEnableBehaviorValueSetType {
+  public static enableBehaviorRequiredValueSet():QuestionnaireEnableBehaviorValueSetType {
     return QuestionnaireEnableBehaviorValueSet;
   }
   /**
@@ -1277,19 +1277,19 @@ export class Questionnaire extends fhir.DomainResource implements IQuestionnaire
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for subjectType
    */
-  public subjectTypeRequiredValueSet():ResourceTypesValueSetType {
+  public static subjectTypeRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():QuestionnaireQuestionsValueSetType {
+  public static codeExampleValueSet():QuestionnaireQuestionsValueSetType {
     return QuestionnaireQuestionsValueSet;
   }
   /**

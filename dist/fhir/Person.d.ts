@@ -102,7 +102,7 @@ export declare class PersonLink extends fhir.BackboneElement implements IPersonL
     /**
      * Required-bound Value Set for assurance
      */
-    assuranceRequiredValueSet(): IdentityAssuranceLevelValueSetType;
+    static assuranceRequiredValueSet(): IdentityAssuranceLevelValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -175,7 +175,7 @@ export declare class Person extends fhir.DomainResource implements IPerson {
     /**
      * Required-bound Value Set for gender
      */
-    genderRequiredValueSet(): AdministrativeGenderValueSetType;
+    static genderRequiredValueSet(): AdministrativeGenderValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

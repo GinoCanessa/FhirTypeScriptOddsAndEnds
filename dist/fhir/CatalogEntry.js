@@ -33,7 +33,7 @@ export class CatalogEntryRelatedEntry extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for relationtype
      */
-    relationtypeRequiredValueSet() {
+    static relationtypeRequiredValueSet() {
         return RelationTypeValueSet;
     }
     /**
@@ -127,7 +127,7 @@ export class CatalogEntry extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**

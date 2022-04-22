@@ -172,7 +172,7 @@ export declare class PractitionerRoleAvailableTime extends fhir.BackboneElement 
     /**
      * Required-bound Value Set for daysOfWeek
      */
-    daysOfWeekRequiredValueSet(): DaysOfWeekValueSetType;
+    static daysOfWeekRequiredValueSet(): DaysOfWeekValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -282,11 +282,11 @@ export declare class PractitionerRole extends fhir.DomainResource implements IPr
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): PractitionerRoleValueSetType;
+    static codeExampleValueSet(): PractitionerRoleValueSetType;
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
+    static specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

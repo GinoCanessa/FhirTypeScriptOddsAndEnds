@@ -768,7 +768,7 @@ export declare class CapabilityStatementRestSecurity extends fhir.BackboneElemen
     /**
      * Extensible-bound Value Set for service
      */
-    serviceExtensibleValueSet(): RestfulSecurityServiceValueSetType;
+    static serviceExtensibleValueSet(): RestfulSecurityServiceValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -801,7 +801,7 @@ export declare class CapabilityStatementRestResourceInteraction extends fhir.Bac
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): TypeRestfulInteractionValueSetType;
+    static codeRequiredValueSet(): TypeRestfulInteractionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -850,7 +850,7 @@ export declare class CapabilityStatementRestResourceSearchParam extends fhir.Bac
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): SearchParamTypeValueSetType;
+    static typeRequiredValueSet(): SearchParamTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1030,23 +1030,23 @@ export declare class CapabilityStatementRestResource extends fhir.BackboneElemen
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ResourceTypesValueSetType;
+    static typeRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Required-bound Value Set for versioning
      */
-    versioningRequiredValueSet(): VersioningPolicyValueSetType;
+    static versioningRequiredValueSet(): VersioningPolicyValueSetType;
     /**
      * Required-bound Value Set for conditionalRead
      */
-    conditionalReadRequiredValueSet(): ConditionalReadStatusValueSetType;
+    static conditionalReadRequiredValueSet(): ConditionalReadStatusValueSetType;
     /**
      * Required-bound Value Set for conditionalDelete
      */
-    conditionalDeleteRequiredValueSet(): ConditionalDeleteStatusValueSetType;
+    static conditionalDeleteRequiredValueSet(): ConditionalDeleteStatusValueSetType;
     /**
      * Required-bound Value Set for referencePolicy
      */
-    referencePolicyRequiredValueSet(): ReferenceHandlingPolicyValueSetType;
+    static referencePolicyRequiredValueSet(): ReferenceHandlingPolicyValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1079,7 +1079,7 @@ export declare class CapabilityStatementRestInteraction extends fhir.BackboneEle
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): SystemRestfulInteractionValueSetType;
+    static codeRequiredValueSet(): SystemRestfulInteractionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1140,7 +1140,7 @@ export declare class CapabilityStatementRest extends fhir.BackboneElement implem
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): RestfulCapabilityModeValueSetType;
+    static modeRequiredValueSet(): RestfulCapabilityModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1169,7 +1169,7 @@ export declare class CapabilityStatementMessagingEndpoint extends fhir.BackboneE
     /**
      * Extensible-bound Value Set for protocol
      */
-    protocolExtensibleValueSet(): MessageTransportValueSetType;
+    static protocolExtensibleValueSet(): MessageTransportValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1202,7 +1202,7 @@ export declare class CapabilityStatementMessagingSupportedMessage extends fhir.B
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): EventCapabilityModeValueSetType;
+    static modeRequiredValueSet(): EventCapabilityModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1280,7 +1280,7 @@ export declare class CapabilityStatementDocument extends fhir.BackboneElement im
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): DocumentModeValueSetType;
+    static modeRequiredValueSet(): DocumentModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1481,15 +1481,15 @@ export declare class CapabilityStatement extends fhir.DomainResource implements 
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet(): CapabilityStatementKindValueSetType;
+    static kindRequiredValueSet(): CapabilityStatementKindValueSetType;
     /**
      * Required-bound Value Set for fhirVersion
      */
-    fhirVersionRequiredValueSet(): FHIRVersionValueSetType;
+    static fhirVersionRequiredValueSet(): FHIRVersionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

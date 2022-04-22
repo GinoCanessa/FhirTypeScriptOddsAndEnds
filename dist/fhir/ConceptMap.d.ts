@@ -438,7 +438,7 @@ export declare class ConceptMapGroupElementTarget extends fhir.BackboneElement i
     /**
      * Required-bound Value Set for equivalence
      */
-    equivalenceRequiredValueSet(): ConceptMapEquivalenceValueSetType;
+    static equivalenceRequiredValueSet(): ConceptMapEquivalenceValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -520,7 +520,7 @@ export declare class ConceptMapGroupUnmapped extends fhir.BackboneElement implem
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): ConceptmapUnmappedModeValueSetType;
+    static modeRequiredValueSet(): ConceptmapUnmappedModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -736,7 +736,7 @@ export declare class ConceptMap extends fhir.DomainResource implements IConceptM
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

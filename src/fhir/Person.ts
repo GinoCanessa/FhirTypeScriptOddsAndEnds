@@ -117,7 +117,7 @@ export class PersonLink extends fhir.BackboneElement implements IPersonLink {
   /**
    * Required-bound Value Set for assurance
    */
-  public assuranceRequiredValueSet():IdentityAssuranceLevelValueSetType {
+  public static assuranceRequiredValueSet():IdentityAssuranceLevelValueSetType {
     return IdentityAssuranceLevelValueSet;
   }
   /**
@@ -215,7 +215,7 @@ export class Person extends fhir.DomainResource implements IPerson {
   /**
    * Required-bound Value Set for gender
    */
-  public genderRequiredValueSet():AdministrativeGenderValueSetType {
+  public static genderRequiredValueSet():AdministrativeGenderValueSetType {
     return AdministrativeGenderValueSet;
   }
   /**

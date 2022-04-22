@@ -57,7 +57,7 @@ export class DeviceUdiCarrier extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for entryType
      */
-    entryTypeRequiredValueSet() {
+    static entryTypeRequiredValueSet() {
         return UdiEntryTypeValueSet;
     }
     /**
@@ -117,7 +117,7 @@ export class DeviceDeviceName extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return DeviceNametypeValueSet;
     }
     /**
@@ -388,19 +388,19 @@ export class Device extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return DeviceStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for statusReason
      */
-    statusReasonExtensibleValueSet() {
+    static statusReasonExtensibleValueSet() {
         return DeviceStatusReasonValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return DeviceTypeValueSet;
     }
     /**

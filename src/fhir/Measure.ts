@@ -443,7 +443,7 @@ export class MeasureGroupPopulation extends fhir.BackboneElement implements IMea
   /**
    * Extensible-bound Value Set for code
    */
-  public codeExtensibleValueSet():MeasurePopulationValueSetType {
+  public static codeExtensibleValueSet():MeasurePopulationValueSetType {
     return MeasurePopulationValueSet;
   }
   /**
@@ -638,7 +638,7 @@ export class MeasureSupplementalData extends fhir.BackboneElement implements IMe
   /**
    * Extensible-bound Value Set for usage
    */
-  public usageExtensibleValueSet():MeasureDataUsageValueSetType {
+  public static usageExtensibleValueSet():MeasureDataUsageValueSetType {
     return MeasureDataUsageValueSet;
   }
   /**
@@ -1001,49 +1001,49 @@ export class Measure extends fhir.DomainResource implements IMeasure {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectCodeableConcept
    */
-  public subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectReference
    */
-  public subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Example-bound Value Set for topic
    */
-  public topicExampleValueSet():DefinitionTopicValueSetType {
+  public static topicExampleValueSet():DefinitionTopicValueSetType {
     return DefinitionTopicValueSet;
   }
   /**
    * Extensible-bound Value Set for scoring
    */
-  public scoringExtensibleValueSet():MeasureScoringValueSetType {
+  public static scoringExtensibleValueSet():MeasureScoringValueSetType {
     return MeasureScoringValueSet;
   }
   /**
    * Extensible-bound Value Set for compositeScoring
    */
-  public compositeScoringExtensibleValueSet():CompositeMeasureScoringValueSetType {
+  public static compositeScoringExtensibleValueSet():CompositeMeasureScoringValueSetType {
     return CompositeMeasureScoringValueSet;
   }
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():MeasureTypeValueSetType {
+  public static typeExtensibleValueSet():MeasureTypeValueSetType {
     return MeasureTypeValueSet;
   }
   /**
    * Required-bound Value Set for improvementNotation
    */
-  public improvementNotationRequiredValueSet():MeasureImprovementNotationValueSetType {
+  public static improvementNotationRequiredValueSet():MeasureImprovementNotationValueSetType {
     return MeasureImprovementNotationValueSet;
   }
   /**

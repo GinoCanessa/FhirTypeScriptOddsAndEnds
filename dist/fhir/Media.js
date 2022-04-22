@@ -121,31 +121,31 @@ export class Media extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return EventStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return MediaTypeValueSet;
     }
     /**
      * Example-bound Value Set for view
      */
-    viewExampleValueSet() {
+    static viewExampleValueSet() {
         return MediaViewValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ProcedureReasonValueSet;
     }
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet() {
+    static bodySiteExampleValueSet() {
         return BodySiteValueSet;
     }
     /**

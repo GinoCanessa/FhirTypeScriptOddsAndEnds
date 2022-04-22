@@ -265,31 +265,31 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement implem
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():VerificationresultPrimarySourceTypeValueSetType {
+  public static typeExampleValueSet():VerificationresultPrimarySourceTypeValueSetType {
     return VerificationresultPrimarySourceTypeValueSet;
   }
   /**
    * Example-bound Value Set for communicationMethod
    */
-  public communicationMethodExampleValueSet():VerificationresultCommunicationMethodValueSetType {
+  public static communicationMethodExampleValueSet():VerificationresultCommunicationMethodValueSetType {
     return VerificationresultCommunicationMethodValueSet;
   }
   /**
    * Preferred-bound Value Set for validationStatus
    */
-  public validationStatusPreferredValueSet():VerificationresultValidationStatusValueSetType {
+  public static validationStatusPreferredValueSet():VerificationresultValidationStatusValueSetType {
     return VerificationresultValidationStatusValueSet;
   }
   /**
    * Preferred-bound Value Set for canPushUpdates
    */
-  public canPushUpdatesPreferredValueSet():VerificationresultCanPushUpdatesValueSetType {
+  public static canPushUpdatesPreferredValueSet():VerificationresultCanPushUpdatesValueSetType {
     return VerificationresultCanPushUpdatesValueSet;
   }
   /**
    * Preferred-bound Value Set for pushTypeAvailable
    */
-  public pushTypeAvailablePreferredValueSet():VerificationresultPushTypeAvailableValueSetType {
+  public static pushTypeAvailablePreferredValueSet():VerificationresultPushTypeAvailableValueSetType {
     return VerificationresultPushTypeAvailableValueSet;
   }
   /**
@@ -376,7 +376,7 @@ export class VerificationResultAttestation extends fhir.BackboneElement implemen
   /**
    * Example-bound Value Set for communicationMethod
    */
-  public communicationMethodExampleValueSet():VerificationresultCommunicationMethodValueSetType {
+  public static communicationMethodExampleValueSet():VerificationresultCommunicationMethodValueSetType {
     return VerificationresultCommunicationMethodValueSet;
   }
   /**
@@ -554,31 +554,31 @@ export class VerificationResult extends fhir.DomainResource implements IVerifica
   /**
    * Preferred-bound Value Set for need
    */
-  public needPreferredValueSet():VerificationresultNeedValueSetType {
+  public static needPreferredValueSet():VerificationresultNeedValueSetType {
     return VerificationresultNeedValueSet;
   }
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():VerificationresultStatusValueSetType {
+  public static statusRequiredValueSet():VerificationresultStatusValueSetType {
     return VerificationresultStatusValueSet;
   }
   /**
    * Preferred-bound Value Set for validationType
    */
-  public validationTypePreferredValueSet():VerificationresultValidationTypeValueSetType {
+  public static validationTypePreferredValueSet():VerificationresultValidationTypeValueSetType {
     return VerificationresultValidationTypeValueSet;
   }
   /**
    * Example-bound Value Set for validationProcess
    */
-  public validationProcessExampleValueSet():VerificationresultValidationProcessValueSetType {
+  public static validationProcessExampleValueSet():VerificationresultValidationProcessValueSetType {
     return VerificationresultValidationProcessValueSet;
   }
   /**
    * Preferred-bound Value Set for failureAction
    */
-  public failureActionPreferredValueSet():VerificationresultFailureActionValueSetType {
+  public static failureActionPreferredValueSet():VerificationresultFailureActionValueSetType {
     return VerificationresultFailureActionValueSet;
   }
   /**

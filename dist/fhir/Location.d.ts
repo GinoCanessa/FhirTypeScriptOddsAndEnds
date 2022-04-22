@@ -255,7 +255,7 @@ export declare class LocationHoursOfOperation extends fhir.BackboneElement imple
     /**
      * Required-bound Value Set for daysOfWeek
      */
-    daysOfWeekRequiredValueSet(): DaysOfWeekValueSetType;
+    static daysOfWeekRequiredValueSet(): DaysOfWeekValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -369,23 +369,23 @@ export declare class Location extends fhir.DomainResource implements ILocation {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): LocationStatusValueSetType;
+    static statusRequiredValueSet(): LocationStatusValueSetType;
     /**
      * Preferred-bound Value Set for operationalStatus
      */
-    operationalStatusPreferredValueSet(): V20116ValueSetType;
+    static operationalStatusPreferredValueSet(): V20116ValueSetType;
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): LocationModeValueSetType;
+    static modeRequiredValueSet(): LocationModeValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): V3ServiceDeliveryLocationRoleTypeValueSetType;
+    static typeExtensibleValueSet(): V3ServiceDeliveryLocationRoleTypeValueSetType;
     /**
      * Example-bound Value Set for physicalType
      */
-    physicalTypeExampleValueSet(): LocationPhysicalTypeValueSetType;
+    static physicalTypeExampleValueSet(): LocationPhysicalTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

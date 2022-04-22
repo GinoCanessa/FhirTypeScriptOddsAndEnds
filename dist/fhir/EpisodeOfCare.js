@@ -34,7 +34,7 @@ export class EpisodeOfCareStatusHistory extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return EpisodeOfCareStatusValueSet;
     }
     /**
@@ -85,7 +85,7 @@ export class EpisodeOfCareDiagnosis extends fhir.BackboneElement {
     /**
      * Preferred-bound Value Set for role
      */
-    rolePreferredValueSet() {
+    static rolePreferredValueSet() {
         return DiagnosisRoleValueSet;
     }
     /**
@@ -167,13 +167,13 @@ export class EpisodeOfCare extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return EpisodeOfCareStatusValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return EpisodeofcareTypeValueSet;
     }
     /**

@@ -181,73 +181,73 @@ export class ServiceRequest extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return RequestStatusValueSet;
     }
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet() {
+    static intentRequiredValueSet() {
         return RequestIntentValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ServicerequestCategoryValueSet;
     }
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ProcedureCodeValueSet;
     }
     /**
      * Example-bound Value Set for orderDetail
      */
-    orderDetailExampleValueSet() {
+    static orderDetailExampleValueSet() {
         return ServicerequestOrderdetailValueSet;
     }
     /**
      * Example-bound Value Set for asNeededBoolean
      */
-    asNeededBooleanExampleValueSet() {
+    static asNeededBooleanExampleValueSet() {
         return MedicationAsNeededReasonValueSet;
     }
     /**
      * Example-bound Value Set for asNeededCodeableConcept
      */
-    asNeededCodeableConceptExampleValueSet() {
+    static asNeededCodeableConceptExampleValueSet() {
         return MedicationAsNeededReasonValueSet;
     }
     /**
      * Example-bound Value Set for performerType
      */
-    performerTypeExampleValueSet() {
+    static performerTypeExampleValueSet() {
         return ParticipantRoleValueSet;
     }
     /**
      * Example-bound Value Set for locationCode
      */
-    locationCodeExampleValueSet() {
+    static locationCodeExampleValueSet() {
         return V3ServiceDeliveryLocationRoleTypeValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ProcedureReasonValueSet;
     }
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet() {
+    static bodySiteExampleValueSet() {
         return BodySiteValueSet;
     }
     /**

@@ -56,7 +56,7 @@ export declare class UsageContext extends fhir.FhirElement implements IUsageCont
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet(): UsageContextTypeValueSetType;
+    static codeExtensibleValueSet(): UsageContextTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

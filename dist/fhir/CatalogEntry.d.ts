@@ -118,7 +118,7 @@ export declare class CatalogEntryRelatedEntry extends fhir.BackboneElement imple
     /**
      * Required-bound Value Set for relationtype
      */
-    relationtypeRequiredValueSet(): RelationTypeValueSetType;
+    static relationtypeRequiredValueSet(): RelationTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -207,7 +207,7 @@ export declare class CatalogEntry extends fhir.DomainResource implements ICatalo
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

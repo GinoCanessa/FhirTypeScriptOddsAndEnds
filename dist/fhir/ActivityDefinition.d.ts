@@ -381,7 +381,7 @@ export declare class ActivityDefinitionParticipant extends fhir.BackboneElement 
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ActionParticipantTypeValueSetType;
+    static typeRequiredValueSet(): ActionParticipantTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -733,47 +733,47 @@ export declare class ActivityDefinition extends fhir.DomainResource implements I
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): DefinitionTopicValueSetType;
+    static topicExampleValueSet(): DefinitionTopicValueSetType;
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet(): RequestResourceTypesValueSetType;
+    static kindRequiredValueSet(): RequestResourceTypesValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ProcedureCodeValueSetType;
+    static codeExampleValueSet(): ProcedureCodeValueSetType;
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet(): RequestIntentValueSetType;
+    static intentRequiredValueSet(): RequestIntentValueSetType;
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Example-bound Value Set for productReference
      */
-    productReferenceExampleValueSet(): MedicationCodesValueSetType;
+    static productReferenceExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for productCodeableConcept
      */
-    productCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
+    static productCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): BodySiteValueSetType;
+    static bodySiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

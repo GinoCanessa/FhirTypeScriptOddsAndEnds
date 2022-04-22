@@ -284,7 +284,7 @@ export declare class InsurancePlanContact extends fhir.BackboneElement implement
     /**
      * Extensible-bound Value Set for purpose
      */
-    purposeExtensibleValueSet(): ContactentityTypeValueSetType;
+    static purposeExtensibleValueSet(): ContactentityTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -429,7 +429,7 @@ export declare class InsurancePlanPlanSpecificCostBenefitCost extends fhir.Backb
     /**
      * Required-bound Value Set for applicability
      */
-    applicabilityRequiredValueSet(): InsuranceplanApplicabilityValueSetType;
+    static applicabilityRequiredValueSet(): InsuranceplanApplicabilityValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -597,11 +597,11 @@ export declare class InsurancePlan extends fhir.DomainResource implements IInsur
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): InsuranceplanTypeValueSetType;
+    static typeExampleValueSet(): InsuranceplanTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

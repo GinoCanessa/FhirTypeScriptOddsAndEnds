@@ -61,13 +61,13 @@ export class AppointmentResponse extends fhir.DomainResource {
     /**
      * Extensible-bound Value Set for participantType
      */
-    participantTypeExtensibleValueSet() {
+    static participantTypeExtensibleValueSet() {
         return EncounterParticipantTypeValueSet;
     }
     /**
      * Required-bound Value Set for participantStatus
      */
-    participantStatusRequiredValueSet() {
+    static participantStatusRequiredValueSet() {
         return ParticipationstatusValueSet;
     }
     /**

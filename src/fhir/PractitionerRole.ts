@@ -192,7 +192,7 @@ export class PractitionerRoleAvailableTime extends fhir.BackboneElement implemen
   /**
    * Required-bound Value Set for daysOfWeek
    */
-  public daysOfWeekRequiredValueSet():DaysOfWeekValueSetType {
+  public static daysOfWeekRequiredValueSet():DaysOfWeekValueSetType {
     return DaysOfWeekValueSet;
   }
   /**
@@ -344,13 +344,13 @@ export class PractitionerRole extends fhir.DomainResource implements IPractition
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():PractitionerRoleValueSetType {
+  public static codeExampleValueSet():PractitionerRoleValueSetType {
     return PractitionerRoleValueSet;
   }
   /**
    * Preferred-bound Value Set for specialty
    */
-  public specialtyPreferredValueSet():C80PracticeCodesValueSetType {
+  public static specialtyPreferredValueSet():C80PracticeCodesValueSetType {
     return C80PracticeCodesValueSet;
   }
   /**

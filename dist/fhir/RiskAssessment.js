@@ -51,7 +51,7 @@ export class RiskAssessmentPrediction extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for qualitativeRisk
      */
-    qualitativeRiskExampleValueSet() {
+    static qualitativeRiskExampleValueSet() {
         return RiskProbabilityValueSet;
     }
     /**
@@ -169,7 +169,7 @@ export class RiskAssessment extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ObservationStatusValueSet;
     }
     /**

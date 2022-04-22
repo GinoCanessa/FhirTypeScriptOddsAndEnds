@@ -31,7 +31,7 @@ export class CareTeamParticipant extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet() {
+    static roleExampleValueSet() {
         return ParticipantRoleValueSet;
     }
     /**
@@ -113,13 +113,13 @@ export class CareTeam extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return CareTeamStatusValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ClinicalFindingsValueSet;
     }
     /**

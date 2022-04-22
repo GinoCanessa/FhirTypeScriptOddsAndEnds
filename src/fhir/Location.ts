@@ -294,7 +294,7 @@ export class LocationHoursOfOperation extends fhir.BackboneElement implements IL
   /**
    * Required-bound Value Set for daysOfWeek
    */
-  public daysOfWeekRequiredValueSet():DaysOfWeekValueSetType {
+  public static daysOfWeekRequiredValueSet():DaysOfWeekValueSetType {
     return DaysOfWeekValueSet;
   }
   /**
@@ -444,31 +444,31 @@ export class Location extends fhir.DomainResource implements ILocation {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():LocationStatusValueSetType {
+  public static statusRequiredValueSet():LocationStatusValueSetType {
     return LocationStatusValueSet;
   }
   /**
    * Preferred-bound Value Set for operationalStatus
    */
-  public operationalStatusPreferredValueSet():V20116ValueSetType {
+  public static operationalStatusPreferredValueSet():V20116ValueSetType {
     return V20116ValueSet;
   }
   /**
    * Required-bound Value Set for mode
    */
-  public modeRequiredValueSet():LocationModeValueSetType {
+  public static modeRequiredValueSet():LocationModeValueSetType {
     return LocationModeValueSet;
   }
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():V3ServiceDeliveryLocationRoleTypeValueSetType {
+  public static typeExtensibleValueSet():V3ServiceDeliveryLocationRoleTypeValueSetType {
     return V3ServiceDeliveryLocationRoleTypeValueSet;
   }
   /**
    * Example-bound Value Set for physicalType
    */
-  public physicalTypeExampleValueSet():LocationPhysicalTypeValueSetType {
+  public static physicalTypeExampleValueSet():LocationPhysicalTypeValueSetType {
     return LocationPhysicalTypeValueSet;
   }
   /**

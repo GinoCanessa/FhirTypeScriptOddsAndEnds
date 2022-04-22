@@ -285,13 +285,13 @@ export class FamilyMemberHistoryCondition extends fhir.BackboneElement implement
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ConditionCodeValueSetType {
+  public static codeExampleValueSet():ConditionCodeValueSetType {
     return ConditionCodeValueSet;
   }
   /**
    * Example-bound Value Set for outcome
    */
-  public outcomeExampleValueSet():ConditionOutcomeValueSetType {
+  public static outcomeExampleValueSet():ConditionOutcomeValueSetType {
     return ConditionOutcomeValueSet;
   }
   /**
@@ -523,31 +523,31 @@ export class FamilyMemberHistory extends fhir.DomainResource implements IFamilyM
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():HistoryStatusValueSetType {
+  public static statusRequiredValueSet():HistoryStatusValueSetType {
     return HistoryStatusValueSet;
   }
   /**
    * Example-bound Value Set for dataAbsentReason
    */
-  public dataAbsentReasonExampleValueSet():HistoryAbsentReasonValueSetType {
+  public static dataAbsentReasonExampleValueSet():HistoryAbsentReasonValueSetType {
     return HistoryAbsentReasonValueSet;
   }
   /**
    * Example-bound Value Set for relationship
    */
-  public relationshipExampleValueSet():V3FamilyMemberValueSetType {
+  public static relationshipExampleValueSet():V3FamilyMemberValueSetType {
     return V3FamilyMemberValueSet;
   }
   /**
    * Extensible-bound Value Set for sex
    */
-  public sexExtensibleValueSet():AdministrativeGenderValueSetType {
+  public static sexExtensibleValueSet():AdministrativeGenderValueSetType {
     return AdministrativeGenderValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ClinicalFindingsValueSetType {
+  public static reasonCodeExampleValueSet():ClinicalFindingsValueSetType {
     return ClinicalFindingsValueSet;
   }
   /**

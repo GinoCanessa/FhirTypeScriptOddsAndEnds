@@ -153,43 +153,43 @@ export class Communication extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return EventStatusValueSet;
     }
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet() {
+    static statusReasonExampleValueSet() {
         return CommunicationNotDoneReasonValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return CommunicationCategoryValueSet;
     }
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**
      * Example-bound Value Set for medium
      */
-    mediumExampleValueSet() {
+    static mediumExampleValueSet() {
         return V3ParticipationModeValueSet;
     }
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet() {
+    static topicExampleValueSet() {
         return CommunicationTopicValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ClinicalFindingsValueSet;
     }
     /**

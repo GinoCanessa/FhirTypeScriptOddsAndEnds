@@ -245,7 +245,7 @@ export class InvoiceLineItemPriceComponent extends fhir.BackboneElement implemen
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():InvoicePriceComponentTypeValueSetType {
+  public static typeRequiredValueSet():InvoicePriceComponentTypeValueSetType {
     return InvoicePriceComponentTypeValueSet;
   }
   /**
@@ -429,7 +429,7 @@ export class Invoice extends fhir.DomainResource implements IInvoice {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():InvoiceStatusValueSetType {
+  public static statusRequiredValueSet():InvoiceStatusValueSetType {
     return InvoiceStatusValueSet;
   }
   /**

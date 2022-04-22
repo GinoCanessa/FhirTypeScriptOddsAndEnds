@@ -43,13 +43,13 @@ export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneEleme
     /**
      * Extensible-bound Value Set for customaryUnit
      */
-    customaryUnitExtensibleValueSet() {
+    static customaryUnitExtensibleValueSet() {
         return UcumUnitsValueSet;
     }
     /**
      * Extensible-bound Value Set for unit
      */
-    unitExtensibleValueSet() {
+    static unitExtensibleValueSet() {
         return UcumUnitsValueSet;
     }
     /**
@@ -118,25 +118,25 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
     /**
      * Required-bound Value Set for category
      */
-    categoryRequiredValueSet() {
+    static categoryRequiredValueSet() {
         return ObservationRangeCategoryValueSet;
     }
     /**
      * Extensible-bound Value Set for context
      */
-    contextExtensibleValueSet() {
+    static contextExtensibleValueSet() {
         return ReferencerangeMeaningValueSet;
     }
     /**
      * Example-bound Value Set for appliesTo
      */
-    appliesToExampleValueSet() {
+    static appliesToExampleValueSet() {
         return ReferencerangeAppliestoValueSet;
     }
     /**
      * Required-bound Value Set for gender
      */
-    genderRequiredValueSet() {
+    static genderRequiredValueSet() {
         return AdministrativeGenderValueSet;
     }
     /**
@@ -236,25 +236,25 @@ export class ObservationDefinition extends fhir.DomainResource {
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ObservationCategoryValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ObservationCodesValueSet;
     }
     /**
      * Required-bound Value Set for permittedDataType
      */
-    permittedDataTypeRequiredValueSet() {
+    static permittedDataTypeRequiredValueSet() {
         return PermittedDataTypeValueSet;
     }
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet() {
+    static methodExampleValueSet() {
         return ObservationMethodsValueSet;
     }
     /**

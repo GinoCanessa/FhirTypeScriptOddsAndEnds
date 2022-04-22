@@ -3,5 +3,6 @@
 // Minimum TypeScript Version: 3.7
 import * as fhir from './fhir.js';
 import * as valueSets from './valueSets.js';
-export { fhir, valueSets };
+import * as valueSetEnums from './valueSetEnums.js';
+export { fhir, valueSets, valueSetEnums };
 //# sourceMappingURL=index.js.map

@@ -38,13 +38,13 @@ export class ValueSetComposeIncludeConceptDesignation extends fhir.BackboneEleme
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet() {
+    static languagePreferredValueSet() {
         return LanguagesValueSet;
     }
     /**
      * Extensible-bound Value Set for use
      */
-    useExtensibleValueSet() {
+    static useExtensibleValueSet() {
         return DesignationUseValueSet;
     }
     /**
@@ -155,7 +155,7 @@ export class ValueSetComposeIncludeFilter extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for op
      */
-    opRequiredValueSet() {
+    static opRequiredValueSet() {
         return FilterOperatorValueSet;
     }
     /**
@@ -655,7 +655,7 @@ export class ValueSet extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**

@@ -92,7 +92,7 @@ export class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends fhir.Bac
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return PrecisionEstimateTypeValueSet;
     }
     /**
@@ -161,13 +161,13 @@ export class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return RiskEstimateTypeValueSet;
     }
     /**
      * Required-bound Value Set for unitOfMeasure
      */
-    unitOfMeasureRequiredValueSet() {
+    static unitOfMeasureRequiredValueSet() {
         return UcumUnitsValueSet;
     }
     /**
@@ -221,13 +221,13 @@ export class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.Ba
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return CertaintySubcomponentTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for rating
      */
-    ratingExtensibleValueSet() {
+    static ratingExtensibleValueSet() {
         return CertaintySubcomponentRatingValueSet;
     }
     /**
@@ -269,7 +269,7 @@ export class RiskEvidenceSynthesisCertainty extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for rating
      */
-    ratingExtensibleValueSet() {
+    static ratingExtensibleValueSet() {
         return EvidenceQualityValueSet;
     }
     /**
@@ -438,25 +438,25 @@ export class RiskEvidenceSynthesis extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet() {
+    static topicExampleValueSet() {
         return DefinitionTopicValueSet;
     }
     /**
      * Extensible-bound Value Set for synthesisType
      */
-    synthesisTypeExtensibleValueSet() {
+    static synthesisTypeExtensibleValueSet() {
         return SynthesisTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for studyType
      */
-    studyTypeExtensibleValueSet() {
+    static studyTypeExtensibleValueSet() {
         return StudyTypeValueSet;
     }
     /**

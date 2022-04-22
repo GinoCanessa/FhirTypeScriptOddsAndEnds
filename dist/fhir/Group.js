@@ -198,7 +198,7 @@ export class Group extends fhir.DomainResource {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return GroupTypeValueSet;
     }
     /**

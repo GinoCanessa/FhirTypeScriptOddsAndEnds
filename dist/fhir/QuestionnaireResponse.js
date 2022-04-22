@@ -246,7 +246,7 @@ export class QuestionnaireResponse extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return QuestionnaireAnswersStatusValueSet;
     }
     /**

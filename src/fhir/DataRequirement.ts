@@ -319,7 +319,7 @@ export class DataRequirementSort extends fhir.FhirElement implements IDataRequir
   /**
    * Required-bound Value Set for direction
    */
-  public directionRequiredValueSet():SortDirectionValueSetType {
+  public static directionRequiredValueSet():SortDirectionValueSetType {
     return SortDirectionValueSet;
   }
   /**
@@ -415,19 +415,19 @@ export class DataRequirement extends fhir.FhirElement implements IDataRequiremen
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():AllTypesValueSetType {
+  public static typeRequiredValueSet():AllTypesValueSetType {
     return AllTypesValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectCodeableConcept
    */
-  public subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectReference
    */
-  public subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**

@@ -437,37 +437,37 @@ export class CarePlanActivityDetail extends fhir.BackboneElement implements ICar
   /**
    * Required-bound Value Set for kind
    */
-  public kindRequiredValueSet():CarePlanActivityKindValueSetType {
+  public static kindRequiredValueSet():CarePlanActivityKindValueSetType {
     return CarePlanActivityKindValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ProcedureCodeValueSetType {
+  public static codeExampleValueSet():ProcedureCodeValueSetType {
     return ProcedureCodeValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ClinicalFindingsValueSetType {
+  public static reasonCodeExampleValueSet():ClinicalFindingsValueSetType {
     return ClinicalFindingsValueSet;
   }
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():CarePlanActivityStatusValueSetType {
+  public static statusRequiredValueSet():CarePlanActivityStatusValueSetType {
     return CarePlanActivityStatusValueSet;
   }
   /**
    * Example-bound Value Set for productCodeableConcept
    */
-  public productCodeableConceptExampleValueSet():MedicationCodesValueSetType {
+  public static productCodeableConceptExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for productReference
    */
-  public productReferenceExampleValueSet():MedicationCodesValueSetType {
+  public static productReferenceExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
@@ -539,7 +539,7 @@ export class CarePlanActivity extends fhir.BackboneElement implements ICarePlanA
   /**
    * Example-bound Value Set for outcomeCodeableConcept
    */
-  public outcomeCodeableConceptExampleValueSet():CarePlanActivityOutcomeValueSetType {
+  public static outcomeCodeableConceptExampleValueSet():CarePlanActivityOutcomeValueSetType {
     return CarePlanActivityOutcomeValueSet;
   }
   /**
@@ -728,13 +728,13 @@ export class CarePlan extends fhir.DomainResource implements ICarePlan {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():RequestStatusValueSetType {
+  public static statusRequiredValueSet():RequestStatusValueSetType {
     return RequestStatusValueSet;
   }
   /**
    * Required-bound Value Set for intent
    */
-  public intentRequiredValueSet():CarePlanIntentValueSetType {
+  public static intentRequiredValueSet():CarePlanIntentValueSetType {
     return CarePlanIntentValueSet;
   }
   /**

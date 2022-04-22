@@ -2,13 +2,15 @@
 // Contents of: hl7.fhir.r4.core version: 4.0.1
 // Minimum TypeScript Version: 3.7
 
+import { IFhirElement, FhirElement } from './fhir/FhirElement.js';
+import { ICoding, Coding } from './fhir/Coding.js';
 import { IAddress, Address } from './fhir/Address.js';
+import { IQuantity, Quantity } from './fhir/Quantity.js';
 import { IAge, Age } from './fhir/Age.js';
 import { IAnnotation, Annotation } from './fhir/Annotation.js';
 import { IAttachment, Attachment } from './fhir/Attachment.js';
 import { IBackboneElement, BackboneElement } from './fhir/BackboneElement.js';
 import { ICodeableConcept, CodeableConcept } from './fhir/CodeableConcept.js';
-import { ICoding, Coding } from './fhir/Coding.js';
 import { IContactDetail, ContactDetail } from './fhir/ContactDetail.js';
 import { IContactPoint, ContactPoint } from './fhir/ContactPoint.js';
 import { IContributor, Contributor } from './fhir/Contributor.js';
@@ -17,7 +19,6 @@ import { IDataRequirement, DataRequirement, IDataRequirementCodeFilter, DataRequ
 import { IDistance, Distance } from './fhir/Distance.js';
 import { IDosage, Dosage, IDosageDoseAndRate, DosageDoseAndRate } from './fhir/Dosage.js';
 import { IDuration, Duration } from './fhir/Duration.js';
-import { IFhirElement, FhirElement } from './fhir/FhirElement.js';
 import { IElementDefinition, ElementDefinition, IElementDefinitionSlicing, ElementDefinitionSlicing, IElementDefinitionSlicingDiscriminator, ElementDefinitionSlicingDiscriminator, IElementDefinitionBase, ElementDefinitionBase, IElementDefinitionType, ElementDefinitionType, IElementDefinitionExample, ElementDefinitionExample, IElementDefinitionConstraint, ElementDefinitionConstraint, IElementDefinitionBinding, ElementDefinitionBinding, IElementDefinitionMapping, ElementDefinitionMapping } from './fhir/ElementDefinition.js';
 import { IExpression, Expression } from './fhir/Expression.js';
 import { IExtension, Extension } from './fhir/Extension.js';
@@ -32,7 +33,6 @@ import { IPeriod, Period } from './fhir/Period.js';
 import { IPopulation, Population } from './fhir/Population.js';
 import { IProdCharacteristic, ProdCharacteristic } from './fhir/ProdCharacteristic.js';
 import { IProductShelfLife, ProductShelfLife } from './fhir/ProductShelfLife.js';
-import { IQuantity, Quantity } from './fhir/Quantity.js';
 import { IRange, Range } from './fhir/Range.js';
 import { IRatio, Ratio } from './fhir/Ratio.js';
 import { IReference, Reference } from './fhir/Reference.js';
@@ -43,6 +43,8 @@ import { ISubstanceAmount, SubstanceAmount, ISubstanceAmountReferenceRange, Subs
 import { ITiming, Timing, ITimingRepeat, TimingRepeat } from './fhir/Timing.js';
 import { ITriggerDefinition, TriggerDefinition } from './fhir/TriggerDefinition.js';
 import { IUsageContext, UsageContext } from './fhir/UsageContext.js';
+import { IResource, Resource } from './fhir/Resource.js';
+import { IDomainResource, DomainResource } from './fhir/DomainResource.js';
 import { IAccount, Account, IAccountCoverage, AccountCoverage, IAccountGuarantor, AccountGuarantor } from './fhir/Account.js';
 import { IActivityDefinition, ActivityDefinition, IActivityDefinitionParticipant, ActivityDefinitionParticipant, IActivityDefinitionDynamicValue, ActivityDefinitionDynamicValue } from './fhir/ActivityDefinition.js';
 import { IAdverseEvent, AdverseEvent, IAdverseEventSuspectEntity, AdverseEventSuspectEntity, IAdverseEventSuspectEntityCausality, AdverseEventSuspectEntityCausality } from './fhir/AdverseEvent.js';
@@ -85,7 +87,6 @@ import { IDeviceUseStatement, DeviceUseStatement } from './fhir/DeviceUseStateme
 import { IDiagnosticReport, DiagnosticReport, IDiagnosticReportMedia, DiagnosticReportMedia } from './fhir/DiagnosticReport.js';
 import { IDocumentManifest, DocumentManifest, IDocumentManifestRelated, DocumentManifestRelated } from './fhir/DocumentManifest.js';
 import { IDocumentReference, DocumentReference, IDocumentReferenceRelatesTo, DocumentReferenceRelatesTo, IDocumentReferenceContent, DocumentReferenceContent, IDocumentReferenceContext, DocumentReferenceContext } from './fhir/DocumentReference.js';
-import { IDomainResource, DomainResource } from './fhir/DomainResource.js';
 import { IEffectEvidenceSynthesis, EffectEvidenceSynthesis, IEffectEvidenceSynthesisSampleSize, EffectEvidenceSynthesisSampleSize, IEffectEvidenceSynthesisResultsByExposure, EffectEvidenceSynthesisResultsByExposure, IEffectEvidenceSynthesisEffectEstimate, EffectEvidenceSynthesisEffectEstimate, IEffectEvidenceSynthesisEffectEstimatePrecisionEstimate, EffectEvidenceSynthesisEffectEstimatePrecisionEstimate, IEffectEvidenceSynthesisCertainty, EffectEvidenceSynthesisCertainty, IEffectEvidenceSynthesisCertaintyCertaintySubcomponent, EffectEvidenceSynthesisCertaintyCertaintySubcomponent } from './fhir/EffectEvidenceSynthesis.js';
 import { IEncounter, Encounter, IEncounterStatusHistory, EncounterStatusHistory, IEncounterClassHistory, EncounterClassHistory, IEncounterParticipant, EncounterParticipant, IEncounterDiagnosis, EncounterDiagnosis, IEncounterHospitalization, EncounterHospitalization, IEncounterLocation, EncounterLocation } from './fhir/Encounter.js';
 import { IEndpoint, Endpoint } from './fhir/Endpoint.js';
@@ -163,7 +164,6 @@ import { IResearchDefinition, ResearchDefinition } from './fhir/ResearchDefiniti
 import { IResearchElementDefinition, ResearchElementDefinition, IResearchElementDefinitionCharacteristic, ResearchElementDefinitionCharacteristic } from './fhir/ResearchElementDefinition.js';
 import { IResearchStudy, ResearchStudy, IResearchStudyArm, ResearchStudyArm, IResearchStudyObjective, ResearchStudyObjective } from './fhir/ResearchStudy.js';
 import { IResearchSubject, ResearchSubject } from './fhir/ResearchSubject.js';
-import { IResource, Resource } from './fhir/Resource.js';
 import { IRiskAssessment, RiskAssessment, IRiskAssessmentPrediction, RiskAssessmentPrediction } from './fhir/RiskAssessment.js';
 import { IRiskEvidenceSynthesis, RiskEvidenceSynthesis, IRiskEvidenceSynthesisSampleSize, RiskEvidenceSynthesisSampleSize, IRiskEvidenceSynthesisRiskEstimate, RiskEvidenceSynthesisRiskEstimate, IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate, RiskEvidenceSynthesisRiskEstimatePrecisionEstimate, IRiskEvidenceSynthesisCertainty, RiskEvidenceSynthesisCertainty, IRiskEvidenceSynthesisCertaintyCertaintySubcomponent, RiskEvidenceSynthesisCertaintyCertaintySubcomponent } from './fhir/RiskEvidenceSynthesis.js';
 import { ISchedule, Schedule } from './fhir/Schedule.js';
@@ -655,13 +655,15 @@ function resourceFactory(source:any) : FhirResource|null {
 }
 
 export {
+  type IFhirElement, FhirElement, 
+  type ICoding, Coding, 
   type IAddress, Address, 
+  type IQuantity, Quantity, 
   type IAge, Age, 
   type IAnnotation, Annotation, 
   type IAttachment, Attachment, 
   type IBackboneElement, BackboneElement, 
   type ICodeableConcept, CodeableConcept, 
-  type ICoding, Coding, 
   type IContactDetail, ContactDetail, 
   type IContactPoint, ContactPoint, 
   type IContributor, Contributor, 
@@ -670,7 +672,6 @@ export {
   type IDistance, Distance, 
   type IDosage, Dosage, type IDosageDoseAndRate, DosageDoseAndRate, 
   type IDuration, Duration, 
-  type IFhirElement, FhirElement, 
   type IElementDefinition, ElementDefinition, type IElementDefinitionSlicing, ElementDefinitionSlicing, type IElementDefinitionSlicingDiscriminator, ElementDefinitionSlicingDiscriminator, type IElementDefinitionBase, ElementDefinitionBase, type IElementDefinitionType, ElementDefinitionType, type IElementDefinitionExample, ElementDefinitionExample, type IElementDefinitionConstraint, ElementDefinitionConstraint, type IElementDefinitionBinding, ElementDefinitionBinding, type IElementDefinitionMapping, ElementDefinitionMapping, 
   type IExpression, Expression, 
   type IExtension, Extension, 
@@ -685,7 +686,6 @@ export {
   type IPopulation, Population, 
   type IProdCharacteristic, ProdCharacteristic, 
   type IProductShelfLife, ProductShelfLife, 
-  type IQuantity, Quantity, 
   type IRange, Range, 
   type IRatio, Ratio, 
   type IReference, Reference, 
@@ -696,6 +696,8 @@ export {
   type ITiming, Timing, type ITimingRepeat, TimingRepeat, 
   type ITriggerDefinition, TriggerDefinition, 
   type IUsageContext, UsageContext, 
+  type IResource, Resource, 
+  type IDomainResource, DomainResource, 
   type IAccount, Account, type IAccountCoverage, AccountCoverage, type IAccountGuarantor, AccountGuarantor, 
   type IActivityDefinition, ActivityDefinition, type IActivityDefinitionParticipant, ActivityDefinitionParticipant, type IActivityDefinitionDynamicValue, ActivityDefinitionDynamicValue, 
   type IAdverseEvent, AdverseEvent, type IAdverseEventSuspectEntity, AdverseEventSuspectEntity, type IAdverseEventSuspectEntityCausality, AdverseEventSuspectEntityCausality, 
@@ -738,7 +740,6 @@ export {
   type IDiagnosticReport, DiagnosticReport, type IDiagnosticReportMedia, DiagnosticReportMedia, 
   type IDocumentManifest, DocumentManifest, type IDocumentManifestRelated, DocumentManifestRelated, 
   type IDocumentReference, DocumentReference, type IDocumentReferenceRelatesTo, DocumentReferenceRelatesTo, type IDocumentReferenceContent, DocumentReferenceContent, type IDocumentReferenceContext, DocumentReferenceContext, 
-  type IDomainResource, DomainResource, 
   type IEffectEvidenceSynthesis, EffectEvidenceSynthesis, type IEffectEvidenceSynthesisSampleSize, EffectEvidenceSynthesisSampleSize, type IEffectEvidenceSynthesisResultsByExposure, EffectEvidenceSynthesisResultsByExposure, type IEffectEvidenceSynthesisEffectEstimate, EffectEvidenceSynthesisEffectEstimate, type IEffectEvidenceSynthesisEffectEstimatePrecisionEstimate, EffectEvidenceSynthesisEffectEstimatePrecisionEstimate, type IEffectEvidenceSynthesisCertainty, EffectEvidenceSynthesisCertainty, type IEffectEvidenceSynthesisCertaintyCertaintySubcomponent, EffectEvidenceSynthesisCertaintyCertaintySubcomponent, 
   type IEncounter, Encounter, type IEncounterStatusHistory, EncounterStatusHistory, type IEncounterClassHistory, EncounterClassHistory, type IEncounterParticipant, EncounterParticipant, type IEncounterDiagnosis, EncounterDiagnosis, type IEncounterHospitalization, EncounterHospitalization, type IEncounterLocation, EncounterLocation, 
   type IEndpoint, Endpoint, 
@@ -816,7 +817,6 @@ export {
   type IResearchElementDefinition, ResearchElementDefinition, type IResearchElementDefinitionCharacteristic, ResearchElementDefinitionCharacteristic, 
   type IResearchStudy, ResearchStudy, type IResearchStudyArm, ResearchStudyArm, type IResearchStudyObjective, ResearchStudyObjective, 
   type IResearchSubject, ResearchSubject, 
-  type IResource, Resource, 
   type IRiskAssessment, RiskAssessment, type IRiskAssessmentPrediction, RiskAssessmentPrediction, 
   type IRiskEvidenceSynthesis, RiskEvidenceSynthesis, type IRiskEvidenceSynthesisSampleSize, RiskEvidenceSynthesisSampleSize, type IRiskEvidenceSynthesisRiskEstimate, RiskEvidenceSynthesisRiskEstimate, type IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate, RiskEvidenceSynthesisRiskEstimatePrecisionEstimate, type IRiskEvidenceSynthesisCertainty, RiskEvidenceSynthesisCertainty, type IRiskEvidenceSynthesisCertaintyCertaintySubcomponent, RiskEvidenceSynthesisCertaintyCertaintySubcomponent, 
   type ISchedule, Schedule, 

@@ -183,7 +183,7 @@ export declare class MedicationAdministrationPerformer extends fhir.BackboneElem
     /**
      * Example-bound Value Set for function
      */
-    functionExampleValueSet(): MedAdminPerformFunctionValueSetType;
+    static functionExampleValueSet(): MedAdminPerformFunctionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -233,15 +233,15 @@ export declare class MedicationAdministrationDosage extends fhir.BackboneElement
     /**
      * Example-bound Value Set for site
      */
-    siteExampleValueSet(): ApproachSiteCodesValueSetType;
+    static siteExampleValueSet(): ApproachSiteCodesValueSetType;
     /**
      * Example-bound Value Set for route
      */
-    routeExampleValueSet(): RouteCodesValueSetType;
+    static routeExampleValueSet(): RouteCodesValueSetType;
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet(): AdministrationMethodCodesValueSetType;
+    static methodExampleValueSet(): AdministrationMethodCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -358,27 +358,27 @@ export declare class MedicationAdministration extends fhir.DomainResource implem
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): MedicationAdminStatusValueSetType;
+    static statusRequiredValueSet(): MedicationAdminStatusValueSetType;
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet(): ReasonMedicationNotGivenCodesValueSetType;
+    static statusReasonExampleValueSet(): ReasonMedicationNotGivenCodesValueSetType;
     /**
      * Preferred-bound Value Set for category
      */
-    categoryPreferredValueSet(): MedicationAdminCategoryValueSetType;
+    static categoryPreferredValueSet(): MedicationAdminCategoryValueSetType;
     /**
      * Example-bound Value Set for medicationCodeableConcept
      */
-    medicationCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
+    static medicationCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for medicationReference
      */
-    medicationReferenceExampleValueSet(): MedicationCodesValueSetType;
+    static medicationReferenceExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ReasonMedicationGivenCodesValueSetType;
+    static reasonCodeExampleValueSet(): ReasonMedicationGivenCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

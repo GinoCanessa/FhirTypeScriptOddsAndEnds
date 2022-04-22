@@ -266,25 +266,25 @@ export class SpecimenCollection extends fhir.BackboneElement implements ISpecime
   /**
    * Example-bound Value Set for method
    */
-  public methodExampleValueSet():SpecimenCollectionMethodValueSetType {
+  public static methodExampleValueSet():SpecimenCollectionMethodValueSetType {
     return SpecimenCollectionMethodValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():BodySiteValueSetType {
+  public static bodySiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**
    * Extensible-bound Value Set for fastingStatusCodeableConcept
    */
-  public fastingStatusCodeableConceptExtensibleValueSet():V20916ValueSetType {
+  public static fastingStatusCodeableConceptExtensibleValueSet():V20916ValueSetType {
     return V20916ValueSet;
   }
   /**
    * Extensible-bound Value Set for fastingStatusDuration
    */
-  public fastingStatusDurationExtensibleValueSet():V20916ValueSetType {
+  public static fastingStatusDurationExtensibleValueSet():V20916ValueSetType {
     return V20916ValueSet;
   }
   /**
@@ -353,7 +353,7 @@ export class SpecimenProcessing extends fhir.BackboneElement implements ISpecime
   /**
    * Example-bound Value Set for procedure
    */
-  public procedureExampleValueSet():SpecimenProcessingProcedureValueSetType {
+  public static procedureExampleValueSet():SpecimenProcessingProcedureValueSetType {
     return SpecimenProcessingProcedureValueSet;
   }
   /**
@@ -423,19 +423,19 @@ export class SpecimenContainer extends fhir.BackboneElement implements ISpecimen
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():SpecimenContainerTypeValueSetType {
+  public static typeExampleValueSet():SpecimenContainerTypeValueSetType {
     return SpecimenContainerTypeValueSet;
   }
   /**
    * Example-bound Value Set for additiveCodeableConcept
    */
-  public additiveCodeableConceptExampleValueSet():V20371ValueSetType {
+  public static additiveCodeableConceptExampleValueSet():V20371ValueSetType {
     return V20371ValueSet;
   }
   /**
    * Example-bound Value Set for additiveReference
    */
-  public additiveReferenceExampleValueSet():V20371ValueSetType {
+  public static additiveReferenceExampleValueSet():V20371ValueSetType {
     return V20371ValueSet;
   }
   /**
@@ -547,19 +547,19 @@ export class Specimen extends fhir.DomainResource implements ISpecimen {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():SpecimenStatusValueSetType {
+  public static statusRequiredValueSet():SpecimenStatusValueSetType {
     return SpecimenStatusValueSet;
   }
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():V20487ValueSetType {
+  public static typeExampleValueSet():V20487ValueSetType {
     return V20487ValueSet;
   }
   /**
    * Extensible-bound Value Set for condition
    */
-  public conditionExtensibleValueSet():V20493ValueSetType {
+  public static conditionExtensibleValueSet():V20493ValueSetType {
     return V20493ValueSet;
   }
   /**

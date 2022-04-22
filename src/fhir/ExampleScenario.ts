@@ -484,7 +484,7 @@ export class ExampleScenarioActor extends fhir.BackboneElement implements IExamp
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ExamplescenarioActorTypeValueSetType {
+  public static typeRequiredValueSet():ExamplescenarioActorTypeValueSetType {
     return ExamplescenarioActorTypeValueSet;
   }
   /**
@@ -654,7 +654,7 @@ export class ExampleScenarioInstance extends fhir.BackboneElement implements IEx
   /**
    * Required-bound Value Set for resourceType
    */
-  public resourceTypeRequiredValueSet():ResourceTypesValueSetType {
+  public static resourceTypeRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**
@@ -1119,7 +1119,7 @@ export class ExampleScenario extends fhir.DomainResource implements IExampleScen
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**

@@ -30,7 +30,7 @@ export class ChargeItemPerformer extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for function
      */
-    functionExampleValueSet() {
+    static functionExampleValueSet() {
         return PerformerRoleValueSet;
     }
     /**
@@ -181,31 +181,31 @@ export class ChargeItem extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ChargeitemStatusValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ChargeitemBillingcodesValueSet;
     }
     /**
      * Example-bound Value Set for bodysite
      */
-    bodysiteExampleValueSet() {
+    static bodysiteExampleValueSet() {
         return BodySiteValueSet;
     }
     /**
      * Example-bound Value Set for productReference
      */
-    productReferenceExampleValueSet() {
+    static productReferenceExampleValueSet() {
         return DeviceKindValueSet;
     }
     /**
      * Example-bound Value Set for productCodeableConcept
      */
-    productCodeableConceptExampleValueSet() {
+    static productCodeableConceptExampleValueSet() {
         return DeviceKindValueSet;
     }
     /**

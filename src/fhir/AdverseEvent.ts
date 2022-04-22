@@ -198,13 +198,13 @@ export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement imp
   /**
    * Example-bound Value Set for assessment
    */
-  public assessmentExampleValueSet():AdverseEventCausalityAssessValueSetType {
+  public static assessmentExampleValueSet():AdverseEventCausalityAssessValueSetType {
     return AdverseEventCausalityAssessValueSet;
   }
   /**
    * Example-bound Value Set for method
    */
-  public methodExampleValueSet():AdverseEventCausalityMethodValueSetType {
+  public static methodExampleValueSet():AdverseEventCausalityMethodValueSetType {
     return AdverseEventCausalityMethodValueSet;
   }
   /**
@@ -393,37 +393,37 @@ export class AdverseEvent extends fhir.DomainResource implements IAdverseEvent {
   /**
    * Required-bound Value Set for actuality
    */
-  public actualityRequiredValueSet():AdverseEventActualityValueSetType {
+  public static actualityRequiredValueSet():AdverseEventActualityValueSetType {
     return AdverseEventActualityValueSet;
   }
   /**
    * Extensible-bound Value Set for category
    */
-  public categoryExtensibleValueSet():AdverseEventCategoryValueSetType {
+  public static categoryExtensibleValueSet():AdverseEventCategoryValueSetType {
     return AdverseEventCategoryValueSet;
   }
   /**
    * Example-bound Value Set for event
    */
-  public eventExampleValueSet():AdverseEventTypeValueSetType {
+  public static eventExampleValueSet():AdverseEventTypeValueSetType {
     return AdverseEventTypeValueSet;
   }
   /**
    * Example-bound Value Set for seriousness
    */
-  public seriousnessExampleValueSet():AdverseEventSeriousnessValueSetType {
+  public static seriousnessExampleValueSet():AdverseEventSeriousnessValueSetType {
     return AdverseEventSeriousnessValueSet;
   }
   /**
    * Required-bound Value Set for severity
    */
-  public severityRequiredValueSet():AdverseEventSeverityValueSetType {
+  public static severityRequiredValueSet():AdverseEventSeverityValueSetType {
     return AdverseEventSeverityValueSet;
   }
   /**
    * Required-bound Value Set for outcome
    */
-  public outcomeRequiredValueSet():AdverseEventOutcomeValueSetType {
+  public static outcomeRequiredValueSet():AdverseEventOutcomeValueSetType {
     return AdverseEventOutcomeValueSet;
   }
   /**

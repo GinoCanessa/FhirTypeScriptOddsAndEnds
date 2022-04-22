@@ -143,7 +143,7 @@ export class HumanName extends fhir.FhirElement implements IHumanName {
   /**
    * Required-bound Value Set for use
    */
-  public useRequiredValueSet():NameUseValueSetType {
+  public static useRequiredValueSet():NameUseValueSetType {
     return NameUseValueSet;
   }
   /**

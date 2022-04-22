@@ -155,13 +155,13 @@ export class ProvenanceAgent extends fhir.BackboneElement implements IProvenance
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():ProvenanceAgentTypeValueSetType {
+  public static typeExtensibleValueSet():ProvenanceAgentTypeValueSetType {
     return ProvenanceAgentTypeValueSet;
   }
   /**
    * Example-bound Value Set for role
    */
-  public roleExampleValueSet():SecurityRoleTypeValueSetType {
+  public static roleExampleValueSet():SecurityRoleTypeValueSetType {
     return SecurityRoleTypeValueSet;
   }
   /**
@@ -213,7 +213,7 @@ export class ProvenanceEntity extends fhir.BackboneElement implements IProvenanc
   /**
    * Required-bound Value Set for role
    */
-  public roleRequiredValueSet():ProvenanceEntityRoleValueSetType {
+  public static roleRequiredValueSet():ProvenanceEntityRoleValueSetType {
     return ProvenanceEntityRoleValueSet;
   }
   /**
@@ -321,13 +321,13 @@ export class Provenance extends fhir.DomainResource implements IProvenance {
   /**
    * Extensible-bound Value Set for reason
    */
-  public reasonExtensibleValueSet():V3PurposeOfUseValueSetType {
+  public static reasonExtensibleValueSet():V3PurposeOfUseValueSetType {
     return V3PurposeOfUseValueSet;
   }
   /**
    * Extensible-bound Value Set for activity
    */
-  public activityExtensibleValueSet():ProvenanceActivityTypeValueSetType {
+  public static activityExtensibleValueSet():ProvenanceActivityTypeValueSetType {
     return ProvenanceActivityTypeValueSet;
   }
   /**

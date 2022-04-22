@@ -255,19 +255,19 @@ export class Medication extends fhir.DomainResource implements IMedication {
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():MedicationCodesValueSetType {
+  public static codeExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():MedicationStatusValueSetType {
+  public static statusRequiredValueSet():MedicationStatusValueSetType {
     return MedicationStatusValueSet;
   }
   /**
    * Example-bound Value Set for form
    */
-  public formExampleValueSet():MedicationFormCodesValueSetType {
+  public static formExampleValueSet():MedicationFormCodesValueSetType {
     return MedicationFormCodesValueSet;
   }
   /**

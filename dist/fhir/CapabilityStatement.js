@@ -146,7 +146,7 @@ export class CapabilityStatementRestSecurity extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for service
      */
-    serviceExtensibleValueSet() {
+    static serviceExtensibleValueSet() {
         return RestfulSecurityServiceValueSet;
     }
     /**
@@ -194,7 +194,7 @@ export class CapabilityStatementRestResourceInteraction extends fhir.BackboneEle
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return TypeRestfulInteractionValueSet;
     }
     /**
@@ -257,7 +257,7 @@ export class CapabilityStatementRestResourceSearchParam extends fhir.BackboneEle
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return SearchParamTypeValueSet;
     }
     /**
@@ -453,31 +453,31 @@ export class CapabilityStatementRestResource extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ResourceTypesValueSet;
     }
     /**
      * Required-bound Value Set for versioning
      */
-    versioningRequiredValueSet() {
+    static versioningRequiredValueSet() {
         return VersioningPolicyValueSet;
     }
     /**
      * Required-bound Value Set for conditionalRead
      */
-    conditionalReadRequiredValueSet() {
+    static conditionalReadRequiredValueSet() {
         return ConditionalReadStatusValueSet;
     }
     /**
      * Required-bound Value Set for conditionalDelete
      */
-    conditionalDeleteRequiredValueSet() {
+    static conditionalDeleteRequiredValueSet() {
         return ConditionalDeleteStatusValueSet;
     }
     /**
      * Required-bound Value Set for referencePolicy
      */
-    referencePolicyRequiredValueSet() {
+    static referencePolicyRequiredValueSet() {
         return ReferenceHandlingPolicyValueSet;
     }
     /**
@@ -570,7 +570,7 @@ export class CapabilityStatementRestInteraction extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return SystemRestfulInteractionValueSet;
     }
     /**
@@ -639,7 +639,7 @@ export class CapabilityStatementRest extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return RestfulCapabilityModeValueSet;
     }
     /**
@@ -705,7 +705,7 @@ export class CapabilityStatementMessagingEndpoint extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for protocol
      */
-    protocolExtensibleValueSet() {
+    static protocolExtensibleValueSet() {
         return MessageTransportValueSet;
     }
     /**
@@ -759,7 +759,7 @@ export class CapabilityStatementMessagingSupportedMessage extends fhir.BackboneE
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return EventCapabilityModeValueSet;
     }
     /**
@@ -867,7 +867,7 @@ export class CapabilityStatementDocument extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return DocumentModeValueSet;
     }
     /**
@@ -1054,19 +1054,19 @@ export class CapabilityStatement extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet() {
+    static kindRequiredValueSet() {
         return CapabilityStatementKindValueSet;
     }
     /**
      * Required-bound Value Set for fhirVersion
      */
-    fhirVersionRequiredValueSet() {
+    static fhirVersionRequiredValueSet() {
         return FHIRVersionValueSet;
     }
     /**

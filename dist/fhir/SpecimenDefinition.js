@@ -32,13 +32,13 @@ export class SpecimenDefinitionTypeTestedContainerAdditive extends fhir.Backbone
     /**
      * Example-bound Value Set for additiveCodeableConcept
      */
-    additiveCodeableConceptExampleValueSet() {
+    static additiveCodeableConceptExampleValueSet() {
         return V20371ValueSet;
     }
     /**
      * Example-bound Value Set for additiveReference
      */
-    additiveReferenceExampleValueSet() {
+    static additiveReferenceExampleValueSet() {
         return V20371ValueSet;
     }
     /**
@@ -104,19 +104,19 @@ export class SpecimenDefinitionTypeTestedContainer extends fhir.BackboneElement 
     /**
      * Example-bound Value Set for material
      */
-    materialExampleValueSet() {
+    static materialExampleValueSet() {
         return ContainerMaterialValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return SpecimenContainerTypeValueSet;
     }
     /**
      * Example-bound Value Set for cap
      */
-    capExampleValueSet() {
+    static capExampleValueSet() {
         return ContainerCapValueSet;
     }
     /**
@@ -182,7 +182,7 @@ export class SpecimenDefinitionTypeTestedHandling extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for temperatureQualifier
      */
-    temperatureQualifierExampleValueSet() {
+    static temperatureQualifierExampleValueSet() {
         return HandlingConditionValueSet;
     }
     /**
@@ -254,19 +254,19 @@ export class SpecimenDefinitionTypeTested extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return V20487ValueSet;
     }
     /**
      * Required-bound Value Set for preference
      */
-    preferenceRequiredValueSet() {
+    static preferenceRequiredValueSet() {
         return SpecimenContainedPreferenceValueSet;
     }
     /**
      * Example-bound Value Set for rejectionCriterion
      */
-    rejectionCriterionExampleValueSet() {
+    static rejectionCriterionExampleValueSet() {
         return RejectionCriteriaValueSet;
     }
     /**
@@ -339,19 +339,19 @@ export class SpecimenDefinition extends fhir.DomainResource {
     /**
      * Example-bound Value Set for typeCollected
      */
-    typeCollectedExampleValueSet() {
+    static typeCollectedExampleValueSet() {
         return V20487ValueSet;
     }
     /**
      * Example-bound Value Set for patientPreparation
      */
-    patientPreparationExampleValueSet() {
+    static patientPreparationExampleValueSet() {
         return PreparePatientPriorSpecimenCollectionValueSet;
     }
     /**
      * Example-bound Value Set for collection
      */
-    collectionExampleValueSet() {
+    static collectionExampleValueSet() {
         return SpecimenCollectionValueSet;
     }
     /**

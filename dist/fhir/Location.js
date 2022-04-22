@@ -104,7 +104,7 @@ export class LocationHoursOfOperation extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for daysOfWeek
      */
-    daysOfWeekRequiredValueSet() {
+    static daysOfWeekRequiredValueSet() {
         return DaysOfWeekValueSet;
     }
     /**
@@ -210,31 +210,31 @@ export class Location extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return LocationStatusValueSet;
     }
     /**
      * Preferred-bound Value Set for operationalStatus
      */
-    operationalStatusPreferredValueSet() {
+    static operationalStatusPreferredValueSet() {
         return V20116ValueSet;
     }
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return LocationModeValueSet;
     }
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return V3ServiceDeliveryLocationRoleTypeValueSet;
     }
     /**
      * Example-bound Value Set for physicalType
      */
-    physicalTypeExampleValueSet() {
+    static physicalTypeExampleValueSet() {
         return LocationPhysicalTypeValueSet;
     }
     /**

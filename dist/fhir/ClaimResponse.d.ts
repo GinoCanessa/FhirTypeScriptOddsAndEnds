@@ -656,11 +656,11 @@ export declare class ClaimResponseItemAdjudication extends fhir.BackboneElement 
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): AdjudicationValueSetType;
+    static categoryExampleValueSet(): AdjudicationValueSetType;
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet(): AdjudicationReasonValueSetType;
+    static reasonExampleValueSet(): AdjudicationReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -824,11 +824,11 @@ export declare class ClaimResponseAddItemDetailSubDetail extends fhir.BackboneEl
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -889,11 +889,11 @@ export declare class ClaimResponseAddItemDetail extends fhir.BackboneElement imp
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1018,35 +1018,35 @@ export declare class ClaimResponseAddItem extends fhir.BackboneElement implement
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    static programCodeExampleValueSet(): ExProgramCodeValueSetType;
     /**
      * Example-bound Value Set for locationCodeableConcept
      */
-    locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
+    static locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for locationAddress
      */
-    locationAddressExampleValueSet(): ServicePlaceValueSetType;
+    static locationAddressExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for locationReference
      */
-    locationReferenceExampleValueSet(): ServicePlaceValueSetType;
+    static locationReferenceExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): ToothValueSetType;
+    static bodySiteExampleValueSet(): ToothValueSetType;
     /**
      * Example-bound Value Set for subSite
      */
-    subSiteExampleValueSet(): SurfaceValueSetType;
+    static subSiteExampleValueSet(): SurfaceValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1071,7 +1071,7 @@ export declare class ClaimResponseTotal extends fhir.BackboneElement implements 
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): AdjudicationValueSetType;
+    static categoryExampleValueSet(): AdjudicationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1116,11 +1116,11 @@ export declare class ClaimResponsePayment extends fhir.BackboneElement implement
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ExPaymenttypeValueSetType;
+    static typeExampleValueSet(): ExPaymenttypeValueSetType;
     /**
      * Example-bound Value Set for adjustmentReason
      */
-    adjustmentReasonExampleValueSet(): PaymentAdjustmentReasonValueSetType;
+    static adjustmentReasonExampleValueSet(): PaymentAdjustmentReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1165,11 +1165,11 @@ export declare class ClaimResponseProcessNote extends fhir.BackboneElement imple
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): NoteTypeValueSetType;
+    static typeRequiredValueSet(): NoteTypeValueSetType;
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet(): LanguagesValueSetType;
+    static languagePreferredValueSet(): LanguagesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1259,7 +1259,7 @@ export declare class ClaimResponseError extends fhir.BackboneElement implements 
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): AdjudicationErrorValueSetType;
+    static codeExampleValueSet(): AdjudicationErrorValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1412,35 +1412,35 @@ export declare class ClaimResponse extends fhir.DomainResource implements IClaim
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): ClaimTypeValueSetType;
+    static typeExtensibleValueSet(): ClaimTypeValueSetType;
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet(): ClaimSubtypeValueSetType;
+    static subTypeExampleValueSet(): ClaimSubtypeValueSetType;
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): ClaimUseValueSetType;
+    static useRequiredValueSet(): ClaimUseValueSetType;
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
+    static outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
     /**
      * Example-bound Value Set for payeeType
      */
-    payeeTypeExampleValueSet(): PayeetypeValueSetType;
+    static payeeTypeExampleValueSet(): PayeetypeValueSetType;
     /**
      * Example-bound Value Set for fundsReserve
      */
-    fundsReserveExampleValueSet(): FundsreserveValueSetType;
+    static fundsReserveExampleValueSet(): FundsreserveValueSetType;
     /**
      * Example-bound Value Set for formCode
      */
-    formCodeExampleValueSet(): FormsValueSetType;
+    static formCodeExampleValueSet(): FormsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

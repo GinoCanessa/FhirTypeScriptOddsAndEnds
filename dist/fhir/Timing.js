@@ -113,25 +113,25 @@ export class TimingRepeat extends fhir.FhirElement {
     /**
      * Required-bound Value Set for durationUnit
      */
-    durationUnitRequiredValueSet() {
+    static durationUnitRequiredValueSet() {
         return UnitsOfTimeValueSet;
     }
     /**
      * Required-bound Value Set for periodUnit
      */
-    periodUnitRequiredValueSet() {
+    static periodUnitRequiredValueSet() {
         return UnitsOfTimeValueSet;
     }
     /**
      * Required-bound Value Set for dayOfWeek
      */
-    dayOfWeekRequiredValueSet() {
+    static dayOfWeekRequiredValueSet() {
         return DaysOfWeekValueSet;
     }
     /**
      * Required-bound Value Set for when
      */
-    whenRequiredValueSet() {
+    static whenRequiredValueSet() {
         return EventTimingValueSet;
     }
     /**
@@ -218,7 +218,7 @@ export class Timing extends fhir.BackboneElement {
     /**
      * Preferred-bound Value Set for code
      */
-    codePreferredValueSet() {
+    static codePreferredValueSet() {
         return TimingAbbreviationValueSet;
     }
     /**

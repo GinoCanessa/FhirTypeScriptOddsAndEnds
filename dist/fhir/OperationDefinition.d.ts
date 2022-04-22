@@ -378,7 +378,7 @@ export declare class OperationDefinitionParameterBinding extends fhir.BackboneEl
     /**
      * Required-bound Value Set for strength
      */
-    strengthRequiredValueSet(): BindingStrengthValueSetType;
+    static strengthRequiredValueSet(): BindingStrengthValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -500,15 +500,15 @@ export declare class OperationDefinitionParameter extends fhir.BackboneElement i
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): OperationParameterUseValueSetType;
+    static useRequiredValueSet(): OperationParameterUseValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): AllTypesValueSetType;
+    static typeRequiredValueSet(): AllTypesValueSetType;
     /**
      * Required-bound Value Set for searchType
      */
-    searchTypeRequiredValueSet(): SearchParamTypeValueSetType;
+    static searchTypeRequiredValueSet(): SearchParamTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -750,15 +750,15 @@ export declare class OperationDefinition extends fhir.DomainResource implements 
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet(): OperationKindValueSetType;
+    static kindRequiredValueSet(): OperationKindValueSetType;
     /**
      * Required-bound Value Set for resource
      */
-    resourceRequiredValueSet(): ResourceTypesValueSetType;
+    static resourceRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

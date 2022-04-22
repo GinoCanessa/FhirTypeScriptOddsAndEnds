@@ -616,7 +616,7 @@ export class PlanDefinitionGoalTarget extends fhir.BackboneElement implements IP
   /**
    * Example-bound Value Set for measure
    */
-  public measureExampleValueSet():ObservationCodesValueSetType {
+  public static measureExampleValueSet():ObservationCodesValueSetType {
     return ObservationCodesValueSet;
   }
   /**
@@ -682,31 +682,31 @@ export class PlanDefinitionGoal extends fhir.BackboneElement implements IPlanDef
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():GoalCategoryValueSetType {
+  public static categoryExampleValueSet():GoalCategoryValueSetType {
     return GoalCategoryValueSet;
   }
   /**
    * Example-bound Value Set for description
    */
-  public descriptionExampleValueSet():ClinicalFindingsValueSetType {
+  public static descriptionExampleValueSet():ClinicalFindingsValueSetType {
     return ClinicalFindingsValueSet;
   }
   /**
    * Preferred-bound Value Set for priority
    */
-  public priorityPreferredValueSet():GoalPriorityValueSetType {
+  public static priorityPreferredValueSet():GoalPriorityValueSetType {
     return GoalPriorityValueSet;
   }
   /**
    * Example-bound Value Set for start
    */
-  public startExampleValueSet():GoalStartEventValueSetType {
+  public static startExampleValueSet():GoalStartEventValueSetType {
     return GoalStartEventValueSet;
   }
   /**
    * Example-bound Value Set for addresses
    */
-  public addressesExampleValueSet():ConditionCodeValueSetType {
+  public static addressesExampleValueSet():ConditionCodeValueSetType {
     return ConditionCodeValueSet;
   }
   /**
@@ -755,7 +755,7 @@ export class PlanDefinitionActionCondition extends fhir.BackboneElement implemen
   /**
    * Required-bound Value Set for kind
    */
-  public kindRequiredValueSet():ActionConditionKindValueSetType {
+  public static kindRequiredValueSet():ActionConditionKindValueSetType {
     return ActionConditionKindValueSet;
   }
   /**
@@ -815,7 +815,7 @@ export class PlanDefinitionActionRelatedAction extends fhir.BackboneElement impl
   /**
    * Required-bound Value Set for relationship
    */
-  public relationshipRequiredValueSet():ActionRelationshipTypeValueSetType {
+  public static relationshipRequiredValueSet():ActionRelationshipTypeValueSetType {
     return ActionRelationshipTypeValueSet;
   }
   /**
@@ -862,7 +862,7 @@ export class PlanDefinitionActionParticipant extends fhir.BackboneElement implem
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ActionParticipantTypeValueSetType {
+  public static typeRequiredValueSet():ActionParticipantTypeValueSetType {
     return ActionParticipantTypeValueSet;
   }
   /**
@@ -1173,55 +1173,55 @@ export class PlanDefinitionAction extends fhir.BackboneElement implements IPlanD
   /**
    * Required-bound Value Set for priority
    */
-  public priorityRequiredValueSet():RequestPriorityValueSetType {
+  public static priorityRequiredValueSet():RequestPriorityValueSetType {
     return RequestPriorityValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectCodeableConcept
    */
-  public subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectReference
    */
-  public subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():ActionTypeValueSetType {
+  public static typeExtensibleValueSet():ActionTypeValueSetType {
     return ActionTypeValueSet;
   }
   /**
    * Required-bound Value Set for groupingBehavior
    */
-  public groupingBehaviorRequiredValueSet():ActionGroupingBehaviorValueSetType {
+  public static groupingBehaviorRequiredValueSet():ActionGroupingBehaviorValueSetType {
     return ActionGroupingBehaviorValueSet;
   }
   /**
    * Required-bound Value Set for selectionBehavior
    */
-  public selectionBehaviorRequiredValueSet():ActionSelectionBehaviorValueSetType {
+  public static selectionBehaviorRequiredValueSet():ActionSelectionBehaviorValueSetType {
     return ActionSelectionBehaviorValueSet;
   }
   /**
    * Required-bound Value Set for requiredBehavior
    */
-  public requiredBehaviorRequiredValueSet():ActionRequiredBehaviorValueSetType {
+  public static requiredBehaviorRequiredValueSet():ActionRequiredBehaviorValueSetType {
     return ActionRequiredBehaviorValueSet;
   }
   /**
    * Required-bound Value Set for precheckBehavior
    */
-  public precheckBehaviorRequiredValueSet():ActionPrecheckBehaviorValueSetType {
+  public static precheckBehaviorRequiredValueSet():ActionPrecheckBehaviorValueSetType {
     return ActionPrecheckBehaviorValueSet;
   }
   /**
    * Required-bound Value Set for cardinalityBehavior
    */
-  public cardinalityBehaviorRequiredValueSet():ActionCardinalityBehaviorValueSetType {
+  public static cardinalityBehaviorRequiredValueSet():ActionCardinalityBehaviorValueSetType {
     return ActionCardinalityBehaviorValueSet;
   }
   /**
@@ -1528,31 +1528,31 @@ export class PlanDefinition extends fhir.DomainResource implements IPlanDefiniti
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():PlanDefinitionTypeValueSetType {
+  public static typeExtensibleValueSet():PlanDefinitionTypeValueSetType {
     return PlanDefinitionTypeValueSet;
   }
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectCodeableConcept
    */
-  public subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectReference
    */
-  public subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Example-bound Value Set for topic
    */
-  public topicExampleValueSet():DefinitionTopicValueSetType {
+  public static topicExampleValueSet():DefinitionTopicValueSetType {
     return DefinitionTopicValueSet;
   }
   /**

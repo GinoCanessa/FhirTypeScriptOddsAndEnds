@@ -112,7 +112,7 @@ export declare class ResearchSubject extends fhir.DomainResource implements IRes
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ResearchSubjectStatusValueSetType;
+    static statusRequiredValueSet(): ResearchSubjectStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

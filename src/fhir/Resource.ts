@@ -98,7 +98,7 @@ export class Resource implements IResource {
   /**
    * Preferred-bound Value Set for language
    */
-  public languagePreferredValueSet():LanguagesValueSetType {
+  public static languagePreferredValueSet():LanguagesValueSetType {
     return LanguagesValueSet;
   }
   /**

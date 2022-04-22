@@ -159,7 +159,7 @@ export class SubscriptionChannel extends fhir.BackboneElement implements ISubscr
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():SubscriptionChannelTypeValueSetType {
+  public static typeRequiredValueSet():SubscriptionChannelTypeValueSetType {
     return SubscriptionChannelTypeValueSet;
   }
   /**
@@ -259,7 +259,7 @@ export class Subscription extends fhir.DomainResource implements ISubscription {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():SubscriptionStatusValueSetType {
+  public static statusRequiredValueSet():SubscriptionStatusValueSetType {
     return SubscriptionStatusValueSet;
   }
   /**

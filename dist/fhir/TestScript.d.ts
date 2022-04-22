@@ -824,7 +824,7 @@ export declare class TestScriptOrigin extends fhir.BackboneElement implements IT
     /**
      * Extensible-bound Value Set for profile
      */
-    profileExtensibleValueSet(): TestscriptProfileOriginTypesValueSetType;
+    static profileExtensibleValueSet(): TestscriptProfileOriginTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -855,7 +855,7 @@ export declare class TestScriptDestination extends fhir.BackboneElement implemen
     /**
      * Extensible-bound Value Set for profile
      */
-    profileExtensibleValueSet(): TestscriptProfileDestinationTypesValueSetType;
+    static profileExtensibleValueSet(): TestscriptProfileDestinationTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1258,15 +1258,15 @@ export declare class TestScriptSetupActionOperation extends fhir.BackboneElement
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): TestscriptOperationCodesValueSetType;
+    static typeExtensibleValueSet(): TestscriptOperationCodesValueSetType;
     /**
      * Required-bound Value Set for resource
      */
-    resourceRequiredValueSet(): DefinedTypesValueSetType;
+    static resourceRequiredValueSet(): DefinedTypesValueSetType;
     /**
      * Required-bound Value Set for method
      */
-    methodRequiredValueSet(): HttpOperationsValueSetType;
+    static methodRequiredValueSet(): HttpOperationsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1459,23 +1459,23 @@ export declare class TestScriptSetupActionAssert extends fhir.BackboneElement im
     /**
      * Required-bound Value Set for direction
      */
-    directionRequiredValueSet(): AssertDirectionCodesValueSetType;
+    static directionRequiredValueSet(): AssertDirectionCodesValueSetType;
     /**
      * Required-bound Value Set for operator
      */
-    operatorRequiredValueSet(): AssertOperatorCodesValueSetType;
+    static operatorRequiredValueSet(): AssertOperatorCodesValueSetType;
     /**
      * Required-bound Value Set for requestMethod
      */
-    requestMethodRequiredValueSet(): HttpOperationsValueSetType;
+    static requestMethodRequiredValueSet(): HttpOperationsValueSetType;
     /**
      * Required-bound Value Set for resource
      */
-    resourceRequiredValueSet(): DefinedTypesValueSetType;
+    static resourceRequiredValueSet(): DefinedTypesValueSetType;
     /**
      * Required-bound Value Set for response
      */
-    responseRequiredValueSet(): AssertResponseCodeTypesValueSetType;
+    static responseRequiredValueSet(): AssertResponseCodeTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1764,7 +1764,7 @@ export declare class TestScript extends fhir.DomainResource implements ITestScri
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

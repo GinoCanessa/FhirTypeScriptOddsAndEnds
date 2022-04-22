@@ -38,7 +38,7 @@ export class Reference extends fhir.FhirElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return ResourceTypesValueSet;
     }
     /**

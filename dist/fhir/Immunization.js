@@ -37,7 +37,7 @@ export class ImmunizationPerformer extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for function
      */
-    functionExtensibleValueSet() {
+    static functionExtensibleValueSet() {
         return ImmunizationFunctionValueSet;
     }
     /**
@@ -202,7 +202,7 @@ export class ImmunizationProtocolApplied extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for targetDisease
      */
-    targetDiseaseExampleValueSet() {
+    static targetDiseaseExampleValueSet() {
         return ImmunizationTargetDiseaseValueSet;
     }
     /**
@@ -368,61 +368,61 @@ export class Immunization extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ImmunizationStatusValueSet;
     }
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet() {
+    static statusReasonExampleValueSet() {
         return ImmunizationStatusReasonValueSet;
     }
     /**
      * Example-bound Value Set for vaccineCode
      */
-    vaccineCodeExampleValueSet() {
+    static vaccineCodeExampleValueSet() {
         return VaccineCodeValueSet;
     }
     /**
      * Example-bound Value Set for reportOrigin
      */
-    reportOriginExampleValueSet() {
+    static reportOriginExampleValueSet() {
         return ImmunizationOriginValueSet;
     }
     /**
      * Example-bound Value Set for site
      */
-    siteExampleValueSet() {
+    static siteExampleValueSet() {
         return ImmunizationSiteValueSet;
     }
     /**
      * Example-bound Value Set for route
      */
-    routeExampleValueSet() {
+    static routeExampleValueSet() {
         return ImmunizationRouteValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ImmunizationReasonValueSet;
     }
     /**
      * Example-bound Value Set for subpotentReason
      */
-    subpotentReasonExampleValueSet() {
+    static subpotentReasonExampleValueSet() {
         return ImmunizationSubpotentReasonValueSet;
     }
     /**
      * Example-bound Value Set for programEligibility
      */
-    programEligibilityExampleValueSet() {
+    static programEligibilityExampleValueSet() {
         return ImmunizationProgramEligibilityValueSet;
     }
     /**
      * Example-bound Value Set for fundingSource
      */
-    fundingSourceExampleValueSet() {
+    static fundingSourceExampleValueSet() {
         return ImmunizationFundingSourceValueSet;
     }
     /**

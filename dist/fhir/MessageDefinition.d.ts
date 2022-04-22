@@ -287,7 +287,7 @@ export declare class MessageDefinitionFocus extends fhir.BackboneElement impleme
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): ResourceTypesValueSetType;
+    static codeRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -511,15 +511,15 @@ export declare class MessageDefinition extends fhir.DomainResource implements IM
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for category
      */
-    categoryRequiredValueSet(): MessageSignificanceCategoryValueSetType;
+    static categoryRequiredValueSet(): MessageSignificanceCategoryValueSetType;
     /**
      * Required-bound Value Set for responseRequired
      */
-    responseRequiredRequiredValueSet(): MessageheaderResponseRequestValueSetType;
+    static responseRequiredRequiredValueSet(): MessageheaderResponseRequestValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

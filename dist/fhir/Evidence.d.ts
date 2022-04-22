@@ -357,11 +357,11 @@ export declare class Evidence extends fhir.DomainResource implements IEvidence {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): DefinitionTopicValueSetType;
+    static topicExampleValueSet(): DefinitionTopicValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

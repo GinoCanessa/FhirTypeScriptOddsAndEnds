@@ -257,7 +257,7 @@ export declare class BiologicallyDerivedProductProcessing extends fhir.BackboneE
     /**
      * Example-bound Value Set for procedure
      */
-    procedureExampleValueSet(): ProcedureCodeValueSetType;
+    static procedureExampleValueSet(): ProcedureCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -335,7 +335,7 @@ export declare class BiologicallyDerivedProductStorage extends fhir.BackboneElem
     /**
      * Required-bound Value Set for scale
      */
-    scaleRequiredValueSet(): ProductStorageScaleValueSetType;
+    static scaleRequiredValueSet(): ProductStorageScaleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -413,11 +413,11 @@ export declare class BiologicallyDerivedProduct extends fhir.DomainResource impl
     /**
      * Required-bound Value Set for productCategory
      */
-    productCategoryRequiredValueSet(): ProductCategoryValueSetType;
+    static productCategoryRequiredValueSet(): ProductCategoryValueSetType;
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ProductStatusValueSetType;
+    static statusRequiredValueSet(): ProductStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

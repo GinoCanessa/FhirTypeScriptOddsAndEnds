@@ -32,7 +32,7 @@ export class MeasureReportGroupPopulation extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet() {
+    static codeExtensibleValueSet() {
         return MeasurePopulationValueSet;
     }
     /**
@@ -119,7 +119,7 @@ export class MeasureReportGroupStratifierStratumPopulation extends fhir.Backbone
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet() {
+    static codeExtensibleValueSet() {
         return MeasurePopulationValueSet;
     }
     /**
@@ -324,19 +324,19 @@ export class MeasureReport extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return MeasureReportStatusValueSet;
     }
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return MeasureReportTypeValueSet;
     }
     /**
      * Required-bound Value Set for improvementNotation
      */
-    improvementNotationRequiredValueSet() {
+    static improvementNotationRequiredValueSet() {
         return MeasureImprovementNotationValueSet;
     }
     /**

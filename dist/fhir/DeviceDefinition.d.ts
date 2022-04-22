@@ -314,7 +314,7 @@ export declare class DeviceDefinitionDeviceName extends fhir.BackboneElement imp
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): DeviceNametypeValueSetType;
+    static typeRequiredValueSet(): DeviceNametypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -555,7 +555,7 @@ export declare class DeviceDefinition extends fhir.DomainResource implements IDe
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): DeviceKindValueSetType;
+    static typeExampleValueSet(): DeviceKindValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -43,7 +43,7 @@ export class ListEntry extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for flag
      */
-    flagExampleValueSet() {
+    static flagExampleValueSet() {
         return ListItemFlagValueSet;
     }
     /**
@@ -140,31 +140,31 @@ export class List extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ListStatusValueSet;
     }
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return ListModeValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ListExampleCodesValueSet;
     }
     /**
      * Preferred-bound Value Set for orderedBy
      */
-    orderedByPreferredValueSet() {
+    static orderedByPreferredValueSet() {
         return ListOrderValueSet;
     }
     /**
      * Preferred-bound Value Set for emptyReason
      */
-    emptyReasonPreferredValueSet() {
+    static emptyReasonPreferredValueSet() {
         return ListEmptyReasonValueSet;
     }
     /**

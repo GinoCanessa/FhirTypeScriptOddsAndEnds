@@ -142,37 +142,37 @@ export class SupplyRequest extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return SupplyrequestStatusValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return SupplyrequestKindValueSet;
     }
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**
      * Example-bound Value Set for itemCodeableConcept
      */
-    itemCodeableConceptExampleValueSet() {
+    static itemCodeableConceptExampleValueSet() {
         return SupplyItemValueSet;
     }
     /**
      * Example-bound Value Set for itemReference
      */
-    itemReferenceExampleValueSet() {
+    static itemReferenceExampleValueSet() {
         return SupplyItemValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return SupplyrequestReasonValueSet;
     }
     /**

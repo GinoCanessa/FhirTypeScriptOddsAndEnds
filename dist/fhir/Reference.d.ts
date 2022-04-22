@@ -78,7 +78,7 @@ export declare class Reference extends fhir.FhirElement implements IReference {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): ResourceTypesValueSetType;
+    static typeExtensibleValueSet(): ResourceTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

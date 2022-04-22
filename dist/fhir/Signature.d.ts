@@ -104,7 +104,7 @@ export declare class Signature extends fhir.FhirElement implements ISignature {
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet(): SignatureTypeValueSetType;
+    static typePreferredValueSet(): SignatureTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

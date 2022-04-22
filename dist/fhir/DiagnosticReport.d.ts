@@ -253,19 +253,19 @@ export declare class DiagnosticReport extends fhir.DomainResource implements IDi
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): DiagnosticReportStatusValueSetType;
+    static statusRequiredValueSet(): DiagnosticReportStatusValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): DiagnosticServiceSectionsValueSetType;
+    static categoryExampleValueSet(): DiagnosticServiceSectionsValueSetType;
     /**
      * Preferred-bound Value Set for code
      */
-    codePreferredValueSet(): ReportCodesValueSetType;
+    static codePreferredValueSet(): ReportCodesValueSetType;
     /**
      * Example-bound Value Set for conclusionCode
      */
-    conclusionCodeExampleValueSet(): ClinicalFindingsValueSetType;
+    static conclusionCodeExampleValueSet(): ClinicalFindingsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

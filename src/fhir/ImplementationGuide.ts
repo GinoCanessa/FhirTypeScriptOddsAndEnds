@@ -603,7 +603,7 @@ export class ImplementationGuideGlobal extends fhir.BackboneElement implements I
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ResourceTypesValueSetType {
+  public static typeRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**
@@ -749,7 +749,7 @@ export class ImplementationGuideDefinitionResource extends fhir.BackboneElement 
   /**
    * Required-bound Value Set for fhirVersion
    */
-  public fhirVersionRequiredValueSet():FHIRVersionValueSetType {
+  public static fhirVersionRequiredValueSet():FHIRVersionValueSetType {
     return FHIRVersionValueSet;
   }
   /**
@@ -824,7 +824,7 @@ export class ImplementationGuideDefinitionPage extends fhir.BackboneElement impl
   /**
    * Required-bound Value Set for generation
    */
-  public generationRequiredValueSet():GuidePageGenerationValueSetType {
+  public static generationRequiredValueSet():GuidePageGenerationValueSetType {
     return GuidePageGenerationValueSet;
   }
   /**
@@ -878,7 +878,7 @@ export class ImplementationGuideDefinitionParameter extends fhir.BackboneElement
   /**
    * Required-bound Value Set for code
    */
-  public codeRequiredValueSet():GuideParameterCodeValueSetType {
+  public static codeRequiredValueSet():GuideParameterCodeValueSetType {
     return GuideParameterCodeValueSet;
   }
   /**
@@ -1371,19 +1371,19 @@ export class ImplementationGuide extends fhir.DomainResource implements IImpleme
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for license
    */
-  public licenseRequiredValueSet():SpdxLicenseValueSetType {
+  public static licenseRequiredValueSet():SpdxLicenseValueSetType {
     return SpdxLicenseValueSet;
   }
   /**
    * Required-bound Value Set for fhirVersion
    */
-  public fhirVersionRequiredValueSet():FHIRVersionValueSetType {
+  public static fhirVersionRequiredValueSet():FHIRVersionValueSetType {
     return FHIRVersionValueSet;
   }
   /**

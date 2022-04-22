@@ -128,19 +128,19 @@ export class BodyStructure extends fhir.DomainResource implements IBodyStructure
   /**
    * Example-bound Value Set for morphology
    */
-  public morphologyExampleValueSet():BodystructureCodeValueSetType {
+  public static morphologyExampleValueSet():BodystructureCodeValueSetType {
     return BodystructureCodeValueSet;
   }
   /**
    * Example-bound Value Set for location
    */
-  public locationExampleValueSet():BodySiteValueSetType {
+  public static locationExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**
    * Example-bound Value Set for locationQualifier
    */
-  public locationQualifierExampleValueSet():BodystructureRelativeLocationValueSetType {
+  public static locationQualifierExampleValueSet():BodystructureRelativeLocationValueSetType {
     return BodystructureRelativeLocationValueSet;
   }
   /**

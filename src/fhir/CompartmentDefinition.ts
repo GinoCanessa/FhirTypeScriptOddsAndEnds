@@ -195,7 +195,7 @@ export class CompartmentDefinitionResource extends fhir.BackboneElement implemen
   /**
    * Required-bound Value Set for code
    */
-  public codeRequiredValueSet():ResourceTypesValueSetType {
+  public static codeRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**
@@ -361,13 +361,13 @@ export class CompartmentDefinition extends fhir.DomainResource implements ICompa
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for code
    */
-  public codeRequiredValueSet():CompartmentTypeValueSetType {
+  public static codeRequiredValueSet():CompartmentTypeValueSetType {
     return CompartmentTypeValueSet;
   }
   /**

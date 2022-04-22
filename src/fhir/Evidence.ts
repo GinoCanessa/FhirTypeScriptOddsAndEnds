@@ -411,13 +411,13 @@ export class Evidence extends fhir.DomainResource implements IEvidence {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Example-bound Value Set for topic
    */
-  public topicExampleValueSet():DefinitionTopicValueSetType {
+  public static topicExampleValueSet():DefinitionTopicValueSetType {
     return DefinitionTopicValueSet;
   }
   /**

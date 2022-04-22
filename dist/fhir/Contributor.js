@@ -38,7 +38,7 @@ export class Contributor extends fhir.FhirElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ContributorTypeValueSet;
     }
     /**

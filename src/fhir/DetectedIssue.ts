@@ -152,7 +152,7 @@ export class DetectedIssueEvidence extends fhir.BackboneElement implements IDete
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ManifestationOrSymptomValueSetType {
+  public static codeExampleValueSet():ManifestationOrSymptomValueSetType {
     return ManifestationOrSymptomValueSet;
   }
   /**
@@ -200,7 +200,7 @@ export class DetectedIssueMitigation extends fhir.BackboneElement implements IDe
   /**
    * Preferred-bound Value Set for action
    */
-  public actionPreferredValueSet():DetectedissueMitigationActionValueSetType {
+  public static actionPreferredValueSet():DetectedissueMitigationActionValueSetType {
     return DetectedissueMitigationActionValueSet;
   }
   /**
@@ -325,19 +325,19 @@ export class DetectedIssue extends fhir.DomainResource implements IDetectedIssue
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ObservationStatusValueSetType {
+  public static statusRequiredValueSet():ObservationStatusValueSetType {
     return ObservationStatusValueSet;
   }
   /**
    * Preferred-bound Value Set for code
    */
-  public codePreferredValueSet():DetectedissueCategoryValueSetType {
+  public static codePreferredValueSet():DetectedissueCategoryValueSetType {
     return DetectedissueCategoryValueSet;
   }
   /**
    * Required-bound Value Set for severity
    */
-  public severityRequiredValueSet():DetectedissueSeverityValueSetType {
+  public static severityRequiredValueSet():DetectedissueSeverityValueSetType {
     return DetectedissueSeverityValueSet;
   }
   /**

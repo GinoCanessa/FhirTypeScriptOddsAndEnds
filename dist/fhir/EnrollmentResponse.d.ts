@@ -121,11 +121,11 @@ export declare class EnrollmentResponse extends fhir.DomainResource implements I
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
+    static outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

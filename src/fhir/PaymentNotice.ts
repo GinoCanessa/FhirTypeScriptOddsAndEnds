@@ -176,13 +176,13 @@ export class PaymentNotice extends fhir.DomainResource implements IPaymentNotice
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():FmStatusValueSetType {
+  public static statusRequiredValueSet():FmStatusValueSetType {
     return FmStatusValueSet;
   }
   /**
    * Example-bound Value Set for paymentStatus
    */
-  public paymentStatusExampleValueSet():PaymentStatusValueSetType {
+  public static paymentStatusExampleValueSet():PaymentStatusValueSetType {
     return PaymentStatusValueSet;
   }
   /**

@@ -413,19 +413,19 @@ export class CoverageEligibilityRequestItem extends fhir.BackboneElement impleme
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():ExBenefitcategoryValueSetType {
+  public static categoryExampleValueSet():ExBenefitcategoryValueSetType {
     return ExBenefitcategoryValueSet;
   }
   /**
    * Example-bound Value Set for productOrService
    */
-  public productOrServiceExampleValueSet():ServiceUsclsValueSetType {
+  public static productOrServiceExampleValueSet():ServiceUsclsValueSetType {
     return ServiceUsclsValueSet;
   }
   /**
    * Example-bound Value Set for modifier
    */
-  public modifierExampleValueSet():ClaimModifiersValueSetType {
+  public static modifierExampleValueSet():ClaimModifiersValueSetType {
     return ClaimModifiersValueSet;
   }
   /**
@@ -565,19 +565,19 @@ export class CoverageEligibilityRequest extends fhir.DomainResource implements I
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():FmStatusValueSetType {
+  public static statusRequiredValueSet():FmStatusValueSetType {
     return FmStatusValueSet;
   }
   /**
    * Example-bound Value Set for priority
    */
-  public priorityExampleValueSet():ProcessPriorityValueSetType {
+  public static priorityExampleValueSet():ProcessPriorityValueSetType {
     return ProcessPriorityValueSet;
   }
   /**
    * Required-bound Value Set for purpose
    */
-  public purposeRequiredValueSet():EligibilityrequestPurposeValueSetType {
+  public static purposeRequiredValueSet():EligibilityrequestPurposeValueSetType {
     return EligibilityrequestPurposeValueSet;
   }
   /**

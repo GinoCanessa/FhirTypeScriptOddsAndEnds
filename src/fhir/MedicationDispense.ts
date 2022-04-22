@@ -205,7 +205,7 @@ export class MedicationDispensePerformer extends fhir.BackboneElement implements
   /**
    * Example-bound Value Set for function
    */
-  public functionExampleValueSet():MedicationdispensePerformerFunctionValueSetType {
+  public static functionExampleValueSet():MedicationdispensePerformerFunctionValueSetType {
     return MedicationdispensePerformerFunctionValueSet;
   }
   /**
@@ -259,13 +259,13 @@ export class MedicationDispenseSubstitution extends fhir.BackboneElement impleme
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():V3ActSubstanceAdminSubstitutionCodeValueSetType {
+  public static typeExampleValueSet():V3ActSubstanceAdminSubstitutionCodeValueSetType {
     return V3ActSubstanceAdminSubstitutionCodeValueSet;
   }
   /**
    * Example-bound Value Set for reason
    */
-  public reasonExampleValueSet():V3SubstanceAdminSubstitutionReasonValueSetType {
+  public static reasonExampleValueSet():V3SubstanceAdminSubstitutionReasonValueSetType {
     return V3SubstanceAdminSubstitutionReasonValueSet;
   }
   /**
@@ -447,43 +447,43 @@ export class MedicationDispense extends fhir.DomainResource implements IMedicati
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():MedicationdispenseStatusValueSetType {
+  public static statusRequiredValueSet():MedicationdispenseStatusValueSetType {
     return MedicationdispenseStatusValueSet;
   }
   /**
    * Example-bound Value Set for statusReasonCodeableConcept
    */
-  public statusReasonCodeableConceptExampleValueSet():MedicationdispenseStatusReasonValueSetType {
+  public static statusReasonCodeableConceptExampleValueSet():MedicationdispenseStatusReasonValueSetType {
     return MedicationdispenseStatusReasonValueSet;
   }
   /**
    * Example-bound Value Set for statusReasonReference
    */
-  public statusReasonReferenceExampleValueSet():MedicationdispenseStatusReasonValueSetType {
+  public static statusReasonReferenceExampleValueSet():MedicationdispenseStatusReasonValueSetType {
     return MedicationdispenseStatusReasonValueSet;
   }
   /**
    * Preferred-bound Value Set for category
    */
-  public categoryPreferredValueSet():MedicationdispenseCategoryValueSetType {
+  public static categoryPreferredValueSet():MedicationdispenseCategoryValueSetType {
     return MedicationdispenseCategoryValueSet;
   }
   /**
    * Example-bound Value Set for medicationCodeableConcept
    */
-  public medicationCodeableConceptExampleValueSet():MedicationCodesValueSetType {
+  public static medicationCodeableConceptExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for medicationReference
    */
-  public medicationReferenceExampleValueSet():MedicationCodesValueSetType {
+  public static medicationReferenceExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():V3ActPharmacySupplyTypeValueSetType {
+  public static typeExampleValueSet():V3ActPharmacySupplyTypeValueSetType {
     return V3ActPharmacySupplyTypeValueSet;
   }
   /**

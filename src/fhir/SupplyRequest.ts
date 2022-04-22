@@ -322,37 +322,37 @@ export class SupplyRequest extends fhir.DomainResource implements ISupplyRequest
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():SupplyrequestStatusValueSetType {
+  public static statusRequiredValueSet():SupplyrequestStatusValueSetType {
     return SupplyrequestStatusValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():SupplyrequestKindValueSetType {
+  public static categoryExampleValueSet():SupplyrequestKindValueSetType {
     return SupplyrequestKindValueSet;
   }
   /**
    * Required-bound Value Set for priority
    */
-  public priorityRequiredValueSet():RequestPriorityValueSetType {
+  public static priorityRequiredValueSet():RequestPriorityValueSetType {
     return RequestPriorityValueSet;
   }
   /**
    * Example-bound Value Set for itemCodeableConcept
    */
-  public itemCodeableConceptExampleValueSet():SupplyItemValueSetType {
+  public static itemCodeableConceptExampleValueSet():SupplyItemValueSetType {
     return SupplyItemValueSet;
   }
   /**
    * Example-bound Value Set for itemReference
    */
-  public itemReferenceExampleValueSet():SupplyItemValueSetType {
+  public static itemReferenceExampleValueSet():SupplyItemValueSetType {
     return SupplyItemValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():SupplyrequestReasonValueSetType {
+  public static reasonCodeExampleValueSet():SupplyrequestReasonValueSetType {
     return SupplyrequestReasonValueSet;
   }
   /**

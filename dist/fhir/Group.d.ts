@@ -292,7 +292,7 @@ export declare class Group extends fhir.DomainResource implements IGroup {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): GroupTypeValueSetType;
+    static typeRequiredValueSet(): GroupTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

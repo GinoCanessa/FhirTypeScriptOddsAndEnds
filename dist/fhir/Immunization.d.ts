@@ -315,7 +315,7 @@ export declare class ImmunizationPerformer extends fhir.BackboneElement implemen
     /**
      * Extensible-bound Value Set for function
      */
-    functionExtensibleValueSet(): ImmunizationFunctionValueSetType;
+    static functionExtensibleValueSet(): ImmunizationFunctionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -458,7 +458,7 @@ export declare class ImmunizationProtocolApplied extends fhir.BackboneElement im
     /**
      * Example-bound Value Set for targetDisease
      */
-    targetDiseaseExampleValueSet(): ImmunizationTargetDiseaseValueSetType;
+    static targetDiseaseExampleValueSet(): ImmunizationTargetDiseaseValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -627,43 +627,43 @@ export declare class Immunization extends fhir.DomainResource implements IImmuni
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ImmunizationStatusValueSetType;
+    static statusRequiredValueSet(): ImmunizationStatusValueSetType;
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet(): ImmunizationStatusReasonValueSetType;
+    static statusReasonExampleValueSet(): ImmunizationStatusReasonValueSetType;
     /**
      * Example-bound Value Set for vaccineCode
      */
-    vaccineCodeExampleValueSet(): VaccineCodeValueSetType;
+    static vaccineCodeExampleValueSet(): VaccineCodeValueSetType;
     /**
      * Example-bound Value Set for reportOrigin
      */
-    reportOriginExampleValueSet(): ImmunizationOriginValueSetType;
+    static reportOriginExampleValueSet(): ImmunizationOriginValueSetType;
     /**
      * Example-bound Value Set for site
      */
-    siteExampleValueSet(): ImmunizationSiteValueSetType;
+    static siteExampleValueSet(): ImmunizationSiteValueSetType;
     /**
      * Example-bound Value Set for route
      */
-    routeExampleValueSet(): ImmunizationRouteValueSetType;
+    static routeExampleValueSet(): ImmunizationRouteValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ImmunizationReasonValueSetType;
+    static reasonCodeExampleValueSet(): ImmunizationReasonValueSetType;
     /**
      * Example-bound Value Set for subpotentReason
      */
-    subpotentReasonExampleValueSet(): ImmunizationSubpotentReasonValueSetType;
+    static subpotentReasonExampleValueSet(): ImmunizationSubpotentReasonValueSetType;
     /**
      * Example-bound Value Set for programEligibility
      */
-    programEligibilityExampleValueSet(): ImmunizationProgramEligibilityValueSetType;
+    static programEligibilityExampleValueSet(): ImmunizationProgramEligibilityValueSetType;
     /**
      * Example-bound Value Set for fundingSource
      */
-    fundingSourceExampleValueSet(): ImmunizationFundingSourceValueSetType;
+    static fundingSourceExampleValueSet(): ImmunizationFundingSourceValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

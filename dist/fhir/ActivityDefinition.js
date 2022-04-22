@@ -38,7 +38,7 @@ export class ActivityDefinitionParticipant extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ActionParticipantTypeValueSet;
     }
     /**
@@ -348,67 +348,67 @@ export class ActivityDefinition extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet() {
+    static subjectCodeableConceptExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet() {
+    static subjectReferenceExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet() {
+    static topicExampleValueSet() {
         return DefinitionTopicValueSet;
     }
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet() {
+    static kindRequiredValueSet() {
         return RequestResourceTypesValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ProcedureCodeValueSet;
     }
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet() {
+    static intentRequiredValueSet() {
         return RequestIntentValueSet;
     }
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**
      * Example-bound Value Set for productReference
      */
-    productReferenceExampleValueSet() {
+    static productReferenceExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for productCodeableConcept
      */
-    productCodeableConceptExampleValueSet() {
+    static productCodeableConceptExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet() {
+    static bodySiteExampleValueSet() {
         return BodySiteValueSet;
     }
     /**

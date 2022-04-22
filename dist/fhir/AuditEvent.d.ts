@@ -299,7 +299,7 @@ export declare class AuditEventAgentNetwork extends fhir.BackboneElement impleme
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): NetworkTypeValueSetType;
+    static typeRequiredValueSet(): NetworkTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -377,19 +377,19 @@ export declare class AuditEventAgent extends fhir.BackboneElement implements IAu
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): ParticipationRoleTypeValueSetType;
+    static typeExtensibleValueSet(): ParticipationRoleTypeValueSetType;
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet(): SecurityRoleTypeValueSetType;
+    static roleExampleValueSet(): SecurityRoleTypeValueSetType;
     /**
      * Extensible-bound Value Set for media
      */
-    mediaExtensibleValueSet(): Dicm405MediatypeValueSetType;
+    static mediaExtensibleValueSet(): Dicm405MediatypeValueSetType;
     /**
      * Extensible-bound Value Set for purposeOfUse
      */
-    purposeOfUseExtensibleValueSet(): V3PurposeOfUseValueSetType;
+    static purposeOfUseExtensibleValueSet(): V3PurposeOfUseValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -422,7 +422,7 @@ export declare class AuditEventSource extends fhir.BackboneElement implements IA
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): AuditSourceTypeValueSetType;
+    static typeExtensibleValueSet(): AuditSourceTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -524,15 +524,15 @@ export declare class AuditEventEntity extends fhir.BackboneElement implements IA
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): AuditEntityTypeValueSetType;
+    static typeExtensibleValueSet(): AuditEntityTypeValueSetType;
     /**
      * Extensible-bound Value Set for role
      */
-    roleExtensibleValueSet(): ObjectRoleValueSetType;
+    static roleExtensibleValueSet(): ObjectRoleValueSetType;
     /**
      * Extensible-bound Value Set for securityLabel
      */
-    securityLabelExtensibleValueSet(): SecurityLabelsValueSetType;
+    static securityLabelExtensibleValueSet(): SecurityLabelsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -614,23 +614,23 @@ export declare class AuditEvent extends fhir.DomainResource implements IAuditEve
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): AuditEventTypeValueSetType;
+    static typeExtensibleValueSet(): AuditEventTypeValueSetType;
     /**
      * Extensible-bound Value Set for subtype
      */
-    subtypeExtensibleValueSet(): AuditEventSubTypeValueSetType;
+    static subtypeExtensibleValueSet(): AuditEventSubTypeValueSetType;
     /**
      * Required-bound Value Set for action
      */
-    actionRequiredValueSet(): AuditEventActionValueSetType;
+    static actionRequiredValueSet(): AuditEventActionValueSetType;
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet(): AuditEventOutcomeValueSetType;
+    static outcomeRequiredValueSet(): AuditEventOutcomeValueSetType;
     /**
      * Extensible-bound Value Set for purposeOfEvent
      */
-    purposeOfEventExtensibleValueSet(): V3PurposeOfUseValueSetType;
+    static purposeOfEventExtensibleValueSet(): V3PurposeOfUseValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

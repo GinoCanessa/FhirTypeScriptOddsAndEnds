@@ -220,7 +220,7 @@ export declare class ResearchStudyObjective extends fhir.BackboneElement impleme
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet(): ResearchStudyObjectiveTypeValueSetType;
+    static typePreferredValueSet(): ResearchStudyObjectiveTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -349,23 +349,23 @@ export declare class ResearchStudy extends fhir.DomainResource implements IResea
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ResearchStudyStatusValueSetType;
+    static statusRequiredValueSet(): ResearchStudyStatusValueSetType;
     /**
      * Extensible-bound Value Set for primaryPurposeType
      */
-    primaryPurposeTypeExtensibleValueSet(): ResearchStudyPrimPurpTypeValueSetType;
+    static primaryPurposeTypeExtensibleValueSet(): ResearchStudyPrimPurpTypeValueSetType;
     /**
      * Example-bound Value Set for phase
      */
-    phaseExampleValueSet(): ResearchStudyPhaseValueSetType;
+    static phaseExampleValueSet(): ResearchStudyPhaseValueSetType;
     /**
      * Example-bound Value Set for condition
      */
-    conditionExampleValueSet(): ConditionCodeValueSetType;
+    static conditionExampleValueSet(): ConditionCodeValueSetType;
     /**
      * Example-bound Value Set for reasonStopped
      */
-    reasonStoppedExampleValueSet(): ResearchStudyReasonStoppedValueSetType;
+    static reasonStoppedExampleValueSet(): ResearchStudyReasonStoppedValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

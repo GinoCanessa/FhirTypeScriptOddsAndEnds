@@ -48,13 +48,13 @@ export class Meta extends fhir.FhirElement {
     /**
      * Extensible-bound Value Set for security
      */
-    securityExtensibleValueSet() {
+    static securityExtensibleValueSet() {
         return SecurityLabelsValueSet;
     }
     /**
      * Example-bound Value Set for tag
      */
-    tagExampleValueSet() {
+    static tagExampleValueSet() {
         return CommonTagsValueSet;
     }
     /**

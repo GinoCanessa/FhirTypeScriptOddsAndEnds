@@ -29,7 +29,7 @@ export class ClinicalImpressionInvestigation extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return InvestigationSetsValueSet;
     }
     /**
@@ -74,7 +74,7 @@ export class ClinicalImpressionFinding extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for itemCodeableConcept
      */
-    itemCodeableConceptExampleValueSet() {
+    static itemCodeableConceptExampleValueSet() {
         return ConditionCodeValueSet;
     }
     /**
@@ -195,13 +195,13 @@ export class ClinicalImpression extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ClinicalimpressionStatusValueSet;
     }
     /**
      * Example-bound Value Set for prognosisCodeableConcept
      */
-    prognosisCodeableConceptExampleValueSet() {
+    static prognosisCodeableConceptExampleValueSet() {
         return ClinicalimpressionPrognosisValueSet;
     }
     /**

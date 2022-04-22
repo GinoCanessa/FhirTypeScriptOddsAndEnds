@@ -229,7 +229,7 @@ export class MeasureReportGroupPopulation extends fhir.BackboneElement implement
   /**
    * Extensible-bound Value Set for code
    */
-  public codeExtensibleValueSet():MeasurePopulationValueSetType {
+  public static codeExtensibleValueSet():MeasurePopulationValueSetType {
     return MeasurePopulationValueSet;
   }
   /**
@@ -312,7 +312,7 @@ export class MeasureReportGroupStratifierStratumPopulation extends fhir.Backbone
   /**
    * Extensible-bound Value Set for code
    */
-  public codeExtensibleValueSet():MeasurePopulationValueSetType {
+  public static codeExtensibleValueSet():MeasurePopulationValueSetType {
     return MeasurePopulationValueSet;
   }
   /**
@@ -541,19 +541,19 @@ export class MeasureReport extends fhir.DomainResource implements IMeasureReport
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():MeasureReportStatusValueSetType {
+  public static statusRequiredValueSet():MeasureReportStatusValueSetType {
     return MeasureReportStatusValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():MeasureReportTypeValueSetType {
+  public static typeRequiredValueSet():MeasureReportTypeValueSetType {
     return MeasureReportTypeValueSet;
   }
   /**
    * Required-bound Value Set for improvementNotation
    */
-  public improvementNotationRequiredValueSet():MeasureImprovementNotationValueSetType {
+  public static improvementNotationRequiredValueSet():MeasureImprovementNotationValueSetType {
     return MeasureImprovementNotationValueSet;
   }
   /**

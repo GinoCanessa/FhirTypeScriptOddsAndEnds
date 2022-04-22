@@ -144,7 +144,7 @@ export class RelatedArtifact extends fhir.FhirElement implements IRelatedArtifac
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():RelatedArtifactTypeValueSetType {
+  public static typeRequiredValueSet():RelatedArtifactTypeValueSetType {
     return RelatedArtifactTypeValueSet;
   }
   /**

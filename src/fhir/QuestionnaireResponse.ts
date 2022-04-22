@@ -497,7 +497,7 @@ export class QuestionnaireResponse extends fhir.DomainResource implements IQuest
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():QuestionnaireAnswersStatusValueSetType {
+  public static statusRequiredValueSet():QuestionnaireAnswersStatusValueSetType {
     return QuestionnaireAnswersStatusValueSet;
   }
   /**

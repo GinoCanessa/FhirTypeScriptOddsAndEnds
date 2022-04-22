@@ -244,7 +244,7 @@ export declare class CompositionAttester extends fhir.BackboneElement implements
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): CompositionAttestationModeValueSetType;
+    static modeRequiredValueSet(): CompositionAttestationModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -277,7 +277,7 @@ export declare class CompositionRelatesTo extends fhir.BackboneElement implement
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): DocumentRelationshipTypeValueSetType;
+    static codeRequiredValueSet(): DocumentRelationshipTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -306,7 +306,7 @@ export declare class CompositionEvent extends fhir.BackboneElement implements IC
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): V3ActCodeValueSetType;
+    static codeExampleValueSet(): V3ActCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -372,19 +372,19 @@ export declare class CompositionSection extends fhir.BackboneElement implements 
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): DocSectionCodesValueSetType;
+    static codeExampleValueSet(): DocSectionCodesValueSetType;
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): ListModeValueSetType;
+    static modeRequiredValueSet(): ListModeValueSetType;
     /**
      * Preferred-bound Value Set for orderedBy
      */
-    orderedByPreferredValueSet(): ListOrderValueSetType;
+    static orderedByPreferredValueSet(): ListOrderValueSetType;
     /**
      * Preferred-bound Value Set for emptyReason
      */
-    emptyReasonPreferredValueSet(): ListEmptyReasonValueSetType;
+    static emptyReasonPreferredValueSet(): ListEmptyReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -482,19 +482,19 @@ export declare class Composition extends fhir.DomainResource implements IComposi
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): CompositionStatusValueSetType;
+    static statusRequiredValueSet(): CompositionStatusValueSetType;
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet(): DocTypecodesValueSetType;
+    static typePreferredValueSet(): DocTypecodesValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): DocumentClasscodesValueSetType;
+    static categoryExampleValueSet(): DocumentClasscodesValueSetType;
     /**
      * Required-bound Value Set for confidentiality
      */
-    confidentialityRequiredValueSet(): V3ConfidentialityClassificationValueSetType;
+    static confidentialityRequiredValueSet(): V3ConfidentialityClassificationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

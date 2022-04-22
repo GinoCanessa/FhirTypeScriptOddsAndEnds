@@ -224,7 +224,7 @@ export class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneEleme
   /**
    * Required-bound Value Set for base
    */
-  public baseRequiredValueSet():VisionBaseCodesValueSetType {
+  public static baseRequiredValueSet():VisionBaseCodesValueSetType {
     return VisionBaseCodesValueSet;
   }
   /**
@@ -376,13 +376,13 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement im
   /**
    * Example-bound Value Set for product
    */
-  public productExampleValueSet():VisionProductValueSetType {
+  public static productExampleValueSet():VisionProductValueSetType {
     return VisionProductValueSet;
   }
   /**
    * Required-bound Value Set for eye
    */
-  public eyeRequiredValueSet():VisionEyeCodesValueSetType {
+  public static eyeRequiredValueSet():VisionEyeCodesValueSetType {
     return VisionEyeCodesValueSet;
   }
   /**
@@ -489,7 +489,7 @@ export class VisionPrescription extends fhir.DomainResource implements IVisionPr
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():FmStatusValueSetType {
+  public static statusRequiredValueSet():FmStatusValueSetType {
     return FmStatusValueSet;
   }
   /**

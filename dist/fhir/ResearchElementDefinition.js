@@ -110,19 +110,19 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
     /**
      * Required-bound Value Set for unitOfMeasure
      */
-    unitOfMeasureRequiredValueSet() {
+    static unitOfMeasureRequiredValueSet() {
         return UcumUnitsValueSet;
     }
     /**
      * Required-bound Value Set for studyEffectiveGroupMeasure
      */
-    studyEffectiveGroupMeasureRequiredValueSet() {
+    static studyEffectiveGroupMeasureRequiredValueSet() {
         return GroupMeasureValueSet;
     }
     /**
      * Required-bound Value Set for participantEffectiveGroupMeasure
      */
-    participantEffectiveGroupMeasureRequiredValueSet() {
+    static participantEffectiveGroupMeasureRequiredValueSet() {
         return GroupMeasureValueSet;
     }
     /**
@@ -381,37 +381,37 @@ export class ResearchElementDefinition extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet() {
+    static subjectCodeableConceptExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet() {
+    static subjectReferenceExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet() {
+    static topicExampleValueSet() {
         return DefinitionTopicValueSet;
     }
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ResearchElementTypeValueSet;
     }
     /**
      * Required-bound Value Set for variableType
      */
-    variableTypeRequiredValueSet() {
+    static variableTypeRequiredValueSet() {
         return VariableTypeValueSet;
     }
     /**

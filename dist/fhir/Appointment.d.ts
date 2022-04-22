@@ -221,15 +221,15 @@ export declare class AppointmentParticipant extends fhir.BackboneElement impleme
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): EncounterParticipantTypeValueSetType;
+    static typeExtensibleValueSet(): EncounterParticipantTypeValueSetType;
     /**
      * Required-bound Value Set for required
      */
-    requiredRequiredValueSet(): ParticipantrequiredValueSetType;
+    static requiredRequiredValueSet(): ParticipantrequiredValueSetType;
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ParticipationstatusValueSetType;
+    static statusRequiredValueSet(): ParticipationstatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -377,31 +377,31 @@ export declare class Appointment extends fhir.DomainResource implements IAppoint
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): AppointmentstatusValueSetType;
+    static statusRequiredValueSet(): AppointmentstatusValueSetType;
     /**
      * Example-bound Value Set for cancelationReason
      */
-    cancelationReasonExampleValueSet(): AppointmentCancellationReasonValueSetType;
+    static cancelationReasonExampleValueSet(): AppointmentCancellationReasonValueSetType;
     /**
      * Example-bound Value Set for serviceCategory
      */
-    serviceCategoryExampleValueSet(): ServiceCategoryValueSetType;
+    static serviceCategoryExampleValueSet(): ServiceCategoryValueSetType;
     /**
      * Example-bound Value Set for serviceType
      */
-    serviceTypeExampleValueSet(): ServiceTypeValueSetType;
+    static serviceTypeExampleValueSet(): ServiceTypeValueSetType;
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
+    static specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
     /**
      * Preferred-bound Value Set for appointmentType
      */
-    appointmentTypePreferredValueSet(): V20276ValueSetType;
+    static appointmentTypePreferredValueSet(): V20276ValueSetType;
     /**
      * Preferred-bound Value Set for reasonCode
      */
-    reasonCodePreferredValueSet(): EncounterReasonValueSetType;
+    static reasonCodePreferredValueSet(): EncounterReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

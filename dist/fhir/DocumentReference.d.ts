@@ -186,7 +186,7 @@ export declare class DocumentReferenceRelatesTo extends fhir.BackboneElement imp
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): DocumentRelationshipTypeValueSetType;
+    static codeRequiredValueSet(): DocumentRelationshipTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -211,7 +211,7 @@ export declare class DocumentReferenceContent extends fhir.BackboneElement imple
     /**
      * Preferred-bound Value Set for format
      */
-    formatPreferredValueSet(): FormatcodesValueSetType;
+    static formatPreferredValueSet(): FormatcodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -256,15 +256,15 @@ export declare class DocumentReferenceContext extends fhir.BackboneElement imple
     /**
      * Example-bound Value Set for event
      */
-    eventExampleValueSet(): V3ActCodeValueSetType;
+    static eventExampleValueSet(): V3ActCodeValueSetType;
     /**
      * Example-bound Value Set for facilityType
      */
-    facilityTypeExampleValueSet(): C80FacilitycodesValueSetType;
+    static facilityTypeExampleValueSet(): C80FacilitycodesValueSetType;
     /**
      * Example-bound Value Set for practiceSetting
      */
-    practiceSettingExampleValueSet(): C80PracticeCodesValueSetType;
+    static practiceSettingExampleValueSet(): C80PracticeCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -367,23 +367,23 @@ export declare class DocumentReference extends fhir.DomainResource implements ID
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): DocumentReferenceStatusValueSetType;
+    static statusRequiredValueSet(): DocumentReferenceStatusValueSetType;
     /**
      * Required-bound Value Set for docStatus
      */
-    docStatusRequiredValueSet(): CompositionStatusValueSetType;
+    static docStatusRequiredValueSet(): CompositionStatusValueSetType;
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet(): C80DocTypecodesValueSetType;
+    static typePreferredValueSet(): C80DocTypecodesValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): DocumentClasscodesValueSetType;
+    static categoryExampleValueSet(): DocumentClasscodesValueSetType;
     /**
      * Extensible-bound Value Set for securityLabel
      */
-    securityLabelExtensibleValueSet(): SecurityLabelsValueSetType;
+    static securityLabelExtensibleValueSet(): SecurityLabelsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

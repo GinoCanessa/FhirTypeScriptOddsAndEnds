@@ -34,7 +34,7 @@ export class PractitionerQualification extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return V2270360ValueSet;
     }
     /**
@@ -113,13 +113,13 @@ export class Practitioner extends fhir.DomainResource {
     /**
      * Required-bound Value Set for gender
      */
-    genderRequiredValueSet() {
+    static genderRequiredValueSet() {
         return AdministrativeGenderValueSet;
     }
     /**
      * Preferred-bound Value Set for communication
      */
-    communicationPreferredValueSet() {
+    static communicationPreferredValueSet() {
         return LanguagesValueSet;
     }
     /**

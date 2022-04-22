@@ -138,7 +138,7 @@ export declare class DetectedIssueEvidence extends fhir.BackboneElement implemen
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ManifestationOrSymptomValueSetType;
+    static codeExampleValueSet(): ManifestationOrSymptomValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -171,7 +171,7 @@ export declare class DetectedIssueMitigation extends fhir.BackboneElement implem
     /**
      * Preferred-bound Value Set for action
      */
-    actionPreferredValueSet(): DetectedissueMitigationActionValueSetType;
+    static actionPreferredValueSet(): DetectedissueMitigationActionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -264,15 +264,15 @@ export declare class DetectedIssue extends fhir.DomainResource implements IDetec
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ObservationStatusValueSetType;
+    static statusRequiredValueSet(): ObservationStatusValueSetType;
     /**
      * Preferred-bound Value Set for code
      */
-    codePreferredValueSet(): DetectedissueCategoryValueSetType;
+    static codePreferredValueSet(): DetectedissueCategoryValueSetType;
     /**
      * Required-bound Value Set for severity
      */
-    severityRequiredValueSet(): DetectedissueSeverityValueSetType;
+    static severityRequiredValueSet(): DetectedissueSeverityValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -401,19 +401,19 @@ export class MedicationRequestSubstitution extends fhir.BackboneElement implemen
   /**
    * Example-bound Value Set for allowedBoolean
    */
-  public allowedBooleanExampleValueSet():V3ActSubstanceAdminSubstitutionCodeValueSetType {
+  public static allowedBooleanExampleValueSet():V3ActSubstanceAdminSubstitutionCodeValueSetType {
     return V3ActSubstanceAdminSubstitutionCodeValueSet;
   }
   /**
    * Example-bound Value Set for allowedCodeableConcept
    */
-  public allowedCodeableConceptExampleValueSet():V3ActSubstanceAdminSubstitutionCodeValueSetType {
+  public static allowedCodeableConceptExampleValueSet():V3ActSubstanceAdminSubstitutionCodeValueSetType {
     return V3ActSubstanceAdminSubstitutionCodeValueSet;
   }
   /**
    * Example-bound Value Set for reason
    */
-  public reasonExampleValueSet():V3SubstanceAdminSubstitutionReasonValueSetType {
+  public static reasonExampleValueSet():V3SubstanceAdminSubstitutionReasonValueSetType {
     return V3SubstanceAdminSubstitutionReasonValueSet;
   }
   /**
@@ -661,61 +661,61 @@ export class MedicationRequest extends fhir.DomainResource implements IMedicatio
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():MedicationrequestStatusValueSetType {
+  public static statusRequiredValueSet():MedicationrequestStatusValueSetType {
     return MedicationrequestStatusValueSet;
   }
   /**
    * Example-bound Value Set for statusReason
    */
-  public statusReasonExampleValueSet():MedicationrequestStatusReasonValueSetType {
+  public static statusReasonExampleValueSet():MedicationrequestStatusReasonValueSetType {
     return MedicationrequestStatusReasonValueSet;
   }
   /**
    * Required-bound Value Set for intent
    */
-  public intentRequiredValueSet():MedicationrequestIntentValueSetType {
+  public static intentRequiredValueSet():MedicationrequestIntentValueSetType {
     return MedicationrequestIntentValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():MedicationrequestCategoryValueSetType {
+  public static categoryExampleValueSet():MedicationrequestCategoryValueSetType {
     return MedicationrequestCategoryValueSet;
   }
   /**
    * Required-bound Value Set for priority
    */
-  public priorityRequiredValueSet():RequestPriorityValueSetType {
+  public static priorityRequiredValueSet():RequestPriorityValueSetType {
     return RequestPriorityValueSet;
   }
   /**
    * Example-bound Value Set for medicationCodeableConcept
    */
-  public medicationCodeableConceptExampleValueSet():MedicationCodesValueSetType {
+  public static medicationCodeableConceptExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for medicationReference
    */
-  public medicationReferenceExampleValueSet():MedicationCodesValueSetType {
+  public static medicationReferenceExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for performerType
    */
-  public performerTypeExampleValueSet():PerformerRoleValueSetType {
+  public static performerTypeExampleValueSet():PerformerRoleValueSetType {
     return PerformerRoleValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ConditionCodeValueSetType {
+  public static reasonCodeExampleValueSet():ConditionCodeValueSetType {
     return ConditionCodeValueSet;
   }
   /**
    * Example-bound Value Set for courseOfTherapyType
    */
-  public courseOfTherapyTypeExampleValueSet():MedicationrequestCourseOfTherapyValueSetType {
+  public static courseOfTherapyTypeExampleValueSet():MedicationrequestCourseOfTherapyValueSetType {
     return MedicationrequestCourseOfTherapyValueSet;
   }
   /**

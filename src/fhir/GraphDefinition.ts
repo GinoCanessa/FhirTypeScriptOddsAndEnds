@@ -327,19 +327,19 @@ export class GraphDefinitionLinkTargetCompartment extends fhir.BackboneElement i
   /**
    * Required-bound Value Set for use
    */
-  public useRequiredValueSet():GraphCompartmentUseValueSetType {
+  public static useRequiredValueSet():GraphCompartmentUseValueSetType {
     return GraphCompartmentUseValueSet;
   }
   /**
    * Required-bound Value Set for code
    */
-  public codeRequiredValueSet():CompartmentTypeValueSetType {
+  public static codeRequiredValueSet():CompartmentTypeValueSetType {
     return CompartmentTypeValueSet;
   }
   /**
    * Required-bound Value Set for rule
    */
-  public ruleRequiredValueSet():GraphCompartmentRuleValueSetType {
+  public static ruleRequiredValueSet():GraphCompartmentRuleValueSetType {
     return GraphCompartmentRuleValueSet;
   }
   /**
@@ -413,7 +413,7 @@ export class GraphDefinitionLinkTarget extends fhir.BackboneElement implements I
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ResourceTypesValueSetType {
+  public static typeRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**
@@ -664,13 +664,13 @@ export class GraphDefinition extends fhir.DomainResource implements IGraphDefini
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for start
    */
-  public startRequiredValueSet():ResourceTypesValueSetType {
+  public static startRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**

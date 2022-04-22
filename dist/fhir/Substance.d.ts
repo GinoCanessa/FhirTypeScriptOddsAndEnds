@@ -137,11 +137,11 @@ export declare class SubstanceIngredient extends fhir.BackboneElement implements
     /**
      * Example-bound Value Set for substanceCodeableConcept
      */
-    substanceCodeableConceptExampleValueSet(): SubstanceCodeValueSetType;
+    static substanceCodeableConceptExampleValueSet(): SubstanceCodeValueSetType;
     /**
      * Example-bound Value Set for substanceReference
      */
-    substanceReferenceExampleValueSet(): SubstanceCodeValueSetType;
+    static substanceReferenceExampleValueSet(): SubstanceCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -198,15 +198,15 @@ export declare class Substance extends fhir.DomainResource implements ISubstance
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): SubstanceStatusValueSetType;
+    static statusRequiredValueSet(): SubstanceStatusValueSetType;
     /**
      * Extensible-bound Value Set for category
      */
-    categoryExtensibleValueSet(): SubstanceCategoryValueSetType;
+    static categoryExtensibleValueSet(): SubstanceCategoryValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): SubstanceCodeValueSetType;
+    static codeExampleValueSet(): SubstanceCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

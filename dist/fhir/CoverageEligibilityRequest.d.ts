@@ -344,15 +344,15 @@ export declare class CoverageEligibilityRequestItem extends fhir.BackboneElement
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    static categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -449,15 +449,15 @@ export declare class CoverageEligibilityRequest extends fhir.DomainResource impl
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Example-bound Value Set for priority
      */
-    priorityExampleValueSet(): ProcessPriorityValueSetType;
+    static priorityExampleValueSet(): ProcessPriorityValueSetType;
     /**
      * Required-bound Value Set for purpose
      */
-    purposeRequiredValueSet(): EligibilityrequestPurposeValueSetType;
+    static purposeRequiredValueSet(): EligibilityrequestPurposeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

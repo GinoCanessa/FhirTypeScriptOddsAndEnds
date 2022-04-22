@@ -198,13 +198,13 @@ export class Address extends fhir.FhirElement implements IAddress {
   /**
    * Required-bound Value Set for use
    */
-  public useRequiredValueSet():AddressUseValueSetType {
+  public static useRequiredValueSet():AddressUseValueSetType {
     return AddressUseValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():AddressTypeValueSetType {
+  public static typeRequiredValueSet():AddressTypeValueSetType {
     return AddressTypeValueSet;
   }
   /**

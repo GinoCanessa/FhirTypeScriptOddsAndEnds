@@ -129,11 +129,11 @@ export declare class DeviceMetricCalibration extends fhir.BackboneElement implem
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): MetricCalibrationTypeValueSetType;
+    static typeRequiredValueSet(): MetricCalibrationTypeValueSetType;
     /**
      * Required-bound Value Set for state
      */
-    stateRequiredValueSet(): MetricCalibrationStateValueSetType;
+    static stateRequiredValueSet(): MetricCalibrationStateValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -206,15 +206,15 @@ export declare class DeviceMetric extends fhir.DomainResource implements IDevice
     /**
      * Required-bound Value Set for operationalStatus
      */
-    operationalStatusRequiredValueSet(): MetricOperationalStatusValueSetType;
+    static operationalStatusRequiredValueSet(): MetricOperationalStatusValueSetType;
     /**
      * Required-bound Value Set for color
      */
-    colorRequiredValueSet(): MetricColorValueSetType;
+    static colorRequiredValueSet(): MetricColorValueSetType;
     /**
      * Required-bound Value Set for category
      */
-    categoryRequiredValueSet(): MetricCategoryValueSetType;
+    static categoryRequiredValueSet(): MetricCategoryValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

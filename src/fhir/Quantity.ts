@@ -116,7 +116,7 @@ export class Quantity extends fhir.FhirElement implements IQuantity {
   /**
    * Required-bound Value Set for comparator
    */
-  public comparatorRequiredValueSet():QuantityComparatorValueSetType {
+  public static comparatorRequiredValueSet():QuantityComparatorValueSetType {
     return QuantityComparatorValueSet;
   }
   /**

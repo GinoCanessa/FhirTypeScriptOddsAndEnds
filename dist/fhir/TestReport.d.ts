@@ -285,7 +285,7 @@ export declare class TestReportParticipant extends fhir.BackboneElement implemen
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ReportParticipantTypeValueSetType;
+    static typeRequiredValueSet(): ReportParticipantTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -326,7 +326,7 @@ export declare class TestReportSetupActionOperation extends fhir.BackboneElement
     /**
      * Required-bound Value Set for result
      */
-    resultRequiredValueSet(): ReportActionResultCodesValueSetType;
+    static resultRequiredValueSet(): ReportActionResultCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -367,7 +367,7 @@ export declare class TestReportSetupActionAssert extends fhir.BackboneElement im
     /**
      * Required-bound Value Set for result
      */
-    resultRequiredValueSet(): ReportActionResultCodesValueSetType;
+    static resultRequiredValueSet(): ReportActionResultCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -587,11 +587,11 @@ export declare class TestReport extends fhir.DomainResource implements ITestRepo
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ReportStatusCodesValueSetType;
+    static statusRequiredValueSet(): ReportStatusCodesValueSetType;
     /**
      * Required-bound Value Set for result
      */
-    resultRequiredValueSet(): ReportResultCodesValueSetType;
+    static resultRequiredValueSet(): ReportResultCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

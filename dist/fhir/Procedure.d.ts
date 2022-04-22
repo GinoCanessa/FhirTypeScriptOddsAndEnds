@@ -223,7 +223,7 @@ export declare class ProcedurePerformer extends fhir.BackboneElement implements 
     /**
      * Example-bound Value Set for function
      */
-    functionExampleValueSet(): PerformerRoleValueSetType;
+    static functionExampleValueSet(): PerformerRoleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -248,7 +248,7 @@ export declare class ProcedureFocalDevice extends fhir.BackboneElement implement
     /**
      * Preferred-bound Value Set for action
      */
-    actionPreferredValueSet(): DeviceActionValueSetType;
+    static actionPreferredValueSet(): DeviceActionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -419,43 +419,43 @@ export declare class Procedure extends fhir.DomainResource implements IProcedure
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): EventStatusValueSetType;
+    static statusRequiredValueSet(): EventStatusValueSetType;
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet(): ProcedureNotPerformedReasonValueSetType;
+    static statusReasonExampleValueSet(): ProcedureNotPerformedReasonValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ProcedureCategoryValueSetType;
+    static categoryExampleValueSet(): ProcedureCategoryValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ProcedureCodeValueSetType;
+    static codeExampleValueSet(): ProcedureCodeValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ProcedureReasonValueSetType;
+    static reasonCodeExampleValueSet(): ProcedureReasonValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): BodySiteValueSetType;
+    static bodySiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Example-bound Value Set for outcome
      */
-    outcomeExampleValueSet(): ProcedureOutcomeValueSetType;
+    static outcomeExampleValueSet(): ProcedureOutcomeValueSetType;
     /**
      * Example-bound Value Set for complication
      */
-    complicationExampleValueSet(): ConditionCodeValueSetType;
+    static complicationExampleValueSet(): ConditionCodeValueSetType;
     /**
      * Example-bound Value Set for followUp
      */
-    followUpExampleValueSet(): ProcedureFollowupValueSetType;
+    static followUpExampleValueSet(): ProcedureFollowupValueSetType;
     /**
      * Example-bound Value Set for usedCode
      */
-    usedCodeExampleValueSet(): DeviceKindValueSetType;
+    static usedCodeExampleValueSet(): DeviceKindValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

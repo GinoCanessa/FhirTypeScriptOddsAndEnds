@@ -129,11 +129,11 @@ export declare class OrganizationAffiliation extends fhir.DomainResource impleme
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): OrganizationRoleValueSetType;
+    static codeExampleValueSet(): OrganizationRoleValueSetType;
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
+    static specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -190,7 +190,7 @@ export declare class MedicationDispensePerformer extends fhir.BackboneElement im
     /**
      * Example-bound Value Set for function
      */
-    functionExampleValueSet(): MedicationdispensePerformerFunctionValueSetType;
+    static functionExampleValueSet(): MedicationdispensePerformerFunctionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -227,11 +227,11 @@ export declare class MedicationDispenseSubstitution extends fhir.BackboneElement
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): V3ActSubstanceAdminSubstitutionCodeValueSetType;
+    static typeExampleValueSet(): V3ActSubstanceAdminSubstitutionCodeValueSetType;
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet(): V3SubstanceAdminSubstitutionReasonValueSetType;
+    static reasonExampleValueSet(): V3SubstanceAdminSubstitutionReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -369,31 +369,31 @@ export declare class MedicationDispense extends fhir.DomainResource implements I
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): MedicationdispenseStatusValueSetType;
+    static statusRequiredValueSet(): MedicationdispenseStatusValueSetType;
     /**
      * Example-bound Value Set for statusReasonCodeableConcept
      */
-    statusReasonCodeableConceptExampleValueSet(): MedicationdispenseStatusReasonValueSetType;
+    static statusReasonCodeableConceptExampleValueSet(): MedicationdispenseStatusReasonValueSetType;
     /**
      * Example-bound Value Set for statusReasonReference
      */
-    statusReasonReferenceExampleValueSet(): MedicationdispenseStatusReasonValueSetType;
+    static statusReasonReferenceExampleValueSet(): MedicationdispenseStatusReasonValueSetType;
     /**
      * Preferred-bound Value Set for category
      */
-    categoryPreferredValueSet(): MedicationdispenseCategoryValueSetType;
+    static categoryPreferredValueSet(): MedicationdispenseCategoryValueSetType;
     /**
      * Example-bound Value Set for medicationCodeableConcept
      */
-    medicationCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
+    static medicationCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for medicationReference
      */
-    medicationReferenceExampleValueSet(): MedicationCodesValueSetType;
+    static medicationReferenceExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): V3ActPharmacySupplyTypeValueSetType;
+    static typeExampleValueSet(): V3ActPharmacySupplyTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

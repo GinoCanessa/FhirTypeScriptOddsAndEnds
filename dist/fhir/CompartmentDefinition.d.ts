@@ -177,7 +177,7 @@ export declare class CompartmentDefinitionResource extends fhir.BackboneElement 
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): ResourceTypesValueSetType;
+    static codeRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -300,11 +300,11 @@ export declare class CompartmentDefinition extends fhir.DomainResource implement
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): CompartmentTypeValueSetType;
+    static codeRequiredValueSet(): CompartmentTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

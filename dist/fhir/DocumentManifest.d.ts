@@ -187,11 +187,11 @@ export declare class DocumentManifest extends fhir.DomainResource implements IDo
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): DocumentReferenceStatusValueSetType;
+    static statusRequiredValueSet(): DocumentReferenceStatusValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): V3ActCodeValueSetType;
+    static typeExampleValueSet(): V3ActCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

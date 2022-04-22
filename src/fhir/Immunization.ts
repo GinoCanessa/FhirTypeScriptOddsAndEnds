@@ -332,7 +332,7 @@ export class ImmunizationPerformer extends fhir.BackboneElement implements IImmu
   /**
    * Extensible-bound Value Set for function
    */
-  public functionExtensibleValueSet():ImmunizationFunctionValueSetType {
+  public static functionExtensibleValueSet():ImmunizationFunctionValueSetType {
     return ImmunizationFunctionValueSet;
   }
   /**
@@ -530,7 +530,7 @@ export class ImmunizationProtocolApplied extends fhir.BackboneElement implements
   /**
    * Example-bound Value Set for targetDisease
    */
-  public targetDiseaseExampleValueSet():ImmunizationTargetDiseaseValueSetType {
+  public static targetDiseaseExampleValueSet():ImmunizationTargetDiseaseValueSetType {
     return ImmunizationTargetDiseaseValueSet;
   }
   /**
@@ -755,61 +755,61 @@ export class Immunization extends fhir.DomainResource implements IImmunization {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ImmunizationStatusValueSetType {
+  public static statusRequiredValueSet():ImmunizationStatusValueSetType {
     return ImmunizationStatusValueSet;
   }
   /**
    * Example-bound Value Set for statusReason
    */
-  public statusReasonExampleValueSet():ImmunizationStatusReasonValueSetType {
+  public static statusReasonExampleValueSet():ImmunizationStatusReasonValueSetType {
     return ImmunizationStatusReasonValueSet;
   }
   /**
    * Example-bound Value Set for vaccineCode
    */
-  public vaccineCodeExampleValueSet():VaccineCodeValueSetType {
+  public static vaccineCodeExampleValueSet():VaccineCodeValueSetType {
     return VaccineCodeValueSet;
   }
   /**
    * Example-bound Value Set for reportOrigin
    */
-  public reportOriginExampleValueSet():ImmunizationOriginValueSetType {
+  public static reportOriginExampleValueSet():ImmunizationOriginValueSetType {
     return ImmunizationOriginValueSet;
   }
   /**
    * Example-bound Value Set for site
    */
-  public siteExampleValueSet():ImmunizationSiteValueSetType {
+  public static siteExampleValueSet():ImmunizationSiteValueSetType {
     return ImmunizationSiteValueSet;
   }
   /**
    * Example-bound Value Set for route
    */
-  public routeExampleValueSet():ImmunizationRouteValueSetType {
+  public static routeExampleValueSet():ImmunizationRouteValueSetType {
     return ImmunizationRouteValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ImmunizationReasonValueSetType {
+  public static reasonCodeExampleValueSet():ImmunizationReasonValueSetType {
     return ImmunizationReasonValueSet;
   }
   /**
    * Example-bound Value Set for subpotentReason
    */
-  public subpotentReasonExampleValueSet():ImmunizationSubpotentReasonValueSetType {
+  public static subpotentReasonExampleValueSet():ImmunizationSubpotentReasonValueSetType {
     return ImmunizationSubpotentReasonValueSet;
   }
   /**
    * Example-bound Value Set for programEligibility
    */
-  public programEligibilityExampleValueSet():ImmunizationProgramEligibilityValueSetType {
+  public static programEligibilityExampleValueSet():ImmunizationProgramEligibilityValueSetType {
     return ImmunizationProgramEligibilityValueSet;
   }
   /**
    * Example-bound Value Set for fundingSource
    */
-  public fundingSourceExampleValueSet():ImmunizationFundingSourceValueSetType {
+  public static fundingSourceExampleValueSet():ImmunizationFundingSourceValueSetType {
     return ImmunizationFundingSourceValueSet;
   }
   /**

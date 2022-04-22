@@ -32,7 +32,7 @@ export class LinkageItem extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return LinkageTypeValueSet;
     }
     /**

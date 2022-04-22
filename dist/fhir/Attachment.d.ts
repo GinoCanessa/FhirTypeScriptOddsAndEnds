@@ -144,7 +144,7 @@ export declare class Attachment extends fhir.FhirElement implements IAttachment 
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet(): LanguagesValueSetType;
+    static languagePreferredValueSet(): LanguagesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

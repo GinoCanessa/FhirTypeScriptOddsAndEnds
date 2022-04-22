@@ -117,7 +117,7 @@ export declare class PractitionerQualification extends fhir.BackboneElement impl
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): V2270360ValueSetType;
+    static codeExampleValueSet(): V2270360ValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -196,11 +196,11 @@ export declare class Practitioner extends fhir.DomainResource implements IPracti
     /**
      * Required-bound Value Set for gender
      */
-    genderRequiredValueSet(): AdministrativeGenderValueSetType;
+    static genderRequiredValueSet(): AdministrativeGenderValueSetType;
     /**
      * Preferred-bound Value Set for communication
      */
-    communicationPreferredValueSet(): LanguagesValueSetType;
+    static communicationPreferredValueSet(): LanguagesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

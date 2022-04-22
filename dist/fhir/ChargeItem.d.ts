@@ -190,7 +190,7 @@ export declare class ChargeItemPerformer extends fhir.BackboneElement implements
     /**
      * Example-bound Value Set for function
      */
-    functionExampleValueSet(): PerformerRoleValueSetType;
+    static functionExampleValueSet(): PerformerRoleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -356,23 +356,23 @@ export declare class ChargeItem extends fhir.DomainResource implements IChargeIt
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ChargeitemStatusValueSetType;
+    static statusRequiredValueSet(): ChargeitemStatusValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ChargeitemBillingcodesValueSetType;
+    static codeExampleValueSet(): ChargeitemBillingcodesValueSetType;
     /**
      * Example-bound Value Set for bodysite
      */
-    bodysiteExampleValueSet(): BodySiteValueSetType;
+    static bodysiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Example-bound Value Set for productReference
      */
-    productReferenceExampleValueSet(): DeviceKindValueSetType;
+    static productReferenceExampleValueSet(): DeviceKindValueSetType;
     /**
      * Example-bound Value Set for productCodeableConcept
      */
-    productCodeableConceptExampleValueSet(): DeviceKindValueSetType;
+    static productCodeableConceptExampleValueSet(): DeviceKindValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

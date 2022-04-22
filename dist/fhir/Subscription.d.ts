@@ -139,7 +139,7 @@ export declare class SubscriptionChannel extends fhir.BackboneElement implements
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): SubscriptionChannelTypeValueSetType;
+    static typeRequiredValueSet(): SubscriptionChannelTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -209,7 +209,7 @@ export declare class Subscription extends fhir.DomainResource implements ISubscr
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): SubscriptionStatusValueSetType;
+    static statusRequiredValueSet(): SubscriptionStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

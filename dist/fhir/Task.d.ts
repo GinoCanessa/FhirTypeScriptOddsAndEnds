@@ -1548,23 +1548,23 @@ export declare class Task extends fhir.DomainResource implements ITask {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): TaskStatusValueSetType;
+    static statusRequiredValueSet(): TaskStatusValueSetType;
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet(): TaskIntentValueSetType;
+    static intentRequiredValueSet(): TaskIntentValueSetType;
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): TaskCodeValueSetType;
+    static codeExampleValueSet(): TaskCodeValueSetType;
     /**
      * Preferred-bound Value Set for performerType
      */
-    performerTypePreferredValueSet(): PerformerRoleValueSetType;
+    static performerTypePreferredValueSet(): PerformerRoleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

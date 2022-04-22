@@ -275,7 +275,7 @@ export declare class HealthcareServiceAvailableTime extends fhir.BackboneElement
     /**
      * Required-bound Value Set for daysOfWeek
      */
-    daysOfWeekRequiredValueSet(): DaysOfWeekValueSetType;
+    static daysOfWeekRequiredValueSet(): DaysOfWeekValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -441,31 +441,31 @@ export declare class HealthcareService extends fhir.DomainResource implements IH
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ServiceCategoryValueSetType;
+    static categoryExampleValueSet(): ServiceCategoryValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ServiceTypeValueSetType;
+    static typeExampleValueSet(): ServiceTypeValueSetType;
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
+    static specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
     /**
      * Example-bound Value Set for serviceProvisionCode
      */
-    serviceProvisionCodeExampleValueSet(): ServiceProvisionConditionsValueSetType;
+    static serviceProvisionCodeExampleValueSet(): ServiceProvisionConditionsValueSetType;
     /**
      * Example-bound Value Set for program
      */
-    programExampleValueSet(): ProgramValueSetType;
+    static programExampleValueSet(): ProgramValueSetType;
     /**
      * Preferred-bound Value Set for communication
      */
-    communicationPreferredValueSet(): LanguagesValueSetType;
+    static communicationPreferredValueSet(): LanguagesValueSetType;
     /**
      * Example-bound Value Set for referralMethod
      */
-    referralMethodExampleValueSet(): ServiceReferralMethodValueSetType;
+    static referralMethodExampleValueSet(): ServiceReferralMethodValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

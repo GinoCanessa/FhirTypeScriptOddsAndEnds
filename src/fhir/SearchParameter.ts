@@ -550,43 +550,43 @@ export class SearchParameter extends fhir.DomainResource implements ISearchParam
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for base
    */
-  public baseRequiredValueSet():ResourceTypesValueSetType {
+  public static baseRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():SearchParamTypeValueSetType {
+  public static typeRequiredValueSet():SearchParamTypeValueSetType {
     return SearchParamTypeValueSet;
   }
   /**
    * Required-bound Value Set for xpathUsage
    */
-  public xpathUsageRequiredValueSet():SearchXpathUsageValueSetType {
+  public static xpathUsageRequiredValueSet():SearchXpathUsageValueSetType {
     return SearchXpathUsageValueSet;
   }
   /**
    * Required-bound Value Set for target
    */
-  public targetRequiredValueSet():ResourceTypesValueSetType {
+  public static targetRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**
    * Required-bound Value Set for comparator
    */
-  public comparatorRequiredValueSet():SearchComparatorValueSetType {
+  public static comparatorRequiredValueSet():SearchComparatorValueSetType {
     return SearchComparatorValueSet;
   }
   /**
    * Required-bound Value Set for modifier
    */
-  public modifierRequiredValueSet():SearchModifierCodeValueSetType {
+  public static modifierRequiredValueSet():SearchModifierCodeValueSetType {
     return SearchModifierCodeValueSet;
   }
   /**

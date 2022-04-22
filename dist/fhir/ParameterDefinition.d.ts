@@ -129,11 +129,11 @@ export declare class ParameterDefinition extends fhir.FhirElement implements IPa
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): OperationParameterUseValueSetType;
+    static useRequiredValueSet(): OperationParameterUseValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): AllTypesValueSetType;
+    static typeRequiredValueSet(): AllTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

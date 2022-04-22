@@ -50,19 +50,19 @@ export class AppointmentParticipant extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return EncounterParticipantTypeValueSet;
     }
     /**
      * Required-bound Value Set for required
      */
-    requiredRequiredValueSet() {
+    static requiredRequiredValueSet() {
         return ParticipantrequiredValueSet;
     }
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ParticipationstatusValueSet;
     }
     /**
@@ -204,43 +204,43 @@ export class Appointment extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return AppointmentstatusValueSet;
     }
     /**
      * Example-bound Value Set for cancelationReason
      */
-    cancelationReasonExampleValueSet() {
+    static cancelationReasonExampleValueSet() {
         return AppointmentCancellationReasonValueSet;
     }
     /**
      * Example-bound Value Set for serviceCategory
      */
-    serviceCategoryExampleValueSet() {
+    static serviceCategoryExampleValueSet() {
         return ServiceCategoryValueSet;
     }
     /**
      * Example-bound Value Set for serviceType
      */
-    serviceTypeExampleValueSet() {
+    static serviceTypeExampleValueSet() {
         return ServiceTypeValueSet;
     }
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet() {
+    static specialtyPreferredValueSet() {
         return C80PracticeCodesValueSet;
     }
     /**
      * Preferred-bound Value Set for appointmentType
      */
-    appointmentTypePreferredValueSet() {
+    static appointmentTypePreferredValueSet() {
         return V20276ValueSet;
     }
     /**
      * Preferred-bound Value Set for reasonCode
      */
-    reasonCodePreferredValueSet() {
+    static reasonCodePreferredValueSet() {
         return EncounterReasonValueSet;
     }
     /**

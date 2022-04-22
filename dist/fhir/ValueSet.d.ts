@@ -488,11 +488,11 @@ export declare class ValueSetComposeIncludeConceptDesignation extends fhir.Backb
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet(): LanguagesValueSetType;
+    static languagePreferredValueSet(): LanguagesValueSetType;
     /**
      * Extensible-bound Value Set for use
      */
-    useExtensibleValueSet(): DesignationUseValueSetType;
+    static useExtensibleValueSet(): DesignationUseValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -566,7 +566,7 @@ export declare class ValueSetComposeIncludeFilter extends fhir.BackboneElement i
     /**
      * Required-bound Value Set for op
      */
-    opRequiredValueSet(): FilterOperatorValueSetType;
+    static opRequiredValueSet(): FilterOperatorValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -993,7 +993,7 @@ export declare class ValueSet extends fhir.DomainResource implements IValueSet {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

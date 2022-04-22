@@ -125,11 +125,11 @@ export declare class AppointmentResponse extends fhir.DomainResource implements 
     /**
      * Extensible-bound Value Set for participantType
      */
-    participantTypeExtensibleValueSet(): EncounterParticipantTypeValueSetType;
+    static participantTypeExtensibleValueSet(): EncounterParticipantTypeValueSetType;
     /**
      * Required-bound Value Set for participantStatus
      */
-    participantStatusRequiredValueSet(): ParticipationstatusValueSetType;
+    static participantStatusRequiredValueSet(): ParticipationstatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

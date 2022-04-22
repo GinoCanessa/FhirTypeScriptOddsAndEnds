@@ -857,7 +857,7 @@ export class StructureMapStructure extends fhir.BackboneElement implements IStru
   /**
    * Required-bound Value Set for mode
    */
-  public modeRequiredValueSet():MapModelModeValueSetType {
+  public static modeRequiredValueSet():MapModelModeValueSetType {
     return MapModelModeValueSet;
   }
   /**
@@ -930,7 +930,7 @@ export class StructureMapGroupInput extends fhir.BackboneElement implements IStr
   /**
    * Required-bound Value Set for mode
    */
-  public modeRequiredValueSet():MapInputModeValueSetType {
+  public static modeRequiredValueSet():MapInputModeValueSetType {
     return MapInputModeValueSet;
   }
   /**
@@ -1407,7 +1407,7 @@ export class StructureMapGroupRuleSource extends fhir.BackboneElement implements
   /**
    * Required-bound Value Set for listMode
    */
-  public listModeRequiredValueSet():MapSourceListModeValueSetType {
+  public static listModeRequiredValueSet():MapSourceListModeValueSetType {
     return MapSourceListModeValueSet;
   }
   /**
@@ -1642,19 +1642,19 @@ export class StructureMapGroupRuleTarget extends fhir.BackboneElement implements
   /**
    * Required-bound Value Set for contextType
    */
-  public contextTypeRequiredValueSet():MapContextTypeValueSetType {
+  public static contextTypeRequiredValueSet():MapContextTypeValueSetType {
     return MapContextTypeValueSet;
   }
   /**
    * Required-bound Value Set for listMode
    */
-  public listModeRequiredValueSet():MapTargetListModeValueSetType {
+  public static listModeRequiredValueSet():MapTargetListModeValueSetType {
     return MapTargetListModeValueSet;
   }
   /**
    * Required-bound Value Set for transform
    */
-  public transformRequiredValueSet():MapTransformValueSetType {
+  public static transformRequiredValueSet():MapTransformValueSetType {
     return MapTransformValueSet;
   }
   /**
@@ -1855,7 +1855,7 @@ export class StructureMapGroup extends fhir.BackboneElement implements IStructur
   /**
    * Required-bound Value Set for typeMode
    */
-  public typeModeRequiredValueSet():MapGroupTypeModeValueSetType {
+  public static typeModeRequiredValueSet():MapGroupTypeModeValueSetType {
     return MapGroupTypeModeValueSet;
   }
   /**
@@ -2051,7 +2051,7 @@ export class StructureMap extends fhir.DomainResource implements IStructureMap {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**

@@ -168,7 +168,7 @@ export class DosageDoseAndRate extends fhir.FhirElement implements IDosageDoseAn
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():DoseRateTypeValueSetType {
+  public static typeExampleValueSet():DoseRateTypeValueSetType {
     return DoseRateTypeValueSet;
   }
   /**
@@ -289,31 +289,31 @@ export class Dosage extends fhir.BackboneElement implements IDosage {
   /**
    * Example-bound Value Set for asNeededBoolean
    */
-  public asNeededBooleanExampleValueSet():MedicationAsNeededReasonValueSetType {
+  public static asNeededBooleanExampleValueSet():MedicationAsNeededReasonValueSetType {
     return MedicationAsNeededReasonValueSet;
   }
   /**
    * Example-bound Value Set for asNeededCodeableConcept
    */
-  public asNeededCodeableConceptExampleValueSet():MedicationAsNeededReasonValueSetType {
+  public static asNeededCodeableConceptExampleValueSet():MedicationAsNeededReasonValueSetType {
     return MedicationAsNeededReasonValueSet;
   }
   /**
    * Example-bound Value Set for site
    */
-  public siteExampleValueSet():ApproachSiteCodesValueSetType {
+  public static siteExampleValueSet():ApproachSiteCodesValueSetType {
     return ApproachSiteCodesValueSet;
   }
   /**
    * Example-bound Value Set for route
    */
-  public routeExampleValueSet():RouteCodesValueSetType {
+  public static routeExampleValueSet():RouteCodesValueSetType {
     return RouteCodesValueSet;
   }
   /**
    * Example-bound Value Set for method
    */
-  public methodExampleValueSet():AdministrationMethodCodesValueSetType {
+  public static methodExampleValueSet():AdministrationMethodCodesValueSetType {
     return AdministrationMethodCodesValueSet;
   }
   /**

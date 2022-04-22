@@ -121,7 +121,7 @@ export declare class CareTeamParticipant extends fhir.BackboneElement implements
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet(): ParticipantRoleValueSetType;
+    static roleExampleValueSet(): ParticipantRoleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -202,11 +202,11 @@ export declare class CareTeam extends fhir.DomainResource implements ICareTeam {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): CareTeamStatusValueSetType;
+    static statusRequiredValueSet(): CareTeamStatusValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ClinicalFindingsValueSetType;
+    static reasonCodeExampleValueSet(): ClinicalFindingsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

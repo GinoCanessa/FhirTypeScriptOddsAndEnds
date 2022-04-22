@@ -250,25 +250,25 @@ export class ImmunizationEvaluation extends fhir.DomainResource implements IImmu
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ImmunizationEvaluationStatusValueSetType {
+  public static statusRequiredValueSet():ImmunizationEvaluationStatusValueSetType {
     return ImmunizationEvaluationStatusValueSet;
   }
   /**
    * Example-bound Value Set for targetDisease
    */
-  public targetDiseaseExampleValueSet():ImmunizationEvaluationTargetDiseaseValueSetType {
+  public static targetDiseaseExampleValueSet():ImmunizationEvaluationTargetDiseaseValueSetType {
     return ImmunizationEvaluationTargetDiseaseValueSet;
   }
   /**
    * Example-bound Value Set for doseStatus
    */
-  public doseStatusExampleValueSet():ImmunizationEvaluationDoseStatusValueSetType {
+  public static doseStatusExampleValueSet():ImmunizationEvaluationDoseStatusValueSetType {
     return ImmunizationEvaluationDoseStatusValueSet;
   }
   /**
    * Example-bound Value Set for doseStatusReason
    */
-  public doseStatusReasonExampleValueSet():ImmunizationEvaluationDoseStatusReasonValueSetType {
+  public static doseStatusReasonExampleValueSet():ImmunizationEvaluationDoseStatusReasonValueSetType {
     return ImmunizationEvaluationDoseStatusReasonValueSet;
   }
   /**

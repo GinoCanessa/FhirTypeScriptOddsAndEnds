@@ -79,13 +79,13 @@ export class Endpoint extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return EndpointStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for connectionType
      */
-    connectionTypeExtensibleValueSet() {
+    static connectionTypeExtensibleValueSet() {
         return EndpointConnectionTypeValueSet;
     }
     /**

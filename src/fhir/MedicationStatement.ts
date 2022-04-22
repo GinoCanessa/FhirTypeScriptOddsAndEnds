@@ -243,37 +243,37 @@ export class MedicationStatement extends fhir.DomainResource implements IMedicat
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():MedicationStatementStatusValueSetType {
+  public static statusRequiredValueSet():MedicationStatementStatusValueSetType {
     return MedicationStatementStatusValueSet;
   }
   /**
    * Example-bound Value Set for statusReason
    */
-  public statusReasonExampleValueSet():ReasonMedicationStatusCodesValueSetType {
+  public static statusReasonExampleValueSet():ReasonMedicationStatusCodesValueSetType {
     return ReasonMedicationStatusCodesValueSet;
   }
   /**
    * Preferred-bound Value Set for category
    */
-  public categoryPreferredValueSet():MedicationStatementCategoryValueSetType {
+  public static categoryPreferredValueSet():MedicationStatementCategoryValueSetType {
     return MedicationStatementCategoryValueSet;
   }
   /**
    * Example-bound Value Set for medicationCodeableConcept
    */
-  public medicationCodeableConceptExampleValueSet():MedicationCodesValueSetType {
+  public static medicationCodeableConceptExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for medicationReference
    */
-  public medicationReferenceExampleValueSet():MedicationCodesValueSetType {
+  public static medicationReferenceExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ConditionCodeValueSetType {
+  public static reasonCodeExampleValueSet():ConditionCodeValueSetType {
     return ConditionCodeValueSet;
   }
   /**

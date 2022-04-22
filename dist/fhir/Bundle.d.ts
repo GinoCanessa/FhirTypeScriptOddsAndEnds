@@ -293,7 +293,7 @@ export declare class BundleEntrySearch extends fhir.BackboneElement implements I
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): SearchEntryModeValueSetType;
+    static modeRequiredValueSet(): SearchEntryModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -358,7 +358,7 @@ export declare class BundleEntryRequest extends fhir.BackboneElement implements 
     /**
      * Required-bound Value Set for method
      */
-    methodRequiredValueSet(): HttpVerbValueSetType;
+    static methodRequiredValueSet(): HttpVerbValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -524,7 +524,7 @@ export declare class Bundle extends fhir.Resource implements IBundle {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): BundleTypeValueSetType;
+    static typeRequiredValueSet(): BundleTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

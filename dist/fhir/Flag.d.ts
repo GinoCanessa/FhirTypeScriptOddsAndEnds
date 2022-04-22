@@ -98,15 +98,15 @@ export declare class Flag extends fhir.DomainResource implements IFlag {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FlagStatusValueSetType;
+    static statusRequiredValueSet(): FlagStatusValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): FlagCategoryValueSetType;
+    static categoryExampleValueSet(): FlagCategoryValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): FlagCodeValueSetType;
+    static codeExampleValueSet(): FlagCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

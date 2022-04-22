@@ -385,7 +385,7 @@ export class EvidenceVariableCharacteristic extends fhir.BackboneElement impleme
   /**
    * Required-bound Value Set for groupMeasure
    */
-  public groupMeasureRequiredValueSet():GroupMeasureValueSetType {
+  public static groupMeasureRequiredValueSet():GroupMeasureValueSetType {
     return GroupMeasureValueSet;
   }
   /**
@@ -639,19 +639,19 @@ export class EvidenceVariable extends fhir.DomainResource implements IEvidenceVa
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Example-bound Value Set for topic
    */
-  public topicExampleValueSet():DefinitionTopicValueSetType {
+  public static topicExampleValueSet():DefinitionTopicValueSetType {
     return DefinitionTopicValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():VariableTypeValueSetType {
+  public static typeRequiredValueSet():VariableTypeValueSetType {
     return VariableTypeValueSet;
   }
   /**

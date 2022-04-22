@@ -146,13 +146,13 @@ export class DeviceMetricCalibration extends fhir.BackboneElement implements IDe
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():MetricCalibrationTypeValueSetType {
+  public static typeRequiredValueSet():MetricCalibrationTypeValueSetType {
     return MetricCalibrationTypeValueSet;
   }
   /**
    * Required-bound Value Set for state
    */
-  public stateRequiredValueSet():MetricCalibrationStateValueSetType {
+  public static stateRequiredValueSet():MetricCalibrationStateValueSetType {
     return MetricCalibrationStateValueSet;
   }
   /**
@@ -252,19 +252,19 @@ export class DeviceMetric extends fhir.DomainResource implements IDeviceMetric {
   /**
    * Required-bound Value Set for operationalStatus
    */
-  public operationalStatusRequiredValueSet():MetricOperationalStatusValueSetType {
+  public static operationalStatusRequiredValueSet():MetricOperationalStatusValueSetType {
     return MetricOperationalStatusValueSet;
   }
   /**
    * Required-bound Value Set for color
    */
-  public colorRequiredValueSet():MetricColorValueSetType {
+  public static colorRequiredValueSet():MetricColorValueSetType {
     return MetricColorValueSet;
   }
   /**
    * Required-bound Value Set for category
    */
-  public categoryRequiredValueSet():MetricCategoryValueSetType {
+  public static categoryRequiredValueSet():MetricCategoryValueSetType {
     return MetricCategoryValueSet;
   }
   /**

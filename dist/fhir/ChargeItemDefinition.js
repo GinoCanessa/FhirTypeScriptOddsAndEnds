@@ -85,7 +85,7 @@ export class ChargeItemDefinitionPropertyGroupPriceComponent extends fhir.Backbo
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return InvoicePriceComponentTypeValueSet;
     }
     /**
@@ -272,13 +272,13 @@ export class ChargeItemDefinition extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ChargeitemBillingcodesValueSet;
     }
     /**

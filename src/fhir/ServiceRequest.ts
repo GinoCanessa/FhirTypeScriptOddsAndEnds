@@ -484,73 +484,73 @@ export class ServiceRequest extends fhir.DomainResource implements IServiceReque
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():RequestStatusValueSetType {
+  public static statusRequiredValueSet():RequestStatusValueSetType {
     return RequestStatusValueSet;
   }
   /**
    * Required-bound Value Set for intent
    */
-  public intentRequiredValueSet():RequestIntentValueSetType {
+  public static intentRequiredValueSet():RequestIntentValueSetType {
     return RequestIntentValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():ServicerequestCategoryValueSetType {
+  public static categoryExampleValueSet():ServicerequestCategoryValueSetType {
     return ServicerequestCategoryValueSet;
   }
   /**
    * Required-bound Value Set for priority
    */
-  public priorityRequiredValueSet():RequestPriorityValueSetType {
+  public static priorityRequiredValueSet():RequestPriorityValueSetType {
     return RequestPriorityValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ProcedureCodeValueSetType {
+  public static codeExampleValueSet():ProcedureCodeValueSetType {
     return ProcedureCodeValueSet;
   }
   /**
    * Example-bound Value Set for orderDetail
    */
-  public orderDetailExampleValueSet():ServicerequestOrderdetailValueSetType {
+  public static orderDetailExampleValueSet():ServicerequestOrderdetailValueSetType {
     return ServicerequestOrderdetailValueSet;
   }
   /**
    * Example-bound Value Set for asNeededBoolean
    */
-  public asNeededBooleanExampleValueSet():MedicationAsNeededReasonValueSetType {
+  public static asNeededBooleanExampleValueSet():MedicationAsNeededReasonValueSetType {
     return MedicationAsNeededReasonValueSet;
   }
   /**
    * Example-bound Value Set for asNeededCodeableConcept
    */
-  public asNeededCodeableConceptExampleValueSet():MedicationAsNeededReasonValueSetType {
+  public static asNeededCodeableConceptExampleValueSet():MedicationAsNeededReasonValueSetType {
     return MedicationAsNeededReasonValueSet;
   }
   /**
    * Example-bound Value Set for performerType
    */
-  public performerTypeExampleValueSet():ParticipantRoleValueSetType {
+  public static performerTypeExampleValueSet():ParticipantRoleValueSetType {
     return ParticipantRoleValueSet;
   }
   /**
    * Example-bound Value Set for locationCode
    */
-  public locationCodeExampleValueSet():V3ServiceDeliveryLocationRoleTypeValueSetType {
+  public static locationCodeExampleValueSet():V3ServiceDeliveryLocationRoleTypeValueSetType {
     return V3ServiceDeliveryLocationRoleTypeValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ProcedureReasonValueSetType {
+  public static reasonCodeExampleValueSet():ProcedureReasonValueSetType {
     return ProcedureReasonValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():BodySiteValueSetType {
+  public static bodySiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**

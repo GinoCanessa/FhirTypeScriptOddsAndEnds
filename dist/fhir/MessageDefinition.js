@@ -50,7 +50,7 @@ export class MessageDefinitionFocus extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return ResourceTypesValueSet;
     }
     /**
@@ -270,19 +270,19 @@ export class MessageDefinition extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Required-bound Value Set for category
      */
-    categoryRequiredValueSet() {
+    static categoryRequiredValueSet() {
         return MessageSignificanceCategoryValueSet;
     }
     /**
      * Required-bound Value Set for responseRequired
      */
-    responseRequiredRequiredValueSet() {
+    static responseRequiredRequiredValueSet() {
         return MessageheaderResponseRequestValueSet;
     }
     /**

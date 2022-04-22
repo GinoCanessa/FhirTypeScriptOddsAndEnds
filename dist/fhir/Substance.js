@@ -67,13 +67,13 @@ export class SubstanceIngredient extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for substanceCodeableConcept
      */
-    substanceCodeableConceptExampleValueSet() {
+    static substanceCodeableConceptExampleValueSet() {
         return SubstanceCodeValueSet;
     }
     /**
      * Example-bound Value Set for substanceReference
      */
-    substanceReferenceExampleValueSet() {
+    static substanceReferenceExampleValueSet() {
         return SubstanceCodeValueSet;
     }
     /**
@@ -137,19 +137,19 @@ export class Substance extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return SubstanceStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for category
      */
-    categoryExtensibleValueSet() {
+    static categoryExtensibleValueSet() {
         return SubstanceCategoryValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return SubstanceCodeValueSet;
     }
     /**

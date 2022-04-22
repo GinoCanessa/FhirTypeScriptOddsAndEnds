@@ -306,7 +306,7 @@ export declare class ChargeItemDefinitionPropertyGroupPriceComponent extends fhi
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): InvoicePriceComponentTypeValueSetType;
+    static typeRequiredValueSet(): InvoicePriceComponentTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -498,11 +498,11 @@ export declare class ChargeItemDefinition extends fhir.DomainResource implements
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ChargeitemBillingcodesValueSetType;
+    static codeExampleValueSet(): ChargeitemBillingcodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

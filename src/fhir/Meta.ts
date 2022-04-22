@@ -119,13 +119,13 @@ export class Meta extends fhir.FhirElement implements IMeta {
   /**
    * Extensible-bound Value Set for security
    */
-  public securityExtensibleValueSet():SecurityLabelsValueSetType {
+  public static securityExtensibleValueSet():SecurityLabelsValueSetType {
     return SecurityLabelsValueSet;
   }
   /**
    * Example-bound Value Set for tag
    */
-  public tagExampleValueSet():CommonTagsValueSetType {
+  public static tagExampleValueSet():CommonTagsValueSetType {
     return CommonTagsValueSet;
   }
   /**

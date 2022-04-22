@@ -40,7 +40,7 @@ export class ProcedurePerformer extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for function
      */
-    functionExampleValueSet() {
+    static functionExampleValueSet() {
         return PerformerRoleValueSet;
     }
     /**
@@ -85,7 +85,7 @@ export class ProcedureFocalDevice extends fhir.BackboneElement {
     /**
      * Preferred-bound Value Set for action
      */
-    actionPreferredValueSet() {
+    static actionPreferredValueSet() {
         return DeviceActionValueSet;
     }
     /**
@@ -236,61 +236,61 @@ export class Procedure extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return EventStatusValueSet;
     }
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet() {
+    static statusReasonExampleValueSet() {
         return ProcedureNotPerformedReasonValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ProcedureCategoryValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ProcedureCodeValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ProcedureReasonValueSet;
     }
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet() {
+    static bodySiteExampleValueSet() {
         return BodySiteValueSet;
     }
     /**
      * Example-bound Value Set for outcome
      */
-    outcomeExampleValueSet() {
+    static outcomeExampleValueSet() {
         return ProcedureOutcomeValueSet;
     }
     /**
      * Example-bound Value Set for complication
      */
-    complicationExampleValueSet() {
+    static complicationExampleValueSet() {
         return ConditionCodeValueSet;
     }
     /**
      * Example-bound Value Set for followUp
      */
-    followUpExampleValueSet() {
+    static followUpExampleValueSet() {
         return ProcedureFollowupValueSet;
     }
     /**
      * Example-bound Value Set for usedCode
      */
-    usedCodeExampleValueSet() {
+    static usedCodeExampleValueSet() {
         return DeviceKindValueSet;
     }
     /**

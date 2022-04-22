@@ -338,7 +338,7 @@ export class MessageHeaderResponse extends fhir.BackboneElement implements IMess
   /**
    * Required-bound Value Set for code
    */
-  public codeRequiredValueSet():ResponseCodeValueSetType {
+  public static codeRequiredValueSet():ResponseCodeValueSetType {
     return ResponseCodeValueSet;
   }
   /**
@@ -444,7 +444,7 @@ export class MessageHeader extends fhir.DomainResource implements IMessageHeader
   /**
    * Example-bound Value Set for reason
    */
-  public reasonExampleValueSet():MessageReasonEncounterValueSetType {
+  public static reasonExampleValueSet():MessageReasonEncounterValueSetType {
     return MessageReasonEncounterValueSet;
   }
   /**

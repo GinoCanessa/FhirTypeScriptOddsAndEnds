@@ -307,7 +307,7 @@ export class InsurancePlanContact extends fhir.BackboneElement implements IInsur
   /**
    * Extensible-bound Value Set for purpose
    */
-  public purposeExtensibleValueSet():ContactentityTypeValueSetType {
+  public static purposeExtensibleValueSet():ContactentityTypeValueSetType {
     return ContactentityTypeValueSet;
   }
   /**
@@ -526,7 +526,7 @@ export class InsurancePlanPlanSpecificCostBenefitCost extends fhir.BackboneEleme
   /**
    * Required-bound Value Set for applicability
    */
-  public applicabilityRequiredValueSet():InsuranceplanApplicabilityValueSetType {
+  public static applicabilityRequiredValueSet():InsuranceplanApplicabilityValueSetType {
     return InsuranceplanApplicabilityValueSet;
   }
   /**
@@ -767,13 +767,13 @@ export class InsurancePlan extends fhir.DomainResource implements IInsurancePlan
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():InsuranceplanTypeValueSetType {
+  public static typeExampleValueSet():InsuranceplanTypeValueSetType {
     return InsuranceplanTypeValueSet;
   }
   /**

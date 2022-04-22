@@ -116,7 +116,7 @@ export class EnrollmentRequest extends fhir.DomainResource implements IEnrollmen
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():FmStatusValueSetType {
+  public static statusRequiredValueSet():FmStatusValueSetType {
     return FmStatusValueSet;
   }
   /**

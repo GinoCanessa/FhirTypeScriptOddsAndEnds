@@ -397,27 +397,27 @@ export declare class CarePlanActivityDetail extends fhir.BackboneElement impleme
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet(): CarePlanActivityKindValueSetType;
+    static kindRequiredValueSet(): CarePlanActivityKindValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ProcedureCodeValueSetType;
+    static codeExampleValueSet(): ProcedureCodeValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ClinicalFindingsValueSetType;
+    static reasonCodeExampleValueSet(): ClinicalFindingsValueSetType;
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): CarePlanActivityStatusValueSetType;
+    static statusRequiredValueSet(): CarePlanActivityStatusValueSetType;
     /**
      * Example-bound Value Set for productCodeableConcept
      */
-    productCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
+    static productCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for productReference
      */
-    productReferenceExampleValueSet(): MedicationCodesValueSetType;
+    static productReferenceExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -455,7 +455,7 @@ export declare class CarePlanActivity extends fhir.BackboneElement implements IC
     /**
      * Example-bound Value Set for outcomeCodeableConcept
      */
-    outcomeCodeableConceptExampleValueSet(): CarePlanActivityOutcomeValueSetType;
+    static outcomeCodeableConceptExampleValueSet(): CarePlanActivityOutcomeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -597,11 +597,11 @@ export declare class CarePlan extends fhir.DomainResource implements ICarePlan {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): RequestStatusValueSetType;
+    static statusRequiredValueSet(): RequestStatusValueSetType;
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet(): CarePlanIntentValueSetType;
+    static intentRequiredValueSet(): CarePlanIntentValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

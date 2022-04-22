@@ -33,7 +33,7 @@ export class MedicationDispensePerformer extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for function
      */
-    functionExampleValueSet() {
+    static functionExampleValueSet() {
         return MedicationdispensePerformerFunctionValueSet;
     }
     /**
@@ -84,13 +84,13 @@ export class MedicationDispenseSubstitution extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return V3ActSubstanceAdminSubstitutionCodeValueSet;
     }
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet() {
+    static reasonExampleValueSet() {
         return V3SubstanceAdminSubstitutionReasonValueSet;
     }
     /**
@@ -220,43 +220,43 @@ export class MedicationDispense extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return MedicationdispenseStatusValueSet;
     }
     /**
      * Example-bound Value Set for statusReasonCodeableConcept
      */
-    statusReasonCodeableConceptExampleValueSet() {
+    static statusReasonCodeableConceptExampleValueSet() {
         return MedicationdispenseStatusReasonValueSet;
     }
     /**
      * Example-bound Value Set for statusReasonReference
      */
-    statusReasonReferenceExampleValueSet() {
+    static statusReasonReferenceExampleValueSet() {
         return MedicationdispenseStatusReasonValueSet;
     }
     /**
      * Preferred-bound Value Set for category
      */
-    categoryPreferredValueSet() {
+    static categoryPreferredValueSet() {
         return MedicationdispenseCategoryValueSet;
     }
     /**
      * Example-bound Value Set for medicationCodeableConcept
      */
-    medicationCodeableConceptExampleValueSet() {
+    static medicationCodeableConceptExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for medicationReference
      */
-    medicationReferenceExampleValueSet() {
+    static medicationReferenceExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return V3ActPharmacySupplyTypeValueSet;
     }
     /**

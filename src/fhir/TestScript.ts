@@ -855,7 +855,7 @@ export class TestScriptOrigin extends fhir.BackboneElement implements ITestScrip
   /**
    * Extensible-bound Value Set for profile
    */
-  public profileExtensibleValueSet():TestscriptProfileOriginTypesValueSetType {
+  public static profileExtensibleValueSet():TestscriptProfileOriginTypesValueSetType {
     return TestscriptProfileOriginTypesValueSet;
   }
   /**
@@ -903,7 +903,7 @@ export class TestScriptDestination extends fhir.BackboneElement implements ITest
   /**
    * Extensible-bound Value Set for profile
    */
-  public profileExtensibleValueSet():TestscriptProfileDestinationTypesValueSetType {
+  public static profileExtensibleValueSet():TestscriptProfileDestinationTypesValueSetType {
     return TestscriptProfileDestinationTypesValueSet;
   }
   /**
@@ -1476,19 +1476,19 @@ export class TestScriptSetupActionOperation extends fhir.BackboneElement impleme
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():TestscriptOperationCodesValueSetType {
+  public static typeExtensibleValueSet():TestscriptOperationCodesValueSetType {
     return TestscriptOperationCodesValueSet;
   }
   /**
    * Required-bound Value Set for resource
    */
-  public resourceRequiredValueSet():DefinedTypesValueSetType {
+  public static resourceRequiredValueSet():DefinedTypesValueSetType {
     return DefinedTypesValueSet;
   }
   /**
    * Required-bound Value Set for method
    */
-  public methodRequiredValueSet():HttpOperationsValueSetType {
+  public static methodRequiredValueSet():HttpOperationsValueSetType {
     return HttpOperationsValueSet;
   }
   /**
@@ -1752,31 +1752,31 @@ export class TestScriptSetupActionAssert extends fhir.BackboneElement implements
   /**
    * Required-bound Value Set for direction
    */
-  public directionRequiredValueSet():AssertDirectionCodesValueSetType {
+  public static directionRequiredValueSet():AssertDirectionCodesValueSetType {
     return AssertDirectionCodesValueSet;
   }
   /**
    * Required-bound Value Set for operator
    */
-  public operatorRequiredValueSet():AssertOperatorCodesValueSetType {
+  public static operatorRequiredValueSet():AssertOperatorCodesValueSetType {
     return AssertOperatorCodesValueSet;
   }
   /**
    * Required-bound Value Set for requestMethod
    */
-  public requestMethodRequiredValueSet():HttpOperationsValueSetType {
+  public static requestMethodRequiredValueSet():HttpOperationsValueSetType {
     return HttpOperationsValueSet;
   }
   /**
    * Required-bound Value Set for resource
    */
-  public resourceRequiredValueSet():DefinedTypesValueSetType {
+  public static resourceRequiredValueSet():DefinedTypesValueSetType {
     return DefinedTypesValueSet;
   }
   /**
    * Required-bound Value Set for response
    */
-  public responseRequiredValueSet():AssertResponseCodeTypesValueSetType {
+  public static responseRequiredValueSet():AssertResponseCodeTypesValueSetType {
     return AssertResponseCodeTypesValueSet;
   }
   /**
@@ -2201,7 +2201,7 @@ export class TestScript extends fhir.DomainResource implements ITestScript {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**

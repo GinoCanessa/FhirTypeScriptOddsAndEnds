@@ -124,7 +124,7 @@ export declare class EpisodeOfCareStatusHistory extends fhir.BackboneElement imp
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): EpisodeOfCareStatusValueSetType;
+    static statusRequiredValueSet(): EpisodeOfCareStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -157,7 +157,7 @@ export declare class EpisodeOfCareDiagnosis extends fhir.BackboneElement impleme
     /**
      * Preferred-bound Value Set for role
      */
-    rolePreferredValueSet(): DiagnosisRoleValueSetType;
+    static rolePreferredValueSet(): DiagnosisRoleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -230,11 +230,11 @@ export declare class EpisodeOfCare extends fhir.DomainResource implements IEpiso
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): EpisodeOfCareStatusValueSetType;
+    static statusRequiredValueSet(): EpisodeOfCareStatusValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): EpisodeofcareTypeValueSetType;
+    static typeExampleValueSet(): EpisodeofcareTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

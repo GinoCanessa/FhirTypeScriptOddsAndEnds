@@ -184,7 +184,7 @@ export declare class NamingSystemUniqueId extends fhir.BackboneElement implement
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): NamingsystemIdentifierTypeValueSetType;
+    static typeRequiredValueSet(): NamingsystemIdentifierTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -289,15 +289,15 @@ export declare class NamingSystem extends fhir.DomainResource implements INaming
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet(): NamingsystemTypeValueSetType;
+    static kindRequiredValueSet(): NamingsystemTypeValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): IdentifierTypeValueSetType;
+    static typeExtensibleValueSet(): IdentifierTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

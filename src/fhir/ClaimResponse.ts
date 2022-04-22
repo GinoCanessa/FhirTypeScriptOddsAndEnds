@@ -684,13 +684,13 @@ export class ClaimResponseItemAdjudication extends fhir.BackboneElement implemen
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():AdjudicationValueSetType {
+  public static categoryExampleValueSet():AdjudicationValueSetType {
     return AdjudicationValueSet;
   }
   /**
    * Example-bound Value Set for reason
    */
-  public reasonExampleValueSet():AdjudicationReasonValueSetType {
+  public static reasonExampleValueSet():AdjudicationReasonValueSetType {
     return AdjudicationReasonValueSet;
   }
   /**
@@ -935,13 +935,13 @@ export class ClaimResponseAddItemDetailSubDetail extends fhir.BackboneElement im
   /**
    * Example-bound Value Set for productOrService
    */
-  public productOrServiceExampleValueSet():ServiceUsclsValueSetType {
+  public static productOrServiceExampleValueSet():ServiceUsclsValueSetType {
     return ServiceUsclsValueSet;
   }
   /**
    * Example-bound Value Set for modifier
    */
-  public modifierExampleValueSet():ClaimModifiersValueSetType {
+  public static modifierExampleValueSet():ClaimModifiersValueSetType {
     return ClaimModifiersValueSet;
   }
   /**
@@ -1033,13 +1033,13 @@ export class ClaimResponseAddItemDetail extends fhir.BackboneElement implements 
   /**
    * Example-bound Value Set for productOrService
    */
-  public productOrServiceExampleValueSet():ServiceUsclsValueSetType {
+  public static productOrServiceExampleValueSet():ServiceUsclsValueSetType {
     return ServiceUsclsValueSet;
   }
   /**
    * Example-bound Value Set for modifier
    */
-  public modifierExampleValueSet():ClaimModifiersValueSetType {
+  public static modifierExampleValueSet():ClaimModifiersValueSetType {
     return ClaimModifiersValueSet;
   }
   /**
@@ -1212,49 +1212,49 @@ export class ClaimResponseAddItem extends fhir.BackboneElement implements IClaim
   /**
    * Example-bound Value Set for productOrService
    */
-  public productOrServiceExampleValueSet():ServiceUsclsValueSetType {
+  public static productOrServiceExampleValueSet():ServiceUsclsValueSetType {
     return ServiceUsclsValueSet;
   }
   /**
    * Example-bound Value Set for modifier
    */
-  public modifierExampleValueSet():ClaimModifiersValueSetType {
+  public static modifierExampleValueSet():ClaimModifiersValueSetType {
     return ClaimModifiersValueSet;
   }
   /**
    * Example-bound Value Set for programCode
    */
-  public programCodeExampleValueSet():ExProgramCodeValueSetType {
+  public static programCodeExampleValueSet():ExProgramCodeValueSetType {
     return ExProgramCodeValueSet;
   }
   /**
    * Example-bound Value Set for locationCodeableConcept
    */
-  public locationCodeableConceptExampleValueSet():ServicePlaceValueSetType {
+  public static locationCodeableConceptExampleValueSet():ServicePlaceValueSetType {
     return ServicePlaceValueSet;
   }
   /**
    * Example-bound Value Set for locationAddress
    */
-  public locationAddressExampleValueSet():ServicePlaceValueSetType {
+  public static locationAddressExampleValueSet():ServicePlaceValueSetType {
     return ServicePlaceValueSet;
   }
   /**
    * Example-bound Value Set for locationReference
    */
-  public locationReferenceExampleValueSet():ServicePlaceValueSetType {
+  public static locationReferenceExampleValueSet():ServicePlaceValueSetType {
     return ServicePlaceValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():ToothValueSetType {
+  public static bodySiteExampleValueSet():ToothValueSetType {
     return ToothValueSet;
   }
   /**
    * Example-bound Value Set for subSite
    */
-  public subSiteExampleValueSet():SurfaceValueSetType {
+  public static subSiteExampleValueSet():SurfaceValueSetType {
     return SurfaceValueSet;
   }
   /**
@@ -1314,7 +1314,7 @@ export class ClaimResponseTotal extends fhir.BackboneElement implements IClaimRe
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():AdjudicationValueSetType {
+  public static categoryExampleValueSet():AdjudicationValueSetType {
     return AdjudicationValueSet;
   }
   /**
@@ -1380,13 +1380,13 @@ export class ClaimResponsePayment extends fhir.BackboneElement implements IClaim
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():ExPaymenttypeValueSetType {
+  public static typeExampleValueSet():ExPaymenttypeValueSetType {
     return ExPaymenttypeValueSet;
   }
   /**
    * Example-bound Value Set for adjustmentReason
    */
-  public adjustmentReasonExampleValueSet():PaymentAdjustmentReasonValueSetType {
+  public static adjustmentReasonExampleValueSet():PaymentAdjustmentReasonValueSetType {
     return PaymentAdjustmentReasonValueSet;
   }
   /**
@@ -1455,13 +1455,13 @@ export class ClaimResponseProcessNote extends fhir.BackboneElement implements IC
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():NoteTypeValueSetType {
+  public static typeRequiredValueSet():NoteTypeValueSetType {
     return NoteTypeValueSet;
   }
   /**
    * Preferred-bound Value Set for language
    */
-  public languagePreferredValueSet():LanguagesValueSetType {
+  public static languagePreferredValueSet():LanguagesValueSetType {
     return LanguagesValueSet;
   }
   /**
@@ -1597,7 +1597,7 @@ export class ClaimResponseError extends fhir.BackboneElement implements IClaimRe
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():AdjudicationErrorValueSetType {
+  public static codeExampleValueSet():AdjudicationErrorValueSetType {
     return AdjudicationErrorValueSet;
   }
   /**
@@ -1804,49 +1804,49 @@ export class ClaimResponse extends fhir.DomainResource implements IClaimResponse
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():FmStatusValueSetType {
+  public static statusRequiredValueSet():FmStatusValueSetType {
     return FmStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():ClaimTypeValueSetType {
+  public static typeExtensibleValueSet():ClaimTypeValueSetType {
     return ClaimTypeValueSet;
   }
   /**
    * Example-bound Value Set for subType
    */
-  public subTypeExampleValueSet():ClaimSubtypeValueSetType {
+  public static subTypeExampleValueSet():ClaimSubtypeValueSetType {
     return ClaimSubtypeValueSet;
   }
   /**
    * Required-bound Value Set for use
    */
-  public useRequiredValueSet():ClaimUseValueSetType {
+  public static useRequiredValueSet():ClaimUseValueSetType {
     return ClaimUseValueSet;
   }
   /**
    * Required-bound Value Set for outcome
    */
-  public outcomeRequiredValueSet():RemittanceOutcomeValueSetType {
+  public static outcomeRequiredValueSet():RemittanceOutcomeValueSetType {
     return RemittanceOutcomeValueSet;
   }
   /**
    * Example-bound Value Set for payeeType
    */
-  public payeeTypeExampleValueSet():PayeetypeValueSetType {
+  public static payeeTypeExampleValueSet():PayeetypeValueSetType {
     return PayeetypeValueSet;
   }
   /**
    * Example-bound Value Set for fundsReserve
    */
-  public fundsReserveExampleValueSet():FundsreserveValueSetType {
+  public static fundsReserveExampleValueSet():FundsreserveValueSetType {
     return FundsreserveValueSet;
   }
   /**
    * Example-bound Value Set for formCode
    */
-  public formCodeExampleValueSet():FormsValueSetType {
+  public static formCodeExampleValueSet():FormsValueSetType {
     return FormsValueSet;
   }
   /**

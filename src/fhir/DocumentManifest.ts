@@ -227,13 +227,13 @@ export class DocumentManifest extends fhir.DomainResource implements IDocumentMa
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():DocumentReferenceStatusValueSetType {
+  public static statusRequiredValueSet():DocumentReferenceStatusValueSetType {
     return DocumentReferenceStatusValueSet;
   }
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():V3ActCodeValueSetType {
+  public static typeExampleValueSet():V3ActCodeValueSetType {
     return V3ActCodeValueSet;
   }
   /**

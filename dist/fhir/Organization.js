@@ -30,7 +30,7 @@ export class OrganizationContact extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for purpose
      */
-    purposeExtensibleValueSet() {
+    static purposeExtensibleValueSet() {
         return ContactentityTypeValueSet;
     }
     /**
@@ -106,7 +106,7 @@ export class Organization extends fhir.DomainResource {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return OrganizationTypeValueSet;
     }
     /**

@@ -151,7 +151,7 @@ export declare class DosageDoseAndRate extends fhir.FhirElement implements IDosa
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): DoseRateTypeValueSetType;
+    static typeExampleValueSet(): DoseRateTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -240,23 +240,23 @@ export declare class Dosage extends fhir.BackboneElement implements IDosage {
     /**
      * Example-bound Value Set for asNeededBoolean
      */
-    asNeededBooleanExampleValueSet(): MedicationAsNeededReasonValueSetType;
+    static asNeededBooleanExampleValueSet(): MedicationAsNeededReasonValueSetType;
     /**
      * Example-bound Value Set for asNeededCodeableConcept
      */
-    asNeededCodeableConceptExampleValueSet(): MedicationAsNeededReasonValueSetType;
+    static asNeededCodeableConceptExampleValueSet(): MedicationAsNeededReasonValueSetType;
     /**
      * Example-bound Value Set for site
      */
-    siteExampleValueSet(): ApproachSiteCodesValueSetType;
+    static siteExampleValueSet(): ApproachSiteCodesValueSetType;
     /**
      * Example-bound Value Set for route
      */
-    routeExampleValueSet(): RouteCodesValueSetType;
+    static routeExampleValueSet(): RouteCodesValueSetType;
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet(): AdministrationMethodCodesValueSetType;
+    static methodExampleValueSet(): AdministrationMethodCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

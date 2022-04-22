@@ -113,7 +113,7 @@ export declare class OrganizationContact extends fhir.BackboneElement implements
     /**
      * Extensible-bound Value Set for purpose
      */
-    purposeExtensibleValueSet(): ContactentityTypeValueSetType;
+    static purposeExtensibleValueSet(): ContactentityTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -189,7 +189,7 @@ export declare class Organization extends fhir.DomainResource implements IOrgani
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): OrganizationTypeValueSetType;
+    static typeExampleValueSet(): OrganizationTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

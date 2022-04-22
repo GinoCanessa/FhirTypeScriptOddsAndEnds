@@ -132,19 +132,19 @@ export class MedicationRequestSubstitution extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for allowedBoolean
      */
-    allowedBooleanExampleValueSet() {
+    static allowedBooleanExampleValueSet() {
         return V3ActSubstanceAdminSubstitutionCodeValueSet;
     }
     /**
      * Example-bound Value Set for allowedCodeableConcept
      */
-    allowedCodeableConceptExampleValueSet() {
+    static allowedCodeableConceptExampleValueSet() {
         return V3ActSubstanceAdminSubstitutionCodeValueSet;
     }
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet() {
+    static reasonExampleValueSet() {
         return V3SubstanceAdminSubstitutionReasonValueSet;
     }
     /**
@@ -313,61 +313,61 @@ export class MedicationRequest extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return MedicationrequestStatusValueSet;
     }
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet() {
+    static statusReasonExampleValueSet() {
         return MedicationrequestStatusReasonValueSet;
     }
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet() {
+    static intentRequiredValueSet() {
         return MedicationrequestIntentValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return MedicationrequestCategoryValueSet;
     }
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**
      * Example-bound Value Set for medicationCodeableConcept
      */
-    medicationCodeableConceptExampleValueSet() {
+    static medicationCodeableConceptExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for medicationReference
      */
-    medicationReferenceExampleValueSet() {
+    static medicationReferenceExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for performerType
      */
-    performerTypeExampleValueSet() {
+    static performerTypeExampleValueSet() {
         return PerformerRoleValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ConditionCodeValueSet;
     }
     /**
      * Example-bound Value Set for courseOfTherapyType
      */
-    courseOfTherapyTypeExampleValueSet() {
+    static courseOfTherapyTypeExampleValueSet() {
         return MedicationrequestCourseOfTherapyValueSet;
     }
     /**

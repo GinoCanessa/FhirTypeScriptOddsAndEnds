@@ -36,7 +36,7 @@ export class ImmunizationRecommendationRecommendationDateCriterion extends fhir.
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ImmunizationRecommendationDateCriterionValueSet;
     }
     /**
@@ -135,31 +135,31 @@ export class ImmunizationRecommendationRecommendation extends fhir.BackboneEleme
     /**
      * Example-bound Value Set for vaccineCode
      */
-    vaccineCodeExampleValueSet() {
+    static vaccineCodeExampleValueSet() {
         return VaccineCodeValueSet;
     }
     /**
      * Example-bound Value Set for targetDisease
      */
-    targetDiseaseExampleValueSet() {
+    static targetDiseaseExampleValueSet() {
         return ImmunizationRecommendationTargetDiseaseValueSet;
     }
     /**
      * Example-bound Value Set for contraindicatedVaccineCode
      */
-    contraindicatedVaccineCodeExampleValueSet() {
+    static contraindicatedVaccineCodeExampleValueSet() {
         return VaccineCodeValueSet;
     }
     /**
      * Example-bound Value Set for forecastStatus
      */
-    forecastStatusExampleValueSet() {
+    static forecastStatusExampleValueSet() {
         return ImmunizationRecommendationStatusValueSet;
     }
     /**
      * Example-bound Value Set for forecastReason
      */
-    forecastReasonExampleValueSet() {
+    static forecastReasonExampleValueSet() {
         return ImmunizationRecommendationReasonValueSet;
     }
     /**

@@ -244,23 +244,23 @@ export declare class VerificationResultPrimarySource extends fhir.BackboneElemen
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): VerificationresultPrimarySourceTypeValueSetType;
+    static typeExampleValueSet(): VerificationresultPrimarySourceTypeValueSetType;
     /**
      * Example-bound Value Set for communicationMethod
      */
-    communicationMethodExampleValueSet(): VerificationresultCommunicationMethodValueSetType;
+    static communicationMethodExampleValueSet(): VerificationresultCommunicationMethodValueSetType;
     /**
      * Preferred-bound Value Set for validationStatus
      */
-    validationStatusPreferredValueSet(): VerificationresultValidationStatusValueSetType;
+    static validationStatusPreferredValueSet(): VerificationresultValidationStatusValueSetType;
     /**
      * Preferred-bound Value Set for canPushUpdates
      */
-    canPushUpdatesPreferredValueSet(): VerificationresultCanPushUpdatesValueSetType;
+    static canPushUpdatesPreferredValueSet(): VerificationresultCanPushUpdatesValueSetType;
     /**
      * Preferred-bound Value Set for pushTypeAvailable
      */
-    pushTypeAvailablePreferredValueSet(): VerificationresultPushTypeAvailableValueSetType;
+    static pushTypeAvailablePreferredValueSet(): VerificationresultPushTypeAvailableValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -321,7 +321,7 @@ export declare class VerificationResultAttestation extends fhir.BackboneElement 
     /**
      * Example-bound Value Set for communicationMethod
      */
-    communicationMethodExampleValueSet(): VerificationresultCommunicationMethodValueSetType;
+    static communicationMethodExampleValueSet(): VerificationresultCommunicationMethodValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -447,23 +447,23 @@ export declare class VerificationResult extends fhir.DomainResource implements I
     /**
      * Preferred-bound Value Set for need
      */
-    needPreferredValueSet(): VerificationresultNeedValueSetType;
+    static needPreferredValueSet(): VerificationresultNeedValueSetType;
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): VerificationresultStatusValueSetType;
+    static statusRequiredValueSet(): VerificationresultStatusValueSetType;
     /**
      * Preferred-bound Value Set for validationType
      */
-    validationTypePreferredValueSet(): VerificationresultValidationTypeValueSetType;
+    static validationTypePreferredValueSet(): VerificationresultValidationTypeValueSetType;
     /**
      * Example-bound Value Set for validationProcess
      */
-    validationProcessExampleValueSet(): VerificationresultValidationProcessValueSetType;
+    static validationProcessExampleValueSet(): VerificationresultValidationProcessValueSetType;
     /**
      * Preferred-bound Value Set for failureAction
      */
-    failureActionPreferredValueSet(): VerificationresultFailureActionValueSetType;
+    static failureActionPreferredValueSet(): VerificationresultFailureActionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

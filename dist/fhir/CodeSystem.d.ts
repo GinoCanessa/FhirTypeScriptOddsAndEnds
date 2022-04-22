@@ -446,7 +446,7 @@ export declare class CodeSystemFilter extends fhir.BackboneElement implements IC
     /**
      * Required-bound Value Set for operator
      */
-    operatorRequiredValueSet(): FilterOperatorValueSetType;
+    static operatorRequiredValueSet(): FilterOperatorValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -495,7 +495,7 @@ export declare class CodeSystemProperty extends fhir.BackboneElement implements 
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ConceptPropertyTypeValueSetType;
+    static typeRequiredValueSet(): ConceptPropertyTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -532,11 +532,11 @@ export declare class CodeSystemConceptDesignation extends fhir.BackboneElement i
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet(): LanguagesValueSetType;
+    static languagePreferredValueSet(): LanguagesValueSetType;
     /**
      * Extensible-bound Value Set for use
      */
-    useExtensibleValueSet(): DesignationUseValueSetType;
+    static useExtensibleValueSet(): DesignationUseValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -862,15 +862,15 @@ export declare class CodeSystem extends fhir.DomainResource implements ICodeSyst
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for hierarchyMeaning
      */
-    hierarchyMeaningRequiredValueSet(): CodesystemHierarchyMeaningValueSetType;
+    static hierarchyMeaningRequiredValueSet(): CodesystemHierarchyMeaningValueSetType;
     /**
      * Required-bound Value Set for content
      */
-    contentRequiredValueSet(): CodesystemContentModeValueSetType;
+    static contentRequiredValueSet(): CodesystemContentModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

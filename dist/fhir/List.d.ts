@@ -146,7 +146,7 @@ export declare class ListEntry extends fhir.BackboneElement implements IListEntr
     /**
      * Example-bound Value Set for flag
      */
-    flagExampleValueSet(): ListItemFlagValueSetType;
+    static flagExampleValueSet(): ListItemFlagValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -235,23 +235,23 @@ export declare class List extends fhir.DomainResource implements IList {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ListStatusValueSetType;
+    static statusRequiredValueSet(): ListStatusValueSetType;
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): ListModeValueSetType;
+    static modeRequiredValueSet(): ListModeValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ListExampleCodesValueSetType;
+    static codeExampleValueSet(): ListExampleCodesValueSetType;
     /**
      * Preferred-bound Value Set for orderedBy
      */
-    orderedByPreferredValueSet(): ListOrderValueSetType;
+    static orderedByPreferredValueSet(): ListOrderValueSetType;
     /**
      * Preferred-bound Value Set for emptyReason
      */
-    emptyReasonPreferredValueSet(): ListEmptyReasonValueSetType;
+    static emptyReasonPreferredValueSet(): ListEmptyReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

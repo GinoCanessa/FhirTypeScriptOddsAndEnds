@@ -80,7 +80,7 @@ export declare class Resource implements IResource {
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet(): LanguagesValueSetType;
+    static languagePreferredValueSet(): LanguagesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -120,7 +120,7 @@ export declare class RelatedArtifact extends fhir.FhirElement implements IRelate
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): RelatedArtifactTypeValueSetType;
+    static typeRequiredValueSet(): RelatedArtifactTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

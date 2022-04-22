@@ -326,31 +326,31 @@ export class Media extends fhir.DomainResource implements IMedia {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():EventStatusValueSetType {
+  public static statusRequiredValueSet():EventStatusValueSetType {
     return EventStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():MediaTypeValueSetType {
+  public static typeExtensibleValueSet():MediaTypeValueSetType {
     return MediaTypeValueSet;
   }
   /**
    * Example-bound Value Set for view
    */
-  public viewExampleValueSet():MediaViewValueSetType {
+  public static viewExampleValueSet():MediaViewValueSetType {
     return MediaViewValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ProcedureReasonValueSetType {
+  public static reasonCodeExampleValueSet():ProcedureReasonValueSetType {
     return ProcedureReasonValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():BodySiteValueSetType {
+  public static bodySiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**

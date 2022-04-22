@@ -268,7 +268,7 @@ export class ImagingStudySeriesPerformer extends fhir.BackboneElement implements
   /**
    * Extensible-bound Value Set for function
    */
-  public functionExtensibleValueSet():SeriesPerformerFunctionValueSetType {
+  public static functionExtensibleValueSet():SeriesPerformerFunctionValueSetType {
     return SeriesPerformerFunctionValueSet;
   }
   /**
@@ -445,19 +445,19 @@ export class ImagingStudySeries extends fhir.BackboneElement implements IImaging
   /**
    * Extensible-bound Value Set for modality
    */
-  public modalityExtensibleValueSet():DicomCid29AcquisitionModalityValueSetType {
+  public static modalityExtensibleValueSet():DicomCid29AcquisitionModalityValueSetType {
     return DicomCid29AcquisitionModalityValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():BodySiteValueSetType {
+  public static bodySiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**
    * Example-bound Value Set for laterality
    */
-  public lateralityExampleValueSet():BodysiteLateralityValueSetType {
+  public static lateralityExampleValueSet():BodysiteLateralityValueSetType {
     return BodysiteLateralityValueSet;
   }
   /**
@@ -628,19 +628,19 @@ export class ImagingStudy extends fhir.DomainResource implements IImagingStudy {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ImagingstudyStatusValueSetType {
+  public static statusRequiredValueSet():ImagingstudyStatusValueSetType {
     return ImagingstudyStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for modality
    */
-  public modalityExtensibleValueSet():DicomCid29AcquisitionModalityValueSetType {
+  public static modalityExtensibleValueSet():DicomCid29AcquisitionModalityValueSetType {
     return DicomCid29AcquisitionModalityValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ProcedureReasonValueSetType {
+  public static reasonCodeExampleValueSet():ProcedureReasonValueSetType {
     return ProcedureReasonValueSet;
   }
   /**

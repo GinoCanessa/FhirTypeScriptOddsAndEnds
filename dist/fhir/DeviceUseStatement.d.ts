@@ -171,11 +171,11 @@ export declare class DeviceUseStatement extends fhir.DomainResource implements I
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): DeviceStatementStatusValueSetType;
+    static statusRequiredValueSet(): DeviceStatementStatusValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): BodySiteValueSetType;
+    static bodySiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

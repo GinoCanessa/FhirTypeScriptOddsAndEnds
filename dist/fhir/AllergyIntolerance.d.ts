@@ -225,19 +225,19 @@ export declare class AllergyIntoleranceReaction extends fhir.BackboneElement imp
     /**
      * Example-bound Value Set for substance
      */
-    substanceExampleValueSet(): SubstanceCodeValueSetType;
+    static substanceExampleValueSet(): SubstanceCodeValueSetType;
     /**
      * Example-bound Value Set for manifestation
      */
-    manifestationExampleValueSet(): ClinicalFindingsValueSetType;
+    static manifestationExampleValueSet(): ClinicalFindingsValueSetType;
     /**
      * Required-bound Value Set for severity
      */
-    severityRequiredValueSet(): ReactionEventSeverityValueSetType;
+    static severityRequiredValueSet(): ReactionEventSeverityValueSetType;
     /**
      * Example-bound Value Set for exposureRoute
      */
-    exposureRouteExampleValueSet(): RouteCodesValueSetType;
+    static exposureRouteExampleValueSet(): RouteCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -369,27 +369,27 @@ export declare class AllergyIntolerance extends fhir.DomainResource implements I
     /**
      * Required-bound Value Set for clinicalStatus
      */
-    clinicalStatusRequiredValueSet(): AllergyintoleranceClinicalValueSetType;
+    static clinicalStatusRequiredValueSet(): AllergyintoleranceClinicalValueSetType;
     /**
      * Required-bound Value Set for verificationStatus
      */
-    verificationStatusRequiredValueSet(): AllergyintoleranceVerificationValueSetType;
+    static verificationStatusRequiredValueSet(): AllergyintoleranceVerificationValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): AllergyIntoleranceTypeValueSetType;
+    static typeRequiredValueSet(): AllergyIntoleranceTypeValueSetType;
     /**
      * Required-bound Value Set for category
      */
-    categoryRequiredValueSet(): AllergyIntoleranceCategoryValueSetType;
+    static categoryRequiredValueSet(): AllergyIntoleranceCategoryValueSetType;
     /**
      * Required-bound Value Set for criticality
      */
-    criticalityRequiredValueSet(): AllergyIntoleranceCriticalityValueSetType;
+    static criticalityRequiredValueSet(): AllergyIntoleranceCriticalityValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): AllergyintoleranceCodeValueSetType;
+    static codeExampleValueSet(): AllergyintoleranceCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

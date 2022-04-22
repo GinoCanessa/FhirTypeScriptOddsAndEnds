@@ -52,7 +52,7 @@ export class ClaimRelated extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for relationship
      */
-    relationshipExampleValueSet() {
+    static relationshipExampleValueSet() {
         return RelatedClaimRelationshipValueSet;
     }
     /**
@@ -94,7 +94,7 @@ export class ClaimPayee extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return PayeetypeValueSet;
     }
     /**
@@ -154,13 +154,13 @@ export class ClaimCareTeam extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet() {
+    static roleExampleValueSet() {
         return ClaimCareteamroleValueSet;
     }
     /**
      * Example-bound Value Set for qualification
      */
-    qualificationExampleValueSet() {
+    static qualificationExampleValueSet() {
         return ProviderQualificationValueSet;
     }
     /**
@@ -256,19 +256,19 @@ export class ClaimSupportingInfo extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ClaimInformationcategoryValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ClaimExceptionValueSet;
     }
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet() {
+    static reasonExampleValueSet() {
         return MissingToothReasonValueSet;
     }
     /**
@@ -355,19 +355,19 @@ export class ClaimDiagnosis extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ExDiagnosistypeValueSet;
     }
     /**
      * Example-bound Value Set for onAdmission
      */
-    onAdmissionExampleValueSet() {
+    static onAdmissionExampleValueSet() {
         return ExDiagnosisOnAdmissionValueSet;
     }
     /**
      * Example-bound Value Set for packageCode
      */
-    packageCodeExampleValueSet() {
+    static packageCodeExampleValueSet() {
         return ExDiagnosisrelatedgroupValueSet;
     }
     /**
@@ -439,19 +439,19 @@ export class ClaimProcedure extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ExProcedureTypeValueSet;
     }
     /**
      * Example-bound Value Set for procedureCodeableConcept
      */
-    procedureCodeableConceptExampleValueSet() {
+    static procedureCodeableConceptExampleValueSet() {
         return Icd10ProceduresValueSet;
     }
     /**
      * Example-bound Value Set for procedureReference
      */
-    procedureReferenceExampleValueSet() {
+    static procedureReferenceExampleValueSet() {
         return Icd10ProceduresValueSet;
     }
     /**
@@ -604,7 +604,7 @@ export class ClaimAccident extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return V3ActIncidentCodeValueSet;
     }
     /**
@@ -688,31 +688,31 @@ export class ClaimItemDetailSubDetail extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for revenue
      */
-    revenueExampleValueSet() {
+    static revenueExampleValueSet() {
         return ExRevenueCenterValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ExBenefitcategoryValueSet;
     }
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet() {
+    static productOrServiceExampleValueSet() {
         return ServiceUsclsValueSet;
     }
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet() {
+    static modifierExampleValueSet() {
         return ClaimModifiersValueSet;
     }
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet() {
+    static programCodeExampleValueSet() {
         return ExProgramCodeValueSet;
     }
     /**
@@ -823,31 +823,31 @@ export class ClaimItemDetail extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for revenue
      */
-    revenueExampleValueSet() {
+    static revenueExampleValueSet() {
         return ExRevenueCenterValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ExBenefitcategoryValueSet;
     }
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet() {
+    static productOrServiceExampleValueSet() {
         return ServiceUsclsValueSet;
     }
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet() {
+    static modifierExampleValueSet() {
         return ClaimModifiersValueSet;
     }
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet() {
+    static programCodeExampleValueSet() {
         return ExProgramCodeValueSet;
     }
     /**
@@ -1012,61 +1012,61 @@ export class ClaimItem extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for revenue
      */
-    revenueExampleValueSet() {
+    static revenueExampleValueSet() {
         return ExRevenueCenterValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ExBenefitcategoryValueSet;
     }
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet() {
+    static productOrServiceExampleValueSet() {
         return ServiceUsclsValueSet;
     }
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet() {
+    static modifierExampleValueSet() {
         return ClaimModifiersValueSet;
     }
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet() {
+    static programCodeExampleValueSet() {
         return ExProgramCodeValueSet;
     }
     /**
      * Example-bound Value Set for locationCodeableConcept
      */
-    locationCodeableConceptExampleValueSet() {
+    static locationCodeableConceptExampleValueSet() {
         return ServicePlaceValueSet;
     }
     /**
      * Example-bound Value Set for locationAddress
      */
-    locationAddressExampleValueSet() {
+    static locationAddressExampleValueSet() {
         return ServicePlaceValueSet;
     }
     /**
      * Example-bound Value Set for locationReference
      */
-    locationReferenceExampleValueSet() {
+    static locationReferenceExampleValueSet() {
         return ServicePlaceValueSet;
     }
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet() {
+    static bodySiteExampleValueSet() {
         return ToothValueSet;
     }
     /**
      * Example-bound Value Set for subSite
      */
-    subSiteExampleValueSet() {
+    static subSiteExampleValueSet() {
         return SurfaceValueSet;
     }
     /**
@@ -1283,37 +1283,37 @@ export class Claim extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return FmStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return ClaimTypeValueSet;
     }
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet() {
+    static subTypeExampleValueSet() {
         return ClaimSubtypeValueSet;
     }
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet() {
+    static useRequiredValueSet() {
         return ClaimUseValueSet;
     }
     /**
      * Example-bound Value Set for priority
      */
-    priorityExampleValueSet() {
+    static priorityExampleValueSet() {
         return ProcessPriorityValueSet;
     }
     /**
      * Example-bound Value Set for fundsReserve
      */
-    fundsReserveExampleValueSet() {
+    static fundsReserveExampleValueSet() {
         return FundsreserveValueSet;
     }
     /**

@@ -350,7 +350,7 @@ export declare class StructureDefinitionContext extends fhir.BackboneElement imp
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ExtensionContextTypeValueSetType;
+    static typeRequiredValueSet(): ExtensionContextTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -592,27 +592,27 @@ export declare class StructureDefinition extends fhir.DomainResource implements 
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Extensible-bound Value Set for keyword
      */
-    keywordExtensibleValueSet(): DefinitionUseValueSetType;
+    static keywordExtensibleValueSet(): DefinitionUseValueSetType;
     /**
      * Required-bound Value Set for fhirVersion
      */
-    fhirVersionRequiredValueSet(): FHIRVersionValueSetType;
+    static fhirVersionRequiredValueSet(): FHIRVersionValueSetType;
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet(): StructureDefinitionKindValueSetType;
+    static kindRequiredValueSet(): StructureDefinitionKindValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): DefinedTypesValueSetType;
+    static typeExtensibleValueSet(): DefinedTypesValueSetType;
     /**
      * Required-bound Value Set for derivation
      */
-    derivationRequiredValueSet(): TypeDerivationRuleValueSetType;
+    static derivationRequiredValueSet(): TypeDerivationRuleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

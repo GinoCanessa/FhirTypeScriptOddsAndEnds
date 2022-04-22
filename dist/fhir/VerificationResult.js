@@ -50,31 +50,31 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return VerificationresultPrimarySourceTypeValueSet;
     }
     /**
      * Example-bound Value Set for communicationMethod
      */
-    communicationMethodExampleValueSet() {
+    static communicationMethodExampleValueSet() {
         return VerificationresultCommunicationMethodValueSet;
     }
     /**
      * Preferred-bound Value Set for validationStatus
      */
-    validationStatusPreferredValueSet() {
+    static validationStatusPreferredValueSet() {
         return VerificationresultValidationStatusValueSet;
     }
     /**
      * Preferred-bound Value Set for canPushUpdates
      */
-    canPushUpdatesPreferredValueSet() {
+    static canPushUpdatesPreferredValueSet() {
         return VerificationresultCanPushUpdatesValueSet;
     }
     /**
      * Preferred-bound Value Set for pushTypeAvailable
      */
-    pushTypeAvailablePreferredValueSet() {
+    static pushTypeAvailablePreferredValueSet() {
         return VerificationresultPushTypeAvailableValueSet;
     }
     /**
@@ -152,7 +152,7 @@ export class VerificationResultAttestation extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for communicationMethod
      */
-    communicationMethodExampleValueSet() {
+    static communicationMethodExampleValueSet() {
         return VerificationresultCommunicationMethodValueSet;
     }
     /**
@@ -306,31 +306,31 @@ export class VerificationResult extends fhir.DomainResource {
     /**
      * Preferred-bound Value Set for need
      */
-    needPreferredValueSet() {
+    static needPreferredValueSet() {
         return VerificationresultNeedValueSet;
     }
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return VerificationresultStatusValueSet;
     }
     /**
      * Preferred-bound Value Set for validationType
      */
-    validationTypePreferredValueSet() {
+    static validationTypePreferredValueSet() {
         return VerificationresultValidationTypeValueSet;
     }
     /**
      * Example-bound Value Set for validationProcess
      */
-    validationProcessExampleValueSet() {
+    static validationProcessExampleValueSet() {
         return VerificationresultValidationProcessValueSet;
     }
     /**
      * Preferred-bound Value Set for failureAction
      */
-    failureActionPreferredValueSet() {
+    static failureActionPreferredValueSet() {
         return VerificationresultFailureActionValueSet;
     }
     /**

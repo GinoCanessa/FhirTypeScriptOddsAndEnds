@@ -432,11 +432,11 @@ export declare class EffectEvidenceSynthesisResultsByExposure extends fhir.Backb
     /**
      * Required-bound Value Set for exposureState
      */
-    exposureStateRequiredValueSet(): ExposureStateValueSetType;
+    static exposureStateRequiredValueSet(): ExposureStateValueSetType;
     /**
      * Extensible-bound Value Set for variantState
      */
-    variantStateExtensibleValueSet(): EvidenceVariantStateValueSetType;
+    static variantStateExtensibleValueSet(): EvidenceVariantStateValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -481,7 +481,7 @@ export declare class EffectEvidenceSynthesisEffectEstimatePrecisionEstimate exte
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): PrecisionEstimateTypeValueSetType;
+    static typeExtensibleValueSet(): PrecisionEstimateTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -530,15 +530,15 @@ export declare class EffectEvidenceSynthesisEffectEstimate extends fhir.Backbone
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): EffectEstimateTypeValueSetType;
+    static typeExtensibleValueSet(): EffectEstimateTypeValueSetType;
     /**
      * Extensible-bound Value Set for variantState
      */
-    variantStateExtensibleValueSet(): EvidenceVariantStateValueSetType;
+    static variantStateExtensibleValueSet(): EvidenceVariantStateValueSetType;
     /**
      * Required-bound Value Set for unitOfMeasure
      */
-    unitOfMeasureRequiredValueSet(): UcumUnitsValueSetType;
+    static unitOfMeasureRequiredValueSet(): UcumUnitsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -567,11 +567,11 @@ export declare class EffectEvidenceSynthesisCertaintyCertaintySubcomponent exten
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): CertaintySubcomponentTypeValueSetType;
+    static typeExtensibleValueSet(): CertaintySubcomponentTypeValueSetType;
     /**
      * Extensible-bound Value Set for rating
      */
-    ratingExtensibleValueSet(): CertaintySubcomponentRatingValueSetType;
+    static ratingExtensibleValueSet(): CertaintySubcomponentRatingValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -600,7 +600,7 @@ export declare class EffectEvidenceSynthesisCertainty extends fhir.BackboneEleme
     /**
      * Extensible-bound Value Set for rating
      */
-    ratingExtensibleValueSet(): EvidenceQualityValueSetType;
+    static ratingExtensibleValueSet(): EvidenceQualityValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -799,19 +799,19 @@ export declare class EffectEvidenceSynthesis extends fhir.DomainResource impleme
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): DefinitionTopicValueSetType;
+    static topicExampleValueSet(): DefinitionTopicValueSetType;
     /**
      * Extensible-bound Value Set for synthesisType
      */
-    synthesisTypeExtensibleValueSet(): SynthesisTypeValueSetType;
+    static synthesisTypeExtensibleValueSet(): SynthesisTypeValueSetType;
     /**
      * Extensible-bound Value Set for studyType
      */
-    studyTypeExtensibleValueSet(): StudyTypeValueSetType;
+    static studyTypeExtensibleValueSet(): StudyTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -94,13 +94,13 @@ export class EffectEvidenceSynthesisResultsByExposure extends fhir.BackboneEleme
     /**
      * Required-bound Value Set for exposureState
      */
-    exposureStateRequiredValueSet() {
+    static exposureStateRequiredValueSet() {
         return ExposureStateValueSet;
     }
     /**
      * Extensible-bound Value Set for variantState
      */
-    variantStateExtensibleValueSet() {
+    static variantStateExtensibleValueSet() {
         return EvidenceVariantStateValueSet;
     }
     /**
@@ -160,7 +160,7 @@ export class EffectEvidenceSynthesisEffectEstimatePrecisionEstimate extends fhir
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return PrecisionEstimateTypeValueSet;
     }
     /**
@@ -220,19 +220,19 @@ export class EffectEvidenceSynthesisEffectEstimate extends fhir.BackboneElement 
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return EffectEstimateTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for variantState
      */
-    variantStateExtensibleValueSet() {
+    static variantStateExtensibleValueSet() {
         return EvidenceVariantStateValueSet;
     }
     /**
      * Required-bound Value Set for unitOfMeasure
      */
-    unitOfMeasureRequiredValueSet() {
+    static unitOfMeasureRequiredValueSet() {
         return UcumUnitsValueSet;
     }
     /**
@@ -283,13 +283,13 @@ export class EffectEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return CertaintySubcomponentTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for rating
      */
-    ratingExtensibleValueSet() {
+    static ratingExtensibleValueSet() {
         return CertaintySubcomponentRatingValueSet;
     }
     /**
@@ -331,7 +331,7 @@ export class EffectEvidenceSynthesisCertainty extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for rating
      */
-    ratingExtensibleValueSet() {
+    static ratingExtensibleValueSet() {
         return EvidenceQualityValueSet;
     }
     /**
@@ -512,25 +512,25 @@ export class EffectEvidenceSynthesis extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet() {
+    static topicExampleValueSet() {
         return DefinitionTopicValueSet;
     }
     /**
      * Extensible-bound Value Set for synthesisType
      */
-    synthesisTypeExtensibleValueSet() {
+    static synthesisTypeExtensibleValueSet() {
         return SynthesisTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for studyType
      */
-    studyTypeExtensibleValueSet() {
+    static studyTypeExtensibleValueSet() {
         return StudyTypeValueSet;
     }
     /**

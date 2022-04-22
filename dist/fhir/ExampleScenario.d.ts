@@ -456,7 +456,7 @@ export declare class ExampleScenarioActor extends fhir.BackboneElement implement
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ExamplescenarioActorTypeValueSetType;
+    static typeRequiredValueSet(): ExamplescenarioActorTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -571,7 +571,7 @@ export declare class ExampleScenarioInstance extends fhir.BackboneElement implem
     /**
      * Required-bound Value Set for resourceType
      */
-    resourceTypeRequiredValueSet(): ResourceTypesValueSetType;
+    static resourceTypeRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -902,7 +902,7 @@ export declare class ExampleScenario extends fhir.DomainResource implements IExa
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

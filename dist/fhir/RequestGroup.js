@@ -39,7 +39,7 @@ export class RequestGroupActionCondition extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet() {
+    static kindRequiredValueSet() {
         return ActionConditionKindValueSet;
     }
     /**
@@ -96,7 +96,7 @@ export class RequestGroupActionRelatedAction extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for relationship
      */
-    relationshipRequiredValueSet() {
+    static relationshipRequiredValueSet() {
         return ActionRelationshipTypeValueSet;
     }
     /**
@@ -243,43 +243,43 @@ export class RequestGroupAction extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return ActionTypeValueSet;
     }
     /**
      * Required-bound Value Set for groupingBehavior
      */
-    groupingBehaviorRequiredValueSet() {
+    static groupingBehaviorRequiredValueSet() {
         return ActionGroupingBehaviorValueSet;
     }
     /**
      * Required-bound Value Set for selectionBehavior
      */
-    selectionBehaviorRequiredValueSet() {
+    static selectionBehaviorRequiredValueSet() {
         return ActionSelectionBehaviorValueSet;
     }
     /**
      * Required-bound Value Set for requiredBehavior
      */
-    requiredBehaviorRequiredValueSet() {
+    static requiredBehaviorRequiredValueSet() {
         return ActionRequiredBehaviorValueSet;
     }
     /**
      * Required-bound Value Set for precheckBehavior
      */
-    precheckBehaviorRequiredValueSet() {
+    static precheckBehaviorRequiredValueSet() {
         return ActionPrecheckBehaviorValueSet;
     }
     /**
      * Required-bound Value Set for cardinalityBehavior
      */
-    cardinalityBehaviorRequiredValueSet() {
+    static cardinalityBehaviorRequiredValueSet() {
         return ActionCardinalityBehaviorValueSet;
     }
     /**
@@ -454,19 +454,19 @@ export class RequestGroup extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return RequestStatusValueSet;
     }
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet() {
+    static intentRequiredValueSet() {
         return RequestIntentValueSet;
     }
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**

@@ -89,11 +89,11 @@ export declare class Identifier extends fhir.FhirElement implements IIdentifier 
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): IdentifierUseValueSetType;
+    static useRequiredValueSet(): IdentifierUseValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): IdentifierTypeValueSetType;
+    static typeExtensibleValueSet(): IdentifierTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

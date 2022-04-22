@@ -58,19 +58,19 @@ export class OperationOutcomeIssue extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for severity
      */
-    severityRequiredValueSet() {
+    static severityRequiredValueSet() {
         return IssueSeverityValueSet;
     }
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return IssueTypeValueSet;
     }
     /**
      * Example-bound Value Set for details
      */
-    detailsExampleValueSet() {
+    static detailsExampleValueSet() {
         return OperationOutcomeValueSet;
     }
     /**

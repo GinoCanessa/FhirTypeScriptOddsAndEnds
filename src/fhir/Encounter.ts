@@ -302,7 +302,7 @@ export class EncounterStatusHistory extends fhir.BackboneElement implements IEnc
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():EncounterStatusValueSetType {
+  public static statusRequiredValueSet():EncounterStatusValueSetType {
     return EncounterStatusValueSet;
   }
   /**
@@ -343,7 +343,7 @@ export class EncounterClassHistory extends fhir.BackboneElement implements IEnco
   /**
    * Extensible-bound Value Set for class
    */
-  public classExtensibleValueSet():V3ActEncounterCodeValueSetType {
+  public static classExtensibleValueSet():V3ActEncounterCodeValueSetType {
     return V3ActEncounterCodeValueSet;
   }
   /**
@@ -387,7 +387,7 @@ export class EncounterParticipant extends fhir.BackboneElement implements IEncou
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():EncounterParticipantTypeValueSetType {
+  public static typeExtensibleValueSet():EncounterParticipantTypeValueSetType {
     return EncounterParticipantTypeValueSet;
   }
   /**
@@ -436,7 +436,7 @@ export class EncounterDiagnosis extends fhir.BackboneElement implements IEncount
   /**
    * Preferred-bound Value Set for use
    */
-  public usePreferredValueSet():DiagnosisRoleValueSetType {
+  public static usePreferredValueSet():DiagnosisRoleValueSetType {
     return DiagnosisRoleValueSet;
   }
   /**
@@ -511,37 +511,37 @@ export class EncounterHospitalization extends fhir.BackboneElement implements IE
   /**
    * Preferred-bound Value Set for admitSource
    */
-  public admitSourcePreferredValueSet():EncounterAdmitSourceValueSetType {
+  public static admitSourcePreferredValueSet():EncounterAdmitSourceValueSetType {
     return EncounterAdmitSourceValueSet;
   }
   /**
    * Example-bound Value Set for reAdmission
    */
-  public reAdmissionExampleValueSet():V20092ValueSetType {
+  public static reAdmissionExampleValueSet():V20092ValueSetType {
     return V20092ValueSet;
   }
   /**
    * Example-bound Value Set for dietPreference
    */
-  public dietPreferenceExampleValueSet():EncounterDietValueSetType {
+  public static dietPreferenceExampleValueSet():EncounterDietValueSetType {
     return EncounterDietValueSet;
   }
   /**
    * Preferred-bound Value Set for specialCourtesy
    */
-  public specialCourtesyPreferredValueSet():EncounterSpecialCourtesyValueSetType {
+  public static specialCourtesyPreferredValueSet():EncounterSpecialCourtesyValueSetType {
     return EncounterSpecialCourtesyValueSet;
   }
   /**
    * Preferred-bound Value Set for specialArrangement
    */
-  public specialArrangementPreferredValueSet():EncounterSpecialArrangementsValueSetType {
+  public static specialArrangementPreferredValueSet():EncounterSpecialArrangementsValueSetType {
     return EncounterSpecialArrangementsValueSet;
   }
   /**
    * Example-bound Value Set for dischargeDisposition
    */
-  public dischargeDispositionExampleValueSet():EncounterDischargeDispositionValueSetType {
+  public static dischargeDispositionExampleValueSet():EncounterDischargeDispositionValueSetType {
     return EncounterDischargeDispositionValueSet;
   }
   /**
@@ -602,13 +602,13 @@ export class EncounterLocation extends fhir.BackboneElement implements IEncounte
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():EncounterLocationStatusValueSetType {
+  public static statusRequiredValueSet():EncounterLocationStatusValueSetType {
     return EncounterLocationStatusValueSet;
   }
   /**
    * Example-bound Value Set for physicalType
    */
-  public physicalTypeExampleValueSet():LocationPhysicalTypeValueSetType {
+  public static physicalTypeExampleValueSet():LocationPhysicalTypeValueSetType {
     return LocationPhysicalTypeValueSet;
   }
   /**
@@ -767,37 +767,37 @@ export class Encounter extends fhir.DomainResource implements IEncounter {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():EncounterStatusValueSetType {
+  public static statusRequiredValueSet():EncounterStatusValueSetType {
     return EncounterStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for class
    */
-  public classExtensibleValueSet():V3ActEncounterCodeValueSetType {
+  public static classExtensibleValueSet():V3ActEncounterCodeValueSetType {
     return V3ActEncounterCodeValueSet;
   }
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():EncounterTypeValueSetType {
+  public static typeExampleValueSet():EncounterTypeValueSetType {
     return EncounterTypeValueSet;
   }
   /**
    * Example-bound Value Set for serviceType
    */
-  public serviceTypeExampleValueSet():ServiceTypeValueSetType {
+  public static serviceTypeExampleValueSet():ServiceTypeValueSetType {
     return ServiceTypeValueSet;
   }
   /**
    * Example-bound Value Set for priority
    */
-  public priorityExampleValueSet():V3ActPriorityValueSetType {
+  public static priorityExampleValueSet():V3ActPriorityValueSetType {
     return V3ActPriorityValueSet;
   }
   /**
    * Preferred-bound Value Set for reasonCode
    */
-  public reasonCodePreferredValueSet():EncounterReasonValueSetType {
+  public static reasonCodePreferredValueSet():EncounterReasonValueSetType {
     return EncounterReasonValueSet;
   }
   /**

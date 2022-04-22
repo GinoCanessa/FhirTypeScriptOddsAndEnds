@@ -253,13 +253,13 @@ export class PatientContact extends fhir.BackboneElement implements IPatientCont
   /**
    * Extensible-bound Value Set for relationship
    */
-  public relationshipExtensibleValueSet():PatientContactrelationshipValueSetType {
+  public static relationshipExtensibleValueSet():PatientContactrelationshipValueSetType {
     return PatientContactrelationshipValueSet;
   }
   /**
    * Required-bound Value Set for gender
    */
-  public genderRequiredValueSet():AdministrativeGenderValueSetType {
+  public static genderRequiredValueSet():AdministrativeGenderValueSetType {
     return AdministrativeGenderValueSet;
   }
   /**
@@ -307,7 +307,7 @@ export class PatientCommunication extends fhir.BackboneElement implements IPatie
   /**
    * Preferred-bound Value Set for language
    */
-  public languagePreferredValueSet():LanguagesValueSetType {
+  public static languagePreferredValueSet():LanguagesValueSetType {
     return LanguagesValueSet;
   }
   /**
@@ -352,7 +352,7 @@ export class PatientLink extends fhir.BackboneElement implements IPatientLink {
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():LinkTypeValueSetType {
+  public static typeRequiredValueSet():LinkTypeValueSetType {
     return LinkTypeValueSet;
   }
   /**
@@ -516,13 +516,13 @@ export class Patient extends fhir.DomainResource implements IPatient {
   /**
    * Required-bound Value Set for gender
    */
-  public genderRequiredValueSet():AdministrativeGenderValueSetType {
+  public static genderRequiredValueSet():AdministrativeGenderValueSetType {
     return AdministrativeGenderValueSet;
   }
   /**
    * Extensible-bound Value Set for maritalStatus
    */
-  public maritalStatusExtensibleValueSet():MaritalStatusValueSetType {
+  public static maritalStatusExtensibleValueSet():MaritalStatusValueSetType {
     return MaritalStatusValueSet;
   }
   /**

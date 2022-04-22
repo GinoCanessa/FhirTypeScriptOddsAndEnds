@@ -39,13 +39,13 @@ export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for assessment
      */
-    assessmentExampleValueSet() {
+    static assessmentExampleValueSet() {
         return AdverseEventCausalityAssessValueSet;
     }
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet() {
+    static methodExampleValueSet() {
         return AdverseEventCausalityMethodValueSet;
     }
     /**
@@ -196,37 +196,37 @@ export class AdverseEvent extends fhir.DomainResource {
     /**
      * Required-bound Value Set for actuality
      */
-    actualityRequiredValueSet() {
+    static actualityRequiredValueSet() {
         return AdverseEventActualityValueSet;
     }
     /**
      * Extensible-bound Value Set for category
      */
-    categoryExtensibleValueSet() {
+    static categoryExtensibleValueSet() {
         return AdverseEventCategoryValueSet;
     }
     /**
      * Example-bound Value Set for event
      */
-    eventExampleValueSet() {
+    static eventExampleValueSet() {
         return AdverseEventTypeValueSet;
     }
     /**
      * Example-bound Value Set for seriousness
      */
-    seriousnessExampleValueSet() {
+    static seriousnessExampleValueSet() {
         return AdverseEventSeriousnessValueSet;
     }
     /**
      * Required-bound Value Set for severity
      */
-    severityRequiredValueSet() {
+    static severityRequiredValueSet() {
         return AdverseEventSeverityValueSet;
     }
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet() {
+    static outcomeRequiredValueSet() {
         return AdverseEventOutcomeValueSet;
     }
     /**

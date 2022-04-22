@@ -53,19 +53,19 @@ export class Schedule extends fhir.DomainResource {
     /**
      * Example-bound Value Set for serviceCategory
      */
-    serviceCategoryExampleValueSet() {
+    static serviceCategoryExampleValueSet() {
         return ServiceCategoryValueSet;
     }
     /**
      * Example-bound Value Set for serviceType
      */
-    serviceTypeExampleValueSet() {
+    static serviceTypeExampleValueSet() {
         return ServiceTypeValueSet;
     }
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet() {
+    static specialtyPreferredValueSet() {
         return C80PracticeCodesValueSet;
     }
     /**

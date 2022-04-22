@@ -362,7 +362,7 @@ export declare class DeviceUdiCarrier extends fhir.BackboneElement implements ID
     /**
      * Required-bound Value Set for entryType
      */
-    entryTypeRequiredValueSet(): UdiEntryTypeValueSetType;
+    static entryTypeRequiredValueSet(): UdiEntryTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -396,7 +396,7 @@ export declare class DeviceDeviceName extends fhir.BackboneElement implements ID
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): DeviceNametypeValueSetType;
+    static typeRequiredValueSet(): DeviceNametypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -640,15 +640,15 @@ export declare class Device extends fhir.DomainResource implements IDevice {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): DeviceStatusValueSetType;
+    static statusRequiredValueSet(): DeviceStatusValueSetType;
     /**
      * Extensible-bound Value Set for statusReason
      */
-    statusReasonExtensibleValueSet(): DeviceStatusReasonValueSetType;
+    static statusReasonExtensibleValueSet(): DeviceStatusReasonValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): DeviceTypeValueSetType;
+    static typeExampleValueSet(): DeviceTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

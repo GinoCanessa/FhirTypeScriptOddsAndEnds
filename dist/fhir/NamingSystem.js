@@ -53,7 +53,7 @@ export class NamingSystemUniqueId extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return NamingsystemIdentifierTypeValueSet;
     }
     /**
@@ -177,19 +177,19 @@ export class NamingSystem extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet() {
+    static kindRequiredValueSet() {
         return NamingsystemTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return IdentifierTypeValueSet;
     }
     /**

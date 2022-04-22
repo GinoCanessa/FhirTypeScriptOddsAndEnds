@@ -179,7 +179,7 @@ export class ImmunizationRecommendationRecommendationDateCriterion extends fhir.
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ImmunizationRecommendationDateCriterionValueSetType {
+  public static codeExampleValueSet():ImmunizationRecommendationDateCriterionValueSetType {
     return ImmunizationRecommendationDateCriterionValueSet;
   }
   /**
@@ -309,31 +309,31 @@ export class ImmunizationRecommendationRecommendation extends fhir.BackboneEleme
   /**
    * Example-bound Value Set for vaccineCode
    */
-  public vaccineCodeExampleValueSet():VaccineCodeValueSetType {
+  public static vaccineCodeExampleValueSet():VaccineCodeValueSetType {
     return VaccineCodeValueSet;
   }
   /**
    * Example-bound Value Set for targetDisease
    */
-  public targetDiseaseExampleValueSet():ImmunizationRecommendationTargetDiseaseValueSetType {
+  public static targetDiseaseExampleValueSet():ImmunizationRecommendationTargetDiseaseValueSetType {
     return ImmunizationRecommendationTargetDiseaseValueSet;
   }
   /**
    * Example-bound Value Set for contraindicatedVaccineCode
    */
-  public contraindicatedVaccineCodeExampleValueSet():VaccineCodeValueSetType {
+  public static contraindicatedVaccineCodeExampleValueSet():VaccineCodeValueSetType {
     return VaccineCodeValueSet;
   }
   /**
    * Example-bound Value Set for forecastStatus
    */
-  public forecastStatusExampleValueSet():ImmunizationRecommendationStatusValueSetType {
+  public static forecastStatusExampleValueSet():ImmunizationRecommendationStatusValueSetType {
     return ImmunizationRecommendationStatusValueSet;
   }
   /**
    * Example-bound Value Set for forecastReason
    */
-  public forecastReasonExampleValueSet():ImmunizationRecommendationReasonValueSetType {
+  public static forecastReasonExampleValueSet():ImmunizationRecommendationReasonValueSetType {
     return ImmunizationRecommendationReasonValueSet;
   }
   /**

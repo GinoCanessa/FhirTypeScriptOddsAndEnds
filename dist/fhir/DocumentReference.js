@@ -41,7 +41,7 @@ export class DocumentReferenceRelatesTo extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return DocumentRelationshipTypeValueSet;
     }
     /**
@@ -86,7 +86,7 @@ export class DocumentReferenceContent extends fhir.BackboneElement {
     /**
      * Preferred-bound Value Set for format
      */
-    formatPreferredValueSet() {
+    static formatPreferredValueSet() {
         return FormatcodesValueSet;
     }
     /**
@@ -140,19 +140,19 @@ export class DocumentReferenceContext extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for event
      */
-    eventExampleValueSet() {
+    static eventExampleValueSet() {
         return V3ActCodeValueSet;
     }
     /**
      * Example-bound Value Set for facilityType
      */
-    facilityTypeExampleValueSet() {
+    static facilityTypeExampleValueSet() {
         return C80FacilitycodesValueSet;
     }
     /**
      * Example-bound Value Set for practiceSetting
      */
-    practiceSettingExampleValueSet() {
+    static practiceSettingExampleValueSet() {
         return C80PracticeCodesValueSet;
     }
     /**
@@ -264,31 +264,31 @@ export class DocumentReference extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return DocumentReferenceStatusValueSet;
     }
     /**
      * Required-bound Value Set for docStatus
      */
-    docStatusRequiredValueSet() {
+    static docStatusRequiredValueSet() {
         return CompositionStatusValueSet;
     }
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet() {
+    static typePreferredValueSet() {
         return C80DocTypecodesValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return DocumentClasscodesValueSet;
     }
     /**
      * Extensible-bound Value Set for securityLabel
      */
-    securityLabelExtensibleValueSet() {
+    static securityLabelExtensibleValueSet() {
         return SecurityLabelsValueSet;
     }
     /**

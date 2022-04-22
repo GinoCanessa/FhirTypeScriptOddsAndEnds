@@ -79,13 +79,13 @@ export class PaymentNotice extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return FmStatusValueSet;
     }
     /**
      * Example-bound Value Set for paymentStatus
      */
-    paymentStatusExampleValueSet() {
+    static paymentStatusExampleValueSet() {
         return PaymentStatusValueSet;
     }
     /**

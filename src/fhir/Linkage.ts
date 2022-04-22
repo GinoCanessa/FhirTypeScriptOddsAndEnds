@@ -81,7 +81,7 @@ export class LinkageItem extends fhir.BackboneElement implements ILinkageItem {
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():LinkageTypeValueSetType {
+  public static typeRequiredValueSet():LinkageTypeValueSetType {
     return LinkageTypeValueSet;
   }
   /**

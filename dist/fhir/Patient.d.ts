@@ -232,11 +232,11 @@ export declare class PatientContact extends fhir.BackboneElement implements IPat
     /**
      * Extensible-bound Value Set for relationship
      */
-    relationshipExtensibleValueSet(): PatientContactrelationshipValueSetType;
+    static relationshipExtensibleValueSet(): PatientContactrelationshipValueSetType;
     /**
      * Required-bound Value Set for gender
      */
-    genderRequiredValueSet(): AdministrativeGenderValueSetType;
+    static genderRequiredValueSet(): AdministrativeGenderValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -265,7 +265,7 @@ export declare class PatientCommunication extends fhir.BackboneElement implement
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet(): LanguagesValueSetType;
+    static languagePreferredValueSet(): LanguagesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -294,7 +294,7 @@ export declare class PatientLink extends fhir.BackboneElement implements IPatien
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): LinkTypeValueSetType;
+    static typeRequiredValueSet(): LinkTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -420,11 +420,11 @@ export declare class Patient extends fhir.DomainResource implements IPatient {
     /**
      * Required-bound Value Set for gender
      */
-    genderRequiredValueSet(): AdministrativeGenderValueSetType;
+    static genderRequiredValueSet(): AdministrativeGenderValueSetType;
     /**
      * Extensible-bound Value Set for maritalStatus
      */
-    maritalStatusExtensibleValueSet(): MaritalStatusValueSetType;
+    static maritalStatusExtensibleValueSet(): MaritalStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

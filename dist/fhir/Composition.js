@@ -45,7 +45,7 @@ export class CompositionAttester extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return CompositionAttestationModeValueSet;
     }
     /**
@@ -96,7 +96,7 @@ export class CompositionRelatesTo extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return DocumentRelationshipTypeValueSet;
     }
     /**
@@ -141,7 +141,7 @@ export class CompositionEvent extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return V3ActCodeValueSet;
     }
     /**
@@ -210,25 +210,25 @@ export class CompositionSection extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return DocSectionCodesValueSet;
     }
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return ListModeValueSet;
     }
     /**
      * Preferred-bound Value Set for orderedBy
      */
-    orderedByPreferredValueSet() {
+    static orderedByPreferredValueSet() {
         return ListOrderValueSet;
     }
     /**
      * Preferred-bound Value Set for emptyReason
      */
-    emptyReasonPreferredValueSet() {
+    static emptyReasonPreferredValueSet() {
         return ListEmptyReasonValueSet;
     }
     /**
@@ -355,25 +355,25 @@ export class Composition extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return CompositionStatusValueSet;
     }
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet() {
+    static typePreferredValueSet() {
         return DocTypecodesValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return DocumentClasscodesValueSet;
     }
     /**
      * Required-bound Value Set for confidentiality
      */
-    confidentialityRequiredValueSet() {
+    static confidentialityRequiredValueSet() {
         return V3ConfidentialityClassificationValueSet;
     }
     /**

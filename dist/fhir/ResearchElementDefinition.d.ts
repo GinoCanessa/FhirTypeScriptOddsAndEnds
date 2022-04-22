@@ -481,15 +481,15 @@ export declare class ResearchElementDefinitionCharacteristic extends fhir.Backbo
     /**
      * Required-bound Value Set for unitOfMeasure
      */
-    unitOfMeasureRequiredValueSet(): UcumUnitsValueSetType;
+    static unitOfMeasureRequiredValueSet(): UcumUnitsValueSetType;
     /**
      * Required-bound Value Set for studyEffectiveGroupMeasure
      */
-    studyEffectiveGroupMeasureRequiredValueSet(): GroupMeasureValueSetType;
+    static studyEffectiveGroupMeasureRequiredValueSet(): GroupMeasureValueSetType;
     /**
      * Required-bound Value Set for participantEffectiveGroupMeasure
      */
-    participantEffectiveGroupMeasureRequiredValueSet(): GroupMeasureValueSetType;
+    static participantEffectiveGroupMeasureRequiredValueSet(): GroupMeasureValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -728,27 +728,27 @@ export declare class ResearchElementDefinition extends fhir.DomainResource imple
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): DefinitionTopicValueSetType;
+    static topicExampleValueSet(): DefinitionTopicValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ResearchElementTypeValueSetType;
+    static typeRequiredValueSet(): ResearchElementTypeValueSetType;
     /**
      * Required-bound Value Set for variableType
      */
-    variableTypeRequiredValueSet(): VariableTypeValueSetType;
+    static variableTypeRequiredValueSet(): VariableTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

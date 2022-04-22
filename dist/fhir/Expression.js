@@ -50,7 +50,7 @@ export class Expression extends fhir.FhirElement {
     /**
      * Extensible-bound Value Set for language
      */
-    languageExtensibleValueSet() {
+    static languageExtensibleValueSet() {
         return ExpressionLanguageValueSet;
     }
     /**

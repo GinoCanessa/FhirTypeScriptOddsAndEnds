@@ -697,7 +697,7 @@ export declare class ClaimRelated extends fhir.BackboneElement implements IClaim
     /**
      * Example-bound Value Set for relationship
      */
-    relationshipExampleValueSet(): RelatedClaimRelationshipValueSetType;
+    static relationshipExampleValueSet(): RelatedClaimRelationshipValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -722,7 +722,7 @@ export declare class ClaimPayee extends fhir.BackboneElement implements IClaimPa
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): PayeetypeValueSetType;
+    static typeExampleValueSet(): PayeetypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -767,11 +767,11 @@ export declare class ClaimCareTeam extends fhir.BackboneElement implements IClai
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet(): ClaimCareteamroleValueSetType;
+    static roleExampleValueSet(): ClaimCareteamroleValueSetType;
     /**
      * Example-bound Value Set for qualification
      */
-    qualificationExampleValueSet(): ProviderQualificationValueSetType;
+    static qualificationExampleValueSet(): ProviderQualificationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -848,15 +848,15 @@ export declare class ClaimSupportingInfo extends fhir.BackboneElement implements
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ClaimInformationcategoryValueSetType;
+    static categoryExampleValueSet(): ClaimInformationcategoryValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ClaimExceptionValueSetType;
+    static codeExampleValueSet(): ClaimExceptionValueSetType;
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet(): MissingToothReasonValueSetType;
+    static reasonExampleValueSet(): MissingToothReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -901,15 +901,15 @@ export declare class ClaimDiagnosis extends fhir.BackboneElement implements ICla
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ExDiagnosistypeValueSetType;
+    static typeExampleValueSet(): ExDiagnosistypeValueSetType;
     /**
      * Example-bound Value Set for onAdmission
      */
-    onAdmissionExampleValueSet(): ExDiagnosisOnAdmissionValueSetType;
+    static onAdmissionExampleValueSet(): ExDiagnosisOnAdmissionValueSetType;
     /**
      * Example-bound Value Set for packageCode
      */
-    packageCodeExampleValueSet(): ExDiagnosisrelatedgroupValueSetType;
+    static packageCodeExampleValueSet(): ExDiagnosisrelatedgroupValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -958,15 +958,15 @@ export declare class ClaimProcedure extends fhir.BackboneElement implements ICla
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ExProcedureTypeValueSetType;
+    static typeExampleValueSet(): ExProcedureTypeValueSetType;
     /**
      * Example-bound Value Set for procedureCodeableConcept
      */
-    procedureCodeableConceptExampleValueSet(): Icd10ProceduresValueSetType;
+    static procedureCodeableConceptExampleValueSet(): Icd10ProceduresValueSetType;
     /**
      * Example-bound Value Set for procedureReference
      */
-    procedureReferenceExampleValueSet(): Icd10ProceduresValueSetType;
+    static procedureReferenceExampleValueSet(): Icd10ProceduresValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1060,7 +1060,7 @@ export declare class ClaimAccident extends fhir.BackboneElement implements IClai
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): V3ActIncidentCodeValueSetType;
+    static typeExtensibleValueSet(): V3ActIncidentCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1129,23 +1129,23 @@ export declare class ClaimItemDetailSubDetail extends fhir.BackboneElement imple
     /**
      * Example-bound Value Set for revenue
      */
-    revenueExampleValueSet(): ExRevenueCenterValueSetType;
+    static revenueExampleValueSet(): ExRevenueCenterValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    static categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    static programCodeExampleValueSet(): ExProgramCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1218,23 +1218,23 @@ export declare class ClaimItemDetail extends fhir.BackboneElement implements ICl
     /**
      * Example-bound Value Set for revenue
      */
-    revenueExampleValueSet(): ExRevenueCenterValueSetType;
+    static revenueExampleValueSet(): ExRevenueCenterValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    static categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    static programCodeExampleValueSet(): ExProgramCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1375,43 +1375,43 @@ export declare class ClaimItem extends fhir.BackboneElement implements IClaimIte
     /**
      * Example-bound Value Set for revenue
      */
-    revenueExampleValueSet(): ExRevenueCenterValueSetType;
+    static revenueExampleValueSet(): ExRevenueCenterValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    static categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    static programCodeExampleValueSet(): ExProgramCodeValueSetType;
     /**
      * Example-bound Value Set for locationCodeableConcept
      */
-    locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
+    static locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for locationAddress
      */
-    locationAddressExampleValueSet(): ServicePlaceValueSetType;
+    static locationAddressExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for locationReference
      */
-    locationReferenceExampleValueSet(): ServicePlaceValueSetType;
+    static locationReferenceExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): ToothValueSetType;
+    static bodySiteExampleValueSet(): ToothValueSetType;
     /**
      * Example-bound Value Set for subSite
      */
-    subSiteExampleValueSet(): SurfaceValueSetType;
+    static subSiteExampleValueSet(): SurfaceValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1552,27 +1552,27 @@ export declare class Claim extends fhir.DomainResource implements IClaim {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): ClaimTypeValueSetType;
+    static typeExtensibleValueSet(): ClaimTypeValueSetType;
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet(): ClaimSubtypeValueSetType;
+    static subTypeExampleValueSet(): ClaimSubtypeValueSetType;
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): ClaimUseValueSetType;
+    static useRequiredValueSet(): ClaimUseValueSetType;
     /**
      * Example-bound Value Set for priority
      */
-    priorityExampleValueSet(): ProcessPriorityValueSetType;
+    static priorityExampleValueSet(): ProcessPriorityValueSetType;
     /**
      * Example-bound Value Set for fundsReserve
      */
-    fundsReserveExampleValueSet(): FundsreserveValueSetType;
+    static fundsReserveExampleValueSet(): FundsreserveValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

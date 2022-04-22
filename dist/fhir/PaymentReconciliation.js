@@ -57,7 +57,7 @@ export class PaymentReconciliationDetail extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return PaymentTypeValueSet;
     }
     /**
@@ -126,7 +126,7 @@ export class PaymentReconciliationProcessNote extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return NoteTypeValueSet;
     }
     /**
@@ -229,19 +229,19 @@ export class PaymentReconciliation extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return FmStatusValueSet;
     }
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet() {
+    static outcomeRequiredValueSet() {
         return RemittanceOutcomeValueSet;
     }
     /**
      * Example-bound Value Set for formCode
      */
-    formCodeExampleValueSet() {
+    static formCodeExampleValueSet() {
         return FormsValueSet;
     }
     /**

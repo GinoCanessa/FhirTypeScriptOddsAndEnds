@@ -119,15 +119,15 @@ export declare class OperationOutcomeIssue extends fhir.BackboneElement implemen
     /**
      * Required-bound Value Set for severity
      */
-    severityRequiredValueSet(): IssueSeverityValueSetType;
+    static severityRequiredValueSet(): IssueSeverityValueSetType;
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): IssueTypeValueSetType;
+    static codeRequiredValueSet(): IssueTypeValueSetType;
     /**
      * Example-bound Value Set for details
      */
-    detailsExampleValueSet(): OperationOutcomeValueSetType;
+    static detailsExampleValueSet(): OperationOutcomeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

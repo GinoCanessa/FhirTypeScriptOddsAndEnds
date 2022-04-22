@@ -365,7 +365,7 @@ export class Group extends fhir.DomainResource implements IGroup {
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():GroupTypeValueSetType {
+  public static typeRequiredValueSet():GroupTypeValueSetType {
     return GroupTypeValueSet;
   }
   /**

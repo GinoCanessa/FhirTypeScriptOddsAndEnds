@@ -239,7 +239,7 @@ export class ProcedurePerformer extends fhir.BackboneElement implements IProcedu
   /**
    * Example-bound Value Set for function
    */
-  public functionExampleValueSet():PerformerRoleValueSetType {
+  public static functionExampleValueSet():PerformerRoleValueSetType {
     return PerformerRoleValueSet;
   }
   /**
@@ -279,7 +279,7 @@ export class ProcedureFocalDevice extends fhir.BackboneElement implements IProce
   /**
    * Preferred-bound Value Set for action
    */
-  public actionPreferredValueSet():DeviceActionValueSetType {
+  public static actionPreferredValueSet():DeviceActionValueSetType {
     return DeviceActionValueSet;
   }
   /**
@@ -501,61 +501,61 @@ export class Procedure extends fhir.DomainResource implements IProcedure {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():EventStatusValueSetType {
+  public static statusRequiredValueSet():EventStatusValueSetType {
     return EventStatusValueSet;
   }
   /**
    * Example-bound Value Set for statusReason
    */
-  public statusReasonExampleValueSet():ProcedureNotPerformedReasonValueSetType {
+  public static statusReasonExampleValueSet():ProcedureNotPerformedReasonValueSetType {
     return ProcedureNotPerformedReasonValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():ProcedureCategoryValueSetType {
+  public static categoryExampleValueSet():ProcedureCategoryValueSetType {
     return ProcedureCategoryValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ProcedureCodeValueSetType {
+  public static codeExampleValueSet():ProcedureCodeValueSetType {
     return ProcedureCodeValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ProcedureReasonValueSetType {
+  public static reasonCodeExampleValueSet():ProcedureReasonValueSetType {
     return ProcedureReasonValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():BodySiteValueSetType {
+  public static bodySiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**
    * Example-bound Value Set for outcome
    */
-  public outcomeExampleValueSet():ProcedureOutcomeValueSetType {
+  public static outcomeExampleValueSet():ProcedureOutcomeValueSetType {
     return ProcedureOutcomeValueSet;
   }
   /**
    * Example-bound Value Set for complication
    */
-  public complicationExampleValueSet():ConditionCodeValueSetType {
+  public static complicationExampleValueSet():ConditionCodeValueSetType {
     return ConditionCodeValueSet;
   }
   /**
    * Example-bound Value Set for followUp
    */
-  public followUpExampleValueSet():ProcedureFollowupValueSetType {
+  public static followUpExampleValueSet():ProcedureFollowupValueSetType {
     return ProcedureFollowupValueSet;
   }
   /**
    * Example-bound Value Set for usedCode
    */
-  public usedCodeExampleValueSet():DeviceKindValueSetType {
+  public static usedCodeExampleValueSet():DeviceKindValueSetType {
     return DeviceKindValueSet;
   }
   /**

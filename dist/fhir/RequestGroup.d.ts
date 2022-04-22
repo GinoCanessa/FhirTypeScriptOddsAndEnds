@@ -329,7 +329,7 @@ export declare class RequestGroupActionCondition extends fhir.BackboneElement im
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet(): ActionConditionKindValueSetType;
+    static kindRequiredValueSet(): ActionConditionKindValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -370,7 +370,7 @@ export declare class RequestGroupActionRelatedAction extends fhir.BackboneElemen
     /**
      * Required-bound Value Set for relationship
      */
-    relationshipRequiredValueSet(): ActionRelationshipTypeValueSetType;
+    static relationshipRequiredValueSet(): ActionRelationshipTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -527,31 +527,31 @@ export declare class RequestGroupAction extends fhir.BackboneElement implements 
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): ActionTypeValueSetType;
+    static typeExtensibleValueSet(): ActionTypeValueSetType;
     /**
      * Required-bound Value Set for groupingBehavior
      */
-    groupingBehaviorRequiredValueSet(): ActionGroupingBehaviorValueSetType;
+    static groupingBehaviorRequiredValueSet(): ActionGroupingBehaviorValueSetType;
     /**
      * Required-bound Value Set for selectionBehavior
      */
-    selectionBehaviorRequiredValueSet(): ActionSelectionBehaviorValueSetType;
+    static selectionBehaviorRequiredValueSet(): ActionSelectionBehaviorValueSetType;
     /**
      * Required-bound Value Set for requiredBehavior
      */
-    requiredBehaviorRequiredValueSet(): ActionRequiredBehaviorValueSetType;
+    static requiredBehaviorRequiredValueSet(): ActionRequiredBehaviorValueSetType;
     /**
      * Required-bound Value Set for precheckBehavior
      */
-    precheckBehaviorRequiredValueSet(): ActionPrecheckBehaviorValueSetType;
+    static precheckBehaviorRequiredValueSet(): ActionPrecheckBehaviorValueSetType;
     /**
      * Required-bound Value Set for cardinalityBehavior
      */
-    cardinalityBehaviorRequiredValueSet(): ActionCardinalityBehaviorValueSetType;
+    static cardinalityBehaviorRequiredValueSet(): ActionCardinalityBehaviorValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -668,15 +668,15 @@ export declare class RequestGroup extends fhir.DomainResource implements IReques
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): RequestStatusValueSetType;
+    static statusRequiredValueSet(): RequestStatusValueSetType;
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet(): RequestIntentValueSetType;
+    static intentRequiredValueSet(): RequestIntentValueSetType;
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

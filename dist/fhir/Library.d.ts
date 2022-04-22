@@ -407,23 +407,23 @@ export declare class Library extends fhir.DomainResource implements ILibrary {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): LibraryTypeValueSetType;
+    static typeExtensibleValueSet(): LibraryTypeValueSetType;
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): DefinitionTopicValueSetType;
+    static topicExampleValueSet(): DefinitionTopicValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

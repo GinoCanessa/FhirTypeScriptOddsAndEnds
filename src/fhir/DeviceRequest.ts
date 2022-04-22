@@ -436,43 +436,43 @@ export class DeviceRequest extends fhir.DomainResource implements IDeviceRequest
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():RequestStatusValueSetType {
+  public static statusRequiredValueSet():RequestStatusValueSetType {
     return RequestStatusValueSet;
   }
   /**
    * Required-bound Value Set for intent
    */
-  public intentRequiredValueSet():RequestIntentValueSetType {
+  public static intentRequiredValueSet():RequestIntentValueSetType {
     return RequestIntentValueSet;
   }
   /**
    * Required-bound Value Set for priority
    */
-  public priorityRequiredValueSet():RequestPriorityValueSetType {
+  public static priorityRequiredValueSet():RequestPriorityValueSetType {
     return RequestPriorityValueSet;
   }
   /**
    * Example-bound Value Set for codeReference
    */
-  public codeReferenceExampleValueSet():DeviceKindValueSetType {
+  public static codeReferenceExampleValueSet():DeviceKindValueSetType {
     return DeviceKindValueSet;
   }
   /**
    * Example-bound Value Set for codeCodeableConcept
    */
-  public codeCodeableConceptExampleValueSet():DeviceKindValueSetType {
+  public static codeCodeableConceptExampleValueSet():DeviceKindValueSetType {
     return DeviceKindValueSet;
   }
   /**
    * Example-bound Value Set for performerType
    */
-  public performerTypeExampleValueSet():ParticipantRoleValueSetType {
+  public static performerTypeExampleValueSet():ParticipantRoleValueSetType {
     return ParticipantRoleValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ConditionCodeValueSetType {
+  public static reasonCodeExampleValueSet():ConditionCodeValueSetType {
     return ConditionCodeValueSet;
   }
   /**

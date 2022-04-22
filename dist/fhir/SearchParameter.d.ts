@@ -467,31 +467,31 @@ export declare class SearchParameter extends fhir.DomainResource implements ISea
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for base
      */
-    baseRequiredValueSet(): ResourceTypesValueSetType;
+    static baseRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): SearchParamTypeValueSetType;
+    static typeRequiredValueSet(): SearchParamTypeValueSetType;
     /**
      * Required-bound Value Set for xpathUsage
      */
-    xpathUsageRequiredValueSet(): SearchXpathUsageValueSetType;
+    static xpathUsageRequiredValueSet(): SearchXpathUsageValueSetType;
     /**
      * Required-bound Value Set for target
      */
-    targetRequiredValueSet(): ResourceTypesValueSetType;
+    static targetRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Required-bound Value Set for comparator
      */
-    comparatorRequiredValueSet(): SearchComparatorValueSetType;
+    static comparatorRequiredValueSet(): SearchComparatorValueSetType;
     /**
      * Required-bound Value Set for modifier
      */
-    modifierRequiredValueSet(): SearchModifierCodeValueSetType;
+    static modifierRequiredValueSet(): SearchModifierCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

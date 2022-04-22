@@ -99,11 +99,11 @@ export declare class Meta extends fhir.FhirElement implements IMeta {
     /**
      * Extensible-bound Value Set for security
      */
-    securityExtensibleValueSet(): SecurityLabelsValueSetType;
+    static securityExtensibleValueSet(): SecurityLabelsValueSetType;
     /**
      * Example-bound Value Set for tag
      */
-    tagExampleValueSet(): CommonTagsValueSetType;
+    static tagExampleValueSet(): CommonTagsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

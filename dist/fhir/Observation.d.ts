@@ -361,11 +361,11 @@ export declare class ObservationReferenceRange extends fhir.BackboneElement impl
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet(): ReferencerangeMeaningValueSetType;
+    static typePreferredValueSet(): ReferencerangeMeaningValueSetType;
     /**
      * Example-bound Value Set for appliesTo
      */
-    appliesToExampleValueSet(): ReferencerangeAppliestoValueSetType;
+    static appliesToExampleValueSet(): ReferencerangeAppliestoValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -463,15 +463,15 @@ export declare class ObservationComponent extends fhir.BackboneElement implement
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ObservationCodesValueSetType;
+    static codeExampleValueSet(): ObservationCodesValueSetType;
     /**
      * Extensible-bound Value Set for dataAbsentReason
      */
-    dataAbsentReasonExtensibleValueSet(): DataAbsentReasonValueSetType;
+    static dataAbsentReasonExtensibleValueSet(): DataAbsentReasonValueSetType;
     /**
      * Extensible-bound Value Set for interpretation
      */
-    interpretationExtensibleValueSet(): ObservationInterpretationValueSetType;
+    static interpretationExtensibleValueSet(): ObservationInterpretationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -678,31 +678,31 @@ export declare class Observation extends fhir.DomainResource implements IObserva
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ObservationStatusValueSetType;
+    static statusRequiredValueSet(): ObservationStatusValueSetType;
     /**
      * Preferred-bound Value Set for category
      */
-    categoryPreferredValueSet(): ObservationCategoryValueSetType;
+    static categoryPreferredValueSet(): ObservationCategoryValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ObservationCodesValueSetType;
+    static codeExampleValueSet(): ObservationCodesValueSetType;
     /**
      * Extensible-bound Value Set for dataAbsentReason
      */
-    dataAbsentReasonExtensibleValueSet(): DataAbsentReasonValueSetType;
+    static dataAbsentReasonExtensibleValueSet(): DataAbsentReasonValueSetType;
     /**
      * Extensible-bound Value Set for interpretation
      */
-    interpretationExtensibleValueSet(): ObservationInterpretationValueSetType;
+    static interpretationExtensibleValueSet(): ObservationInterpretationValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): BodySiteValueSetType;
+    static bodySiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet(): ObservationMethodsValueSetType;
+    static methodExampleValueSet(): ObservationMethodsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

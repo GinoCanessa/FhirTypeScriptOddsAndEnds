@@ -91,7 +91,7 @@ export class QuestionnaireItemEnableWhen extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for operator
      */
-    operatorRequiredValueSet() {
+    static operatorRequiredValueSet() {
         return QuestionnaireEnableOperatorValueSet;
     }
     /**
@@ -433,19 +433,19 @@ export class QuestionnaireItem extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return QuestionnaireQuestionsValueSet;
     }
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ItemTypeValueSet;
     }
     /**
      * Required-bound Value Set for enableBehavior
      */
-    enableBehaviorRequiredValueSet() {
+    static enableBehaviorRequiredValueSet() {
         return QuestionnaireEnableBehaviorValueSet;
     }
     /**
@@ -638,19 +638,19 @@ export class Questionnaire extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Required-bound Value Set for subjectType
      */
-    subjectTypeRequiredValueSet() {
+    static subjectTypeRequiredValueSet() {
         return ResourceTypesValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return QuestionnaireQuestionsValueSet;
     }
     /**

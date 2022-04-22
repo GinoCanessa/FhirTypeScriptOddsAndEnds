@@ -332,7 +332,7 @@ export declare class CoverageEligibilityResponseInsuranceItemBenefit extends fhi
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): BenefitTypeValueSetType;
+    static typeExampleValueSet(): BenefitTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -425,31 +425,31 @@ export declare class CoverageEligibilityResponseInsuranceItem extends fhir.Backb
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    static categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Example-bound Value Set for network
      */
-    networkExampleValueSet(): BenefitNetworkValueSetType;
+    static networkExampleValueSet(): BenefitNetworkValueSetType;
     /**
      * Example-bound Value Set for unit
      */
-    unitExampleValueSet(): BenefitUnitValueSetType;
+    static unitExampleValueSet(): BenefitUnitValueSetType;
     /**
      * Example-bound Value Set for term
      */
-    termExampleValueSet(): BenefitTermValueSetType;
+    static termExampleValueSet(): BenefitTermValueSetType;
     /**
      * Example-bound Value Set for authorizationSupporting
      */
-    authorizationSupportingExampleValueSet(): CoverageeligibilityresponseExAuthSupportValueSetType;
+    static authorizationSupportingExampleValueSet(): CoverageeligibilityresponseExAuthSupportValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -503,7 +503,7 @@ export declare class CoverageEligibilityResponseError extends fhir.BackboneEleme
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): AdjudicationErrorValueSetType;
+    static codeExampleValueSet(): AdjudicationErrorValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -616,19 +616,19 @@ export declare class CoverageEligibilityResponse extends fhir.DomainResource imp
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Required-bound Value Set for purpose
      */
-    purposeRequiredValueSet(): EligibilityresponsePurposeValueSetType;
+    static purposeRequiredValueSet(): EligibilityresponsePurposeValueSetType;
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
+    static outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
     /**
      * Example-bound Value Set for form
      */
-    formExampleValueSet(): FormsValueSetType;
+    static formExampleValueSet(): FormsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

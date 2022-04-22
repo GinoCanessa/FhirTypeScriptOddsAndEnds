@@ -74,7 +74,7 @@ export declare class Basic extends fhir.DomainResource implements IBasic {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): BasicResourceTypeValueSetType;
+    static codeExampleValueSet(): BasicResourceTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

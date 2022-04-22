@@ -294,7 +294,7 @@ export declare class ConsentProvisionActor extends fhir.BackboneElement implemen
     /**
      * Extensible-bound Value Set for role
      */
-    roleExtensibleValueSet(): SecurityRoleTypeValueSetType;
+    static roleExtensibleValueSet(): SecurityRoleTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -323,7 +323,7 @@ export declare class ConsentProvisionData extends fhir.BackboneElement implement
     /**
      * Required-bound Value Set for meaning
      */
-    meaningRequiredValueSet(): ConsentDataMeaningValueSetType;
+    static meaningRequiredValueSet(): ConsentDataMeaningValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -388,27 +388,27 @@ export declare class ConsentProvision extends fhir.BackboneElement implements IC
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ConsentProvisionTypeValueSetType;
+    static typeRequiredValueSet(): ConsentProvisionTypeValueSetType;
     /**
      * Example-bound Value Set for action
      */
-    actionExampleValueSet(): ConsentActionValueSetType;
+    static actionExampleValueSet(): ConsentActionValueSetType;
     /**
      * Extensible-bound Value Set for securityLabel
      */
-    securityLabelExtensibleValueSet(): SecurityLabelsValueSetType;
+    static securityLabelExtensibleValueSet(): SecurityLabelsValueSetType;
     /**
      * Extensible-bound Value Set for purpose
      */
-    purposeExtensibleValueSet(): V3PurposeOfUseValueSetType;
+    static purposeExtensibleValueSet(): V3PurposeOfUseValueSetType;
     /**
      * Extensible-bound Value Set for class
      */
-    classExtensibleValueSet(): ConsentContentClassValueSetType;
+    static classExtensibleValueSet(): ConsentContentClassValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ConsentContentCodeValueSetType;
+    static codeExampleValueSet(): ConsentContentCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -493,19 +493,19 @@ export declare class Consent extends fhir.DomainResource implements IConsent {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ConsentStateCodesValueSetType;
+    static statusRequiredValueSet(): ConsentStateCodesValueSetType;
     /**
      * Extensible-bound Value Set for scope
      */
-    scopeExtensibleValueSet(): ConsentScopeValueSetType;
+    static scopeExtensibleValueSet(): ConsentScopeValueSetType;
     /**
      * Extensible-bound Value Set for category
      */
-    categoryExtensibleValueSet(): ConsentCategoryValueSetType;
+    static categoryExtensibleValueSet(): ConsentCategoryValueSetType;
     /**
      * Extensible-bound Value Set for policyRule
      */
-    policyRuleExtensibleValueSet(): ConsentPolicyValueSetType;
+    static policyRuleExtensibleValueSet(): ConsentPolicyValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

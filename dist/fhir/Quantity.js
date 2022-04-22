@@ -47,7 +47,7 @@ export class Quantity extends fhir.FhirElement {
     /**
      * Required-bound Value Set for comparator
      */
-    comparatorRequiredValueSet() {
+    static comparatorRequiredValueSet() {
         return QuantityComparatorValueSet;
     }
     /**

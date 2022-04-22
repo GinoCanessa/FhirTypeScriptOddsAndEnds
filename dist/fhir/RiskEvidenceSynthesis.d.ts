@@ -409,7 +409,7 @@ export declare class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends 
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): PrecisionEstimateTypeValueSetType;
+    static typeExtensibleValueSet(): PrecisionEstimateTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -470,11 +470,11 @@ export declare class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElem
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): RiskEstimateTypeValueSetType;
+    static typeExtensibleValueSet(): RiskEstimateTypeValueSetType;
     /**
      * Required-bound Value Set for unitOfMeasure
      */
-    unitOfMeasureRequiredValueSet(): UcumUnitsValueSetType;
+    static unitOfMeasureRequiredValueSet(): UcumUnitsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -503,11 +503,11 @@ export declare class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): CertaintySubcomponentTypeValueSetType;
+    static typeExtensibleValueSet(): CertaintySubcomponentTypeValueSetType;
     /**
      * Extensible-bound Value Set for rating
      */
-    ratingExtensibleValueSet(): CertaintySubcomponentRatingValueSetType;
+    static ratingExtensibleValueSet(): CertaintySubcomponentRatingValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -536,7 +536,7 @@ export declare class RiskEvidenceSynthesisCertainty extends fhir.BackboneElement
     /**
      * Extensible-bound Value Set for rating
      */
-    ratingExtensibleValueSet(): EvidenceQualityValueSetType;
+    static ratingExtensibleValueSet(): EvidenceQualityValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -727,19 +727,19 @@ export declare class RiskEvidenceSynthesis extends fhir.DomainResource implement
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): DefinitionTopicValueSetType;
+    static topicExampleValueSet(): DefinitionTopicValueSetType;
     /**
      * Extensible-bound Value Set for synthesisType
      */
-    synthesisTypeExtensibleValueSet(): SynthesisTypeValueSetType;
+    static synthesisTypeExtensibleValueSet(): SynthesisTypeValueSetType;
     /**
      * Extensible-bound Value Set for studyType
      */
-    studyTypeExtensibleValueSet(): StudyTypeValueSetType;
+    static studyTypeExtensibleValueSet(): StudyTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -1798,7 +1798,7 @@ export declare class ElementDefinitionSlicingDiscriminator extends fhir.FhirElem
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): DiscriminatorTypeValueSetType;
+    static typeRequiredValueSet(): DiscriminatorTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1843,7 +1843,7 @@ export declare class ElementDefinitionSlicing extends fhir.FhirElement implement
     /**
      * Required-bound Value Set for rules
      */
-    rulesRequiredValueSet(): ResourceSlicingRulesValueSetType;
+    static rulesRequiredValueSet(): ResourceSlicingRulesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1937,15 +1937,15 @@ export declare class ElementDefinitionType extends fhir.FhirElement implements I
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet(): DefinedTypesValueSetType;
+    static codeExtensibleValueSet(): DefinedTypesValueSetType;
     /**
      * Required-bound Value Set for aggregation
      */
-    aggregationRequiredValueSet(): ResourceAggregationModeValueSetType;
+    static aggregationRequiredValueSet(): ResourceAggregationModeValueSetType;
     /**
      * Required-bound Value Set for versioning
      */
-    versioningRequiredValueSet(): ReferenceVersionRulesValueSetType;
+    static versioningRequiredValueSet(): ReferenceVersionRulesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2315,7 +2315,7 @@ export declare class ElementDefinitionConstraint extends fhir.FhirElement implem
     /**
      * Required-bound Value Set for severity
      */
-    severityRequiredValueSet(): ConstraintSeverityValueSetType;
+    static severityRequiredValueSet(): ConstraintSeverityValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2356,7 +2356,7 @@ export declare class ElementDefinitionBinding extends fhir.FhirElement implement
     /**
      * Required-bound Value Set for strength
      */
-    strengthRequiredValueSet(): BindingStrengthValueSetType;
+    static strengthRequiredValueSet(): BindingStrengthValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -3632,11 +3632,11 @@ export declare class ElementDefinition extends fhir.BackboneElement implements I
     /**
      * Required-bound Value Set for representation
      */
-    representationRequiredValueSet(): PropertyRepresentationValueSetType;
+    static representationRequiredValueSet(): PropertyRepresentationValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ObservationCodesValueSetType;
+    static codeExampleValueSet(): ObservationCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -59,7 +59,7 @@ export class Signature extends fhir.FhirElement {
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet() {
+    static typePreferredValueSet() {
         return SignatureTypeValueSet;
     }
     /**

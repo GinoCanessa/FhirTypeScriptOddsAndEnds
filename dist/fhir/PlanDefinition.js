@@ -51,7 +51,7 @@ export class PlanDefinitionGoalTarget extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for measure
      */
-    measureExampleValueSet() {
+    static measureExampleValueSet() {
         return ObservationCodesValueSet;
     }
     /**
@@ -114,31 +114,31 @@ export class PlanDefinitionGoal extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return GoalCategoryValueSet;
     }
     /**
      * Example-bound Value Set for description
      */
-    descriptionExampleValueSet() {
+    static descriptionExampleValueSet() {
         return ClinicalFindingsValueSet;
     }
     /**
      * Preferred-bound Value Set for priority
      */
-    priorityPreferredValueSet() {
+    static priorityPreferredValueSet() {
         return GoalPriorityValueSet;
     }
     /**
      * Example-bound Value Set for start
      */
-    startExampleValueSet() {
+    static startExampleValueSet() {
         return GoalStartEventValueSet;
     }
     /**
      * Example-bound Value Set for addresses
      */
-    addressesExampleValueSet() {
+    static addressesExampleValueSet() {
         return ConditionCodeValueSet;
     }
     /**
@@ -198,7 +198,7 @@ export class PlanDefinitionActionCondition extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet() {
+    static kindRequiredValueSet() {
         return ActionConditionKindValueSet;
     }
     /**
@@ -255,7 +255,7 @@ export class PlanDefinitionActionRelatedAction extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for relationship
      */
-    relationshipRequiredValueSet() {
+    static relationshipRequiredValueSet() {
         return ActionRelationshipTypeValueSet;
     }
     /**
@@ -309,7 +309,7 @@ export class PlanDefinitionActionParticipant extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ActionParticipantTypeValueSet;
     }
     /**
@@ -522,55 +522,55 @@ export class PlanDefinitionAction extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet() {
+    static subjectCodeableConceptExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet() {
+    static subjectReferenceExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return ActionTypeValueSet;
     }
     /**
      * Required-bound Value Set for groupingBehavior
      */
-    groupingBehaviorRequiredValueSet() {
+    static groupingBehaviorRequiredValueSet() {
         return ActionGroupingBehaviorValueSet;
     }
     /**
      * Required-bound Value Set for selectionBehavior
      */
-    selectionBehaviorRequiredValueSet() {
+    static selectionBehaviorRequiredValueSet() {
         return ActionSelectionBehaviorValueSet;
     }
     /**
      * Required-bound Value Set for requiredBehavior
      */
-    requiredBehaviorRequiredValueSet() {
+    static requiredBehaviorRequiredValueSet() {
         return ActionRequiredBehaviorValueSet;
     }
     /**
      * Required-bound Value Set for precheckBehavior
      */
-    precheckBehaviorRequiredValueSet() {
+    static precheckBehaviorRequiredValueSet() {
         return ActionPrecheckBehaviorValueSet;
     }
     /**
      * Required-bound Value Set for cardinalityBehavior
      */
-    cardinalityBehaviorRequiredValueSet() {
+    static cardinalityBehaviorRequiredValueSet() {
         return ActionCardinalityBehaviorValueSet;
     }
     /**
@@ -844,31 +844,31 @@ export class PlanDefinition extends fhir.DomainResource {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return PlanDefinitionTypeValueSet;
     }
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet() {
+    static subjectCodeableConceptExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet() {
+    static subjectReferenceExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet() {
+    static topicExampleValueSet() {
         return DefinitionTopicValueSet;
     }
     /**

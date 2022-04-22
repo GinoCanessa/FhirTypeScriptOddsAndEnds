@@ -31,7 +31,7 @@ export class NutritionOrderOralDietNutrient extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet() {
+    static modifierExampleValueSet() {
         return NutrientCodeValueSet;
     }
     /**
@@ -67,7 +67,7 @@ export class NutritionOrderOralDietTexture extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for foodType
      */
-    foodTypeExampleValueSet() {
+    static foodTypeExampleValueSet() {
         return ModifiedFoodtypeValueSet;
     }
     /**
@@ -118,7 +118,7 @@ export class NutritionOrderOralDiet extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return DietTypeValueSet;
     }
     /**
@@ -292,13 +292,13 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for additiveType
      */
-    additiveTypeExampleValueSet() {
+    static additiveTypeExampleValueSet() {
         return EntformulaAdditiveValueSet;
     }
     /**
      * Extensible-bound Value Set for routeofAdministration
      */
-    routeofAdministrationExtensibleValueSet() {
+    static routeofAdministrationExtensibleValueSet() {
         return EnteralRouteValueSet;
     }
     /**
@@ -431,25 +431,25 @@ export class NutritionOrder extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return RequestStatusValueSet;
     }
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet() {
+    static intentRequiredValueSet() {
         return RequestIntentValueSet;
     }
     /**
      * Example-bound Value Set for foodPreferenceModifier
      */
-    foodPreferenceModifierExampleValueSet() {
+    static foodPreferenceModifierExampleValueSet() {
         return EncounterDietValueSet;
     }
     /**
      * Example-bound Value Set for excludeFoodModifier
      */
-    excludeFoodModifierExampleValueSet() {
+    static excludeFoodModifierExampleValueSet() {
         return FoodTypeValueSet;
     }
     /**

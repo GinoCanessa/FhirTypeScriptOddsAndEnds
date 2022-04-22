@@ -124,7 +124,7 @@ export class ConsentProvisionActor extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for role
      */
-    roleExtensibleValueSet() {
+    static roleExtensibleValueSet() {
         return SecurityRoleTypeValueSet;
     }
     /**
@@ -175,7 +175,7 @@ export class ConsentProvisionData extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for meaning
      */
-    meaningRequiredValueSet() {
+    static meaningRequiredValueSet() {
         return ConsentDataMeaningValueSet;
     }
     /**
@@ -247,37 +247,37 @@ export class ConsentProvision extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ConsentProvisionTypeValueSet;
     }
     /**
      * Example-bound Value Set for action
      */
-    actionExampleValueSet() {
+    static actionExampleValueSet() {
         return ConsentActionValueSet;
     }
     /**
      * Extensible-bound Value Set for securityLabel
      */
-    securityLabelExtensibleValueSet() {
+    static securityLabelExtensibleValueSet() {
         return SecurityLabelsValueSet;
     }
     /**
      * Extensible-bound Value Set for purpose
      */
-    purposeExtensibleValueSet() {
+    static purposeExtensibleValueSet() {
         return V3PurposeOfUseValueSet;
     }
     /**
      * Extensible-bound Value Set for class
      */
-    classExtensibleValueSet() {
+    static classExtensibleValueSet() {
         return ConsentContentClassValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ConsentContentCodeValueSet;
     }
     /**
@@ -392,25 +392,25 @@ export class Consent extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ConsentStateCodesValueSet;
     }
     /**
      * Extensible-bound Value Set for scope
      */
-    scopeExtensibleValueSet() {
+    static scopeExtensibleValueSet() {
         return ConsentScopeValueSet;
     }
     /**
      * Extensible-bound Value Set for category
      */
-    categoryExtensibleValueSet() {
+    static categoryExtensibleValueSet() {
         return ConsentCategoryValueSet;
     }
     /**
      * Extensible-bound Value Set for policyRule
      */
-    policyRuleExtensibleValueSet() {
+    static policyRuleExtensibleValueSet() {
         return ConsentPolicyValueSet;
     }
     /**

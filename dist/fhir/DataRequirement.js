@@ -145,7 +145,7 @@ export class DataRequirementSort extends fhir.FhirElement {
     /**
      * Required-bound Value Set for direction
      */
-    directionRequiredValueSet() {
+    static directionRequiredValueSet() {
         return SortDirectionValueSet;
     }
     /**
@@ -223,19 +223,19 @@ export class DataRequirement extends fhir.FhirElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return AllTypesValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet() {
+    static subjectCodeableConceptExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet() {
+    static subjectReferenceExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**

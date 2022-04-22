@@ -62,7 +62,7 @@ export class Money extends fhir.FhirElement implements IMoney {
   /**
    * Required-bound Value Set for currency
    */
-  public currencyRequiredValueSet():CurrenciesValueSetType {
+  public static currencyRequiredValueSet():CurrenciesValueSetType {
     return CurrenciesValueSet;
   }
   /**

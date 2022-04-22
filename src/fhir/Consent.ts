@@ -341,7 +341,7 @@ export class ConsentProvisionActor extends fhir.BackboneElement implements ICons
   /**
    * Extensible-bound Value Set for role
    */
-  public roleExtensibleValueSet():SecurityRoleTypeValueSetType {
+  public static roleExtensibleValueSet():SecurityRoleTypeValueSetType {
     return SecurityRoleTypeValueSet;
   }
   /**
@@ -387,7 +387,7 @@ export class ConsentProvisionData extends fhir.BackboneElement implements IConse
   /**
    * Required-bound Value Set for meaning
    */
-  public meaningRequiredValueSet():ConsentDataMeaningValueSetType {
+  public static meaningRequiredValueSet():ConsentDataMeaningValueSetType {
     return ConsentDataMeaningValueSet;
   }
   /**
@@ -476,37 +476,37 @@ export class ConsentProvision extends fhir.BackboneElement implements IConsentPr
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ConsentProvisionTypeValueSetType {
+  public static typeRequiredValueSet():ConsentProvisionTypeValueSetType {
     return ConsentProvisionTypeValueSet;
   }
   /**
    * Example-bound Value Set for action
    */
-  public actionExampleValueSet():ConsentActionValueSetType {
+  public static actionExampleValueSet():ConsentActionValueSetType {
     return ConsentActionValueSet;
   }
   /**
    * Extensible-bound Value Set for securityLabel
    */
-  public securityLabelExtensibleValueSet():SecurityLabelsValueSetType {
+  public static securityLabelExtensibleValueSet():SecurityLabelsValueSetType {
     return SecurityLabelsValueSet;
   }
   /**
    * Extensible-bound Value Set for purpose
    */
-  public purposeExtensibleValueSet():V3PurposeOfUseValueSetType {
+  public static purposeExtensibleValueSet():V3PurposeOfUseValueSetType {
     return V3PurposeOfUseValueSet;
   }
   /**
    * Extensible-bound Value Set for class
    */
-  public classExtensibleValueSet():ConsentContentClassValueSetType {
+  public static classExtensibleValueSet():ConsentContentClassValueSetType {
     return ConsentContentClassValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ConsentContentCodeValueSetType {
+  public static codeExampleValueSet():ConsentContentCodeValueSetType {
     return ConsentContentCodeValueSet;
   }
   /**
@@ -630,25 +630,25 @@ export class Consent extends fhir.DomainResource implements IConsent {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ConsentStateCodesValueSetType {
+  public static statusRequiredValueSet():ConsentStateCodesValueSetType {
     return ConsentStateCodesValueSet;
   }
   /**
    * Extensible-bound Value Set for scope
    */
-  public scopeExtensibleValueSet():ConsentScopeValueSetType {
+  public static scopeExtensibleValueSet():ConsentScopeValueSetType {
     return ConsentScopeValueSet;
   }
   /**
    * Extensible-bound Value Set for category
    */
-  public categoryExtensibleValueSet():ConsentCategoryValueSetType {
+  public static categoryExtensibleValueSet():ConsentCategoryValueSetType {
     return ConsentCategoryValueSet;
   }
   /**
    * Extensible-bound Value Set for policyRule
    */
-  public policyRuleExtensibleValueSet():ConsentPolicyValueSetType {
+  public static policyRuleExtensibleValueSet():ConsentPolicyValueSetType {
     return ConsentPolicyValueSet;
   }
   /**

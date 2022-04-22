@@ -236,43 +236,43 @@ export class SearchParameter extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Required-bound Value Set for base
      */
-    baseRequiredValueSet() {
+    static baseRequiredValueSet() {
         return ResourceTypesValueSet;
     }
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return SearchParamTypeValueSet;
     }
     /**
      * Required-bound Value Set for xpathUsage
      */
-    xpathUsageRequiredValueSet() {
+    static xpathUsageRequiredValueSet() {
         return SearchXpathUsageValueSet;
     }
     /**
      * Required-bound Value Set for target
      */
-    targetRequiredValueSet() {
+    static targetRequiredValueSet() {
         return ResourceTypesValueSet;
     }
     /**
      * Required-bound Value Set for comparator
      */
-    comparatorRequiredValueSet() {
+    static comparatorRequiredValueSet() {
         return SearchComparatorValueSet;
     }
     /**
      * Required-bound Value Set for modifier
      */
-    modifierRequiredValueSet() {
+    static modifierRequiredValueSet() {
         return SearchModifierCodeValueSet;
     }
     /**

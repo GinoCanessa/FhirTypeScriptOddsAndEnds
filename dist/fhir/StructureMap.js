@@ -54,7 +54,7 @@ export class StructureMapStructure extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return MapModelModeValueSet;
     }
     /**
@@ -126,7 +126,7 @@ export class StructureMapGroupInput extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return MapInputModeValueSet;
     }
     /**
@@ -438,7 +438,7 @@ export class StructureMapGroupRuleSource extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for listMode
      */
-    listModeRequiredValueSet() {
+    static listModeRequiredValueSet() {
         return MapSourceListModeValueSet;
     }
     /**
@@ -753,19 +753,19 @@ export class StructureMapGroupRuleTarget extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for contextType
      */
-    contextTypeRequiredValueSet() {
+    static contextTypeRequiredValueSet() {
         return MapContextTypeValueSet;
     }
     /**
      * Required-bound Value Set for listMode
      */
-    listModeRequiredValueSet() {
+    static listModeRequiredValueSet() {
         return MapTargetListModeValueSet;
     }
     /**
      * Required-bound Value Set for transform
      */
-    transformRequiredValueSet() {
+    static transformRequiredValueSet() {
         return MapTransformValueSet;
     }
     /**
@@ -975,7 +975,7 @@ export class StructureMapGroup extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for typeMode
      */
-    typeModeRequiredValueSet() {
+    static typeModeRequiredValueSet() {
         return MapGroupTypeModeValueSet;
     }
     /**
@@ -1132,7 +1132,7 @@ export class StructureMap extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**

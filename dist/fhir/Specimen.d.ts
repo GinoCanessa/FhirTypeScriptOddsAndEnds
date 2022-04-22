@@ -243,19 +243,19 @@ export declare class SpecimenCollection extends fhir.BackboneElement implements 
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet(): SpecimenCollectionMethodValueSetType;
+    static methodExampleValueSet(): SpecimenCollectionMethodValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): BodySiteValueSetType;
+    static bodySiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Extensible-bound Value Set for fastingStatusCodeableConcept
      */
-    fastingStatusCodeableConceptExtensibleValueSet(): V20916ValueSetType;
+    static fastingStatusCodeableConceptExtensibleValueSet(): V20916ValueSetType;
     /**
      * Extensible-bound Value Set for fastingStatusDuration
      */
-    fastingStatusDurationExtensibleValueSet(): V20916ValueSetType;
+    static fastingStatusDurationExtensibleValueSet(): V20916ValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -300,7 +300,7 @@ export declare class SpecimenProcessing extends fhir.BackboneElement implements 
     /**
      * Example-bound Value Set for procedure
      */
-    procedureExampleValueSet(): SpecimenProcessingProcedureValueSetType;
+    static procedureExampleValueSet(): SpecimenProcessingProcedureValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -349,15 +349,15 @@ export declare class SpecimenContainer extends fhir.BackboneElement implements I
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): SpecimenContainerTypeValueSetType;
+    static typeExampleValueSet(): SpecimenContainerTypeValueSetType;
     /**
      * Example-bound Value Set for additiveCodeableConcept
      */
-    additiveCodeableConceptExampleValueSet(): V20371ValueSetType;
+    static additiveCodeableConceptExampleValueSet(): V20371ValueSetType;
     /**
      * Example-bound Value Set for additiveReference
      */
-    additiveReferenceExampleValueSet(): V20371ValueSetType;
+    static additiveReferenceExampleValueSet(): V20371ValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -438,15 +438,15 @@ export declare class Specimen extends fhir.DomainResource implements ISpecimen {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): SpecimenStatusValueSetType;
+    static statusRequiredValueSet(): SpecimenStatusValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): V20487ValueSetType;
+    static typeExampleValueSet(): V20487ValueSetType;
     /**
      * Extensible-bound Value Set for condition
      */
-    conditionExtensibleValueSet(): V20493ValueSetType;
+    static conditionExtensibleValueSet(): V20493ValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

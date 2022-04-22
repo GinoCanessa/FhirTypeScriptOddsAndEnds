@@ -198,7 +198,7 @@ export class MedicationAdministrationPerformer extends fhir.BackboneElement impl
   /**
    * Example-bound Value Set for function
    */
-  public functionExampleValueSet():MedAdminPerformFunctionValueSetType {
+  public static functionExampleValueSet():MedAdminPerformFunctionValueSetType {
     return MedAdminPerformFunctionValueSet;
   }
   /**
@@ -267,19 +267,19 @@ export class MedicationAdministrationDosage extends fhir.BackboneElement impleme
   /**
    * Example-bound Value Set for site
    */
-  public siteExampleValueSet():ApproachSiteCodesValueSetType {
+  public static siteExampleValueSet():ApproachSiteCodesValueSetType {
     return ApproachSiteCodesValueSet;
   }
   /**
    * Example-bound Value Set for route
    */
-  public routeExampleValueSet():RouteCodesValueSetType {
+  public static routeExampleValueSet():RouteCodesValueSetType {
     return RouteCodesValueSet;
   }
   /**
    * Example-bound Value Set for method
    */
-  public methodExampleValueSet():AdministrationMethodCodesValueSetType {
+  public static methodExampleValueSet():AdministrationMethodCodesValueSetType {
     return AdministrationMethodCodesValueSet;
   }
   /**
@@ -438,37 +438,37 @@ export class MedicationAdministration extends fhir.DomainResource implements IMe
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():MedicationAdminStatusValueSetType {
+  public static statusRequiredValueSet():MedicationAdminStatusValueSetType {
     return MedicationAdminStatusValueSet;
   }
   /**
    * Example-bound Value Set for statusReason
    */
-  public statusReasonExampleValueSet():ReasonMedicationNotGivenCodesValueSetType {
+  public static statusReasonExampleValueSet():ReasonMedicationNotGivenCodesValueSetType {
     return ReasonMedicationNotGivenCodesValueSet;
   }
   /**
    * Preferred-bound Value Set for category
    */
-  public categoryPreferredValueSet():MedicationAdminCategoryValueSetType {
+  public static categoryPreferredValueSet():MedicationAdminCategoryValueSetType {
     return MedicationAdminCategoryValueSet;
   }
   /**
    * Example-bound Value Set for medicationCodeableConcept
    */
-  public medicationCodeableConceptExampleValueSet():MedicationCodesValueSetType {
+  public static medicationCodeableConceptExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for medicationReference
    */
-  public medicationReferenceExampleValueSet():MedicationCodesValueSetType {
+  public static medicationReferenceExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ReasonMedicationGivenCodesValueSetType {
+  public static reasonCodeExampleValueSet():ReasonMedicationGivenCodesValueSetType {
     return ReasonMedicationGivenCodesValueSet;
   }
   /**

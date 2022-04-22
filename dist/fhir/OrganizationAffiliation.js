@@ -58,13 +58,13 @@ export class OrganizationAffiliation extends fhir.DomainResource {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return OrganizationRoleValueSet;
     }
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet() {
+    static specialtyPreferredValueSet() {
         return C80PracticeCodesValueSet;
     }
     /**

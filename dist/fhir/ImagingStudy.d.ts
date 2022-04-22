@@ -252,7 +252,7 @@ export declare class ImagingStudySeriesPerformer extends fhir.BackboneElement im
     /**
      * Extensible-bound Value Set for function
      */
-    functionExtensibleValueSet(): SeriesPerformerFunctionValueSetType;
+    static functionExtensibleValueSet(): SeriesPerformerFunctionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -378,15 +378,15 @@ export declare class ImagingStudySeries extends fhir.BackboneElement implements 
     /**
      * Extensible-bound Value Set for modality
      */
-    modalityExtensibleValueSet(): DicomCid29AcquisitionModalityValueSetType;
+    static modalityExtensibleValueSet(): DicomCid29AcquisitionModalityValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): BodySiteValueSetType;
+    static bodySiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Example-bound Value Set for laterality
      */
-    lateralityExampleValueSet(): BodysiteLateralityValueSetType;
+    static lateralityExampleValueSet(): BodysiteLateralityValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -507,15 +507,15 @@ export declare class ImagingStudy extends fhir.DomainResource implements IImagin
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ImagingstudyStatusValueSetType;
+    static statusRequiredValueSet(): ImagingstudyStatusValueSetType;
     /**
      * Extensible-bound Value Set for modality
      */
-    modalityExtensibleValueSet(): DicomCid29AcquisitionModalityValueSetType;
+    static modalityExtensibleValueSet(): DicomCid29AcquisitionModalityValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ProcedureReasonValueSetType;
+    static reasonCodeExampleValueSet(): ProcedureReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

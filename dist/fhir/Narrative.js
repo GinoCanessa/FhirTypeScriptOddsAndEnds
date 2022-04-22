@@ -35,7 +35,7 @@ export class Narrative extends fhir.FhirElement {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return NarrativeStatusValueSet;
     }
     /**

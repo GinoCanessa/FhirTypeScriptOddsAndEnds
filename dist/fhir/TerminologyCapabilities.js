@@ -581,19 +581,19 @@ export class TerminologyCapabilities extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet() {
+    static kindRequiredValueSet() {
         return CapabilityStatementKindValueSet;
     }
     /**
      * Required-bound Value Set for codeSearch
      */
-    codeSearchRequiredValueSet() {
+    static codeSearchRequiredValueSet() {
         return CodeSearchSupportValueSet;
     }
     /**

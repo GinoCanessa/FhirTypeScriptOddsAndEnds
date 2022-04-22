@@ -958,31 +958,31 @@ export class Task extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return TaskStatusValueSet;
     }
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet() {
+    static intentRequiredValueSet() {
         return TaskIntentValueSet;
     }
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return TaskCodeValueSet;
     }
     /**
      * Preferred-bound Value Set for performerType
      */
-    performerTypePreferredValueSet() {
+    static performerTypePreferredValueSet() {
         return PerformerRoleValueSet;
     }
     /**

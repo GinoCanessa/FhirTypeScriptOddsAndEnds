@@ -169,11 +169,11 @@ export declare class Address extends fhir.FhirElement implements IAddress {
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): AddressUseValueSetType;
+    static useRequiredValueSet(): AddressUseValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): AddressTypeValueSetType;
+    static typeRequiredValueSet(): AddressTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

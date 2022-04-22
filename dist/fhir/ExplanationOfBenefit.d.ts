@@ -1201,7 +1201,7 @@ export declare class ExplanationOfBenefitRelated extends fhir.BackboneElement im
     /**
      * Example-bound Value Set for relationship
      */
-    relationshipExampleValueSet(): RelatedClaimRelationshipValueSetType;
+    static relationshipExampleValueSet(): RelatedClaimRelationshipValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1226,7 +1226,7 @@ export declare class ExplanationOfBenefitPayee extends fhir.BackboneElement impl
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): PayeetypeValueSetType;
+    static typeExampleValueSet(): PayeetypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1271,11 +1271,11 @@ export declare class ExplanationOfBenefitCareTeam extends fhir.BackboneElement i
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet(): ClaimCareteamroleValueSetType;
+    static roleExampleValueSet(): ClaimCareteamroleValueSetType;
     /**
      * Example-bound Value Set for qualification
      */
-    qualificationExampleValueSet(): ProviderQualificationValueSetType;
+    static qualificationExampleValueSet(): ProviderQualificationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1352,15 +1352,15 @@ export declare class ExplanationOfBenefitSupportingInfo extends fhir.BackboneEle
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ClaimInformationcategoryValueSetType;
+    static categoryExampleValueSet(): ClaimInformationcategoryValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ClaimExceptionValueSetType;
+    static codeExampleValueSet(): ClaimExceptionValueSetType;
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet(): MissingToothReasonValueSetType;
+    static reasonExampleValueSet(): MissingToothReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1405,15 +1405,15 @@ export declare class ExplanationOfBenefitDiagnosis extends fhir.BackboneElement 
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ExDiagnosistypeValueSetType;
+    static typeExampleValueSet(): ExDiagnosistypeValueSetType;
     /**
      * Example-bound Value Set for onAdmission
      */
-    onAdmissionExampleValueSet(): ExDiagnosisOnAdmissionValueSetType;
+    static onAdmissionExampleValueSet(): ExDiagnosisOnAdmissionValueSetType;
     /**
      * Example-bound Value Set for packageCode
      */
-    packageCodeExampleValueSet(): ExDiagnosisrelatedgroupValueSetType;
+    static packageCodeExampleValueSet(): ExDiagnosisrelatedgroupValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1462,15 +1462,15 @@ export declare class ExplanationOfBenefitProcedure extends fhir.BackboneElement 
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ExProcedureTypeValueSetType;
+    static typeExampleValueSet(): ExProcedureTypeValueSetType;
     /**
      * Example-bound Value Set for procedureCodeableConcept
      */
-    procedureCodeableConceptExampleValueSet(): Icd10ProceduresValueSetType;
+    static procedureCodeableConceptExampleValueSet(): Icd10ProceduresValueSetType;
     /**
      * Example-bound Value Set for procedureReference
      */
-    procedureReferenceExampleValueSet(): Icd10ProceduresValueSetType;
+    static procedureReferenceExampleValueSet(): Icd10ProceduresValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1540,7 +1540,7 @@ export declare class ExplanationOfBenefitAccident extends fhir.BackboneElement i
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): V3ActIncidentCodeValueSetType;
+    static typeExtensibleValueSet(): V3ActIncidentCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1577,11 +1577,11 @@ export declare class ExplanationOfBenefitItemAdjudication extends fhir.BackboneE
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): AdjudicationValueSetType;
+    static categoryExampleValueSet(): AdjudicationValueSetType;
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet(): AdjudicationReasonValueSetType;
+    static reasonExampleValueSet(): AdjudicationReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1662,23 +1662,23 @@ export declare class ExplanationOfBenefitItemDetailSubDetail extends fhir.Backbo
     /**
      * Example-bound Value Set for revenue
      */
-    revenueExampleValueSet(): ExRevenueCenterValueSetType;
+    static revenueExampleValueSet(): ExRevenueCenterValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    static categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    static programCodeExampleValueSet(): ExProgramCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1763,23 +1763,23 @@ export declare class ExplanationOfBenefitItemDetail extends fhir.BackboneElement
     /**
      * Example-bound Value Set for revenue
      */
-    revenueExampleValueSet(): ExRevenueCenterValueSetType;
+    static revenueExampleValueSet(): ExRevenueCenterValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    static categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    static programCodeExampleValueSet(): ExProgramCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1932,43 +1932,43 @@ export declare class ExplanationOfBenefitItem extends fhir.BackboneElement imple
     /**
      * Example-bound Value Set for revenue
      */
-    revenueExampleValueSet(): ExRevenueCenterValueSetType;
+    static revenueExampleValueSet(): ExRevenueCenterValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    static categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    static programCodeExampleValueSet(): ExProgramCodeValueSetType;
     /**
      * Example-bound Value Set for locationCodeableConcept
      */
-    locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
+    static locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for locationAddress
      */
-    locationAddressExampleValueSet(): ServicePlaceValueSetType;
+    static locationAddressExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for locationReference
      */
-    locationReferenceExampleValueSet(): ServicePlaceValueSetType;
+    static locationReferenceExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): ToothValueSetType;
+    static bodySiteExampleValueSet(): ToothValueSetType;
     /**
      * Example-bound Value Set for subSite
      */
-    subSiteExampleValueSet(): SurfaceValueSetType;
+    static subSiteExampleValueSet(): SurfaceValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2025,11 +2025,11 @@ export declare class ExplanationOfBenefitAddItemDetailSubDetail extends fhir.Bac
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2090,11 +2090,11 @@ export declare class ExplanationOfBenefitAddItemDetail extends fhir.BackboneElem
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2219,35 +2219,35 @@ export declare class ExplanationOfBenefitAddItem extends fhir.BackboneElement im
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
+    static productOrServiceExampleValueSet(): ServiceUsclsValueSetType;
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): ClaimModifiersValueSetType;
+    static modifierExampleValueSet(): ClaimModifiersValueSetType;
     /**
      * Example-bound Value Set for programCode
      */
-    programCodeExampleValueSet(): ExProgramCodeValueSetType;
+    static programCodeExampleValueSet(): ExProgramCodeValueSetType;
     /**
      * Example-bound Value Set for locationCodeableConcept
      */
-    locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
+    static locationCodeableConceptExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for locationAddress
      */
-    locationAddressExampleValueSet(): ServicePlaceValueSetType;
+    static locationAddressExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for locationReference
      */
-    locationReferenceExampleValueSet(): ServicePlaceValueSetType;
+    static locationReferenceExampleValueSet(): ServicePlaceValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): ToothValueSetType;
+    static bodySiteExampleValueSet(): ToothValueSetType;
     /**
      * Example-bound Value Set for subSite
      */
-    subSiteExampleValueSet(): SurfaceValueSetType;
+    static subSiteExampleValueSet(): SurfaceValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2272,7 +2272,7 @@ export declare class ExplanationOfBenefitTotal extends fhir.BackboneElement impl
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): AdjudicationValueSetType;
+    static categoryExampleValueSet(): AdjudicationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2317,11 +2317,11 @@ export declare class ExplanationOfBenefitPayment extends fhir.BackboneElement im
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ExPaymenttypeValueSetType;
+    static typeExampleValueSet(): ExPaymenttypeValueSetType;
     /**
      * Example-bound Value Set for adjustmentReason
      */
-    adjustmentReasonExampleValueSet(): PaymentAdjustmentReasonValueSetType;
+    static adjustmentReasonExampleValueSet(): PaymentAdjustmentReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2366,11 +2366,11 @@ export declare class ExplanationOfBenefitProcessNote extends fhir.BackboneElemen
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): NoteTypeValueSetType;
+    static typeRequiredValueSet(): NoteTypeValueSetType;
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet(): LanguagesValueSetType;
+    static languagePreferredValueSet(): LanguagesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2423,7 +2423,7 @@ export declare class ExplanationOfBenefitBenefitBalanceFinancial extends fhir.Ba
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): BenefitTypeValueSetType;
+    static typeExampleValueSet(): BenefitTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2484,19 +2484,19 @@ export declare class ExplanationOfBenefitBenefitBalance extends fhir.BackboneEle
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ExBenefitcategoryValueSetType;
+    static categoryExampleValueSet(): ExBenefitcategoryValueSetType;
     /**
      * Example-bound Value Set for network
      */
-    networkExampleValueSet(): BenefitNetworkValueSetType;
+    static networkExampleValueSet(): BenefitNetworkValueSetType;
     /**
      * Example-bound Value Set for unit
      */
-    unitExampleValueSet(): BenefitUnitValueSetType;
+    static unitExampleValueSet(): BenefitUnitValueSetType;
     /**
      * Example-bound Value Set for term
      */
-    termExampleValueSet(): BenefitTermValueSetType;
+    static termExampleValueSet(): BenefitTermValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2717,35 +2717,35 @@ export declare class ExplanationOfBenefit extends fhir.DomainResource implements
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ExplanationofbenefitStatusValueSetType;
+    static statusRequiredValueSet(): ExplanationofbenefitStatusValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): ClaimTypeValueSetType;
+    static typeExtensibleValueSet(): ClaimTypeValueSetType;
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet(): ClaimSubtypeValueSetType;
+    static subTypeExampleValueSet(): ClaimSubtypeValueSetType;
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): ClaimUseValueSetType;
+    static useRequiredValueSet(): ClaimUseValueSetType;
     /**
      * Example-bound Value Set for fundsReserveRequested
      */
-    fundsReserveRequestedExampleValueSet(): FundsreserveValueSetType;
+    static fundsReserveRequestedExampleValueSet(): FundsreserveValueSetType;
     /**
      * Example-bound Value Set for fundsReserve
      */
-    fundsReserveExampleValueSet(): FundsreserveValueSetType;
+    static fundsReserveExampleValueSet(): FundsreserveValueSetType;
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
+    static outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
     /**
      * Example-bound Value Set for formCode
      */
-    formCodeExampleValueSet(): FormsValueSetType;
+    static formCodeExampleValueSet(): FormsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

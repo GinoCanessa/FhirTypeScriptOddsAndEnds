@@ -240,19 +240,19 @@ export class AppointmentParticipant extends fhir.BackboneElement implements IApp
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():EncounterParticipantTypeValueSetType {
+  public static typeExtensibleValueSet():EncounterParticipantTypeValueSetType {
     return EncounterParticipantTypeValueSet;
   }
   /**
    * Required-bound Value Set for required
    */
-  public requiredRequiredValueSet():ParticipantrequiredValueSetType {
+  public static requiredRequiredValueSet():ParticipantrequiredValueSetType {
     return ParticipantrequiredValueSet;
   }
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ParticipationstatusValueSetType {
+  public static statusRequiredValueSet():ParticipationstatusValueSetType {
     return ParticipationstatusValueSet;
   }
   /**
@@ -448,43 +448,43 @@ export class Appointment extends fhir.DomainResource implements IAppointment {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():AppointmentstatusValueSetType {
+  public static statusRequiredValueSet():AppointmentstatusValueSetType {
     return AppointmentstatusValueSet;
   }
   /**
    * Example-bound Value Set for cancelationReason
    */
-  public cancelationReasonExampleValueSet():AppointmentCancellationReasonValueSetType {
+  public static cancelationReasonExampleValueSet():AppointmentCancellationReasonValueSetType {
     return AppointmentCancellationReasonValueSet;
   }
   /**
    * Example-bound Value Set for serviceCategory
    */
-  public serviceCategoryExampleValueSet():ServiceCategoryValueSetType {
+  public static serviceCategoryExampleValueSet():ServiceCategoryValueSetType {
     return ServiceCategoryValueSet;
   }
   /**
    * Example-bound Value Set for serviceType
    */
-  public serviceTypeExampleValueSet():ServiceTypeValueSetType {
+  public static serviceTypeExampleValueSet():ServiceTypeValueSetType {
     return ServiceTypeValueSet;
   }
   /**
    * Preferred-bound Value Set for specialty
    */
-  public specialtyPreferredValueSet():C80PracticeCodesValueSetType {
+  public static specialtyPreferredValueSet():C80PracticeCodesValueSetType {
     return C80PracticeCodesValueSet;
   }
   /**
    * Preferred-bound Value Set for appointmentType
    */
-  public appointmentTypePreferredValueSet():V20276ValueSetType {
+  public static appointmentTypePreferredValueSet():V20276ValueSetType {
     return V20276ValueSet;
   }
   /**
    * Preferred-bound Value Set for reasonCode
    */
-  public reasonCodePreferredValueSet():EncounterReasonValueSetType {
+  public static reasonCodePreferredValueSet():EncounterReasonValueSetType {
     return EncounterReasonValueSet;
   }
   /**

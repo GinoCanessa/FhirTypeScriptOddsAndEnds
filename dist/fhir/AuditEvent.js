@@ -41,7 +41,7 @@ export class AuditEventAgentNetwork extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return NetworkTypeValueSet;
     }
     /**
@@ -120,25 +120,25 @@ export class AuditEventAgent extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return ParticipationRoleTypeValueSet;
     }
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet() {
+    static roleExampleValueSet() {
         return SecurityRoleTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for media
      */
-    mediaExtensibleValueSet() {
+    static mediaExtensibleValueSet() {
         return Dicm405MediatypeValueSet;
     }
     /**
      * Extensible-bound Value Set for purposeOfUse
      */
-    purposeOfUseExtensibleValueSet() {
+    static purposeOfUseExtensibleValueSet() {
         return V3PurposeOfUseValueSet;
     }
     /**
@@ -213,7 +213,7 @@ export class AuditEventSource extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return AuditSourceTypeValueSet;
     }
     /**
@@ -336,19 +336,19 @@ export class AuditEventEntity extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return AuditEntityTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for role
      */
-    roleExtensibleValueSet() {
+    static roleExtensibleValueSet() {
         return ObjectRoleValueSet;
     }
     /**
      * Extensible-bound Value Set for securityLabel
      */
-    securityLabelExtensibleValueSet() {
+    static securityLabelExtensibleValueSet() {
         return SecurityLabelsValueSet;
     }
     /**
@@ -457,31 +457,31 @@ export class AuditEvent extends fhir.DomainResource {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return AuditEventTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for subtype
      */
-    subtypeExtensibleValueSet() {
+    static subtypeExtensibleValueSet() {
         return AuditEventSubTypeValueSet;
     }
     /**
      * Required-bound Value Set for action
      */
-    actionRequiredValueSet() {
+    static actionRequiredValueSet() {
         return AuditEventActionValueSet;
     }
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet() {
+    static outcomeRequiredValueSet() {
         return AuditEventOutcomeValueSet;
     }
     /**
      * Extensible-bound Value Set for purposeOfEvent
      */
-    purposeOfEventExtensibleValueSet() {
+    static purposeOfEventExtensibleValueSet() {
         return V3PurposeOfUseValueSet;
     }
     /**

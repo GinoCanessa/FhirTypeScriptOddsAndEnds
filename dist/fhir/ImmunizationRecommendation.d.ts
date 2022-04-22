@@ -162,7 +162,7 @@ export declare class ImmunizationRecommendationRecommendationDateCriterion exten
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ImmunizationRecommendationDateCriterionValueSetType;
+    static codeExampleValueSet(): ImmunizationRecommendationDateCriterionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -259,23 +259,23 @@ export declare class ImmunizationRecommendationRecommendation extends fhir.Backb
     /**
      * Example-bound Value Set for vaccineCode
      */
-    vaccineCodeExampleValueSet(): VaccineCodeValueSetType;
+    static vaccineCodeExampleValueSet(): VaccineCodeValueSetType;
     /**
      * Example-bound Value Set for targetDisease
      */
-    targetDiseaseExampleValueSet(): ImmunizationRecommendationTargetDiseaseValueSetType;
+    static targetDiseaseExampleValueSet(): ImmunizationRecommendationTargetDiseaseValueSetType;
     /**
      * Example-bound Value Set for contraindicatedVaccineCode
      */
-    contraindicatedVaccineCodeExampleValueSet(): VaccineCodeValueSetType;
+    static contraindicatedVaccineCodeExampleValueSet(): VaccineCodeValueSetType;
     /**
      * Example-bound Value Set for forecastStatus
      */
-    forecastStatusExampleValueSet(): ImmunizationRecommendationStatusValueSetType;
+    static forecastStatusExampleValueSet(): ImmunizationRecommendationStatusValueSetType;
     /**
      * Example-bound Value Set for forecastReason
      */
-    forecastReasonExampleValueSet(): ImmunizationRecommendationReasonValueSetType;
+    static forecastReasonExampleValueSet(): ImmunizationRecommendationReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

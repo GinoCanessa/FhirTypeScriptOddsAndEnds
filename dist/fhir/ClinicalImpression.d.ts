@@ -174,7 +174,7 @@ export declare class ClinicalImpressionInvestigation extends fhir.BackboneElemen
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): InvestigationSetsValueSetType;
+    static codeExampleValueSet(): InvestigationSetsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -207,7 +207,7 @@ export declare class ClinicalImpressionFinding extends fhir.BackboneElement impl
     /**
      * Example-bound Value Set for itemCodeableConcept
      */
-    itemCodeableConceptExampleValueSet(): ConditionCodeValueSetType;
+    static itemCodeableConceptExampleValueSet(): ConditionCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -337,11 +337,11 @@ export declare class ClinicalImpression extends fhir.DomainResource implements I
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ClinicalimpressionStatusValueSetType;
+    static statusRequiredValueSet(): ClinicalimpressionStatusValueSetType;
     /**
      * Example-bound Value Set for prognosisCodeableConcept
      */
-    prognosisCodeableConceptExampleValueSet(): ClinicalimpressionPrognosisValueSetType;
+    static prognosisCodeableConceptExampleValueSet(): ClinicalimpressionPrognosisValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -35,7 +35,7 @@ export class UsageContext extends fhir.FhirElement {
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet() {
+    static codeExtensibleValueSet() {
         return UsageContextTypeValueSet;
     }
     /**

@@ -367,43 +367,43 @@ export class Communication extends fhir.DomainResource implements ICommunication
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():EventStatusValueSetType {
+  public static statusRequiredValueSet():EventStatusValueSetType {
     return EventStatusValueSet;
   }
   /**
    * Example-bound Value Set for statusReason
    */
-  public statusReasonExampleValueSet():CommunicationNotDoneReasonValueSetType {
+  public static statusReasonExampleValueSet():CommunicationNotDoneReasonValueSetType {
     return CommunicationNotDoneReasonValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():CommunicationCategoryValueSetType {
+  public static categoryExampleValueSet():CommunicationCategoryValueSetType {
     return CommunicationCategoryValueSet;
   }
   /**
    * Required-bound Value Set for priority
    */
-  public priorityRequiredValueSet():RequestPriorityValueSetType {
+  public static priorityRequiredValueSet():RequestPriorityValueSetType {
     return RequestPriorityValueSet;
   }
   /**
    * Example-bound Value Set for medium
    */
-  public mediumExampleValueSet():V3ParticipationModeValueSetType {
+  public static mediumExampleValueSet():V3ParticipationModeValueSetType {
     return V3ParticipationModeValueSet;
   }
   /**
    * Example-bound Value Set for topic
    */
-  public topicExampleValueSet():CommunicationTopicValueSetType {
+  public static topicExampleValueSet():CommunicationTopicValueSetType {
     return CommunicationTopicValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ClinicalFindingsValueSetType {
+  public static reasonCodeExampleValueSet():ClinicalFindingsValueSetType {
     return ClinicalFindingsValueSet;
   }
   /**

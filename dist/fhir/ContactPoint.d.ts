@@ -89,11 +89,11 @@ export declare class ContactPoint extends fhir.FhirElement implements IContactPo
     /**
      * Required-bound Value Set for system
      */
-    systemRequiredValueSet(): ContactPointSystemValueSetType;
+    static systemRequiredValueSet(): ContactPointSystemValueSetType;
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): ContactPointUseValueSetType;
+    static useRequiredValueSet(): ContactPointUseValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

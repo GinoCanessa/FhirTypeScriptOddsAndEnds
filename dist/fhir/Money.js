@@ -29,7 +29,7 @@ export class Money extends fhir.FhirElement {
     /**
      * Required-bound Value Set for currency
      */
-    currencyRequiredValueSet() {
+    static currencyRequiredValueSet() {
         return CurrenciesValueSet;
     }
     /**

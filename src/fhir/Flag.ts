@@ -121,19 +121,19 @@ export class Flag extends fhir.DomainResource implements IFlag {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():FlagStatusValueSetType {
+  public static statusRequiredValueSet():FlagStatusValueSetType {
     return FlagStatusValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():FlagCategoryValueSetType {
+  public static categoryExampleValueSet():FlagCategoryValueSetType {
     return FlagCategoryValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():FlagCodeValueSetType {
+  public static codeExampleValueSet():FlagCodeValueSetType {
     return FlagCodeValueSet;
   }
   /**

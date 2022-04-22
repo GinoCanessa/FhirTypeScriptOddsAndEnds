@@ -106,15 +106,15 @@ export declare class BodyStructure extends fhir.DomainResource implements IBodyS
     /**
      * Example-bound Value Set for morphology
      */
-    morphologyExampleValueSet(): BodystructureCodeValueSetType;
+    static morphologyExampleValueSet(): BodystructureCodeValueSetType;
     /**
      * Example-bound Value Set for location
      */
-    locationExampleValueSet(): BodySiteValueSetType;
+    static locationExampleValueSet(): BodySiteValueSetType;
     /**
      * Example-bound Value Set for locationQualifier
      */
-    locationQualifierExampleValueSet(): BodystructureRelativeLocationValueSetType;
+    static locationQualifierExampleValueSet(): BodystructureRelativeLocationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

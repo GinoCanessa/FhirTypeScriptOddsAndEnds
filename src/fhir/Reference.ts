@@ -95,7 +95,7 @@ export class Reference extends fhir.FhirElement implements IReference {
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():ResourceTypesValueSetType {
+  public static typeExtensibleValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**

@@ -133,7 +133,7 @@ export class PractitionerQualification extends fhir.BackboneElement implements I
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():V2270360ValueSetType {
+  public static codeExampleValueSet():V2270360ValueSetType {
     return V2270360ValueSet;
   }
   /**
@@ -239,13 +239,13 @@ export class Practitioner extends fhir.DomainResource implements IPractitioner {
   /**
    * Required-bound Value Set for gender
    */
-  public genderRequiredValueSet():AdministrativeGenderValueSetType {
+  public static genderRequiredValueSet():AdministrativeGenderValueSetType {
     return AdministrativeGenderValueSet;
   }
   /**
    * Preferred-bound Value Set for communication
    */
-  public communicationPreferredValueSet():LanguagesValueSetType {
+  public static communicationPreferredValueSet():LanguagesValueSetType {
     return LanguagesValueSet;
   }
   /**

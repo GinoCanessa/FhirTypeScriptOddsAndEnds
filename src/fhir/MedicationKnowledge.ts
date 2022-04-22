@@ -790,7 +790,7 @@ export class MedicationKnowledgePackaging extends fhir.BackboneElement implement
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():MedicationknowledgePackageTypeValueSetType {
+  public static typeExampleValueSet():MedicationknowledgePackageTypeValueSetType {
     return MedicationknowledgePackageTypeValueSet;
   }
   /**
@@ -852,7 +852,7 @@ export class MedicationKnowledgeDrugCharacteristic extends fhir.BackboneElement 
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():MedicationknowledgeCharacteristicValueSetType {
+  public static typeExampleValueSet():MedicationknowledgeCharacteristicValueSetType {
     return MedicationknowledgeCharacteristicValueSet;
   }
   /**
@@ -1194,25 +1194,25 @@ export class MedicationKnowledge extends fhir.DomainResource implements IMedicat
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():MedicationCodesValueSetType {
+  public static codeExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():MedicationknowledgeStatusValueSetType {
+  public static statusRequiredValueSet():MedicationknowledgeStatusValueSetType {
     return MedicationknowledgeStatusValueSet;
   }
   /**
    * Example-bound Value Set for doseForm
    */
-  public doseFormExampleValueSet():MedicationFormCodesValueSetType {
+  public static doseFormExampleValueSet():MedicationFormCodesValueSetType {
     return MedicationFormCodesValueSet;
   }
   /**
    * Example-bound Value Set for intendedRoute
    */
-  public intendedRouteExampleValueSet():RouteCodesValueSetType {
+  public static intendedRouteExampleValueSet():RouteCodesValueSetType {
     return RouteCodesValueSet;
   }
   /**

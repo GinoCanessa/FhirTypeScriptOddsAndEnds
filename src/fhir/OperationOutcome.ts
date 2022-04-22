@@ -143,19 +143,19 @@ export class OperationOutcomeIssue extends fhir.BackboneElement implements IOper
   /**
    * Required-bound Value Set for severity
    */
-  public severityRequiredValueSet():IssueSeverityValueSetType {
+  public static severityRequiredValueSet():IssueSeverityValueSetType {
     return IssueSeverityValueSet;
   }
   /**
    * Required-bound Value Set for code
    */
-  public codeRequiredValueSet():IssueTypeValueSetType {
+  public static codeRequiredValueSet():IssueTypeValueSetType {
     return IssueTypeValueSet;
   }
   /**
    * Example-bound Value Set for details
    */
-  public detailsExampleValueSet():OperationOutcomeValueSetType {
+  public static detailsExampleValueSet():OperationOutcomeValueSetType {
     return OperationOutcomeValueSet;
   }
   /**

@@ -446,7 +446,7 @@ export class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends fhir.Bac
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():PrecisionEstimateTypeValueSetType {
+  public static typeExtensibleValueSet():PrecisionEstimateTypeValueSetType {
     return PrecisionEstimateTypeValueSet;
   }
   /**
@@ -530,13 +530,13 @@ export class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElement impl
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():RiskEstimateTypeValueSetType {
+  public static typeExtensibleValueSet():RiskEstimateTypeValueSetType {
     return RiskEstimateTypeValueSet;
   }
   /**
    * Required-bound Value Set for unitOfMeasure
    */
-  public unitOfMeasureRequiredValueSet():UcumUnitsValueSetType {
+  public static unitOfMeasureRequiredValueSet():UcumUnitsValueSetType {
     return UcumUnitsValueSet;
   }
   /**
@@ -583,13 +583,13 @@ export class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.Ba
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():CertaintySubcomponentTypeValueSetType {
+  public static typeExtensibleValueSet():CertaintySubcomponentTypeValueSetType {
     return CertaintySubcomponentTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for rating
    */
-  public ratingExtensibleValueSet():CertaintySubcomponentRatingValueSetType {
+  public static ratingExtensibleValueSet():CertaintySubcomponentRatingValueSetType {
     return CertaintySubcomponentRatingValueSet;
   }
   /**
@@ -632,7 +632,7 @@ export class RiskEvidenceSynthesisCertainty extends fhir.BackboneElement impleme
   /**
    * Extensible-bound Value Set for rating
    */
-  public ratingExtensibleValueSet():EvidenceQualityValueSetType {
+  public static ratingExtensibleValueSet():EvidenceQualityValueSetType {
     return EvidenceQualityValueSet;
   }
   /**
@@ -880,25 +880,25 @@ export class RiskEvidenceSynthesis extends fhir.DomainResource implements IRiskE
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Example-bound Value Set for topic
    */
-  public topicExampleValueSet():DefinitionTopicValueSetType {
+  public static topicExampleValueSet():DefinitionTopicValueSetType {
     return DefinitionTopicValueSet;
   }
   /**
    * Extensible-bound Value Set for synthesisType
    */
-  public synthesisTypeExtensibleValueSet():SynthesisTypeValueSetType {
+  public static synthesisTypeExtensibleValueSet():SynthesisTypeValueSetType {
     return SynthesisTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for studyType
    */
-  public studyTypeExtensibleValueSet():StudyTypeValueSetType {
+  public static studyTypeExtensibleValueSet():StudyTypeValueSetType {
     return StudyTypeValueSet;
   }
   /**

@@ -118,7 +118,7 @@ export class ConceptMapGroupElementTarget extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for equivalence
      */
-    equivalenceRequiredValueSet() {
+    static equivalenceRequiredValueSet() {
         return ConceptMapEquivalenceValueSet;
     }
     /**
@@ -232,7 +232,7 @@ export class ConceptMapGroupUnmapped extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet() {
+    static modeRequiredValueSet() {
         return ConceptmapUnmappedModeValueSet;
     }
     /**
@@ -452,7 +452,7 @@ export class ConceptMap extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**

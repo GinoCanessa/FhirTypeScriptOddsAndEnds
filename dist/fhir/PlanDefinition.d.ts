@@ -594,7 +594,7 @@ export declare class PlanDefinitionGoalTarget extends fhir.BackboneElement imple
     /**
      * Example-bound Value Set for measure
      */
-    measureExampleValueSet(): ObservationCodesValueSetType;
+    static measureExampleValueSet(): ObservationCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -639,23 +639,23 @@ export declare class PlanDefinitionGoal extends fhir.BackboneElement implements 
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): GoalCategoryValueSetType;
+    static categoryExampleValueSet(): GoalCategoryValueSetType;
     /**
      * Example-bound Value Set for description
      */
-    descriptionExampleValueSet(): ClinicalFindingsValueSetType;
+    static descriptionExampleValueSet(): ClinicalFindingsValueSetType;
     /**
      * Preferred-bound Value Set for priority
      */
-    priorityPreferredValueSet(): GoalPriorityValueSetType;
+    static priorityPreferredValueSet(): GoalPriorityValueSetType;
     /**
      * Example-bound Value Set for start
      */
-    startExampleValueSet(): GoalStartEventValueSetType;
+    static startExampleValueSet(): GoalStartEventValueSetType;
     /**
      * Example-bound Value Set for addresses
      */
-    addressesExampleValueSet(): ConditionCodeValueSetType;
+    static addressesExampleValueSet(): ConditionCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -684,7 +684,7 @@ export declare class PlanDefinitionActionCondition extends fhir.BackboneElement 
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet(): ActionConditionKindValueSetType;
+    static kindRequiredValueSet(): ActionConditionKindValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -725,7 +725,7 @@ export declare class PlanDefinitionActionRelatedAction extends fhir.BackboneElem
     /**
      * Required-bound Value Set for relationship
      */
-    relationshipRequiredValueSet(): ActionRelationshipTypeValueSetType;
+    static relationshipRequiredValueSet(): ActionRelationshipTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -754,7 +754,7 @@ export declare class PlanDefinitionActionParticipant extends fhir.BackboneElemen
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ActionParticipantTypeValueSetType;
+    static typeRequiredValueSet(): ActionParticipantTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -994,39 +994,39 @@ export declare class PlanDefinitionAction extends fhir.BackboneElement implement
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): ActionTypeValueSetType;
+    static typeExtensibleValueSet(): ActionTypeValueSetType;
     /**
      * Required-bound Value Set for groupingBehavior
      */
-    groupingBehaviorRequiredValueSet(): ActionGroupingBehaviorValueSetType;
+    static groupingBehaviorRequiredValueSet(): ActionGroupingBehaviorValueSetType;
     /**
      * Required-bound Value Set for selectionBehavior
      */
-    selectionBehaviorRequiredValueSet(): ActionSelectionBehaviorValueSetType;
+    static selectionBehaviorRequiredValueSet(): ActionSelectionBehaviorValueSetType;
     /**
      * Required-bound Value Set for requiredBehavior
      */
-    requiredBehaviorRequiredValueSet(): ActionRequiredBehaviorValueSetType;
+    static requiredBehaviorRequiredValueSet(): ActionRequiredBehaviorValueSetType;
     /**
      * Required-bound Value Set for precheckBehavior
      */
-    precheckBehaviorRequiredValueSet(): ActionPrecheckBehaviorValueSetType;
+    static precheckBehaviorRequiredValueSet(): ActionPrecheckBehaviorValueSetType;
     /**
      * Required-bound Value Set for cardinalityBehavior
      */
-    cardinalityBehaviorRequiredValueSet(): ActionCardinalityBehaviorValueSetType;
+    static cardinalityBehaviorRequiredValueSet(): ActionCardinalityBehaviorValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1241,23 +1241,23 @@ export declare class PlanDefinition extends fhir.DomainResource implements IPlan
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): PlanDefinitionTypeValueSetType;
+    static typeExtensibleValueSet(): PlanDefinitionTypeValueSetType;
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectCodeableConceptExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
+    static subjectReferenceExtensibleValueSet(): SubjectTypeValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): DefinitionTopicValueSetType;
+    static topicExampleValueSet(): DefinitionTopicValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

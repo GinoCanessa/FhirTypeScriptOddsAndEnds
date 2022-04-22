@@ -56,13 +56,13 @@ export class FamilyMemberHistoryCondition extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ConditionCodeValueSet;
     }
     /**
      * Example-bound Value Set for outcome
      */
-    outcomeExampleValueSet() {
+    static outcomeExampleValueSet() {
         return ConditionOutcomeValueSet;
     }
     /**
@@ -237,31 +237,31 @@ export class FamilyMemberHistory extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return HistoryStatusValueSet;
     }
     /**
      * Example-bound Value Set for dataAbsentReason
      */
-    dataAbsentReasonExampleValueSet() {
+    static dataAbsentReasonExampleValueSet() {
         return HistoryAbsentReasonValueSet;
     }
     /**
      * Example-bound Value Set for relationship
      */
-    relationshipExampleValueSet() {
+    static relationshipExampleValueSet() {
         return V3FamilyMemberValueSet;
     }
     /**
      * Extensible-bound Value Set for sex
      */
-    sexExtensibleValueSet() {
+    static sexExtensibleValueSet() {
         return AdministrativeGenderValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ClinicalFindingsValueSet;
     }
     /**

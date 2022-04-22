@@ -642,7 +642,7 @@ export declare class MedicationKnowledgePackaging extends fhir.BackboneElement i
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): MedicationknowledgePackageTypeValueSetType;
+    static typeExampleValueSet(): MedicationknowledgePackageTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -687,7 +687,7 @@ export declare class MedicationKnowledgeDrugCharacteristic extends fhir.Backbone
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): MedicationknowledgeCharacteristicValueSetType;
+    static typeExampleValueSet(): MedicationknowledgeCharacteristicValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -925,19 +925,19 @@ export declare class MedicationKnowledge extends fhir.DomainResource implements 
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): MedicationCodesValueSetType;
+    static codeExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): MedicationknowledgeStatusValueSetType;
+    static statusRequiredValueSet(): MedicationknowledgeStatusValueSetType;
     /**
      * Example-bound Value Set for doseForm
      */
-    doseFormExampleValueSet(): MedicationFormCodesValueSetType;
+    static doseFormExampleValueSet(): MedicationFormCodesValueSetType;
     /**
      * Example-bound Value Set for intendedRoute
      */
-    intendedRouteExampleValueSet(): RouteCodesValueSetType;
+    static intendedRouteExampleValueSet(): RouteCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

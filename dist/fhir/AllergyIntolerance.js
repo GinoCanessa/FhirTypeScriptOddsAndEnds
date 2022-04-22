@@ -59,25 +59,25 @@ export class AllergyIntoleranceReaction extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for substance
      */
-    substanceExampleValueSet() {
+    static substanceExampleValueSet() {
         return SubstanceCodeValueSet;
     }
     /**
      * Example-bound Value Set for manifestation
      */
-    manifestationExampleValueSet() {
+    static manifestationExampleValueSet() {
         return ClinicalFindingsValueSet;
     }
     /**
      * Required-bound Value Set for severity
      */
-    severityRequiredValueSet() {
+    static severityRequiredValueSet() {
         return ReactionEventSeverityValueSet;
     }
     /**
      * Example-bound Value Set for exposureRoute
      */
-    exposureRouteExampleValueSet() {
+    static exposureRouteExampleValueSet() {
         return RouteCodesValueSet;
     }
     /**
@@ -210,37 +210,37 @@ export class AllergyIntolerance extends fhir.DomainResource {
     /**
      * Required-bound Value Set for clinicalStatus
      */
-    clinicalStatusRequiredValueSet() {
+    static clinicalStatusRequiredValueSet() {
         return AllergyintoleranceClinicalValueSet;
     }
     /**
      * Required-bound Value Set for verificationStatus
      */
-    verificationStatusRequiredValueSet() {
+    static verificationStatusRequiredValueSet() {
         return AllergyintoleranceVerificationValueSet;
     }
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return AllergyIntoleranceTypeValueSet;
     }
     /**
      * Required-bound Value Set for category
      */
-    categoryRequiredValueSet() {
+    static categoryRequiredValueSet() {
         return AllergyIntoleranceCategoryValueSet;
     }
     /**
      * Required-bound Value Set for criticality
      */
-    criticalityRequiredValueSet() {
+    static criticalityRequiredValueSet() {
         return AllergyIntoleranceCriticalityValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return AllergyintoleranceCodeValueSet;
     }
     /**

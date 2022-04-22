@@ -577,15 +577,15 @@ export declare class MolecularSequenceReferenceSeq extends fhir.BackboneElement 
     /**
      * Example-bound Value Set for chromosome
      */
-    chromosomeExampleValueSet(): ChromosomeHumanValueSetType;
+    static chromosomeExampleValueSet(): ChromosomeHumanValueSetType;
     /**
      * Required-bound Value Set for orientation
      */
-    orientationRequiredValueSet(): OrientationTypeValueSetType;
+    static orientationRequiredValueSet(): OrientationTypeValueSetType;
     /**
      * Required-bound Value Set for strand
      */
-    strandRequiredValueSet(): StrandTypeValueSetType;
+    static strandRequiredValueSet(): StrandTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -832,7 +832,7 @@ export declare class MolecularSequenceQuality extends fhir.BackboneElement imple
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): QualityTypeValueSetType;
+    static typeRequiredValueSet(): QualityTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -897,7 +897,7 @@ export declare class MolecularSequenceRepository extends fhir.BackboneElement im
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): RepositoryTypeValueSetType;
+    static typeRequiredValueSet(): RepositoryTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1097,7 +1097,7 @@ export declare class MolecularSequence extends fhir.DomainResource implements IM
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): SequenceTypeValueSetType;
+    static typeRequiredValueSet(): SequenceTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -53,19 +53,19 @@ export class BodyStructure extends fhir.DomainResource {
     /**
      * Example-bound Value Set for morphology
      */
-    morphologyExampleValueSet() {
+    static morphologyExampleValueSet() {
         return BodystructureCodeValueSet;
     }
     /**
      * Example-bound Value Set for location
      */
-    locationExampleValueSet() {
+    static locationExampleValueSet() {
         return BodySiteValueSet;
     }
     /**
      * Example-bound Value Set for locationQualifier
      */
-    locationQualifierExampleValueSet() {
+    static locationQualifierExampleValueSet() {
         return BodystructureRelativeLocationValueSet;
     }
     /**

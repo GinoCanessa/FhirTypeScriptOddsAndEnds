@@ -46,13 +46,13 @@ export class ObservationReferenceRange extends fhir.BackboneElement {
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet() {
+    static typePreferredValueSet() {
         return ReferencerangeMeaningValueSet;
     }
     /**
      * Example-bound Value Set for appliesTo
      */
-    appliesToExampleValueSet() {
+    static appliesToExampleValueSet() {
         return ReferencerangeAppliestoValueSet;
     }
     /**
@@ -157,19 +157,19 @@ export class ObservationComponent extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ObservationCodesValueSet;
     }
     /**
      * Extensible-bound Value Set for dataAbsentReason
      */
-    dataAbsentReasonExtensibleValueSet() {
+    static dataAbsentReasonExtensibleValueSet() {
         return DataAbsentReasonValueSet;
     }
     /**
      * Extensible-bound Value Set for interpretation
      */
-    interpretationExtensibleValueSet() {
+    static interpretationExtensibleValueSet() {
         return ObservationInterpretationValueSet;
     }
     /**
@@ -386,43 +386,43 @@ export class Observation extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ObservationStatusValueSet;
     }
     /**
      * Preferred-bound Value Set for category
      */
-    categoryPreferredValueSet() {
+    static categoryPreferredValueSet() {
         return ObservationCategoryValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ObservationCodesValueSet;
     }
     /**
      * Extensible-bound Value Set for dataAbsentReason
      */
-    dataAbsentReasonExtensibleValueSet() {
+    static dataAbsentReasonExtensibleValueSet() {
         return DataAbsentReasonValueSet;
     }
     /**
      * Extensible-bound Value Set for interpretation
      */
-    interpretationExtensibleValueSet() {
+    static interpretationExtensibleValueSet() {
         return ObservationInterpretationValueSet;
     }
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet() {
+    static bodySiteExampleValueSet() {
         return BodySiteValueSet;
     }
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet() {
+    static methodExampleValueSet() {
         return ObservationMethodsValueSet;
     }
     /**

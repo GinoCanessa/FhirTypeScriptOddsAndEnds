@@ -278,7 +278,7 @@ export declare class MessageHeaderResponse extends fhir.BackboneElement implemen
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): ResponseCodeValueSetType;
+    static codeRequiredValueSet(): ResponseCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -355,7 +355,7 @@ export declare class MessageHeader extends fhir.DomainResource implements IMessa
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet(): MessageReasonEncounterValueSetType;
+    static reasonExampleValueSet(): MessageReasonEncounterValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

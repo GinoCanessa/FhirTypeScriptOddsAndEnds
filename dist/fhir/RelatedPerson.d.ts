@@ -111,7 +111,7 @@ export declare class RelatedPersonCommunication extends fhir.BackboneElement imp
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet(): LanguagesValueSetType;
+    static languagePreferredValueSet(): LanguagesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -192,11 +192,11 @@ export declare class RelatedPerson extends fhir.DomainResource implements IRelat
     /**
      * Preferred-bound Value Set for relationship
      */
-    relationshipPreferredValueSet(): RelatedpersonRelationshiptypeValueSetType;
+    static relationshipPreferredValueSet(): RelatedpersonRelationshiptypeValueSetType;
     /**
      * Required-bound Value Set for gender
      */
-    genderRequiredValueSet(): AdministrativeGenderValueSetType;
+    static genderRequiredValueSet(): AdministrativeGenderValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

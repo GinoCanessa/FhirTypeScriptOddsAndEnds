@@ -153,13 +153,13 @@ export class OrganizationAffiliation extends fhir.DomainResource implements IOrg
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():OrganizationRoleValueSetType {
+  public static codeExampleValueSet():OrganizationRoleValueSetType {
     return OrganizationRoleValueSet;
   }
   /**
    * Preferred-bound Value Set for specialty
    */
-  public specialtyPreferredValueSet():C80PracticeCodesValueSetType {
+  public static specialtyPreferredValueSet():C80PracticeCodesValueSetType {
     return C80PracticeCodesValueSet;
   }
   /**

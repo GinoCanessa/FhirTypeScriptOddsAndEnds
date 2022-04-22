@@ -247,25 +247,25 @@ export class AllergyIntoleranceReaction extends fhir.BackboneElement implements 
   /**
    * Example-bound Value Set for substance
    */
-  public substanceExampleValueSet():SubstanceCodeValueSetType {
+  public static substanceExampleValueSet():SubstanceCodeValueSetType {
     return SubstanceCodeValueSet;
   }
   /**
    * Example-bound Value Set for manifestation
    */
-  public manifestationExampleValueSet():ClinicalFindingsValueSetType {
+  public static manifestationExampleValueSet():ClinicalFindingsValueSetType {
     return ClinicalFindingsValueSet;
   }
   /**
    * Required-bound Value Set for severity
    */
-  public severityRequiredValueSet():ReactionEventSeverityValueSetType {
+  public static severityRequiredValueSet():ReactionEventSeverityValueSetType {
     return ReactionEventSeverityValueSet;
   }
   /**
    * Example-bound Value Set for exposureRoute
    */
-  public exposureRouteExampleValueSet():RouteCodesValueSetType {
+  public static exposureRouteExampleValueSet():RouteCodesValueSetType {
     return RouteCodesValueSet;
   }
   /**
@@ -442,37 +442,37 @@ export class AllergyIntolerance extends fhir.DomainResource implements IAllergyI
   /**
    * Required-bound Value Set for clinicalStatus
    */
-  public clinicalStatusRequiredValueSet():AllergyintoleranceClinicalValueSetType {
+  public static clinicalStatusRequiredValueSet():AllergyintoleranceClinicalValueSetType {
     return AllergyintoleranceClinicalValueSet;
   }
   /**
    * Required-bound Value Set for verificationStatus
    */
-  public verificationStatusRequiredValueSet():AllergyintoleranceVerificationValueSetType {
+  public static verificationStatusRequiredValueSet():AllergyintoleranceVerificationValueSetType {
     return AllergyintoleranceVerificationValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():AllergyIntoleranceTypeValueSetType {
+  public static typeRequiredValueSet():AllergyIntoleranceTypeValueSetType {
     return AllergyIntoleranceTypeValueSet;
   }
   /**
    * Required-bound Value Set for category
    */
-  public categoryRequiredValueSet():AllergyIntoleranceCategoryValueSetType {
+  public static categoryRequiredValueSet():AllergyIntoleranceCategoryValueSetType {
     return AllergyIntoleranceCategoryValueSet;
   }
   /**
    * Required-bound Value Set for criticality
    */
-  public criticalityRequiredValueSet():AllergyIntoleranceCriticalityValueSetType {
+  public static criticalityRequiredValueSet():AllergyIntoleranceCriticalityValueSetType {
     return AllergyIntoleranceCriticalityValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():AllergyintoleranceCodeValueSetType {
+  public static codeExampleValueSet():AllergyintoleranceCodeValueSetType {
     return AllergyintoleranceCodeValueSet;
   }
   /**

@@ -128,7 +128,7 @@ export class Signature extends fhir.FhirElement implements ISignature {
   /**
    * Preferred-bound Value Set for type
    */
-  public typePreferredValueSet():SignatureTypeValueSetType {
+  public static typePreferredValueSet():SignatureTypeValueSetType {
     return SignatureTypeValueSet;
   }
   /**

@@ -72,7 +72,7 @@ export class UsageContext extends fhir.FhirElement implements IUsageContext {
   /**
    * Extensible-bound Value Set for code
    */
-  public codeExtensibleValueSet():UsageContextTypeValueSetType {
+  public static codeExtensibleValueSet():UsageContextTypeValueSetType {
     return UsageContextTypeValueSet;
   }
   /**

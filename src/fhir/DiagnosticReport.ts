@@ -303,25 +303,25 @@ export class DiagnosticReport extends fhir.DomainResource implements IDiagnostic
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():DiagnosticReportStatusValueSetType {
+  public static statusRequiredValueSet():DiagnosticReportStatusValueSetType {
     return DiagnosticReportStatusValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():DiagnosticServiceSectionsValueSetType {
+  public static categoryExampleValueSet():DiagnosticServiceSectionsValueSetType {
     return DiagnosticServiceSectionsValueSet;
   }
   /**
    * Preferred-bound Value Set for code
    */
-  public codePreferredValueSet():ReportCodesValueSetType {
+  public static codePreferredValueSet():ReportCodesValueSetType {
     return ReportCodesValueSet;
   }
   /**
    * Example-bound Value Set for conclusionCode
    */
-  public conclusionCodeExampleValueSet():ClinicalFindingsValueSetType {
+  public static conclusionCodeExampleValueSet():ClinicalFindingsValueSetType {
     return ClinicalFindingsValueSet;
   }
   /**

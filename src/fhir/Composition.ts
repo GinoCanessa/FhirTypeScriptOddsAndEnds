@@ -264,7 +264,7 @@ export class CompositionAttester extends fhir.BackboneElement implements ICompos
   /**
    * Required-bound Value Set for mode
    */
-  public modeRequiredValueSet():CompositionAttestationModeValueSetType {
+  public static modeRequiredValueSet():CompositionAttestationModeValueSetType {
     return CompositionAttestationModeValueSet;
   }
   /**
@@ -314,7 +314,7 @@ export class CompositionRelatesTo extends fhir.BackboneElement implements ICompo
   /**
    * Required-bound Value Set for code
    */
-  public codeRequiredValueSet():DocumentRelationshipTypeValueSetType {
+  public static codeRequiredValueSet():DocumentRelationshipTypeValueSetType {
     return DocumentRelationshipTypeValueSet;
   }
   /**
@@ -358,7 +358,7 @@ export class CompositionEvent extends fhir.BackboneElement implements ICompositi
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():V3ActCodeValueSetType {
+  public static codeExampleValueSet():V3ActCodeValueSetType {
     return V3ActCodeValueSet;
   }
   /**
@@ -447,25 +447,25 @@ export class CompositionSection extends fhir.BackboneElement implements IComposi
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():DocSectionCodesValueSetType {
+  public static codeExampleValueSet():DocSectionCodesValueSetType {
     return DocSectionCodesValueSet;
   }
   /**
    * Required-bound Value Set for mode
    */
-  public modeRequiredValueSet():ListModeValueSetType {
+  public static modeRequiredValueSet():ListModeValueSetType {
     return ListModeValueSet;
   }
   /**
    * Preferred-bound Value Set for orderedBy
    */
-  public orderedByPreferredValueSet():ListOrderValueSetType {
+  public static orderedByPreferredValueSet():ListOrderValueSetType {
     return ListOrderValueSet;
   }
   /**
    * Preferred-bound Value Set for emptyReason
    */
-  public emptyReasonPreferredValueSet():ListEmptyReasonValueSetType {
+  public static emptyReasonPreferredValueSet():ListEmptyReasonValueSetType {
     return ListEmptyReasonValueSet;
   }
   /**
@@ -606,25 +606,25 @@ export class Composition extends fhir.DomainResource implements IComposition {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():CompositionStatusValueSetType {
+  public static statusRequiredValueSet():CompositionStatusValueSetType {
     return CompositionStatusValueSet;
   }
   /**
    * Preferred-bound Value Set for type
    */
-  public typePreferredValueSet():DocTypecodesValueSetType {
+  public static typePreferredValueSet():DocTypecodesValueSetType {
     return DocTypecodesValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():DocumentClasscodesValueSetType {
+  public static categoryExampleValueSet():DocumentClasscodesValueSetType {
     return DocumentClasscodesValueSet;
   }
   /**
    * Required-bound Value Set for confidentiality
    */
-  public confidentialityRequiredValueSet():V3ConfidentialityClassificationValueSetType {
+  public static confidentialityRequiredValueSet():V3ConfidentialityClassificationValueSetType {
     return V3ConfidentialityClassificationValueSet;
   }
   /**

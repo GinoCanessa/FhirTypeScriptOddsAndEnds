@@ -559,7 +559,7 @@ export declare class ImplementationGuideGlobal extends fhir.BackboneElement impl
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ResourceTypesValueSetType;
+    static typeRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -665,7 +665,7 @@ export declare class ImplementationGuideDefinitionResource extends fhir.Backbone
     /**
      * Required-bound Value Set for fhirVersion
      */
-    fhirVersionRequiredValueSet(): FHIRVersionValueSetType;
+    static fhirVersionRequiredValueSet(): FHIRVersionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -714,7 +714,7 @@ export declare class ImplementationGuideDefinitionPage extends fhir.BackboneElem
     /**
      * Required-bound Value Set for generation
      */
-    generationRequiredValueSet(): GuidePageGenerationValueSetType;
+    static generationRequiredValueSet(): GuidePageGenerationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -747,7 +747,7 @@ export declare class ImplementationGuideDefinitionParameter extends fhir.Backbon
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet(): GuideParameterCodeValueSetType;
+    static codeRequiredValueSet(): GuideParameterCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1095,15 +1095,15 @@ export declare class ImplementationGuide extends fhir.DomainResource implements 
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for license
      */
-    licenseRequiredValueSet(): SpdxLicenseValueSetType;
+    static licenseRequiredValueSet(): SpdxLicenseValueSetType;
     /**
      * Required-bound Value Set for fhirVersion
      */
-    fhirVersionRequiredValueSet(): FHIRVersionValueSetType;
+    static fhirVersionRequiredValueSet(): FHIRVersionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

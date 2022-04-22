@@ -211,19 +211,19 @@ export declare class ImmunizationEvaluation extends fhir.DomainResource implemen
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ImmunizationEvaluationStatusValueSetType;
+    static statusRequiredValueSet(): ImmunizationEvaluationStatusValueSetType;
     /**
      * Example-bound Value Set for targetDisease
      */
-    targetDiseaseExampleValueSet(): ImmunizationEvaluationTargetDiseaseValueSetType;
+    static targetDiseaseExampleValueSet(): ImmunizationEvaluationTargetDiseaseValueSetType;
     /**
      * Example-bound Value Set for doseStatus
      */
-    doseStatusExampleValueSet(): ImmunizationEvaluationDoseStatusValueSetType;
+    static doseStatusExampleValueSet(): ImmunizationEvaluationDoseStatusValueSetType;
     /**
      * Example-bound Value Set for doseStatusReason
      */
-    doseStatusReasonExampleValueSet(): ImmunizationEvaluationDoseStatusReasonValueSetType;
+    static doseStatusReasonExampleValueSet(): ImmunizationEvaluationDoseStatusReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

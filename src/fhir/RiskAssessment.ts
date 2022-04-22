@@ -220,7 +220,7 @@ export class RiskAssessmentPrediction extends fhir.BackboneElement implements IR
   /**
    * Example-bound Value Set for qualitativeRisk
    */
-  public qualitativeRiskExampleValueSet():RiskProbabilityValueSetType {
+  public static qualitativeRiskExampleValueSet():RiskProbabilityValueSetType {
     return RiskProbabilityValueSet;
   }
   /**
@@ -365,7 +365,7 @@ export class RiskAssessment extends fhir.DomainResource implements IRiskAssessme
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ObservationStatusValueSetType {
+  public static statusRequiredValueSet():ObservationStatusValueSetType {
     return ObservationStatusValueSet;
   }
   /**

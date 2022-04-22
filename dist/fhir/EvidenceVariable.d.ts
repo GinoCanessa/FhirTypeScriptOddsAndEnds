@@ -354,7 +354,7 @@ export declare class EvidenceVariableCharacteristic extends fhir.BackboneElement
     /**
      * Required-bound Value Set for groupMeasure
      */
-    groupMeasureRequiredValueSet(): GroupMeasureValueSetType;
+    static groupMeasureRequiredValueSet(): GroupMeasureValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -541,15 +541,15 @@ export declare class EvidenceVariable extends fhir.DomainResource implements IEv
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): DefinitionTopicValueSetType;
+    static topicExampleValueSet(): DefinitionTopicValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): VariableTypeValueSetType;
+    static typeRequiredValueSet(): VariableTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

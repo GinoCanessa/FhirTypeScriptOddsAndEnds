@@ -312,7 +312,7 @@ export class TestReportParticipant extends fhir.BackboneElement implements ITest
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ReportParticipantTypeValueSetType {
+  public static typeRequiredValueSet():ReportParticipantTypeValueSetType {
     return ReportParticipantTypeValueSet;
   }
   /**
@@ -373,7 +373,7 @@ export class TestReportSetupActionOperation extends fhir.BackboneElement impleme
   /**
    * Required-bound Value Set for result
    */
-  public resultRequiredValueSet():ReportActionResultCodesValueSetType {
+  public static resultRequiredValueSet():ReportActionResultCodesValueSetType {
     return ReportActionResultCodesValueSet;
   }
   /**
@@ -433,7 +433,7 @@ export class TestReportSetupActionAssert extends fhir.BackboneElement implements
   /**
    * Required-bound Value Set for result
    */
-  public resultRequiredValueSet():ReportActionResultCodesValueSetType {
+  public static resultRequiredValueSet():ReportActionResultCodesValueSetType {
     return ReportActionResultCodesValueSet;
   }
   /**
@@ -753,13 +753,13 @@ export class TestReport extends fhir.DomainResource implements ITestReport {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ReportStatusCodesValueSetType {
+  public static statusRequiredValueSet():ReportStatusCodesValueSetType {
     return ReportStatusCodesValueSet;
   }
   /**
    * Required-bound Value Set for result
    */
-  public resultRequiredValueSet():ReportResultCodesValueSetType {
+  public static resultRequiredValueSet():ReportResultCodesValueSetType {
     return ReportResultCodesValueSet;
   }
   /**

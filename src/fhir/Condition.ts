@@ -206,13 +206,13 @@ export class ConditionStage extends fhir.BackboneElement implements IConditionSt
   /**
    * Example-bound Value Set for summary
    */
-  public summaryExampleValueSet():ConditionStageValueSetType {
+  public static summaryExampleValueSet():ConditionStageValueSetType {
     return ConditionStageValueSet;
   }
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():ConditionStageTypeValueSetType {
+  public static typeExampleValueSet():ConditionStageTypeValueSetType {
     return ConditionStageTypeValueSet;
   }
   /**
@@ -250,7 +250,7 @@ export class ConditionEvidence extends fhir.BackboneElement implements IConditio
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ManifestationOrSymptomValueSetType {
+  public static codeExampleValueSet():ManifestationOrSymptomValueSetType {
     return ManifestationOrSymptomValueSet;
   }
   /**
@@ -434,37 +434,37 @@ export class Condition extends fhir.DomainResource implements ICondition {
   /**
    * Required-bound Value Set for clinicalStatus
    */
-  public clinicalStatusRequiredValueSet():ConditionClinicalValueSetType {
+  public static clinicalStatusRequiredValueSet():ConditionClinicalValueSetType {
     return ConditionClinicalValueSet;
   }
   /**
    * Required-bound Value Set for verificationStatus
    */
-  public verificationStatusRequiredValueSet():ConditionVerStatusValueSetType {
+  public static verificationStatusRequiredValueSet():ConditionVerStatusValueSetType {
     return ConditionVerStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for category
    */
-  public categoryExtensibleValueSet():ConditionCategoryValueSetType {
+  public static categoryExtensibleValueSet():ConditionCategoryValueSetType {
     return ConditionCategoryValueSet;
   }
   /**
    * Preferred-bound Value Set for severity
    */
-  public severityPreferredValueSet():ConditionSeverityValueSetType {
+  public static severityPreferredValueSet():ConditionSeverityValueSetType {
     return ConditionSeverityValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ConditionCodeValueSetType {
+  public static codeExampleValueSet():ConditionCodeValueSetType {
     return ConditionCodeValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():BodySiteValueSetType {
+  public static bodySiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**

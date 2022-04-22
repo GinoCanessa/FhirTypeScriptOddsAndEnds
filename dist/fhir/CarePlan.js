@@ -108,37 +108,37 @@ export class CarePlanActivityDetail extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet() {
+    static kindRequiredValueSet() {
         return CarePlanActivityKindValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ProcedureCodeValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ClinicalFindingsValueSet;
     }
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return CarePlanActivityStatusValueSet;
     }
     /**
      * Example-bound Value Set for productCodeableConcept
      */
-    productCodeableConceptExampleValueSet() {
+    static productCodeableConceptExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for productReference
      */
-    productReferenceExampleValueSet() {
+    static productReferenceExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
@@ -240,7 +240,7 @@ export class CarePlanActivity extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for outcomeCodeableConcept
      */
-    outcomeCodeableConceptExampleValueSet() {
+    static outcomeCodeableConceptExampleValueSet() {
         return CarePlanActivityOutcomeValueSet;
     }
     /**
@@ -379,13 +379,13 @@ export class CarePlan extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return RequestStatusValueSet;
     }
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet() {
+    static intentRequiredValueSet() {
         return CarePlanIntentValueSet;
     }
     /**

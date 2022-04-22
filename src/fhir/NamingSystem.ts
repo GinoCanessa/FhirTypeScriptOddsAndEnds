@@ -206,7 +206,7 @@ export class NamingSystemUniqueId extends fhir.BackboneElement implements INamin
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():NamingsystemIdentifierTypeValueSetType {
+  public static typeRequiredValueSet():NamingsystemIdentifierTypeValueSetType {
     return NamingsystemIdentifierTypeValueSet;
   }
   /**
@@ -353,19 +353,19 @@ export class NamingSystem extends fhir.DomainResource implements INamingSystem {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for kind
    */
-  public kindRequiredValueSet():NamingsystemTypeValueSetType {
+  public static kindRequiredValueSet():NamingsystemTypeValueSetType {
     return NamingsystemTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():IdentifierTypeValueSetType {
+  public static typeExtensibleValueSet():IdentifierTypeValueSetType {
     return IdentifierTypeValueSet;
   }
   /**

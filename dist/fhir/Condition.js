@@ -34,13 +34,13 @@ export class ConditionStage extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for summary
      */
-    summaryExampleValueSet() {
+    static summaryExampleValueSet() {
         return ConditionStageValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ConditionStageTypeValueSet;
     }
     /**
@@ -79,7 +79,7 @@ export class ConditionEvidence extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ManifestationOrSymptomValueSet;
     }
     /**
@@ -203,37 +203,37 @@ export class Condition extends fhir.DomainResource {
     /**
      * Required-bound Value Set for clinicalStatus
      */
-    clinicalStatusRequiredValueSet() {
+    static clinicalStatusRequiredValueSet() {
         return ConditionClinicalValueSet;
     }
     /**
      * Required-bound Value Set for verificationStatus
      */
-    verificationStatusRequiredValueSet() {
+    static verificationStatusRequiredValueSet() {
         return ConditionVerStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for category
      */
-    categoryExtensibleValueSet() {
+    static categoryExtensibleValueSet() {
         return ConditionCategoryValueSet;
     }
     /**
      * Preferred-bound Value Set for severity
      */
-    severityPreferredValueSet() {
+    static severityPreferredValueSet() {
         return ConditionSeverityValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ConditionCodeValueSet;
     }
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet() {
+    static bodySiteExampleValueSet() {
         return BodySiteValueSet;
     }
     /**

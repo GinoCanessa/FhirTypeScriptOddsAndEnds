@@ -358,7 +358,7 @@ export class CoverageEligibilityResponseInsuranceItemBenefit extends fhir.Backbo
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():BenefitTypeValueSetType {
+  public static typeExampleValueSet():BenefitTypeValueSetType {
     return BenefitTypeValueSet;
   }
   /**
@@ -486,43 +486,43 @@ export class CoverageEligibilityResponseInsuranceItem extends fhir.BackboneEleme
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():ExBenefitcategoryValueSetType {
+  public static categoryExampleValueSet():ExBenefitcategoryValueSetType {
     return ExBenefitcategoryValueSet;
   }
   /**
    * Example-bound Value Set for productOrService
    */
-  public productOrServiceExampleValueSet():ServiceUsclsValueSetType {
+  public static productOrServiceExampleValueSet():ServiceUsclsValueSetType {
     return ServiceUsclsValueSet;
   }
   /**
    * Example-bound Value Set for modifier
    */
-  public modifierExampleValueSet():ClaimModifiersValueSetType {
+  public static modifierExampleValueSet():ClaimModifiersValueSetType {
     return ClaimModifiersValueSet;
   }
   /**
    * Example-bound Value Set for network
    */
-  public networkExampleValueSet():BenefitNetworkValueSetType {
+  public static networkExampleValueSet():BenefitNetworkValueSetType {
     return BenefitNetworkValueSet;
   }
   /**
    * Example-bound Value Set for unit
    */
-  public unitExampleValueSet():BenefitUnitValueSetType {
+  public static unitExampleValueSet():BenefitUnitValueSetType {
     return BenefitUnitValueSet;
   }
   /**
    * Example-bound Value Set for term
    */
-  public termExampleValueSet():BenefitTermValueSetType {
+  public static termExampleValueSet():BenefitTermValueSetType {
     return BenefitTermValueSet;
   }
   /**
    * Example-bound Value Set for authorizationSupporting
    */
-  public authorizationSupportingExampleValueSet():CoverageeligibilityresponseExAuthSupportValueSetType {
+  public static authorizationSupportingExampleValueSet():CoverageeligibilityresponseExAuthSupportValueSetType {
     return CoverageeligibilityresponseExAuthSupportValueSet;
   }
   /**
@@ -617,7 +617,7 @@ export class CoverageEligibilityResponseError extends fhir.BackboneElement imple
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():AdjudicationErrorValueSetType {
+  public static codeExampleValueSet():AdjudicationErrorValueSetType {
     return AdjudicationErrorValueSet;
   }
   /**
@@ -771,25 +771,25 @@ export class CoverageEligibilityResponse extends fhir.DomainResource implements 
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():FmStatusValueSetType {
+  public static statusRequiredValueSet():FmStatusValueSetType {
     return FmStatusValueSet;
   }
   /**
    * Required-bound Value Set for purpose
    */
-  public purposeRequiredValueSet():EligibilityresponsePurposeValueSetType {
+  public static purposeRequiredValueSet():EligibilityresponsePurposeValueSetType {
     return EligibilityresponsePurposeValueSet;
   }
   /**
    * Required-bound Value Set for outcome
    */
-  public outcomeRequiredValueSet():RemittanceOutcomeValueSetType {
+  public static outcomeRequiredValueSet():RemittanceOutcomeValueSetType {
     return RemittanceOutcomeValueSet;
   }
   /**
    * Example-bound Value Set for form
    */
-  public formExampleValueSet():FormsValueSetType {
+  public static formExampleValueSet():FormsValueSetType {
     return FormsValueSet;
   }
   /**

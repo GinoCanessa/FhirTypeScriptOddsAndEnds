@@ -309,7 +309,7 @@ export class MessageDefinitionFocus extends fhir.BackboneElement implements IMes
   /**
    * Required-bound Value Set for code
    */
-  public codeRequiredValueSet():ResourceTypesValueSetType {
+  public static codeRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**
@@ -607,19 +607,19 @@ export class MessageDefinition extends fhir.DomainResource implements IMessageDe
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for category
    */
-  public categoryRequiredValueSet():MessageSignificanceCategoryValueSetType {
+  public static categoryRequiredValueSet():MessageSignificanceCategoryValueSetType {
     return MessageSignificanceCategoryValueSet;
   }
   /**
    * Required-bound Value Set for responseRequired
    */
-  public responseRequiredRequiredValueSet():MessageheaderResponseRequestValueSetType {
+  public static responseRequiredRequiredValueSet():MessageheaderResponseRequestValueSetType {
     return MessageheaderResponseRequestValueSet;
   }
   /**

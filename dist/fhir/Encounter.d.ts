@@ -281,7 +281,7 @@ export declare class EncounterStatusHistory extends fhir.BackboneElement impleme
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): EncounterStatusValueSetType;
+    static statusRequiredValueSet(): EncounterStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -306,7 +306,7 @@ export declare class EncounterClassHistory extends fhir.BackboneElement implemen
     /**
      * Extensible-bound Value Set for class
      */
-    classExtensibleValueSet(): V3ActEncounterCodeValueSetType;
+    static classExtensibleValueSet(): V3ActEncounterCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -335,7 +335,7 @@ export declare class EncounterParticipant extends fhir.BackboneElement implement
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): EncounterParticipantTypeValueSetType;
+    static typeExtensibleValueSet(): EncounterParticipantTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -368,7 +368,7 @@ export declare class EncounterDiagnosis extends fhir.BackboneElement implements 
     /**
      * Preferred-bound Value Set for use
      */
-    usePreferredValueSet(): DiagnosisRoleValueSetType;
+    static usePreferredValueSet(): DiagnosisRoleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -422,27 +422,27 @@ export declare class EncounterHospitalization extends fhir.BackboneElement imple
     /**
      * Preferred-bound Value Set for admitSource
      */
-    admitSourcePreferredValueSet(): EncounterAdmitSourceValueSetType;
+    static admitSourcePreferredValueSet(): EncounterAdmitSourceValueSetType;
     /**
      * Example-bound Value Set for reAdmission
      */
-    reAdmissionExampleValueSet(): V20092ValueSetType;
+    static reAdmissionExampleValueSet(): V20092ValueSetType;
     /**
      * Example-bound Value Set for dietPreference
      */
-    dietPreferenceExampleValueSet(): EncounterDietValueSetType;
+    static dietPreferenceExampleValueSet(): EncounterDietValueSetType;
     /**
      * Preferred-bound Value Set for specialCourtesy
      */
-    specialCourtesyPreferredValueSet(): EncounterSpecialCourtesyValueSetType;
+    static specialCourtesyPreferredValueSet(): EncounterSpecialCourtesyValueSetType;
     /**
      * Preferred-bound Value Set for specialArrangement
      */
-    specialArrangementPreferredValueSet(): EncounterSpecialArrangementsValueSetType;
+    static specialArrangementPreferredValueSet(): EncounterSpecialArrangementsValueSetType;
     /**
      * Example-bound Value Set for dischargeDisposition
      */
-    dischargeDispositionExampleValueSet(): EncounterDischargeDispositionValueSetType;
+    static dischargeDispositionExampleValueSet(): EncounterDischargeDispositionValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -480,11 +480,11 @@ export declare class EncounterLocation extends fhir.BackboneElement implements I
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): EncounterLocationStatusValueSetType;
+    static statusRequiredValueSet(): EncounterLocationStatusValueSetType;
     /**
      * Example-bound Value Set for physicalType
      */
-    physicalTypeExampleValueSet(): LocationPhysicalTypeValueSetType;
+    static physicalTypeExampleValueSet(): LocationPhysicalTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -603,27 +603,27 @@ export declare class Encounter extends fhir.DomainResource implements IEncounter
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): EncounterStatusValueSetType;
+    static statusRequiredValueSet(): EncounterStatusValueSetType;
     /**
      * Extensible-bound Value Set for class
      */
-    classExtensibleValueSet(): V3ActEncounterCodeValueSetType;
+    static classExtensibleValueSet(): V3ActEncounterCodeValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): EncounterTypeValueSetType;
+    static typeExampleValueSet(): EncounterTypeValueSetType;
     /**
      * Example-bound Value Set for serviceType
      */
-    serviceTypeExampleValueSet(): ServiceTypeValueSetType;
+    static serviceTypeExampleValueSet(): ServiceTypeValueSetType;
     /**
      * Example-bound Value Set for priority
      */
-    priorityExampleValueSet(): V3ActPriorityValueSetType;
+    static priorityExampleValueSet(): V3ActPriorityValueSetType;
     /**
      * Preferred-bound Value Set for reasonCode
      */
-    reasonCodePreferredValueSet(): EncounterReasonValueSetType;
+    static reasonCodePreferredValueSet(): EncounterReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

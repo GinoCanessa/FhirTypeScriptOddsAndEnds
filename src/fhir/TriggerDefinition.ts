@@ -135,7 +135,7 @@ export class TriggerDefinition extends fhir.FhirElement implements ITriggerDefin
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():TriggerTypeValueSetType {
+  public static typeRequiredValueSet():TriggerTypeValueSetType {
     return TriggerTypeValueSet;
   }
   /**

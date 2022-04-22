@@ -225,7 +225,7 @@ export class GuidanceResponse extends fhir.DomainResource implements IGuidanceRe
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():GuidanceResponseStatusValueSetType {
+  public static statusRequiredValueSet():GuidanceResponseStatusValueSetType {
     return GuidanceResponseStatusValueSet;
   }
   /**

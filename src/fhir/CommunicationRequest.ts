@@ -356,31 +356,31 @@ export class CommunicationRequest extends fhir.DomainResource implements ICommun
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():RequestStatusValueSetType {
+  public static statusRequiredValueSet():RequestStatusValueSetType {
     return RequestStatusValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():CommunicationCategoryValueSetType {
+  public static categoryExampleValueSet():CommunicationCategoryValueSetType {
     return CommunicationCategoryValueSet;
   }
   /**
    * Required-bound Value Set for priority
    */
-  public priorityRequiredValueSet():RequestPriorityValueSetType {
+  public static priorityRequiredValueSet():RequestPriorityValueSetType {
     return RequestPriorityValueSet;
   }
   /**
    * Example-bound Value Set for medium
    */
-  public mediumExampleValueSet():V3ParticipationModeValueSetType {
+  public static mediumExampleValueSet():V3ParticipationModeValueSetType {
     return V3ParticipationModeValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():V3ActReasonValueSetType {
+  public static reasonCodeExampleValueSet():V3ActReasonValueSetType {
     return V3ActReasonValueSet;
   }
   /**

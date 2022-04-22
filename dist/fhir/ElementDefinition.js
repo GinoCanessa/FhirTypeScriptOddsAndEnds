@@ -43,7 +43,7 @@ export class ElementDefinitionSlicingDiscriminator extends fhir.FhirElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return DiscriminatorTypeValueSet;
     }
     /**
@@ -103,7 +103,7 @@ export class ElementDefinitionSlicing extends fhir.FhirElement {
     /**
      * Required-bound Value Set for rules
      */
-    rulesRequiredValueSet() {
+    static rulesRequiredValueSet() {
         return ResourceSlicingRulesValueSet;
     }
     /**
@@ -238,19 +238,19 @@ export class ElementDefinitionType extends fhir.FhirElement {
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet() {
+    static codeExtensibleValueSet() {
         return DefinedTypesValueSet;
     }
     /**
      * Required-bound Value Set for aggregation
      */
-    aggregationRequiredValueSet() {
+    static aggregationRequiredValueSet() {
         return ResourceAggregationModeValueSet;
     }
     /**
      * Required-bound Value Set for versioning
      */
-    versioningRequiredValueSet() {
+    static versioningRequiredValueSet() {
         return ReferenceVersionRulesValueSet;
     }
     /**
@@ -733,7 +733,7 @@ export class ElementDefinitionConstraint extends fhir.FhirElement {
     /**
      * Required-bound Value Set for severity
      */
-    severityRequiredValueSet() {
+    static severityRequiredValueSet() {
         return ConstraintSeverityValueSet;
     }
     /**
@@ -808,7 +808,7 @@ export class ElementDefinitionBinding extends fhir.FhirElement {
     /**
      * Required-bound Value Set for strength
      */
-    strengthRequiredValueSet() {
+    static strengthRequiredValueSet() {
         return BindingStrengthValueSet;
     }
     /**
@@ -1786,13 +1786,13 @@ export class ElementDefinition extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for representation
      */
-    representationRequiredValueSet() {
+    static representationRequiredValueSet() {
         return PropertyRepresentationValueSet;
     }
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return ObservationCodesValueSet;
     }
     /**

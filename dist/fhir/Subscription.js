@@ -45,7 +45,7 @@ export class SubscriptionChannel extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return SubscriptionChannelTypeValueSet;
     }
     /**
@@ -133,7 +133,7 @@ export class Subscription extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return SubscriptionStatusValueSet;
     }
     /**

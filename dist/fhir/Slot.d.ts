@@ -156,23 +156,23 @@ export declare class Slot extends fhir.DomainResource implements ISlot {
     /**
      * Example-bound Value Set for serviceCategory
      */
-    serviceCategoryExampleValueSet(): ServiceCategoryValueSetType;
+    static serviceCategoryExampleValueSet(): ServiceCategoryValueSetType;
     /**
      * Example-bound Value Set for serviceType
      */
-    serviceTypeExampleValueSet(): ServiceTypeValueSetType;
+    static serviceTypeExampleValueSet(): ServiceTypeValueSetType;
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
+    static specialtyPreferredValueSet(): C80PracticeCodesValueSetType;
     /**
      * Preferred-bound Value Set for appointmentType
      */
-    appointmentTypePreferredValueSet(): V20276ValueSetType;
+    static appointmentTypePreferredValueSet(): V20276ValueSetType;
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): SlotstatusValueSetType;
+    static statusRequiredValueSet(): SlotstatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

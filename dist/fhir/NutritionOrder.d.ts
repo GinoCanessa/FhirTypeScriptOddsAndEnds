@@ -294,7 +294,7 @@ export declare class NutritionOrderOralDietNutrient extends fhir.BackboneElement
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet(): NutrientCodeValueSetType;
+    static modifierExampleValueSet(): NutrientCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -319,7 +319,7 @@ export declare class NutritionOrderOralDietTexture extends fhir.BackboneElement 
     /**
      * Example-bound Value Set for foodType
      */
-    foodTypeExampleValueSet(): ModifiedFoodtypeValueSetType;
+    static foodTypeExampleValueSet(): ModifiedFoodtypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -364,7 +364,7 @@ export declare class NutritionOrderOralDiet extends fhir.BackboneElement impleme
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): DietTypeValueSetType;
+    static typeExampleValueSet(): DietTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -499,11 +499,11 @@ export declare class NutritionOrderEnteralFormula extends fhir.BackboneElement i
     /**
      * Example-bound Value Set for additiveType
      */
-    additiveTypeExampleValueSet(): EntformulaAdditiveValueSetType;
+    static additiveTypeExampleValueSet(): EntformulaAdditiveValueSetType;
     /**
      * Extensible-bound Value Set for routeofAdministration
      */
-    routeofAdministrationExtensibleValueSet(): EnteralRouteValueSetType;
+    static routeofAdministrationExtensibleValueSet(): EnteralRouteValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -616,19 +616,19 @@ export declare class NutritionOrder extends fhir.DomainResource implements INutr
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): RequestStatusValueSetType;
+    static statusRequiredValueSet(): RequestStatusValueSetType;
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet(): RequestIntentValueSetType;
+    static intentRequiredValueSet(): RequestIntentValueSetType;
     /**
      * Example-bound Value Set for foodPreferenceModifier
      */
-    foodPreferenceModifierExampleValueSet(): EncounterDietValueSetType;
+    static foodPreferenceModifierExampleValueSet(): EncounterDietValueSetType;
     /**
      * Example-bound Value Set for excludeFoodModifier
      */
-    excludeFoodModifierExampleValueSet(): FoodTypeValueSetType;
+    static excludeFoodModifierExampleValueSet(): FoodTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

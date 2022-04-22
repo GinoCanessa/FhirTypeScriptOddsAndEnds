@@ -218,7 +218,7 @@ export declare class PaymentReconciliationDetail extends fhir.BackboneElement im
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): PaymentTypeValueSetType;
+    static typeExampleValueSet(): PaymentTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -251,7 +251,7 @@ export declare class PaymentReconciliationProcessNote extends fhir.BackboneEleme
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): NoteTypeValueSetType;
+    static typeRequiredValueSet(): NoteTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -352,15 +352,15 @@ export declare class PaymentReconciliation extends fhir.DomainResource implement
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
+    static outcomeRequiredValueSet(): RemittanceOutcomeValueSetType;
     /**
      * Example-bound Value Set for formCode
      */
-    formCodeExampleValueSet(): FormsValueSetType;
+    static formCodeExampleValueSet(): FormsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

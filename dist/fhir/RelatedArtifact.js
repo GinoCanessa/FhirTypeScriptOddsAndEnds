@@ -59,7 +59,7 @@ export class RelatedArtifact extends fhir.FhirElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return RelatedArtifactTypeValueSet;
     }
     /**

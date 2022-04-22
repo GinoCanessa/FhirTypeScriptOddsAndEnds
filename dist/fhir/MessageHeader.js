@@ -159,7 +159,7 @@ export class MessageHeaderResponse extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return ResponseCodeValueSet;
     }
     /**
@@ -244,7 +244,7 @@ export class MessageHeader extends fhir.DomainResource {
     /**
      * Example-bound Value Set for reason
      */
-    reasonExampleValueSet() {
+    static reasonExampleValueSet() {
         return MessageReasonEncounterValueSet;
     }
     /**

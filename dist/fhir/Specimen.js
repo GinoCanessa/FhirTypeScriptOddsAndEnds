@@ -55,25 +55,25 @@ export class SpecimenCollection extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet() {
+    static methodExampleValueSet() {
         return SpecimenCollectionMethodValueSet;
     }
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet() {
+    static bodySiteExampleValueSet() {
         return BodySiteValueSet;
     }
     /**
      * Extensible-bound Value Set for fastingStatusCodeableConcept
      */
-    fastingStatusCodeableConceptExtensibleValueSet() {
+    static fastingStatusCodeableConceptExtensibleValueSet() {
         return V20916ValueSet;
     }
     /**
      * Extensible-bound Value Set for fastingStatusDuration
      */
-    fastingStatusDurationExtensibleValueSet() {
+    static fastingStatusDurationExtensibleValueSet() {
         return V20916ValueSet;
     }
     /**
@@ -145,7 +145,7 @@ export class SpecimenProcessing extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for procedure
      */
-    procedureExampleValueSet() {
+    static procedureExampleValueSet() {
         return SpecimenProcessingProcedureValueSet;
     }
     /**
@@ -208,19 +208,19 @@ export class SpecimenContainer extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return SpecimenContainerTypeValueSet;
     }
     /**
      * Example-bound Value Set for additiveCodeableConcept
      */
-    additiveCodeableConceptExampleValueSet() {
+    static additiveCodeableConceptExampleValueSet() {
         return V20371ValueSet;
     }
     /**
      * Example-bound Value Set for additiveReference
      */
-    additiveReferenceExampleValueSet() {
+    static additiveReferenceExampleValueSet() {
         return V20371ValueSet;
     }
     /**
@@ -311,19 +311,19 @@ export class Specimen extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return SpecimenStatusValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return V20487ValueSet;
     }
     /**
      * Extensible-bound Value Set for condition
      */
-    conditionExtensibleValueSet() {
+    static conditionExtensibleValueSet() {
         return V20493ValueSet;
     }
     /**

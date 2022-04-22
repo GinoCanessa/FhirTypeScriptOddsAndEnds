@@ -829,7 +829,7 @@ export declare class StructureMapStructure extends fhir.BackboneElement implemen
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): MapModelModeValueSetType;
+    static modeRequiredValueSet(): MapModelModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -878,7 +878,7 @@ export declare class StructureMapGroupInput extends fhir.BackboneElement impleme
     /**
      * Required-bound Value Set for mode
      */
-    modeRequiredValueSet(): MapInputModeValueSetType;
+    static modeRequiredValueSet(): MapInputModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1251,7 +1251,7 @@ export declare class StructureMapGroupRuleSource extends fhir.BackboneElement im
     /**
      * Required-bound Value Set for listMode
      */
-    listModeRequiredValueSet(): MapSourceListModeValueSetType;
+    static listModeRequiredValueSet(): MapSourceListModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1381,15 +1381,15 @@ export declare class StructureMapGroupRuleTarget extends fhir.BackboneElement im
     /**
      * Required-bound Value Set for contextType
      */
-    contextTypeRequiredValueSet(): MapContextTypeValueSetType;
+    static contextTypeRequiredValueSet(): MapContextTypeValueSetType;
     /**
      * Required-bound Value Set for listMode
      */
-    listModeRequiredValueSet(): MapTargetListModeValueSetType;
+    static listModeRequiredValueSet(): MapTargetListModeValueSetType;
     /**
      * Required-bound Value Set for transform
      */
-    transformRequiredValueSet(): MapTransformValueSetType;
+    static transformRequiredValueSet(): MapTransformValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1520,7 +1520,7 @@ export declare class StructureMapGroup extends fhir.BackboneElement implements I
     /**
      * Required-bound Value Set for typeMode
      */
-    typeModeRequiredValueSet(): MapGroupTypeModeValueSetType;
+    static typeModeRequiredValueSet(): MapGroupTypeModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1663,7 +1663,7 @@ export declare class StructureMap extends fhir.DomainResource implements IStruct
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

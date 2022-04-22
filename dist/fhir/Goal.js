@@ -65,7 +65,7 @@ export class GoalTarget extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for measure
      */
-    measureExampleValueSet() {
+    static measureExampleValueSet() {
         return ObservationCodesValueSet;
     }
     /**
@@ -192,49 +192,49 @@ export class Goal extends fhir.DomainResource {
     /**
      * Required-bound Value Set for lifecycleStatus
      */
-    lifecycleStatusRequiredValueSet() {
+    static lifecycleStatusRequiredValueSet() {
         return GoalStatusValueSet;
     }
     /**
      * Preferred-bound Value Set for achievementStatus
      */
-    achievementStatusPreferredValueSet() {
+    static achievementStatusPreferredValueSet() {
         return GoalAchievementValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return GoalCategoryValueSet;
     }
     /**
      * Preferred-bound Value Set for priority
      */
-    priorityPreferredValueSet() {
+    static priorityPreferredValueSet() {
         return GoalPriorityValueSet;
     }
     /**
      * Example-bound Value Set for description
      */
-    descriptionExampleValueSet() {
+    static descriptionExampleValueSet() {
         return ClinicalFindingsValueSet;
     }
     /**
      * Example-bound Value Set for startDate
      */
-    startDateExampleValueSet() {
+    static startDateExampleValueSet() {
         return GoalStartEventValueSet;
     }
     /**
      * Example-bound Value Set for startCodeableConcept
      */
-    startCodeableConceptExampleValueSet() {
+    static startCodeableConceptExampleValueSet() {
         return GoalStartEventValueSet;
     }
     /**
      * Example-bound Value Set for outcomeCode
      */
-    outcomeCodeExampleValueSet() {
+    static outcomeCodeExampleValueSet() {
         return ClinicalFindingsValueSet;
     }
     /**

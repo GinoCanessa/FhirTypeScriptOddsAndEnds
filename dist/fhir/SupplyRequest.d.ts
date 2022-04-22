@@ -270,27 +270,27 @@ export declare class SupplyRequest extends fhir.DomainResource implements ISuppl
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): SupplyrequestStatusValueSetType;
+    static statusRequiredValueSet(): SupplyrequestStatusValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): SupplyrequestKindValueSetType;
+    static categoryExampleValueSet(): SupplyrequestKindValueSetType;
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Example-bound Value Set for itemCodeableConcept
      */
-    itemCodeableConceptExampleValueSet(): SupplyItemValueSetType;
+    static itemCodeableConceptExampleValueSet(): SupplyItemValueSetType;
     /**
      * Example-bound Value Set for itemReference
      */
-    itemReferenceExampleValueSet(): SupplyItemValueSetType;
+    static itemReferenceExampleValueSet(): SupplyItemValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): SupplyrequestReasonValueSetType;
+    static reasonCodeExampleValueSet(): SupplyrequestReasonValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

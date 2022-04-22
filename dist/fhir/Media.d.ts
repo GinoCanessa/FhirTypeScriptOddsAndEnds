@@ -282,23 +282,23 @@ export declare class Media extends fhir.DomainResource implements IMedia {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): EventStatusValueSetType;
+    static statusRequiredValueSet(): EventStatusValueSetType;
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet(): MediaTypeValueSetType;
+    static typeExtensibleValueSet(): MediaTypeValueSetType;
     /**
      * Example-bound Value Set for view
      */
-    viewExampleValueSet(): MediaViewValueSetType;
+    static viewExampleValueSet(): MediaViewValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ProcedureReasonValueSetType;
+    static reasonCodeExampleValueSet(): ProcedureReasonValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): BodySiteValueSetType;
+    static bodySiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

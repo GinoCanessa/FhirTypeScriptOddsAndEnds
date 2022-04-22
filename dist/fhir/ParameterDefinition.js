@@ -66,13 +66,13 @@ export class ParameterDefinition extends fhir.FhirElement {
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet() {
+    static useRequiredValueSet() {
         return OperationParameterUseValueSet;
     }
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return AllTypesValueSet;
     }
     /**

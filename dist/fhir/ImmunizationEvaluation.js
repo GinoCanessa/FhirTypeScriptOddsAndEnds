@@ -105,25 +105,25 @@ export class ImmunizationEvaluation extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ImmunizationEvaluationStatusValueSet;
     }
     /**
      * Example-bound Value Set for targetDisease
      */
-    targetDiseaseExampleValueSet() {
+    static targetDiseaseExampleValueSet() {
         return ImmunizationEvaluationTargetDiseaseValueSet;
     }
     /**
      * Example-bound Value Set for doseStatus
      */
-    doseStatusExampleValueSet() {
+    static doseStatusExampleValueSet() {
         return ImmunizationEvaluationDoseStatusValueSet;
     }
     /**
      * Example-bound Value Set for doseStatusReason
      */
-    doseStatusReasonExampleValueSet() {
+    static doseStatusReasonExampleValueSet() {
         return ImmunizationEvaluationDoseStatusReasonValueSet;
     }
     /**

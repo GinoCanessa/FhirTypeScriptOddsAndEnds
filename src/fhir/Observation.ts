@@ -380,13 +380,13 @@ export class ObservationReferenceRange extends fhir.BackboneElement implements I
   /**
    * Preferred-bound Value Set for type
    */
-  public typePreferredValueSet():ReferencerangeMeaningValueSetType {
+  public static typePreferredValueSet():ReferencerangeMeaningValueSetType {
     return ReferencerangeMeaningValueSet;
   }
   /**
    * Example-bound Value Set for appliesTo
    */
-  public appliesToExampleValueSet():ReferencerangeAppliestoValueSetType {
+  public static appliesToExampleValueSet():ReferencerangeAppliestoValueSetType {
     return ReferencerangeAppliestoValueSet;
   }
   /**
@@ -519,19 +519,19 @@ export class ObservationComponent extends fhir.BackboneElement implements IObser
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ObservationCodesValueSetType {
+  public static codeExampleValueSet():ObservationCodesValueSetType {
     return ObservationCodesValueSet;
   }
   /**
    * Extensible-bound Value Set for dataAbsentReason
    */
-  public dataAbsentReasonExtensibleValueSet():DataAbsentReasonValueSetType {
+  public static dataAbsentReasonExtensibleValueSet():DataAbsentReasonValueSetType {
     return DataAbsentReasonValueSet;
   }
   /**
    * Extensible-bound Value Set for interpretation
    */
-  public interpretationExtensibleValueSet():ObservationInterpretationValueSetType {
+  public static interpretationExtensibleValueSet():ObservationInterpretationValueSetType {
     return ObservationInterpretationValueSet;
   }
   /**
@@ -811,43 +811,43 @@ export class Observation extends fhir.DomainResource implements IObservation {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ObservationStatusValueSetType {
+  public static statusRequiredValueSet():ObservationStatusValueSetType {
     return ObservationStatusValueSet;
   }
   /**
    * Preferred-bound Value Set for category
    */
-  public categoryPreferredValueSet():ObservationCategoryValueSetType {
+  public static categoryPreferredValueSet():ObservationCategoryValueSetType {
     return ObservationCategoryValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ObservationCodesValueSetType {
+  public static codeExampleValueSet():ObservationCodesValueSetType {
     return ObservationCodesValueSet;
   }
   /**
    * Extensible-bound Value Set for dataAbsentReason
    */
-  public dataAbsentReasonExtensibleValueSet():DataAbsentReasonValueSetType {
+  public static dataAbsentReasonExtensibleValueSet():DataAbsentReasonValueSetType {
     return DataAbsentReasonValueSet;
   }
   /**
    * Extensible-bound Value Set for interpretation
    */
-  public interpretationExtensibleValueSet():ObservationInterpretationValueSetType {
+  public static interpretationExtensibleValueSet():ObservationInterpretationValueSetType {
     return ObservationInterpretationValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():BodySiteValueSetType {
+  public static bodySiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**
    * Example-bound Value Set for method
    */
-  public methodExampleValueSet():ObservationMethodsValueSetType {
+  public static methodExampleValueSet():ObservationMethodsValueSetType {
     return ObservationMethodsValueSet;
   }
   /**

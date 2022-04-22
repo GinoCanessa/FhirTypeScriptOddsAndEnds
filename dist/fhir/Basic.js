@@ -39,7 +39,7 @@ export class Basic extends fhir.DomainResource {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return BasicResourceTypeValueSet;
     }
     /**

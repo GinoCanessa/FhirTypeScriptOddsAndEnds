@@ -371,31 +371,31 @@ export declare class DeviceRequest extends fhir.DomainResource implements IDevic
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): RequestStatusValueSetType;
+    static statusRequiredValueSet(): RequestStatusValueSetType;
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet(): RequestIntentValueSetType;
+    static intentRequiredValueSet(): RequestIntentValueSetType;
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Example-bound Value Set for codeReference
      */
-    codeReferenceExampleValueSet(): DeviceKindValueSetType;
+    static codeReferenceExampleValueSet(): DeviceKindValueSetType;
     /**
      * Example-bound Value Set for codeCodeableConcept
      */
-    codeCodeableConceptExampleValueSet(): DeviceKindValueSetType;
+    static codeCodeableConceptExampleValueSet(): DeviceKindValueSetType;
     /**
      * Example-bound Value Set for performerType
      */
-    performerTypeExampleValueSet(): ParticipantRoleValueSetType;
+    static performerTypeExampleValueSet(): ParticipantRoleValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ConditionCodeValueSetType;
+    static reasonCodeExampleValueSet(): ConditionCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

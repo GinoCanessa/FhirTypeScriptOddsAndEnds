@@ -60,7 +60,7 @@ export class ResearchSubject extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ResearchSubjectStatusValueSet;
     }
     /**

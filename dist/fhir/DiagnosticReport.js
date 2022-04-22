@@ -135,25 +135,25 @@ export class DiagnosticReport extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return DiagnosticReportStatusValueSet;
     }
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return DiagnosticServiceSectionsValueSet;
     }
     /**
      * Preferred-bound Value Set for code
      */
-    codePreferredValueSet() {
+    static codePreferredValueSet() {
         return ReportCodesValueSet;
     }
     /**
      * Example-bound Value Set for conclusionCode
      */
-    conclusionCodeExampleValueSet() {
+    static conclusionCodeExampleValueSet() {
         return ClinicalFindingsValueSet;
     }
     /**

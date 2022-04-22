@@ -890,15 +890,15 @@ export declare class TerminologyCapabilities extends fhir.DomainResource impleme
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for kind
      */
-    kindRequiredValueSet(): CapabilityStatementKindValueSetType;
+    static kindRequiredValueSet(): CapabilityStatementKindValueSetType;
     /**
      * Required-bound Value Set for codeSearch
      */
-    codeSearchRequiredValueSet(): CodeSearchSupportValueSetType;
+    static codeSearchRequiredValueSet(): CodeSearchSupportValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

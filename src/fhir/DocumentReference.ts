@@ -204,7 +204,7 @@ export class DocumentReferenceRelatesTo extends fhir.BackboneElement implements 
   /**
    * Required-bound Value Set for code
    */
-  public codeRequiredValueSet():DocumentRelationshipTypeValueSetType {
+  public static codeRequiredValueSet():DocumentRelationshipTypeValueSetType {
     return DocumentRelationshipTypeValueSet;
   }
   /**
@@ -244,7 +244,7 @@ export class DocumentReferenceContent extends fhir.BackboneElement implements ID
   /**
    * Preferred-bound Value Set for format
    */
-  public formatPreferredValueSet():FormatcodesValueSetType {
+  public static formatPreferredValueSet():FormatcodesValueSetType {
     return FormatcodesValueSet;
   }
   /**
@@ -307,19 +307,19 @@ export class DocumentReferenceContext extends fhir.BackboneElement implements ID
   /**
    * Example-bound Value Set for event
    */
-  public eventExampleValueSet():V3ActCodeValueSetType {
+  public static eventExampleValueSet():V3ActCodeValueSetType {
     return V3ActCodeValueSet;
   }
   /**
    * Example-bound Value Set for facilityType
    */
-  public facilityTypeExampleValueSet():C80FacilitycodesValueSetType {
+  public static facilityTypeExampleValueSet():C80FacilitycodesValueSetType {
     return C80FacilitycodesValueSet;
   }
   /**
    * Example-bound Value Set for practiceSetting
    */
-  public practiceSettingExampleValueSet():C80PracticeCodesValueSetType {
+  public static practiceSettingExampleValueSet():C80PracticeCodesValueSetType {
     return C80PracticeCodesValueSet;
   }
   /**
@@ -460,31 +460,31 @@ export class DocumentReference extends fhir.DomainResource implements IDocumentR
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():DocumentReferenceStatusValueSetType {
+  public static statusRequiredValueSet():DocumentReferenceStatusValueSetType {
     return DocumentReferenceStatusValueSet;
   }
   /**
    * Required-bound Value Set for docStatus
    */
-  public docStatusRequiredValueSet():CompositionStatusValueSetType {
+  public static docStatusRequiredValueSet():CompositionStatusValueSetType {
     return CompositionStatusValueSet;
   }
   /**
    * Preferred-bound Value Set for type
    */
-  public typePreferredValueSet():C80DocTypecodesValueSetType {
+  public static typePreferredValueSet():C80DocTypecodesValueSetType {
     return C80DocTypecodesValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():DocumentClasscodesValueSetType {
+  public static categoryExampleValueSet():DocumentClasscodesValueSetType {
     return DocumentClasscodesValueSet;
   }
   /**
    * Extensible-bound Value Set for securityLabel
    */
-  public securityLabelExtensibleValueSet():SecurityLabelsValueSetType {
+  public static securityLabelExtensibleValueSet():SecurityLabelsValueSetType {
     return SecurityLabelsValueSet;
   }
   /**

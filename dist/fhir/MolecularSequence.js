@@ -67,19 +67,19 @@ export class MolecularSequenceReferenceSeq extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for chromosome
      */
-    chromosomeExampleValueSet() {
+    static chromosomeExampleValueSet() {
         return ChromosomeHumanValueSet;
     }
     /**
      * Required-bound Value Set for orientation
      */
-    orientationRequiredValueSet() {
+    static orientationRequiredValueSet() {
         return OrientationTypeValueSet;
     }
     /**
      * Required-bound Value Set for strand
      */
-    strandRequiredValueSet() {
+    static strandRequiredValueSet() {
         return StrandTypeValueSet;
     }
     /**
@@ -361,7 +361,7 @@ export class MolecularSequenceQuality extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return QualityTypeValueSet;
     }
     /**
@@ -472,7 +472,7 @@ export class MolecularSequenceRepository extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return RepositoryTypeValueSet;
     }
     /**
@@ -707,7 +707,7 @@ export class MolecularSequence extends fhir.DomainResource {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return SequenceTypeValueSet;
     }
     /**

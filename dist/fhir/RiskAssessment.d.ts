@@ -198,7 +198,7 @@ export declare class RiskAssessmentPrediction extends fhir.BackboneElement imple
     /**
      * Example-bound Value Set for qualitativeRisk
      */
-    qualitativeRiskExampleValueSet(): RiskProbabilityValueSetType;
+    static qualitativeRiskExampleValueSet(): RiskProbabilityValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -303,7 +303,7 @@ export declare class RiskAssessment extends fhir.DomainResource implements IRisk
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ObservationStatusValueSetType;
+    static statusRequiredValueSet(): ObservationStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

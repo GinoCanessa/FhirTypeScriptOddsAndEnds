@@ -96,7 +96,7 @@ export declare class Expression extends fhir.FhirElement implements IExpression 
     /**
      * Extensible-bound Value Set for language
      */
-    languageExtensibleValueSet(): ExpressionLanguageValueSetType;
+    static languageExtensibleValueSet(): ExpressionLanguageValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -56,7 +56,7 @@ export declare class Contributor extends fhir.FhirElement implements IContributo
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ContributorTypeValueSetType;
+    static typeRequiredValueSet(): ContributorTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

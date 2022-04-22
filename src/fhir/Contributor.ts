@@ -73,7 +73,7 @@ export class Contributor extends fhir.FhirElement implements IContributor {
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ContributorTypeValueSetType {
+  public static typeRequiredValueSet():ContributorTypeValueSetType {
     return ContributorTypeValueSet;
   }
   /**

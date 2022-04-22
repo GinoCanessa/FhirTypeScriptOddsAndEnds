@@ -182,43 +182,43 @@ export class DeviceRequest extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return RequestStatusValueSet;
     }
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet() {
+    static intentRequiredValueSet() {
         return RequestIntentValueSet;
     }
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet() {
+    static priorityRequiredValueSet() {
         return RequestPriorityValueSet;
     }
     /**
      * Example-bound Value Set for codeReference
      */
-    codeReferenceExampleValueSet() {
+    static codeReferenceExampleValueSet() {
         return DeviceKindValueSet;
     }
     /**
      * Example-bound Value Set for codeCodeableConcept
      */
-    codeCodeableConceptExampleValueSet() {
+    static codeCodeableConceptExampleValueSet() {
         return DeviceKindValueSet;
     }
     /**
      * Example-bound Value Set for performerType
      */
-    performerTypeExampleValueSet() {
+    static performerTypeExampleValueSet() {
         return ParticipantRoleValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ConditionCodeValueSet;
     }
     /**

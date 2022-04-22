@@ -36,13 +36,13 @@ export class ProvenanceAgent extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return ProvenanceAgentTypeValueSet;
     }
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet() {
+    static roleExampleValueSet() {
         return SecurityRoleTypeValueSet;
     }
     /**
@@ -99,7 +99,7 @@ export class ProvenanceEntity extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for role
      */
-    roleRequiredValueSet() {
+    static roleRequiredValueSet() {
         return ProvenanceEntityRoleValueSet;
     }
     /**
@@ -190,13 +190,13 @@ export class Provenance extends fhir.DomainResource {
     /**
      * Extensible-bound Value Set for reason
      */
-    reasonExtensibleValueSet() {
+    static reasonExtensibleValueSet() {
         return V3PurposeOfUseValueSet;
     }
     /**
      * Extensible-bound Value Set for activity
      */
-    activityExtensibleValueSet() {
+    static activityExtensibleValueSet() {
         return ProvenanceActivityTypeValueSet;
     }
     /**

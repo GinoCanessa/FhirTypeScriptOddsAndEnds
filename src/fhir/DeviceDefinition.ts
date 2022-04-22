@@ -357,7 +357,7 @@ export class DeviceDefinitionDeviceName extends fhir.BackboneElement implements 
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():DeviceNametypeValueSetType {
+  public static typeRequiredValueSet():DeviceNametypeValueSetType {
     return DeviceNametypeValueSet;
   }
   /**
@@ -695,7 +695,7 @@ export class DeviceDefinition extends fhir.DomainResource implements IDeviceDefi
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():DeviceKindValueSetType {
+  public static typeExampleValueSet():DeviceKindValueSetType {
     return DeviceKindValueSet;
   }
   /**

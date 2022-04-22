@@ -204,7 +204,7 @@ export class ChargeItemPerformer extends fhir.BackboneElement implements ICharge
   /**
    * Example-bound Value Set for function
    */
-  public functionExampleValueSet():PerformerRoleValueSetType {
+  public static functionExampleValueSet():PerformerRoleValueSetType {
     return PerformerRoleValueSet;
   }
   /**
@@ -421,31 +421,31 @@ export class ChargeItem extends fhir.DomainResource implements IChargeItem {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ChargeitemStatusValueSetType {
+  public static statusRequiredValueSet():ChargeitemStatusValueSetType {
     return ChargeitemStatusValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ChargeitemBillingcodesValueSetType {
+  public static codeExampleValueSet():ChargeitemBillingcodesValueSetType {
     return ChargeitemBillingcodesValueSet;
   }
   /**
    * Example-bound Value Set for bodysite
    */
-  public bodysiteExampleValueSet():BodySiteValueSetType {
+  public static bodysiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**
    * Example-bound Value Set for productReference
    */
-  public productReferenceExampleValueSet():DeviceKindValueSetType {
+  public static productReferenceExampleValueSet():DeviceKindValueSetType {
     return DeviceKindValueSet;
   }
   /**
    * Example-bound Value Set for productCodeableConcept
    */
-  public productCodeableConceptExampleValueSet():DeviceKindValueSetType {
+  public static productCodeableConceptExampleValueSet():DeviceKindValueSetType {
     return DeviceKindValueSet;
   }
   /**

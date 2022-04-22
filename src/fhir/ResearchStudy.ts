@@ -251,7 +251,7 @@ export class ResearchStudyObjective extends fhir.BackboneElement implements IRes
   /**
    * Preferred-bound Value Set for type
    */
-  public typePreferredValueSet():ResearchStudyObjectiveTypeValueSetType {
+  public static typePreferredValueSet():ResearchStudyObjectiveTypeValueSetType {
     return ResearchStudyObjectiveTypeValueSet;
   }
   /**
@@ -419,31 +419,31 @@ export class ResearchStudy extends fhir.DomainResource implements IResearchStudy
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ResearchStudyStatusValueSetType {
+  public static statusRequiredValueSet():ResearchStudyStatusValueSetType {
     return ResearchStudyStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for primaryPurposeType
    */
-  public primaryPurposeTypeExtensibleValueSet():ResearchStudyPrimPurpTypeValueSetType {
+  public static primaryPurposeTypeExtensibleValueSet():ResearchStudyPrimPurpTypeValueSetType {
     return ResearchStudyPrimPurpTypeValueSet;
   }
   /**
    * Example-bound Value Set for phase
    */
-  public phaseExampleValueSet():ResearchStudyPhaseValueSetType {
+  public static phaseExampleValueSet():ResearchStudyPhaseValueSetType {
     return ResearchStudyPhaseValueSet;
   }
   /**
    * Example-bound Value Set for condition
    */
-  public conditionExampleValueSet():ConditionCodeValueSetType {
+  public static conditionExampleValueSet():ConditionCodeValueSetType {
     return ConditionCodeValueSet;
   }
   /**
    * Example-bound Value Set for reasonStopped
    */
-  public reasonStoppedExampleValueSet():ResearchStudyReasonStoppedValueSetType {
+  public static reasonStoppedExampleValueSet():ResearchStudyReasonStoppedValueSetType {
     return ResearchStudyReasonStoppedValueSet;
   }
   /**

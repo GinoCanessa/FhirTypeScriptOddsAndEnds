@@ -408,7 +408,7 @@ export declare class QuestionnaireResponse extends fhir.DomainResource implement
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): QuestionnaireAnswersStatusValueSetType;
+    static statusRequiredValueSet(): QuestionnaireAnswersStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

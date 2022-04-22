@@ -1822,7 +1822,7 @@ export class ElementDefinitionSlicingDiscriminator extends fhir.FhirElement impl
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():DiscriminatorTypeValueSetType {
+  public static typeRequiredValueSet():DiscriminatorTypeValueSetType {
     return DiscriminatorTypeValueSet;
   }
   /**
@@ -1887,7 +1887,7 @@ export class ElementDefinitionSlicing extends fhir.FhirElement implements IEleme
   /**
    * Required-bound Value Set for rules
    */
-  public rulesRequiredValueSet():ResourceSlicingRulesValueSetType {
+  public static rulesRequiredValueSet():ResourceSlicingRulesValueSetType {
     return ResourceSlicingRulesValueSet;
   }
   /**
@@ -2026,19 +2026,19 @@ export class ElementDefinitionType extends fhir.FhirElement implements IElementD
   /**
    * Extensible-bound Value Set for code
    */
-  public codeExtensibleValueSet():DefinedTypesValueSetType {
+  public static codeExtensibleValueSet():DefinedTypesValueSetType {
     return DefinedTypesValueSet;
   }
   /**
    * Required-bound Value Set for aggregation
    */
-  public aggregationRequiredValueSet():ResourceAggregationModeValueSetType {
+  public static aggregationRequiredValueSet():ResourceAggregationModeValueSetType {
     return ResourceAggregationModeValueSet;
   }
   /**
    * Required-bound Value Set for versioning
    */
-  public versioningRequiredValueSet():ReferenceVersionRulesValueSetType {
+  public static versioningRequiredValueSet():ReferenceVersionRulesValueSetType {
     return ReferenceVersionRulesValueSet;
   }
   /**
@@ -2569,7 +2569,7 @@ export class ElementDefinitionConstraint extends fhir.FhirElement implements IEl
   /**
    * Required-bound Value Set for severity
    */
-  public severityRequiredValueSet():ConstraintSeverityValueSetType {
+  public static severityRequiredValueSet():ConstraintSeverityValueSetType {
     return ConstraintSeverityValueSet;
   }
   /**
@@ -2635,7 +2635,7 @@ export class ElementDefinitionBinding extends fhir.FhirElement implements IEleme
   /**
    * Required-bound Value Set for strength
    */
-  public strengthRequiredValueSet():BindingStrengthValueSetType {
+  public static strengthRequiredValueSet():BindingStrengthValueSetType {
     return BindingStrengthValueSet;
   }
   /**
@@ -4237,13 +4237,13 @@ export class ElementDefinition extends fhir.BackboneElement implements IElementD
   /**
    * Required-bound Value Set for representation
    */
-  public representationRequiredValueSet():PropertyRepresentationValueSetType {
+  public static representationRequiredValueSet():PropertyRepresentationValueSetType {
     return PropertyRepresentationValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ObservationCodesValueSetType {
+  public static codeExampleValueSet():ObservationCodesValueSetType {
     return ObservationCodesValueSet;
   }
   /**

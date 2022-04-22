@@ -150,13 +150,13 @@ export class AppointmentResponse extends fhir.DomainResource implements IAppoint
   /**
    * Extensible-bound Value Set for participantType
    */
-  public participantTypeExtensibleValueSet():EncounterParticipantTypeValueSetType {
+  public static participantTypeExtensibleValueSet():EncounterParticipantTypeValueSetType {
     return EncounterParticipantTypeValueSet;
   }
   /**
    * Required-bound Value Set for participantStatus
    */
-  public participantStatusRequiredValueSet():ParticipationstatusValueSetType {
+  public static participantStatusRequiredValueSet():ParticipationstatusValueSetType {
     return ParticipationstatusValueSet;
   }
   /**

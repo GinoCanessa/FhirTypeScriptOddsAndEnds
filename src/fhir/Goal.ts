@@ -253,7 +253,7 @@ export class GoalTarget extends fhir.BackboneElement implements IGoalTarget {
   /**
    * Example-bound Value Set for measure
    */
-  public measureExampleValueSet():ObservationCodesValueSetType {
+  public static measureExampleValueSet():ObservationCodesValueSetType {
     return ObservationCodesValueSet;
   }
   /**
@@ -402,49 +402,49 @@ export class Goal extends fhir.DomainResource implements IGoal {
   /**
    * Required-bound Value Set for lifecycleStatus
    */
-  public lifecycleStatusRequiredValueSet():GoalStatusValueSetType {
+  public static lifecycleStatusRequiredValueSet():GoalStatusValueSetType {
     return GoalStatusValueSet;
   }
   /**
    * Preferred-bound Value Set for achievementStatus
    */
-  public achievementStatusPreferredValueSet():GoalAchievementValueSetType {
+  public static achievementStatusPreferredValueSet():GoalAchievementValueSetType {
     return GoalAchievementValueSet;
   }
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():GoalCategoryValueSetType {
+  public static categoryExampleValueSet():GoalCategoryValueSetType {
     return GoalCategoryValueSet;
   }
   /**
    * Preferred-bound Value Set for priority
    */
-  public priorityPreferredValueSet():GoalPriorityValueSetType {
+  public static priorityPreferredValueSet():GoalPriorityValueSetType {
     return GoalPriorityValueSet;
   }
   /**
    * Example-bound Value Set for description
    */
-  public descriptionExampleValueSet():ClinicalFindingsValueSetType {
+  public static descriptionExampleValueSet():ClinicalFindingsValueSetType {
     return ClinicalFindingsValueSet;
   }
   /**
    * Example-bound Value Set for startDate
    */
-  public startDateExampleValueSet():GoalStartEventValueSetType {
+  public static startDateExampleValueSet():GoalStartEventValueSetType {
     return GoalStartEventValueSet;
   }
   /**
    * Example-bound Value Set for startCodeableConcept
    */
-  public startCodeableConceptExampleValueSet():GoalStartEventValueSetType {
+  public static startCodeableConceptExampleValueSet():GoalStartEventValueSetType {
     return GoalStartEventValueSet;
   }
   /**
    * Example-bound Value Set for outcomeCode
    */
-  public outcomeCodeExampleValueSet():ClinicalFindingsValueSetType {
+  public static outcomeCodeExampleValueSet():ClinicalFindingsValueSetType {
     return ClinicalFindingsValueSet;
   }
   /**

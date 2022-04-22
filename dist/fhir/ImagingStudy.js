@@ -31,7 +31,7 @@ export class ImagingStudySeriesPerformer extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for function
      */
-    functionExtensibleValueSet() {
+    static functionExtensibleValueSet() {
         return SeriesPerformerFunctionValueSet;
     }
     /**
@@ -184,19 +184,19 @@ export class ImagingStudySeries extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for modality
      */
-    modalityExtensibleValueSet() {
+    static modalityExtensibleValueSet() {
         return DicomCid29AcquisitionModalityValueSet;
     }
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet() {
+    static bodySiteExampleValueSet() {
         return BodySiteValueSet;
     }
     /**
      * Example-bound Value Set for laterality
      */
-    lateralityExampleValueSet() {
+    static lateralityExampleValueSet() {
         return BodysiteLateralityValueSet;
     }
     /**
@@ -344,19 +344,19 @@ export class ImagingStudy extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ImagingstudyStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for modality
      */
-    modalityExtensibleValueSet() {
+    static modalityExtensibleValueSet() {
         return DicomCid29AcquisitionModalityValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ProcedureReasonValueSet;
     }
     /**

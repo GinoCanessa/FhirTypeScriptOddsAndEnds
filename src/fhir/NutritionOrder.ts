@@ -312,7 +312,7 @@ export class NutritionOrderOralDietNutrient extends fhir.BackboneElement impleme
   /**
    * Example-bound Value Set for modifier
    */
-  public modifierExampleValueSet():NutrientCodeValueSetType {
+  public static modifierExampleValueSet():NutrientCodeValueSetType {
     return NutrientCodeValueSet;
   }
   /**
@@ -349,7 +349,7 @@ export class NutritionOrderOralDietTexture extends fhir.BackboneElement implemen
   /**
    * Example-bound Value Set for foodType
    */
-  public foodTypeExampleValueSet():ModifiedFoodtypeValueSetType {
+  public static foodTypeExampleValueSet():ModifiedFoodtypeValueSetType {
     return ModifiedFoodtypeValueSet;
   }
   /**
@@ -411,7 +411,7 @@ export class NutritionOrderOralDiet extends fhir.BackboneElement implements INut
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():DietTypeValueSetType {
+  public static typeExampleValueSet():DietTypeValueSetType {
     return DietTypeValueSet;
   }
   /**
@@ -604,13 +604,13 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement implement
   /**
    * Example-bound Value Set for additiveType
    */
-  public additiveTypeExampleValueSet():EntformulaAdditiveValueSetType {
+  public static additiveTypeExampleValueSet():EntformulaAdditiveValueSetType {
     return EntformulaAdditiveValueSet;
   }
   /**
    * Extensible-bound Value Set for routeofAdministration
    */
-  public routeofAdministrationExtensibleValueSet():EnteralRouteValueSetType {
+  public static routeofAdministrationExtensibleValueSet():EnteralRouteValueSetType {
     return EnteralRouteValueSet;
   }
   /**
@@ -768,25 +768,25 @@ export class NutritionOrder extends fhir.DomainResource implements INutritionOrd
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():RequestStatusValueSetType {
+  public static statusRequiredValueSet():RequestStatusValueSetType {
     return RequestStatusValueSet;
   }
   /**
    * Required-bound Value Set for intent
    */
-  public intentRequiredValueSet():RequestIntentValueSetType {
+  public static intentRequiredValueSet():RequestIntentValueSetType {
     return RequestIntentValueSet;
   }
   /**
    * Example-bound Value Set for foodPreferenceModifier
    */
-  public foodPreferenceModifierExampleValueSet():EncounterDietValueSetType {
+  public static foodPreferenceModifierExampleValueSet():EncounterDietValueSetType {
     return EncounterDietValueSet;
   }
   /**
    * Example-bound Value Set for excludeFoodModifier
    */
-  public excludeFoodModifierExampleValueSet():FoodTypeValueSetType {
+  public static excludeFoodModifierExampleValueSet():FoodTypeValueSetType {
     return FoodTypeValueSet;
   }
   /**

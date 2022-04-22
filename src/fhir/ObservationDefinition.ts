@@ -212,13 +212,13 @@ export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneEleme
   /**
    * Extensible-bound Value Set for customaryUnit
    */
-  public customaryUnitExtensibleValueSet():UcumUnitsValueSetType {
+  public static customaryUnitExtensibleValueSet():UcumUnitsValueSetType {
     return UcumUnitsValueSet;
   }
   /**
    * Extensible-bound Value Set for unit
    */
-  public unitExtensibleValueSet():UcumUnitsValueSetType {
+  public static unitExtensibleValueSet():UcumUnitsValueSetType {
     return UcumUnitsValueSet;
   }
   /**
@@ -302,25 +302,25 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
   /**
    * Required-bound Value Set for category
    */
-  public categoryRequiredValueSet():ObservationRangeCategoryValueSetType {
+  public static categoryRequiredValueSet():ObservationRangeCategoryValueSetType {
     return ObservationRangeCategoryValueSet;
   }
   /**
    * Extensible-bound Value Set for context
    */
-  public contextExtensibleValueSet():ReferencerangeMeaningValueSetType {
+  public static contextExtensibleValueSet():ReferencerangeMeaningValueSetType {
     return ReferencerangeMeaningValueSet;
   }
   /**
    * Example-bound Value Set for appliesTo
    */
-  public appliesToExampleValueSet():ReferencerangeAppliestoValueSetType {
+  public static appliesToExampleValueSet():ReferencerangeAppliestoValueSetType {
     return ReferencerangeAppliestoValueSet;
   }
   /**
    * Required-bound Value Set for gender
    */
-  public genderRequiredValueSet():AdministrativeGenderValueSetType {
+  public static genderRequiredValueSet():AdministrativeGenderValueSetType {
     return AdministrativeGenderValueSet;
   }
   /**
@@ -439,25 +439,25 @@ export class ObservationDefinition extends fhir.DomainResource implements IObser
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():ObservationCategoryValueSetType {
+  public static categoryExampleValueSet():ObservationCategoryValueSetType {
     return ObservationCategoryValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ObservationCodesValueSetType {
+  public static codeExampleValueSet():ObservationCodesValueSetType {
     return ObservationCodesValueSet;
   }
   /**
    * Required-bound Value Set for permittedDataType
    */
-  public permittedDataTypeRequiredValueSet():PermittedDataTypeValueSetType {
+  public static permittedDataTypeRequiredValueSet():PermittedDataTypeValueSetType {
     return PermittedDataTypeValueSet;
   }
   /**
    * Example-bound Value Set for method
    */
-  public methodExampleValueSet():ObservationMethodsValueSetType {
+  public static methodExampleValueSet():ObservationMethodsValueSetType {
     return ObservationMethodsValueSet;
   }
   /**

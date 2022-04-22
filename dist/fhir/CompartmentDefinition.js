@@ -40,7 +40,7 @@ export class CompartmentDefinitionResource extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return ResourceTypesValueSet;
     }
     /**
@@ -167,13 +167,13 @@ export class CompartmentDefinition extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return CompartmentTypeValueSet;
     }
     /**

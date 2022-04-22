@@ -45,13 +45,13 @@ export class Identifier extends fhir.FhirElement {
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet() {
+    static useRequiredValueSet() {
         return IdentifierUseValueSet;
     }
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return IdentifierTypeValueSet;
     }
     /**

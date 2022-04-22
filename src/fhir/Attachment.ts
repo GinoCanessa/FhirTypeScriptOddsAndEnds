@@ -170,7 +170,7 @@ export class Attachment extends fhir.FhirElement implements IAttachment {
   /**
    * Preferred-bound Value Set for language
    */
-  public languagePreferredValueSet():LanguagesValueSetType {
+  public static languagePreferredValueSet():LanguagesValueSetType {
     return LanguagesValueSet;
   }
   /**

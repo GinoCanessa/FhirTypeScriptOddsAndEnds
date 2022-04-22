@@ -43,7 +43,7 @@ export class CoverageClass extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return CoverageClassValueSet;
     }
     /**
@@ -91,7 +91,7 @@ export class CoverageCostToBeneficiaryException extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return CoverageFinancialExceptionValueSet;
     }
     /**
@@ -136,7 +136,7 @@ export class CoverageCostToBeneficiary extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return CoverageCopayTypeValueSet;
     }
     /**
@@ -251,19 +251,19 @@ export class Coverage extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return FmStatusValueSet;
     }
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet() {
+    static typePreferredValueSet() {
         return CoverageTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for relationship
      */
-    relationshipExtensibleValueSet() {
+    static relationshipExtensibleValueSet() {
         return SubscriberRelationshipValueSet;
     }
     /**

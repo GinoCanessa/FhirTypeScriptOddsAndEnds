@@ -40,7 +40,7 @@ export class TestScriptOrigin extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for profile
      */
-    profileExtensibleValueSet() {
+    static profileExtensibleValueSet() {
         return TestscriptProfileOriginTypesValueSet;
     }
     /**
@@ -91,7 +91,7 @@ export class TestScriptDestination extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for profile
      */
-    profileExtensibleValueSet() {
+    static profileExtensibleValueSet() {
         return TestscriptProfileDestinationTypesValueSet;
     }
     /**
@@ -601,19 +601,19 @@ export class TestScriptSetupActionOperation extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return TestscriptOperationCodesValueSet;
     }
     /**
      * Required-bound Value Set for resource
      */
-    resourceRequiredValueSet() {
+    static resourceRequiredValueSet() {
         return DefinedTypesValueSet;
     }
     /**
      * Required-bound Value Set for method
      */
-    methodRequiredValueSet() {
+    static methodRequiredValueSet() {
         return HttpOperationsValueSet;
     }
     /**
@@ -826,31 +826,31 @@ export class TestScriptSetupActionAssert extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for direction
      */
-    directionRequiredValueSet() {
+    static directionRequiredValueSet() {
         return AssertDirectionCodesValueSet;
     }
     /**
      * Required-bound Value Set for operator
      */
-    operatorRequiredValueSet() {
+    static operatorRequiredValueSet() {
         return AssertOperatorCodesValueSet;
     }
     /**
      * Required-bound Value Set for requestMethod
      */
-    requestMethodRequiredValueSet() {
+    static requestMethodRequiredValueSet() {
         return HttpOperationsValueSet;
     }
     /**
      * Required-bound Value Set for resource
      */
-    resourceRequiredValueSet() {
+    static resourceRequiredValueSet() {
         return DefinedTypesValueSet;
     }
     /**
      * Required-bound Value Set for response
      */
-    responseRequiredValueSet() {
+    static responseRequiredValueSet() {
         return AssertResponseCodeTypesValueSet;
     }
     /**
@@ -1256,7 +1256,7 @@ export class TestScript extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**

@@ -112,7 +112,7 @@ export declare class TriggerDefinition extends fhir.FhirElement implements ITrig
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): TriggerTypeValueSetType;
+    static typeRequiredValueSet(): TriggerTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

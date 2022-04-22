@@ -390,7 +390,7 @@ export class StructureDefinitionContext extends fhir.BackboneElement implements 
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ExtensionContextTypeValueSetType {
+  public static typeRequiredValueSet():ExtensionContextTypeValueSetType {
     return ExtensionContextTypeValueSet;
   }
   /**
@@ -716,37 +716,37 @@ export class StructureDefinition extends fhir.DomainResource implements IStructu
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for keyword
    */
-  public keywordExtensibleValueSet():DefinitionUseValueSetType {
+  public static keywordExtensibleValueSet():DefinitionUseValueSetType {
     return DefinitionUseValueSet;
   }
   /**
    * Required-bound Value Set for fhirVersion
    */
-  public fhirVersionRequiredValueSet():FHIRVersionValueSetType {
+  public static fhirVersionRequiredValueSet():FHIRVersionValueSetType {
     return FHIRVersionValueSet;
   }
   /**
    * Required-bound Value Set for kind
    */
-  public kindRequiredValueSet():StructureDefinitionKindValueSetType {
+  public static kindRequiredValueSet():StructureDefinitionKindValueSetType {
     return StructureDefinitionKindValueSet;
   }
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():DefinedTypesValueSetType {
+  public static typeExtensibleValueSet():DefinedTypesValueSetType {
     return DefinedTypesValueSet;
   }
   /**
    * Required-bound Value Set for derivation
    */
-  public derivationRequiredValueSet():TypeDerivationRuleValueSetType {
+  public static derivationRequiredValueSet():TypeDerivationRuleValueSetType {
     return TypeDerivationRuleValueSet;
   }
   /**

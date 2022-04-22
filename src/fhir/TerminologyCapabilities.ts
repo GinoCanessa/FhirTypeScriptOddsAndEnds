@@ -1098,19 +1098,19 @@ export class TerminologyCapabilities extends fhir.DomainResource implements ITer
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for kind
    */
-  public kindRequiredValueSet():CapabilityStatementKindValueSetType {
+  public static kindRequiredValueSet():CapabilityStatementKindValueSetType {
     return CapabilityStatementKindValueSet;
   }
   /**
    * Required-bound Value Set for codeSearch
    */
-  public codeSearchRequiredValueSet():CodeSearchSupportValueSetType {
+  public static codeSearchRequiredValueSet():CodeSearchSupportValueSetType {
     return CodeSearchSupportValueSet;
   }
   /**

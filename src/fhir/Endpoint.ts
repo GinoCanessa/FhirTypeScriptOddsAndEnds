@@ -190,13 +190,13 @@ export class Endpoint extends fhir.DomainResource implements IEndpoint {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():EndpointStatusValueSetType {
+  public static statusRequiredValueSet():EndpointStatusValueSetType {
     return EndpointStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for connectionType
    */
-  public connectionTypeExtensibleValueSet():EndpointConnectionTypeValueSetType {
+  public static connectionTypeExtensibleValueSet():EndpointConnectionTypeValueSetType {
     return EndpointConnectionTypeValueSet;
   }
   /**

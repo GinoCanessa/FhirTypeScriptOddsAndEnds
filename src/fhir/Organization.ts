@@ -128,7 +128,7 @@ export class OrganizationContact extends fhir.BackboneElement implements IOrgani
   /**
    * Extensible-bound Value Set for purpose
    */
-  public purposeExtensibleValueSet():ContactentityTypeValueSetType {
+  public static purposeExtensibleValueSet():ContactentityTypeValueSetType {
     return ContactentityTypeValueSet;
   }
   /**
@@ -230,7 +230,7 @@ export class Organization extends fhir.DomainResource implements IOrganization {
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():OrganizationTypeValueSetType {
+  public static typeExampleValueSet():OrganizationTypeValueSetType {
     return OrganizationTypeValueSet;
   }
   /**

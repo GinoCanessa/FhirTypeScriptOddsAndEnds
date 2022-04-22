@@ -81,7 +81,7 @@ export class HealthcareServiceAvailableTime extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for daysOfWeek
      */
-    daysOfWeekRequiredValueSet() {
+    static daysOfWeekRequiredValueSet() {
         return DaysOfWeekValueSet;
     }
     /**
@@ -247,43 +247,43 @@ export class HealthcareService extends fhir.DomainResource {
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ServiceCategoryValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return ServiceTypeValueSet;
     }
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet() {
+    static specialtyPreferredValueSet() {
         return C80PracticeCodesValueSet;
     }
     /**
      * Example-bound Value Set for serviceProvisionCode
      */
-    serviceProvisionCodeExampleValueSet() {
+    static serviceProvisionCodeExampleValueSet() {
         return ServiceProvisionConditionsValueSet;
     }
     /**
      * Example-bound Value Set for program
      */
-    programExampleValueSet() {
+    static programExampleValueSet() {
         return ProgramValueSet;
     }
     /**
      * Preferred-bound Value Set for communication
      */
-    communicationPreferredValueSet() {
+    static communicationPreferredValueSet() {
         return LanguagesValueSet;
     }
     /**
      * Example-bound Value Set for referralMethod
      */
-    referralMethodExampleValueSet() {
+    static referralMethodExampleValueSet() {
         return ServiceReferralMethodValueSet;
     }
     /**

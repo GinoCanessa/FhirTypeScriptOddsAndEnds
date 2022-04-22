@@ -112,11 +112,11 @@ export declare class SupplyDeliverySuppliedItem extends fhir.BackboneElement imp
     /**
      * Example-bound Value Set for itemCodeableConcept
      */
-    itemCodeableConceptExampleValueSet(): SupplyItemValueSetType;
+    static itemCodeableConceptExampleValueSet(): SupplyItemValueSetType;
     /**
      * Example-bound Value Set for itemReference
      */
-    itemReferenceExampleValueSet(): SupplyItemValueSetType;
+    static itemReferenceExampleValueSet(): SupplyItemValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -198,11 +198,11 @@ export declare class SupplyDelivery extends fhir.DomainResource implements ISupp
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): SupplydeliveryStatusValueSetType;
+    static statusRequiredValueSet(): SupplydeliveryStatusValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): SupplydeliveryTypeValueSetType;
+    static typeRequiredValueSet(): SupplydeliveryTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

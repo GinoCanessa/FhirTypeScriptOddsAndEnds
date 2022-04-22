@@ -79,7 +79,7 @@ export class ResearchStudyObjective extends fhir.BackboneElement {
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet() {
+    static typePreferredValueSet() {
         return ResearchStudyObjectiveTypeValueSet;
     }
     /**
@@ -194,31 +194,31 @@ export class ResearchStudy extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return ResearchStudyStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for primaryPurposeType
      */
-    primaryPurposeTypeExtensibleValueSet() {
+    static primaryPurposeTypeExtensibleValueSet() {
         return ResearchStudyPrimPurpTypeValueSet;
     }
     /**
      * Example-bound Value Set for phase
      */
-    phaseExampleValueSet() {
+    static phaseExampleValueSet() {
         return ResearchStudyPhaseValueSet;
     }
     /**
      * Example-bound Value Set for condition
      */
-    conditionExampleValueSet() {
+    static conditionExampleValueSet() {
         return ConditionCodeValueSet;
     }
     /**
      * Example-bound Value Set for reasonStopped
      */
-    reasonStoppedExampleValueSet() {
+    static reasonStoppedExampleValueSet() {
         return ResearchStudyReasonStoppedValueSet;
     }
     /**

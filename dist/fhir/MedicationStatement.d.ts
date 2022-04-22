@@ -208,27 +208,27 @@ export declare class MedicationStatement extends fhir.DomainResource implements 
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): MedicationStatementStatusValueSetType;
+    static statusRequiredValueSet(): MedicationStatementStatusValueSetType;
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet(): ReasonMedicationStatusCodesValueSetType;
+    static statusReasonExampleValueSet(): ReasonMedicationStatusCodesValueSetType;
     /**
      * Preferred-bound Value Set for category
      */
-    categoryPreferredValueSet(): MedicationStatementCategoryValueSetType;
+    static categoryPreferredValueSet(): MedicationStatementCategoryValueSetType;
     /**
      * Example-bound Value Set for medicationCodeableConcept
      */
-    medicationCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
+    static medicationCodeableConceptExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for medicationReference
      */
-    medicationReferenceExampleValueSet(): MedicationCodesValueSetType;
+    static medicationReferenceExampleValueSet(): MedicationCodesValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ConditionCodeValueSetType;
+    static reasonCodeExampleValueSet(): ConditionCodeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

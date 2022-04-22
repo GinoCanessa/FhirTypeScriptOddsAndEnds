@@ -155,13 +155,13 @@ export class ParameterDefinition extends fhir.FhirElement implements IParameterD
   /**
    * Required-bound Value Set for use
    */
-  public useRequiredValueSet():OperationParameterUseValueSetType {
+  public static useRequiredValueSet():OperationParameterUseValueSetType {
     return OperationParameterUseValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():AllTypesValueSetType {
+  public static typeRequiredValueSet():AllTypesValueSetType {
     return AllTypesValueSet;
   }
   /**

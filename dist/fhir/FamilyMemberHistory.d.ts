@@ -263,11 +263,11 @@ export declare class FamilyMemberHistoryCondition extends fhir.BackboneElement i
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ConditionCodeValueSetType;
+    static codeExampleValueSet(): ConditionCodeValueSetType;
     /**
      * Example-bound Value Set for outcome
      */
-    outcomeExampleValueSet(): ConditionOutcomeValueSetType;
+    static outcomeExampleValueSet(): ConditionOutcomeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -440,23 +440,23 @@ export declare class FamilyMemberHistory extends fhir.DomainResource implements 
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): HistoryStatusValueSetType;
+    static statusRequiredValueSet(): HistoryStatusValueSetType;
     /**
      * Example-bound Value Set for dataAbsentReason
      */
-    dataAbsentReasonExampleValueSet(): HistoryAbsentReasonValueSetType;
+    static dataAbsentReasonExampleValueSet(): HistoryAbsentReasonValueSetType;
     /**
      * Example-bound Value Set for relationship
      */
-    relationshipExampleValueSet(): V3FamilyMemberValueSetType;
+    static relationshipExampleValueSet(): V3FamilyMemberValueSetType;
     /**
      * Extensible-bound Value Set for sex
      */
-    sexExtensibleValueSet(): AdministrativeGenderValueSetType;
+    static sexExtensibleValueSet(): AdministrativeGenderValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ClinicalFindingsValueSetType;
+    static reasonCodeExampleValueSet(): ClinicalFindingsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

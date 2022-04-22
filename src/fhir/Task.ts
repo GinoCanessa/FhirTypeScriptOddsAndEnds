@@ -1874,31 +1874,31 @@ export class Task extends fhir.DomainResource implements ITask {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():TaskStatusValueSetType {
+  public static statusRequiredValueSet():TaskStatusValueSetType {
     return TaskStatusValueSet;
   }
   /**
    * Required-bound Value Set for intent
    */
-  public intentRequiredValueSet():TaskIntentValueSetType {
+  public static intentRequiredValueSet():TaskIntentValueSetType {
     return TaskIntentValueSet;
   }
   /**
    * Required-bound Value Set for priority
    */
-  public priorityRequiredValueSet():RequestPriorityValueSetType {
+  public static priorityRequiredValueSet():RequestPriorityValueSetType {
     return RequestPriorityValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():TaskCodeValueSetType {
+  public static codeExampleValueSet():TaskCodeValueSetType {
     return TaskCodeValueSet;
   }
   /**
    * Preferred-bound Value Set for performerType
    */
-  public performerTypePreferredValueSet():PerformerRoleValueSetType {
+  public static performerTypePreferredValueSet():PerformerRoleValueSetType {
     return PerformerRoleValueSet;
   }
   /**

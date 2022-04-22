@@ -239,11 +239,11 @@ export declare class Account extends fhir.DomainResource implements IAccount {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): AccountStatusValueSetType;
+    static statusRequiredValueSet(): AccountStatusValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): AccountTypeValueSetType;
+    static typeExampleValueSet(): AccountTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

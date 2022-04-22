@@ -120,7 +120,7 @@ export declare class HumanName extends fhir.FhirElement implements IHumanName {
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet(): NameUseValueSetType;
+    static useRequiredValueSet(): NameUseValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

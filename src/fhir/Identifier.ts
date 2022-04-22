@@ -108,13 +108,13 @@ export class Identifier extends fhir.FhirElement implements IIdentifier {
   /**
    * Required-bound Value Set for use
    */
-  public useRequiredValueSet():IdentifierUseValueSetType {
+  public static useRequiredValueSet():IdentifierUseValueSetType {
     return IdentifierUseValueSet;
   }
   /**
    * Extensible-bound Value Set for type
    */
-  public typeExtensibleValueSet():IdentifierTypeValueSetType {
+  public static typeExtensibleValueSet():IdentifierTypeValueSetType {
     return IdentifierTypeValueSet;
   }
   /**

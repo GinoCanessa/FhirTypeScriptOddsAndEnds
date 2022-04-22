@@ -96,7 +96,7 @@ export declare class EnrollmentRequest extends fhir.DomainResource implements IE
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

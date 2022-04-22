@@ -422,51 +422,51 @@ export declare class ServiceRequest extends fhir.DomainResource implements IServ
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): RequestStatusValueSetType;
+    static statusRequiredValueSet(): RequestStatusValueSetType;
     /**
      * Required-bound Value Set for intent
      */
-    intentRequiredValueSet(): RequestIntentValueSetType;
+    static intentRequiredValueSet(): RequestIntentValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ServicerequestCategoryValueSetType;
+    static categoryExampleValueSet(): ServicerequestCategoryValueSetType;
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ProcedureCodeValueSetType;
+    static codeExampleValueSet(): ProcedureCodeValueSetType;
     /**
      * Example-bound Value Set for orderDetail
      */
-    orderDetailExampleValueSet(): ServicerequestOrderdetailValueSetType;
+    static orderDetailExampleValueSet(): ServicerequestOrderdetailValueSetType;
     /**
      * Example-bound Value Set for asNeededBoolean
      */
-    asNeededBooleanExampleValueSet(): MedicationAsNeededReasonValueSetType;
+    static asNeededBooleanExampleValueSet(): MedicationAsNeededReasonValueSetType;
     /**
      * Example-bound Value Set for asNeededCodeableConcept
      */
-    asNeededCodeableConceptExampleValueSet(): MedicationAsNeededReasonValueSetType;
+    static asNeededCodeableConceptExampleValueSet(): MedicationAsNeededReasonValueSetType;
     /**
      * Example-bound Value Set for performerType
      */
-    performerTypeExampleValueSet(): ParticipantRoleValueSetType;
+    static performerTypeExampleValueSet(): ParticipantRoleValueSetType;
     /**
      * Example-bound Value Set for locationCode
      */
-    locationCodeExampleValueSet(): V3ServiceDeliveryLocationRoleTypeValueSetType;
+    static locationCodeExampleValueSet(): V3ServiceDeliveryLocationRoleTypeValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ProcedureReasonValueSetType;
+    static reasonCodeExampleValueSet(): ProcedureReasonValueSetType;
     /**
      * Example-bound Value Set for bodySite
      */
-    bodySiteExampleValueSet(): BodySiteValueSetType;
+    static bodySiteExampleValueSet(): BodySiteValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

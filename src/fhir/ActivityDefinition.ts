@@ -397,7 +397,7 @@ export class ActivityDefinitionParticipant extends fhir.BackboneElement implemen
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ActionParticipantTypeValueSetType {
+  public static typeRequiredValueSet():ActionParticipantTypeValueSetType {
     return ActionParticipantTypeValueSet;
   }
   /**
@@ -853,67 +853,67 @@ export class ActivityDefinition extends fhir.DomainResource implements IActivity
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectCodeableConcept
    */
-  public subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectCodeableConceptExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Extensible-bound Value Set for subjectReference
    */
-  public subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
+  public static subjectReferenceExtensibleValueSet():SubjectTypeValueSetType {
     return SubjectTypeValueSet;
   }
   /**
    * Example-bound Value Set for topic
    */
-  public topicExampleValueSet():DefinitionTopicValueSetType {
+  public static topicExampleValueSet():DefinitionTopicValueSetType {
     return DefinitionTopicValueSet;
   }
   /**
    * Required-bound Value Set for kind
    */
-  public kindRequiredValueSet():RequestResourceTypesValueSetType {
+  public static kindRequiredValueSet():RequestResourceTypesValueSetType {
     return RequestResourceTypesValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ProcedureCodeValueSetType {
+  public static codeExampleValueSet():ProcedureCodeValueSetType {
     return ProcedureCodeValueSet;
   }
   /**
    * Required-bound Value Set for intent
    */
-  public intentRequiredValueSet():RequestIntentValueSetType {
+  public static intentRequiredValueSet():RequestIntentValueSetType {
     return RequestIntentValueSet;
   }
   /**
    * Required-bound Value Set for priority
    */
-  public priorityRequiredValueSet():RequestPriorityValueSetType {
+  public static priorityRequiredValueSet():RequestPriorityValueSetType {
     return RequestPriorityValueSet;
   }
   /**
    * Example-bound Value Set for productReference
    */
-  public productReferenceExampleValueSet():MedicationCodesValueSetType {
+  public static productReferenceExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for productCodeableConcept
    */
-  public productCodeableConceptExampleValueSet():MedicationCodesValueSetType {
+  public static productCodeableConceptExampleValueSet():MedicationCodesValueSetType {
     return MedicationCodesValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():BodySiteValueSetType {
+  public static bodySiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**

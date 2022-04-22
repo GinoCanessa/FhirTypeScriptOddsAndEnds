@@ -49,7 +49,7 @@ export class ExampleScenarioActor extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ExamplescenarioActorTypeValueSet;
     }
     /**
@@ -212,7 +212,7 @@ export class ExampleScenarioInstance extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for resourceType
      */
-    resourceTypeRequiredValueSet() {
+    static resourceTypeRequiredValueSet() {
         return ResourceTypesValueSet;
     }
     /**
@@ -612,7 +612,7 @@ export class ExampleScenario extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**

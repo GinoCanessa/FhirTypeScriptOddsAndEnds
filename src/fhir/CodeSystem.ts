@@ -472,7 +472,7 @@ export class CodeSystemFilter extends fhir.BackboneElement implements ICodeSyste
   /**
    * Required-bound Value Set for operator
    */
-  public operatorRequiredValueSet():FilterOperatorValueSetType {
+  public static operatorRequiredValueSet():FilterOperatorValueSetType {
     return FilterOperatorValueSet;
   }
   /**
@@ -546,7 +546,7 @@ export class CodeSystemProperty extends fhir.BackboneElement implements ICodeSys
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():ConceptPropertyTypeValueSetType {
+  public static typeRequiredValueSet():ConceptPropertyTypeValueSetType {
     return ConceptPropertyTypeValueSet;
   }
   /**
@@ -603,13 +603,13 @@ export class CodeSystemConceptDesignation extends fhir.BackboneElement implement
   /**
    * Preferred-bound Value Set for language
    */
-  public languagePreferredValueSet():LanguagesValueSetType {
+  public static languagePreferredValueSet():LanguagesValueSetType {
     return LanguagesValueSet;
   }
   /**
    * Extensible-bound Value Set for use
    */
-  public useExtensibleValueSet():DesignationUseValueSetType {
+  public static useExtensibleValueSet():DesignationUseValueSetType {
     return DesignationUseValueSet;
   }
   /**
@@ -1049,19 +1049,19 @@ export class CodeSystem extends fhir.DomainResource implements ICodeSystem {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for hierarchyMeaning
    */
-  public hierarchyMeaningRequiredValueSet():CodesystemHierarchyMeaningValueSetType {
+  public static hierarchyMeaningRequiredValueSet():CodesystemHierarchyMeaningValueSetType {
     return CodesystemHierarchyMeaningValueSet;
   }
   /**
    * Required-bound Value Set for content
    */
-  public contentRequiredValueSet():CodesystemContentModeValueSetType {
+  public static contentRequiredValueSet():CodesystemContentModeValueSetType {
     return CodesystemContentModeValueSet;
   }
   /**

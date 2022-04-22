@@ -65,7 +65,7 @@ export class CoverageEligibilityResponseInsuranceItemBenefit extends fhir.Backbo
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return BenefitTypeValueSet;
     }
     /**
@@ -170,43 +170,43 @@ export class CoverageEligibilityResponseInsuranceItem extends fhir.BackboneEleme
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ExBenefitcategoryValueSet;
     }
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet() {
+    static productOrServiceExampleValueSet() {
         return ServiceUsclsValueSet;
     }
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet() {
+    static modifierExampleValueSet() {
         return ClaimModifiersValueSet;
     }
     /**
      * Example-bound Value Set for network
      */
-    networkExampleValueSet() {
+    static networkExampleValueSet() {
         return BenefitNetworkValueSet;
     }
     /**
      * Example-bound Value Set for unit
      */
-    unitExampleValueSet() {
+    static unitExampleValueSet() {
         return BenefitUnitValueSet;
     }
     /**
      * Example-bound Value Set for term
      */
-    termExampleValueSet() {
+    static termExampleValueSet() {
         return BenefitTermValueSet;
     }
     /**
      * Example-bound Value Set for authorizationSupporting
      */
-    authorizationSupportingExampleValueSet() {
+    static authorizationSupportingExampleValueSet() {
         return CoverageeligibilityresponseExAuthSupportValueSet;
     }
     /**
@@ -329,7 +329,7 @@ export class CoverageEligibilityResponseError extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return AdjudicationErrorValueSet;
     }
     /**
@@ -450,25 +450,25 @@ export class CoverageEligibilityResponse extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return FmStatusValueSet;
     }
     /**
      * Required-bound Value Set for purpose
      */
-    purposeRequiredValueSet() {
+    static purposeRequiredValueSet() {
         return EligibilityresponsePurposeValueSet;
     }
     /**
      * Required-bound Value Set for outcome
      */
-    outcomeRequiredValueSet() {
+    static outcomeRequiredValueSet() {
         return RemittanceOutcomeValueSet;
     }
     /**
      * Example-bound Value Set for form
      */
-    formExampleValueSet() {
+    static formExampleValueSet() {
         return FormsValueSet;
     }
     /**

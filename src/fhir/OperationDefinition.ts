@@ -398,7 +398,7 @@ export class OperationDefinitionParameterBinding extends fhir.BackboneElement im
   /**
    * Required-bound Value Set for strength
    */
-  public strengthRequiredValueSet():BindingStrengthValueSetType {
+  public static strengthRequiredValueSet():BindingStrengthValueSetType {
     return BindingStrengthValueSet;
   }
   /**
@@ -569,19 +569,19 @@ export class OperationDefinitionParameter extends fhir.BackboneElement implement
   /**
    * Required-bound Value Set for use
    */
-  public useRequiredValueSet():OperationParameterUseValueSetType {
+  public static useRequiredValueSet():OperationParameterUseValueSetType {
     return OperationParameterUseValueSet;
   }
   /**
    * Required-bound Value Set for type
    */
-  public typeRequiredValueSet():AllTypesValueSetType {
+  public static typeRequiredValueSet():AllTypesValueSetType {
     return AllTypesValueSet;
   }
   /**
    * Required-bound Value Set for searchType
    */
-  public searchTypeRequiredValueSet():SearchParamTypeValueSetType {
+  public static searchTypeRequiredValueSet():SearchParamTypeValueSetType {
     return SearchParamTypeValueSet;
   }
   /**
@@ -913,19 +913,19 @@ export class OperationDefinition extends fhir.DomainResource implements IOperati
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():PublicationStatusValueSetType {
+  public static statusRequiredValueSet():PublicationStatusValueSetType {
     return PublicationStatusValueSet;
   }
   /**
    * Required-bound Value Set for kind
    */
-  public kindRequiredValueSet():OperationKindValueSetType {
+  public static kindRequiredValueSet():OperationKindValueSetType {
     return OperationKindValueSet;
   }
   /**
    * Required-bound Value Set for resource
    */
-  public resourceRequiredValueSet():ResourceTypesValueSetType {
+  public static resourceRequiredValueSet():ResourceTypesValueSetType {
     return ResourceTypesValueSet;
   }
   /**

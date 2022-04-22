@@ -40,7 +40,7 @@ export class MeasureGroupPopulation extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for code
      */
-    codeExtensibleValueSet() {
+    static codeExtensibleValueSet() {
         return MeasurePopulationValueSet;
     }
     /**
@@ -229,7 +229,7 @@ export class MeasureSupplementalData extends fhir.BackboneElement {
     /**
      * Extensible-bound Value Set for usage
      */
-    usageExtensibleValueSet() {
+    static usageExtensibleValueSet() {
         return MeasureDataUsageValueSet;
     }
     /**
@@ -467,49 +467,49 @@ export class Measure extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectCodeableConcept
      */
-    subjectCodeableConceptExtensibleValueSet() {
+    static subjectCodeableConceptExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Extensible-bound Value Set for subjectReference
      */
-    subjectReferenceExtensibleValueSet() {
+    static subjectReferenceExtensibleValueSet() {
         return SubjectTypeValueSet;
     }
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet() {
+    static topicExampleValueSet() {
         return DefinitionTopicValueSet;
     }
     /**
      * Extensible-bound Value Set for scoring
      */
-    scoringExtensibleValueSet() {
+    static scoringExtensibleValueSet() {
         return MeasureScoringValueSet;
     }
     /**
      * Extensible-bound Value Set for compositeScoring
      */
-    compositeScoringExtensibleValueSet() {
+    static compositeScoringExtensibleValueSet() {
         return CompositeMeasureScoringValueSet;
     }
     /**
      * Extensible-bound Value Set for type
      */
-    typeExtensibleValueSet() {
+    static typeExtensibleValueSet() {
         return MeasureTypeValueSet;
     }
     /**
      * Required-bound Value Set for improvementNotation
      */
-    improvementNotationRequiredValueSet() {
+    static improvementNotationRequiredValueSet() {
         return MeasureImprovementNotationValueSet;
     }
     /**

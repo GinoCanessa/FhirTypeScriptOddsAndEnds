@@ -187,19 +187,19 @@ export class CoverageEligibilityRequestItem extends fhir.BackboneElement {
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet() {
+    static categoryExampleValueSet() {
         return ExBenefitcategoryValueSet;
     }
     /**
      * Example-bound Value Set for productOrService
      */
-    productOrServiceExampleValueSet() {
+    static productOrServiceExampleValueSet() {
         return ServiceUsclsValueSet;
     }
     /**
      * Example-bound Value Set for modifier
      */
-    modifierExampleValueSet() {
+    static modifierExampleValueSet() {
         return ClaimModifiersValueSet;
     }
     /**
@@ -326,19 +326,19 @@ export class CoverageEligibilityRequest extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return FmStatusValueSet;
     }
     /**
      * Example-bound Value Set for priority
      */
-    priorityExampleValueSet() {
+    static priorityExampleValueSet() {
         return ProcessPriorityValueSet;
     }
     /**
      * Required-bound Value Set for purpose
      */
-    purposeRequiredValueSet() {
+    static purposeRequiredValueSet() {
         return EligibilityrequestPurposeValueSet;
     }
     /**

@@ -95,37 +95,37 @@ export class MedicationStatement extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return MedicationStatementStatusValueSet;
     }
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet() {
+    static statusReasonExampleValueSet() {
         return ReasonMedicationStatusCodesValueSet;
     }
     /**
      * Preferred-bound Value Set for category
      */
-    categoryPreferredValueSet() {
+    static categoryPreferredValueSet() {
         return MedicationStatementCategoryValueSet;
     }
     /**
      * Example-bound Value Set for medicationCodeableConcept
      */
-    medicationCodeableConceptExampleValueSet() {
+    static medicationCodeableConceptExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for medicationReference
      */
-    medicationReferenceExampleValueSet() {
+    static medicationReferenceExampleValueSet() {
         return MedicationCodesValueSet;
     }
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet() {
+    static reasonCodeExampleValueSet() {
         return ConditionCodeValueSet;
     }
     /**

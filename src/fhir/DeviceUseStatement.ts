@@ -203,13 +203,13 @@ export class DeviceUseStatement extends fhir.DomainResource implements IDeviceUs
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():DeviceStatementStatusValueSetType {
+  public static statusRequiredValueSet():DeviceStatementStatusValueSetType {
     return DeviceStatementStatusValueSet;
   }
   /**
    * Example-bound Value Set for bodySite
    */
-  public bodySiteExampleValueSet():BodySiteValueSetType {
+  public static bodySiteExampleValueSet():BodySiteValueSetType {
     return BodySiteValueSet;
   }
   /**

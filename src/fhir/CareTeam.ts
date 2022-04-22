@@ -136,7 +136,7 @@ export class CareTeamParticipant extends fhir.BackboneElement implements ICareTe
   /**
    * Example-bound Value Set for role
    */
-  public roleExampleValueSet():ParticipantRoleValueSetType {
+  public static roleExampleValueSet():ParticipantRoleValueSetType {
     return ParticipantRoleValueSet;
   }
   /**
@@ -245,13 +245,13 @@ export class CareTeam extends fhir.DomainResource implements ICareTeam {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():CareTeamStatusValueSetType {
+  public static statusRequiredValueSet():CareTeamStatusValueSetType {
     return CareTeamStatusValueSet;
   }
   /**
    * Example-bound Value Set for reasonCode
    */
-  public reasonCodeExampleValueSet():ClinicalFindingsValueSetType {
+  public static reasonCodeExampleValueSet():ClinicalFindingsValueSetType {
     return ClinicalFindingsValueSet;
   }
   /**

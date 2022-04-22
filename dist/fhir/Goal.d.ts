@@ -228,7 +228,7 @@ export declare class GoalTarget extends fhir.BackboneElement implements IGoalTar
     /**
      * Example-bound Value Set for measure
      */
-    measureExampleValueSet(): ObservationCodesValueSetType;
+    static measureExampleValueSet(): ObservationCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -334,35 +334,35 @@ export declare class Goal extends fhir.DomainResource implements IGoal {
     /**
      * Required-bound Value Set for lifecycleStatus
      */
-    lifecycleStatusRequiredValueSet(): GoalStatusValueSetType;
+    static lifecycleStatusRequiredValueSet(): GoalStatusValueSetType;
     /**
      * Preferred-bound Value Set for achievementStatus
      */
-    achievementStatusPreferredValueSet(): GoalAchievementValueSetType;
+    static achievementStatusPreferredValueSet(): GoalAchievementValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): GoalCategoryValueSetType;
+    static categoryExampleValueSet(): GoalCategoryValueSetType;
     /**
      * Preferred-bound Value Set for priority
      */
-    priorityPreferredValueSet(): GoalPriorityValueSetType;
+    static priorityPreferredValueSet(): GoalPriorityValueSetType;
     /**
      * Example-bound Value Set for description
      */
-    descriptionExampleValueSet(): ClinicalFindingsValueSetType;
+    static descriptionExampleValueSet(): ClinicalFindingsValueSetType;
     /**
      * Example-bound Value Set for startDate
      */
-    startDateExampleValueSet(): GoalStartEventValueSetType;
+    static startDateExampleValueSet(): GoalStartEventValueSetType;
     /**
      * Example-bound Value Set for startCodeableConcept
      */
-    startCodeableConceptExampleValueSet(): GoalStartEventValueSetType;
+    static startCodeableConceptExampleValueSet(): GoalStartEventValueSetType;
     /**
      * Example-bound Value Set for outcomeCode
      */
-    outcomeCodeExampleValueSet(): ClinicalFindingsValueSetType;
+    static outcomeCodeExampleValueSet(): ClinicalFindingsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

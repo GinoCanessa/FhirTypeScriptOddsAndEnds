@@ -108,13 +108,13 @@ export class ContactPoint extends fhir.FhirElement implements IContactPoint {
   /**
    * Required-bound Value Set for system
    */
-  public systemRequiredValueSet():ContactPointSystemValueSetType {
+  public static systemRequiredValueSet():ContactPointSystemValueSetType {
     return ContactPointSystemValueSet;
   }
   /**
    * Required-bound Value Set for use
    */
-  public useRequiredValueSet():ContactPointUseValueSetType {
+  public static useRequiredValueSet():ContactPointUseValueSetType {
     return ContactPointUseValueSet;
   }
   /**

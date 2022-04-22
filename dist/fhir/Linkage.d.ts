@@ -65,7 +65,7 @@ export declare class LinkageItem extends fhir.BackboneElement implements ILinkag
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): LinkageTypeValueSetType;
+    static typeRequiredValueSet(): LinkageTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

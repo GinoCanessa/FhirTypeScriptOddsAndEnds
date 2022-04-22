@@ -295,13 +295,13 @@ export class Account extends fhir.DomainResource implements IAccount {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():AccountStatusValueSetType {
+  public static statusRequiredValueSet():AccountStatusValueSetType {
     return AccountStatusValueSet;
   }
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():AccountTypeValueSetType {
+  public static typeExampleValueSet():AccountTypeValueSetType {
     return AccountTypeValueSet;
   }
   /**

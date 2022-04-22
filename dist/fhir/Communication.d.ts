@@ -312,31 +312,31 @@ export declare class Communication extends fhir.DomainResource implements ICommu
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): EventStatusValueSetType;
+    static statusRequiredValueSet(): EventStatusValueSetType;
     /**
      * Example-bound Value Set for statusReason
      */
-    statusReasonExampleValueSet(): CommunicationNotDoneReasonValueSetType;
+    static statusReasonExampleValueSet(): CommunicationNotDoneReasonValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): CommunicationCategoryValueSetType;
+    static categoryExampleValueSet(): CommunicationCategoryValueSetType;
     /**
      * Required-bound Value Set for priority
      */
-    priorityRequiredValueSet(): RequestPriorityValueSetType;
+    static priorityRequiredValueSet(): RequestPriorityValueSetType;
     /**
      * Example-bound Value Set for medium
      */
-    mediumExampleValueSet(): V3ParticipationModeValueSetType;
+    static mediumExampleValueSet(): V3ParticipationModeValueSetType;
     /**
      * Example-bound Value Set for topic
      */
-    topicExampleValueSet(): CommunicationTopicValueSetType;
+    static topicExampleValueSet(): CommunicationTopicValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): ClinicalFindingsValueSetType;
+    static reasonCodeExampleValueSet(): ClinicalFindingsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

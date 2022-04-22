@@ -31,7 +31,7 @@ export class RelatedPersonCommunication extends fhir.BackboneElement {
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet() {
+    static languagePreferredValueSet() {
         return LanguagesValueSet;
     }
     /**
@@ -113,13 +113,13 @@ export class RelatedPerson extends fhir.DomainResource {
     /**
      * Preferred-bound Value Set for relationship
      */
-    relationshipPreferredValueSet() {
+    static relationshipPreferredValueSet() {
         return RelatedpersonRelationshiptypeValueSet;
     }
     /**
      * Required-bound Value Set for gender
      */
-    genderRequiredValueSet() {
+    static genderRequiredValueSet() {
         return AdministrativeGenderValueSet;
     }
     /**

@@ -189,7 +189,7 @@ export class ClinicalImpressionInvestigation extends fhir.BackboneElement implem
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():InvestigationSetsValueSetType {
+  public static codeExampleValueSet():InvestigationSetsValueSetType {
     return InvestigationSetsValueSet;
   }
   /**
@@ -237,7 +237,7 @@ export class ClinicalImpressionFinding extends fhir.BackboneElement implements I
   /**
    * Example-bound Value Set for itemCodeableConcept
    */
-  public itemCodeableConceptExampleValueSet():ConditionCodeValueSetType {
+  public static itemCodeableConceptExampleValueSet():ConditionCodeValueSetType {
     return ConditionCodeValueSet;
   }
   /**
@@ -408,13 +408,13 @@ export class ClinicalImpression extends fhir.DomainResource implements IClinical
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ClinicalimpressionStatusValueSetType {
+  public static statusRequiredValueSet():ClinicalimpressionStatusValueSetType {
     return ClinicalimpressionStatusValueSet;
   }
   /**
    * Example-bound Value Set for prognosisCodeableConcept
    */
-  public prognosisCodeableConceptExampleValueSet():ClinicalimpressionPrognosisValueSetType {
+  public static prognosisCodeableConceptExampleValueSet():ClinicalimpressionPrognosisValueSetType {
     return ClinicalimpressionPrognosisValueSet;
   }
   /**

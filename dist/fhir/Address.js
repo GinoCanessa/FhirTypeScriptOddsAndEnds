@@ -75,13 +75,13 @@ export class Address extends fhir.FhirElement {
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet() {
+    static useRequiredValueSet() {
         return AddressUseValueSet;
     }
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return AddressTypeValueSet;
     }
     /**

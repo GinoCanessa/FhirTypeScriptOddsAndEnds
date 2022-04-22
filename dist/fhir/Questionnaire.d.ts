@@ -599,7 +599,7 @@ export declare class QuestionnaireItemEnableWhen extends fhir.BackboneElement im
     /**
      * Required-bound Value Set for operator
      */
-    operatorRequiredValueSet(): QuestionnaireEnableOperatorValueSetType;
+    static operatorRequiredValueSet(): QuestionnaireEnableOperatorValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -880,15 +880,15 @@ export declare class QuestionnaireItem extends fhir.BackboneElement implements I
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): QuestionnaireQuestionsValueSetType;
+    static codeExampleValueSet(): QuestionnaireQuestionsValueSetType;
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet(): ItemTypeValueSetType;
+    static typeRequiredValueSet(): ItemTypeValueSetType;
     /**
      * Required-bound Value Set for enableBehavior
      */
-    enableBehaviorRequiredValueSet(): QuestionnaireEnableBehaviorValueSetType;
+    static enableBehaviorRequiredValueSet(): QuestionnaireEnableBehaviorValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1057,15 +1057,15 @@ export declare class Questionnaire extends fhir.DomainResource implements IQuest
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): PublicationStatusValueSetType;
+    static statusRequiredValueSet(): PublicationStatusValueSetType;
     /**
      * Required-bound Value Set for subjectType
      */
-    subjectTypeRequiredValueSet(): ResourceTypesValueSetType;
+    static subjectTypeRequiredValueSet(): ResourceTypesValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): QuestionnaireQuestionsValueSetType;
+    static codeExampleValueSet(): QuestionnaireQuestionsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

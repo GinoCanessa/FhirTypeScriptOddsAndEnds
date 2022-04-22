@@ -65,7 +65,7 @@ export class Attachment extends fhir.FhirElement {
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet() {
+    static languagePreferredValueSet() {
         return LanguagesValueSet;
     }
     /**

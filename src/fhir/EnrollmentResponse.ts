@@ -144,13 +144,13 @@ export class EnrollmentResponse extends fhir.DomainResource implements IEnrollme
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():FmStatusValueSetType {
+  public static statusRequiredValueSet():FmStatusValueSetType {
     return FmStatusValueSet;
   }
   /**
    * Required-bound Value Set for outcome
    */
-  public outcomeRequiredValueSet():RemittanceOutcomeValueSetType {
+  public static outcomeRequiredValueSet():RemittanceOutcomeValueSetType {
     return RemittanceOutcomeValueSet;
   }
   /**

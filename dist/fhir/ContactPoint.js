@@ -45,13 +45,13 @@ export class ContactPoint extends fhir.FhirElement {
     /**
      * Required-bound Value Set for system
      */
-    systemRequiredValueSet() {
+    static systemRequiredValueSet() {
         return ContactPointSystemValueSet;
     }
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet() {
+    static useRequiredValueSet() {
         return ContactPointUseValueSet;
     }
     /**

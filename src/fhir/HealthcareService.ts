@@ -307,7 +307,7 @@ export class HealthcareServiceAvailableTime extends fhir.BackboneElement impleme
   /**
    * Required-bound Value Set for daysOfWeek
    */
-  public daysOfWeekRequiredValueSet():DaysOfWeekValueSetType {
+  public static daysOfWeekRequiredValueSet():DaysOfWeekValueSetType {
     return DaysOfWeekValueSet;
   }
   /**
@@ -529,43 +529,43 @@ export class HealthcareService extends fhir.DomainResource implements IHealthcar
   /**
    * Example-bound Value Set for category
    */
-  public categoryExampleValueSet():ServiceCategoryValueSetType {
+  public static categoryExampleValueSet():ServiceCategoryValueSetType {
     return ServiceCategoryValueSet;
   }
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():ServiceTypeValueSetType {
+  public static typeExampleValueSet():ServiceTypeValueSetType {
     return ServiceTypeValueSet;
   }
   /**
    * Preferred-bound Value Set for specialty
    */
-  public specialtyPreferredValueSet():C80PracticeCodesValueSetType {
+  public static specialtyPreferredValueSet():C80PracticeCodesValueSetType {
     return C80PracticeCodesValueSet;
   }
   /**
    * Example-bound Value Set for serviceProvisionCode
    */
-  public serviceProvisionCodeExampleValueSet():ServiceProvisionConditionsValueSetType {
+  public static serviceProvisionCodeExampleValueSet():ServiceProvisionConditionsValueSetType {
     return ServiceProvisionConditionsValueSet;
   }
   /**
    * Example-bound Value Set for program
    */
-  public programExampleValueSet():ProgramValueSetType {
+  public static programExampleValueSet():ProgramValueSetType {
     return ProgramValueSet;
   }
   /**
    * Preferred-bound Value Set for communication
    */
-  public communicationPreferredValueSet():LanguagesValueSetType {
+  public static communicationPreferredValueSet():LanguagesValueSetType {
     return LanguagesValueSet;
   }
   /**
    * Example-bound Value Set for referralMethod
    */
-  public referralMethodExampleValueSet():ServiceReferralMethodValueSetType {
+  public static referralMethodExampleValueSet():ServiceReferralMethodValueSetType {
     return ServiceReferralMethodValueSet;
   }
   /**

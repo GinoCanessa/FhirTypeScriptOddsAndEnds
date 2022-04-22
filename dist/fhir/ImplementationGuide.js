@@ -91,7 +91,7 @@ export class ImplementationGuideGlobal extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ResourceTypesValueSet;
     }
     /**
@@ -211,7 +211,7 @@ export class ImplementationGuideDefinitionResource extends fhir.BackboneElement 
     /**
      * Required-bound Value Set for fhirVersion
      */
-    fhirVersionRequiredValueSet() {
+    static fhirVersionRequiredValueSet() {
         return FHIRVersionValueSet;
     }
     /**
@@ -289,7 +289,7 @@ export class ImplementationGuideDefinitionPage extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for generation
      */
-    generationRequiredValueSet() {
+    static generationRequiredValueSet() {
         return GuidePageGenerationValueSet;
     }
     /**
@@ -352,7 +352,7 @@ export class ImplementationGuideDefinitionParameter extends fhir.BackboneElement
     /**
      * Required-bound Value Set for code
      */
-    codeRequiredValueSet() {
+    static codeRequiredValueSet() {
         return GuideParameterCodeValueSet;
     }
     /**
@@ -785,19 +785,19 @@ export class ImplementationGuide extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Required-bound Value Set for license
      */
-    licenseRequiredValueSet() {
+    static licenseRequiredValueSet() {
         return SpdxLicenseValueSet;
     }
     /**
      * Required-bound Value Set for fhirVersion
      */
-    fhirVersionRequiredValueSet() {
+    static fhirVersionRequiredValueSet() {
         return FHIRVersionValueSet;
     }
     /**

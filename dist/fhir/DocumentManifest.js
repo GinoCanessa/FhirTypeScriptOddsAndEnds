@@ -103,13 +103,13 @@ export class DocumentManifest extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return DocumentReferenceStatusValueSet;
     }
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet() {
+    static typeExampleValueSet() {
         return V3ActCodeValueSet;
     }
     /**

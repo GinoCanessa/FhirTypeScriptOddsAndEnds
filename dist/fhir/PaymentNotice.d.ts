@@ -145,11 +145,11 @@ export declare class PaymentNotice extends fhir.DomainResource implements IPayme
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Example-bound Value Set for paymentStatus
      */
-    paymentStatusExampleValueSet(): PaymentStatusValueSetType;
+    static paymentStatusExampleValueSet(): PaymentStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

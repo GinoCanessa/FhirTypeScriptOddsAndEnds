@@ -43,7 +43,7 @@ export class PractitionerRoleAvailableTime extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for daysOfWeek
      */
-    daysOfWeekRequiredValueSet() {
+    static daysOfWeekRequiredValueSet() {
         return DaysOfWeekValueSet;
     }
     /**
@@ -167,13 +167,13 @@ export class PractitionerRole extends fhir.DomainResource {
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet() {
+    static codeExampleValueSet() {
         return PractitionerRoleValueSet;
     }
     /**
      * Preferred-bound Value Set for specialty
      */
-    specialtyPreferredValueSet() {
+    static specialtyPreferredValueSet() {
         return C80PracticeCodesValueSet;
     }
     /**

@@ -56,7 +56,7 @@ export class CodeSystemFilter extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for operator
      */
-    operatorRequiredValueSet() {
+    static operatorRequiredValueSet() {
         return FilterOperatorValueSet;
     }
     /**
@@ -131,7 +131,7 @@ export class CodeSystemProperty extends fhir.BackboneElement {
     /**
      * Required-bound Value Set for type
      */
-    typeRequiredValueSet() {
+    static typeRequiredValueSet() {
         return ConceptPropertyTypeValueSet;
     }
     /**
@@ -191,13 +191,13 @@ export class CodeSystemConceptDesignation extends fhir.BackboneElement {
     /**
      * Preferred-bound Value Set for language
      */
-    languagePreferredValueSet() {
+    static languagePreferredValueSet() {
         return LanguagesValueSet;
     }
     /**
      * Extensible-bound Value Set for use
      */
-    useExtensibleValueSet() {
+    static useExtensibleValueSet() {
         return DesignationUseValueSet;
     }
     /**
@@ -537,19 +537,19 @@ export class CodeSystem extends fhir.DomainResource {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet() {
+    static statusRequiredValueSet() {
         return PublicationStatusValueSet;
     }
     /**
      * Required-bound Value Set for hierarchyMeaning
      */
-    hierarchyMeaningRequiredValueSet() {
+    static hierarchyMeaningRequiredValueSet() {
         return CodesystemHierarchyMeaningValueSet;
     }
     /**
      * Required-bound Value Set for content
      */
-    contentRequiredValueSet() {
+    static contentRequiredValueSet() {
         return CodesystemContentModeValueSet;
     }
     /**

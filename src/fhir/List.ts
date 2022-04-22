@@ -164,7 +164,7 @@ export class ListEntry extends fhir.BackboneElement implements IListEntry {
   /**
    * Example-bound Value Set for flag
    */
-  public flagExampleValueSet():ListItemFlagValueSetType {
+  public static flagExampleValueSet():ListItemFlagValueSetType {
     return ListItemFlagValueSet;
   }
   /**
@@ -286,31 +286,31 @@ export class List extends fhir.DomainResource implements IList {
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():ListStatusValueSetType {
+  public static statusRequiredValueSet():ListStatusValueSetType {
     return ListStatusValueSet;
   }
   /**
    * Required-bound Value Set for mode
    */
-  public modeRequiredValueSet():ListModeValueSetType {
+  public static modeRequiredValueSet():ListModeValueSetType {
     return ListModeValueSet;
   }
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():ListExampleCodesValueSetType {
+  public static codeExampleValueSet():ListExampleCodesValueSetType {
     return ListExampleCodesValueSet;
   }
   /**
    * Preferred-bound Value Set for orderedBy
    */
-  public orderedByPreferredValueSet():ListOrderValueSetType {
+  public static orderedByPreferredValueSet():ListOrderValueSetType {
     return ListOrderValueSet;
   }
   /**
    * Preferred-bound Value Set for emptyReason
    */
-  public emptyReasonPreferredValueSet():ListEmptyReasonValueSetType {
+  public static emptyReasonPreferredValueSet():ListEmptyReasonValueSetType {
     return ListEmptyReasonValueSet;
   }
   /**

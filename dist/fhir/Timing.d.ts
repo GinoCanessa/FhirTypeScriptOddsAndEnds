@@ -288,19 +288,19 @@ export declare class TimingRepeat extends fhir.FhirElement implements ITimingRep
     /**
      * Required-bound Value Set for durationUnit
      */
-    durationUnitRequiredValueSet(): UnitsOfTimeValueSetType;
+    static durationUnitRequiredValueSet(): UnitsOfTimeValueSetType;
     /**
      * Required-bound Value Set for periodUnit
      */
-    periodUnitRequiredValueSet(): UnitsOfTimeValueSetType;
+    static periodUnitRequiredValueSet(): UnitsOfTimeValueSetType;
     /**
      * Required-bound Value Set for dayOfWeek
      */
-    dayOfWeekRequiredValueSet(): DaysOfWeekValueSetType;
+    static dayOfWeekRequiredValueSet(): DaysOfWeekValueSetType;
     /**
      * Required-bound Value Set for when
      */
-    whenRequiredValueSet(): EventTimingValueSetType;
+    static whenRequiredValueSet(): EventTimingValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -333,7 +333,7 @@ export declare class Timing extends fhir.BackboneElement implements ITiming {
     /**
      * Preferred-bound Value Set for code
      */
-    codePreferredValueSet(): TimingAbbreviationValueSetType;
+    static codePreferredValueSet(): TimingAbbreviationValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

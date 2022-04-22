@@ -954,15 +954,15 @@ export declare class ContractContentDefinition extends fhir.BackboneElement impl
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ContractDefinitionTypeValueSetType;
+    static typeExampleValueSet(): ContractDefinitionTypeValueSetType;
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet(): ContractDefinitionSubtypeValueSetType;
+    static subTypeExampleValueSet(): ContractDefinitionSubtypeValueSetType;
     /**
      * Required-bound Value Set for publicationStatus
      */
-    publicationStatusRequiredValueSet(): ContractPublicationstatusValueSetType;
+    static publicationStatusRequiredValueSet(): ContractPublicationstatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -999,15 +999,15 @@ export declare class ContractTermSecurityLabel extends fhir.BackboneElement impl
     /**
      * Example-bound Value Set for classification
      */
-    classificationExampleValueSet(): ContractSecurityClassificationValueSetType;
+    static classificationExampleValueSet(): ContractSecurityClassificationValueSetType;
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ContractSecurityCategoryValueSetType;
+    static categoryExampleValueSet(): ContractSecurityCategoryValueSetType;
     /**
      * Example-bound Value Set for control
      */
-    controlExampleValueSet(): ContractSecurityControlValueSetType;
+    static controlExampleValueSet(): ContractSecurityControlValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1032,7 +1032,7 @@ export declare class ContractTermOfferParty extends fhir.BackboneElement impleme
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet(): ContractPartyRoleValueSetType;
+    static roleExampleValueSet(): ContractPartyRoleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1197,15 +1197,15 @@ export declare class ContractTermOffer extends fhir.BackboneElement implements I
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ContractTermTypeValueSetType;
+    static typeExampleValueSet(): ContractTermTypeValueSetType;
     /**
      * Extensible-bound Value Set for decision
      */
-    decisionExtensibleValueSet(): V3ActConsentDirectiveValueSetType;
+    static decisionExtensibleValueSet(): V3ActConsentDirectiveValueSetType;
     /**
      * Example-bound Value Set for decisionMode
      */
-    decisionModeExampleValueSet(): ContractDecisionModeValueSetType;
+    static decisionModeExampleValueSet(): ContractDecisionModeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1238,7 +1238,7 @@ export declare class ContractTermAssetContext extends fhir.BackboneElement imple
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ContractAssetcontextValueSetType;
+    static codeExampleValueSet(): ContractAssetcontextValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1432,23 +1432,23 @@ export declare class ContractTermAsset extends fhir.BackboneElement implements I
     /**
      * Example-bound Value Set for scope
      */
-    scopeExampleValueSet(): ContractAssetscopeValueSetType;
+    static scopeExampleValueSet(): ContractAssetscopeValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ContractAssettypeValueSetType;
+    static typeExampleValueSet(): ContractAssettypeValueSetType;
     /**
      * Example-bound Value Set for subtype
      */
-    subtypeExampleValueSet(): ContractAssetsubtypeValueSetType;
+    static subtypeExampleValueSet(): ContractAssetsubtypeValueSetType;
     /**
      * Extensible-bound Value Set for relationship
      */
-    relationshipExtensibleValueSet(): ConsentContentClassValueSetType;
+    static relationshipExtensibleValueSet(): ConsentContentClassValueSetType;
     /**
      * Example-bound Value Set for periodType
      */
-    periodTypeExampleValueSet(): AssetAvailabilityValueSetType;
+    static periodTypeExampleValueSet(): AssetAvailabilityValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1473,7 +1473,7 @@ export declare class ContractTermActionSubject extends fhir.BackboneElement impl
     /**
      * Example-bound Value Set for role
      */
-    roleExampleValueSet(): ContractActorroleValueSetType;
+    static roleExampleValueSet(): ContractActorroleValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1619,27 +1619,27 @@ export declare class ContractTermAction extends fhir.BackboneElement implements 
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ContractActionValueSetType;
+    static typeExampleValueSet(): ContractActionValueSetType;
     /**
      * Example-bound Value Set for intent
      */
-    intentExampleValueSet(): V3PurposeOfUseValueSetType;
+    static intentExampleValueSet(): V3PurposeOfUseValueSetType;
     /**
      * Example-bound Value Set for status
      */
-    statusExampleValueSet(): ContractActionstatusValueSetType;
+    static statusExampleValueSet(): ContractActionstatusValueSetType;
     /**
      * Example-bound Value Set for performerType
      */
-    performerTypeExampleValueSet(): ProvenanceAgentTypeValueSetType;
+    static performerTypeExampleValueSet(): ProvenanceAgentTypeValueSetType;
     /**
      * Example-bound Value Set for performerRole
      */
-    performerRoleExampleValueSet(): ProvenanceAgentRoleValueSetType;
+    static performerRoleExampleValueSet(): ProvenanceAgentRoleValueSetType;
     /**
      * Example-bound Value Set for reasonCode
      */
-    reasonCodeExampleValueSet(): V3PurposeOfUseValueSetType;
+    static reasonCodeExampleValueSet(): V3PurposeOfUseValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1717,11 +1717,11 @@ export declare class ContractTerm extends fhir.BackboneElement implements IContr
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ContractTermTypeValueSetType;
+    static typeExampleValueSet(): ContractTermTypeValueSetType;
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet(): ContractTermSubtypeValueSetType;
+    static subTypeExampleValueSet(): ContractTermSubtypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -1751,7 +1751,7 @@ export declare class ContractSigner extends fhir.BackboneElement implements ICon
     /**
      * Preferred-bound Value Set for type
      */
-    typePreferredValueSet(): ContractSignerTypeValueSetType;
+    static typePreferredValueSet(): ContractSignerTypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -2014,31 +2014,31 @@ export declare class Contract extends fhir.DomainResource implements IContract {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): ContractStatusValueSetType;
+    static statusRequiredValueSet(): ContractStatusValueSetType;
     /**
      * Extensible-bound Value Set for legalState
      */
-    legalStateExtensibleValueSet(): ContractLegalstateValueSetType;
+    static legalStateExtensibleValueSet(): ContractLegalstateValueSetType;
     /**
      * Example-bound Value Set for contentDerivative
      */
-    contentDerivativeExampleValueSet(): ContractContentDerivativeValueSetType;
+    static contentDerivativeExampleValueSet(): ContractContentDerivativeValueSetType;
     /**
      * Example-bound Value Set for expirationType
      */
-    expirationTypeExampleValueSet(): ContractExpirationTypeValueSetType;
+    static expirationTypeExampleValueSet(): ContractExpirationTypeValueSetType;
     /**
      * Example-bound Value Set for scope
      */
-    scopeExampleValueSet(): ContractScopeValueSetType;
+    static scopeExampleValueSet(): ContractScopeValueSetType;
     /**
      * Example-bound Value Set for type
      */
-    typeExampleValueSet(): ContractTypeValueSetType;
+    static typeExampleValueSet(): ContractTypeValueSetType;
     /**
      * Example-bound Value Set for subType
      */
-    subTypeExampleValueSet(): ContractSubtypeValueSetType;
+    static subTypeExampleValueSet(): ContractSubtypeValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

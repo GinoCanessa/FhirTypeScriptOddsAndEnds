@@ -206,7 +206,7 @@ export declare class VisionPrescriptionLensSpecificationPrism extends fhir.Backb
     /**
      * Required-bound Value Set for base
      */
-    baseRequiredValueSet(): VisionBaseCodesValueSetType;
+    static baseRequiredValueSet(): VisionBaseCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -320,11 +320,11 @@ export declare class VisionPrescriptionLensSpecification extends fhir.BackboneEl
     /**
      * Example-bound Value Set for product
      */
-    productExampleValueSet(): VisionProductValueSetType;
+    static productExampleValueSet(): VisionProductValueSetType;
     /**
      * Required-bound Value Set for eye
      */
-    eyeRequiredValueSet(): VisionEyeCodesValueSetType;
+    static eyeRequiredValueSet(): VisionEyeCodesValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -389,7 +389,7 @@ export declare class VisionPrescription extends fhir.DomainResource implements I
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): FmStatusValueSetType;
+    static statusRequiredValueSet(): FmStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

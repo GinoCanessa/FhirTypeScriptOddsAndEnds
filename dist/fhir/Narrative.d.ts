@@ -48,7 +48,7 @@ export declare class Narrative extends fhir.FhirElement implements INarrative {
     /**
      * Required-bound Value Set for status
      */
-    statusRequiredValueSet(): NarrativeStatusValueSetType;
+    static statusRequiredValueSet(): NarrativeStatusValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -141,7 +141,7 @@ export class EpisodeOfCareStatusHistory extends fhir.BackboneElement implements 
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():EpisodeOfCareStatusValueSetType {
+  public static statusRequiredValueSet():EpisodeOfCareStatusValueSetType {
     return EpisodeOfCareStatusValueSet;
   }
   /**
@@ -191,7 +191,7 @@ export class EpisodeOfCareDiagnosis extends fhir.BackboneElement implements IEpi
   /**
    * Preferred-bound Value Set for role
    */
-  public rolePreferredValueSet():DiagnosisRoleValueSetType {
+  public static rolePreferredValueSet():DiagnosisRoleValueSetType {
     return DiagnosisRoleValueSet;
   }
   /**
@@ -292,13 +292,13 @@ export class EpisodeOfCare extends fhir.DomainResource implements IEpisodeOfCare
   /**
    * Required-bound Value Set for status
    */
-  public statusRequiredValueSet():EpisodeOfCareStatusValueSetType {
+  public static statusRequiredValueSet():EpisodeOfCareStatusValueSetType {
     return EpisodeOfCareStatusValueSet;
   }
   /**
    * Example-bound Value Set for type
    */
-  public typeExampleValueSet():EpisodeofcareTypeValueSetType {
+  public static typeExampleValueSet():EpisodeofcareTypeValueSetType {
     return EpisodeofcareTypeValueSet;
   }
   /**

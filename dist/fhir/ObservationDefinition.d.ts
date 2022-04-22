@@ -194,11 +194,11 @@ export declare class ObservationDefinitionQuantitativeDetails extends fhir.Backb
     /**
      * Extensible-bound Value Set for customaryUnit
      */
-    customaryUnitExtensibleValueSet(): UcumUnitsValueSetType;
+    static customaryUnitExtensibleValueSet(): UcumUnitsValueSetType;
     /**
      * Extensible-bound Value Set for unit
      */
-    unitExtensibleValueSet(): UcumUnitsValueSetType;
+    static unitExtensibleValueSet(): UcumUnitsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -259,19 +259,19 @@ export declare class ObservationDefinitionQualifiedInterval extends fhir.Backbon
     /**
      * Required-bound Value Set for category
      */
-    categoryRequiredValueSet(): ObservationRangeCategoryValueSetType;
+    static categoryRequiredValueSet(): ObservationRangeCategoryValueSetType;
     /**
      * Extensible-bound Value Set for context
      */
-    contextExtensibleValueSet(): ReferencerangeMeaningValueSetType;
+    static contextExtensibleValueSet(): ReferencerangeMeaningValueSetType;
     /**
      * Example-bound Value Set for appliesTo
      */
-    appliesToExampleValueSet(): ReferencerangeAppliestoValueSetType;
+    static appliesToExampleValueSet(): ReferencerangeAppliestoValueSetType;
     /**
      * Required-bound Value Set for gender
      */
-    genderRequiredValueSet(): AdministrativeGenderValueSetType;
+    static genderRequiredValueSet(): AdministrativeGenderValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */
@@ -356,19 +356,19 @@ export declare class ObservationDefinition extends fhir.DomainResource implement
     /**
      * Example-bound Value Set for category
      */
-    categoryExampleValueSet(): ObservationCategoryValueSetType;
+    static categoryExampleValueSet(): ObservationCategoryValueSetType;
     /**
      * Example-bound Value Set for code
      */
-    codeExampleValueSet(): ObservationCodesValueSetType;
+    static codeExampleValueSet(): ObservationCodesValueSetType;
     /**
      * Required-bound Value Set for permittedDataType
      */
-    permittedDataTypeRequiredValueSet(): PermittedDataTypeValueSetType;
+    static permittedDataTypeRequiredValueSet(): PermittedDataTypeValueSetType;
     /**
      * Example-bound Value Set for method
      */
-    methodExampleValueSet(): ObservationMethodsValueSetType;
+    static methodExampleValueSet(): ObservationMethodsValueSetType;
     /**
      * Function to perform basic model validation (e.g., check if required elements are present).
      */

@@ -92,7 +92,7 @@ export class Basic extends fhir.DomainResource implements IBasic {
   /**
    * Example-bound Value Set for code
    */
-  public codeExampleValueSet():BasicResourceTypeValueSetType {
+  public static codeExampleValueSet():BasicResourceTypeValueSetType {
     return BasicResourceTypeValueSet;
   }
   /**

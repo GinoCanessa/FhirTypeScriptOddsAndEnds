@@ -56,7 +56,7 @@ export class HumanName extends fhir.FhirElement {
     /**
      * Required-bound Value Set for use
      */
-    useRequiredValueSet() {
+    static useRequiredValueSet() {
         return NameUseValueSet;
     }
     /**
